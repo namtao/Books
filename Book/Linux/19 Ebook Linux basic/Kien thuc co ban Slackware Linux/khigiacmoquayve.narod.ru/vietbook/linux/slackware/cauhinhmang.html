@@ -1,0 +1,649 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/cauhinhmang.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>cauhinhmang</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_4.2"><big><big><span style="font-weight: bold;">4.2
+C&#7845;u h&igrave;nh m&#7841;ng<br>
+</span></big></big><br>
+</a><a name="ch_4.2.1"><span style="font-weight: bold;">4.2.1 Thi&#7871;t b&#7883;
+m&#7841;ng<br>
+</span><br>
+Gi&#7889;ng nh&#432; ph&#7847;n l&#7899;n c&aacute;c &#273;&#7891; v&#7853;t h&#7845;p d&#7851;n kh&aacute;c m&agrave; b&#7841;n
+mu&#7889;n l&agrave;m vi&#7879;c v&#7899;i m&aacute;y t&iacute;nh,k&#7871;t n&#7889;i n&oacute; v&#7899;i
+m&#7841;ng c&#7847;n ph&#7843;i c&oacute; m&#7897;t thi&#7871;t b&#7883; chuy&ecirc;n d&#7909;ng.C&oacute; th&#7875; b&#7841;n
+c&#7847;n ph&#7843;i b&#7893; sung NIC(Network Interface Card - Interface thi&#7871;t b&#7883; m&#7841;ng)
+&#273;&#7875; k&#7871;t n&#7889;i v&agrave;o LAN v&agrave; c&oacute; th&#7875; c&#7843; modem &#273;&#7875; k&#7871;t n&#7889;i
+v&agrave;o internet,v&agrave; c&#361;ng c&oacute; th&#7875; l&agrave; c&#7843; hai ho&#7863;c
+nhi&#7873;u h&#417;n...r&#7845;t nhi&#7873;u n&#7919;a.<br>
+<br>
+Khi thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh b&#7841;n c&#7847;n x&aacute;c &#273;&#7883;nh thi&#7871;t b&#7883; ph&#7847;n
+c&#7913;ng n&agrave;o,PCMCIA(cho c&aacute;c m&aacute;y laptop)v&agrave;
+kh&ocirc;ng thu&#7897;c l&#7899;p PCMCIA.Th&#7921;c ch&#7845;t c&#7911;a vi&#7879;c ph&acirc;n chia
+l&agrave; do hi&#7879;n t&#7841;i driver cho c&aacute;c thi&#7871;t b&#7883; PCMCIA kh&ocirc;ng
+c&oacute; s&#7861;n trong c&aacute;c phi&ecirc;n b&#7843;n kernel m&agrave; c&#7847;n ph&#7843;i
+c&oacute; packages b&#7893; sung ch&#7913;a &#273;&#7921;ng c&aacute;c driver c&#7847;n thi&#7871;t(gi&#7889;ng
+nh&#432; modules) v&agrave; m&#7897;t v&agrave;i ch&#432;&#417;ng tr&igrave;nh cho thi&#7871;t l&#7853;p
+c&#7845;u h&igrave;nh c&#7911;a c&aacute;c thi&#7871;t b&#7883; PCMCIA.C&ograve;n l&#7841;i l&agrave;
+&#273;&#432;&#7907;c c&agrave;i s&#7861;n trong nh&acirc;n.<br>
+<br>
+<span style="font-weight: bold;"> netmods</span><br>
+<br>
+Drivers c&#7911;a c&aacute;c thi&#7871;t b&#7883; m&#7841;ng &#273;&#432;&#7907;c ch&#7913;a trong nh&acirc;n
+v&agrave; thu&#7897;c packages <span style="font-weight: bold;">netmods</span>(slackware/n3/netmods.tgz).N&#7871;u
+b&#7841;n kh&ocirc;ng c&agrave;i &#273;&#7863;t packages n&agrave;y th&igrave;
+h&atilde;y c&agrave;i n&oacute; b&acirc;y gi&#7901; &#273;i(xem th&ecirc;m ph&#7847;n
+qu&#7843;n l&yacute; packages &#273;&#7875; th&ecirc;m th&ocirc;ng tin v&#7873; c&agrave;i &#273;&#7863;t
+packages).<br>
+<br>
+Modules c&#7911;a nh&acirc;n&nbsp; c&#7847;n ph&#7843;i &#273;&#432;&#7907;c b&#7853;t l&ecirc;n trong
+q&uacute;a tr&igrave;nh kh&#7903;i &#273;&#7897;ng m&aacute;y t&iacute;nh,ch&uacute;ng
+&#273;&#432;&#7907;c b&#7853;t l&ecirc;nh t&#7915; c&aacute;c t&#7853;p tin rc.modules thu&#7897;c catalog <span
+ style="font-style: italic;">/etc/rc.d</span>.Trong t&#7853;p tin rc.modules
+c&oacute; ph&#7847;n&nbsp; ''Network device support''.N&#7871;u nh&#432; b&#7841;n m&#7903; t&#7853;p tin
+ra b&#7841;n s&#7869; nh&#7853;n th&#7845;y r&#7857;ng &#273;&#7847;u ti&ecirc;n n&oacute; s&#7869; ki&#7875;m tra t&#7891;n t&#7841;i
+hay kh&ocirc;ng t&#7853;p tin rc.device &#7903; catalog <span
+ style="font-style: italic;">/etc/rc.d</span>;<span
+ style="font-style: italic;">rc.device</span> &#273;&#432;&#7907;c t&#7841;o th&agrave;nh
+trong tr&#432;&#7901;ng h&#7907;p n&#7871;u nh&#432; setup bi&#7871;t c&aacute;ch x&aacute;c &#273;&#7883;nh thi&#7871;t
+b&#7883; m&#7841;ng c&#7911;a b&#7841;n khi c&agrave;i &#273;&#7863;t.N&#7871;u nh&#432; th&#7871; b&#7841;n s&#7869; kh&ocirc;ng c&#7847;n
+&#273;&#7885;c th&ecirc;m n&#7919;a c&ograve;n n&#7871;u kh&ocirc;ng thi h&atilde;y ti&#7871;p t&#7909;c
+nh&eacute;.<br>
+<br>
+Ph&iacute;a d&#432;&#7899;i block "if" l&agrave; danh s&aacute;ch c&aacute;c thi&#7871;t
+b&#7883; v&agrave; d&ograve;ng modprobe,M&#7895;i m&#7897;t d&ograve;ng l&agrave; m&#7897;t
+ch&uacute; th&iacute;ch.B&#7841;n h&atilde;y t&igrave;m thi&#7871;t b&#7883; c&#7911;a b&#7841;n
+v&agrave; g&#7905; b&#7887; nh&#7919;ng ch&uacute; gi&#7843;i &#7845;y theo c&aacute;c d&ograve;ng
+modprobe,&#273;&#7915;ng qu&ecirc;n l&#432;u l&#7841;i s&#7921; thay &#273;&#7893;i tr&ecirc;n t&#7853;p tin.N&#7871;u b&#7841;n
+th&#7921;c hi&#7879;n nh&#432; root cho rc.modules th&igrave; drivers cho thi&#7871;t b&#7883; c&#7911;a
+b&#7841;n s&#7869; &#273;&#432;&#7907;c b&#7853;t l&ecirc;n(c&#361;ng gi&#7889;ng nh&#432; c&aacute;c modules
+kh&aacute;c).ch&uacute; &yacute; m&#7897;t v&agrave;i modules (nh&#432; l&agrave;
+nc2000) y&ecirc;u c&#7847;u c&oacute; nh&#7919;ng tham bi&#7871;n &#273;i c&ugrave;ng,cho
+l&ecirc;n h&atilde;y th&#7853;n tr&#7885;ng &#273;&#7875; l&agrave;m &#273;&uacute;ng.<br>
+<br>
+<span style="font-weight: bold;"> Thi&#7871;t b&#7883; m&#7841;ng PCMCIA<br>
+</span><br>
+Thi&#7871;t b&#7883; m&#7841;ng PCMCIA &#273;&#432;&#7907;c thi&#7871;t k&#7871; &#273;&#417;n gi&#7843;n h&#417;n so v&#7899;i nh&#7919;ng c&aacute;i
+c&ograve;n l&#7841;i.Ch&uacute; &yacute; b&#7841;n ph&#7843;i c&agrave;i &#273;&#7863;t packages <span
+ style="font-style: italic;">pcmcia(slackware/a11/pcmcia.tgz)</span>(xem
+th&ecirc;m ph&#7847;n qu&#7843;n l&yacute; packages &#273;&#7875; th&ecirc;m th&ocirc;ng tin
+v&#7873; c&agrave;i &#273;&#7863;t packages).Khi c&agrave;i &#273;&#7863;t&nbsp; th&igrave;
+packages pcmcia s&#7869; t&#7841;o ra t&#7853;p tin <span style="font-style: italic;">rc.pcmcia</span>
+trong catalog <span style="font-style: italic;">/etc/rc.d</span>
+v&agrave; trong th&#432; m&#7909;c /etc/pcmcia v&agrave; t&#7845;t nhi&ecirc;n s&#7869;
+c&agrave;i v&agrave;o catalog <span style="font-style: italic;">/etc/modules/&lt;kernel
+serial&gt;/pcmcia</span>.Th&#7853;t l&agrave; tuy&#7879;t v&#7901;i n&oacute; s&#7869; t&#7921; &#273;&#7897;ng
+x&aacute;c &#273;&#7883;nh thi&#7871;t b&#7883; v&agrave; t&#7921; bung ra drivers cho nh&#7919;ng thi&#7871;t
+b&#7883; pcmcia cho ph&eacute;p.N&#7871;u nh&#432; b&#7841;n l&#7855;p thi&#7871;t b&#7883; m&#7841;ng v&agrave;o
+th&igrave; s&#7869; nghe th&#7871;y t&iacute;n hi&#7879;u th&ocirc;ng b&aacute;o khi
+modules &#273;&#432;&#7907;c b&#7853;t l&ecirc;n.Khi b&#7841;n th&aacute;o thi&#7871;t b&#7883; ra th&igrave;
+modules c&#361;ng t&#7921; &#273;&#7897;ng ng&#7855;t &#273;i.<br>
+<br>
+Th&#7853;t &#273;&aacute;ng ti&#7871;c n&#7871;u b&#7841;n n&acirc;ng c&#7845;p nh&acirc;n th&igrave; s&#7899;m
+mu&#7897;n b&#7841;n c&#361;ng ph&#7843;i ti&#7871;n h&agrave;nh bi&ecirc;n d&#7883;ch l&#7841;i pcmcia modules
+&#273;&#7875; n&acirc;ng c&#7845;p.Th&ocirc;ng th&#432;&#7901;ng m&atilde; g&#7889;c &#273;i k&egrave;m
+c&ugrave;ng v&#7899;i phi&ecirc;n b&#7843;n nh&acirc;n,h&atilde;y t&igrave;m &#7903;
+/source/a/pcmcia.B&#7841;n c&oacute; th&#7875; &#273;&#7885;c th&ecirc;m t&agrave;i li&#7879;u &#7903;
+&#273;&oacute; &#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_4.2.2"><span style="font-weight: bold;">4.2.2
+C&aacute;c ch&#432;&#417;ng tr&igrave;nh l&agrave;m vi&#7879;c v&#7899;i m&#7841;ng<br>
+</span><br>
+<span style="font-weight: bold;"> ifconfig<br>
+</span><br>
+V&#7853;y l&agrave; nh&acirc;n h&#7879; th&#7889;ng &#273;&atilde; l&agrave;m vi&#7879;c v&#7899;i thi&#7871;t
+b&#7883; ph&#7847;n c&#7913;ng.B&acirc;y gi&#7901; b&#7841;n h&#7885;c c&aacute;c ch&#432;&#417;ng tr&igrave;nh &#273;&#7875; ch&#7881;
+&#273;&#7883;nh nh&acirc;n s&#7869; truy&#7873;n &#273;&#7841;t th&ocirc;ng tin nh&#432; th&ecirc; n&agrave;o
+v&agrave; ng&#432;&#7907;c l&#7841;i.<br>
+<br>
+&nbsp;Ch&uacute;ng ta c&#7847;n x&acirc;y d&#7921;ng c&#7845;u h&igrave;nh interface cho
+thi&#7871;t b&#7883; m&#7841;ng.V&#7853;y h&atilde;y s&#7917; d&#7909;ng ifconfig(8).<br>
+ifconfig t&#7889;t nh&#7845;t &#273;&#7875; th&#7921;c h&agrave;nh tr&ecirc;n c&aacute;c v&iacute;
+d&#7909;.N&ecirc;u b&#7841;n mu&#7889;n c&oacute; th&#7875; nh&igrave;n v&agrave;o t&#7853;p tin
+rc.net1 &#273;&#7875; xem ch&#432;&#417;ng tr&igrave;nh &#273;&#432;&#7907;c b&#7855;t ngu&#7891;n t&#7915; &#273;&acirc;u.D&#7841;ng c&#7845;u
+tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> # ifconfig eth0 192.168.1.10 broadcast
+192.168.1.255 \</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> netmask 255.255.255.0<br>
+</span><br>
+D&ograve;ng tr&ecirc;n c&oacute; ngh&#297;a l&agrave; eth0(thi&#7871;t b&#7883; m&#7841;ng &#273;&#7847;u
+ti&ecirc;n;&#273;&#7889;i v&#7899;i token l&agrave; tr0;ppp l&agrave; ppp0..) v&#7899;i IP
+192.168.1.10,IP broadcast l&agrave; 192.168.1.255 v&agrave; IP netmask
+l&agrave; 255.255.255.0(c&oacute; ngh&#297;a l&agrave; ba ph&#7847;n &#273;&#7847;u c&#7911;a IP
+-address l&agrave; &#273;&#7883;a ch&#7881; m&#7841;ng,c&ograve;n .10 l&agrave; host c&#7911;a
+b&#7841;n).B&#7841;n c&oacute; th&#7875; tho&#7843;i m&aacute;i s&#7917; d&#7909;ng IP broadcast t&#7915; ba ph&#7847;n
+&#273;&#7847;u ti&ecirc;n block tr&ecirc;n IP-address v&agrave; k&#7871;t th&uacute;c
+b&#7857;ng 255.C&ograve;n netmask th&igrave; th&ocirc;ng th&#432;&#7901;ng c&oacute; th&#7875;
+s&#7917; d&#7909;ng 255.255.255.0.N&#7871;u nh&#432; b&#7841;n l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u &#273;&oacute; m&#7897;t
+c&aacute;ch th&agrave;nh th&#7841;o th&igrave; c&oacute; th&#7875; b&#7841;n kh&ocirc;ng
+c&#7847;n ph&#7843;i &#273;&#7885;c th&ecirc;m ph&#7847;n n&agrave;y n&#7919;a.<br>
+<br>
+<span style="font-weight: bold;"> ifconfig</span> c&oacute; th&#7875; s&#7917; d&#7909;ng
+&#273;&#7875; ki&#7875;m tra c&#7845;u h&igrave;nh hi&#7879;n t&#7841;i.Th&#7921;c hi&#7879;n n&oacute;(b&#7887; qua t&#7845;t c&#7843;
+c&aacute;c tham bi&#7871;n)&#273;&#7875; c&oacute; &#273;&#432;&#7907;c danh s&aacute;ch c&aacute;c
+thi&#7871;t b&#7883; m&#7841;ng tr&ecirc;n m&aacute;y t&iacute;nh c&#7911;a b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> #ifconfig(ho&#7863;c ifconfig -a)<br>
+</span><br>
+<span style="font-style: italic;"> eth0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Link encap:Ethernet&nbsp; HWaddr 00:80:48:1F:46:AC&nbsp; </span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet
+addr:192.168.10.50&nbsp; Bcast:192.168.10.255&nbsp; Mask:255.255.255.0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UP BROADCAST
+RUNNING MULTICAST&nbsp; MTU:1500&nbsp; Metric:1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets:885
+errors:0 dropped:0 overruns:0 frame:0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets:12
+errors:0 dropped:0 overruns:0 carrier:0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collisions:0
+txqueuelen:100 </span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX bytes:58286
+(56.9 Kb)&nbsp; TX bytes:720 (720.0 b)</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Interrupt:11 Base
+address:0x4000 </span><br style="font-style: italic;">
+<br style="font-style: italic;">
+<span style="font-style: italic;">
+lo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Link encap:Local
+Loopback&nbsp; </span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; inet
+addr:127.0.0.1&nbsp; Mask:255.0.0.0</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UP LOOPBACK
+RUNNING&nbsp; MTU:16436&nbsp; Metric:1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX packets:318
+errors:0 dropped:0 overruns:0 frame:0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TX packets:318
+errors:0 dropped:0 overruns:0 carrier:0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; collisions:0
+txqueuelen:0 </span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RX bytes:118206
+(115.4 Kb)&nbsp; TX bytes:118206 (115.4 Kb)<br>
+</span><br>
+Khi b&#7841;n g&#7885;i l&#7879;nh <span style="font-weight: bold;">/sbin/ifconfig </span>b&#7887;
+qua tham bi&#7871;n "-a" m&agrave; kh&ocirc;ng nh&igrave;n th&#7845;y eth0
+interface th&igrave; c&oacute; ngh&#297;a l&agrave; thi&#7871;t b&#7883; m&#7841;ng c&#7911;a b&#7841;n
+kh&ocirc;ng c&oacute; gi&aacute; tr&#7883; IP-address ho&#7863;c <span
+ style="font-weight: bold;">route</span>.<br>
+<br>
+<span style="font-weight: bold;"> route</span><br>
+<br>
+&#272;&#7875; bi&#7871;t &#273;&#432;&#7907;c th&ocirc;ng tin &#273;&#432;&#7907;c g&#7917;i &#273;i &#273;&acirc;u nh&acirc;n &#273;&atilde;
+s&#7917; d&#7909;ng routing table.T&ocirc;i kh&ocirc;ng c&oacute; &yacute; &#273;&#7883;nh
+n&oacute;i s&acirc;u v&#7873; n&oacute;.Tuy nhi&ecirc;n b&#7841;n c&oacute; th&#7875; xem
+b&#7843;ng danh s&aacute;ch &#273;&oacute; v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; <span
+ style="font-weight: bold;">/sbin/route(8)</span>. <br>
+<br>
+<span style="font-weight: bold;"> #route<br>
+</span><br>
+<span style="font-style: italic;"> Kernel IP routing table</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Destination&nbsp;&nbsp;&nbsp;&nbsp;
+Gateway&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Genmask&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Flags Metric
+Ref&nbsp;&nbsp;&nbsp; Use Iface</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+localnet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+255.255.255.0&nbsp;&nbsp; U&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 eth0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+loopback&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+255.0.0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; U&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 lo</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+default&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+192.168.10.1&nbsp;&nbsp;&nbsp;
+0.0.0.0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+UG&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 eth0<br>
+</span><br>
+<span style="font-weight: bold;"> route -n</span> s&#7869; th&ocirc;ng
+b&aacute;o cho b&#7841;n m&#7897;t b&#7843;ng IP-address thay v&igrave;
+t&ecirc;n;n&oacute; ti&#7879;n l&#7907;i khi m&agrave; n&#7843;y sinh nh&#7919;ng kh&oacute;
+kh&#259;n v&#7899;i t&ecirc;n server c&#7911;a b&#7841;n ho&#7863;c ch&#7881; &#273;&#417;n gi&#7843;n b&#7841;n kh&ocirc;ng
+th&iacute;ch bi&#7875;u di&#7877;n t&ecirc;n server c&#7911;a m&igrave;nh d&#432;&#7899;i d&#7841;ng
+ch&#7919;.Th&#7853;t may m&#7855;n khi b&#7841;n ch&#7881; ph&#7843;i x&acirc;y d&#7921;ng m&#7897;t h&#7879; th&#7889;ng m&#7841;ng &#273;&#417;n
+gi&#7843;n(nh&#432; bao ng&#432;&#7901;i kh&aacute;c)th&igrave; 2.2.x kernel s&#7869; t&#7921; &#273;&#7897;ng t&#7841;o
+b&#7843;ng routing-table cho b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> netconfig</span><br>
+<br>
+<span style="font-weight: bold;"> netconfig</span> l&agrave; m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh &#273;&#432;&#7907;c c&agrave;i &#273;&#7863;t s&#7861;n tr&ecirc;n Slackware gi&#7889;ng nh&#432; bao
+ch&#432;&#417;ng tr&igrave;nh kh&aacute;c.B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng n&oacute; m&#7897;t
+m&igrave;nh(kh&ocirc;ng c&#7847;n s&#7921; gi&uacute;p &#273;&#7905;).Netconfig kh&ocirc;ng
+kh&oacute; khi s&#7917; d&#7909;ng khi h&#432;&#7899;ng d&#7851;n b&#7841;n c&agrave;i &#273;&#7863;t cho m&#7897;t k&#7871;t n&#7889;i
+m&#7841;ng th&ocirc;ng th&#432;&#7901;ng.Sau khi ch&#7841;y netconfig th&igrave; s&#7869; c&oacute;
+c&#7917;a s&#7893; nh&#432; sau hi&#7879;n ra:<br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/netconfig.png" title="" alt=""
+ style="width: 644px; height: 488px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> Sau &#273;&oacute; b&#7841;n c&#7847;n ph&#7843;i &#273;i&#7873;n t&ecirc;n host
+v&agrave; domain m&aacute;y t&iacute;nh c&#7911;a b&#7841;n.B&#7841;n c&oacute; th&#7875; &#273;i&#7873;n
+c&aacute;i g&igrave; &#273;&oacute; n&#7871;u nh&#432; b&#7841;n kh&ocirc;ng &#273;&#7883;nh x&acirc;y
+d&#7921;ng server m&agrave; s&#7869; s&#7917; d&#7909;ng cho nhi&#7873;u ng&#432;&#7901;i kh&aacute;c n&#7919;a.Sau
+&#273;&oacute; b&#7841;n s&#7869; ph&#7843;i nh&#7853;p v&agrave;o IP t&#297;nh,DHCP,ho&#7863;c &#273;&#417;n gi&#7843;n
+loopback.<br>
+<br>
+N&#7871;u b&#7841;n kh&ocirc;ng k&#7871;t n&#7889;i internet th&igrave; h&atilde;y ch&#7885;n
+loopback.N&#7871;u b&#7841;n &#273;&#7883;nh k&#7871;t n&#7889;i v&#7899;i tr&#432;&#7901;ng &#273;&#7841;i h&#7885;c,m&#7897;t v&#259;n ph&ograve;ng
+l&#7899;n th&igrave; c&oacute; l&#7869; l&ecirc;n ch&#7885;n DHCP.Ng&#432;&#7907;c l&#7841;i h&atilde;y
+chon IP t&#297;nh.N&#7871;u nh&#432; kh&ocirc;ng ch&#7885;n IP-address th&igrave; ch&#432;&#417;ng
+tr&igrave;nh s&#7869; k&#7871;t th&uacute;c.N&#7871;u ch&#7885;n IP-address t&#297;nh th&igrave; c&#7847;n
+ph&#7843;i nh&#7853;p v&agrave;o:IP
+address,IP-broadcast,IP-netmask,IP-server.Netconfig s&#7869; gi&uacute;p b&#7841;n
+hi&#7875;u r&otilde; c&aacute;c gi&aacute; tr&#7883; n&agrave;y.<br>
+<br>
+<span style="font-weight: bold;"> pppsetup</span><br>
+<br>
+Trong Slackware c&oacute; pppsetup - l&agrave; m&#7897;t &#7913;ng d&#7909;ng &#273;&#7875; thi&#7871;t
+l&#7853;p c&#7845;u h&igrave;nh dialup k&#7871;t n&#7889;i v&#7899;i ISP (Internet Server
+Provider).N&oacute; n&#7857;m &#7903; package ppp.tgz trong khu v&#7921;c ch&#432;&#417;ng
+tr&igrave;nh N.pppsetup c&#361;ng s&#7917; d&#7909;ng interface nh&#432; v&#7853;y nh&#432; ch&#432;&#417;ng
+tr&igrave;nh c&agrave;i &#273;&#7863;t.pppsetup &#273;&#432;a ra cho b&#7841;n nhi&#7873;u c&acirc;u h&#7887;i
+v&agrave; c&agrave;i &#273;&#7863;t t&#7853;p tin c&#7845;u h&igrave;nh &#7903; /etc/ppp.T&#7915; root b&#7841;n
+c&oacute; th&#7875; ch&#7841;y pppsetup.B&#7841;n s&#7869; nh&igrave;n th&#7845;y nh&#432; sau.<br>
+<br>
+<span style="font-weight: bold;"> Phone number</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/ppp1.png" title="" alt=""
+ style="width: 602px; height: 326px;">&nbsp;</a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> &#7902; &#273;&acirc;y b&#7841;n c&#7847;n ph&#7843;i ch&#7881; ra s&#7889; ISP &#7903; d&#7841;ng ti&#7873;n
+t&#7889;(prefix) c&#7911;a t&#7893; h&#7907;p s&#7889;.N&#7871;u nh&#432; s&#7889; c&#7911;a b&#7841;n l&agrave; 555-1013
+th&igrave; b&#7841;n c&#7847;n ghi l&agrave; atdt5551013(ch&uacute; &yacute; n&#7871;u
+b&#7841;n s&#7917; d&#7909;ng b&#7897; &acirc;m thanh).C&ograve;n n&#7871;u nh&#432; b&#7841;n s&#7917; d&#7909;ng &#273;i&#7879;n
+tho&#7841;i c&oacute; call waiting(&#273;&#7907;i g&#7885;i) m&agrave; b&#7841;n mu&#7889;n c&#7855;t b&#7887; ch&#7871; &#273;&#7897;
+&#7845;y th&igrave; c&oacute; th&#7875; nh&#432; sau:atdt*70,5551013.D&#7845;u "," l&agrave;
+nh&#7845;t &#273;&#7883;nh c&oacute;.N&oacute; cho ph&eacute;p d&#7915;ng l&#7841;i 1,5s sau *70 &#273;&#7875;
+ng&#7855;t b&#7887; ch&#7871; &#273;&#7897; call waiting.Kh&ocirc;ng c&oacute; d&#7845;u "," s&#7869;
+kh&ocirc;ng l&agrave;m vi&#7879;c.<br>
+<br>
+<span style="font-weight: bold;"> Modem device</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppmodem.png" title="" alt=""
+ style="width: 480px; height: 310px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> &#7902; &#273;&acirc;y b&#7841;n c&#7847;n ph&#7843;i ch&#7885;n modem s&#7869; k&#7871;t n&#7889;i
+v&agrave;o &#273;&acirc;u.N&#7871;u b&#7841;n bi&#7871;t &#273;&#432;&#7907;c c&#7893;ng COM n&agrave;o k&#7871;t n&#7889;i
+tr&ecirc;n Windows th&igrave; b&#7841;n c&oacute; th&#7875; ch&#7885;n t&#432;&#417;ng
+t&#7921;.Th&ocirc;ng th&#432;&#7901;ng l&agrave; ttyS0.<br>
+<br>
+<span style="font-weight: bold;"> Modem baud rate</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppmodemrate.png" title="" alt=""
+ style="width: 576px; height: 248px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> h&atilde;y ch&#7885;n baud rate g&#7847;n v&#7899;i modem c&#7911;a b&#7841;n
+nh&#7845;t.N&#7871;u b&#7841;n kh&ocirc;ng bi&#7871;t baud rate th&igrave; c&oacute; th&#7875; &#273;&#7885;c
+th&ecirc;m t&agrave;i li&#7879;u k&egrave;m theo modem c&#7911;a b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> Callback</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppcalback.png" title="" alt=""
+ style="width: 560px; height: 294px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> R&#7845;t &iacute;t ISP s&#7917; d&#7909;ng callback v&igrave; th&#7871; b&#7841;n
+c&#7913; y&ecirc;n t&acirc;m ch&#7885;n "NO".Callback c&oacute; ngh&#297;a l&agrave; &#273;&#7847;u
+ti&ecirc;n b&#7841;n g&#7885;i cho ISP,sau &#273;&oacute; h&#7885; g&#7885;i l&#7841;i cho b&#7841;n ch&#7881; khi b&#7841;n
+&#273;&atilde; v&agrave;o m&#7841;ng.N&#7871;u b&#7841;n th&#7845;y c&#7847;n c&oacute; th&#7875; tr&#7843; l&#7901;i
+"Yes".Khi &#273;&oacute; b&#7841;n s&#7869; c&#7847;n nh&#7853;p s&#7889; c&#7911;a b&#7841;n v&agrave;o(k&#7875; c&#7843; login
+v&agrave; password).V&agrave; c&acirc;u cu&#7889;i l&agrave; c&#7845;u h&igrave;nh
+b&#7841;n s&#7917; d&#7909;ng l&agrave; g&igrave;:CHAP hay l&agrave; PAP.N&#7871;u l&agrave;
+Yes th&igrave; b&#7841;n c&#7847;n ph&#7843;i c&#7845;u h&igrave;nh n&oacute;.Xem ph&#7847;n d&#432;&#7899;i &#273;&#7875;
+bi&#7871;t c&aacute;ch l&agrave;m,c&ograve;n n&#7871;u 'No' th&igrave; h&atilde;y
+xem ph&#7847;n 'Chat script'.<br>
+<br>
+<span style="font-weight: bold;"> Modem init string</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppmodeminit.png" title="" alt=""
+ style="width: 588px; height: 316px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> N&#7871;u nh&#432; b&#7841;n c&oacute; m&#7897;t modem l&#7841; th&igrave; b&#7841;n
+&#273;&#417;n gi&#7843;n ch&#7881; c&#7847;n nh&#7845;n Enter &#273;&#7875; m&#7863;c &#273;&#7883;nh cho modem l&agrave;
+"AT&amp;FH0".Ng&#432;&#7907;c l&#7841;i h&atilde;y xem t&agrave;i li&#7879;u &#273;i k&egrave;m
+modem &#273;&#7875; r&otilde; th&ecirc;m.<br>
+<br>
+<span style="font-weight: bold;"> Domain name</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppdomain.png" title="" alt=""
+ style="width: 592px; height: 196px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> B&#7841;n c&#7847;n &#273;i&#7873;n t&ecirc;n domain c&#7911;a b&#7841;n
+v&agrave;o.C&oacute; th&#7875; nh&#432; l&agrave; "primer.net","slackware.com"
+ho&#7863;c &#273;&#7841;i lo&#7841;i nh&#432; th&#7871;.<br>
+<br>
+<span style="font-weight: bold;"> DNS IP address</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.2.2"><img
+ src="image/ppp/pppdomainip.png" title="" alt=""
+ style="width: 594px; height: 252px;"></a><br>
+<a name="ch_4.2.2"></a></div>
+<a name="ch_4.2.2"> ISP c&#7911;a b&#7841;n c&#7847;n th&ocirc;ng b&aacute;o cho b&#7841;n
+IP-address server c&#7911;a ch&uacute;ng.N&#7871;u b&#7841;n c&oacute; h&atilde;y &#273;i&#7873;n
+v&agrave;o,ng&#432;&#7907;c l&#7841;i h&atilde;y xem x&eacute;t l&#7841;i ISP &#273;&#7875; r&otilde; h&#417;n.<br>
+<br>
+<span style="font-weight: bold;"> Authentication method<br>
+</span><br>
+B&#7841;n c&#7847;n ph&#7843;i bi&#7871;t ISP s&#7917; d&#7909;ng CHAP hay l&agrave; PAP ho&#7863;c l&agrave;
+kh&ocirc;ng m&#7897;t c&aacute;i n&agrave;o c&#7843;.&#272;&#7875; &#273;&#417;n gi&#7843;n h&atilde;y g&#7885;i &#273;&#7871;n
+ISP c&#7911;a b&#7841;n v&agrave; h&#7887;i h&#7885;.V&agrave; c&oacute; l&#7869; sau khi nh&#7853;p
+v&agrave;o b&#7897; s&#7889; &#273;&#7875; k&#7871;t n&#7889;i b&#7841;n s&#7869; nh&igrave;n th&#7845;y c&#7917;a s&#7893; login
+v&agrave; password.Nh&#432;ng c&oacute; l&#7869; b&#7841;n n&ecirc;n s&#7917; d&#7909;ng
+"SCRIPT".Ng&#432;&#7907;c l&#7841;i h&atilde;y li&ecirc;n h&#7879; v&#7899;i ISP c&#7911;a b&#7841;n &#273;&#7875; bi&#7871;t
+c&aacute;ch s&#7917; d&#7909;ng.<br>
+PAP ho&#7863;c CHAP<br>
+<br>
+N&#7871;u ch&#7885;n PAP hay CHAP th&igrave; b&#7841;n s&#7869; ph&#7843;i nh&#7853;p v&agrave;o username
+v&agrave; password.ISP c&#7847;n &#273;&#432;&#7907;c g&aacute;n v&#7899;i username,n&#7871;u nh&#432;
+c&oacute; g&igrave; &#273;&oacute; kh&ocirc;ng &#273;&uacute;ng th&igrave;
+&#273;&atilde; c&oacute; c&aacute;i g&igrave; &#273;&oacute; kh&ocirc;ng
+&#273;&uacute;ng.B&#7841;n c&#7847;n ph&#7843;i li&ecirc;n h&#7879; l&#7841;i &#273;&#7875; nh&#7853;n &#273;&#432;&#7907;c username c&#7911;a
+m&igrave;nh.Sau &#273;&oacute; s&#7869; nh&#7853;p v&agrave;o password.<br>
+<span style="font-weight: bold;"> Chat Script<br>
+</span><br>
+N&#7871;u ch&#7885;n "SCRIPT" th&igrave; c&oacute; l&#7869; s&#7869; c&#7847;n r&#7845;t l&acirc;u &#273;&#7875; gi&#7843;i
+th&iacute;ch th&#7871; n&agrave;o l&agrave; script.H&atilde;y &#273;&#7885;c n&oacute;
+m&#7897;t c&aacute;ch c&#7849;n th&#7853;n,b&#7903;i v&igrave; n&oacute; &#273;&#432;&#7907;c ghi r&#7845;t l&agrave;
+r&otilde; r&agrave;ng trong &#273;&oacute;.<br>
+<span style="font-weight: bold;"> Done<br>
+</span><br>
+&#7902; cu&#7889;i c&ugrave;ng s&#7869; hi&#7875;n th&#7883; t&#7845;t c&#7843; c&#7845;u h&igrave;nh c&#7911;a ppp.B&#7841;n
+kh&ocirc;ng th&#7875; mi&ecirc;u t&#7843; n&#7897;i dung c&#7911;a n&oacute;,nh&#432;ng c&oacute; th&#7875;
+ki&#7875;m tra xem m&#7885;i th&#7913; &#273;&atilde; &#273;&uacute;ng ch&#432;a.Nh&#7845;n enter &#273;&#7875; l&#432;u l&#7841;i
+c&#7845;u h&igrave;nh v&agrave; tho&aacute;t ra kh&#7887;i h&#7879; th&#7889;ng.&#272;&#7875; k&iacute;ch
+ho&#7841;t k&#7871;t n&#7889;i b&#7841;n c&#7847;n ch&#7841;y root v&agrave; g&otilde; l&#7879;nh ppp-go,khi
+n&agrave;o ch&#432;&#417;ng tr&igrave;nh th&ocirc;ng b&aacute;o cho b&#7841;n bi&#7871;t
+IP-local v&agrave; IP-remote th&igrave; c&oacute; ngh&#297;a l&agrave; b&#7841;n
+&#273;&atilde; k&#7871;t n&#7889;i v&agrave;o internet.Khi mu&#7889;n ng&#7855;t li&ecirc;n k&#7871;t
+h&atilde;y th&#7921;c hi&#7879;n ppp-off nh&#432; root.<br>
+<br>
+</a><a name="ch_4.2.3"><span style="font-weight: bold;">4.2.3 /etc<br>
+</span><br>
+<span style="font-weight: bold;"> /etc/inetd.conf<br>
+</span><br>
+&#272;&#7889;i v&#7899;i m&#7895;i H&#272;H th&igrave; vi&#7879;c &#273;&#7883;nh h&#432;&#7899;ng v&agrave;o s&#7917; d&#7909;ng m&#7841;ng c&#361;ng
+nh&#432; th&#7921;c hi&#7879;n c&aacute;c d&#7883;ch v&#7909; m&#7841;ng<br>
+kh&aacute;c nhau &#273;&#432;&#7907;c coi l&agrave; m&#7897;t c&ocirc;ng vi&#7879;c r&#7845;t b&igrave;nh
+th&#432;&#7901;ng.Th&ocirc;ng th&#432;&#7901;ng &#273;&#7889;i v&#7899;i m&#7895;i d&#7883;ch v&#7909; c&#7847;n c&oacute; m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh chuy&ecirc;n gi&aacute;m s&aacute;t c&aacute;c k&#7871;t
+n&#7889;i.C&oacute; th&#7875; g&acirc;p &aacute;p l&#7921;c l&ecirc;n h&#7879; th&#7889;ng n&#7871;u nh&#432;
+n&oacute; ph&#7843;i th&#7921;c hi&#7879;n c&ocirc;ng vi&#7879;c cho q&uacute;a nhi&#7873;u d&#7883;ch v&#7909;.&#272;&#7875;
+gi&#7843;m tr&#7885;ng t&#7843;i cho h&#7879; th&#7889;ng ng&#432;&#7901;i ta &#273;&atilde; t&#7841;o ra inetd hay
+l&agrave; internetsuper.inetd d&ugrave;ng &#273;&#7875; nghe c&aacute;c y&ecirc;u
+c&#7847;u theo nhi&#7873;u socket,khi c&oacute; y&ecirc;u c&#7847;u th&igrave; inetd s&#7869;
+nh&#432;&#7901;ng l&#7841;i quy&#7873;n &#273;i&#7873;u khi&#7875;n cho server t&#432;&#417;ng &#7913;ng &#273;&#7875; l&agrave;m vi&#7879;c v&#7899;i
+y&ecirc;u c&#7847;u.t&#7853;p tin c&#7845;u h&igrave;nh inted l&agrave; <span
+ style="font-weight: bold;">/etc/inetd.conf</span>.Trong n&oacute;
+c&oacute; ch&#7913;a c&aacute;c server c&#7847;n &#273;&#432;&#7907;c th&#7921;c thi &#273;&#7889;i v&#7899;i c&aacute;c
+k&#7871;t n&#7889;i kh&aacute;c nhau.B&#7841;n c&oacute; th&#7875; xem trong man-pages &#273;&#7875;
+c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+<span style="font-weight: bold;"> ftp stream tcp nowait root
+/usr/sbin/tcpd wu.ftpd -l -i -a <br>
+</span><br>
+D&ograve;ng tr&ecirc;n c&oacute; li&ecirc;n quan t&#7899;i ftp
+server.Ch&uacute; &yacute;:&#273;&#7847;u ti&ecirc;n l&agrave; t&ecirc;n protocol
+"-ftp" v&agrave; cu&#7889;i c&ugrave;ng l&agrave; ch&#432;&#417;ng tr&igrave;nh c&#7847;n ch&#7841;y
+&#273;&#7875; tr&#7843; l&#7901;i cho y&ecirc;u c&#7847;u.Trong v&iacute; d&#7909; tr&ecirc;n th&igrave;
+ch&#432;&#417;ng tr&igrave;nh c&#7847;n ch&#7841;y &#273;&#7875; tr&#7843; l&#7901;i cho y&ecirc;u c&#7847;u l&agrave;
+/usr/sbin/tcpd.Ch&#432;&#417;ng tr&igrave;nh "wraper" m&agrave; th&#7921;c hi&#7879;n
+c&aacute;c &#273;&ograve;i h&#7887;i an to&agrave;n cho server c&#361;ng &#273;&#432;&#7907;c th&#7921;c
+thi.wu.ftp kh&aacute;ch quan l&agrave; ftp c&#7911;a ch&uacute;ng ta,nh&#432;ng
+tcpd kh&#7903;i &#273;&#7897;ng n&oacute; cho b&#7841;n.B&#7841;n c&oacute; th&#7875; xem ph&#7847;n ti&#7871;p sau &#273;&#7875;
+c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+Gi&#7889;ng nh&#432; c&aacute;c t&#7853;p tin h&#7879; th&#7889;ng kh&aacute;c,ch&uacute;
+th&iacute;ch trong inted,conf b&#7855;t &#273;&#7847;u b&#7903;i d&#7845;u "#".B&#7841;n c&oacute; th&#7875;
+k&iacute;ch ho&#7841;t ho&#7863;c ng&#7855;t c&aacute;c d&#7883;ch v&#7909; cho inted,ng&#7855;t ch&uacute;
+th&iacute;ch(bi&#7871;n d&ograve;ng ch&uacute; gi&#7843;i th&agrave;nh d&ograve;ng
+l&#7879;nh)ho&#7863;c b&#7853;t ch&uacute; th&iacute;ch(bi&#7871;n d&ograve;ng l&#7879;nh th&agrave;nh
+ch&uacute; th&iacute;ch) &#7903; trong t&#7853;p tin n&agrave;y v&agrave; cu&#7889;i
+c&ugrave;ng l&agrave; kh&#7903;i &#273;&#7897;ng inted.<br>
+<br>
+<span style="font-weight: bold;"> /etc/resolv.conf<br>
+</span><br>
+T&#7853;p tin n&agrave;y th&ocirc;ng b&aacute;o tr&ecirc;n to&agrave;n h&#7879;
+th&#7889;ng r&#7857;ng th&ocirc;ng tin DNS t&#7915; &#273;&acirc;u.T&#7845;t c&#7843; t&ecirc;n server &#273;&#432;&#7907;c
+s&#7917; d&#7909;ng s&#7869; li&#7879;t k&ecirc; &#7903; d&#432;&#7899;i,k&#7875; c&#7843; t&ecirc;n host c&#7911;a b&#7841;n.D&#432;&#7899;i
+l&agrave; m&#7897;t v&iacute; d&#7909; c&#7911;a t&#7853;p tin n&agrave;y(t&#7915; m&aacute;y latop -
+n&#7883;nja.tdn):<br>
+<br>
+<span style="font-style: italic;"> domain tdn</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> nameserver 192.168.1.1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> search tdn. slackware.com <br>
+</span><br>
+D&ograve;ng &#273;&#7847;u c&oacute; ngh&#297;a l&agrave; t&ecirc;n domain tdn cho
+n&#7883;nja.Th&#7913; hai l&agrave; DNS server tr&ecirc;n m&#7841;ng nh&agrave; c&#7911;a
+b&#7841;n.B&#7841;n c&oacute; th&#7875; ghi ch&uacute;ng bao nhi&ecirc;u tu&#7923;
+th&iacute;ch.Ch&uacute;ng s&#7869; &#273;&#432;&#7907;c tinh ch&#7871; theo th&#7913; t&#7921; khi m&agrave; m&#7897;t
+ch&#432;&#417;ng tr&igrave;nh n&agrave;o &#273;&oacute; c&#7847;n t&igrave;m IP-address t&#432;&#417;ng
+&#7913;ng v&#7899;i t&ecirc;n c&#7911;a domain &#273;&atilde; n&ecirc;u.<br>
+<br>
+D&ograve;ng cu&#7889;i c&ugrave;ng c&oacute; l&#7869; l&agrave; hay h&#417;n,n&oacute;
+ghi ra t&#7845;t c&#7843; t&ecirc;n c&#7911;a domain &#273;&#432;&#7907;c g&aacute;n cho h&#7879; th&#7889;ng.Ch&#7859;ng
+h&#7841;n nh&#432; t&ocirc;i c&oacute; m&aacute;y zuul.tdn v&agrave;
+hejaz.slackware.com.Khi &#273;&oacute; t&ocirc;i c&oacute; th&#7875; th&#7921;c hi&#7879;n ping
+zuul v&agrave; ping hejaz.Th&#7921;c ch&#7845;t khi ping th&igrave; l&#7879;nh ping
+&#273;&atilde; b&#7893; sung th&ecirc;m".tdn" v&agrave;o zuul v&agrave; t&igrave;m
+host t&#432;&#417;ng &#7913;ng.C&ograve;n &#273;&#7889;i v&#7899;i "hejaz" th&igrave; &#273;&#7847;u ti&ecirc;n
+n&oacute; th&#7917; v&#7899;i "hejaz.tdn".Kh&ocirc;ng c&oacute; host n&agrave;o
+t&#432;&#417;ng &#7913;ng,cho n&ecirc;n n&oacute; ti&#7871;n h&agrave;nh th&#7917; v&#7899;i
+"hejaz.slackware.com" v&agrave; ping.Ch&uacute; &yacute; t&#7845;t c&#7843;
+c&aacute;c domain &#273;&#432;&#7907;c ch&#7881; ra trong search c&#7847;n ph&#7843;i &#273;&#432;&#7907;c k&#7871;t th&uacute;c
+b&#7857;ng "." nh&#432;ng tr&#7915; c&aacute;i cu&#7889;i c&ugrave;ng v&agrave; t&#7845;t nhi&ecirc;n
+n&#7871;u ch&#7881; c&oacute; m&#7897;t c&aacute;i duy nh&acirc;t th&igrave; n&oacute;
+c&#361;ng ch&igrave;nh l&agrave; cu&#7889;i c&ugrave;ng("." kh&ocirc;ng c&#7847;n ch&#7881;).<br>
+<br>
+<span style="font-weight: bold;"> /etc/host<br>
+</span><br>
+T&#7853;p tin host l&agrave;m &#273;&#417;n gi&#7843;n ho&aacute; qu&aacute; tr&igrave;nh
+t&igrave;m ki&#7871;m host trong domain.N&oacute; ch&#7913;a danh s&aacute;ch
+c&aacute;c host c&ugrave;ng v&#7899;i IP-address t&#432;&#417;ng &#7913;ng.N&oacute; ti&#7879;n l&#7907;i
+cho c&aacute;c server kh&ocirc;ng qu&aacute; l&#7899;n,trong l&uacute;c h&#7879;
+th&#7889;ng kh&#7903;i &#273;&#7897;ng l&#7841;i khi &#7845;y t&ecirc;n c&aacute;c server kh&ocirc;ng ho&#7841;t
+&#273;&#7897;ng.T&#7879;p c&#7911;a t&ocirc;i c&oacute; d&#7841;ng nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> 127.0.0.1 localhost</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 192.168.1.32 ninja.tdn ninja <br>
+</span><br>
+D&ograve;ng &#273;&#7847;u ti&ecirc;n l&agrave; c&#7847;n ph&#7843;i c&oacute; nh&#432; m&#7863;c
+&#273;&#7883;nh.D&ograve;ng th&#7913; hai c&oacute; th&#7875; kh&ocirc;ng.B&#7841;n c&oacute; th&#7875; ch&#7881;
+ra nhi&#7873;u t&ecirc;n cho m&#7897;t &#273;&#7883;a ch&#7881;,c&aacute;c t&ecirc;n ph&acirc;n bi&#7879;t
+b&#7857;ng d&#7845;u c&aacute;ch.Nh&#432; v&#7853;y l&agrave; c&#7911;a t&ocirc;i "192.168.1.32"
+t&#432;&#417;ng &#7913;ng v&#7899;i "ninja.tdn" v&agrave; ng&#432;&#7907;c l&#7841;i,c&ograve;n "ninja"c&#361;ng
+t&#432;&#417;ng t&#7921;.<br>
+<br>
+</a><a name="ch_4.2.4"><span style="font-weight: bold;">4.2.4 rc.inet1</span><br>
+<span style="font-weight: bold;"> /etc/rc.d/rc.inet1</span> - &#273;&acirc;y
+l&agrave; t&#7853;p tin s&#7917; d&#7909;ng cho thi&#7871;t b&#7883; m&#7841;ng h&#7891;ng ngo&#7841;i.N&oacute; &#273;&#7883;nh
+h&#432;&#7899;ng v&agrave; c&agrave;i &#273;&#7863;t &#273;&#7883;a ch&#7881; c&ugrave;ng v&#7899;i &#273;&#432;&#7901;ng d&#7851;n. Trong
+Slackware rc.inet1 &#273;&#432;&#7907;c &#273;i k&egrave;m c&ugrave;ng v&#7899;i nhi&#7873;u ch&uacute;
+th&iacute;ch.<br>
+<br>
+</a><a name="ch_4.2.5"><span style="font-weight: bold;">4.2.5 rc.inet2</span><br>
+T&#7853;p tin <span style="font-weight: bold;">/etc/rc.d/rc.inet2</span>
+li&ecirc;n quan t&#7899;i m&#7897;t ph&#7847;n kh&aacute;c c&#7911;a m&#7841;ng:c&agrave;i &#273;&#7863;t d&#7883;ch v&#7909;
+v&agrave; domain.Ch&uacute;ng ta h&atilde;y xem v&iacute; d&#7909; sau:<br>
+<br>
+<span style="font-style: italic;"> #Start the NAMED/BIND name server:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> if [ -f $NET/named ]; then</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> &nbsp;&nbsp; echo -n ''named''</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> &nbsp;&nbsp; $NET/named -u daemon -g
+daemon</span><br style="font-style: italic;">
+<span style="font-style: italic;"> fi </span><br>
+Quan tr&#7885;ng l&agrave; d&ograve;ng th&#7913; t&#432; m&agrave; kh&#7903;i &#273;&#7897;ng <span
+ style="font-weight: bold;">named(8)</span>.T&#7845;t c&#7843; c&ograve;n l&#7841;i ch&#7881;
+l&agrave; ph&#7909; th&ecirc;m."If" ki&#7875;m tra t&#7891;n t&#7841;i hay kh&ocirc;ng named &#7903;
+&#273;&uacute;ng v&#7883; tr&iacute; c&#7911;a n&oacute; hay kh&ocirc;ng?c&ograve;n echo
+&#273;&#432;a ra m&agrave;n h&igrave;nh th&ocirc;ng b&aacute;o r&#7857;ng named
+&#273;&atilde; ch&#7841;y khi kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng.H&#7847;u nh&#432; c&aacute;c d&#7883;ch v&#7909; &#273;&#432;&#7907;c
+ch&#7841;y t&#7915; rc.inet2,ch&uacute;ng &#273;&#432;&#7907;c kh&#7903;i &#273;&#7897;ng theo c&aacute;c block.V&#7851;n
+th&#7871; rc.inet2 c&oacute; r&#7845;t nhi&#7873;u ch&uacute;&nbsp; gi&#7843;i b&#7841;n c&oacute;
+th&#7875; t&igrave;m trong n&oacute; nhi&#7873;u &#273;i&#7873;u th&uacute; v&#7883;.<br>
+<br>
+</a><a name="ch_4.2.6"><span style="font-weight: bold;">4.2.6 NFS(H&#7879;
+th&#7889;ng t&#7853;p tin m&#7841;ng)<br>
+</span><br>
+NFS s&#7917; d&#7909;ng ch&#7911; y&#7871;u &#273;&#7875; ph&acirc;n chia t&agrave;i nguy&ecirc;n
+tr&ecirc;n m&#7841;ng.NFS c&oacute; c&#7845;u tr&uacute;c sao cho m&#7897;t m&aacute;y
+kh&aacute;c c&oacute; th&#7875; mount(k&#7871;t n&#7889;i) v&#7899;i c&aacute;c ph&#7847;n t&agrave;i
+nguy&ecirc;n tr&ecirc;n m&aacute;y kh&aacute;c nh&#432; trong m&#7841;ng n&#7897;i b&#7897;.<br>
+&#272;&#7875; c&oacute; th&#7875; x&acirc;y d&#7921;ng c&#7845;u h&igrave;nh NFS c&#7847;n ph&#7843;i l&agrave;m
+nhi&#7873;u c&ocirc;ng vi&#7879;c.&#272;&#7847;u ti&ecirc;n l&agrave; c&aacute;c d&#7883;ch v&#7909; c&#7847;n
+ph&#7843;i &#273;&#432;&#7907;c ch&#7841;y tr&ecirc;n m&aacute;y server:<span
+ style="font-weight: bold;">potmap(8),nfsd(8)v&agrave; mountd(8)</span>.Th&#7913;
+hai l&agrave; server c&#7847;n ph&#7843;i t&#432;&#417;ng &#7913;ng xu&#7845;t (export) c&acirc;y h&#7879;
+th&#7889;ng t&#7853;p tin t&#7899;i m&aacute;y kh&aacute;ch(client),&#273;i&#7873;u n&agrave;y th&#7921;c
+hi&#7879;n th&ocirc;ng qua t&#7853;p tin <span style="font-weight: bold;">exports(5)</span>
+t&#7915; <span style="font-weight: bold;">/etc</span>.<br>
+<br>
+Ph&#7847;n &#273;&#7847;u &#273;&#432;&#7907;c c&agrave;i &#273;&#7863;t b&#7903;i <span style="font-style: italic;">tcpip1.tgz</span>trong
+khu v&#7921;c ch&#432;&#417;ng tr&igrave;nh N v&agrave; b&#7893; sung quy&#7873;n th&#7921;c hi&#7879;n cho <span
+ style="font-style: italic;">rc.inet2</span>.,c&ograve;n <span
+ style="font-style: italic;">/etc/exports</span> th&igrave; h&#417;i ph&#7913;c t&#7841;p
+h&#417;n.<br>
+<br>
+Cho r&#7857;ng b&#7841;n c&oacute; catalog tr&ecirc;n "ninja.tdn"&nbsp; m&agrave;
+ch&uacute;ng ta mu&#7889;n k&#7871;t n&#7889;i t&#7899;i catalog tr&ecirc;n "battlecat.tdn"
+,th&igrave; tr&ecirc;n battlecat c&#7847;n d&ograve;ng nh&#432; d&#432;&#7899;i &#273;&acirc;y
+trong <span style="font-weight: bold;">/etc/exports<br>
+</span><br>
+<span style="font-weight: bold;"> /var/media/images&nbsp;&nbsp;
+ninja.tdn(ro) </span><br>
+<br>
+B&acirc;y gi&#7901; tr&ecirc;n ninja c&oacute; th&#7875; th&#7921;c hi&#7879;n l&#7879;nh:<br>
+<br>
+<span style="font-weight: bold;"> #mount -t nfs
+battlecat.tdn:/var/media/images /mnt<br>
+</span><br>
+N&oacute; gi&uacute;p k&#7871;t n&#7889;i catalog images sang catalog /mnt.Tuy
+nhi&ecirc;n ch&uacute;ng ta &#273;&atilde; c&#7845;m quy&#7873;n h&#7841;n ghi l&ecirc;n
+tr&ecirc;n catalog n&agrave;y - do c&oacute; tham bi&#7871;n <span
+ style="font-style: italic;">"ro"</span> tr&ecirc;n t&#7853;p tin<span
+ style="font-style: italic;"> /etc/exports</span> c&#7911;a m&aacute;y
+battlecat.T&#7845;t c&#7843; c&aacute;c tham bi&#7871;n n&agrave;y &#273;&#432;&#7907;c ch&#7881; ra sau
+t&ecirc;n c&#7911;a client v&agrave; n&#7857;m trong d&#7845;u "()" &#273;&#432;&#7907;c t&aacute;ch nhau
+b&#7903;i d&#7845;u ";".<br>
+<br>
+<span style="font-style: italic;"> "rw"</span> -"&#273;&#7885;c v&agrave; ghi"(B&#7841;n
+c&oacute; th&#7875; xem man-pages &#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng
+tin).V&#7851;n c&ograve;n c&oacute; tham bi&#7871;n n&#7919;a<br>
+&#273;&oacute; l&agrave; "squash" t&ocirc;i ngh&#297; s&#7869; th&uacute; v&#7883; h&#417;n khi
+b&#7841;n t&#7921; th&#7921;c h&agrave;nh v&#7899;i n&oacute;.N&#7871;u b&#7841;n &#273;&#7883;nh l&agrave;m vi&#7879;c v&#7899;i
+NFS th&igrave; <span style="font-weight: bold;">exports(8) </span>s&#7869;
+l&agrave; m&#7897;t ng&#432;&#7901;i b&#7841;n t&#7889;t.<br>
+<br>
+</a><a name="ch_4.2.7"><span style="font-weight: bold;">4.2.7
+tcp_wrappers<br>
+<br>
+</span><span style="font-weight: bold;">tcp_wrappers</span> - &#272;&#7845;y
+l&agrave; m&#7897;t h&#7879; th&#7889;ng ki&#7875;m so&aacute;t quy&#7873;n truy c&#7853;p t&#7899;i c&aacute;c
+d&#7883;ch v&#7909; v&#7899;i nh&#7919;ng host &#273;&#7863;c bi&#7879;t.N&oacute; l&agrave;m vi&#7879;c theo
+nguy&ecirc;n t&#7855;c sau:<br>
+<br>
+<span style="font-weight: bold;"> inetd</span> kh&#7903;i &#273;&#7897;ng nhi&#7873;u d&#7883;ch v&#7909;
+ch&#7911; y&#7871;u l&agrave; wrap b&#7903;i ch&#432;&#417;ng tr&igrave;nh tcpd.Ch&iacute;nh
+x&aacute;c l&agrave; tcpd kh&#7903;i &#273;&#7897;ng c&aacute;c d&#7883;ch v&#7909; n&agrave;y nh&#432;ng
+inetd kh&ocirc;ng bi&#7871;t &#273;&#432;&#7907;c &#273;i&#7873;u n&agrave;y(ch&iacute;nh x&aacute;c
+kh&ocirc;ng &#273;&#7875; &yacute; &#273;&#7871;n).Tcpd ti&#7871;n h&agrave;nh th&#7917; k&#7871;t n&#7889;i sau
+&#273;&oacute; ki&#7875;m tra c&aacute;c t&#7853;p tin <span style="font-style: italic;">/etc/hosts.allow
+v&agrave; /etc/hosts.deny</span> &#273;&#7875; ki&#7875;m tra cho ph&eacute;p hay
+kh&ocirc;ng quy&#7873;n truy c&#7853;p c&aacute;c d&#7883;ch v&#7909; n&agrave;y.<br>
+<br>
+X&aacute;c &#273;&#7883;nh &#273;&uacute;ng nguy&ecirc;n t&aacute;c l&agrave;m vi&#7879;c cho
+nh&#7919;ng t&#7853;p tin n&agrave;y r&#7845;t l&agrave; kh&oacute;. Gi&#7843;i s&#7917; pyramid.tdn
+mu&#7889;n t&#7845;n c&ocirc;ng v&agrave;o mojo.tdn.&#272;&#7875; b&#7843;o v&#7879; th&igrave; tr&ecirc;n
+mojo.tdn c&oacute; th&#7875; b&#7893; sung v&agrave;o <span
+ style="font-style: italic;">/etc/hosts.deny</span> d&ograve;ng sau:<br>
+<br>
+<span style="font-weight: bold;"> ALL: pyramid.tdn </span><br>
+<br>
+C&oacute; ngh&#297;a l&agrave; c&#7845;m host pyramid.tdn truy c&#7853;p t&#7899;i t&#7845;t
+c&#7843;&nbsp; c&aacute;c d&#7883;ch v&#7909; l&ecirc;n mojo.tdn m&agrave; &#273;&#432;&#7907;c kh&#7903;i &#273;&#7897;ng
+b&#7903;i tcpd.N&#7871;u nh&#432; b&#7841;n mu&#7889;n ng&#259;n ch&#7863;n v&#7899;i t&#7845;t c&#7843; c&aacute;c domain
+th&igrave; c&oacute; th&#7875; th&ecirc;m dong sau:<br>
+<br>
+<span style="font-weight: bold;"> ALL: pyramid.tdn, .annoying.domain </span><br>
+<br>
+N&#7871;u nh&#432; b&#7841;n mu&#7889;n b&#7841;n c&#7911;a m&igrave;nh c&oacute; th&#7875; truy c&#7853;p l&ecirc;n
+h&#7879; th&#7889;ng(tuy nhi&ecirc;n kh&ocirc;ng ch&#7881; 1 ng&#432;&#7901;i m&agrave; cho nhi&#7873;u
+ng&#432;&#7901;i) th&igrave; r&#7845;t &#273;&#417;n gi&#7843;n h&atilde;y l&agrave;m vi&#7879;c v&#7899;i
+/etc/hosts.allow.D&ograve;ng d&#432;&#7899;i &#273;&acirc;y s&#7869; cho ph&eacute;p
+c&aacute;c b&#7841;n c&#7911;a b&#7841;n quy&#7873;n truy c&#7853;p l&ecirc;n h&#7879; th&#7889;ng:<br>
+<br>
+<span style="font-weight: bold;"> ALL: hobbes.annoying.domain <br>
+</span><br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin h&atilde;y xem th&ecirc;m
+man-pages c&#7911;a c&aacute;c ch&#432;&#417;ng tr&igrave;nh tr&ecirc;n,<span
+ style="font-style: italic;">tcpd(8),hosts_access(5) v&agrave;
+hosts_options(5).</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_5.7.4"
+ style="font-weight: bold;" href="../../../../root/slackware/index.html">M&#7909;c
+L&#7909;c</a><a name="ch_4.2.7"></a><br>
+<a name="ch_4.2.7"></a></div>
+<a name="ch_4.2.7"> </a>
+<hr><span style="font-style: italic;"> Bi&ecirc;n d&#7883;ch: V&#361;
+D&#361;ng(vudung@mail.ru)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> website:</span><a
+ href="../../../default.htm" style="font-style: italic;">http://khigiacmoquayve.narod.ru</a><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1-9-2005 Voronezh Russian</span>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

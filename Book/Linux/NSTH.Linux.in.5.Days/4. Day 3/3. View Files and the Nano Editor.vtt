@@ -1,0 +1,358 @@
+WEBVTT
+
+1
+00:00:03.052 --> 00:00:07.438
+In this lesson we'll look at Different
+ways to display the contents of files and
+
+2
+00:00:07.438 --> 00:00:08.950
+how to use the Nano editor.
+
+3
+00:00:10.210 --> 00:00:13.860
+You can use the cat command to
+display the entire contents of a file.
+
+4
+00:00:14.870 --> 00:00:19.810
+The more command will allow you to browse
+through a file or page through a file.
+
+5
+00:00:19.810 --> 00:00:25.580
+The less command is like more except
+is has more features, less is more.
+
+6
+00:00:25.580 --> 00:00:31.210
+When using the commands more or less, use
+the Space bar to advance to the next page.
+
+7
+00:00:31.210 --> 00:00:36.090
+Use the Enter key to advance one line and
+type Q to quit viewing the file.
+
+8
+00:00:36.090 --> 00:00:38.130
+The commands are based on the VI editor,
+
+9
+00:00:38.130 --> 00:00:40.020
+which we'll be covering
+later in this lesson.
+
+10
+00:00:41.490 --> 00:00:45.210
+By default head and
+tail only display ten lines.
+
+11
+00:00:45.210 --> 00:00:49.080
+So if you wanted to see the last
+15 lines of a file for example,
+
+12
+00:00:49.080 --> 00:00:54.250
+you could use tail -15
+space the file name.
+
+13
+00:00:55.930 --> 00:01:00.490
+The cat command can be a fine way to
+view files that have static content.
+
+14
+00:01:00.490 --> 00:01:03.930
+However, if you're trying to keep up with
+changes that are being made to a file in
+
+15
+00:01:03.930 --> 00:01:06.620
+real time, cat's not your choice.
+
+16
+00:01:06.620 --> 00:01:11.040
+You should use tail -f
+followed by the file name.
+
+17
+00:01:11.040 --> 00:01:17.210
+You would use this to look at files that
+change often, for example, log files.
+
+18
+00:01:17.210 --> 00:01:19.350
+You may wanna start a program and
+
+19
+00:01:19.350 --> 00:01:22.690
+look at the program's log file
+to see exactly what it's doing.
+
+20
+00:01:22.690 --> 00:01:26.740
+Again in this case use tail -f and
+the file you want to follow.
+
+21
+00:01:28.620 --> 00:01:30.450
+Let's look at this file
+with the cat command.
+
+22
+00:01:30.450 --> 00:01:37.690
+If we run head against that file, we
+will see the top ten lines of that file.
+
+23
+00:01:39.470 --> 00:01:44.294
+If we only wanted to see the top
+two lines, we could run -2.
+
+24
+00:01:45.810 --> 00:01:49.470
+And a tail command will display
+the last ten lines in that file.
+
+25
+00:01:51.580 --> 00:01:53.580
+Let's say we only want to
+look at the last line.
+
+26
+00:01:53.580 --> 00:01:54.825
+We could do tail -1.
+
+27
+00:01:58.380 --> 00:01:59.780
+And that's the last line of the file.
+
+28
+00:02:09.880 --> 00:02:12.750
+Let's run more against this file here.
+
+29
+00:02:15.980 --> 00:02:17.510
+We can see some information.
+
+30
+00:02:17.510 --> 00:02:19.050
+It's the first page of the file.
+
+31
+00:02:19.050 --> 00:02:22.780
+If you want to get to the next
+page just hit the space bar.
+
+32
+00:02:22.780 --> 00:02:24.370
+Space bar again for another page.
+
+33
+00:02:24.370 --> 00:02:27.710
+If you wanna go down just
+one line hit the Enter key.
+
+34
+00:02:28.840 --> 00:02:29.870
+That's one line.
+
+35
+00:02:29.870 --> 00:02:31.100
+Another line.
+
+36
+00:02:31.100 --> 00:02:32.540
+Another line.
+
+37
+00:02:32.540 --> 00:02:36.240
+And to quit, you just type Q.
+
+38
+00:02:36.240 --> 00:02:38.040
+The less command is very similar.
+
+39
+00:02:39.880 --> 00:02:41.860
+Again, space bar goes down a page.
+
+40
+00:02:41.860 --> 00:02:45.660
+The Enter key, down one line,
+and Q to quit.
+
+41
+00:02:46.830 --> 00:02:50.960
+Now this file is growing so
+lets take a look at this.
+
+42
+00:02:50.960 --> 00:02:57.270
+We will use -f with tail
+to follow the file.
+
+43
+00:02:57.270 --> 00:02:59.884
+As you can see,
+the file is being written to and
+
+44
+00:02:59.884 --> 00:03:03.583
+the screen gets updated with that
+information as the file grows.
+
+45
+00:03:07.665 --> 00:03:10.505
+To exit, just type Ctrl+C.
+
+46
+00:03:10.505 --> 00:03:13.309
+If you need to edit a file right now and
+
+47
+00:03:13.309 --> 00:03:19.540
+don't wanna spend any time learning
+an obscure editor, you use Nano.
+
+48
+00:03:19.540 --> 00:03:24.330
+Nano is a clone of pico, so if for some
+reason the Nano command isn't available,
+
+49
+00:03:24.330 --> 00:03:25.250
+try pico.
+
+50
+00:03:26.350 --> 00:03:27.750
+It's very easy to learn but
+
+51
+00:03:27.750 --> 00:03:31.930
+it's not as advanced as some of
+the other editors like vi or emacs.
+
+52
+00:03:34.840 --> 00:03:36.930
+Let's edit this file in Nano.
+
+53
+00:03:36.930 --> 00:03:38.650
+Nano file.txt.
+
+54
+00:03:40.060 --> 00:03:43.610
+So when you start Nano you can
+see the file's contents and
+
+55
+00:03:43.610 --> 00:03:46.520
+a list of commands at
+the bottom of your screen.
+
+56
+00:03:46.520 --> 00:03:50.180
+The carrot symbol
+represents a control key.
+
+57
+00:03:50.180 --> 00:03:52.260
+So if we look in the bottom
+left hand corner.
+
+58
+00:03:52.260 --> 00:03:55.720
+Which means Ctrl+X to exit.
+
+59
+00:03:55.720 --> 00:03:56.475
+I'll do that now.
+
+60
+00:03:56.475 --> 00:04:00.650
+Ctrl+X and we are existed out of Nano.
+
+61
+00:04:01.770 --> 00:04:04.530
+So let's go back in.
+
+62
+00:04:05.640 --> 00:04:08.220
+Editing with nano is pretty easy.
+
+63
+00:04:08.220 --> 00:04:09.940
+Arrow keys work as you would expect.
+
+64
+00:04:09.940 --> 00:04:16.440
+Down, right, up, left.
+
+65
+00:04:16.440 --> 00:04:21.370
+If you want to save a file hit Ctrl+O and
+hit Enter.
+
+66
+00:04:21.370 --> 00:04:24.320
+Let's make some modifications.
+
+67
+00:04:24.320 --> 00:04:28.665
+So again, just place your cursor wherever
+you want to go and start typing there.
+
+68
+00:04:28.665 --> 00:04:31.889
+[SOUND]
+And
+
+69
+00:04:31.889 --> 00:04:37.935
+Ctrl+X to exit.
+
+70
+00:04:37.935 --> 00:04:40.295
+And it says,
+do you want to save your changes or not?
+
+71
+00:04:40.295 --> 00:04:42.165
+In this case, we'll say No.
+
+72
+00:04:42.165 --> 00:04:46.125
+[SOUND] And go back in again.
+
+73
+00:04:46.125 --> 00:04:50.320
+And another important thing to
+point out is Ctrl+G, to get help.
+
+74
+00:04:50.320 --> 00:04:53.530
+And this will show you more
+information about how to use Nano.
+
+75
+00:04:59.220 --> 00:05:02.830
+There are various commands that you can
+use to display the contents of files
+
+76
+00:05:02.830 --> 00:05:08.550
+including cat, head, tail, more, and less.
+
+77
+00:05:08.550 --> 00:05:12.404
+The Nano editor may not be extremely
+powerful but it is easy to use and
+
+78
+00:05:12.404 --> 00:05:15.046
+you can learn it in a very
+short amount of time.
+

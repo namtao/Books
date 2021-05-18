@@ -1,0 +1,520 @@
+WEBVTT
+
+1
+00:00:02.980 --> 00:00:06.751
+When you create a file its group
+is set to your primary group, so
+
+2
+00:00:06.751 --> 00:00:10.665
+if you're a member of multiple groups,
+for example, a sales and
+
+3
+00:00:10.665 --> 00:00:13.299
+training group,
+if sales is your primary or
+
+4
+00:00:13.299 --> 00:00:17.601
+first group then when you create a new
+file it will be in the sales group.
+
+5
+00:00:17.601 --> 00:00:22.721
+If you wanna change the group of the file,
+use the chgrp command.
+
+6
+00:00:28.800 --> 00:00:32.820
+You can see that when I created
+the sales.data file that it was put in my
+
+7
+00:00:32.820 --> 00:00:35.600
+primary group, which is Jason.
+
+8
+00:00:35.600 --> 00:00:37.360
+I'm also a member of the sales group.
+
+9
+00:00:37.360 --> 00:00:42.140
+So let's change the group to sales for
+this file.
+
+10
+00:00:46.460 --> 00:00:50.354
+Now we can see that the group is sales,
+and let's give permissions so
+
+11
+00:00:50.354 --> 00:00:53.461
+that other people in the sales
+group can edit the file.
+
+12
+00:01:02.421 --> 00:01:03.415
+There we go.
+
+13
+00:01:04.615 --> 00:01:09.325
+So, instead of keeping files in different
+people's home directories maybe you could
+
+14
+00:01:09.325 --> 00:01:10.905
+have a common place to store these.
+
+15
+00:01:12.745 --> 00:01:16.505
+So in this system there's
+a usr/local/sales directory.
+
+16
+00:01:16.505 --> 00:01:19.155
+And you can see that the sales
+group has read, write, and
+
+17
+00:01:19.155 --> 00:01:21.180
+execute permissions for that.
+
+18
+00:01:21.180 --> 00:01:25.361
+So, I'm gonna put the shared
+file in that shared location.
+
+19
+00:01:33.561 --> 00:01:37.450
+Now, anyone that is a member of
+the sales group can edit that file.
+
+20
+00:01:39.440 --> 00:01:42.210
+Let's look at directory permissions again.
+
+21
+00:01:42.210 --> 00:01:46.900
+Permissions on a directory can
+affect the files in that directory.
+
+22
+00:01:46.900 --> 00:01:50.720
+A common problem is having proper
+permission set on a file within
+
+23
+00:01:50.720 --> 00:01:56.210
+a directory only to have the incorrect
+permission set on the directory itself.
+
+24
+00:01:56.210 --> 00:01:59.620
+Not having the correct permissions on
+a directory can prevent the execution of
+
+25
+00:01:59.620 --> 00:02:01.240
+the file for example.
+
+26
+00:02:01.240 --> 00:02:05.754
+If you are sure that a file's permission
+is correct, start looking at the directory
+
+27
+00:02:05.754 --> 00:02:09.443
+it's in, and then look at that
+directory's parent directory, and
+
+28
+00:02:09.443 --> 00:02:12.701
+work your way all the way towards
+the root of the file system.
+
+29
+00:02:18.860 --> 00:02:23.484
+The permissions are set to
+755 on this directory, and
+
+30
+00:02:23.484 --> 00:02:26.772
+if I look in the directory I see one file.
+
+31
+00:02:28.172 --> 00:02:33.472
+And that is an executable file,
+and it currently works.
+
+32
+00:02:33.472 --> 00:02:38.812
+So, let's change the directory
+permissions on my cat to 400.
+
+33
+00:02:42.852 --> 00:02:45.076
+And now I only have read permission.
+
+34
+00:02:45.076 --> 00:02:47.357
+I don't have write or
+execute permission on that directory.
+
+35
+00:02:52.896 --> 00:02:57.482
+You can see that the only information
+I get from ls is the file name that is
+
+36
+00:02:57.482 --> 00:03:00.776
+in that directory because
+of the read permission.
+
+37
+00:03:09.176 --> 00:03:12.018
+Since the permissions are set
+improperly on the directory,
+
+38
+00:03:12.018 --> 00:03:14.757
+I can't even execute the file
+that's in that directory.
+
+39
+00:03:19.496 --> 00:03:25.492
+Let's change the permissions
+to give me execute permissions
+
+40
+00:03:25.492 --> 00:03:30.230
+on that directory, and
+now we see that it works.
+
+41
+00:03:31.450 --> 00:03:33.770
+And you can also see that ls -l works.
+
+42
+00:03:35.180 --> 00:03:39.610
+The file creation mask is what determines
+the permissions a file will receive when
+
+43
+00:03:39.610 --> 00:03:40.200
+it's created.
+
+44
+00:03:41.260 --> 00:03:45.060
+If no mask were used, then the default
+permissions would be 777 for
+
+45
+00:03:45.060 --> 00:03:48.060
+directories and 666 for files.
+
+46
+00:03:48.060 --> 00:03:52.170
+The file creation mask is typically set
+
+47
+00:03:52.170 --> 00:03:56.020
+by system administrators
+to some sane default.
+
+48
+00:03:56.020 --> 00:04:01.370
+However it can be overridden on a per
+user basis by using the umask command.
+
+49
+00:04:02.930 --> 00:04:08.390
+The umask command sets the file creation
+mask to the mode that you pass to it.
+
+50
+00:04:08.390 --> 00:04:15.830
+If you use a -S that means umask will
+display and accept symbolic notation.
+
+51
+00:04:15.830 --> 00:04:21.300
+The mode supplied to umask works in the
+opposite way as the mode given to chmod.
+
+52
+00:04:21.300 --> 00:04:25.960
+So when you give chmod seven, that's
+interpreted to mean read, write, and
+
+53
+00:04:25.960 --> 00:04:28.780
+execute permission or all permissions.
+
+54
+00:04:28.780 --> 00:04:31.040
+However, when you supply seven to umask,
+
+55
+00:04:31.040 --> 00:04:35.760
+that is interpreted to mean no
+permission or all permissions off.
+
+56
+00:04:35.760 --> 00:04:38.735
+So you can think of chmod as turning on,
+or adding and
+
+57
+00:04:38.735 --> 00:04:43.621
+giving permissions while umask turns off,
+subtracts, or takes away permissions.
+
+58
+00:04:46.281 --> 00:04:51.010
+A quick way to estimate what
+a umask mode will do to the default
+
+59
+00:04:51.010 --> 00:04:55.835
+permissions is to subtract
+the octal umask mode from 777 in
+
+60
+00:04:55.835 --> 00:05:00.600
+the case of directories and
+from 666 in the case of files.
+
+61
+00:05:02.400 --> 00:05:05.820
+For example, let's take a umask of 022.
+
+62
+00:05:05.820 --> 00:05:09.290
+If we subtract that from 777,
+
+63
+00:05:09.290 --> 00:05:15.350
+we are left with the default file
+creation mode of 755 for directories.
+
+64
+00:05:15.350 --> 00:05:19.020
+And 666 minus 022 is 644, so
+
+65
+00:05:19.020 --> 00:05:23.790
+for files,
+the default file creation mode is 644.
+
+66
+00:05:23.790 --> 00:05:29.470
+If we use the umask of 002 then we'll
+have the default permissions for
+
+67
+00:05:29.470 --> 00:05:34.798
+directories of 775 and 664 for files.
+
+68
+00:05:34.798 --> 00:05:37.930
+Using a umask of 002 is ideal for
+
+69
+00:05:37.930 --> 00:05:41.740
+working with members of your group since
+the permissions allow members of the group
+
+70
+00:05:41.740 --> 00:05:44.470
+to manipulate those files in
+directories that you create.
+
+71
+00:05:46.580 --> 00:05:50.680
+Again this method of subtracting
+these permissions is an estimation.
+
+72
+00:05:50.680 --> 00:05:55.420
+So, here's an example of using a umask
+where this breaks down a little bit.
+
+73
+00:05:55.420 --> 00:05:59.510
+So umask 007,
+if you subtract that from 777,
+
+74
+00:05:59.510 --> 00:06:05.010
+you're left with 770 for
+directory permissions which is fine.
+
+75
+00:06:05.010 --> 00:06:10.520
+However 666 minus 007 would
+leave you with 66 negative 1.
+
+76
+00:06:10.520 --> 00:06:14.510
+So, there is no negative one permission,
+there's just no permission.
+
+77
+00:06:14.510 --> 00:06:18.580
+So it breaks down a little bit, but it
+gives you a good idea of what to expect.
+
+78
+00:06:20.720 --> 00:06:28.230
+Here are some fairly common umask modes,
+022, 002, 077, and 007.
+
+79
+00:06:28.230 --> 00:06:32.930
+This table contains all the resulting
+
+80
+00:06:32.930 --> 00:06:38.040
+permissions created by each and
+every one of the eight umask permutations.
+
+81
+00:06:39.190 --> 00:06:43.540
+If you were to run umask without any
+arguments it will display the umask
+
+82
+00:06:43.540 --> 00:06:47.700
+in four characters instead of the three
+that we've been working with.
+
+83
+00:06:47.700 --> 00:06:52.310
+The three characters we've been working
+with represent user, group and other.
+
+84
+00:06:53.330 --> 00:06:59.550
+However, there is one other class, and
+this class is considered special modes.
+
+85
+00:06:59.550 --> 00:07:04.620
+And these special modes are setuid,
+setgid, and sticky.
+
+86
+00:07:05.750 --> 00:07:10.240
+Just know that these special modes
+are declared by prepending a character
+
+87
+00:07:10.240 --> 00:07:14.520
+to the octal mode that you
+normally use with umass or chmod.
+
+88
+00:07:14.520 --> 00:07:20.390
+So the important point here is to know
+that umask 0022 is exactly the same as
+
+89
+00:07:20.390 --> 00:07:26.288
+umask 022, or
+chmod 0644 is the same as chmod 644.
+
+90
+00:07:26.288 --> 00:07:30.195
+We're not gonna cover these
+special modes in this course, but
+
+91
+00:07:30.195 --> 00:07:33.657
+I wanted you to be aware that one,
+they exist, and two,
+
+92
+00:07:33.657 --> 00:07:38.688
+they're the reason why umask is displayed
+in four characters instead of three.
+
+93
+00:07:49.048 --> 00:07:53.034
+You can see that our umask is set to 0022.
+
+94
+00:07:55.810 --> 00:07:58.570
+Using a capital S we
+can get symbolic mode.
+
+95
+00:08:00.470 --> 00:08:02.740
+Let's see what the default
+permissions are.
+
+96
+00:08:05.860 --> 00:08:10.394
+The touch command either creates
+a file if it doesn't exist or
+
+97
+00:08:10.394 --> 00:08:13.020
+it updates the time stamp of a file.
+
+98
+00:08:18.381 --> 00:08:23.860
+So we see the directory was created
+with 755 permissions and the file 644.
+
+99
+00:08:28.901 --> 00:08:31.454
+Let's set umask to 007.
+
+100
+00:08:34.300 --> 00:08:34.800
+Whoops.
+
+101
+00:08:36.930 --> 00:08:41.410
+And umask of 0007 is the same as 007.
+
+102
+00:08:50.831 --> 00:08:55.170
+And in this case we can see that
+directories are created with 770
+
+103
+00:08:55.170 --> 00:08:59.370
+permissions, and
+files are created with 660 permissions.
+
+104
+00:09:01.560 --> 00:09:05.350
+Permissions can be represented
+by symbols or numbers.
+
+105
+00:09:06.640 --> 00:09:09.760
+The effect permissions have on
+directories is slightly different
+
+106
+00:09:09.760 --> 00:09:11.039
+than they have on files.
+
+107
+00:09:12.910 --> 00:09:17.000
+We talked about how to change
+permissions with a chdrp command.
+
+108
+00:09:18.570 --> 00:09:22.860
+We talked about some strategies of
+working with members of your group.
+
+109
+00:09:22.860 --> 00:09:26.720
+And finally we covered the file
+creation mask and the umask command.
+

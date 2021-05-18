@@ -1,0 +1,387 @@
+WEBVTT
+
+1
+00:00:02.872 --> 00:00:08.160
+In today's lesson, we're going to cover
+some basic yet essential Linux commands.
+
+2
+00:00:08.160 --> 00:00:10.990
+Commands in Linux are case sensitive.
+
+3
+00:00:10.990 --> 00:00:16.400
+So, lowercase ls is not the same
+as capital L, capital S.
+
+4
+00:00:16.400 --> 00:00:21.600
+This really isn't much of an issue because
+most commands in Linux are all lowercase.
+
+5
+00:00:21.600 --> 00:00:24.490
+Here are the commands we're
+going to cover today.
+
+6
+00:00:24.490 --> 00:00:26.620
+Ls lists directory contents.
+
+7
+00:00:26.620 --> 00:00:30.520
+It can also display detailed information
+about files and directories.
+
+8
+00:00:31.780 --> 00:00:34.920
+Cd is the change directory command.
+
+9
+00:00:34.920 --> 00:00:38.210
+It does what it says,
+it changes the current working directory.
+
+10
+00:00:38.210 --> 00:00:40.990
+When you log into a Linux system
+you're automatically placed into
+
+11
+00:00:40.990 --> 00:00:42.380
+your home directory.
+
+12
+00:00:42.380 --> 00:00:45.340
+You can use the CD command to
+navigate around the file system.
+
+13
+00:00:46.950 --> 00:00:50.080
+The pwd command displays
+the present working directory, or
+
+14
+00:00:50.080 --> 00:00:51.040
+your current directory.
+
+15
+00:00:52.210 --> 00:00:54.280
+Cat concatenates files.
+
+16
+00:00:54.280 --> 00:00:57.550
+Really, what cat does is it
+displays the contents of files.
+
+17
+00:00:59.050 --> 00:01:01.460
+Echo displays arguments to the screen.
+
+18
+00:01:01.460 --> 00:01:05.160
+It may not be immediately obvious how
+this is helpful, but in a minute,
+
+19
+00:01:05.160 --> 00:01:07.420
+when I show you some examples,
+it will become clear.
+
+20
+00:01:08.630 --> 00:01:11.910
+Linux systems come with
+built-in documentation.
+
+21
+00:01:11.910 --> 00:01:14.560
+You can use man to display
+the documentation for
+
+22
+00:01:14.560 --> 00:01:16.950
+a given command on the Linux system.
+
+23
+00:01:16.950 --> 00:01:19.630
+You may hear people refer to man pages.
+
+24
+00:01:19.630 --> 00:01:22.160
+This is the documentation that you
+can view with the man command.
+
+25
+00:01:23.440 --> 00:01:26.350
+To exit or log out of your shell,
+use the exit command.
+
+26
+00:01:27.710 --> 00:01:30.040
+Finally, clear clears the screen.
+
+27
+00:01:31.670 --> 00:01:33.480
+Let's see some of these
+commands in action.
+
+28
+00:01:34.680 --> 00:01:36.260
+First let's look at ls.
+
+29
+00:01:37.700 --> 00:01:39.690
+If you run ls without any arguments,
+
+30
+00:01:39.690 --> 00:01:42.800
+it lists the files in
+the present working directory.
+
+31
+00:01:42.800 --> 00:01:47.320
+In this example, we see several
+items in this directory, desktop,
+
+32
+00:01:47.320 --> 00:01:50.650
+downloads, notes, etc.
+
+33
+00:01:50.650 --> 00:01:53.970
+In this example, ls output is color coded.
+
+34
+00:01:53.970 --> 00:01:55.530
+This may not always be the case, but
+
+35
+00:01:55.530 --> 00:01:58.090
+it is a common thing to see
+on Linux distributions.
+
+36
+00:01:59.990 --> 00:02:04.360
+We can run ls with a -l option,
+which displays a long listing format.
+
+37
+00:02:05.540 --> 00:02:08.730
+Here, we get more information about the
+files and directories that are displayed.
+
+38
+00:02:10.250 --> 00:02:13.070
+In a later lesson, we'll cover
+what all this information means.
+
+39
+00:02:14.150 --> 00:02:17.640
+As you recall earlier,
+I said Linux commands are case sensitive.
+
+40
+00:02:17.640 --> 00:02:22.152
+So, let's see what happens
+if we type in capital LS.
+
+41
+00:02:22.152 --> 00:02:25.152
+We get an error saying that
+the command is not found.
+
+42
+00:02:25.152 --> 00:02:30.370
+Let's try capital L lower case s,
+lower case l capital S.
+
+43
+00:02:30.370 --> 00:02:31.320
+Same thing.
+
+44
+00:02:31.320 --> 00:02:36.970
+So, ls works, lower case capital does not.
+
+45
+00:02:36.970 --> 00:02:40.190
+Let's use the cd command
+to change the directory.
+
+46
+00:02:40.190 --> 00:02:43.000
+Directories and
+files are also case sensitive, so
+
+47
+00:02:43.000 --> 00:02:48.796
+capital TPS lower case reports is not
+the same as all lower case tps reports.
+
+48
+00:02:49.886 --> 00:02:54.115
+We can use ls to see what's in
+this directory, and we can use
+
+49
+00:02:54.115 --> 00:02:59.100
+ls-l to display a long listing, more
+detailed information about these files.
+
+50
+00:02:59.100 --> 00:03:02.090
+Cat will display the contents of a file.
+
+51
+00:03:02.090 --> 00:03:03.960
+This file only has one line in it.
+
+52
+00:03:06.690 --> 00:03:09.425
+Echo is used to display
+the contents of variables, and
+
+53
+00:03:09.425 --> 00:03:12.465
+we'll be talking about
+environmental variables later on.
+
+54
+00:03:18.245 --> 00:03:22.058
+Use the man command to learn more
+information about how to use a particular
+
+55
+00:03:22.058 --> 00:03:23.150
+command.
+
+56
+00:03:23.150 --> 00:03:26.410
+Type the word man, space and
+the command you want to know more about.
+
+57
+00:03:27.580 --> 00:03:32.340
+In order to display the next page of
+information, simply hit the space bar.
+
+58
+00:03:32.340 --> 00:03:35.780
+When you're done looking at the man page,
+type q to quite man.
+
+59
+00:03:37.050 --> 00:03:39.420
+Here's the man page for ls.
+
+60
+00:03:39.420 --> 00:03:42.300
+You'll see ls has a lot of options.
+
+61
+00:03:42.300 --> 00:03:46.970
+Here's one that we've been using in this
+lesson, -l, use a long listing format.
+
+62
+00:03:48.870 --> 00:03:52.810
+So, as you can see, there's a lot
+of information in the man pages.
+
+63
+00:03:52.810 --> 00:03:55.330
+We'll talk more about the man
+command in the next lesson.
+
+64
+00:03:56.910 --> 00:03:58.670
+The clear command clears the screen.
+
+65
+00:04:00.040 --> 00:04:03.960
+If you execute cd without any arguments,
+it takes you back to your home directory.
+
+66
+00:04:05.430 --> 00:04:08.830
+Pwd will display your current or
+present working directory.
+
+67
+00:04:10.670 --> 00:04:14.995
+In order to exit your session,
+type the word exit.
+
+68
+00:04:14.995 --> 00:04:17.401
+Today the commands we've
+talked about are ls,
+
+69
+00:04:17.401 --> 00:04:19.695
+which displays the contents
+of a directory.
+
+70
+00:04:19.695 --> 00:04:22.715
+Cd, which changes the current directory.
+
+71
+00:04:22.715 --> 00:04:26.595
+Pwd, which displays what
+directory you're currently in.
+
+72
+00:04:26.595 --> 00:04:29.516
+Cat, that displays the contents of files.
+
+73
+00:04:29.516 --> 00:04:32.096
+Echo displays arguments.
+
+74
+00:04:32.096 --> 00:04:36.580
+Man displays documentation about commands.
+
+75
+00:04:36.580 --> 00:04:38.470
+Exit, exits your shell.
+
+76
+00:04:38.470 --> 00:04:39.950
+And clear, clears your screen.
+
+77
+00:04:41.720 --> 00:04:43.850
+Start becoming familiar
+with these commands.
+
+78
+00:04:43.850 --> 00:04:46.920
+These are simple and basic, but
+yet you'll use these often.
+
+79
+00:04:48.680 --> 00:04:51.320
+If you'd like,
+you can look at the man page for ls and
+
+80
+00:04:51.320 --> 00:04:53.800
+start exploring some of
+the options that it has to offer.
+
+81
+00:04:54.840 --> 00:04:58.630
+We'll be covering some of the more
+important options to ls in a later lesson.
+
+82
+00:04:58.630 --> 00:05:01.750
+However, this will just give you some
+practice at using the man command, and
+
+83
+00:05:01.750 --> 00:05:02.758
+navigating within man.
+

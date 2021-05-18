@@ -1,0 +1,275 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/archive.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>archive</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.7"><span style="font-weight: bold;">5.7 D&#7841;ng l&#432;u tr&#7919;
+t&#7853;p tin(Archive Files)<br>
+</span><br>
+Trong Slackware Linux c&oacute; m&#7897;t v&agrave;i ch&#432;&#417;ng tr&igrave;nh
+m&agrave; c&oacute; th&#7875; s&#7917; d&#7909;ng &#273;&#7875; n&eacute;n v&agrave; l&#432;u tr&#7919; t&#7853;p
+tin.Nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh &#273;&#7863;c bi&#7879;t c&oacute; l&#7907;i khi b&#7841;n t&#7841;o ra
+c&aacute;c files backup(sao d&#7921; ph&ograve;ng) cho c&aacute;c t&agrave;i
+li&#7879;u quan tr&#7885;ng ho&#7863;c &#273;&#7875; chuy&#7875;n &#273;&#7893;i gi&#7919;a c&aacute;c m&aacute;y
+t&iacute;nh tr&#7885;ng m&#7841;ng.B&#7841;n c&oacute; th&#7875; t&igrave;m th&#7845;y c&aacute;c
+ch&#432;&#417;ng tr&igrave;nh l&agrave;m vi&#7879;c v&#7899;i c&aacute;c d&#7841;ng l&#432;u tr&#7919;
+n&agrave;y tr&ecirc;n c&aacute;c h&#7879; th&#7889;ng Unix c&#361;ng nh&#432; Windows.<br>
+<br>
+</a><a name="ch_5.7.1"><span style="font-weight: bold;">5.7.1 gzip<br>
+</span><br>
+gzip(1) thu&#7897;c&nbsp; GNU l&agrave; m&#7897;t trong c&aacute;c &#7913;ng d&#7909;ng &#273;&#7875;
+n&eacute;n th&ocirc;ng tin.N&oacute; c&oacute; c&acirc;u tr&uacute;c sau:<br>
+<br>
+<span style="font-weight: bold;"> $gzip infile</span><br>
+<br>
+K&#7871;t qu&#7843; l&agrave; s&#7869; t&#7841;o ra infile.gz v&agrave; t&#7845;t nhi&ecirc;n s&#7869; nh&#7887;
+h&#417;n t&#7853;p tin ban &#273;&#7847;u r&#7845;t nhi&#7873;u.Nh&#432;ng ch&uacute; &yacute; r&#7857;ng infile.gz
+thay th&#7871; infile c&#361;ng c&oacute; ngh&#297;a l&agrave; infile ch&#7845;m r&#7913;t s&#7921; t&#7891;n
+t&#7841;i c&#7911;a m&igrave;nh.C&ograve;n l&#7841;i ch&#7881; c&oacute; b&#7843;n n&eacute;n c&#7911;a
+n&oacute; th&ocirc;i.Tuy nhi&ecirc;n c&oacute; nh&#7919;ng t&#7853;p tin &#273;&atilde; &#7903;
+d&#7841;ng n&eacute;n r&#7891;i nh&#432; .jpeg,.jpg....th&igrave; ch&uacute;ng
+kh&ocirc;ng th&#7875; n&eacute;n h&#417;n n&#7919;a.Tuy nhi&ecirc;n m&#7913;c &#273;&#7897; n&eacute;n cao
+nh&#7845;t c&oacute; th&#7875; nh&#7901; l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $gzip -9 infile</span><br>
+<br>
+Tuy nhi&ecirc;n c&aacute;ch n&agrave;y l&agrave;m m&#7845;t r&#7845;t nhi&#7873;u th&#7901;i
+gian nh&#432;ng b&ugrave; l&#7841;i files t&#7841;o th&agrave;nh s&#7869; n&eacute;n c&#7921;c &#273;&#7841;i.<br>
+Vi&#7879;c gi&#7843;i n&eacute;n gzipped(Gi&#7843;i n&eacute;n GNU zip) c&oacute; th&#7875;
+th&#7921;c hi&#7879;n v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; c&#7911;a hai l&#7879;nh tuy nhi&ecirc;n cho r&#7857;ng
+ch&uacute;ng l&agrave; m&#7897;t.&#7912;ng d&#7909;ng gzip s&#7869; gi&#7843;i n&eacute;n b&#7845;t
+k&igrave; m&#7897;t t&#7853;p tin n&agrave;o c&oacute; ph&#7847;n m&#7903; r&#7897;ng .gz<br>
+Ph&#432;&#417;ng &aacute;n &#273;&#7847;u:<br>
+<br>
+<span style="font-weight: bold;"> $gunzip infile.gz<br>
+</span><br>
+Khi th&#7921;c hi&#7879;n l&#7879;nh n&agrave;y th&igrave; v&#7883; tr&iacute; m&agrave; files
+n&eacute;n trong catalog hi&#7879;n h&agrave;nh s&#7869; xu&#7845;t hi&#7879;n catalog con gi&#7843;i
+n&eacute;n c&#7911;a t&#7853;p tin n&eacute;n v&agrave; ph&#7847;n <span
+ style="font-style: italic;">.gz</span> m&#7903; r&#7897;ng s&#7869; bi&#7871;n m&#7845;t.<br>
+Ph&#432;&#417;ng &aacute;n hai:<br>
+<br>
+<span style="font-weight: bold;"> $gzip -d infile.gz<br>
+</span><br>
+N&oacute;i chung gunzip ch&iacute;nh l&agrave; &#7843;nh c&#7911;a <span
+ style="font-weight: bold;">/bin/gzip</span><br>
+Th&#7921;c v&acirc;y:<br>
+<br>
+<span style="font-weight: bold;"> $ca /usr/bin</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ls -l gunzip</span><br>
+<span style="font-style: italic;"> lrwxrwxrwx 1 root root 9 Feb 2 09:45
+gunzip -&gt; /bin/gzip </span><br>
+<br>
+Ch&iacute;nh v&igrave; th&#7871; khi g&#7885;i gunzip th&#7921;c t&#7871; ch&iacute;nh
+l&agrave; g&#7885;i gzip theo t&ecirc;n kh&aacute;c.Ch&#432;&#417;ng tr&igrave;nh
+c&oacute; th&#7875; ph&acirc;n bi&#7879;t &#273;&#432;&#7907;c t&ecirc;n &#7913;ng d&#7909;ng nh&#7853;p v&agrave;o
+v&agrave; c&aacute;ch l&agrave;m vi&#7879;c v&#7899;i ch&uacute;ng.<br>
+<br>
+</a><a name="ch_5.7.2"><span style="font-weight: bold;">5.7.2 bzip2<br>
+</span><br>
+<span style="font-weight: bold;"> bzip2&nbsp;</span> kh&ocirc;ng &#273;&#432;&#7907;c coi
+l&agrave; ch&#432;&#417;ng tr&igrave;nh n&eacute;n ti&ecirc;u chu&#7849;n tr&ecirc;n
+Slackware Linux.N&oacute; s&#7917; d&#7909;ng m&#7897;t quy tr&igrave;nh ho&agrave;n
+to&agrave;n kh&aacute;c so v&#7899;i gzip m&agrave; c&oacute; nhi&#7873;u &#432;u &#273;i&#7875;m
+v&agrave; nh&#432;&#7907;c &#273;i&#7875;m.&#431;u &#273;i&#7875;m c&#7911;a bzip2 ch&iacute;nh l&agrave; ch&#7845;t
+l&#432;&#7907;ng n&eacute;n t&#7889;t h&#417;n so v&#7899;i gzip.Th&#7881;nh tho&#7843;ng c&#361;ng c&oacute; nh&#7919;ng
+t&#7853;p tin k&eacute;m h&#417;n so v&#7899;i gzip.Nh&#432;ng m&agrave; n&oacute;i chung
+l&agrave; r&#7845;t t&#7889;t cho c&aacute;c ng&#432;&#7901;i d&ugrave;ng v&#7899;i nh&#7919;ng modem y&#7871;u.<br>
+<br>
+Nh&#432;&#7907;c &#273;i&#7875;m c&#7911;a bzip2 ch&iacute;nh l&agrave; n&oacute; c&oacute; khuynh
+h&#432;&#7899;ng t&#259;ng ch&#7881; s&#7889; ho&#7841;t &#273;&#7897;ng c&#7911;a CPU so v&#7899;i gzip.C&oacute; ngh&#297;a
+l&agrave; khi s&#7917; d&#7909;ng bzip2 s&#7869; chi&#7871;m nhi&#7873;u th&#7901;i gian y&ecirc;u c&#7847;u v&#7899;i
+CPU s&#7869; cao h&#417;n so v&#7899;i gzip.Khi m&agrave; b&#7841;n chon &#7913;ng d&#7909;ng n&eacute;n
+th&igrave; l&ecirc;n ch&uacute; &yacute; &#273;&#7871;n t&#7889;c &#273;&#7897; n&eacute;n -&#273;&#7845;y
+l&agrave; &#273;i&#7873;u quan tr&#7885;ng.<br>
+S&#7917; d&#7909;ng bzip2 gi&#7889;ng nh&#432; s&#7917; d&#7909;ng gzip,ch&uacute;ng ta kh&ocirc;ng
+n&ecirc;n m&#7845;t nhi&#7873;u th&#7901;i gian cho vi&#7879;c b&agrave;n lu&#7853;n n&agrave;y.C&#7845;u
+tr&uacute;c c&#7911;a n&oacute; nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $bzip2 infile</span><br>
+<br>
+t&#7853;p tin t&#7841;o th&agrave;nh s&#7869; c&oacute; dung l&#432;&#7907;ng nh&#7887; h&#417;n so v&#7899;i t&#7879;p ban
+&#273;&#7847;u v&agrave; t&#7845;t nhi&ecirc;n b&#7841;n s&#7869; nh&#7853;n &#273;&#432;&#7907;c t&ecirc;p tin d&#7841;ng
+n&eacute;n sau:infile.bz2.<br>
+<br>
+B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng nh&#7919;ng tham bi&#7871;n kh&aacute;c &#273;i k&egrave;m
+cung bzip2 &#273;&#7875; t&#259;ng th&ecirc;m kh&#7843; n&#259;ng n&eacute;n.<br>
+C&#361;ng gi&#7889;ng nh&#432; gzip kh&#7843; n&#259;ng n&eacute;n cao nh&#7845;t c&#7911;a&nbsp; bzip2&nbsp;
+khi&nbsp; &#273;i v&#7899;i tham bi&#7871;n -9<br>
+<br>
+<span style="font-weight: bold;"> $bzip2 -9 infile<br>
+</span><br>
+C&oacute; hai c&aacute;ch gi&#7843;i&nbsp; n&eacute;n t&#7853;p tin d&#7841;ng .bz2.Gi&#7889;ng
+nh&#432; gzip b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng&nbsp; bzip2 ho&#7863;c bunzip2<br>
+<br>
+C&aacute;ch1:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $bzip2 -d infile.bz2<br>
+</span><br>
+L&#7879;nh&nbsp; bzip2 s&#7869; gi&#7843;i&nbsp; files n&eacute;n&nbsp; &#7903;&nbsp; catalog
+hi&#7879;n h&agrave;nh v&agrave; files s&#7869; m&#7845;t ph&#7847;n m&#7903; r&#7897;ng .bz2<br>
+<br>
+C&aacute;ch 2:<br>
+<br>
+<span style="font-weight: bold;"> $bunzip2 infile.bz2</span><br>
+<br>
+K&#7871;t qu&#7843; c&#361;ng t&#432;&#417;ng t&#7921; nh&#432; l&agrave; s&#7917; d&#7909;ng&nbsp; bzip2 tuy nhien
+ch&uacute;ng c&#361;ng coi nh&#432; l&agrave; m&#7897;t.bunzip2 ch&iacute;nh l&agrave;
+&#7843;nh c&#7911;a bzip2<br>
+<br>
+<span style="font-weight: bold;"> $ cd /bin</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -l bunzip2</span><br>
+<span style="font-style: italic;"> lrwxrwxrwx 1 root root 5 Feb 2 09:45
+/bunzip2 -&gt; bzip2 </span><br>
+<br>
+</a><a name="ch_5.7.3"><span style="font-weight: bold;">5.7.3 tar<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> tar(1)</span> thu&#7897;c GNU l&agrave; m&#7897;t
+b&#259;ng l&#432;u tr&#7919; th&ocirc;ng tin.N&oacute; ch&#7913;a nhi&#7873;u t&#7853;p tin ho&#7863;c catalog
+v&agrave; t&#7841;o ra m&#7897;t t&#7853;p tin l&#7899;n.N&oacute; gi&uacute;p b&#7841;n n&eacute;n
+c&#7843; m&#7897;t h&#7879; th&#7889;ng c&acirc;y catalog.Tar c&oacute; r&#7845;t nhi&#7873;u tham s&#7889;
+m&agrave; b&#7841;n c&oacute; th&#7875; xem &#7903; trang man c&#7911;a n&oacute; &#273;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin.Ch&uacute;ng ta ch&#7881; xem x&eacute;t
+c&aacute;c ph&#432;&#417;ng &aacute;n th&ocirc;ng d&#7909;ng khi d&ugrave;ng tar.<br>
+<br>
+Th&ocirc;ng th&#432;&#7901;ng tar s&#7917; d&#7909;ng &#273;&#7875; bung ho&#7863;c gom l&#432;u tr&#7919; c&aacute;c t&#7853;p
+tin kh&aacute;c nhau trong m&#7897;t h&#7879; th&#7889;ng .<br>
+H&#7847;u h&#7871;t c&aacute;c t&#7853;p tin tr&ecirc;n internet ho&#7863;c ftp c&oacute; d&#7841;ng
+m&#7903; r&#7897;ng .tar.gz. Tr&ecirc;n c&aacute;c h&#7879; Unix-truy&#7873;n th&#7889;ng th&#432;&#7901;ng
+d&ugrave;ng d&#7841;ng .tar.Z.<br>
+<br>
+Th&#7881;nh tho&#7843;ng b&#7841;n s&#7869; g&#7863;p d&#7841;ng n&eacute;n .tar.bz2.M&#7897;t &#273;i&#7873;u &#273;&aacute;ng
+l&#432;u &yacute; l&agrave; m&atilde; g&#7889;c kernel th&#432;&#7901;ng n&#7857;m trong d&#7841;ng
+n&agrave;y&nbsp; &#273;&#7875; cho dung l&#432;&#7907;ng c&#7911;a n&oacute; nh&#7887; &#273;i so v&#7899;i th&#7921;c t&#7871;.<br>
+<br>
+B&#7841;n c&oacute; th&#7875; bung ch&uacute;ng ra t&#7915; nh&#7919;ng d&#7841;ng l&#432;u tr&#7919; n&agrave;y
+v&#7899;i l&#7879;nh tar c&ugrave;ng v&#7899;i nh&#7919;ng tham bi&#7871;n &#273;i k&egrave;m<br>
+Tuy nhi&ecirc;n b&#7841;n ch&uacute; &yacute; khi l&agrave;m vi&#7879;c v&#7899;i d&#7841;ng
+.tar.gz th&igrave; c&#7847;n ph&#7843;i c&oacute; th&ecirc;m tham bi&#7871;n -z<br>
+<br>
+<span style="font-weight: bold;"> $ tar -xvzf mt.tar.gz</span><br>
+<br>
+Tuy nhi&ecirc;n b&#7841;n c&oacute; th&#7875; theo c&aacute;ch sau: &#272;&#7847;u ti&ecirc;n
+s&#7917; d&#7909;ng gzip sau &#273;&oacute; d&ugrave;ng tar &#273;&#417;n thu&#7847;n.<br>
+V&#7899;i r&#7845;t nhi&#7873;u tham bi&#7871;n nh&#432; v&#7853;y nh&#432;ng ch&uacute;ng c&oacute; &yacute;
+ngh&#297;a nh&#432; th&#7871; n&agrave;o:<br>
+<br>
+"-x" c&oacute; ngi&atilde; l&agrave;&nbsp; bung ra<br>
+"-v" khi d&ugrave;ng n&oacute; ch&#432;&#417;ng tr&igrave;nh&nbsp; s&#7869; hi&#7875;n th&#7883;
+danh s&aacute;ch c&aacute;c t&#7853;p tin trong q&uacute;a tr&igrave;nh bung<br>
+"-vv" v&#7899;i tham bi&#7871;n n&agrave;y thi b&#7841;n s&#7869; nh&#7853;n &#273;&#432;&#7907;c nhi&#7873;u th&ocirc;ng
+tin h&#417;n<br>
+"-z " ch&#7881; dung chuy&ecirc;n d&#7909;ng v&#7899;i .tar.gz <br>
+"-f" ch&#7881; ra r&#7857;ng khi &#7903; v&#7887; l&#7879;nh t&ecirc;n c&#7911;a t&#7853;p tin s&#7869; s&#7917; d&#7909;ng
+l&agrave; g&igrave;.<br>
+<br>
+C&oacute; nhi&#7873;u ph&#432;&#417;ng &aacute;n ghi c&acirc;u l&#7879;nh d&#7841;ng n&agrave;y nh&#432;
+sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ gzip -dc mt.tar.gz | tar -xvf -<br>
+</span><br>
+D&ograve;ng l&#7879;nh n&agrave;y &#273;&#7847;u ti&ecirc;n gi&#7843;i n&eacute;n t&#7853;p tin sau
+&#273;&oacute; ti&#7871;n &#273;&#7871;n tar.B&#7903;i v&igrave; gzip ghi tr&ecirc;n s&#7843;n ph&#7849;m c&#7911;a
+m&igrave;nh b&#7857;ng d&#7841;ng ch&iacute;nh t&#7855;c n&#7871;u nh&#432; y&ecirc;u c&#7847;u
+n&oacute;.Ch&iacute;nh v&igrave; th&#7871; s&#7843;n ph&#7849;m t&#7841;o th&agrave;nh l&agrave;
+d&#7841;ng ch&iacute;nh t&#7855;c.Th&ocirc;ng qua pipe t&#7853;p tin n&agrave;y s&#7869; &#273;&#432;&#7907;c
+g&#7917;i &#273;&#7871;n tar &#273;&#7875; bung ra."-" c&oacute; ngh&#297;a l&agrave; l&#7879;nh s&#7869; l&agrave;m
+vi&#7879;c v&#7899;i d&#7841;ng ch&iacute;nh t&#7855;c.<br>
+<br>
+<span style="font-weight: bold;"> $tar xvzf hejaz.tar.gz<br>
+</span><br>
+Tr&ecirc;n Slackware th&igrave; tar c&oacute; th&#7875; l&agrave;m vi&#7879;c nh&#432;
+bzip2 nh&#432;ng thay v&agrave;o tham bi&#7871;n "-z" l&agrave; "-y".<br>
+<br>
+<span style="font-weight: bold;"> $ tar -xvyf foo.tar.bz2<br>
+</span><br>
+Ch&uacute; &yacute; l&agrave; tar bung c&aacute;c t&#7853;p tin &#7903; trong
+catalog hi&#7879;n h&agrave;nh.N&#7871;u nh&#432; l&#432;u tr&#7919; th&ocirc;ng tin c&#7911;a b&#7841;n n&#7857;m &#7903;
+/tmp m&agrave; b&#7841;n l&#7841;i mu&#7889;n sau khi bung ra n&oacute; n&#7857;m &#7903; catalog
+nh&agrave;(home) c&#7911;a ch&iacute;nh b&#7841;n.C&oacute; hai ph&#432;&#417;ng &aacute;n
+gi&#7843;i quy&#7871;t nh&#432; sau:<br>
+&nbsp;L&#432;&#432; tr&#7919; c&oacute; th&#7875; chuy&#7875;n &#273;&#7871;n catalog g&#7889;c(home) c&#7911;a b&#7841;n sau
+&#273;&oacute; s&#7917; d&#7909;ng tar. Ho&#7863;c l&agrave; b&#7841;n &#273;&#417;n gi&#7843;n ch&#7881; &#273;&#432;&#7901;ng d&#7851;n t&#7899;i <br>
+<br>
+<span style="font-weight: bold;"> $&nbsp; tar -xvzf /tmp/bar.tar.gz<br>
+</span><br>
+N&#7897;i dung c&#7911;a l&#432;u tr&#7919; s&#7869; &#273;&#432;&#7907;c chuy&#7875;n t&#7899;i catalog g&#7889;c(home) c&#7911;a
+b&#7841;n.C&ograve;n l&#432;u tr&#7919; g&#7889;c s&#7869; n&#7857;m l&#7841;i &#7887; /tmp.<br>
+M&#7897;t trong c&aacute;c &#7913;ng d&#7909;ng ph&#7893; bi&#7871;n c&#7911;a tar l&agrave; t&#7841;o ra d&#7841;ng
+l&#432;u tr&#7919; th&ocirc;ng tin c&#7911;a m&igrave;nh b&#7857;ng tar.T&#7841;o l&#432;u tr&#7919; th&ocirc;ng
+tin kh&ocirc;ng kh&oacute; b&#7857;ng vi&#7879;c bung ra &#273;&#7889;i v&#7899;i c&aacute;c d&#7841;ng l&#432;u
+tr&#7919; kh&aacute;c nhau.<br>
+<br>
+&#272;&#7875; t&#7841;o ra d&#7841;ng n&eacute;n th&ocirc;ng tin tar t&#7915; c&aacute;c t&#7853;p tin
+trong catalog hi&#7879;n h&agrave;nh(bao g&#7891;m c&#7843; catalog con v&agrave; t&#7853;p tin
+c&#7911;a n&oacute;) b&#7841;n c&#7847;n th&#7921;c hi&#7879;n l&#7879;nh sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $tar -cvzf mt.tar.gz <br>
+</span><br>
+"-c" c&oacute; ngh&#297;a l&agrave; t&#7841;o d&#7841;ng l&#432;u tr&#7919;<br>
+"-z" n&eacute;n v&#7899; gzip<br>
+<br>
+mt.tar.gz - &#273;&#7845;y l&agrave; s&#7843;n ph&#7849;m t&#7841;o th&agrave;nh c&#7911;a b&#7841;n.<br>
+v&iacute; d&#7909; nh&#432;<br>
+<br>
+<span style="font-weight: bold;"> $ tar -cvzf /tmp/archive.tar.gz<br>
+</span><br>
+Trong tr&#432;&#7901;ng h&#7907;p n&agrave;y th&igrave; l&#432;u tr&#7919; t&#7841;o ra s&#7869; n&#7857;m &#7903; /tmp.B&#7841;n
+c&oacute; th&#7875; ch&#7881; ra t&#7845;t c&#7843; c&aacute;c t&#7853;p tin c&#361;ng nh&#432; catalog
+m&agrave; b&#7841;n mu&#7889;n d&#7891;n v&agrave;o l&#432;u tr&#7919; v&agrave; nh&#7899; ghi ch&uacute;ng
+&#7903; cu&ocirc;i c&ugrave;ng c&#7911;a l&#7879;nh.<br>
+<br>
+</a><a name="ch_5.7.4"><span style="font-weight: bold;">5.7.4 zip<br>
+</span><br>
+V&acirc;y l&agrave; c&#361;ng k&#7871;t th&uacute;c ph&#7847;n n&agrave;y, tuy
+nhi&ecirc;n c&#361;ng&nbsp; c&oacute; hai c&ocirc;ng c&#7909; l&agrave;m vi&#7879;c v&#7899;i
+zip-files. M&#7863;c d&ugrave; zip &#273;&#432;&#7907;c coi l&agrave; d&#7841;ng n&eacute;n ph&#7893; bi&#7871;n
+trong Windows, nh&#432;ng Linux c&#361;ng co nh&#7919;ng c&ocirc;ng c&#7909; l&agrave;m vi&#7879;c
+v&#7899;i ch&uacute;ng .<br>
+<br>
+&#7912;ng d&#7909;ng g&#7885;i l&agrave; <span style="font-weight: bold;">zip(1)
+v&agrave; unzip(1)</span>-d&ugrave;ng &#273;&#7875; gi&#7843;i n&eacute;n.<br>
+N&eacute;n b&#7857;ng zip r&#7845;t &#273;&#417;n gi&#7843;n:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $zip mt *</span><br>
+<br>
+K&#7871;t q&#7911;a b&#7841;n&nbsp; t&#7841;o ra m&#7897;t t&#7853;p tin foo.zip m&agrave; c&oacute; ch&#7913;a
+t&#7845;t c&#7843; c&aacute;c t&#7853;p tin &#7903; catalog hi&#7879;n h&agrave;nh.Zip s&#7869; t&#7921; &#273;&#7897;ng b&#7893;
+sung ph&#7847;n m&#7903; r&#7897;ng .zip cho t&#7853;p tin t&#7841;o th&agrave;nh,b&#7841;n kh&ocirc;ng c&#7847;n
+ph&#7843;i ch&#7881; r&otilde; trong v&#7887; l&#7879;nh.<br>
+Bung n&eacute;n c&#361;ng .zip r&#7845;t &#273;&#417;n gi&#7843;n<br>
+<br>
+<span style="font-weight: bold;"> $unzip mt<br>
+</span><br>
+N&oacute; s&#7869; bung ra t&#7845;t c&#7843; c&aacute;c t&#7853;p tin c&#361;ng nh&#432; catalog
+b&ecirc;n trong mt.zip<br>
+Zip c&#361;ng c&oacute; m&#7897;t v&agrave;i tham s&#7889; b&#7893; sung khi t&#7841;o d&#7883;nh d&#7841;ng zip
+c&#361;ng nh&#432; t&#7853;p tin r&#7841;ng t&#7921; bung(self-extracting).B&#7841;n c&oacute; th&#7875; xem
+th&ecirc;m th&ocirc;ng tin v&#7873; zip v&agrave; unzip trong man-pages c&#7911;a
+ch&uacute;ng.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.7.4"
+ style="font-weight: bold;" href="index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.7.4"></a></div>
+<a name="ch_5.7.4"> </a>
+<hr>Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian<br>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

@@ -1,0 +1,226 @@
+WEBVTT
+
+1
+00:00:00.360 --> 00:00:03.130
+This process is outlined in
+the supplemental material,
+
+2
+00:00:03.130 --> 00:00:05.050
+that is attached to this video.
+
+3
+00:00:05.050 --> 00:00:10.267
+The first thing we want to do is download
+a Linux VDI, or virtual disk image.
+
+4
+00:00:11.887 --> 00:00:16.454
+To do that, we'll go to
+VirtualBoxImages.com, in this case,
+
+5
+00:00:16.454 --> 00:00:18.287
+I'm looking for CentOS.
+
+6
+00:00:18.287 --> 00:00:24.269
+I'm gonna find that in the right-hand
+column, and I'm looking for desktop.
+
+7
+00:00:28.429 --> 00:00:32.031
+There it is, now I'm just going
+to click the download link, and
+
+8
+00:00:32.031 --> 00:00:33.710
+let that start downloading.
+
+9
+00:00:35.110 --> 00:00:37.590
+If you follow the document
+that's attached to this video,
+
+10
+00:00:37.590 --> 00:00:39.960
+you won't have to search
+around their website.
+
+11
+00:00:39.960 --> 00:00:43.121
+In order to download the image,
+I've provided links to the page,
+
+12
+00:00:43.121 --> 00:00:45.278
+and the direct download link for
+you as well.
+
+13
+00:00:48.098 --> 00:00:51.736
+While that one is downloading,
+let's look for Ubuntu.
+
+14
+00:00:51.736 --> 00:00:56.470
+You don't have to download both images,
+you can just pick one and download it.
+
+15
+00:00:56.470 --> 00:01:00.370
+You can look at the centOS page, and
+see if that appeals to you in any way,
+
+16
+00:01:00.370 --> 00:01:04.160
+if it does download that one,
+if it doesn't try Ubuntu.
+
+17
+00:01:04.160 --> 00:01:07.426
+The files that you download
+are actually archives, so
+
+18
+00:01:07.426 --> 00:01:12.044
+we'll need some sort of software to
+extract the contents of those archives.
+
+19
+00:01:12.044 --> 00:01:16.405
+For Windows, we'll use Free WinUnRAR,
+
+20
+00:01:16.405 --> 00:01:19.893
+you can open up a web browser, and
+
+21
+00:01:19.893 --> 00:01:25.384
+search in Google for F-W-I-N-U-N-R-A-R.
+
+22
+00:01:25.384 --> 00:01:29.164
+We'll pull up the website, and
+then download the installation file.
+
+23
+00:01:31.124 --> 00:01:35.230
+To perform the installation,
+open the file, and accept the defaults.
+
+24
+00:01:35.230 --> 00:01:37.990
+In this case just click Install,
+and then Close.
+
+25
+00:01:39.700 --> 00:01:44.456
+Now you can find the archive that
+you downloaded, right click on it,
+
+26
+00:01:44.456 --> 00:01:45.855
+and click extract.
+
+27
+00:01:52.436 --> 00:01:55.396
+And you can see that in this archive,
+there were three files.
+
+28
+00:02:00.476 --> 00:02:03.550
+For Mac users, we can use UnRarX,
+
+29
+00:02:03.550 --> 00:02:08.438
+you can download that
+from U-N-R-A-R-X dot com.
+
+30
+00:02:14.431 --> 00:02:18.419
+Once it's downloaded, double-click
+on the zip archive to extract it,
+
+31
+00:02:18.419 --> 00:02:21.069
+and then drag that to
+your applications folder.
+
+32
+00:02:23.979 --> 00:02:26.127
+To extract the contents of the archive,
+
+33
+00:02:26.127 --> 00:02:28.979
+just double-click on the file
+that you downloaded.
+
+34
+00:02:43.768 --> 00:02:48.406
+And you can see that in this archive,
+there were three files from this point on,
+
+35
+00:02:48.406 --> 00:02:52.026
+the process is the same whether
+you're using Windows or Mac.
+
+36
+00:02:52.026 --> 00:02:58.290
+Start VirtualBox, click New,
+
+37
+00:02:58.290 --> 00:03:02.660
+give your virtual machine a name,
+either centOS or Ubuntu.
+
+38
+00:03:02.660 --> 00:03:07.453
+You can leave the RAM at the default,
+if you have extra you can add some more.
+
+39
+00:03:10.413 --> 00:03:14.053
+Choose use an existing
+virtual hard drive file.
+
+40
+00:03:18.473 --> 00:03:22.953
+Click the folder, and navigate to where
+you extracted the virtual disk image.
+
+41
+00:03:30.380 --> 00:03:36.000
+Click create, now click on the green
+arrow to start your virtual machine.
+
+42
+00:03:42.660 --> 00:03:47.160
+In this example, I'm using CentOS,
+you can see that it boots up.
+
+43
+00:04:07.261 --> 00:04:12.227
+At the login screen, I will use the
+password that is in the documentation, and
+
+44
+00:04:12.227 --> 00:04:16.001
+as of right now that username,
+and password is adminuser.
+
+45
+00:04:31.618 --> 00:04:35.259
+Now that we see it works, I'm just
+going to close the web browser, and
+
+46
+00:04:35.259 --> 00:04:36.198
+shut down the OS.
+
+47
+00:04:42.938 --> 00:04:46.659
+Now you have your very own copy of Linux,
+that you can use with this course.
+

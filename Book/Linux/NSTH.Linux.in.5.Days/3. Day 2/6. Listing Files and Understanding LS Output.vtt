@@ -1,0 +1,751 @@
+WEBVTT
+
+1
+00:00:03.160 --> 00:00:03.910
+In today's lesson,
+
+2
+00:00:03.910 --> 00:00:08.040
+we'll be talking about the components
+of the long listing format of LS.
+
+3
+00:00:09.140 --> 00:00:11.630
+We'll talk about hidden files and
+directories.
+
+4
+00:00:12.770 --> 00:00:17.558
+We're going to list files by type and
+sort them by time.
+
+5
+00:00:17.558 --> 00:00:21.690
+And we're gonna talk about handling
+spaces in file names and directory names.
+
+6
+00:00:21.690 --> 00:00:24.250
+And also we're going to talk
+about what symbolic links are.
+
+7
+00:00:25.840 --> 00:00:30.230
+Here is some sample output from
+ls used with a dash l option.
+
+8
+00:00:30.230 --> 00:00:31.790
+If you just want to see what files or
+
+9
+00:00:31.790 --> 00:00:35.220
+directories exist,
+you could run ls without any options, but
+
+10
+00:00:35.220 --> 00:00:38.970
+if you want to see detailed information,
+use ls space dash l.
+
+11
+00:00:40.400 --> 00:00:42.890
+The first bit of information
+that is displayed
+
+12
+00:00:42.890 --> 00:00:47.310
+is a series of characters which
+represent the file's permissions.
+
+13
+00:00:47.310 --> 00:00:51.360
+We won't go into detail what every
+character in that string means, but
+
+14
+00:00:51.360 --> 00:00:53.660
+we'll be covering that in a later lesson.
+
+15
+00:00:53.660 --> 00:00:57.330
+So, the first group of
+characters is the permissions.
+
+16
+00:00:57.330 --> 00:01:01.160
+The second bit of information is the
+number of links to that file or directory.
+
+17
+00:01:02.300 --> 00:01:08.550
+Next, we see who the owner of that file
+is, and what group that file belongs to,
+
+18
+00:01:09.820 --> 00:01:16.360
+the size of that file, and the last time
+that file or directory was modified.
+
+19
+00:01:16.360 --> 00:01:19.810
+And, of course, at the very end is
+the name of the file or directory itself.
+
+20
+00:01:21.270 --> 00:01:24.870
+Files or
+directories that begin with a period or
+
+21
+00:01:24.870 --> 00:01:28.410
+a dot are considered hidden files.
+
+22
+00:01:28.410 --> 00:01:33.800
+So if you run ls it will not
+display hidden files by default.
+
+23
+00:01:33.800 --> 00:01:37.510
+In order to see hidden files you
+need use the -a option to ls.
+
+24
+00:01:38.820 --> 00:01:43.460
+If we want to see a long listing
+output that includes hidden files,
+
+25
+00:01:43.460 --> 00:01:47.770
+we could run ls space dash l space dash a.
+
+26
+00:01:49.090 --> 00:01:51.250
+There's also kind of a shortcut for this.
+
+27
+00:01:51.250 --> 00:01:53.770
+You can just include one hyphen and
+
+28
+00:01:53.770 --> 00:01:56.910
+then follow it by all
+the options that you need.
+
+29
+00:01:56.910 --> 00:02:01.782
+For instance, ls space dash la is
+the same as ls space dash l space dash a.
+
+30
+00:02:01.782 --> 00:02:03.880
+Let's run ls in this directory.
+
+31
+00:02:05.360 --> 00:02:10.660
+You notice that there are no
+files that begin with dot.
+
+32
+00:02:12.080 --> 00:02:15.081
+So if we want to see if there
+are any hidden files we can run ls
+
+33
+00:02:15.081 --> 00:02:16.200
+with a dash a option.
+
+34
+00:02:17.460 --> 00:02:19.583
+And now we see a few
+more files that show up.
+
+35
+00:02:19.583 --> 00:02:22.401
+.bash_history, .bashrc.
+
+36
+00:02:22.401 --> 00:02:26.890
+We've already talked about dot,
+which means this directory, and dot dot,
+
+37
+00:02:26.890 --> 00:02:28.190
+which is the parent directory.
+
+38
+00:02:31.000 --> 00:02:35.360
+If you run an ls dash l, again, by
+default, hidden files are not displayed.
+
+39
+00:02:36.790 --> 00:02:41.630
+You could run dash l for a long
+listing and dash a for all files and
+
+40
+00:02:41.630 --> 00:02:44.460
+now we see the dot files or
+the hidden files.
+
+41
+00:02:46.480 --> 00:02:51.220
+It doesn't matter which order that we
+specify these command line arguments as,
+
+42
+00:02:51.220 --> 00:02:58.490
+I mean dash a dash l does
+the same thing as dash l dash a.
+
+43
+00:02:58.490 --> 00:03:03.360
+Also know that you can combine
+the arguments with ls space dash l,
+
+44
+00:03:03.360 --> 00:03:06.410
+for long listing and a for all files.
+
+45
+00:03:06.410 --> 00:03:08.510
+And again the order doesn't matter, so
+
+46
+00:03:08.510 --> 00:03:13.420
+we can do ls space dash al and
+we get the same output.
+
+47
+00:03:16.140 --> 00:03:19.200
+When you perform an ls
+by itself you may or
+
+48
+00:03:19.200 --> 00:03:23.200
+may not know what is a file and
+what is a directory.
+
+49
+00:03:23.200 --> 00:03:27.768
+You can use ls space -F
+to reveal file types.
+
+50
+00:03:27.768 --> 00:03:31.390
+ls space -F
+
+51
+00:03:31.390 --> 00:03:36.340
+appends a character to a file or
+directory name that tells you what it is.
+
+52
+00:03:36.340 --> 00:03:41.440
+So if it ends in slash or
+forward slash then it's a directory.
+
+53
+00:03:41.440 --> 00:03:45.410
+If it ends in an ampersand
+that's a link a star or
+
+54
+00:03:45.410 --> 00:03:47.260
+an asterisk means that it's executable.
+
+55
+00:03:48.530 --> 00:03:52.020
+You can think of a symbolic
+link as a pointer.
+
+56
+00:03:52.020 --> 00:03:57.400
+It looks like a file or directory but
+it just points to where the actual file or
+
+57
+00:03:57.400 --> 00:04:02.120
+directory is and you would operate
+on the symbolic link, or symlink for
+
+58
+00:04:02.120 --> 00:04:05.340
+short, the same as if it were
+the file that it's pointing to.
+
+59
+00:04:06.905 --> 00:04:10.750
+Symlinks are often used to create
+short cuts to long file names or
+
+60
+00:04:10.750 --> 00:04:12.840
+long directory paths.
+
+61
+00:04:12.840 --> 00:04:15.929
+Another common use of symlinks is
+to indicate the current version of
+
+62
+00:04:15.929 --> 00:04:16.750
+an application.
+
+63
+00:04:21.580 --> 00:04:22.940
+Let's change into this directory.
+
+64
+00:04:24.670 --> 00:04:28.640
+When we perform an LS,
+we don't know if current is a blink,
+
+65
+00:04:28.640 --> 00:04:32.760
+if it's a directory, if it's
+a regular file or an executable file.
+
+66
+00:04:34.110 --> 00:04:36.550
+We can get this information
+by running ls -F.
+
+67
+00:04:36.550 --> 00:04:40.350
+And we see that current is a link,
+
+68
+00:04:40.350 --> 00:04:45.830
+the two my-apps are directories and
+readme is a regular file.
+
+69
+00:04:45.830 --> 00:04:52.300
+And we can confirm by running ls -lF for
+a long listing format.
+
+70
+00:04:52.300 --> 00:04:57.920
+And we see current points to my-app-2.4.7.
+
+71
+00:05:04.130 --> 00:05:09.950
+Here we see a program, it's an executable
+cuz it ends in an asterisk or a star.
+
+72
+00:05:11.710 --> 00:05:16.010
+And we can execute this by doing ./myapp.
+
+73
+00:05:16.010 --> 00:05:23.289
+If you want to list files
+sorted by time use ls space -t.
+
+74
+00:05:23.289 --> 00:05:27.800
+Use the -r option to reverse the order.
+
+75
+00:05:28.930 --> 00:05:35.130
+And a common command that I like
+to use is ls space dash latr.
+
+76
+00:05:35.130 --> 00:05:40.290
+This provides a long listing that includes
+all files sorted by time in reverse.
+
+77
+00:05:41.500 --> 00:05:45.500
+Let's look at this directory
+with an ls dash l.
+
+78
+00:05:45.500 --> 00:05:50.540
+It sorts the files and directories
+by name If we want to reverse this,
+
+79
+00:05:50.540 --> 00:05:53.970
+we can use long listing and r for reverse.
+
+80
+00:05:55.850 --> 00:05:58.410
+Now we'll see it's sorted in reverse.
+
+81
+00:05:58.410 --> 00:06:02.970
+Videos comes first as where with ls- sl,
+videos was last.
+
+82
+00:06:06.420 --> 00:06:10.160
+Let's do a long listing including
+all files sorted by time.
+
+83
+00:06:12.740 --> 00:06:14.870
+And we see bash history is at the top.
+
+84
+00:06:14.870 --> 00:06:17.930
+It's the most recently modified file.
+
+85
+00:06:17.930 --> 00:06:25.010
+If we do ls dash latr that
+will reverse this output.
+
+86
+00:06:25.010 --> 00:06:28.960
+And we'll see the most recently
+modified files at the bottom.
+
+87
+00:06:30.070 --> 00:06:32.920
+And this can help if you have
+a long list of files and
+
+88
+00:06:32.920 --> 00:06:34.190
+they can scroll off the screen.
+
+89
+00:06:34.190 --> 00:06:38.300
+So you'll get the most recent
+files displaying on your screen.
+
+90
+00:06:38.300 --> 00:06:43.620
+To list directory contents recursively,
+use ls, space, dash, capital R.
+
+91
+00:06:43.620 --> 00:06:46.900
+This will display all the contents
+of the current directory,
+
+92
+00:06:46.900 --> 00:06:49.150
+and any subdirectories below that.
+
+93
+00:06:49.150 --> 00:06:53.700
+The tree command is a similar thing to ls,
+space, dash, capital R.
+
+94
+00:06:53.700 --> 00:06:56.160
+But it's more of a visual output.
+
+95
+00:06:56.160 --> 00:07:01.490
+You can give tree a -d option and
+that will only list directories,
+
+96
+00:07:01.490 --> 00:07:05.470
+and if you use a -C that
+will colorize the output.
+
+97
+00:07:06.510 --> 00:07:10.390
+Tree is on a lot of Linux distributions,
+it may not be installed by default,
+
+98
+00:07:10.390 --> 00:07:13.670
+so you may or
+may not have access to this command.
+
+99
+00:07:13.670 --> 00:07:18.300
+Like the true command, ls has a dash d
+option that only lists directory names and
+
+100
+00:07:18.300 --> 00:07:20.000
+not their contents.
+
+101
+00:07:20.000 --> 00:07:23.930
+By default when you run
+ls space directory name,
+
+102
+00:07:23.930 --> 00:07:25.930
+ls will provide the contents
+of that directory.
+
+103
+00:07:25.930 --> 00:07:34.290
+You can also tell ls to colorize
+output by using ls space --color.
+
+104
+00:07:34.290 --> 00:07:39.928
+This is just another option to distinguish
+file types, you can do ls space -F.
+
+105
+00:07:39.928 --> 00:07:44.060
+Or ls space --color, or
+even combine the two.
+
+106
+00:07:45.810 --> 00:07:52.070
+If we want to display recursive
+output we can use ls space -R.
+
+107
+00:07:52.070 --> 00:07:56.150
+And a lot of the information has scrolled
+past the screen, but that's okay.
+
+108
+00:07:57.560 --> 00:07:59.420
+The tree command is something similar.
+
+109
+00:08:00.530 --> 00:08:04.500
+It displays things in a visual output, and
+
+110
+00:08:04.500 --> 00:08:07.360
+you see files and
+directories in this example.
+
+111
+00:08:07.360 --> 00:08:10.077
+If you only want to look
+at the directory structure,
+
+112
+00:08:10.077 --> 00:08:12.009
+you can use tree with the -d option.
+
+113
+00:08:14.179 --> 00:08:20.799
+And if you wanna colorize the output
+you can use tree -C, or capital C.
+
+114
+00:08:20.799 --> 00:08:22.719
+Then you could even combine the two.
+
+115
+00:08:25.679 --> 00:08:28.918
+If we run ls against a directory,
+such as music,
+
+116
+00:08:28.918 --> 00:08:34.690
+you can see that it displays the contents
+of music, which in this case is jazz.
+
+117
+00:08:34.690 --> 00:08:40.800
+If we only wanna look at the directory
+itself, we can use ls -d.
+
+118
+00:08:40.800 --> 00:08:45.600
+That may not make much sense in this
+case so maybe Let's use ls- l Music.
+
+119
+00:08:47.030 --> 00:08:51.070
+And you see a long listing
+inside of music which is jazz.
+
+120
+00:08:51.070 --> 00:08:53.360
+Ls -ld, long listing.
+
+121
+00:08:53.360 --> 00:08:55.540
+Only show the directory of music.
+
+122
+00:08:55.540 --> 00:08:56.690
+And so now we can see, for
+
+123
+00:08:56.690 --> 00:08:59.690
+instance, the last modification
+time of the music directory.
+
+124
+00:09:02.270 --> 00:09:05.640
+Can use dash dah color for
+ls to get color output.
+
+125
+00:09:05.640 --> 00:09:09.020
+And, sometimes, this is done by
+default on some Linux distributions.
+
+126
+00:09:10.930 --> 00:09:16.050
+And the color coding here, in this
+configuration, blue, our directories.
+
+127
+00:09:17.640 --> 00:09:19.590
+And we can confirm this by using -F.
+
+128
+00:09:19.590 --> 00:09:24.560
+If you wanna make your life
+a little bit easier when
+
+129
+00:09:24.560 --> 00:09:29.440
+working at the command line, do not use
+spaces and file in directory games.
+
+130
+00:09:30.860 --> 00:09:33.720
+Instead, get in the habit
+of using maybe a hyphen or
+
+131
+00:09:33.720 --> 00:09:37.760
+dash where you would use a space,
+or maybe an underscore.
+
+132
+00:09:37.760 --> 00:09:40.240
+Or even something called CamelCase where
+
+133
+00:09:40.240 --> 00:09:43.000
+you can capitalize the first
+letter of each word.
+
+134
+00:09:45.050 --> 00:09:49.330
+Sooner or later you're going to encounter
+a file name that has a space in it.
+
+135
+00:09:49.330 --> 00:09:52.130
+It may be a file that you didn't
+create and someone else did.
+
+136
+00:09:52.130 --> 00:09:54.140
+You have no control over that.
+
+137
+00:09:54.140 --> 00:09:57.970
+How you can deal with this is
+wrapping the file name in quotes,
+
+138
+00:09:57.970 --> 00:10:00.710
+be it single quotes or double quotes.
+
+139
+00:10:00.710 --> 00:10:04.450
+Another thing you can do is
+escape the space character.
+
+140
+00:10:04.450 --> 00:10:07.210
+To escape something you
+precede it with a backslash.
+
+141
+00:10:12.130 --> 00:10:18.360
+In this output, you can see
+a file named myspacenotes.text.
+
+142
+00:10:18.360 --> 00:10:20.960
+If we were to try to run
+an ls against that, you'll
+
+143
+00:10:22.870 --> 00:10:27.040
+see that ls treats it as two different
+files, not one file name with a space.
+
+144
+00:10:27.040 --> 00:10:30.700
+So, to get around this, we can use quotes.
+
+145
+00:10:33.300 --> 00:10:37.210
+That works, using double quotes
+also single quotes will work.
+
+146
+00:10:38.430 --> 00:10:46.936
+What we could have done instead was
+maybe name the file my-notes.txt or,
+
+147
+00:10:46.936 --> 00:10:50.870
+maybe my underscore notes.txt.
+
+148
+00:10:50.870 --> 00:10:54.828
+Or even myNotes like this.
+
+149
+00:10:54.828 --> 00:11:00.274
+Or even myNotes.txt.
+
+150
+00:11:00.274 --> 00:11:05.970
+In today's lesson we've talked about some
+of the more common and useful ls options.
+
+151
+00:11:05.970 --> 00:11:10.140
+We've learned about Symlinks, talked
+about hidden files and directories and
+
+152
+00:11:10.140 --> 00:11:12.420
+how they start with a dot.
+
+153
+00:11:12.420 --> 00:11:15.970
+And we talked about a couple of strategies
+for dealing with spaces in file names.
+
+154
+00:11:17.540 --> 00:11:23.575
+Here are the ls options we covered today,
+-a to list all files,
+
+155
+00:11:23.575 --> 00:11:29.130
+--color to list files with colorized
+output dash d to show directory names and
+
+156
+00:11:29.130 --> 00:11:31.250
+not directory contents.
+
+157
+00:11:31.250 --> 00:11:34.620
+Dash l for the long listing format.
+
+158
+00:11:34.620 --> 00:11:37.620
+Dash r for the reverse order.
+
+159
+00:11:37.620 --> 00:11:40.770
+Dash capital R to list files recursively.
+
+160
+00:11:40.770 --> 00:11:42.860
+And dash t to sort files by time.
+

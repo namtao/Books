@@ -1,0 +1,97 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:04.770
+The next video demonstrates another
+
+00:00:04.770 --> 00:00:07.890
+method for installing linux. If you
+
+00:00:07.890 --> 00:00:09.599
+already have linux installed using the
+
+00:00:09.599 --> 00:00:12.210
+virtual disk image with virtualbox then
+
+00:00:12.210 --> 00:00:15.000
+you can skip the next video. The method
+
+00:00:15.000 --> 00:00:16.320
+you'll learn in the next video can be
+
+00:00:16.320 --> 00:00:18.660
+used to install linux directly on
+
+00:00:18.660 --> 00:00:21.330
+physical hardware or it can be used to
+
+00:00:21.330 --> 00:00:22.769
+install linux with another
+
+00:00:22.769 --> 00:00:25.590
+virtualization system such as VMware,
+
+00:00:25.590 --> 00:00:29.429
+Hyper-V, Parallels Desktop for mac, KVM
+
+00:00:29.429 --> 00:00:32.160
+and others. You'll also want to use that
+
+00:00:32.160 --> 00:00:34.140
+method if you want to customize your
+
+00:00:34.140 --> 00:00:36.360
+install. For example if your first
+
+00:00:36.360 --> 00:00:38.460
+language isn't English, you may want to
+
+00:00:38.460 --> 00:00:40.680
+add additional language support for your
+
+00:00:40.680 --> 00:00:42.780
+native language. Perhaps you want to
+
+00:00:42.780 --> 00:00:44.489
+install some additional software or
+
+00:00:44.489 --> 00:00:47.250
+maybe you want a really minimal install
+
+00:00:47.250 --> 00:00:49.559
+and don't want to install a lot of
+
+00:00:49.559 --> 00:00:51.809
+software. Many of these things can be
+
+00:00:51.809 --> 00:00:53.430
+changed after the initial installation
+
+00:00:53.430 --> 00:00:55.860
+but sometimes it can be easier to start
+
+00:00:55.860 --> 00:00:57.899
+out with a system exactly the way you
+
+00:00:57.899 --> 00:01:00.270
+like it than it is to modify an existing
+
+00:01:00.270 --> 00:01:03.449
+system. Again, if you already have linux
+
+00:01:03.449 --> 00:01:05.670
+installed and running in VirtualBox you
+
+00:01:05.670 --> 00:01:07.530
+can either watch the next video to see
+
+00:01:07.530 --> 00:01:09.750
+what a manual installation looks like or
+
+00:01:09.750 --> 00:01:11.790
+you can skip it all together. Either
+
+00:01:11.790 --> 00:01:15.200
+choice is fine.
+

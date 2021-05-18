@@ -1,0 +1,10 @@
+C:\Project\C#\More tools\More tools\bin\Debug\More tools.exe.config
+C:\Project\C#\More tools\More tools\bin\Debug\More tools.exe
+C:\Project\C#\More tools\More tools\bin\Debug\More tools.pdb
+C:\Project\C#\More tools\More tools\obj\Debug\More tools.csprojAssemblyReference.cache
+C:\Project\C#\More tools\More tools\obj\Debug\More_tools.Home.resources
+C:\Project\C#\More tools\More tools\obj\Debug\More_tools.Properties.Resources.resources
+C:\Project\C#\More tools\More tools\obj\Debug\More tools.csproj.GenerateResource.cache
+C:\Project\C#\More tools\More tools\obj\Debug\More tools.csproj.CoreCompileInputs.cache
+C:\Project\C#\More tools\More tools\obj\Debug\More tools.exe
+C:\Project\C#\More tools\More tools\obj\Debug\More tools.pdb

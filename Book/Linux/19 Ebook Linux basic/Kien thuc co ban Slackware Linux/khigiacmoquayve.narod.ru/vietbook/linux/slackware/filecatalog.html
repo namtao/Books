@@ -1,0 +1,480 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/filecatalog.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>filecatalog</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.3"><span style="font-weight: bold;">5.3 L&agrave;m
+vi&#7879;c v&#7899;i files,catalogs<br>
+</span><br>
+Slackware Linux &#273;&#432;&#7907;c h&igrave;nh th&agrave;nh theo chi&#7873;u h&#432;&#7899;ng&nbsp;
+&#273;&#417;n gi&#7843;n h&oacute;a &#273;i c&acirc;u tr&uacute;c theo Unix truy&#7873;n th&#7889;ng.
+Unix chu&#7849;n ch&#7911; y&#7871;u theo d&#7841;ng <span style="font-weight: bold;">v&#7887;
+l&#7879;nh(Shell Prompt)</span>.Trong Slackware Linux c&oacute; trang b&#7883;
+th&ecirc;m graphic interfaces v&agrave; tuy nhi&ecirc;n v&#7887; l&#7879;nh v&#7851;n
+l&agrave; m&ocirc;i tr&#432;&#7901;ng giao ti&#7871;p ch&iacute;nh v&#7899;i h&#7879;
+th&#7889;ng.Ch&iacute;nh v&igrave; th&#7871; vi&#7879;c l&#7855;m v&#7919;ng h&#7879; th&#7889;ng l&#7879;nh c&#417; b&#7843;n
+l&agrave; r&#7845;t quan tr&#7885;ng trong Linux.<br>
+Ph&#7847;n n&agrave;y&nbsp; s&#7869; gi&uacute;p b&#7841;n l&agrave;m quen v&#7899;i nh&#7919;ng l&#7879;nh
+ch&iacute;nh l&agrave;m vi&#7879;c v&#7899;i t&#7879;p tin, c&aacute;c th&#432; m&#7909;c c&#361;ng nh&#432;
+c&oacute; c&aacute;c v&iacute; d&#7909; k&egrave;m theo.B&#7841;n c&oacute; th&#7875; s&#7917;
+d&#7909;ng <span style="font-weight: bold;">man-pages</span> &#273;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.3.1"><span style="font-weight: bold;">5.3.1 ls <br>
+</span><br>
+L&#7879;nh n&agrave;y dung cho vi&#7879;c hi&#7875;n th&#7883; danh s&aacute;ch c&aacute;c
+files trong catalog.B&#7841;n c&oacute; th&#7875; t&igrave;m th&#7845;y l&#7879;nh DIR t&#432;&#417;ng t&#7921;
+trong DOS v&agrave; Windows.Khi &#273;&oacute; ls(1) &#273;&#432;a ra danh s&aacute;ch
+c&aacute;c files &#7903; catalog hi&#7879;n h&agrave;nh.&#272;&#7875; xem &#273;&#432;&#7907;c n&#7897;i dung c&#7911;a
+catalog g&#7889;c b&#7841;n c&#7847;n l&agrave;m nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $ cd /</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls</span><br
+ style="font-weight: bold;">
+<br>
+K&#7871;t q&#7911;a<br>
+<br>
+<span style="font-style: italic;"> bin &nbsp;cdrom&nbsp; home &nbsp;mnt
+&nbsp;sbin &nbsp;usr</span><br style="font-style: italic;">
+<span style="font-style: italic;"> boot &nbsp;dev &nbsp;lib&nbsp;
+proc&nbsp; suncd &nbsp;var</span><br style="font-style: italic;">
+<span style="font-style: italic;"> cdr &nbsp;etc&nbsp; lost+found
+&nbsp;root&nbsp; tmp&nbsp; vmlinuz</span> <br>
+<br>
+Tuy nhi&ecirc;n n&oacute; kh&ocirc;ng thu&#7853;n ti&#7879;n ch&uacute;t n&agrave;o
+c&#7843; ,b&#7841;n kh&ocirc;ng th&#7875; x&aacute;c &#273;&#7883;nh &#273;&#432;&#7907;c &#273;&acirc;u l&agrave; files
+&#273;&acirc;u l&agrave; catalog.&#272;&#7875; gi&uacute;p &#273;i&#7873;u &#273;&oacute; b&#7841;n c&#7847;n
+th&ecirc;m tham s&#7889; v&agrave;o d&ograve;ng l&#7879;nh<span
+ style="font-weight: bold;"> ls(1)<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -FC</span><br>
+<br>
+<span style="font-style: italic;"> bin/ &nbsp;cdrom/&nbsp; home/
+&nbsp;mnt/&nbsp; sbin/ &nbsp;usr/</span><br style="font-style: italic;">
+<span style="font-style: italic;"> boot/ &nbsp;dev/&nbsp; lib/
+&nbsp;proc/ &nbsp;suncd/ &nbsp;var/</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> cdr/ &nbsp;etc/
+&nbsp;lost+found/&nbsp; root/&nbsp; tmp/ &nbsp;vmlinuz </span><br>
+<span style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"></span></span><span
+ style="font-weight: bold;"></span></span><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"></span></span></span></span></span></span></span><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"><span style="font-weight: bold;"></span></span></span></span></span></span>Tham
+s&#7889; n&agrave;y hi&#7875;n th&#7883; nh&#432; sau:" N&#7871;u l&agrave; catalog th&igrave; b&#7893;
+sung th&ecirc;m &#273;&#7857;ng sau d&#7845;u" /",c&ograve;n n&#7871;u l&agrave; files th&#7921;c thi
+th&igrave; b&#7893; sung &#273;&#7857;ng sau d&#7845;u&nbsp; "*".<br>
+Ngo&agrave;i ra l&#7879;nh ls c&ograve;n cho ph&eacute;p nh&#7853;n &#273;&#432;&#7907;c nh&#7919;ng
+th&ocirc;ng tin c&#7909; th&#7875; v&#7873; files.V&iacute; d&#7909; nh&#432; sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ls -l</span><br>
+<span style="font-style: italic;"> total 172</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> drwx------&nbsp;&nbsp;&nbsp; 4
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 18 18:22
+Desktop</span><br style="font-style: italic;">
+<span style="font-style: italic;"> -rw-r--r--&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11423 Aug 19 11:55 install</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> -rw-r--r--&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11423 Aug 19 11:54
+install~</span><br style="font-style: italic;">
+<span style="font-style: italic;"> drwx------&nbsp;&nbsp;&nbsp; 2
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 19 06:44
+mail</span><br style="font-style: italic;">
+<span style="font-style: italic;"> lrwxrwxrwx&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5
+Aug 18 17:43 mnt -&gt; /mnt/</span><br style="font-style: italic;">
+<span style="font-style: italic;"> drwxr-xr-x&nbsp;&nbsp;&nbsp; 6
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 19 18:28
+phim</span><br style="font-style: italic;">
+<span style="font-style: italic;"> -rw-r--r--&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp; root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+111806 Aug 19 17:19 Screenshot.png</span><br style="font-style: italic;">
+<span style="font-style: italic;"> drwxr-xr-x&nbsp;&nbsp;&nbsp; 4
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 20 05:23
+slackware</span><br style="font-style: italic;">
+<span style="font-style: italic;"> -rwx------&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 134 Aug 16
+14:42 sound.sh</span><br style="font-style: italic;">
+<span style="font-style: italic;"> drwxr-xr-x&nbsp;&nbsp;&nbsp; 3
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 19 08:41
+thu</span><br style="font-style: italic;">
+<span style="font-style: italic;"> drwxr-xr-x&nbsp;&nbsp;&nbsp; 8
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4096 Aug 18 17:14
+TuDienHND</span><br style="font-style: italic;">
+<span style="font-style: italic;"> -rwx--x--x&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30 Aug
+16 02:54 tv.shell</span><br style="font-style: italic;">
+<span style="font-style: italic;"> -rw-r--r--&nbsp;&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp;
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+Aug 20 05:53 vu.txt</span><br style="font-style: italic;">
+<span style="font-weight: bold; font-style: italic;"></span><span
+ style="font-weight: bold; font-style: italic;"></span><br>
+N&#7871;u nh&#432; b&#7841;n mu&#7889;n nh&igrave;n th&#7845;y nh&#7919;ng files &#7849;n(hides) &#7903; catalog hi&#7879;n
+h&agrave;nh th&igrave; b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng l&#7879;nh sau:<br>
+#ls -a<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.3.1"
+ style="font-style: italic;"> .gnome</a><br style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gnome2</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gnome2_private</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gnome-desktop</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gstreamer</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gtkrc</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gtkrc-1.2-gnome2</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .gtkrc-kde</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .ICEauthority</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .icons</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> install</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> install~</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .kde</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .kderc</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .pinerc</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .qt</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .recently-used</a><br>
+<br>
+</div>
+<div style="margin-left: 40px;"><a name="ch_5.3.1"
+ style="font-style: italic;"> Screenshot.png</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> slackware</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> sound.sh</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .xscreensaver</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .xsession-errors</a><br
+ style="font-style: italic;">
+<a name="ch_5.3.1" style="font-style: italic;"> .xvnkbrc</a><br>
+<a name="ch_5.3.1"></a></div>
+<a name="ch_5.3.1"> Nh&#7919;ng t&#7879;p tin b&#7855;t &#273;&#7847;u t&#7915; d&#7845;u "."(G&#7885;i l&agrave; &#273;&#7889;t
+files) kh&ocirc;ng hi&#7879;n ra v&#7899;i l&#7879;nh <span style="font-weight: bold;">ls</span>
+b&igrave;nh th&#432;&#7901;ng hay c&ograve;n g&#7885;i l&agrave; files &#7849;n(hides).B&#7841;n
+nh&igrave;n th&#7845;y n&oacute; ch&#7881; v&#7899;i tham bi&#7871;n "-a" &#273;i k&egrave;m <span
+ style="font-weight: bold;">ls.</span><br>
+&#272;&#7875; th&ecirc;m th&ocirc;ng tin v&#7873; ls b&#7841;n c&oacute; th&#7875; &#273;&#7885;c trong <span
+ style="font-weight: bold;">man-pages</span> v&#7873; <span
+ style="font-weight: bold;">ls(1).<br>
+</span><br>
+</a><a name="ch_5.3.2"><span style="font-weight: bold;">5.3.2 cd<br>
+</span><span style="font-weight: bold;"><br>
+</span>L&#7879;nh <span style="font-weight: bold;">cd </span>s&#7917; d&#7909;ng &#273;&#7875;
+thay &#273;&#7893;i catalog l&agrave;m vi&#7879;c.&#272;&#417;n gi&#7843;n ch&#7881; c&#7847;n theo c&#7845;u tr&uacute;c
+sau: cd /&#273;&#432;&#7901;ng d&#7851;n/t&ecirc;n catalog.V&iacute; d&#7909;:<br>
+<br>
+<span style="font-weight: bold;"> darkstar: $ cd /bin</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> darkstar:/bin$ cd usr</span><br>
+<span style="font-weight: bold;"> bash: cd: usr: No such file or
+directory</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> darkstar:/bin$ cd /usr</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> darkstar:/usr$ <br>
+</span><br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin b&#7841;n c&oacute; th&#7875; &#273;&#7885;c <span
+ style="font-weight: bold;">man-pages</span> c&#7911;a l&#7879;ng <span
+ style="font-weight: bold;">cd<br>
+</span><br>
+<span style="font-weight: bold;"> $help cd</span><br>
+<br>
+L&#7879;nh n&agrave;y gi&uacute;p b&#7841;n hi&#7875;u r&otilde; nh&#7919;ng tham bi&#7871;n &#273;i
+k&egrave;m c&#7911;a l&#7879;nh cd<br>
+<br>
+</a><a name="ch_5.3.3"><span style="font-weight: bold;">5.3.3 more</span><span
+ style="font-weight: bold;"><br>
+</span><span style="font-weight: bold;">more(1)</span> &#273;&#432;&#7907;c coi
+l&agrave; &#7913;ng d&#7909;ng &#273;&#7875; chia nh&#7887; c&aacute;c trang ra.Th&ocirc;ng th&#432;&#7901;ng
+c&aacute;c l&#7879;nh &#273;&#432;a ra c&aacute;c th&ocirc;ng b&aacute;o c&oacute;
+k&iacute;ch c&#7905; to h&#417;n l&agrave; k&iacute;ch c&#7905; m&agrave;n
+h&igrave;nh.Nh&#7919;ng l&#7879;nh kh&aacute;c kh&ocirc;ng bi&#7871;t c&aacute;ch chia
+nh&#7887; nh&#7919;ng k&#7871;t&nbsp; qu&#7843; c&#7911;a m&igrave;nh tr&ecirc;n m&agrave;n
+h&igrave;nh ra th&agrave;nh c&aacute;c trang nh&#7887; h&#417;n.Ch&iacute;nh
+v&igrave; th&#7871; <span style="font-weight: bold;">more(1)</span> dung &#273;&#7875;
+l&agrave;m c&ocirc;ng vi&#7879;c n&agrave;y.<br>
+L&#7879;nh more chia c&aacute;c th&ocirc;ng b&aacute;o th&agrave;nh
+c&aacute;c trang nh&#7887; kh&aacute;c nhau v&agrave; ch&#7901; &#273;&#7907;i b&#7841;n nh&#7845;n
+ph&iacute;m c&aacute;ch &#273;&#7875; chuy&#7875;n ti&#7871;p sang trang ti&#7871;p theo,ph&iacute;m
+Enter d&ugrave;ng &#273;&#7875; di chuy&#7875;n t&#7899;i d&ograve;ng ti&#7871;p theo.V&iacute; d&#7909;:<br>
+<br>
+<span style="font-weight: bold;"> $ cd /usr/bin</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -l<br>
+</span><br>
+<span style="font-weight: bold;"></span>B&#7841;n h&#7859;n s&#7869; th&#7845;y k&#7871;t qu&#7843;
+l&agrave; l&#7899;n h&#417;n nhi&#7873;u so v&#7899;i k&iacute;ch c&#7905; m&agrave;n h&igrave;nh.<br>
+<br>
+<span style="font-weight: bold;">$ ls -l | more<br>
+</span><br>
+V&#7853;y l&agrave; c&oacute; t&ocirc;t h&#417;n kh&ocirc;ng,b&#7841;n c&oacute; th&#7875; &#273;&#7885;c
+t&#7915;ng trang m&#7897;t...<br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin v&#7873; <span
+ style="font-weight: bold;">more(1)</span> b&#7841;n h&atilde;y &#273;&#7885;c <span
+ style="font-weight: bold;">man-pages</span> c&#7911;a n&oacute;.<br>
+<br>
+</a><a name="ch_5.3.4"><span style="font-weight: bold;">5.3.4 less<br>
+</span><br>
+L&#7879;nh more &#273;&#432;&#7907;c coi l&agrave; r&#7845;t thu&#7853;n ti&#7879;n,nh&#432;ng khi b&#7841;n &#273;ang &#273;&#7885;c
+th&ocirc;ng b&aacute;o m&agrave; b&#7895;ng nhi&ecirc;n b&#7883; b&#7887; qua m&#7897;t trang
+n&agrave;o &#273;&#7845;y m&agrave; more kh&ocirc;ng cho ph&eacute;p quay l&#7841;i &#273;&#7875;
+&#273;&#7885;c n&oacute;.L&#7879;nh less cho ph&eacute;p b&#7841;n l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u
+&#273;&oacute;.N&oacute; &#273;&#432;&#7907;c s&#7917; d&#7909;ng v&#7873; c&#7845;u tr&uacute;c gi&#7889;ng nh&#432; more<br>
+<br>
+<span style="font-weight: bold;"> $ls -l | less<br>
+</span><br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin h&atilde;y &#273;&#7885;c <span
+ style="font-weight: bold;">man-page</span> c&#7911;a <span
+ style="font-weight: bold;">less(1).<br>
+</span><br>
+</a><a name="ch_5.3.5"><span style="font-weight: bold;">5.3.5 cat</span><br>
+<span style="font-weight: bold;"> cat(1)</span> - concatenate(k&#7871;t l&#7841;i,n&#7889;i
+l&#7841;i th&agrave;nh d&atilde;y).N&oacute; d&ugrave;ng &#273;&#7875; k&#7871;t n&#7889;i m&#7897;t
+v&agrave;i v&#259;n b&#7843;n so&#7841;n th&#7843;o th&agrave;nh m&#7897;t v&#259;n b&#7843;n th&#7889;ng nh&#7845;t.Nh&#432;ng
+c&#361;ng c&oacute; th&#7875; s&#7917; d&#7909;ng cho c&aacute;c m&#7909;c &#273;&iacute;ch kh&aacute;c
+n&#7919;a.<br>
+C&#7845;u tr&uacute;c l&#7879;nh nh&#432; sau:<br>
+<br>
+#cat file1 file2 file3 &gt; bigfile<br>
+<br>
+L&#7879;nh cat&nbsp; &#273;em n&#7897;i dung c&#7911;a file1,file2,file3 v&agrave; n&#7889;i l&#7841;i
+th&agrave;nh bigfile<br>
+L&ecirc;nh cat c&#361;ng c&oacute; th&#7875;&nbsp; d&ugrave;ng &#273;&#7875; xem n&#7897;i dung
+c&#7911;a&nbsp; files.&#272;&#7875; xem n&#7897;i dung c&#7911;a files b&#7841;n&nbsp; th&#7921;c hi&#7879;n l&#7879;nh sau
+&#273;&acirc;y(&#273;&#7915;ng qu&ecirc;n d&ugrave;ng more ho&#7863;c less k&egrave;m theo):<br>
+<span style="font-weight: bold;"> &nbsp;$ cat file1 | more<br>
+</span><br>
+L&#7879;nh cat c&#361;ng c&oacute; th&#7875; d&ugrave;ng &#273;&#7875; sao ch&eacute;p b&#7845;t c&#7913; files
+n&agrave;o m&agrave; b&#7841;n mu&#7889;n.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $cat /bin/bash &gt; ~/mybash<br>
+</span><br>
+T&#7879;p tin <span style="font-weight: bold;">/bin/bash</span> s&#7869; &#273;&#432;&#7907;c sao
+ch&eacute;p v&agrave;o catalog home g&#7889;c c&#7911;a t&agrave;i kho&#7843;n v&#7899;i
+t&ecirc;n l&agrave; mybash<br>
+D&#432;&#7899;i &#273;&acirc;y ch&#7881; l&agrave; nh&#7919;ng &#273;i&#7875;n h&igrave;nh th&ocirc;ng d&#7909;ng
+c&#7911;a cat.&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin bnaj h&atilde;y &#273;&#7885;c
+man-pages c&#7911;a n&oacute;.<br>
+<br>
+</a><a name="ch_5.3.6"><span style="font-weight: bold;">5.3.6 touch</span><br>
+<span style="font-weight: bold;"> touch(1)</span> d&ugrave;ng &#273;&#7875; thay &#273;&#7893;i
+th&#7901;i gian sau c&aacute;c bi&#7871;n &#273;&#7893;i v&#7899;i files.V&#7899;i l&#7879;nh n&agrave;y b&#7841;n
+c&oacute; th&#7875; ki&#7875;m so&aacute;t&nbsp; d&#7845;u hi&#7879;u thay &#273;&#7893;i t&#7915;ng th&#7901;i &#273;i&#7875;m
+v&#7899;i files(Th&#7901;i gian cho ph&eacute;p s&#7917; d&#7909;ng,th&#7901;i gian l&#7847;n &#273;&#7847;u thay
+&#273;&#7893;i,l&#7847;n cu&#7889;i thay &#273;&#7893;i).N&#7871;u nh&#432; files ch&#7881; ra kh&ocirc;ng t&#7891;n t&#7841;i
+th&igrave; touch t&#7841;o ra m&#7897;t files r&#7895;ng v&#7899;i t&ecirc;n nh&#432; &#273;&atilde; ch&#7881;
+ra.C&#7845;u tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $touch file1</span><br>
+<br>
+L&#7879;nh touch c&oacute;&nbsp; nhi&#7873;u tham bi&#7871;n &#273;i c&ugrave;ng,&#273;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin b&#7841;n c&#7847;n &#273;&#7885;c <span style="font-weight: bold;">man-pages</span>
+c&#7911;a n&oacute;.<br>
+<br>
+</a><a name="ch_5.3.7"><span style="font-weight: bold;">5.3.7 echo<br>
+</span><br>
+L&#7879;nh <span style="font-weight: bold;">echo(1)</span> d&ugrave;ng &#273;&#7875;
+hi&#7875;n th&#7883; ra m&agrave;n h&igrave;nh m&#7897;t chu&#7895;i th&ocirc;ng tin c&#7847;n
+thi&#7871;t.Chu&#7895;i c&#7847;n &#273;&#432;&#7907;c ch&#7881; ra sau l&#7879;nh echo.Theo ng&#7847;m &#273;&#7883;nh echo hi&#7875;n th&#7883;
+c&acirc;u,k&iacute; t&#7921; &#273;&#7913;ng sau n&oacute;.<br>
+H&atilde;y &#273;&#7885;c man c&#7911;a n&oacute; &#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng
+tin.<br>
+<br>
+</a><a name="ch_5.3.8"><span style="font-weight: bold;">5.3.8 mkdir<br>
+</span><br>
+D&ugrave;ng &#273;&#7875; t&#7841;o ra m&#7897;t catalog m&#7899;i.&#272;&#417;n gi&#7843;n ch&#7881; c&#7847;n &#273;&#432;a ra&nbsp;
+t&ecirc;n c&#7911;a catalog,v&iacute; d&#7909;:<br>
+<br>
+<span style="font-weight: bold;"> &nbsp;$mkdir hejaz</span><br>
+ho&#7863;c b&#7841;n c&oacute; th&#7875; t&#7841;o theo &#273;&#432;&#7901;ng d&#7851;n:<br>
+<br>
+<span style="font-weight: bold;"> $mkdir /usr/local/hejaz</span><br>
+<br>
+Tham bi&#7871;n "-p" &#273;i k&egrave;m v&#7899;i <span style="font-weight: bold;">mkdir</span>&#273;&#7875;
+t&#7841;o ra catalog n&#7857;m trong(catalog con).B&#7903;i v&igrave; n&#7871;u nh&#432; catalog
+local kh&ocirc;ng t&#7891;n t&#7841;i th&igrave; <span style="font-weight: bold;">mkdir</span>
+s&#7869; th&ocirc;ng b&aacute;o l&#7895;i.Ch&iacute;nh v&igrave; th&ecirc; c&#7847;n
+c&oacute; c&#7845;u tr&uacute;c sau:<br>
+<br>
+$ <span style="font-weight: bold;">mkdir -p /usr/local/hejaz</span><br>
+<br>
+</a><a name="ch_5.3.9"><span style="font-weight: bold;">5.3.9 ln<br>
+</span><br>
+<span style="font-weight: bold;"> ln(1)</span> d&ugrave;ng &#273;&#7875; t&#7841;o
+link(li&ecirc;n k&#7871;t) t&#7899;i files.C&oacute; th&#7875; l&agrave; HDD,floppy ho&#7863;c
+k&iacute; t&#7921; li&ecirc;n k&#7871;t.S&#7921; kh&aacute;c nhau c&#7911;a nh&#7919;ng d&#7841;ng
+n&agrave;y &#273;&#432;&#7907;c th&#7843;o lu&#7853;n trong ph&#7847;n "C&#7845;u tr&uacute;c h&#7879; th&#7889;ng t&#7853;p
+tin". N&#7871;u nh&#432; b&#7841;n mu&#7889;n t&#7841;o <span style="font-style: italic;">simbol-link</span>
+t&#7899;i catalog <span style="font-style: italic;">/var/media/mp3</span>
+v&agrave; &#273;&#7863;t n&oacute; trong catalog home c&#7911;a ch&iacute;nh m&igrave;nh
+th&igrave; c&#7847;n th&#7921;c hi&#7879;n nh&#432; sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $&nbsp; ln -s /var/media/mp3 ~/mp3</span><br>
+<br>
+Tham bi&#7871;n "-s" &#273;i k&egrave;m v&#7899;i<span style="font-weight: bold;"> ln</span>
+ch&#7881; r&#7857;ng li&ecirc;n k&#7871;t l&agrave; d&#7841;ng k&iacute; t&#7921;(simbol).Trong
+v&iacute; d&#7909; tr&ecirc;n &#273;&atilde; t&#7841;o ra file mp3 d&ugrave;ng &#273;&#7875; ch&#7881;
+&#273;&#7871;n /var/media/mp3.<br>
+T&#7841;o li&ecirc;n k&#7871;t v&#7899;i &#273;&#297;a c&#7913;ng c&#361;ng l&agrave;m t&#432;&#417;ng t&#7921; nh&#432;ng ch&#7881; b&#7887;
+&#273;i tham bi&#7871;n -s.<br>
+<br>
+<span style="font-weight: bold;"> $ ln /var/media/mp3 ~/mp3</span><br>
+<br>
+</a><a name="ch_5.3.10"><span style="font-weight: bold;">5.3.10 cp<br>
+</span><br>
+<span style="font-weight: bold;"> cp(1)</span> s&#7917; d&#7909;ng &#273;&#7875; sao ch&eacute;p
+c&aacute;c t&#7879;p tin.Trong DOS c&oacute; c&acirc;u l&#7879;nh t&#432;&#417;ng
+t&#7921;:COPY.L&#7879;nh n&agrave;y c&oacute; nhi&ecirc;u tham bi&#7871;n &#273;i k&egrave;m
+khuy&#7871;n kh&iacute;ch c&aacute;c b&#7841;n l&ecirc;n &#273;&#7885;c man c&#7911;a l&#7879;nh
+n&agrave;y.<br>
+Th&ocirc;ng th&#432;&#7901;ng n&oacute; &#273;&#432;&#7907;c d&ugrave;ng theo c&#7845;u tr&uacute;c sau:<br>
+<br>
+<span style="font-weight: bold;"> $ cp vu.mt /tmp</span><br>
+<br>
+L&#7879;nh cp &#273;&atilde; t&#7841;o ra m&#7897;t b&#7843;n sao c&#7911;a file vu.mt t&#7915; catalog hi&#7879;n
+h&agrave;nh t&#7899;i /tmp<br>
+N&#7871;u b&#7841;n mu&#7889;n l&#432;u l&#7841;i nh&#7919;ng d&#7845;u hi&#7879;u th&#7901;i gian tr&ecirc;n files
+th&igrave; c&#7845;u tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $cp -a vu.mt /tmp<br>
+</span><br>
+N&oacute; s&#7869; l&#432;u l&#7841;i to&agrave;n b&#7897; d&acirc;u hi&#7879;u th&#7901;i gian bi&#7871;n &#273;&#7893;i
+c&#7911;a file g&#7889;c tr&ecirc;n b&#7843;n sao<br>
+C&ograve;n b&#7841;n th&iacute;ch sao ch&eacute;p c&#7843; m&#7897;t catalog sang m&#7897;t
+catalog khac:<br>
+<br>
+<span style="font-weight: bold;"> &nbsp;$ cp -R &lt;t&ecirc;n th&#432;
+m&#7909;c&gt; /tmp<br>
+</span><br>
+N&oacute; s&#7869; sao ch&eacute;p to&agrave;n b&#7897; n&#7897;i dung c&#7911;a th&#432; m&#7909;c sang
+catalog <span style="font-weight: bold;">/tmp<br>
+</span><br>
+</a><a name="ch_5.3.11"><span style="font-weight: bold;">5.3.11 mv</span><br>
+<span style="font-weight: bold;"> mv(1)</span> d&ugrave;ng &#273;&#7875; c&#7855;t file
+v&agrave; di chuy&#7875;n n&oacute; t&#7915; m&#7897;t ch&#7895; n&agrave;y sang ch&#7895;
+kh&aacute;c.&#7902; trong DOS l&agrave; move.<br>
+Khi s&#7917; d&#7909;ng l&#7879;nh n&agrave;y c&#7847;n ph&#7843;i ch&#7881; ra g&#7889;c v&agrave; k&iacute;
+hi&#7879;u:<br>
+<br>
+<span style="font-weight: bold;"> # mv myfile /usr/local/share/mt</span><br>
+<br>
+B&#7841;n c&oacute; th&#7875; &#273;&#7885;c <span style="font-weight: bold;">man-pages</span>
+c&#7911;a n&oacute; &#273;&#7875; bi&#7871;t th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.3.12"><span style="font-weight: bold;">5.3.12 rm<br>
+</span><br>
+<span style="font-weight: bold;"> rm(1)</span> d&ugrave;ng &#273;&#7875; x&oacute;a
+t&#7879;p tin ho&#7863;c c&acirc;y th&#432; m&#7909;c.Gi&#7889;ng nh&#432; trong DOS c&oacute; l&#7879;nh:<span
+ style="font-weight: bold;">del </span>v&agrave; <span
+ style="font-weight: bold;">deltree</span>.<br>
+S&#7917; d&#7909;ng rm c&oacute; th&#7875; nguy hi&#7875;m n&#7871;u nh&#432; b&#7841;n kh&ocirc;ng bi&#7871;t b&#7841;n
+&#273;ang l&agrave;m g&igrave;.Trong Linux files x&oacute;a &#273;i kh&oacute;
+c&oacute; th&#7875; kh&ocirc;i ph&#7909;c l&#7841;i &#273;&#432;&#7907;c.<br>
+&#272;&#7875; x&oacute;a files b&#7841;n ch&#7881; c&#7847;n ch&#7881; ra t&ecirc;n file c&#7847;n x&oacute;a
+sau l&#7879;nh <span style="font-weight: bold;">rm<br>
+</span><br>
+<span style="font-weight: bold;"> $ rm file1</span><br>
+<br>
+N&#7871;u nh&#432; b&#7841;n kh&ocirc;ng c&oacute; qu&#7873;n h&#7841;n ghi&nbsp; l&ecirc;n t&#7879;p tin
+th&igrave; l&#7879;nh s&#7869; th&ocirc;ng b&aacute;o l&#7895;i.<br>
+Khi b&#7841;n mu&#7889;n xo&aacute; &#273;i c&#7843; m&#7897;t catalog th&igrave; l&ecirc;n s&#7917; d&#7909;ng
+tham bi&#7871;n -r v&agrave; -f &#273;i k&egrave;m v&#7899;i <span
+ style="font-weight: bold;">rm</span><br>
+<br>
+<span style="font-weight: bold;"> $ rm -rf /home/mt/mydir<br>
+</span><br>
+Ch&uacute; &yacute; b&#7841;n c&oacute; th&#7875; h&#7841;i ch&iacute;nh m&igrave;nh v&#7899;i <span
+ style="font-weight: bold;">rm</span>.C&#7847;n th&#7853;n tr&#7885;ng v&#7899;i n&oacute;.<br>
+<br>
+</a><a name="ch_5.3.13"><span style="font-weight: bold;">5.3.13 rmdir<br>
+</span><br>
+<span style="font-weight: bold;"> rmdir(1)</span> d&ugrave;ng &#273;&#7875;
+xo&aacute; &#273;i m&#7897;t catalog r&#7895;ng.Ch&uacute; &yacute; n&#7871;u n&oacute;
+kh&ocirc;ng r&#7895;ng th&igrave; rmdir kh&ocirc;ng th&#7875; xo&aacute; &#273;&#432;&#7907;c.<br>
+<br>
+<span style="font-weight: bold;"> $ rmdir &lt;th&#432; m&#7909;c&gt;</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ rmdir mt</span><br>
+<br>
+n&#7871;u nh&#432; khi m&agrave; catalog kh&ocirc;ng t&#7891;n t&#7841;i th&igrave; rmdir s&#7869;
+th&ocirc;ng b&aacute;o b&#7841;n c&#7847;n ph&#7843;i ch&#7881; r&otilde; &#273;&#432;&#7901;ng d&#7851;n t&#7899;i&nbsp;
+catalog m&agrave; b&#7841;n mu&#7889;n xo&aacute;.<br>
+<br>
+<span style="font-weight: bold;"> $rm&nbsp; /tmp/mt<br>
+</span><br>
+&#7902; &#273;&acirc;y rmdir s&#7869; x&oacute;a &#273;i catalog mt (catalog con c&#7911;a catalog
+tmp).<br>
+Ngo&agrave;i ra rmdir c&ograve;n c&oacute; th&#7875; xo&aacute; c&aacute;c
+catalog b&#7889; m&#7865; (parent directory) n&#7871;u nh&#432; c&oacute; th&ecirc;m tham bi&#7871;n
+-p &#273;i k&egrave;m v&#7899;i <span style="font-weight: bold;">rmdir:<br>
+</span><br>
+<span style="font-weight: bold;"> $ rmdir -p /tmp/mt</span><br>
+<br>
+L&#7879;nh s&#7869; ti&#7871;n h&agrave;nh xo&aacute; catalog mt n&#7857;m trong /tmp.N&#7871;u
+th&agrave;nh c&ocirc;ng th&igrave; ti&#7871;p t&#7909;c th&#7917; xo&aacute; catalog /tmp.
+L&#7879;nh rmdir s&#7869; xo&aacute; catalog n&agrave;y v&agrave; d&#7915;ng l&#7841;i khi g&#7863;p
+th&ocirc;ng b&aacute;o l&#7895;i.<br>
+<br>
+V&#7853;y l&agrave; l&#7841;i k&#7871;t th&uacute;c m&#7897;t ph&#7847;n c&#7911;a quy&#7875;n s&aacute;ch
+n&agrave;y.Ch&uacute;c c&aacute;c b&#7841;n&nbsp; l&agrave;m quen h&#417;n n&#7919;a v&#7899;i
+c&aacute;ch l&#7879;nh thi h&agrave;nh trong&nbsp; Linux <br>
+</a>
+<div style="text-align: center;"><a
+ href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><a name="ch_5.3.13"></a><br>
+<a name="ch_5.3.13"></a></div>
+<a name="ch_5.3.13"><span style="font-weight: bold;"></span> </a>
+<hr><span style="font-style: italic;"> Bi&ecirc;n d&#7883;ch: V&#361;
+D&#361;ng(vudung@mail.ru)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> website:</span><a
+ href="../../../default.htm" style="font-style: italic;">http://khigiacmoquayve.narod.ru</a><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1-9-2005 Voronezh Russian </span>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

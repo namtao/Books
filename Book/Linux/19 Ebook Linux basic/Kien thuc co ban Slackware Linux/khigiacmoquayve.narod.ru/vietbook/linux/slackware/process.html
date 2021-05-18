@@ -1,0 +1,533 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/process.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>process</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.4"><span style="font-weight: bold;">5.4 &#272;i&#7873;u khi&#7875;n
+c&aacute;c ti&#7871;n tr&igrave;nh(Process Control).<br>
+</span><br>
+B&#7845;t k&igrave; m&#7897;t ch&#432;&#417;ng tr&igrave;nh &#273;ang th&#7921;c thi g&#7885;i l&agrave; m&#7897;t
+ti&#7871;n tr&igrave;nh.T&#7845;t c&#7843; t&#7915; X-Windows t&#7899;i c&aacute;c tr&igrave;nh h&#7879;
+th&#7889;ng m&agrave; kh&#7903;i &#273;&#7897;ng khi b&#7853;t m&aacute;y &#273;&#432;&#7907;c coi l&agrave; ti&#7871;n
+tr&igrave;nh.M&#7895;i m&#7897;t ti&#7871;n tr&igrave;nh &#273;&#432;&#7907;c ch&#7841;y b&#7857;ng t&ecirc;n m&#7897;t
+t&agrave;i kho&#7843;n n&agrave;o &#273;&oacute;.Ti&#7871;n tr&igrave;nh &#273;&#432;&#7907;c th&#7921;c thi
+khi&nbsp; h&#7879; th&#7889;ng kh&#7903;i &#273;&#7897;ng th&ocirc;ng th&#432;&#7901;ng d&#432;&#7899;i quy&#7873;n root ho&#7863;c
+l&agrave; nobody.Nh&#7919;ng ti&#7871;n tr&igrave;nh &#273;&#432;&#7907;c th&#7921;c hi&#7879;n b&#7903;i b&#7841;n s&#7869; mang
+t&ecirc;n b&#7841;n.Ti&#7871;n tr&igrave;nh c&#7911;a c&aacute;c t&agrave;i kho&#7843;n
+kh&aacute;c s&#7869; mang t&ecirc;n c&#7911;a h&#7885;.<br>
+<br>
+B&#7841;n c&oacute; th&#7875; qu&#7843;n l&yacute; c&aacute;c ti&#7871;n tr&igrave;nh c&#7911;a
+b&#7841;n.C&ograve;n root c&oacute; th&#7875; qu&#7843;n l&yacute; m&#7885;i ti&#7871;n tr&igrave;nh
+tr&ecirc;n h&#7879; th&#7889;ng k&#7875; c&#7843; c&#7911;a c&aacute;c t&agrave;i kho&#7843;n
+kh&aacute;c.C&aacute;c ti&#7871;n tr&igrave;nh c&oacute; th&#7875; &#273;&#432;&#7907;c &#273;i&#7873;u
+khi&#7875;n,theo d&otilde;i b&#7903;i c&aacute;c ch&#432;&#417;ng tr&igrave;nh &#273;&#7863;c bi&#7879;t ho&#7863;c
+m&#7897;t s&#7889; l&#7879;nh tr&ecirc;n v&#7887; l&#7879;nh.<br>
+<br>
+</a><a name="ch_5.4.1"><span style="font-weight: bold;">5.4.1 Chuy&#7875;n
+sang ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n(backgrounding)<br>
+</span><br>
+Ch&#432;&#417;ng tr&igrave;nh ch&#7841;y tr&ecirc;n v&#7887; l&#7879;nh th&#432;&#7901;ng &#273;&#432;&#7907;c hi&#7875;n th&#7883; tr&#432;&#7899;c
+n&#7873;n ph&ocirc;ng.N&oacute; cho ph&eacute;p b&#7841;n nh&igrave;n th&#7845;y h&#7871;t
+th&ocirc;ng tin,h&agrave;nh &#273;&#7897;ng c&#7911;a ch&#432;&#417;ng tr&igrave;nh.Tuy nhi&ecirc;n
+khi b&#7841;n kh&ocirc;ng mu&#7889;n ch&#432;&#417;ng tr&igrave;nh c&#7843;n tr&#7903; m&agrave;n
+h&igrave;nh terminal c&#7911;a b&#7841;n.C&ocirc;ng vi&#7879;c &#273;&oacute; g&#7885;i l&agrave;
+th&#7921;c hi&#7879;n &#7903; ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n.C&oacute; nhi&#7873;u c&aacute;ch &#273;&#7875; chuy&#7875;n
+m&#7897;t ch&#432;&#417;ng tr&igrave;nh v&#7873; ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n.<br>
+<br>
+Ph&#432;&#417;ng ph&aacute;p &#273;&#7847;u ti&ecirc;n l&agrave;&nbsp; b&#7893; sung k&iacute; t&#7921;
+"&amp;" v&agrave;o cu&#7889;i c&#7911;a d&ograve;ng l&#7879;nh g&#7885;i ch&#432;&#417;ng
+tr&igrave;nh.V&iacute; d&#7909; nh&#432; b&#7841;n nghe nh&#7841;c mp3 b&#7857;ng amp trong catalog
+hi&#7879;n h&agrave;nh.Nh&#432;ng b&#7841;n kh&ocirc;ng mu&#7889;n n&oacute; chi&#7871;m l&#7845;y terminal
+&#273;&#7845;y b&#7903;i v&igrave; b&#7841;n mu&#7889;n l&agrave;m c&aacute;c vi&#7879;c kh&aacute;c
+n&#7919;a.H&atilde;y th&#7921;c hi&ecirc;n l&#7879;nh sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ amp *.mp3 &amp;</span><br>
+<br>
+Ch&#432;&#417;ng tr&igrave;nh s&#7869; &#273;&#432;&#7907;c ch&#7841;y v&agrave; b&#7841;n l&#7841;i quay v&#7873; v&#7899;i l&#7901;i m&#7901;i
+tr&ecirc;n v&#7887; l&#7879;nh nh&#432; l&#7847;n &#273;&#7847;u.<br>
+C&ograve;n c&oacute; c&aacute;ch kh&aacute;c &#273;&#7875; chuy&#7875;n ch&#432;&#417;ng
+tr&igrave;nh sang ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n nh&#432;ng ti&#7871;n h&agrave;nh trong
+khi ch&#432;&#417;ng tr&igrave;nh &#273;ang ch&#7841;y.B&#7841;n h&atilde;y kh&#7903;i &#273;&#7897;ng ch&#432;&#417;ng
+tr&igrave;nh,nh&#7845;n ctrl+z.Ch&#432;&#417;ng tr&igrave;nh t&#7841;m d&#7915;ng.T&oacute;m l&#7841;i
+&#273;&oacute; l&agrave; tam d&#7915;ng.N&oacute; b&#7883; &#273;&igrave;nh ch&#7881; ho&#7841;t &#273;&#7897;ng t&#7841;i
+th&#7901;i &#273;i&#7875;m hi&#7879;n t&#7841;i nh&#432;ng m&agrave; c&oacute; th&#7875; ti&#7871;p t&#7909;c b&#7845;t c&#7913;
+l&uacute;c n&agrave;o.Khi m&agrave; b&#7841;n v&#7915;a m&#7899;i d&#7915;ng ch&#432;&#417;ng tr&igrave;nh
+l&#7841;i v&agrave; quay l&#7841;i v&#7899;i v&#7887; l&#7879;nh th&igrave; &#273;&#7875; chuy&#7875;n n&oacute; sang
+ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n h&atilde;y nh&#7853;p v&agrave;o l&#7879;nh:<br>
+<br>
+<span style="font-weight: bold;"> $ bg</span><br>
+<br>
+Nh&#432; v&#7853;y ti&#7871;n tr&igrave;nh t&#7841;m d&#7915;ng &#273;&atilde; chuy&#7875;n sang l&agrave;m
+vi&#7879;c trong ph&ocirc;ng n&#7873;n.<br>
+<br>
+</a><a name="ch_5.4.2"><span style="font-weight: bold;">5.4.2
+Tho&aacute;t kh&#7887;i ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n<br>
+</span><br>
+N&#7871;u nh&#432; b&#7841;n c&#7847;n l&agrave;m vi&#7879;c v&#7899;i c&aacute;c ti&#7873;n t&igrave;nh &#7849;n
+trong ph&ocirc;ng n&#7873;n th&igrave; b&#7841;n c&oacute; th&#7875; g&#7885;i n&oacute;
+ra.H&atilde;y dung l&#7879;nh:<br>
+<br>
+<span style="font-weight: bold;"> $ fg</span><br>
+<br>
+Sau &#273;&oacute; ch&#432;&#417;ng tr&igrave;nh l&#7841;i chi&#7871;m gi&#7919; terminal c&#7911;a
+b&#7841;n,&#273;&ocirc;i khi ch&#432;&#417;ng tr&igrave;nh tr&ecirc;n ph&ocirc;ng n&#7873;n t&#7921; &#273;&#7897;ng
+k&#7871;t th&uacute;c,khi &#273;&oacute; b&#7841;n nh&igrave;n th&#7845;y th&ocirc;ng
+b&aacute;o sau:<br>
+<br>
+<span style="font-style: italic;"> [1]+&nbsp;
+Done&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/bin/ls $LS_OPTIONS </span><br>
+<br>
+C&oacute; ngh&#297;a l&agrave; ti&#7871;n tr&igrave;nh trong ph&ocirc;ng n&#7873;n
+&#273;&atilde; k&#7871;t th&uacute;c(khi &#273;&#7845;y ls - kh&ocirc;ng quan t&acirc;m &#273;&#7871;n
+n&oacute;)<br>
+Khi c&ugrave;ng m&#7897;t l&uacute;c c&oacute; nhi&#7873;u ti&#7871;n tr&igrave;nh chayi
+&#273;&#7891;ng th&#7901;i trong ph&ocirc;ng n&#7873;n,mu&#7889;n g&#7885;i ch&uacute;ng tr&#7903; l&#7841;i
+b&igrave;nh th&#432;&#7901;ng th&igrave; ph&#7843;i bi&#7871;t &#273;&#432;&#7907;c b&#7841;n c&#7847;n ti&#7871;n tr&igrave;nh
+n&agrave;o.N&#7871;u nh&#432; ch&#7881; &#273;&#417;n gi&#7843;n th&#7921;c hi&#7879;n fg th&igrave; ti&#7871;n
+tr&igrave;nh ph&ocirc;ng n&#7873;n cu&#7889;i c&ugrave;ng s&#7869; &#273;&#432;&#7907;c g&#7885;i quay tr&#7903; l&#7841;i
+b&igrave;nh th&#432;&#7901;ng.Th&#7853;t may m&#7855;n bash c&oacute; th&#7875; ki&#7875;m so&aacute;t &#273;&#432;&#7907;c
+t&#7845;t c&#7843; c&aacute;c ti&#7871;n tr&igrave;nh.L&#7879;nh &#273;&oacute; l&agrave; jobs
+v&agrave; n&oacute; h&igrave;nh dung l&agrave;:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ jobs</span><span
+ style="font-style: italic;"><br>
+[1] Stopped vim</span><br style="font-style: italic;">
+<span style="font-style: italic;"> [2]- Stopped amp</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> [3]+ Stopped man ps</span><br>
+<br>
+L&#7879;nh n&agrave;y &#273;&#432;a ra danh s&aacute;ch c&aacute;c ti&#7871;n tr&igrave;nh
+trong ph&ocirc;ng n&#7873;n.Nh&#432; b&#7841;n th&#7845;y,ch&uacute;ng &#273;ang t&#7841;m d&#7915;ng,v&agrave;
+h&atilde;y nh&igrave;n v&agrave;o s&#7889; ID c&#7911;a t&#7915;ng ti&#7871;n tr&igrave;nh.B&#7841;n
+nh&igrave;n th&#7845;y v&#7899;i ti&#7871;n tr&igrave;nh "man ps" c&oacute; s&#7889; ID
+l&agrave; "[3]+" c&oacute; ngh&#297;a l&agrave; n&oacute; s&#7869; &#273;&#432;&#7907;c g&#7885;i ra b&#7857;ng
+l&#7879;nh fs kh&ocirc;ng c&oacute; tham bi&#7871;n &#273;i k&egrave;m.<br>
+N&#7871;u nh&#432; b&#7841;n mu&#7889;n g&#7885;i ra l&#7841;i ti&#7871;n tr&igrave;nh vim th&igrave; h&atilde;y
+nh&#7853;p v&agrave;o l&#7879;nh:<br>
+<br>
+<span style="font-weight: bold;"> $ fg 1</span><br>
+<br>
+Vim s&#7869; &#273;&#432;&#7907;c hi&#7875;n th&#7883; l&#7841;i tr&ecirc;n terminal c&#7911;a b&#7841;n,Vi&#7879;c chuy&#7875;n
+c&aacute;c ti&#7871;n tr&igrave;nh v&agrave;o ch&#7871; &#273;&#7897; ph&ocirc;ng n&#7873;n c&oacute;
+l&#7907;i n&#7871;u nh&#432; b&#7841;n ch&#7881; c&oacute; m&#7897;t terminal.B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng
+&#273;&#7891;ng th&#7901;i nhi&#7873;u ch&#432;&#417;ng tr&igrave;nh v&agrave; chuy&#7875;n &#273;&#7893;i gi&#7919;a
+ch&uacute;ng theo &yacute; mu&#7889;n.<br>
+<br>
+</a><a name="ch_5.4.3"><span style="font-weight: bold;">5.4.3 ps<br>
+</span><br>
+Nh&#432; v&#7853;y l&agrave; b&#7841;n &#273;&atilde; bi&#7871;t c&aacute;ch l&agrave;m vi&#7879;c v&#7899;i
+c&aacute;c ti&#7871;n tr&igrave;nh tr&ecirc;n v&agrave; trong ph&ocirc;ng
+n&#7873;n.Tuy nhi&ecirc;n v&#7851;n c&oacute; nhi&#7873;u ti&#7871;n tr&igrave;nh th&#7921;c hi&#7879;n
+trong su&#7889;t th&#7901;i gian ho&#7841;t &#273;&#7897;ng h&#7879; th&#7889;ng.B&#7841;n mu&#7889;n ki&#7875;m so&aacute;t
+ch&uacute;ng.H&atilde;y s&#7917; d&#7909;ng l&#7879;nh <span style="font-weight: bold;">ps(1)</span>.N&oacute;
+c&oacute; r&#7845;t nhi&#7873;u tham bi&#7871;n &#273;i k&egrave;m,ch&uacute;ng t&ocirc;i ch&#7881;
+&#273;&#432;a ra c&aacute;c tham bi&#7871;n ch&iacute;nh.&#272;&#7875; c&oacute; th&ecirc;m
+th&ocirc;ng tin h&atilde;y xem &#7903; ph&#7847;n 2.2.1<br>
+L&#7879;nh ps th&ocirc;ng th&#432;&#7901;ng ch&#7881; hi&#7875;n th&#7883; nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $ ps&nbsp; </span><br>
+<span style="font-style: italic;"> PID TTY TIME CMD</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 7923&nbsp;&nbsp;&nbsp;&nbsp;
+ttyp0&nbsp;&nbsp;&nbsp;&nbsp; 00:00:00&nbsp;&nbsp;&nbsp;&nbsp; bash</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 8059&nbsp;&nbsp;&nbsp;&nbsp;
+ttyp0&nbsp;&nbsp;&nbsp;&nbsp; 00:00:00&nbsp;&nbsp;&nbsp;&nbsp; ps<br>
+</span><br>
+Kh&ocirc;ng n&ecirc;n &#273;&#7875; &yacute; r&#7857;ng c&aacute;c ti&#7871;n tr&igrave;nh
+kh&ocirc;ng nhi&#7873;u m&agrave; th&ocirc;ng tin v&#7873; n&oacute; l&#7841;i &#273;&#7841;i
+kh&aacute;i,h&igrave;nh th&#7913;c.B&#7841;n c&oacute; th&#7917; bao nhi&#7873;u l&#7847;n c&#361;ng th&#7871;
+v&#7899;i l&#7879;nh ps th&ocirc;ng th&#432;&#7901;ng.V&#7853;y ch&uacute;ng c&oacute; &yacute; ngh&#297;a
+g&igrave;.<br>
+Ch&uacute;ng c&oacute; th&#7875; hi&#7875;u nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> PID</span> <br>
+&nbsp; &nbsp; K&iacute; hi&#7879;u nh&#7853;n d&#7841;ng ti&#7871;n tr&igrave;nh(ID).M&#7895;i m&#7897;t
+ti&#7871;n tr&igrave;nh c&oacute; m&#7897;t PID kh&aacute;c nhau.Trong kernel 2.2.x
+th&igrave; ID c&#7911;a c&aacute;c ti&#7871;n tr&igrave;nh n&#7857;m trong kho&#7843;ng 1 t&#7899;i
+32767.M&#7895;i m&#7897;t ti&#7871;n tr&igrave;nh s&#7869; c&oacute; &#273;&#432;&#7907;c m&#7897;t PID ng&#7851;u
+nhi&ecirc;n.Khi m&agrave; ti&#7871;n tr&igrave;nh k&#7871;t th&uacute;c th&igrave;
+c&aacute;c s&#7889; PID c&#361;ng &#273;&#432;&#7907;c gi&#7843;i ph&oacute;ng.Khi m&agrave; s&#7889; PID
+&#273;&atilde; c&#7921;c &#273;&#7841;i th&igrave; s&#7889; PID ti&#7871;p theo s&#7869; l&agrave; s&#7889; nh&#7887; nh&#7845;t
+trong c&aacute;c s&#7889; &#273;&atilde; &#273;&#432;&#7907;c gi&#7843;i ph&oacute;ng.Tuy nhi&ecirc;n s&#7869;
+c&oacute; s&#7921; thay &#273;&#7893;i &#7903; nh&acirc;n 2.4.x.Ch&uacute;ng s&#7869; &#273;&#432;&#7907;c bi&#7875;u di&#7877;n
+&#7903; d&#7841;ng 32-bits PID.<br>
+<br>
+<span style="font-weight: bold;"> TTY </span><br>
+&nbsp; cho bi&#7871;t tr&ecirc;n terminal n&agrave;o ti&#7871;n tr&igrave;nh &#273;&#432;&#7907;c
+th&#7921;c hi&#7879;n.L&#7879;nh ps &#273;&#417;n thu&#7847;n ch&#7881; hi&#7875;n th&#7883; c&aacute;c ti&#7871;n tr&igrave;nh
+tr&ecirc;n terminal hi&#7879;n h&agrave;nh.Trong v&iacute; d&#7909; tr&ecirc;n
+c&aacute;c ti&#7871;n tr&igrave;nh &#273;&#7873;u thu&#7897;c tty0.N&oacute; th&ocirc;ng
+b&aacute;o cho ta bi&#7871;t c&aacute;c ti&#7871;n tr&igrave;nh &#273;&#432;&#7907;c th&#7921;c hi&#7879;n ho&#7863;c
+l&agrave; tr&ecirc;n c&aacute;c m&aacute;y t&#7915; xa ho&#7863;c l&agrave; t&#7915;
+X-terminal<br>
+<br>
+<span style="font-weight: bold;"> TIME</span><br>
+&nbsp;&nbsp;cho bi&#7871;t c&aacute;c ti&#7871;n tr&igrave;nh th&#7921;c hi&#7879;n trong bao
+l&acirc;u.Tuy nhi&ecirc;n n&oacute; kh&aacute;c v&#7899;i th&#7901;i gian th&#7921;c t&#7871;
+t&iacute;nh t&#7915; th&#7901;i &#273;i&#7875;m b&#7855;t &#273;&#7847;u.Nh&#7899; l&agrave; Linux l&agrave; h&#7879; th&#7889;ng
+&#273;a nhi&#7879;m.Ch&iacute;nh v&igrave; th&#7871; trong b&#7845;t c&#7913; th&#7901;i &#273;i&#7875;m n&agrave;o
+c&#361;ng c&oacute; nhi&#7873;u ti&#7871;n tr&igrave;nh &#273;ang th&#7921;c thi.Tuy nhi&ecirc;n
+ch&uacute;ng chi&#7871;m gi&#7919;&nbsp; processor kh&ocirc;ng
+l&acirc;u.Ch&iacute;nh v&igrave; th&#7871; trong c&#7897;t TIME ch&#7881; ra kho&#7843;ng th&#7901;i
+gian c&oacute; th&#7875; n&oacute;i nh&#7887; h&#417;n th&#7901;i gian th&#7921;c t&#7871; r&#7845;t nhi&#7873;u.N&#7871;u
+nh&#432; m&#7897;t trong s&#7889; ch&uacute;ng l&acirc;u h&#417;n kho&#7843;ng m&#7897;t ph&uacute;t
+th&igrave; c&oacute; l&#7869; s&#7869; c&oacute; m&#7897;t c&aacute;i g&igrave; &#273;&oacute;
+kh&ocirc;ng &#7893;n.<br>
+<br>
+<span style="font-weight: bold;"> CMD </span><br>
+&nbsp;&nbsp; Cu&#7889;i c&ugrave;ng l&agrave; ch&#7881; ra t&ecirc;n ch&#432;&#417;ng
+tr&igrave;nh &#273;ang th&#7921;c hi&#7879;n.N&oacute; hi&#7875;n th&#7883; ch&#7881; t&ecirc;n c&#7911;a ch&#432;&#417;ng
+tr&igrave;nh.Nh&#7919;ng tham bi&#7871;n &#273;i k&egrave;m c&ugrave;ng nh&#7919;ng th&ocirc;ng
+tin kh&aacute;c kh&ocirc;ng &#273;&#432;&#7907;c hi&#7875;n th&#7883;.&#272;&#7875; hi&#7875;n th&#7883; c&aacute;c
+th&ocirc;ng tin &#273;&#7845;y b&#7841;n c&#7847;n ph&#7843;i c&oacute; nh&#7919;ng tham bi&#7871;n &#273;i k&egrave;m
+l&#7879;nh <span style="font-weight: bold;">ps</span>.<br>
+B&#7841;n c&oacute; th&#7875; nh&#7853;n &#273;&#432;&#7907;c m&#7897;t b&#7843;ng danh s&aacute;ch c&aacute;c ti&#7871;n
+tr&igrave;nh &#273;ang th&#7921;c thi n&#7871;u s&#7917; d&#7909;ng c&aacute;c tham bi&#7871;n &#273;i
+k&egrave;m.H&atilde;y th&#7917; l&#7879;nh sau:<br>
+<br>
+&nbsp;<span style="font-weight: bold;">PID
+TTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STAT&nbsp;&nbsp; TIME COMMAND</span><br>
+&nbsp;&nbsp;&nbsp; 1 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:05 init<br>
+&nbsp;&nbsp;&nbsp; 2 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [keventd]<br>
+&nbsp;&nbsp;&nbsp; 3 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SWN&nbsp;&nbsp;&nbsp; 0:00 [ksoftirqd_CPU0]<br>
+&nbsp;&nbsp;&nbsp; 4 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:01 [kswapd]<br>
+&nbsp;&nbsp;&nbsp; 5 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [bdflush]<br>
+&nbsp;&nbsp;&nbsp; 6 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [kupdated]<br>
+&nbsp;&nbsp; 10 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&lt;&nbsp;&nbsp;&nbsp; 0:00 [mdrecoveryd]<br>
+&nbsp;&nbsp; 11 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [kjournald]<br>
+&nbsp;&nbsp; 22 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [kjournald]<br>
+&nbsp;&nbsp; 76 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [eth0]<br>
+&nbsp; 150 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SW&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [khubd]<br>
+&nbsp; 850 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [rpc.portmap]<br>
+&nbsp; 856 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/syslogd<br>
+&nbsp; 859 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/klogd -c 3 -x<br>
+&nbsp; 861 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/inetd<br>
+&nbsp; 864 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/sshd<br>
+&nbsp; 873 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [lpd]<br>
+&nbsp; 876 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/crond -l10<br>
+&nbsp; 878 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [atd]<br>
+&nbsp; 881 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [sendmail]<br>
+&nbsp; 884 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 [sendmail]<br>
+&nbsp; 891 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0:00 /usr/sbin/gpm -m /dev/mouse -t ps2<br>
+&nbsp; 893 tty1&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 -bash<br>
+&nbsp; 894 tty2&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 /sbin/agetty 38400 tty2 linux<br>
+&nbsp; 895 tty3&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 /sbin/agetty 38400 tty3 linux<br>
+&nbsp; 896 tty4&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 /sbin/agetty 38400 tty4 linux<br>
+&nbsp; 897 tty5&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 /sbin/agetty 38400 tty5 linux<br>
+&nbsp; 898 tty6&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0:00 /sbin/agetty 38400 tty6 linux<br>
+<br>
+H&#7847;u nh&#432; c&aacute;c ti&#7871;n tr&igrave;nh tr&ecirc;n &#273;&#432;&#7907;c th&#7921;c thi trong qua
+tr&igrave;nh kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng Linux.Trong h&#7879; th&#7889;ng c&#7911;a
+m&igrave;nh,t&ocirc;i &#273;&atilde; thay &#273;&#7893;i m&#7897;t s&#7889; th&#7913; &#273;&#7875; b&#7841;n nh&igrave;n
+th&#7845;y r&otilde; h&#417;n c&aacute;i g&igrave; &#273;&oacute; kh&aacute;c bi&#7879;t.Tuy
+nhi&ecirc;n &#273;&#7841;i &#273;a s&#7889; b&#7841;n s&#7869; nh&igrave;n th&#7845;y tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a
+b&#7841;n.Nh&#432; b&#7841;n th&#7845;y tham bi&#7871;n &#273;i k&egrave;m v&#7899;i ps &#273;&atilde; b&#7855;t n&oacute;
+hi&#7875;n th&#7883; kh&ocirc;ng ch&#7881; t&ecirc;n c&#7911;a l&#7879;nh m&agrave; c&aacute;c tham
+bi&#7871;n &#273;i c&ugrave;ng l&#7879;nh.Tuy nhi&ecirc;n v&#7851;n c&ograve;n c&oacute; nh&#7919;ng
+c&#7897;t th&ocirc;ng tin h&#7845;p d&#7851;n h&#417;n.<br>
+<br>
+C&oacute; l&#7869; b&#7841;n s&#7869; &#273;&#7875; &yacute; ngay &#273;&#7871;n c&aacute;c ti&#7871;n tr&igrave;nh
+th&#7921;c hi&#7879;n tr&ecirc;n tty "?".&#272;&oacute; l&agrave; c&aacute;c ti&#7871;n
+tr&igrave;nh kh&ocirc;ng &#273;&#432;&#7907;c th&#7921;c hi&#7879;n tr&ecirc;n c&aacute;c
+terminal&nbsp; hi&#7879;n h&agrave;nh.<br>
+<br>
+B&acirc;y gi&#7901; b&#7841;n nh&igrave;n th&#7845;y c&#7897;t "<span style="font-weight: bold;">STAT</span>".N&oacute;
+cho bi&#7871;t tr&#7841;ng th&aacute;i(status) c&#7911;a ti&#7871;n tr&igrave;nh.<span
+ style="font-weight: bold;">S</span> s&#7917; d&#7909;ng cho c&aacute;c ti&#7871;n
+tr&igrave;nh &#273;ang ng&#7911;:&#273;&oacute; l&agrave; c&aacute;c ti&#7871;n tr&igrave;nh
+&#273;ang &#273;&#7907;i &#273;&#7875; ti&#7871;p t&#7909;c.Z s&#7917; d&#7909;ng cho c&aacute;c ti&#7871;n tr&igrave;nh <span
+ style="font-weight: bold;">zombied</span>(n&#7917;a s&#7889;ng,n&#7917;a ch&#7871;t).&#272;&oacute;
+l&agrave; c&aacute;c ti&#7871;n tr&igrave;nh m&agrave; ti&#7871;n tr&igrave;nh cha
+m&#7865; sinh &#273;&atilde; k&#7871;t th&uacute;c&nbsp; v&agrave; ch&#7881; &#273;&#7875; l&#7841;i c&aacute;c
+ti&#7871;n tr&igrave;nh con &#7903; l&#7841;i.&#272;i&#7873;u n&agrave;y kh&ocirc;ng t&#7889;t.<br>
+<br>
+N&#7871;u b&#7841;n mu&#7889;n th&ecirc;m th&ocirc;ng tin n&#7919;a h&atilde;y th&#7921;c hi&#7879;n l&#7879;nh
+sau:<br>
+<br>
+<span style="font-weight: bold;"> $ ps -aux<br>
+</span><br>
+USER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PID %CPU %MEM&nbsp;&nbsp;
+VSZ&nbsp; RSS TTY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; STAT START&nbsp;&nbsp;
+TIME COMMAND<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp; 480&nbsp;&nbsp; 64
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:05 init<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [keventd]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SWN&nbsp; Aug21&nbsp;&nbsp;
+0:00 [ksoftirqd_CPU0]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:01 [kswapd]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [bdflush]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [kupdated]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&lt;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [mdrecoveryd]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [kjournald]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 22&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [kjournald]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 76&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [eth0]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150&nbsp; 0.0&nbsp;
+0.0&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SW&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [khubd]<br>
+rpc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 850&nbsp; 0.0&nbsp;
+0.1&nbsp; 2360&nbsp; 676 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 [rpc.portmap]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 856&nbsp; 0.0&nbsp; 0.1&nbsp;
+2280&nbsp; 728 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/syslogd<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 859&nbsp; 0.0&nbsp; 0.1&nbsp;
+2216&nbsp; 576 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/klogd -c 3 -x<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 861&nbsp; 0.0&nbsp; 0.1&nbsp;
+2252&nbsp; 644 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/inetd<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 864&nbsp; 0.0&nbsp; 0.2&nbsp;
+3888 1240 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/sshd<br>
+lp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 873&nbsp; 0.0&nbsp;
+0.2&nbsp; 4196 1128 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 [lpd]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 876&nbsp; 0.0&nbsp; 0.1&nbsp;
+2340&nbsp; 704 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/crond -l10<br>
+daemon&nbsp;&nbsp;&nbsp;&nbsp; 878&nbsp; 0.0&nbsp; 0.1&nbsp; 2344&nbsp;
+748 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [atd]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 881&nbsp; 0.0&nbsp; 0.2&nbsp;
+4132 1308 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 [sendmail]<br>
+smmsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 884&nbsp; 0.0&nbsp; 0.2&nbsp; 4128
+1208 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 [sendmail]<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 891&nbsp; 0.0&nbsp; 0.1&nbsp;
+2260&nbsp; 572 ?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+S&nbsp;&nbsp;&nbsp; Aug21&nbsp;&nbsp; 0:00 /usr/sbin/gpm -m /dev/mouse
+-t ps2<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 893&nbsp; 0.0&nbsp; 0.2&nbsp;
+3132 1128 tty1&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 -bash<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 894&nbsp; 0.0&nbsp; 0.1&nbsp;
+2212&nbsp; 516 tty2&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 /sbin/agetty 38400 tty2 linux<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 895&nbsp; 0.0&nbsp; 0.1&nbsp;
+2212&nbsp; 516 tty3&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 /sbin/agetty 38400 tty3 linux<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 896&nbsp; 0.0&nbsp; 0.1&nbsp;
+2212&nbsp; 516 tty4&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 /sbin/agetty 38400 tty4 linux<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 897&nbsp; 0.0&nbsp; 0.1&nbsp;
+2212&nbsp; 516 tty5&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 /sbin/agetty 38400 tty5 linux<br>
+root&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 898&nbsp; 0.0&nbsp; 0.1&nbsp;
+2212&nbsp; 516 tty6&nbsp;&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp;
+Aug21&nbsp;&nbsp; 0:00 /sbin/agetty 38400 tty6 linux<br>
+<br>
+&#272;&acirc;y c&oacute; th&#7875; n&oacute;i l&agrave; m&#7897;t kh&#7889;i l&#432;&#7907;ng th&ocirc;ng
+tin &#273;&#7847;y &#273;&#7911;.B&#7841;n c&oacute; th&#7875; nh&igrave;n th&#7845;y ai&nbsp; &#273;&atilde; ch&#7841;y
+ch&#432;&#417;ng tr&igrave;nh,chi&#7871;m bao nhi&ecirc;u t&agrave;i nguy&ecirc;n
+CPU(%CPU,%MEM,VSZ,RSS),ng&agrave;y th&aacute;ng khi ch&#432;&#417;ng tr&igrave;nh
+ch&#7841;y.R&otilde; r&agrave;ng &#273;&acirc;y l&agrave; nh&#7919;ng th&ocirc;ng tin c&#7847;n
+thi&#7871;t cho administrator.N&ecirc;u nh&#432; th&ocirc;ng tin kh&ocirc;ng hi&#7875;n
+th&#7883; tr&ecirc;n m&agrave;n h&igrave;nh th&igrave; tham bi&#7871;n "-w"
+c&oacute; th&#7875; hi&#7875;n th&#7883;.<br>
+<br>
+Hi&#7875;n th&#7883; th&ocirc;ng tin tr&ecirc;n m&agrave;n h&igrave;nh tuy
+kh&ocirc;ng qua d&#7877; nh&igrave;n nh&#432;ng m&agrave; b&#7841;n v&#7851;n c&oacute; th&#7875;
+l&agrave;m vi&#7879;c.Tuy nhi&ecirc;n &#273;&oacute; kh&ocirc;ng ph&#7843;i l&agrave; t&#7845;t
+c&#7843;,v&#7851;n c&ograve;n c&oacute; nhi&#7873;u th&ocirc;ng tin kh&aacute;c v&#7873;
+c&aacute;c ti&#7871;n tr&igrave;nh.H&atilde;y xem man-pages c&#7911;a ps &#273;&#7875;
+c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.4.4"><span style="font-weight: bold;">5.4.4 kill<br>
+</span><br>
+&#272;&ocirc;i khi c&oacute; c&aacute;i gi kh&ocirc;ng nh&#432; mong mu&#7889;n x&#7843;y &#273;&#7871;n
+v&#7899;i ch&#432;&#417;ng tr&igrave;nh c&#7911;a b&#7841;n.N&oacute; l&agrave;m cho h&#7879; th&#7889;ng r&#7889;i
+lo&#7841;n v&agrave; c&#7847;n ph&#7843;i l&#7853;p l&#7841;i tr&#7853;t t&#7921; tr&ecirc;n n&oacute;.Ch&#432;&#417;ng
+tr&igrave;nh kill(1) gi&uacute;p b&#7841;n trong tr&#432;&#7901;ng h&#7907;p
+&#273;&oacute;.N&oacute; c&oacute; th&#7875; s&#7917; d&#7909;ng &#273;&#7875; ti&ecirc;u di&#7879;t c&aacute;c
+ti&#7871;n tr&igrave;nh b&#7857;ng nhi&#7873;u c&aacute;ch kh&aacute;c nhau theo m&#7909;c
+&#273;&iacute;ch c&#7911;a b&#7841;n.<br>
+N&#7871;u nh&#432; ch&#432;&#417;ng tr&igrave;nh c&#7911;a b&#7841;n v&#432;&#7907;t ra ngo&agrave;i ki&#7875;m
+so&aacute;t,chi&#7871;m gi&#7919; nhi&#7873;u t&agrave;i nguy&ecirc;n processor ho&#7863;c
+l&agrave; ch&uacute;ng t&#7891;n t&#7841;i trong b&#7897; nh&#7899;,&#273;i&#7873;u n&agrave;y l&agrave;m
+b&#7841;n kh&ocirc;ng th&iacute;ch v&agrave; &#273;i &#273;&#7871;n quy&#7871;t &#273;&#7883;nh ti&ecirc;u
+di&#7879;t n&oacute;.&#272;&#7875; ti&ecirc;u di&#7879;t c&aacute;c ti&#7871;n tr&igrave;nh,b&#7841;n c&#7847;n
+ph&#7843;i bi&#7871;t PID ho&#7863;c t&ecirc;n c&#7911;a n&oacute;.&#272;&#7875; c&oacute; th&#7875; bi&#7871;t &#273;u&#7907;c
+PID b&#7841;n h&atilde;y d&ugrave;ng ps nh&#432; ph&#7847;n tr&ecirc;n.V&iacute; d&#7909; &#273;&#7875;
+ti&ecirc;u di&#7879;t ti&#7871;n tr&igrave;nh 4747 b&#7841;n th&#7921;c hi&#7879;n l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $ kill 4747<br>
+</span><br>
+Tuy nhi&ecirc;n ch&uacute; &yacute; l&agrave; &#273;&#7875; ti&ecirc;u di&#7879;t ti&#7871;n
+tr&igrave;nh b&#7841;n ph&#7843;i l&agrave; ch&#7911; s&#7903; h&#7919;u c&#7911;a n&oacute;.M&#7909;c &#273;&iacute;ch
+c&#7911;a vi&#7879;c n&agrave;y ch&iacute;nh l&agrave; v&#7845;n &#273;&#7873; an to&agrave;n.N&#7871;u b&#7841;n
+c&oacute; th&#7875; ti&ecirc;u di&#7879;t ti&#7871;n tr&igrave;nh c&#7911;a nh&#7919;ng ng&#432;&#7901;i
+kh&aacute;c th&igrave; s&#7869; s&#7843;y ra nh&#7919;ng h&agrave;nh &#273;&#7897;ng tr&#7843; th&ugrave;
+l&#7851;n nhau tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n.Tuy nhi&ecirc;n root c&oacute; th&#7875;
+ti&ecirc;u di&#7879;t b&#7845;t c&#7913; ti&#7871;n tr&igrave;nh n&agrave;o.<br>
+M&#7897;t ch&#432;&#417;ng tr&igrave;nh n&#7919;a c&oacute; th&#7875; n&oacute;i l&agrave; anh em
+v&#7899;i kill l&agrave; killall(1).T&iacute;nh n&#259;ng c&#7911;a n&oacute; l&agrave;
+s&#7917; d&#7909;ng t&ecirc;n c&#7911;a ch&#432;&#417;ng tr&igrave;nh.N&oacute; ti&ecirc;u di&#7879;t t&#7845;t
+c&#7843; c&aacute;c ch&#432;&#417;ng tr&igrave;nh c&oacute; t&ecirc;n &#273;&atilde; ch&#7881;
+ra.Ch&#7859;ng h&#7841;n b&#7841;n mu&#7889;n ti&#7871;u di&#7879;t t&#7845;t c&#7843; c&aacute;c ti&#7871;n tr&igrave;nh vim
+th&igrave; h&atilde;y s&#7917; d&#7909;ng l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $killall vim</span><br>
+<br>
+T&#7845;t c&#7843; c&aacute;c ti&#7871;n tr&igrave;nh c&oacute; t&ecirc;n vim s&#7869; b&#7883;
+ti&ecirc;u di&#7879;t.N&#7871;u b&#7841;n s&#7917; d&#7909;ng nh&#432; root th&igrave; n&oacute; s&#7869;
+ti&ecirc;u di&#7879;t t&#7845;t c&#7843; c&aacute;c ti&#7871;n tr&igrave;nh vim tr&ecirc;n
+to&agrave;n h&#7879; th&#7889;ng c&#7911;a b&#7845;t c&#7913; t&agrave;i kho&#7843;n n&agrave;o.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> #killall bash</span><br>
+<br>
+&#272;&ocirc;i khi kill c&#361;ng kh&ocirc;ng th&#7875; th&#7921;c hi&#7879;n &#273;&#432;&#7907;c c&ocirc;ng vi&#7879;c
+c&#7911;a m&igrave;nh.M&#7897;t v&agrave;i ti&#7871;n tr&igrave;nh kh&ocirc;ng th&#7875;
+ti&ecirc;u di&#7879;t b&#7903;i kill th&ocirc;ng th&#432;&#7901;ng.B&#7841;n c&#7847;n ph&#7843;i b&#7893; sung cho
+n&oacute; tham bi&#7871;n &#273;i k&egrave;m c&#7909; th&#7875; l&agrave; "-9".<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ kill -9 4747</span><br>
+<br>
+Ch&aacute;c ch&#7855;n ti&#7871;n tr&igrave;nh 4747 s&#7869; b&#7883; ti&ecirc;u di&#7879;t.B&#7841;n
+c&oacute; th&#7875; s&#7917; d&#7909;ng v&#7851;n v&#7899;i tham bi&#7871;n n&agrave;y cho l&#7879;nh killall.Tham
+bi&#7871;n n&agrave;y s&#7869; g&#7917;i nh&#7919;ng t&iacute;n hi&#7879;u kh&aacute;c nhau t&#7899;i ch&#432;&#417;ng
+tr&igrave;nh.C&ograve;n kill th&ocirc;ng th&#432;&#7901;ng ch&#7881; g&#7917;i &#273;&#7871;n ti&#7871;n
+tr&igrave;nh t&iacute;n hi&#7879;u SIGTERM(k&#7871;t th&uacute;c).C&ograve;n kill -9
+s&#7869; g&#7917;i &#273;&#7871;n t&iacute;n hi&#7879;u SIGKILL(ti&ecirc;u di&#7879;t).&#272;&#7875; nh&igrave;n th&#7845;y
+nh&#7919;ng t&iacute;n hi&#7879;u m&agrave; kill th&#7921;c hi&#7879;n,b&#7841;n c&oacute; th&#7875; th&#7921;c
+hi&#7879;n l&#7879;nh sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $kill -l</span><br>
+<br>
+&nbsp;1) SIGHUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2)
+SIGINT&nbsp;&nbsp;&nbsp;&nbsp; 3) SIGQUIT&nbsp;&nbsp;&nbsp; 4) SIGILL <br>
+&nbsp;&nbsp; 5) SIGTRAP&nbsp;&nbsp;&nbsp;&nbsp; 6)
+SIGABRT&nbsp;&nbsp;&nbsp; 7) SIGBUS&nbsp;&nbsp;&nbsp;&nbsp; 8) SIGFPE <br>
+&nbsp;&nbsp; 9) SIGKILL&nbsp;&nbsp;&nbsp; 10) SIGUSR1&nbsp;&nbsp; 11)
+SIGSEGV&nbsp;&nbsp; 12) SIGUSR2 <br>
+&nbsp; 13) SIGPIPE&nbsp;&nbsp;&nbsp; 14) SIGALRM&nbsp;&nbsp; 15)
+SIGTERM&nbsp;&nbsp; 17) SIGCHLD <br>
+&nbsp; 18) SIGCONT&nbsp;&nbsp;&nbsp; 19) SIGSTOP&nbsp;&nbsp; 20)
+SIGTSTP&nbsp;&nbsp; 21) SIGTTIN <br>
+&nbsp; 22) SIGTTOU&nbsp;&nbsp;&nbsp; 23) SIGURG&nbsp;&nbsp;&nbsp; 24)
+SIGXCPU&nbsp;&nbsp; 25) SIGXFSZ <br>
+&nbsp; 26) SIGVTALRM&nbsp; 27) SIGPROF&nbsp;&nbsp; 28) SIGWINCH&nbsp;
+29) SIGIO <br>
+&nbsp; 30) SIGPWR<br>
+<br>
+Kill&nbsp; s&#7869; s&#7917; d&#7909;ng c&aacute;c s&#7889;, c&ograve;n killall s&#7869; s&#7917; d&#7909;ng
+t&ecirc;n lo&#7841;i b&#7887; ph&#7847;n SIG.V&iacute; d&#7909; nh&#432;:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ killall -KILL vim</span><br>
+<br>
+C&oacute; m&#7897;t ph&#432;&#417;ng &aacute;n kill &#273;&#432;&#7907;c s&#7917; d&#7909;ng nh&#432; kh&#7903;i &#273;&#7897;ng ch&#432;&#417;ng
+tr&igrave;nh.N&oacute; g&#7917;i t&iacute;n hi&#7879;u SIGHUP v&agrave; ch&uacute;ng
+ta &eacute;p bu&#7897;c ch&#432;&#417;ng tr&igrave;nh ph&#7843;i &#273;&#7885;c l&#7841;i c&#7845;u h&igrave;nh c&#7911;a
+m&igrave;nh.N&oacute; thu&#7853;n l&#7907;i khi b&#7841;n thay &#273;&#7893;i c&#7845;u h&igrave;nh c&#7911;a m&#7897;t
+ch&#432;&#417;ng tr&igrave;nh n&agrave;o &#273;&oacute;.<br>
+<br>
+</a><a name="ch_5.4.5"><span style="font-weight: bold;">5.4.5 top<br>
+</span><br>
+&#272;&acirc;y l&agrave; m&#7897;t ch&#432;&#417;ng tr&igrave;nh d&ugrave;ng &#273;&#7875; hi&#7875;n th&#7883;
+li&ecirc;n t&#7909;c th&ocirc;ng tin v&#7873; c&aacute;c ti&#7871;n tr&igrave;nh
+tr&ecirc;n h&#7879; th&#7889;ng.<br>
+&#272;&#7875; hi&#7875;n th&#7883; b&#7841;n h&atilde;y th&#7921;c hi&#7879;n<br>
+<br>
+<span style="font-weight: bold;"> $top</span><br>
+<br>
+L&#7879;nh s&#7869; &#273;&#432;a ra to&agrave;n m&agrave;n h&igrave;nh th&ocirc;ng tin v&#7873;
+c&aacute;c ti&#7871;n tr&igrave;nh &#273;ang ch&#7841;y tr&ecirc;n h&#7879; th&#7889;ng,c&#361;ng nh&#432;
+nh&#7919;ng th&ocirc;ng tin chung v&#7873; h&#7879; th&#7889;ng.(m&#7913;c &#273;&#7897; l&agrave;m vi&#7879;c
+processor,t&#7893;ng s&#7889; l&#432;&#7907;ng ti&#7871;n tr&igrave;nh,tr&#7841;ng th&aacute;i processor,b&#7897;
+nh&#7899;,PID c&#7911;a t&#7915;ng ti&#7871;n tr&igrave;nh,t&ecirc;n t&agrave;i kho&#7843;n,th&#7901;i gian
+th&#7921;c thi..)<br>
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.4.5"><img
+ src="image/top.png" title="" alt=""
+ style="width: 646px; height: 430px;">&nbsp;</a><br>
+<a name="ch_5.4.5"></a></div>
+<a name="ch_5.4.5"> Ch&#432;&#417;ng tr&igrave;nh c&oacute; t&ecirc;n l&agrave;
+top,b&#7903;i v&igrave; c&oacute; l&#7869; nh&#7919;ng th&ocirc;ng tin &#273;&#432;&#7907;c hi&#7875;n th&#7883; &#7903;
+ph&iacute;a tr&ecirc;n b&#7843;ng li&#7879;t k&ecirc;,n&oacute;&nbsp; &#273;&#432;&#7907;c coi
+l&agrave; r&#7845;t thu&#7853;n ti&#7879;n cho vi&#7879;c x&aacute;c &#273;&#7883;nh ch&#432;&#417;ng tr&igrave;nh
+n&agrave;o v&#432;&#7907;t qua gi&#7899;i h&#7841;n ki&#7875;m so&aacute;t.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.4.5"><span
+ style="font-style: italic;"><br>
+</span></a><a href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.4.5"></a></div>
+<a name="ch_5.4.5"> </a>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

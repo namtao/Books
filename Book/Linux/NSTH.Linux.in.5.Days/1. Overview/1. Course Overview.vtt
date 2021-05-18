@@ -1,0 +1,214 @@
+WEBVTT
+
+1
+00:00:00.790 --> 00:00:04.680
+Welcome to the Learn Linux
+in 5 Days course.
+
+2
+00:00:04.680 --> 00:00:08.830
+On day one you'll learn what Linux is,
+how it came to be and
+
+3
+00:00:08.830 --> 00:00:11.750
+some of its strengths and weaknesses.
+
+4
+00:00:11.750 --> 00:00:16.155
+You'll also learn a few different methods
+to gaining access to an already installed
+
+5
+00:00:16.155 --> 00:00:18.070
+and running Linux system.
+
+6
+00:00:18.070 --> 00:00:21.850
+If you want to learn how to install
+Linux on your own, don't worry,
+
+7
+00:00:21.850 --> 00:00:23.860
+you'll learn how to do that too.
+
+8
+00:00:23.860 --> 00:00:27.890
+Finally, on day one, we'll talk about the
+various ways to connect to a Linux system
+
+9
+00:00:27.890 --> 00:00:30.650
+and the software you'll need to do so.
+
+10
+00:00:30.650 --> 00:00:34.345
+You'll start out day two by learning
+about the Linux directory structure and
+
+11
+00:00:34.345 --> 00:00:37.875
+where various components of
+the operating system reside.
+
+12
+00:00:37.875 --> 00:00:41.205
+Next, you'll get an introduction to
+the Linux command line interface, and
+
+13
+00:00:41.205 --> 00:00:44.815
+learn some of the most essential and
+often used commands.
+
+14
+00:00:44.815 --> 00:00:48.355
+Even the most experienced Linux users
+need help from time to time, and
+
+15
+00:00:48.355 --> 00:00:50.615
+you'll learn how and
+where to find that as well.
+
+16
+00:00:52.070 --> 00:00:55.730
+You'll also learn about the superuser
+account, why it exists and
+
+17
+00:00:55.730 --> 00:00:57.410
+when you need to use it.
+
+18
+00:00:57.410 --> 00:01:00.210
+You'll wrap up day two by learning
+some directory shortcuts and
+
+19
+00:01:00.210 --> 00:01:02.892
+how to navigate about the file system.
+
+20
+00:01:02.892 --> 00:01:06.525
+Day three will include lessons on file and
+directory permissions.
+
+21
+00:01:06.525 --> 00:01:11.115
+You'll learn how to read permissions,
+what they mean, and how to set them.
+
+22
+00:01:11.115 --> 00:01:13.785
+You'll also pick up some tips
+on working with groups and
+
+23
+00:01:13.785 --> 00:01:15.855
+the permissions you
+should use when doing so.
+
+24
+00:01:16.975 --> 00:01:20.025
+Next, you'll learn two commands
+that will help you find any file or
+
+25
+00:01:20.025 --> 00:01:22.335
+directory on a Linux system.
+
+26
+00:01:22.335 --> 00:01:25.485
+You'll learn how to view the contents
+of files and how to edit them.
+
+27
+00:01:26.600 --> 00:01:28.700
+We'll also cover command-line editors,
+
+28
+00:01:28.700 --> 00:01:31.540
+as well as editors that you can
+use in a graphical environment.
+
+29
+00:01:32.850 --> 00:01:37.280
+You'll start out day four by learning
+how to delete, copy, move, and
+
+30
+00:01:37.280 --> 00:01:39.880
+rename files and directories.
+
+31
+00:01:39.880 --> 00:01:42.510
+You'll tackle input and
+output redirection before
+
+32
+00:01:42.510 --> 00:01:46.080
+learning how to compare the contents
+of files and directories.
+
+33
+00:01:46.080 --> 00:01:49.300
+Next, I'll show you how to search for
+data within files.
+
+34
+00:01:49.300 --> 00:01:52.990
+You'll learn how to customize your command
+line shell prompt to your liking and
+
+35
+00:01:52.990 --> 00:01:55.440
+learn how to use aliases.
+
+36
+00:01:55.440 --> 00:01:58.560
+Finally, on day four, you'll learn
+how to transfer data between your
+
+37
+00:01:58.560 --> 00:02:01.450
+local operating system and a Linux host.
+
+38
+00:02:01.450 --> 00:02:04.600
+You'll even learn how to copy files
+from one Linux system to another.
+
+39
+00:02:06.070 --> 00:02:11.170
+On the final day you'll learn how to
+examine and manipulate processes and jobs.
+
+40
+00:02:11.170 --> 00:02:15.300
+You'll learn how to automate tasks and
+make them recurring events.
+
+41
+00:02:15.300 --> 00:02:19.410
+We'll talk about how to switch
+between users on a Linux system too.
+
+42
+00:02:19.410 --> 00:02:22.620
+You'll also pick up some tips that will
+greatly speed up your work flow at
+
+43
+00:02:22.620 --> 00:02:24.260
+the command line.
+
+44
+00:02:24.260 --> 00:02:29.080
+Finally, you'll wrap up the course with
+learning how to find, install, update, and
+
+45
+00:02:29.080 --> 00:02:29.900
+remove software.
+

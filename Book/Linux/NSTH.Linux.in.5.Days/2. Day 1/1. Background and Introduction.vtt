@@ -1,0 +1,540 @@
+WEBVTT
+
+1
+00:00:00.790 --> 00:00:06.470
+In today's lesson, you will learn
+what Linux is, where Linux came from,
+
+2
+00:00:06.470 --> 00:00:10.970
+what a Linux distribution is, and some
+of the reasons that Linux is favored for
+
+3
+00:00:10.970 --> 00:00:14.439
+certain applications and
+projects over other operating systems.
+
+4
+00:00:16.130 --> 00:00:20.060
+First and foremost,
+Linux is an operating system.
+
+5
+00:00:20.060 --> 00:00:23.980
+An operating system is simply a collection
+of software that manages hardware
+
+6
+00:00:23.980 --> 00:00:28.100
+resources and provides an environment
+where applications can run.
+
+7
+00:00:28.100 --> 00:00:32.030
+The operating system allows
+applications to store information,
+
+8
+00:00:32.030 --> 00:00:35.969
+send documents to printers,
+interact with users, and other things.
+
+9
+00:00:37.550 --> 00:00:40.010
+Linux is also a kernel.
+
+10
+00:00:40.010 --> 00:00:41.840
+Typically, when the term Linux is used,
+
+11
+00:00:41.840 --> 00:00:45.070
+it refers to the Linux
+operating system as a whole.
+
+12
+00:00:45.070 --> 00:00:48.960
+However, it can refer to just
+the Linux kernel as well.
+
+13
+00:00:48.960 --> 00:00:52.650
+The Linux kernel is the core or
+the heart of the operating system.
+
+14
+00:00:52.650 --> 00:00:56.535
+It's the layer that sits between
+the hardware and applications.
+
+15
+00:00:56.535 --> 00:01:00.960
+Said another way, it's the intermediary
+between software and hardware.
+
+16
+00:01:00.960 --> 00:01:04.360
+However, to have a useful operating
+system you need other components
+
+17
+00:01:04.360 --> 00:01:06.230
+in addition to the kernel.
+
+18
+00:01:06.230 --> 00:01:10.860
+These components can include system
+libraries, graphical user interfaces,
+
+19
+00:01:10.860 --> 00:01:15.230
+email utilities, web browsers,
+and other programs.
+
+20
+00:01:15.230 --> 00:01:19.490
+Linus Torvalds created Linux when he was
+a student at the University of Helsinki
+
+21
+00:01:19.490 --> 00:01:21.540
+studying computer science.
+
+22
+00:01:21.540 --> 00:01:26.090
+In early 1991, he purchased an IBM
+compatible personal computer that came
+
+23
+00:01:26.090 --> 00:01:29.100
+with a MS-DOS operating system.
+
+24
+00:01:29.100 --> 00:01:31.640
+Linus wasn't satisfied with MS-DOS, and
+
+25
+00:01:31.640 --> 00:01:36.260
+wanted to use a UNIX operating system like
+he was accustomed to at the university.
+
+26
+00:01:36.260 --> 00:01:39.710
+When he set out to obtain a copy
+of UNIX for his personal use,
+
+27
+00:01:39.710 --> 00:01:45.110
+he found that the least expensive
+UNIX he could buy was about $5,000.
+
+28
+00:01:45.110 --> 00:01:49.260
+Driven by the desire to run a UNIX-like
+Operating System on his personal computer,
+
+29
+00:01:49.260 --> 00:01:51.380
+he set out to create Linux.
+
+30
+00:01:51.380 --> 00:01:55.390
+Linus and over 100 developers worked on
+Linux over the next couple of years and
+
+31
+00:01:55.390 --> 00:02:01.080
+in March of 1994, version 1.0 of
+the Linux kernel was released.
+
+32
+00:02:01.080 --> 00:02:03.720
+Linux is open source software.
+
+33
+00:02:03.720 --> 00:02:08.480
+This means that anyone can use, copy,
+study, and change the software in
+
+34
+00:02:08.480 --> 00:02:13.290
+any way they choose, so long as the source
+code is openly shared with others.
+
+35
+00:02:13.290 --> 00:02:16.680
+To date, thousands of people
+have made improvements to Linux.
+
+36
+00:02:16.680 --> 00:02:18.030
+And with Linux being free and
+
+37
+00:02:18.030 --> 00:02:22.040
+open source software, it has led to
+the rise of Linux distributions.
+
+38
+00:02:22.040 --> 00:02:25.350
+In every case the source code is free, but
+
+39
+00:02:25.350 --> 00:02:27.670
+in some cases
+the distribution is not free.
+
+40
+00:02:27.670 --> 00:02:31.170
+The binaries,
+the compiled code is not free.
+
+41
+00:02:31.170 --> 00:02:36.310
+For example, you have to pay a license in
+order to run Red Hat Enterprise Linux.
+
+42
+00:02:36.310 --> 00:02:38.850
+However, Red Hat releases
+their source code for
+
+43
+00:02:38.850 --> 00:02:43.100
+anyone to download, again,
+Linux is not a UNIX derivative.
+
+44
+00:02:43.100 --> 00:02:44.750
+It was written from scratch,
+
+45
+00:02:44.750 --> 00:02:49.100
+however many of the commands that
+are found in Linux are also found on UNIX.
+
+46
+00:02:49.100 --> 00:02:52.930
+If you have any experience on a UNIX
+system you're going to feel right at home
+
+47
+00:02:52.930 --> 00:02:54.320
+on a Linux system.
+
+48
+00:02:54.320 --> 00:02:57.270
+A Linux distribution is
+the Linux kernel and
+
+49
+00:02:57.270 --> 00:03:00.580
+a collection of software that
+together create an operating system.
+
+50
+00:03:00.580 --> 00:03:04.270
+Each distribution has its own goals and
+areas of focus.
+
+51
+00:03:04.270 --> 00:03:08.190
+Your choice of distribution will depend
+on what you are trying to accomplish.
+
+52
+00:03:08.190 --> 00:03:10.550
+There are distributions
+that are commercial.
+
+53
+00:03:10.550 --> 00:03:14.190
+These commercial Linux distributions
+are backed by corporations, and
+
+54
+00:03:14.190 --> 00:03:15.358
+you can buy support from them.
+
+55
+00:03:15.358 --> 00:03:18.350
+There are non-commercial
+Linux distributions,
+
+56
+00:03:18.350 --> 00:03:20.999
+these are maintained by
+a community of volunteers.
+
+57
+00:03:22.010 --> 00:03:24.630
+You have Linux distributions
+that are designed for
+
+58
+00:03:24.630 --> 00:03:28.250
+server use, others that are designed for
+desktop use.
+
+59
+00:03:28.250 --> 00:03:30.020
+Some that are focused on research and
+
+60
+00:03:30.020 --> 00:03:34.370
+science, there are others that
+are focused on multimedia production.
+
+61
+00:03:34.370 --> 00:03:37.100
+There are literally hundreds
+of Linux distributions.
+
+62
+00:03:37.100 --> 00:03:41.800
+distrowatch.com is a great website
+to learn about all the available
+
+63
+00:03:41.800 --> 00:03:46.530
+Linux distributions,
+distro is short for distribution.
+
+64
+00:03:46.530 --> 00:03:50.150
+On your screen I've listed some
+popular Linux distributions,
+
+65
+00:03:50.150 --> 00:03:55.140
+Red Hat Enterprise Linux,
+Fedora, Ubuntu, Debian,
+
+66
+00:03:55.140 --> 00:03:59.510
+SuSE Linux Enterprise Server,
+OpenSuSE, Linux Mint.
+
+67
+00:03:59.510 --> 00:04:04.250
+Again, there are hundreds of these, these
+are just a few of the most popular Linux
+
+68
+00:04:04.250 --> 00:04:11.130
+distributions, to get an idea of exactly
+what's available go to distrowatch.com.
+
+69
+00:04:11.130 --> 00:04:14.670
+So what are some of the reasons
+you would want to run Linux?
+
+70
+00:04:14.670 --> 00:04:19.600
+Linux runs on many hardware platforms
+from dedicated networking devices
+
+71
+00:04:19.600 --> 00:04:23.590
+to phones to personal computers and
+even super computers.
+
+72
+00:04:23.590 --> 00:04:26.320
+Proprietary UNIX operating
+systems typically
+
+73
+00:04:26.320 --> 00:04:29.298
+only run on their hardware
+from their company.
+
+74
+00:04:29.298 --> 00:04:36.620
+For example, HP-UX only runs on HP
+servers, AIX only runs on IBM servers.
+
+75
+00:04:36.620 --> 00:04:41.090
+Linux can run on HP,
+IBM and other servers.
+
+76
+00:04:41.090 --> 00:04:45.460
+Linux was developed on PC
+hardware using Intel processors.
+
+77
+00:04:45.460 --> 00:04:48.810
+Over time Linux has been ported
+to more hardware platforms than
+
+78
+00:04:48.810 --> 00:04:50.620
+any other operating system.
+
+79
+00:04:50.620 --> 00:04:54.850
+The small footprint of Linux,
+allows it to run on older hardware or
+
+80
+00:04:54.850 --> 00:04:56.100
+on embedded systems.
+
+81
+00:04:57.170 --> 00:05:01.960
+Also, Linux is known for
+being stable, reliable and secure.
+
+82
+00:05:01.960 --> 00:05:03.390
+This makes it a great choice for
+
+83
+00:05:03.390 --> 00:05:06.710
+servers that need to continuously
+run without down time.
+
+84
+00:05:06.710 --> 00:05:10.060
+Linux has traditionally been used for
+server applications.
+
+85
+00:05:10.060 --> 00:05:13.930
+Linux can be used to host websites,
+act as file servers, and
+
+86
+00:05:13.930 --> 00:05:16.220
+even run database software.
+
+87
+00:05:16.220 --> 00:05:20.070
+Linux doesn't have to be used as a server
+though, I find Linux to be a good
+
+88
+00:05:20.070 --> 00:05:24.030
+every day operating system that
+I use on my personal desktop.
+
+89
+00:05:24.030 --> 00:05:24.670
+As a matter of fact,
+
+90
+00:05:24.670 --> 00:05:27.239
+I'm recording this course with
+software that is running on Linux.
+
+91
+00:05:28.900 --> 00:05:33.510
+Linux is free, not only is the source code
+freely available, but you can run Linux on
+
+92
+00:05:33.510 --> 00:05:37.650
+your hardware without having to
+pay a licensing fee in many cases.
+
+93
+00:05:37.650 --> 00:05:41.205
+However, if your business depends
+on servers that are running Linux,
+
+94
+00:05:41.205 --> 00:05:44.765
+having a commercial Linux
+distribution which you pay for, and
+
+95
+00:05:44.765 --> 00:05:48.295
+having someone that can provide support,
+can be well worth your while.
+
+96
+00:05:48.295 --> 00:05:52.706
+Linux is typically not as costly as
+the proprietary UNIX operating systems.
+
+97
+00:05:52.706 --> 00:05:56.957
+Linux is also free in the sense that
+you can use it for any purpose, and
+
+98
+00:05:56.957 --> 00:06:00.128
+you can modify it to fit
+your needs if you so desire.
+
+99
+00:06:00.128 --> 00:06:03.618
+There are also many free software
+applications that run on Linux,
+
+100
+00:06:03.618 --> 00:06:07.810
+many of these free applications were
+written specifically with Linux in mind.
+
+101
+00:06:09.330 --> 00:06:12.140
+Let's recap what we've
+gone over in this lesson.
+
+102
+00:06:12.140 --> 00:06:15.060
+First, we learned that Linux
+is an operating system.
+
+103
+00:06:15.060 --> 00:06:18.300
+When someone says the word
+Linux without a qualifier,
+
+104
+00:06:18.300 --> 00:06:22.020
+more than likely they are talking
+about the entire operating system.
+
+105
+00:06:22.020 --> 00:06:24.400
+However, Linux is also a kernel.
+
+106
+00:06:24.400 --> 00:06:27.610
+When people speak of the Linux kernel,
+they are typically specific and
+
+107
+00:06:27.610 --> 00:06:29.610
+say the Linux kernel.
+
+108
+00:06:29.610 --> 00:06:31.250
+Linux, being the operating system,
+
+109
+00:06:31.250 --> 00:06:35.065
+is the intermediary between hardware and
+software.
+
+110
+00:06:35.065 --> 00:06:38.065
+Linux distributions
+are implementations of Linux.
+
+111
+00:06:38.065 --> 00:06:42.385
+Each Linux distribution has a different
+goal, and a slightly different focus.
+
+112
+00:06:42.385 --> 00:06:45.915
+Your choice of distribution will be driven
+by the goal you are trying to accomplish.
+

@@ -1,0 +1,218 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.760 --> 00:00:07.080
+In this lesson you're going to learn what a Linux distribution is, what the
+
+00:00:07.080 --> 00:00:11.580
+most common Linux distributions are, and how to choose the right one for you.
+
+00:00:12.630 --> 00:00:16.529
+Generally when someone uses the term Linux, they're referring to the Linux
+
+00:00:16.529 --> 00:00:20.670
+operating system as a whole.
+An Operating System is a collection of
+
+00:00:20.670 --> 00:00:24.690
+software that manages hardware resources and provides an environment where
+
+00:00:24.690 --> 00:00:29.010
+applications run. The Operating System allows applications to store information,
+
+00:00:29.010 --> 00:00:34.410
+send documents to a printer, and interact with users, for example. A Linux
+
+00:00:34.410 --> 00:00:38.850
+distribution is simply a collection of software and applications bundled
+
+00:00:38.850 --> 00:00:44.069
+together and distributed as a single operating system.  For example, one Linux
+
+00:00:44.069 --> 00:00:47.729
+distribution might come with one particular web browser installed while
+
+00:00:47.729 --> 00:00:51.359
+another Linux distribution will come with another web browser installed by
+
+00:00:51.359 --> 00:00:55.829
+default.  You'll be able to browse the web on either distribution, but the specific
+
+00:00:55.829 --> 00:00:59.039
+piece of software used to do that might be different.
+
+00:00:59.039 --> 00:01:02.549
+It's important to point out here that the software that comes installed by
+
+00:01:02.549 --> 00:01:06.690
+default can be changed.  If you don't like the web browser that shipped with the Linux
+
+00:01:06.690 --> 00:01:10.980
+distribution you're using, you can install another one and use that.  You
+
+00:01:10.980 --> 00:01:14.970
+can think of a Linux distribution as a curated collection of software that
+
+00:01:14.970 --> 00:01:18.630
+works well together, but you're more than free to use the software and
+
+00:01:18.630 --> 00:01:20.940
+applications that you like best.
+
+00:01:20.940 --> 00:01:24.630
+Before we continue, I'd like to point out that you'll often hear the term
+
+00:01:24.630 --> 00:01:29.430
+Distribution shortened to distro.  Also, some people refer to the various
+
+00:01:29.430 --> 00:01:34.590
+distributions as flavors. What every Linux distribution has in common,
+
+00:01:34.590 --> 00:01:39.690
+though, is the Linux kernel.  Again, typically when the term Linux is used it refers to the
+
+00:01:39.690 --> 00:01:42.240
+Linux Operating System as a whole.
+
+00:01:42.240 --> 00:01:47.220
+However, it can refer to just the Linux Kernel as well. The Linux kernel is the
+
+00:01:47.220 --> 00:01:51.360
+core or the heart of the Operating System.  It’s the layer that sits between
+
+00:01:51.360 --> 00:01:55.830
+the hardware and applications.  Said another way, it’s the intermediary
+
+00:01:55.830 --> 00:01:58.260
+between software and hardware.
+
+00:01:58.260 --> 00:02:02.159
+However, to have a useful operating system you need other components in
+
+00:02:02.159 --> 00:02:06.840
+addition to the kernel.  These components can include system libraries, graphical
+
+00:02:06.840 --> 00:02:12.870
+user interfaces, email utilities, web browsers, and other programs. To summarize
+
+00:02:12.870 --> 00:02:16.030
+a Linux distribution is the Linux kernel
+
+00:02:16.030 --> 00:02:20.890
+and a collection of software that, together, create an operating system. By far,
+
+00:02:20.890 --> 00:02:24.700
+the two most popular Linux distributions used in information technology
+
+00:02:24.700 --> 00:02:31.120
+departments and by Linux professionals are RedHat Enterprise Linux and Ubuntu. So,
+
+00:02:31.120 --> 00:02:34.870
+if you plan to use Linux in your current or future career as a Linux system
+
+00:02:34.870 --> 00:02:39.850
+administrator, Linux system engineer, or even a database administrator or
+
+00:02:39.850 --> 00:02:44.290
+software developer, then I highly recommend focusing on these two Linux
+
+00:02:44.290 --> 00:02:48.640
+distributions.  You can forget about the literally hundreds and hundreds of Linux
+
+00:02:48.640 --> 00:02:54.010
+distributions and choose between RedHat Enterprise Linux and Ubuntu. If you want to
+
+00:02:54.010 --> 00:02:58.300
+work for large, traditional organizations like financial institutions,
+
+00:02:58.300 --> 00:03:02.980
+transportation companies, telecommunication corporations, large
+
+00:03:02.980 --> 00:03:08.050
+retailers, and healthcare organizations then you should choose RedHat. By the
+
+00:03:08.050 --> 00:03:11.230
+way, to run RedHat you need to pay for a license.
+
+00:03:11.230 --> 00:03:14.530
+However, there is really no need to pay for a license if you're going to be
+
+00:03:14.530 --> 00:03:19.569
+running Linux at home or want something to practice on.  Instead use CentOS which
+
+00:03:19.569 --> 00:03:23.560
+is a RedHat Enterprise Linux derivative that's completely free.
+
+00:03:23.560 --> 00:03:27.880
+It's really RedHat with the branding and logos replaced with CentOS branding.
+
+00:03:27.880 --> 00:03:32.350
+If, on the other hand, you want to work for a startup or smaller, more nimble
+
+00:03:32.350 --> 00:03:35.739
+web-based companies like Software-As-A-Service type businesses,
+
+00:03:35.739 --> 00:03:40.660
+social networking sites, smaller ecommerce stores, or practically any
+
+00:03:40.660 --> 00:03:44.140
+company the relies heavily on cloud computing, then Ubuntu is the
+
+00:03:44.140 --> 00:03:48.400
+distribution for you. If you're using Linux strictly for fun, for personal
+
+00:03:48.400 --> 00:03:51.910
+projects, or just want to see what other distributions have to offer,
+
+00:03:51.910 --> 00:03:57.850
+feel free to try out some other popular distros like:  Linux Mint, Debian, Mageia,
+
+00:03:57.850 --> 00:04:04.780
+Fedora, openSuse - (open-su-za), Arch Linux &amp; Slackware. When choosing a Linux distro for
+
+00:04:04.780 --> 00:04:08.890
+personal use it mainly comes down to personal preference and if you like most
+
+00:04:08.890 --> 00:04:12.549
+of the software that comes installed by default.  Of course, don't forget
+
+00:04:12.549 --> 00:04:16.450
+CentOS and Ubuntu.  They make great distros for personal use as well.
+
+00:04:16.959 --> 00:04:22.539
+Ultimately,  Linux is Linux at the core. No matter which choice you make, the Linux
+
+00:04:22.539 --> 00:04:26.440
+concepts are going to be the same.  Sure, each distribution is going to be a
+
+00:04:26.440 --> 00:04:29.289
+little different, but if you can do something on one
+
+00:04:29.289 --> 00:04:33.580
+distribution you'll most likely be able to figure out how to do it on another. What
+
+00:04:33.580 --> 00:04:37.779
+this really means is that you can't make a "wrong" decision.  Know that by simply
+
+00:04:37.779 --> 00:04:41.409
+choosing a Linux distribution -- any distribution -- you've already made the
+
+00:04:41.409 --> 00:04:46.089
+right choice. To recap,a Linux distribution is the Linux kernel and a
+
+00:04:46.089 --> 00:04:50.860
+collection of software that, together, create an operating system. The two most
+
+00:04:50.860 --> 00:04:54.849
+popular Linux distributions used in the industry today are RedHat Enterprise
+
+00:04:54.849 --> 00:04:59.740
+Linux and Ubuntu. If you want to gain RedHat experience without paying a
+
+00:04:59.740 --> 00:05:04.089
+licensing fee, then use CentOS as it's really RedHat with the branding and logos
+
+00:05:04.089 --> 00:05:06.039
+replaced with CentOS branding.
+

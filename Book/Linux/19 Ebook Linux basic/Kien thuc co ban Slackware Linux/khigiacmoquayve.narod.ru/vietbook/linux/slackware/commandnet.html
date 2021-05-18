@@ -1,0 +1,690 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/commandnet.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>commandnet</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.6"><big style="font-weight: bold;">5.6&nbsp;
+C&aacute;c l&#7879;nh c&#417; b&#7843;n v&#7873; m&#7841;ng(Basic Network commands)<br>
+</big><br>
+Network coi nh&#432; m&#7897;t h&#7879; th&#7889;ng m&aacute;y t&iacute;nh li&ecirc;n k&#7871;t v&#7899;i
+nhau.Network &#273;&#417;n gi&#7843;n l&agrave; m&#7897;t h&#7879; th&#7889;ng c&#7845;u t&#7841;o t&#7915; m&#7897;t v&agrave;i
+m&aacute;y t&iacute;nh k&#7871;t n&#7889;i v&#7899;i nhau c&oacute; th&#7875; trong
+nh&agrave;,trong c&#417; quan,trong v&#259;n ph&ograve;ng..c&oacute; th&#7875; l&#7899;n ho&#7863;c
+nh&#7887;..N&#7871;u m&aacute;y t&iacute;nh c&#7911;a b&#7841;n l&agrave; m&#7897;t ph&#7847;n trong m&#7841;ng
+l&#432;&#7899;i c&oacute; ngh&#297;a l&agrave; b&#7841;n c&oacute; th&#7875; truy c&#7853;p &#273;&#7871;n c&aacute;c
+ph&#7847;n kh&aacute;c trong m&#7841;ng,c&oacute; th&#7875; tr&#7921;c ti&#7871;p ho&#7863;c d&#7883;ch
+v&#7909;(e-mail,web..).<br>
+C&oacute; r&#7845;t nhi&#7873;u c&aacute;ch ch&#432;&#417;ng tr&igrave;nh m&#7841;ng kh&aacute;c
+nhau.M&#7897;t v&agrave;i trong ch&uacute;ng thu&#7853;n ti&#7879;n cho ki&#7875;m tra ho&#7863;c s&#7917;a
+l&#7895;i. C&ograve;n l&#7841;i(ch&#432;&#417;ng tr&igrave;nh &#273;&#7885;c tin t&#7913;c,web..) thu&#7853;n l&#7907;i cho
+c&ocirc;ng vi&#7879;c c&#7911;a b&#7841;n v&agrave; giao ti&#7871;p v&#7899;i c&aacute;c ng&#432;&#7901;i
+kh&aacute;c.<br>
+<br>
+</a><a name="ch_5.6.1"><span style="font-weight: bold;">5.6.1 ping</span><br>
+<span style="font-weight: bold;"> ping(8)</span> g&#7917;i &#273;i package ICMP
+ECHO_REQUEST t&#7899;i host.N&#7871;u nh&#432; host tr&#7843; l&#7901;i th&igrave; b&#7841;n nh&#7853;n &#273;&#432;&#7907;c
+ICMP ng&#432;&#7907;c l&#7841;i.C&oacute; v&#7867; nh&#432; r&#7845;t l&#7841;.B&#7841;n c&oacute; th&#7875; ping &#273;&#7875; xem
+m&aacute;y t&iacute;nh t&#7891;n t&#7841;i hay kh&ocirc;ng.&#272;&acirc;y
+l&agrave;&nbsp; cu&#7897;c n&oacute;i chuy&#7879;n gi&#7919;a c&aacute;c ng&#432;&#7901;i s&#7917; d&#7909;ng
+Linux:<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.6.1">Ng&#432;&#7901;i A:Loki t&#7855;t r&#7891;i<br>
+Ng&#432;&#7901;i B:C&#7853;u ch&#7855;c ch&#7855;n ch&#7913;?<br>
+Ng&#432;&#7901;i A: uh,m&igrave;nh ping m&agrave; kh&ocirc;ng th&#7845;y tr&#7843; l&#7901;i.</a></div>
+<a name="ch_5.6.1">&#272;&#7845;y l&agrave; m&#7897;t trong nh&#7919;ng &#7913;ng d&#7909;ng c&#7911;a
+ping.N&oacute; gi&uacute;p nhanh ch&oacute;ng x&aacute;c &#273;&#7883;nh c&oacute;
+th&#7875; truy c&#7853;p &#273;&#432;&#7907;c hay kh&ocirc;ng v&agrave;o m&aacute;y t&iacute;nh
+kh&aacute;c.<br>
+<br>
+<span style="font-weight: bold;"> $ping &lt;ip-address ho&#7863;c t&ecirc;n
+host&gt;</span><br>
+<br>
+T&#7845;t nhi&ecirc;n ch&#432;&#417;ng tr&igrave;nh c&oacute; m&#7897;t v&agrave;i tham bi&#7871;n
+&#273;i k&egrave;m.H&atilde;y xem man-pages c&#7911;a ping(1) &#273;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.6.2"><span style="font-weight: bold;">5.6.2 finger<br>
+</span><br>
+<span style="font-weight: bold;"> finger(1)</span> h&#7887;i v&#7873; th&ocirc;ng tin
+&#273;&#7863;c bi&#7879;t c&#7911;a t&agrave;i kho&#7843;n.B&#7841;n ch&#7881; cho finger t&ecirc;n t&agrave;i
+kho&#7843;n,e-mail v&agrave; ch&#432;&#417;ng tr&igrave;nh th&#7917; k&#7871;t n&#7895;i v&#7899;i server c&#7847;n
+thi&#7871;t v&agrave; h&#7887;i nh&#7919;ng th&ocirc;ng tin v&#7873; t&agrave;i
+kho&#7843;n:T&ecirc;n,s&#7889; &#273;i&#7879;n tho&#7841;i,v&agrave; nhi&#7873;u th&ocirc;ng tin
+kh&aacute;c.V&iacute; d&#7909; nh&#432;:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $finger johnc@idsoftware.com</span><br>
+<br>
+<span style="font-weight: bold;"> finger </span>c&oacute; th&#7875; &#273;&#432;a ra
+t&ecirc;n t&agrave;i kho&#7843;n,e-mail,s&#7889; &#273;i&#7879;n tho&#7841;i,..v&agrave; t&#7879;p tin
+.plan,.project.C&oacute; l&#7869; nh&#7919;ng th&ocirc;ng tin tr&ecirc;n ph&#7909; thu&#7897;c
+v&agrave;o t&#7915;ng server c&#7909; th&#7875;.Server Slackware cung c&#7845;p c&aacute;c
+th&ocirc;ng tin sau:<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.6.2">T&ecirc;n ng&#432;&#7901;i s&#7917;
+d&#7909;ng<br>
+S&#7889; ph&ograve;ng<br>
+S&#7889; &#273;i&#7879;n tho&#7841;i nh&agrave; &#7903;<br>
+S&#7889; &#273;i&#7879;n tho&#7841;i v&#259;n ph&ograve;ng<br>
+Tr&#7841;ng th&aacute;i &#273;&#259;ng nh&#7853;p<br>
+Tr&#7841;ng th&aacute;i e-mail<br>
+N&#7897;i dung .plan t&#7879;p tin trong catalog home c&#7911;a t&agrave;i kho&#7843;n<br>
+N&#7897;i dung .project t&#7879;p tin trong catalog home c&#7911;a t&agrave;i kho&#7843;n<br>
+<br>
+</a></div>
+<a name="ch_5.6.2">B&#7889;n d&ograve;ng &#273;&#7847;u ti&ecirc;n c&oacute; th&#7875; thay
+&#273;&#7893;i b&#7903;i ch&#432;&#417;ng tr&igrave;nh <span style="font-weight: bold;">chfn</span>.Nh&#7919;ng
+th&ocirc;ng tin n&agrave;y &#273;&#432;&#7907;c l&#432;&#432; l&#7841;i tr&ecirc;n t&#7879;p tin
+/etc/passwd.&#272;&#7875; thay &#273;&#7893;i th&ocirc;ng tin tr&ecirc;n .plan v&agrave;
+.project b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng m&#7897;t tr&igrave;nh so&#7841;n th&#7843;o v&#259;n b&#7843;n
+b&#7845;t k&igrave;.Ch&uacute;ng nh&#7845;t thi&#7871;t ph&#7843;i n&#7857;m trong catalog home c&#7911;a
+t&agrave;i kho&#7843;n t&#432;&#417;ng &#7913;ng v&#7899;i .plan v&agrave; .project.<br>
+<br>
+C&oacute; r&#7845;t nhi&#7873;u ng&#432;&#7901;i s&#7917; d&#7909;ng finger v&#7899;i c&aacute;c account c&#7911;a
+m&igrave;nh tr&ecirc;n c&aacute;c m&aacute;y &#273;i&#7873;u khi&#7875;n t&#7915; xa &#273;&#7875; ki&#7875;m
+tra xem h&#7885; c&oacute; e-mail hay kh&ocirc;ng.B&#7841;n c&#361;ng c&oacute; th&#7875; xem
+c&aacute;c k&#7871; ho&#7841;ch,c&aacute;c ph&#432;&#417;ng &aacute;n c&#7911;a t&agrave;i
+kho&#7843;n.Gi&#7889;ng nh&#432; c&aacute;c ch&#432;&#417;ng tr&igrave;nh kh&aacute;c finger
+c&oacute; nhi&#7873;u tham bi&#7871;n,b&#7841;n c&oacute; th&#7875; &#273;&#7885;c man c&#7911;a n&oacute; &#273;&#7875;
+c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.6.3"><span style="font-weight: bold;">5.6.3 telnet<br>
+</span><br>
+Ai &#273;&oacute; &#273;&atilde; n&oacute;i <span style="font-weight: bold;">telnet(1)</span>
+- L&agrave; m&#7897;t c&aacute;i g&igrave; &#273;&oacute; tuy&#7879;t v&#7901;i nh&#7845;t t&#7915; th&#7871;
+gi&#7899;i m&aacute;y t&iacute;nh.C&oacute; kh&#7843; n&#259;ng k&#7871;t n&#7889;i v&#7899;i c&aacute;c
+m&aacute;y &#7903; xa v&agrave; l&agrave;m vi&#7879;c tr&ecirc;n c&aacute;c
+m&aacute;y Unix v&agrave; c&aacute;c phi&ecirc;n b&#7843;n Unix kh&aacute;c.<br>
+<br>
+<span style="font-weight: bold;"> telnet</span> cho ph&eacute;p b&#7841;n &#273;&#259;ng
+nh&#7853;p v&agrave;o c&aacute;c m&aacute;y &#7903; xa gi&#7889;ng nh&#432; b&#7841;n &#273;ang ng&#7891;i
+tr&#432;&#7899;c n&oacute;.Ch&#7881; c&#7847;n nh&#7853;p v&agrave;o t&ecirc;n,m&#7853;t kh&#7849;u
+v&agrave;&nbsp; b&#7841;n &#273;&atilde; &#273;&#432;&#7907;c &#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng v&#7899;i v&#7887;
+l&#7879;nh.V&agrave; b&#7841;n c&oacute; th&#7875; l&agrave;m vi&#7879;c b&igrave;nh th&#432;&#7901;ng
+tr&ecirc;n v&#7887; l&#7879;nh.C&oacute; th&#7875; vi&#7871;t th&#432;,&#273;&#7885;c tin t&#7913;c,di chuy&#7875;n t&#7879;p
+tin,...N&#7871;u nh&#432; b&#7841;n &#7903; X v&agrave; b&#7841;n k&#7871;t n&#7889;i v&#7899;i c&aacute;c m&aacute;y
+kh&aacute;c qua telnet tr&ecirc;n xterm th&igrave; b&#7841;n c&oacute; th&#7875;
+th&#7921;c hi&#7879;n c&aacute;c ch&#432;&#417;ng tr&igrave;nh tr&ecirc;n c&aacute;c
+m&aacute;y &#273;&oacute; v&agrave; bi&#7875;u di&#7877;n tr&ecirc;n m&aacute;y c&#7911;a
+b&#7841;n.Xem th&ecirc;m &#7903; 4.3.5<br>
+&#272;&#7875; k&#7871;t n&#7889;i v&#7899;i c&aacute;c m&aacute;y &#7903; xa b&#7841;n c&#7847;n th&#7921;c hi&#7879;n l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $telnet &lt;host name&gt;<br>
+</span><br>
+N&#7871;u host tr&#7843; ,l&#7901;i th&igrave; b&#7841;n s&#7869; th&#7845;y m&#7897;t th&ocirc;ng b&aacute;o
+&#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng quen thu&#7897;c.Nh&#7853;p v&agrave;o t&ecirc;n
+v&agrave; m&#7853;t kh&#7849;u.V&#7853;y l&agrave; b&#7841;n &#273;&atilde;&nbsp; &#273;ang &#7903; trong v&#7887;
+l&#7879;nh.&#272;&#7875; tho&aacute;t ra kh&#7887;i telnet h&atilde;y s&#7917; d&#7909;ng logout ho&#7863;c
+l&agrave; exit.<br>
+<big style="font-weight: bold;">&nbsp; Quan tr&#7885;ng:</big><br>
+<span style="font-weight: bold;"> Telnet </span>kh&ocirc;ng m&atilde;
+ho&aacute; th&ocirc;ng tin m&agrave; n&oacute; g&#7917;i &#273;i.T&#7845;t c&#7843; nh&#7919;ng
+c&aacute;i g&igrave; b&#7841;n g&#7917;i &#273;i gi&#7889;ng nh&#432; m&#7897;t v&#259;n b&#7843;n th&ocirc;ng
+th&#432;&#7901;ng th&#7853;m ch&iacute; c&#7843; m&#7853;t kh&#7849;u.Cho l&ecirc;n &#273;&#7915;ng l&ecirc;n s&#7917; d&#7909;ng
+telnel tr&ecirc;n internet.M&#7897;t gi&#7843;i ph&aacute;p kh&aacute;c -<span
+ style="font-weight: bold;">Secure Shell</span> m&atilde; ho&aacute; t&#7845;t
+c&#7843;&nbsp; v&agrave; mi&#7877;n ph&iacute;.Xem http://www.ssh.org &#273;&#7875; bi&#7871;t
+th&ecirc;m th&ocirc;ng tin.<br>
+&#272;&acirc;y l&agrave; m&#7897;t v&iacute; d&#7909; v&#7873; s&#7917; d&#7909;ng telnet t&#7899;i HTTP server
+tr&ecirc;n c&#7893;ng 80 v&agrave; l&#7845;y m&#7897;t v&agrave;i th&ocirc;ng tin
+tr&ecirc;n n&oacute;:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.3"><img
+ src="image/telnet.png" title="" alt=""
+ style="width: 478px; height: 300px;"></a><br>
+<a name="ch_5.6.3"></a></div>
+<a name="ch_5.6.3"> </a><a name="ch_5.6.4"><span
+ style="font-weight: bold;">5.6.4 FTP<br>
+</span><br>
+FTP(File Transfer Protocol) th&#7921;c hi&#7879;n qu&aacute; tr&igrave;nh trao &#273;&#7893;i
+c&aacute;c t&#7879;p tin gi&#7919;a hai m&aacute;y t&iacute;nh v&#7899;i nhau.<br>
+M&#7897;t b&ecirc;n l&agrave; FTP Server c&ograve;n b&ecirc;n kia l&agrave;
+FTP Client.Trong ph&#7847;n n&agrave;y ch&uacute;ng ta s&#7869; th&#7843;o lu&#7853;n v&#7873; FTP
+client.<br>
+B&#7841;n ch&iacute;nh l&agrave; m&#7897;t FTP client.C&ograve;n FTP Server
+ch&iacute;nh l&agrave; m&aacute;y m&agrave; tr&#7843; l&#7901;i cho y&ecirc;u c&#7847;u
+c&#7911;a b&#7841;n v&agrave; gi&uacute;p b&#7841;n &#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng.B&#7841;n s&#7869;
+t&#7843;i v&#7873; ho&#7863;c g&#7917;i l&ecirc;n server c&aacute;c t&#7879;p tin c&#7847;n thi&#7871;t.Client
+kh&ocirc;ng th&#7875; nh&#7853;n c&aacute;c&nbsp; FTP  li&ecirc;n k&#7871;t
+kh&aacute;c,n&oacute; ch&#7881; c&oacute; th&#7875; k&#7871;t n&#7889;i v&#7899;i Server.<br>
+&#272;&#7875; k&#7871;t n&#7889;i v&#7899;i FTP server ch&#7881; &#273;&#417;n gi&#7843;n g&#7885;i l&#7879;nh ftp(1) v&agrave;
+t&ecirc;n server c&#7847;n k&#7871;t n&#7889;i.<br>
+<br>
+<span style="font-weight: bold;"> $ftp &lt;name host&gt;<br>
+</span><br>
+N&#7871;u nh&#432; host c&oacute; FTP server th&igrave; n&oacute; s&#7869; h&#7887;i b&#7841;n
+t&ecirc;n v&agrave; m&#7853;t kh&#7849;u.B&#7841;n c&oacute; th&#7875; &#273;&#259;ng nh&#7853;p b&#7857;ng t&agrave;i
+kho&#7843;n c&#7911;a m&igrave;nh c&#361;ng c&oacute; th&#7875; b&#7857;ng "anonymous".Anonymous FTP
+th&#432;&#7901;ng &#273;&#432;&#7907;c s&#7917; d&#7909;ng nh&#432; l&agrave; n&#417;i l&#432;u tr&#7919; c&aacute;c ch&#432;&#417;ng
+tr&igrave;nh.Nh&#432; l&agrave; c&oacute; th&#7875; t&#7843;i Slackware Linux qua FTP
+v&agrave; b&#7841;n ph&#7843;i s&#7917; d&#7909;ng anonymous FTP.<br>
+B&#7841;n &#273;&#259;ng nh&#7853;p v&agrave;o FTP.T&#7845;t nhi&ecirc;n n&oacute; c&#361;ng s&#7917; d&#7909;ng h&#7879;
+th&#7889;ng l&#7879;nh gi&#7889;ng nh&#432;&nbsp; c&aacute;c l&#7879;nh th&ocirc;ng th&#432;&#7901;ng.&#272;&acirc;y
+l&agrave; danh s&aacute;ch c&aacute;c l&#7879;nh c&#417; b&#7843;n:<br>
+<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 20%;">L&#7879;nh</td>
+      <td style="vertical-align: top;">Ch&uacute; th&iacute;ch<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ls<br>
+      </td>
+      <td style="vertical-align: top;">Hi&#7875;n th&#7883; danh s&aacute;ch t&#7879;p tin<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">cd &lt;t&ecirc;n catalog&gt;<br>
+      </td>
+      <td style="vertical-align: top;">Chuy&#7875;n &#273;&#7893;i v&agrave;o catalog
+kh&aacute;c<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">ascii<br>
+      </td>
+      <td style="vertical-align: top;">Thi&#7871;t l&#7853;p q&uacute;a
+tr&igrave;nh truy&#7873;n t&#7843;i &#7903; ch&#7871; &#273;&#7897; ASCII<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">bin<br>
+      </td>
+      <td style="vertical-align: top;">Thi&#7871;t l&#7853;p q&uacute;a
+tr&igrave;nh truy&#7873;n t&#7843;i &#7903; ch&#7871; &#273;&#7897; nh&#7883; ph&acirc;n<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">get &lt;t&ecirc;n files&gt;<br>
+      </td>
+      <td style="vertical-align: top;">T&#7843;i t&#7879;p tin<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">put &lt;t&ecirc;n files&gt;<br>
+      </td>
+      <td style="vertical-align: top;">G&#7917;i l&ecirc;n t&#7879;p tin<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">hash<br>
+      </td>
+      <td style="vertical-align: top;">N&#7871;u nh&#432; b&#7853;t n&oacute; l&ecirc;n
+th&igrave; &#273;&#7889;i v&#7899;i m&#7895;i kb g&#7917;i l&ecirc;n s&#7869; bi&#7875;u di&#7877;n b&#7857;ng d&#7845;u #<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mget &lt;mask&gt;<br>
+      </td>
+      <td style="vertical-align: top;">T&#7843;i t&#7879;p tin hay nh&oacute;m t&#7879;p
+tin.C&oacute; th&#7875; s&#7917; d&#7909;ng t&ecirc;n theo m&#7851;u<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">mput &lt;mask&gt;<br>
+      </td>
+      <td style="vertical-align: top;">G&#7917;i l&ecirc;n t&#7879;p tin hay
+nh&oacute;m t&#7879;p tin.C&oacute; th&#7875; s&#7917; d&#7909;ng t&ecirc;n theo m&#7851;u</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">quit<br>
+      </td>
+      <td style="vertical-align: top;">Tho&aacute;t kh&#7887;i FTP server<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_5.6.4"><br>
+B&#7841;n c&#361;ng c&oacute; th&#7875; s&#7917; d&#7909;ng m&#7897;t v&agrave;i l&#7879;nh d&#432;&#7899;i &#273;&acirc;y
+chmod,delete,rename,rmdir,mkdir....B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng help &#273;&#7875;
+c&oacute; th&#7875; th&ecirc;m th&ocirc;ng tin ho&#7863;c man c&#7911;a ftp.&#272;&acirc;y
+l&agrave; m&#7897;t v&iacute; d&#7909; s&#7917; d&#7909;ng ftp:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.4"><img
+ src="image/ftp.png" title="" alt=""
+ style="width: 536px; height: 364px;"></a><br>
+<a name="ch_5.6.4"></a></div>
+<a name="ch_5.6.4"> </a><a name="ch_5.6.5"><span
+ style="font-weight: bold;">5.6.5 ncftp<br>
+</span><br>
+<span style="font-weight: bold;"> ncftp(1)</span>(ph&aacute;t &acirc;m
+nik-F-T-P) - N&oacute; l&agrave; m&#7897;t gi&#7843;i ph&aacute;p kh&aacute;c &#273;&#7889;i
+v&#7899;i FTP &#273;&#432;&#7907;c s&#7917; d&#7909;ng tr&ecirc;n Slackware.N&oacute; l&agrave; m&#7897;t
+ch&#432;&#417;ng tr&igrave;nh v&#7899;i interface&nbsp; l&#7879;nh,nh&#432;ng kh&ocirc;ng
+c&oacute; nhi&#7873;u ch&#7913;c n&#259;ng ph&#7909; nh&#432; so v&#7899;i ftp,bao g&#7891;m c&oacute;:<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.6.5">k&#7871;t th&uacute;c b&#7857;ng
+tab<br>
+Bookmarks file<br>
+More liberal wildcard users<br>
+Command history<br>
+Passive and no-passive FTP transfer modes<br>
+</a></div>
+<a name="ch_5.6.5">Theo ng&#7847;m &#273;&#7883;nh ncftp &#273;&#259;ng nh&#7853;p v&agrave;o server
+b&#7857;ng anonymous.B&#7841;n c&oacute; th&#7875; b&#7855;t ch&#432;&#417;ng tr&igrave;nh hi&#7875;n th&#7883; b&#7843;ng
+&#273;&#259;ng nh&#7853;p b&#7857;ng tham bi&#7871;n "-u".Sau khi &#273;&#259;ng nh&#7853;p b&#7841;n c&oacute; th&#7875; th&#7921;c
+hi&#7879;n c&aacute;c l&#7879;nh gi&#7889;ng nh&#432; trong ftp,tuy nhi&ecirc;n interface
+c&oacute; khuynh h&#432;&#7899;ng gi&#7889;ng bash.<br>
+D&#432;&#7899;i &#273;&acirc;y l&agrave; v&iacute; d&#7909; s&#7917; d&#7909;ng ncftp:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.5"><img
+ src="image/ncftp.png" title="" alt=""
+ style="width: 576px; height: 316px;">&nbsp;</a><br>
+<a name="ch_5.6.5"></a></div>
+<a name="ch_5.6.5"> </a><a name="ch_5.6.6"><big><span
+ style="font-weight: bold;">5.6.6 Th&#432; &#273;i&#7879;n t&#7917;(e-mail)<br>
+</span></big><br>
+E-mail l&agrave; m&#7897;t d&#7883;ch v&#7909; ph&#7893; bi&#7871;n tr&ecirc;n internet.Trong n&#259;m
+1998 theo th&#7889;ng k&ecirc; th&igrave; s&#7889; l&#432;&#7907;ng e-mail &#273;&#432;&#7907;c g&#7917;i &#273;i l&#7899;n h&#417;n
+th&#432; tay.&#272;&oacute; l&agrave; &#273;i&#7873;u t&#7845;t nhi&ecirc;n b&#7903;i v&igrave; &#273;&#417;n
+gi&#7843;n,ti&#7879;n l&#7907;i v&agrave; l&agrave; m&#7897;t d&#7883;ch v&#7909; c&#7847;n thi&#7871;t.<br>
+Trong&nbsp; Slackware ch&uacute;ng t&ocirc;i s&#7917; d&#7909;ng&nbsp; e-mail
+server theo ti&ecirc;u chu&#7849;n v&agrave; m&#7897;t v&agrave;i e-mail client
+kh&aacute;c.&#7902; &#273;&acirc;y c&aacute;c client l&agrave;m vi&#7879;c tr&ecirc;n
+console,c&oacute; nhi&#7873;u ng&#432;&#7901;i s&#7917; d&#7909;ng Windows s&#7869; kh&oacute; kh&#259;n nh&#432;ng
+h&#7885; s&#7869; th&#7845;y r&#7857;ng l&agrave;m vi&#7879;c tr&ecirc;n console r&#7845;t l&agrave; tho&#7843;i
+m&aacute;i v&agrave; &#273;&#7863;c bi&#7879;t khi ki&#7875;m tra c&aacute;c h&#7897;p th&#432; &#7903; xa.<br>
+<br>
+</a><a name="ch_5.6.6.1"><span style="font-weight: bold;"> 5.6.6.1 pine <br>
+</span><br>
+<span style="font-weight: bold;"> &nbsp;pine</span> kh&ocirc;ng ph&#7843;i
+l&agrave; elm.Th&ocirc;ng th&#432;&#7901;ng ng&#432;&#7901;i ta n&oacute;i nh&#432; v&#7853;y.Tr&#432;&#7901;ng &#273;&#7841;i
+h&#7885;c Washington &#273;&atilde; t&#7841;o ra m&#7897;t ch&#432;&#417;ng tr&igrave;nh c&#7911;a m&igrave;nh
+cho internet,th&ocirc;ng tin,e-mail tuy nhi&ecirc;n &#273;&#7847;u ti&ecirc;n
+d&ugrave;ng cho nh&#7919;ng sinh vi&ecirc;n c&#7911;a m&igrave;nh gi&#7889;ng nh&#432;
+mail-client.Ng&agrave;y nay pine coi nh&#432; l&agrave; m&#7897;t trong nh&#7919;ng
+e-mail client ph&#7893; bi&#7871;n v&agrave; &#273;&#432;&#7907;c ph&eacute;p truy c&#7853;p t&#7915; b&#7845;t c&#7913;
+phi&ecirc;n b&#7843;n Unix n&agrave;o th&#7853;m ch&iacute; c&#7843; Windows.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.6.1"><img
+ src="image/pine.png" title="" alt=""
+ style="width: 558px; height: 350px;"></a><br>
+<a name="ch_5.6.6.1"></a></div>
+<a name="ch_5.6.6.1"> Nh&#432; b&#7841;n &#273;&atilde; nh&igrave;n th&#7845;y c&aacute;c
+menu-l&#7879;nh c&ugrave;ng m&#7897;t lo&#7841;t c&aacute;c ph&iacute;m kh&aacute;c nhau
+&#273;&#432;&#7907;c s&#7917; d&#7909;ng.Pine c&oacute; th&#7875; n&oacute;i l&agrave; m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh ph&#7913;c t&#7841;p.Nh&#432;ng ch&uacute;ng ta s&#7869; kh&ocirc;ng n&oacute;i
+th&ecirc;m v&#7873; v&#7845;n &#273;&#7873; n&agrave;y n&#7919;a.&#272;&#7875; ki&#7875;m tra c&oacute; th&#432; hay
+kh&ocirc;ng trong "inbox"(h&#7897;p th&#432;) h&atilde;y nh&#7845;n "i".C&aacute;c&nbsp;
+tin nh&#7855;n c&#7911;a b&#7841;n c&oacute; ch&#7913;a th&ocirc;ng tin v&#7873; ng&agrave;y
+th&aacute;ng,t&aacute;c gi&#7843;,&#273;&#7873; m&#7909;c.Di chuy&#7875;n con tr&#7887; t&#7899;i tin nh&#7855;n
+m&agrave; b&#7841;n mu&#7889;n &#273;&#7885;c v&agrave; nh&#7845;n Enter.N&#7871;u mu&#7889;n tr&#7843; l&#7901;i e-mail
+th&igrave; h&atilde;y nh&#7845;n "r".Sau khi&nbsp; b&#7841;n vi&#7871;t&nbsp; v&agrave;o
+n&#7897;i dung c&#7847;n thi&#7871;t th&igrave; nh&#7845;n Ctrl+X &#273;&#7875; g&#7917;i tin nh&#7855;n.C&oacute; th&#7875;
+s&#7917; d&#7909;ng ph&iacute;m "i" &#273;&#7875; quay tr&#7887; v&#7873; danh s&aacute;ch c&aacute;c tin
+nh&#7855;n.<br>
+<br>
+N&#7871;u mu&#7889;n x&oacute;a tin nh&#7855;n h&atilde;y nh&#7845;n ph&iacute;m "d".Khi &#273;&#7845;y
+tin nh&#7855;n s&#7869; chuy&#7875;n v&agrave;o th&ugrave;ng r&aacute;c v&agrave;
+x&oacute;a &#273;i.Pine x&oacute;a th&#432; &#273;i khi b&#7841;n tho&aacute;t kh&#7887;i ch&#432;&#417;ng
+tr&igrave;nh.pine l&#432;u tr&#7919; th&#432; v&agrave;o m&#7897;t th&#432; m&#7909;c ri&ecirc;ng.&#272;&#7875;
+c&oacute; &#273;&#432;&#7907;c danh s&aacute;ch c&#7911;a ch&uacute;ng b&#7841;n h&atilde;y nh&#7845;n
+"l".C&oacute; th&#7875; l&#432;u tin nh&#7855;n v&agrave;o th&#432; m&#7909;c kh&aacute;c b&#7857;ng
+ph&iacute;m "s".<br>
+pine c&oacute; nhi&#7873;u t&iacute;nh n&#259;ng ph&#7909; kh&aacute;c.B&#7841;n c&oacute; th&#7875;
+t&igrave;m th&#7845;y trong man c&#7911;a n&oacute;.<br>
+<br>
+</a><a name="ch_5.6.6.2"><span style="font-weight: bold;"> 5.6.6.2 elm</span><br
+ ="">
+<span style="font-weight: bold;"> elm</span> c&#361;ng l&agrave; m&#7897;t trong
+c&aacute;c ch&#432;&#417;ng tr&igrave;nh l&agrave;m vi&#7879;c v&#7899;i e-mail th&ocirc;ng
+d&#7909;ng d&#432;&#7899;i m&ocirc;i tr&#432;&#7901;ng console.Interface c&#7911;a n&oacute; kh&ocirc;ng
+th&acirc;n thi&#7879;n nh&#432; trong pine.Ch&#432;&#417;ng tr&igrave;nh n&agrave;y t&#7891;n t&#7841;i
+l&acirc;u &#273;&#7901;i h&#417;n pine.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.6.2"><img
+ src="image/elm.png" title="" alt=""
+ style="width: 566px; height: 390px;"></a><br>
+<a name="ch_5.6.6.2"></a></div>
+<a name="ch_5.6.6.2"> Theo m&#7863;c &#273;&#7883;nh b&#7841;n s&#7869; v&agrave;o th&#7859;ng h&#7897;p
+th&#432;.C&aacute;c tin nh&#7855;n &#273;&#432;&#7907;c s&#7855;p x&#7871;p theo s&#7889; th&#7913; t&#7921;,ng&agrave;y
+th&aacute;ng,&#273;&#7873; m&#7909;c.H&atilde;y s&#7917; d&#7909;ng c&aacute;c m&#361;i t&ecirc;n
+l&ecirc;n xu&#7889;ng &#273;&#7875; t&igrave;m &#273;&#7871;n tin nh&#7855;n c&#7847;n thi&#7871;t.&#272;&#7875; xem h&atilde;y
+nh&#7845;n Enter.<br>
+&#272;&#7875; vi&#7871;t tin nh&#7855;n h&atilde;y nh&#7845;n "m" t&#7915; m&agrave;n h&igrave;nh
+ch&iacute;nh."d" d&ugrave;ng &#273;&#7875; xo&aacute; tin nh&#7855;n.c&ograve;n "r" &#273;&#7875;
+tr&#7843; l&#7901;i tin nh&#7855;n.<br>
+H&atilde;y &#273;&#7885;c man c&#7911;a n&oacute; &#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng
+tin c&#7847;n thi&#7871;t.<br>
+<br>
+</a><a name="ch_5.6.6.3"><span style="font-weight: bold;"> 5.6.6.3 mailx<br>
+</span><br ="">
+<span style="font-weight: bold;"> mailx(1)</span> - l&agrave; m&#7897;t e-mail
+client &#273;&#432;&#7907;c &#273;i&#7873;u khi&#7875;n b&#7857;ng v&#7887; l&#7879;nh.N&oacute; kh&ocirc;ng h&#7873; h&#432;&#7899;ng b&#7841;n
+t&#7899;i vi&#7879;c s&#7917; d&#7909;ng interface.C&oacute; l&#7869; ch&#432;&#417;ng tr&igrave;nh r&#7845;t
+c&oacute; l&#7907;i khi b&#7841;n c&#7847;n g&#7917;i nhanh m&#7897;t c&aacute;i g&igrave; &#273;&oacute;
+m&agrave; b&#7841;n kh&ocirc;ng mu&#7889;n m&#7845;t th&#7901;i gian khi ghi tr&ecirc;n
+c&aacute;c script c&#7911;a c&aacute;c h&#7897;p th&#432;.Th&ocirc;ng th&#432;&#7901;ng c&oacute;
+c&#7845;u tr&uacute;c sau:<br>
+<br>
+<span style="font-weight: bold;"> $mailx -s &lt;&#273;&#7873; m&#7909;c&gt;&lt;ai&gt;<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> mailx </span>&#273;&#7885;c th&acirc;n c&#7911;a th&#432;
+t&#7915; d&#7841;ng nh&#7853;p v&agrave;o th&ocirc;ng th&#432;&#7901;ng.B&#7841;n c&oacute; th&#7875; cat m&#7885;i
+t&#7879;p tin &#273;&#7875; g&#7917;i n&oacute; ho&#7863;c c&#361;ng c&oacute; th&#7875; in ra b&#7857;ng ph&iacute;m
+Ctrl+D khi b&#7841;n k&#7871;t th&uacute;c.<br>
+&#272;&acirc;y l&agrave; m&#7897;t v&iacute; d&#7909; g&#7917;i qua e-mail m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $cat randomfunc.c | mailx -s</span><span
+ style="font-weight: bold;"> "&#272;&acirc;y l&agrave; h&agrave;m s&#7889;" \</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> asdf@example.net<br>
+</span><br>
+B&#7841;n c&oacute; th&#7875; &#273;&#7885;c man c&#7911;a n&oacute; &#273;&#7875; c&oacute; th&ecirc;m
+th&ocirc;ng tin.<br>
+</a><a name="ch_5.6.6.4" 5.6.6.4="" mutt<br=""><span
+ style="font-weight: bold;"> mutt</span> c&#361;ng l&agrave; m&#7897;t e-mail
+client.D&#7841;ng chu&#7849;n interface c&#7911;a n&oacute; l&agrave; gi&#7889;ng nh&#432; elm,tuy
+nhi&ecirc;n c&oacute; nhi&#7873;u c&#7843;i ti&#7871;n v&agrave; c&oacute; m&#7897;t s&#7889;
+t&iacute;nh n&#259;ng kh&aacute;c.M&#7897;t v&agrave;i t&iacute;nh n&#259;ng &#273;&#7863;c tr&#432;ng
+bao g&#7891;m:<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.6.6">s&#7917; d&#7909;ng m&#7847;u<br>
+l&agrave;m vi&#7879;c v&#7899;i MIME v&agrave; PGP/MIME<br>
+l&agrave;m vi&#7879;c v&#7899;i POP v&agrave; imap<br>
+l&agrave;m vi&#7879;c v&#7899;i nhi&#7873;u h&#7897;p th&#432; kh&aacute;c(mbox,MMDF,MH,maildir..)<br>
+message threading(m&#7841;ch tin nh&#7855;n)<br>
+highly customizable(kh&#7843; n&#259;ng t&#7921; c&#7845;u h&igrave;nh l&#7899;n)<br>
+</a></div>
+<div style="text-align: center;"><a name="ch_5.6.6"><img
+ src="image/mutt.png" title="" alt=""
+ style="width: 554px; height: 386px;"></a><br>
+<a name="ch_5.6.6"></a></div>
+<a name="ch_5.6.6"> Nh&#432; b&#7841;n th&#7845;y thanh &#273;i&#7875;u khi&#7875;n c&#7911;a mutt n&#7857;m &#7903;
+tr&ecirc;n c&ugrave;ng.T&#7845;t c&#7843; c&aacute;c c&acirc;u h&igrave;nh c&#7911;a mutt
+b&#7841;n c&oacute; th&#7875; thay &#273;&#7893;i theo &yacute; mu&#7889;n k&#7875; c&#7843; c&aacute;c
+ph&iacute;m.N&#7871;u th&iacute;ch c&oacute; th&#7875; d&ugrave;ng c&#7843; c&aacute;c
+macro.<br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin h&atilde;y &#273;&#7885;c man c&#7911;a <span
+ style="font-weight: bold;">mutt</span>.<br>
+</a><a name="ch_5.6.7"><big style="font-weight: bold;">5.6.7
+Tr&igrave;nh duy&#7879;t Web<br>
+</big><br>
+</a><a name="ch_5.6.7.1"><span style="font-weight: bold;">5.6.7.1 lynx<br>
+</span><br>
+<span style="font-weight: bold;"> lynx(1)</span> l&agrave; m&#7897;t
+tr&igrave;nh ki&#7875;m duy&#7879;t web &#7903; trong console.N&oacute; l&agrave; m&#7897;t
+ph&#432;&#417;ng ph&aacute;p r&#7845;t nhanh &#273;&#7875; t&igrave;m m&#7897;t c&aacute;i g&igrave;
+&#273;&oacute; tr&ecirc;n internet.Th&#7881;nh tho&#7843;ng h&igrave;nh &#7843;nh tr&#7903;
+l&ecirc;n kh&ocirc;ng c&#7847;n thi&#7871;t n&#7871;u b&#7841;n bi&#7871;t c&aacute;i g&igrave;
+m&igrave;nh c&#7847;n t&igrave;m.&#272;&#7875; ch&#7841;y lynx h&atilde;y g&otilde; l&#7879;nh:<br>
+<br>
+<span style="font-weight: bold;"> $lynx</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.7.1"><img
+ src="image/lynx.png" title="" alt=""
+ style="width: 558px; height: 350px;"></a><br>
+<a name="ch_5.6.7.1"></a></div>
+<a name="ch_5.6.7.1"> B&#7841;n c&oacute; th&#7875; ch&#7881; ra site m&agrave; b&#7841;n mu&#7889;n
+k&#7871;t n&#7889;i t&#7915; lynx:<br>
+<br>
+<span style="font-weight: bold;"> $lynx http://www.slackware.com</span><br>
+<br>
+<span style="font-weight: bold;"> lynx</span> hi&#7875;n th&#7883; c&aacute;c
+ph&iacute;m l&#7879;nh &#7903; ph&iacute;a d&#432;&#7899;i.C&aacute;c ph&iacute;m l&ecirc;n
+xu&#7889;ng cho ph&eacute;p b&#7841;n di chuy&#7875;n tr&ecirc;n c&aacute;c trang
+web.Enter &#273;&#7875; chuy&#7875;n &#273;&#7871;n c&aacute;c &#273;&#7883;a ch&#7881; kh&aacute;c tr&ecirc;n
+li&ecirc;n k&#7871;t.Ph&iacute;m "d" &#273;&#7875; t&#7843;i c&aacute;c t&#7879;p tin v&#7873;.Ph&iacute;m
+"g" s&#7869; &#273;&#432;a ra m&#7897;t d&ograve;nh tr&#7889;ng v&agrave; h&atilde;y nh&#7853;p
+v&agrave;o URL c&#7911;a site c&#7847;n chuy&#7875;n t&#7899;i.Ph&iacute;m "h" &#273;&#7875; gi&uacute;p
+b&#7841;n c&oacute; nh&#7919;ng th&ocirc;ng tin c&#7847;n thi&#7871;t.<br>
+<br>
+</a><a name="ch_5.6.7.2"><span style="font-weight: bold;">5.6.7.2 wget<br>
+</span><br>
+<span style="font-weight: bold;"> wget(1)</span> l&agrave; m&#7897;t &#7913;ng d&#7909;ng
+tr&ecirc;n terminal s&#7917; d&#7909;ng c&aacute;c c&acirc;u l&#7879;nh &#273;&#7875; t&#7843;i c&aacute;c
+t&#7879;p tin v&#7899;i c&aacute;c URL cho s&#7861;n.N&oacute; ti&#7879;n l&#7907;i khi b&#7841;n mu&#7889;n t&#7843;i
+v&#7873; h&#7859;n m&#7897;t website &#273;&#7875; xem x&eacute;t ho&#7863;c l&agrave; &#273;&#7875; t&#7843;i c&aacute;c
+t&#7879;p tin t&#7915; c&aacute;c HTTP ho&#7863;c FTP server (h&#417;n h&#7859;n so v&#7899;i
+Netscape).C&#7845;u tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #wget &lt;url&gt;</span><br>
+<br>
+B&#7841;n c&oacute; th&#7875; ch&#7881; ra c&aacute;c tham bi&#7871;n &#273;i k&egrave;m &#273;&#7875; t&#7843;i site
+slackware v&#7873; nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $wget -recursive
+http://www.slackware.com</span><br>
+<br>
+<span style="font-weight: bold;"> wget</span> s&#7869; t&#7841;o ra m&#7897;t catalog
+www.slackware.com v&agrave; ghi v&agrave;o trong n&oacute; th&#7913; t&#7921;
+c&aacute;c t&#7879;p tin nh&#432; tr&ecirc;n th&#7921;c t&#7871;(nh&#432; tr&ecirc;n site).<br>
+<span style="font-weight: bold;"> wget</span> c&oacute; th&#7875; l&agrave;m
+vi&#7879;c v&#7899;i FTP site,b&#7841;n h&atilde;y ch&#7881; ra t&ecirc;n c&#7911;a FTP URL
+v&agrave;o ch&#7895; c&#7911;a HTTP URL<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.7.2"><img
+ src="image/wget.png" title="" alt=""
+ style="width: 568px; height: 284px;"></a><br>
+<a name="ch_5.6.7.2"></a></div>
+<a name="ch_5.6.7.2"> wget c&oacute; nhi&#7873;u tham bi&#7871;n &#273;i
+k&egrave;m,h&atilde;y &#273;&#7885;c man c&#7911;a n&oacute; &#273;&#7875; c&oacute; th&ecirc;m
+th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.6.7.3"><span style="font-weight: bold;">5.6.7.3 links<br>
+</span><br>
+C&oacute; th&#7875; n&oacute;i links v&agrave; lynx l&agrave; d&#7841;ng
+tr&igrave;nh duy&#7879;t web d&#432;&#7899;i d&#7841;ng console,v&agrave; &#273;&#7873;u s&#7917; d&#7909;ng
+c&aacute;c ph&iacute;m &#273;&#7875; &#273;i&#7873;u khi&#7875;n.Tuy nhi&ecirc;n khi b&#7841;n nh&#7845;n
+ph&iacute;m ESC th&igrave; n&oacute; s&#7869; hi&#7875;n th&#7883; ra m&#7897;t menu tr&ecirc;n
+m&agrave;n h&igrave;nh c&#7911;a b&#7841;n.&#272;i&#7873;u n&agrave;y gi&uacute;p cho
+c&ocirc;ng vi&#7879;c tr&#7903; l&ecirc;n nh&#7865; nh&agrave;ng h&#417;n.Ng&#432;&#7901;i n&agrave;o
+kh&ocirc;ng s&#7917; d&#7909;ng quen c&oacute; th&#7875; s&#7921; d&#7909;ng ti&#7873;m n&#259;ng n&agrave;y.<br>
+links &#273;&#432;&#7907;c h&igrave;nh dung nh&#432; d&#432;&#7899;i &#273;&acirc;y:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.7.3"><img
+ src="image/links.png" title="" alt=""
+ style="width: 558px; height: 348px;"></a><br>
+<a name="ch_5.6.7.3"></a></div>
+<a name="ch_5.6.7.3"> </a><a name="ch_5.6.8"><big><span
+ style="font-weight: bold;">5.6.8 traceroute<br>
+</span></big><br>
+Slackware s&#7917; d&#7909;ng ch&#432;&#417;ng tr&igrave;nh 4.4BSD traceroute.&#272;&oacute;
+l&agrave; m&#7897;t c&ocirc;ng c&#7909; r&#7845;t ti&#7879;n l&#7907;i &#273;&#7875; s&#7917;a ch&#7919;a h&#7879; th&#7889;ng.traceroute
+ch&#7881; ra t&ecirc;n c&#7911;a t&#7915;ng host m&agrave; packages s&#7869; di qua &#273;&#7875; t&#7899;i
+&#273;&iacute;ch.B&#7841;n c&oacute; th&#7875; xem bao nhi&ecirc;u ch&#7863;ng m&agrave;
+packages &#273;i qua &#273;&#7875; t&#7899;i site slackware.H&atilde;y s&#7917; d&#7909;ng l&#7879;nh sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $traceroute www.slackware.com<br>
+</span><br>
+v&agrave; k&#7871;t qu&#7843; nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> traceroute to www.slackware.com
+(204.216.27.13), 30 hops max, 40 byte packets</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1 zuul.tdn (192.168.1.1) 0.409 ms
+1.032 ms 0.303 ms</span><br style="font-style: italic;">
+<span style="font-style: italic;"> 2 207.171.227.254 (207.171.227.254)
+18.218 ms 32.873 ms 32.433 ms</span><br style="font-style: italic;">
+<span style="font-style: italic;"> 3 border-sf-2-0-4.sirius.com
+(205.134.230.254) 15.662 ms 15.731 ms 16.142 ms</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 4 pb-nap.crl.net (198.32.128.20)
+20.741 ms 23.672 ms 21.378 ms</span><br style="font-style: italic;">
+<span style="font-style: italic;"> 5 E0-CRL-SFO-03-E0X0.US.CRL.NET
+(165.113.55.3) 22.293 ms 21.532 ms 21.29 ms</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 6 T1-CDROM-00-EX.US.CRL.NET
+(165.113.118.2) 24.544 ms 42.955 ms 58.443 ms</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 7 www.slackware.com (204.216.27.13)
+38.115 ms 53.033 ms 48.328 ms <br>
+</span><br>
+<span style="font-weight: bold;"> traceroute </span>gi&#7889;ng nh&#432;
+ping,n&oacute; c&#361;ng s&#7917; d&#7909;ng packages ICMP.Ch&#432;&#417;ng tr&igrave;nh
+n&agrave;y c&oacute; nhi&#7873;u tham bi&#7871;n &#273;i c&ugrave;ng.Theo m&#7863;c &#273;&#7883;nh l&#7899;n
+nh&#7845;t l&agrave;&nbsp; kho&#7843;ng 30 host tuy nhi&ecirc;n c&oacute; th&#7875; thay
+&#273;&#7893;i nh&#7901; tham bi&#7871;n "-m".<br>
+<br>
+</a><a name="ch_5.6.9"><big style="font-weight: bold;">5.6.9 Giao ti&#7871;p
+qua m&#7841;ng<br>
+</big><br>
+</a><a name="ch_5.6.9.1"><span style="font-weight: bold;">5.6.9.1 talk<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> talk(1)</span> cho ph&eacute;p m&#7885;i
+ng&#432;&#7901;i n&oacute;i chuy&#7879;n v&#7899;i nhau th&ocirc;ng qua c&aacute;c m&#7849;u tin
+nh&#7855;n.Khung c&#7917;a s&#7893; &#273;&#432;&#7907;c chia th&agrave;nh hai ph&#7847;n .&#272;&#7875; b&#7855;t &#273;&#7847;u
+n&oacute;i chuy&#7879;n v&#7899;i ng&#432;&#7901;i kh&aacute;c h&atilde;y s&#7917; d&#7909;ng l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $talk &lt;ng&#432;&#7901;i&gt; [t&ecirc;n tty]</span><br>
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.9.1"><img
+ src="image/talk.png" title="" alt=""
+ style="width: 560px; height: 390px;">&nbsp;</a><br>
+<a name="ch_5.6.9.1"></a></div>
+<a name="ch_5.6.9.1"> N&#7871;u nh&#432; b&#7841;n ch&#7881; c&oacute; n&ecirc;u t&ecirc;n c&#7911;a
+ng&#432;&#7901;i&nbsp; s&#7917; d&#7909;ng th&igrave; y&ecirc;u c&#7847;u chat(giao ti&#7871;p) ch&#7881; coi
+nh&#432; l&agrave; c&#7909;c b&#7897;(local) v&agrave; t&#7845;t nhi&ecirc;n ch&#7881; c&oacute;
+t&agrave;i kho&#7843;n tr&ecirc;n m&#7841;ng local m&#7899;i c&oacute; th&#7875; tham gia
+n&oacute;i chuy&#7879;n.T&ecirc;n c&#7911;a tty c&#7847;n ph&#7843;i ch&#7881; ra n&#7871;u nh&#432; b&#7841;n mu&#7889;n
+n&oacute;i chuy&#7879;n v&#7899;i h&#7885; tr&ecirc;n m&#7897;t terminal &#273;&#7863;c bi&#7879;t.(ch&#7859;ng h&#7841;n
+nh&#432; h&#7885; c&oacute; nhi&#7873;u terminal m&#7903;).<br>
+<br>
+&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin h&atilde;y &#273;&#7885;c man c&#7911;a <span
+ style="font-weight: bold;">talk(1)</span> ho&#7863;c l&#7879;nh w(1).<br>
+<span style="font-weight: bold;"> talk</span> c&oacute; th&#7875; li&ecirc;n
+l&#7841;c v&#7899;i c&aacute;c t&agrave;i kho&#7843;n &#7903; xa.B&#7841;n ch&#7881; c&#7847;n ch&#7881; ra e-mail
+v&agrave; talk s&#7869; th&#7917; k&#7871;t n&#7889;i v&#7899;i t&agrave;i kho&#7843;n &#7845;y tr&ecirc;n host
+&#273;&atilde; ch&#7881; ra.<br>
+<span style="font-weight: bold;"> talk</span> co h&#7841;n ch&#7871;,ch&#7881; d&ugrave;ng
+cho hai ng&#432;&#7901;i v&agrave; tr&ecirc;n hai n&#7917;a c&#7911;a m&agrave;n h&igrave;nh.<br>
+<br>
+</a><a name="ch_5.6.9.2"><span style="font-weight: bold;">5.6.9.2 ytalk<br>
+</span><br>
+<span style="font-weight: bold;"> ytalk(1)</span> &#273;&oacute; l&agrave; c&#7843;i
+ti&#7871;n c&#7911;a talk.Trong Slackware n&oacute; &#273;&#432;&#7907;c s&#7917; d&#7909;ng nh&#432; l&agrave; l&#7879;nh
+ytalk.c&#7845;u tr&uacute;c gi&#7889;ng nh&#432; talk tuy nhi&ecirc;n c&oacute; nhi&#7873;u
+c&#7843;i ti&#7871;n<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> $ytalk &lt;username&gt;[#tttyname]</span><br>
+<br>
+<img src="image/ytalk.png" title="" alt=""
+ style="width: 556px; height: 388px;"><br>
+T&ecirc;n c&#7911;a t&agrave;i kho&#7843;n v&agrave; terminal &#273;&#432;&#7907;c g&#7885;i ra gi&#7889;ng
+talk,tuy nhi&ecirc;n ch&uacute;ng &#273;&#432;&#7907;c c&aacute;ch nhau b&#7903;i d&#7845;u "#".<br>
+ytalk c&oacute; c&aacute;c ti&#7871;n b&#7897; sau:<br>
+<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.6.7"><br>
+<span style="font-style: italic;">cho ph&eacute;p nhi&#7873;u h&#417;n hai ng&#432;&#7901;i
+d&ugrave;ng</span><br style="font-style: italic;">
+<span style="font-style: italic;"> menu c&oacute; th&#7875; s&#7917; d&#7909;ng khi nh&#7845;n
+ESC</span><br style="font-style: italic;">
+<span style="font-style: italic;"> c&oacute; th&#7875; tho&aacute;t kh&#7887;i v&#7887;
+l&#7879;nh trong khi v&#7851;n &#7903; talk</span><br style="font-style: italic;">
+<span style="font-style: italic;"> c&ograve;n nhi&#7873;u n&#7919;a</span><br>
+</a></div>
+<a name="ch_5.6.7">N&#7871;u b&#7841;n l&agrave; administrator th&igrave; ph&#7843;i bi&#7871;t
+r&#7857;ng c&#7893;ng c&#7911;a ntalk &#273;&#432;&#7907;c cho ph&eacute;p trong t&#7879;p tin <span
+ style="font-weight: bold;">/etc/inetd.conf</span>.N&oacute; c&#7847;n cho
+ho&#7841;t &#273;&#7897;ng b&igrave;nh th&#432;&#7901;ng c&#7911;a ytalk.<br>
+<br style="font-weight: bold;">
+</a><a name="ch_5.6.9.3"><span style="font-weight: bold;">5.6.9.3 wall<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> wall(1)</span> l&agrave; m&#7897;t &#7913;ng d&#7909;ng
+&#273;&#7875; vi&#7871;t tin nh&#7855;n cho c&aacute;c t&agrave;i kho&#7843;n kh&aacute;c tr&ecirc;n
+h&#7879; th&#7889;ng.C&acirc;u tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> %wall [file]</span><br>
+<br>
+T&#7845;t c&#7843; n&#7897;i dung c&#7911;a files s&#7869; b&#7855;t &#273;&#7847;u hi&#7875;n th&#7883; tr&ecirc;n terminal c&#7911;a
+b&#7841;n.N&#7871;u b&#7841;n kh&ocirc;ng c&oacute; t&#7879;p tin s&#7861;n th&igrave; wall s&#7869; ti&#7871;p
+nh&#7853;n b&#7857;ng c&aacute;ch nh&#7853;p v&agrave;o th&ocirc;ng th&#432;&#417;ng.Tuy nhi&ecirc;n
+b&#7841;n c&#361;ng ph&#7843;i &#273;&#7883;nh d&#7841;ng tin nh&#7855;n c&#7911;a b&#7841;n.&#272;&#7875; k&#7871;t th&uacute;c nh&#7845;n Ctrl+d.<br>
+Tuy nhi&ecirc;n wall c&#361;ng c&oacute; nhi&#7873;u nh&#432;&#7907;c &#273;i&#7875;m.Hay d&#7885;c man c&#7911;a
+n&oacute; &#273;&#7875; t&#7921; t&igrave;m hi&#7875;u.<br>
+<br>
+</a><a name="ch_5.6.10"><big><span style="font-weight: bold;">5.6.10
+C&aacute;c c&ocirc;ng c&#7909; DNS<br>
+</span></big><br>
+DNS(Domain Name Service) &#273;&#7845;y l&agrave; m&#7897;t protocol &#273;&#7863;c bi&#7879;t cho
+ph&eacute;p c&aacute;c m&aacute;y t&iacute;nh ch&#7841;y d&#432;&#7899;i m&#7897;t c&aacute;i
+t&ecirc;n nh&#432; l&agrave; www.slackware.com v&#7899;i m&ocirc;t IP-address
+l&agrave; 64.57.102.34.Nh&#7919;ng m&aacute;y kh&ocirc;ng th&#7875;&nbsp; chuy&#7875;n
+packages &#273;i qua &#273;&#432;&#7907;c www.slackware.com nh&#432;ng ch&uacute;ng c&oacute; th&#7875;
+chuy&#7875;n c&aacute;c packages qua &#273;&#432;&#7907;c domain c&#7911;a IP-address.N&oacute;
+ti&ecirc;n l&#7907;i cho vi&#7879;c nh&#7899; t&ecirc;n m&aacute;y h&#417;n l&agrave; nh&#7899; &#273;&#7883;a
+ch&#7881; IP c&#7911;a n&oacute;.S&#7917; d&#7909;ng t&ecirc;n thay cho m&aacute;y t&iacute;nh
+th&#7853;t l&agrave; t&#7889;t tuy nhi&ecirc;n s&#417; &#273;&#7891; li&ecirc;n h&#7879; c&#7911;a n&oacute; v&#7899;i
+IP-address nh&#432; th&#7871; n&agrave;o.<br>
+<br>
+</a><a name="ch_5.6.10.1"><span style="font-weight: bold;">5.6.10.1 host<br>
+</span><br>
+<span style="font-weight: bold;"> host(1)</span> l&agrave; m&#7897;t c&ocirc;ng
+c&#7909; cho ta bi&#7871;t IP-address c&#7911;a m&#7897;t m&aacute;y d&#432;&#7899;i m&#7897;t c&aacute;i
+t&ecirc;n tr&ecirc;n m&#7841;ng.&#272;i&#7873;u n&agrave;y r&#7845;t l&agrave; quan
+tr&#7885;ng.V&iacute; d&#7909; &#273;&#7889;i v&#7899;i t&ecirc;n www.slackware.com h&atilde;y th&#7921;c
+hi&#7879;n l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $host www.slackware.com</span><br>
+<span style="font-style: italic;"> www.slackware is an alias for
+slackware.com</span><br style="font-style: italic;">
+<span style="font-style: italic;"> slackware.com has address 64.57.102.34</span><br
+ style="font-style: italic;">
+<br>
+Tuy nhi&ecirc;n l&#7841;i c&oacute; ng&#432;&#7901;i mu&#7889;n bi&#7871;t t&ecirc;n domain c&#7911;a m&#7897;t
+IP-address.Ch&uacute;ng ta ph&#7843;i l&agrave;m g&igrave;.<br>
+<br>
+<span style="font-weight: bold;"> nslookup<br>
+</span><br>
+<span style="font-weight: bold;"> nslookup</span> l&agrave; m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh l&acirc;u &#273;&#7901;i c&oacute; t&ecirc;n tu&#7893;i.nslookup &#273;&atilde;
+b&#7883; ph&#7843;n &#273;&#7889;i nh&#432;ng c&oacute; th&#7875; &#273;&#432;&#7907;c c&#7913;u trong t&#432;&#417;ng lai.N&oacute;
+kh&ocirc;ng c&oacute; man-pages.<br>
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.10.1"><img
+ src="image/nslookup.png" title="" alt=""
+ style="width: 510px; height: 178px;"></a><br>
+<a name="ch_5.6.10.1"></a></div>
+<a name="ch_5.6.10.1"> </a><a name="ch_5.6.10.2"><span
+ style="font-weight: bold;">5.6.10.2 dig<br>
+</span><br>
+<span style="font-weight: bold;"> dig </span>l&agrave; m&#7897;t c&ocirc;ng
+c&#7909; d&ugrave;ng &#273;&#7875; t&igrave;m ki&#7871;m c&aacute;c th&ocirc;ng tin tr&ecirc;n
+DNS.N&oacute; c&oacute; th&#7875; ch&#7897;p l&#7845;y b&#7845;t c&#7913; nh&#7919;ng c&aacute;i g&igrave;
+tr&ecirc;n DNS bao g&#7891;m truy c&#7913;u c&aacute;c l&#7895;i A,CNAME,MX,SP v&agrave;
+TXT.dig c&oacute; nhi&#7873;u tham bi&#7871;n &#273;i k&egrave;m.H&atilde;y &#273;&#7885;c man c&#7911;a
+n&oacute; &#273;&#7875; c&oacute; th&ocirc;ng tin.&#272;&acirc;y l&agrave; m&#7897;t
+v&iacute; d&#7909; c&#7911;a dig:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.6.10.2"><img
+ src="image/dig.png" title="" alt=""
+ style="width: 506px; height: 430px;"></a><br>
+<a name="ch_5.6.10.2"></a></div>
+<a name="ch_5.6.10.2"> &#7902; &#273;&acirc;y "@192.168.1.254" l&agrave; m&#7897;t DNS
+&#273;&#7863;c bi&#7879;t &#273;&#432;&#7907;c d&ugrave;ng.C&ograve;n "www.slackware.com" l&agrave;
+domain c&#7847;n truy c&#7913;u v&agrave; "mx" l&agrave; d&#7841;ng ch&uacute;ng ta c&#7847;n
+xem x&eacute;t.C&oacute; ng&#432;&#7901;i h&#7887;i c&aacute;c g&#7917;i e-mail &#273;&#7871;n
+www.slackware.com..t&#7845;t nhi&ecirc;n l&agrave; h&atilde;y g&#7917;i &#273;&#7871;n
+mail.slackware.com.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.7.4"
+ style="font-weight: bold;" href="../../../../root/slackware/index.html">M&#7909;c
+L&#7909;c</a><a name="ch_5.6.10.2"></a><br>
+<a name="ch_5.6.10.2"></a></div>
+<a name="ch_5.6.10.2"> </a>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

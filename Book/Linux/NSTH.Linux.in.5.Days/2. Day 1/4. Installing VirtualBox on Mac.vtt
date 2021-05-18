@@ -1,0 +1,114 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.760 --> 00:00:05.820
+This video is for Mac users only.
+
+00:00:05.880 --> 00:00:09.000
+If you're using windows, skip ahead to the next video.
+
+00:00:09.000 --> 00:00:14.880
+The first thing we're going to do is
+open up a web browser and visit virtual VirtualBox.org.
+
+00:00:18.620 --> 00:00:22.920
+Next, find the link that takes
+you to the download page
+
+00:00:23.180 --> 00:00:29.740
+From here, select the file for your platform which is max so well click on the link next to OS X hosts.
+
+00:00:32.920 --> 00:00:37.880
+Once the download is complete,
+we'll go ahead and click on the file to open it.
+
+00:00:45.840 --> 00:00:50.800
+Now we can, double click on "VirtualBox.pkg" to start the installation.
+
+00:00:52.840 --> 00:00:54.800
+Click Continue.
+
+00:00:54.820 --> 00:01:00.560
+continue and will click continue again
+and now we'll click install
+
+00:01:00.700 --> 00:01:04.840
+It prompts you for your password go ahead and enter
+that.
+
+00:01:09.560 --> 00:01:13.340
+The installer reports that the
+installation was successful so we can go
+
+00:01:13.340 --> 00:01:17.030
+ahead and click on the close button. Now,
+that the installation is complete.
+
+00:01:17.030 --> 00:01:22.310
+You can start virtualbox by using spotlight. Press command-space or click the
+
+00:01:22.310 --> 00:01:27.140
+magnifying glass icon in the upper right
+hand corner of the menu bar to bring up
+
+00:01:27.140 --> 00:01:32.299
+the spotlight search bar. From here,
+simply type in virtualbox and press return.
+
+00:01:32.299 --> 00:01:38.180
+You can also start virtualbox by
+opening up the finder, navigating to the
+
+00:01:38.180 --> 00:01:42.640
+applications folder and double-clicking
+on VirtualBox there.
+
+00:01:42.800 --> 00:01:48.640
+Next, let's install The Unarchiver. The easiest way to do that is to open up the app store.
+
+00:01:49.100 --> 00:01:53.210
+Let's start spotlight again by clicking
+on the magnifying glass icon in the
+
+00:01:53.210 --> 00:01:58.039
+upper right hand corner of your screen
+or again by pressing command space.
+
+00:01:58.039 --> 00:02:06.779
+So, now just type in appstore and press
+return. Next, what we want to do is search for the "the unarchiver".
+
+00:02:08.400 --> 00:02:11.460
+That should bring up a list of matching applications.
+
+00:02:11.460 --> 00:02:16.160
+Now simply click on install under the on
+archiver and enter enter your password
+
+00:02:16.160 --> 00:02:20.720
+if you're prompted to do so. In an
+upcoming video you'll be asked to
+
+00:02:20.720 --> 00:02:26.060
+download and extract the contents of a
+compressed archive file.
+
+00:02:26.060 --> 00:02:31.780
+You'll do that with The Unarchiver. Here's an example. I have a file I downloaded that ends in 7z.
+
+00:02:31.780 --> 00:02:39.140
+I've navigated to that file using the
+finder. Now I'll just double click the file and The Unarchiver
+
+00:02:39.180 --> 00:02:42.200
+will extract the contents of that file. We navigate
+
+00:02:42.200 --> 00:02:46.340
+into the folder that are created you can
+see that the uncompressed file is in
+
+00:02:46.340 --> 00:02:51.360
+that folder. Now you're ready to install
+linux and a virtual machine using virtualbox.
+

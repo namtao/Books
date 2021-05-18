@@ -1,0 +1,622 @@
+WEBVTT
+
+1
+00:00:03.230 --> 00:00:07.910
+In today's lesson, we're going to talk
+about what a terminal emulator is and
+
+2
+00:00:07.910 --> 00:00:11.420
+a few different methods on how to
+gain access to a Linux system.
+
+3
+00:00:11.420 --> 00:00:15.340
+If you already access to a Linux system,
+feel free to skip ahead.
+
+4
+00:00:15.340 --> 00:00:19.940
+A terminal is a hardware device that
+allows you to enter data into a computer
+
+5
+00:00:19.940 --> 00:00:23.170
+and for
+that computer to display data back to you.
+
+6
+00:00:23.170 --> 00:00:26.280
+In the past, terminals were
+typically connected to computers or
+
+7
+00:00:26.280 --> 00:00:30.980
+servers via a cable of some sort,
+typically a serial cable.
+
+8
+00:00:30.980 --> 00:00:34.060
+Terminals themselves actually
+look like computers.
+
+9
+00:00:34.060 --> 00:00:39.060
+They have a keyboard for entering in data,
+a display to display the data back.
+
+10
+00:00:39.060 --> 00:00:41.770
+The big difference between a terminal and
+a computer is
+
+11
+00:00:41.770 --> 00:00:46.420
+that a terminal is worthless unless it's
+connected to a real computer or a server.
+
+12
+00:00:46.420 --> 00:00:51.410
+This is why you'll sometimes hear
+terminals referred to as dumb terminals.
+
+13
+00:00:51.410 --> 00:00:54.340
+Today, terminals are obsolete.
+
+14
+00:00:54.340 --> 00:00:56.910
+We still need to enter
+data into a computer and
+
+15
+00:00:56.910 --> 00:01:01.800
+allow a computer to display data back
+to us, but the technology has changed.
+
+16
+00:01:01.800 --> 00:01:05.760
+Instead of using a terminal to connect
+to a Linux server, what we do today
+
+17
+00:01:05.760 --> 00:01:10.670
+is use a terminal emulator application
+that acts as if it were the terminal.
+
+18
+00:01:10.670 --> 00:01:14.592
+You can use a terminal emulator
+application to communicate with your local
+
+19
+00:01:14.592 --> 00:01:15.221
+computer.
+
+20
+00:01:15.221 --> 00:01:18.703
+For instance, if you were running
+Linux as your primary desktop and
+
+21
+00:01:18.703 --> 00:01:22.371
+you are using a graphical user interface,
+you could start up a terminal
+
+22
+00:01:22.371 --> 00:01:26.820
+emulator application in order to
+interact with a command line of Linux.
+
+23
+00:01:26.820 --> 00:01:31.278
+If you are using Windows As you primary
+desktop, you could start a terminal
+
+24
+00:01:31.278 --> 00:01:35.475
+emulator application and connect to
+a Linux server over the network.
+
+25
+00:01:35.475 --> 00:01:38.348
+In order to practice the skills
+you'll be gaining in this course,
+
+26
+00:01:38.348 --> 00:01:40.415
+you're going to need
+access to a Linux system.
+
+27
+00:01:40.415 --> 00:01:45.065
+One quick and easy way to do that
+is to open up a web browser and
+
+28
+00:01:45.065 --> 00:01:48.136
+visit http://simpleshell.com.
+
+29
+00:01:48.136 --> 00:01:51.500
+Http://simpleshell.com allows you
+to connect to a Linux server.
+
+30
+00:01:51.500 --> 00:01:55.770
+You just click start my session,
+and a terminal emulator opens up.
+
+31
+00:01:55.770 --> 00:01:58.840
+Each session is limited to 15 minutes, so
+
+32
+00:01:58.840 --> 00:02:02.140
+if you just wanna spend just a couple of
+minutes trying out a new command that
+
+33
+00:02:02.140 --> 00:02:04.550
+you're learning about, this would
+be a great way to practice that.
+
+34
+00:02:05.810 --> 00:02:09.754
+A couple of alternatives to simpleshell
+include webminal like terminal,
+
+35
+00:02:09.754 --> 00:02:10.638
+except for web.
+
+36
+00:02:10.638 --> 00:02:14.166
+Webminal.org.
+
+37
+00:02:14.166 --> 00:02:18.530
+And linuxzoo.net.
+
+38
+00:02:18.530 --> 00:02:23.490
+If you have your own website, you very
+well may have access to a Linux account.
+
+39
+00:02:23.490 --> 00:02:26.160
+Many times here,
+hosting providers use Linux
+
+40
+00:02:26.160 --> 00:02:29.180
+as the operating system which
+runs their web servers.
+
+41
+00:02:29.180 --> 00:02:32.430
+Look at your web hosting company's
+documentation and look for
+
+42
+00:02:32.430 --> 00:02:35.680
+the words shell access or SSH.
+
+43
+00:02:36.930 --> 00:02:40.710
+SSH stands for secure shell.
+
+44
+00:02:40.710 --> 00:02:43.190
+And SSH is a network protocol.
+
+45
+00:02:43.190 --> 00:02:46.608
+It allows you to take your
+terminal emulator application and
+
+46
+00:02:46.608 --> 00:02:49.230
+connect it over the network
+to a Linux server.
+
+47
+00:02:49.230 --> 00:02:52.270
+Shared web hosting is
+typically inexpensive.
+
+48
+00:02:52.270 --> 00:02:54.110
+It's usually only a few dollars a month.
+
+49
+00:02:55.260 --> 00:02:59.660
+Some of the same companies that provide
+web hosting services also provide
+
+50
+00:02:59.660 --> 00:03:04.230
+virtual private servers,
+sometimes called VPS for short.
+
+51
+00:03:04.230 --> 00:03:08.080
+These virtual private servers run
+complete operating systems and
+
+52
+00:03:08.080 --> 00:03:12.640
+they are not shared So, only you have an
+account for this entire operating system.
+
+53
+00:03:12.640 --> 00:03:15.510
+And you can do anything with this
+virtual server that you could a real
+
+54
+00:03:15.510 --> 00:03:16.920
+physical server.
+
+55
+00:03:16.920 --> 00:03:20.250
+Again, since it's not shared and
+you have full control over the server,
+
+56
+00:03:20.250 --> 00:03:21.440
+you can reboot it at will.
+
+57
+00:03:21.440 --> 00:03:24.950
+This is not such a good thing if you're
+in a shared hosting environment.
+
+58
+00:03:24.950 --> 00:03:28.639
+That's why your accounts in those
+environments have limited access.
+
+59
+00:03:29.700 --> 00:03:33.360
+If you like the idea of having full
+control over a virtual server,
+
+60
+00:03:33.360 --> 00:03:36.020
+you could look into
+cloud computing as well.
+
+61
+00:03:36.020 --> 00:03:39.340
+In cloud speak,
+a virtual server is called an instance.
+
+62
+00:03:39.340 --> 00:03:42.470
+You'll hear people talking
+about spinning up an instance.
+
+63
+00:03:42.470 --> 00:03:45.850
+That simply means they've deployed
+a virtual server running a complete
+
+64
+00:03:45.850 --> 00:03:47.370
+operating system.
+
+65
+00:03:47.370 --> 00:03:51.320
+One of the main differences between cloud
+providers and traditional web hosting
+
+66
+00:03:51.320 --> 00:03:55.870
+providers that provide shared hosting and
+virtual private servers
+
+67
+00:03:55.870 --> 00:04:00.710
+is that cloud servers or cloud instances
+can be programmatically deployed.
+
+68
+00:04:00.710 --> 00:04:04.510
+That means you can create software
+that starts cloud instances or
+
+69
+00:04:04.510 --> 00:04:06.410
+stops cloud instances.
+
+70
+00:04:06.410 --> 00:04:09.220
+In our case,
+we just want access to a Linux server so
+
+71
+00:04:09.220 --> 00:04:12.430
+you don't have to take advantage of
+those features if you don't want them.
+
+72
+00:04:13.730 --> 00:04:17.650
+Just know that VPS, a virtual
+private server or a cloud server or
+
+73
+00:04:17.650 --> 00:04:19.540
+a cloud instance are all the same thing.
+
+74
+00:04:21.380 --> 00:04:25.188
+Another way to get access to a Linux
+server is to run a Live Linux
+
+75
+00:04:25.188 --> 00:04:26.220
+distribution.
+
+76
+00:04:26.220 --> 00:04:33.063
+A Live Linux distro typically runs
+from CD or USB key or a DVD-ROM.
+
+77
+00:04:33.063 --> 00:04:36.421
+You insert the bootable media,
+start your hardware and
+
+78
+00:04:36.421 --> 00:04:42.210
+in just a few minutes you are placed into
+a live running Linux operating system.
+
+79
+00:04:42.210 --> 00:04:45.700
+The reason why they are called Live Linux
+distributions is they do not write to your
+
+80
+00:04:45.700 --> 00:04:46.220
+hard drive.
+
+81
+00:04:46.220 --> 00:04:48.140
+They are not installed on your computer.
+
+82
+00:04:48.140 --> 00:04:49.180
+They are just live.
+
+83
+00:04:49.180 --> 00:04:51.570
+So they run as long as the power is on.
+
+84
+00:04:51.570 --> 00:04:55.740
+The minute you reboot your computer
+your operating system is gone,
+
+85
+00:04:55.740 --> 00:04:58.590
+the advantage of using a Live Linux
+distribution is that you
+
+86
+00:04:58.590 --> 00:05:01.440
+can try something out without
+modifying your computer.
+
+87
+00:05:01.440 --> 00:05:05.330
+The disadvantage of using a Live Linux
+distribution is that when you're using it
+
+88
+00:05:05.330 --> 00:05:08.740
+you don't have access to your
+primary operating system.
+
+89
+00:05:08.740 --> 00:05:11.740
+For example, if you were watching
+this course on your Windows pc and
+
+90
+00:05:11.740 --> 00:05:14.760
+you wanted to try a few new Linux
+commands that you've learned about,
+
+91
+00:05:14.760 --> 00:05:19.410
+you would have to stop your Windows
+operating system, put in a CD, and
+
+92
+00:05:19.410 --> 00:05:22.480
+power up the computer again
+in order to boot into Linux.
+
+93
+00:05:22.480 --> 00:05:26.330
+It's important to keep in mind that
+Live Linux Distro shouldn't be used to
+
+94
+00:05:26.330 --> 00:05:28.640
+evaluate the performance of Linux.
+
+95
+00:05:28.640 --> 00:05:32.540
+When you're running a Live distro, you're
+typically running it from a storage device
+
+96
+00:05:32.540 --> 00:05:35.860
+that is a lot slower than
+your normal hard drive.
+
+97
+00:05:35.860 --> 00:05:40.850
+A few Live Linux Distributions that
+are fairly popular include Fedora,
+
+98
+00:05:40.850 --> 00:05:44.450
+Knoppix, Puppy Linux and Ubuntu.
+
+99
+00:05:44.450 --> 00:05:47.980
+Live Linux distros by default do
+not modify your system in anyway.
+
+100
+00:05:47.980 --> 00:05:50.450
+They won't write to your hard drive for
+instance.
+
+101
+00:05:50.450 --> 00:05:53.900
+However most Live Linux
+distributions do include a utility
+
+102
+00:05:53.900 --> 00:05:57.550
+to install the distro to your hard
+drive if you decide you like it.
+
+103
+00:05:57.550 --> 00:06:00.560
+Of course you can always
+install Linux on a computer.
+
+104
+00:06:00.560 --> 00:06:05.010
+If you have an extra laptop, or
+an old PC that you're not using anymore,
+
+105
+00:06:05.010 --> 00:06:08.680
+then took a Linux distribution and
+install it directly on that.
+
+106
+00:06:08.680 --> 00:06:12.390
+If you do decide to install Linux
+yourself, don't worry if there are things
+
+107
+00:06:12.390 --> 00:06:15.480
+in the installation process
+that don't make sense, or
+
+108
+00:06:15.480 --> 00:06:17.500
+that you don't fully understand.
+
+109
+00:06:17.500 --> 00:06:19.710
+Typically, the defaults are pretty safe.
+
+110
+00:06:19.710 --> 00:06:22.557
+Just accept the defaults and
+you should be good to go.
+
+111
+00:06:22.557 --> 00:06:25.800
+The last method I'm going
+to talk about today
+
+112
+00:06:25.800 --> 00:06:30.530
+is using pre-installed Linux
+images with VirtualBox.
+
+113
+00:06:30.530 --> 00:06:34.200
+This is the method that I recommend
+you use with this course.
+
+114
+00:06:34.200 --> 00:06:37.300
+VirtualBox is virtualization software.
+
+115
+00:06:37.300 --> 00:06:40.850
+It allows you to run entire operating
+systems within your current
+
+116
+00:06:40.850 --> 00:06:42.500
+operating system.
+
+117
+00:06:42.500 --> 00:06:47.880
+Your current operating system is called
+the host or the host operating system and
+
+118
+00:06:47.880 --> 00:06:51.390
+the virtual machines that you'll
+be creating are called guests.
+
+119
+00:06:51.390 --> 00:06:55.710
+Like Linux, VirtualBox is free and
+open source software.
+
+120
+00:06:55.710 --> 00:06:59.930
+VirtualBox runs on Mac,
+Windows and even Linux.
+
+121
+00:06:59.930 --> 00:07:03.120
+In the next part of the course, I will
+show you how to install VirtualBox on
+
+122
+00:07:03.120 --> 00:07:06.330
+windows and also how to install it on Mac.
+
+123
+00:07:06.330 --> 00:07:10.380
+From there I will show you how to get
+the pre-installed Linux images and
+
+124
+00:07:10.380 --> 00:07:12.510
+how to import those into VirtualBox.
+
+125
+00:07:12.510 --> 00:07:15.640
+Then we can get started with
+the main course content.
+
+126
+00:07:15.640 --> 00:07:20.680
+The ways to get access to a Linux system
+include going to simpleshell.com,
+
+127
+00:07:20.680 --> 00:07:24.570
+in your web browser,
+using a hosting provider,
+
+128
+00:07:24.570 --> 00:07:29.510
+be that a shared web host,
+a VPS host or a cloud host.
+
+129
+00:07:30.870 --> 00:07:33.203
+You can install Linux on hardware, and
+
+130
+00:07:33.203 --> 00:07:36.111
+you can also run Linux
+inside a virtual machine.
+

@@ -1,0 +1,482 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/vi.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>vi</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.8"><span style="font-weight: bold;">5.8 vi<br>
+</span><br>
+<span style="font-weight: bold;"> vi(1) </span>l&agrave; m&#7897;t
+tr&igrave;nh so&#7841;n th&#7843;o ti&ecirc;u chu&#7849;n c&#7911;a Unix,m&agrave; &#273;&#432;&#7907;c s&#7917; d&#7909;ng
+trong c&aacute;c h&#7879; th&#7889;ng b&#7903;i c&aacute;c adminstrator.C&oacute; nhi&#7873;u
+phi&ecirc;n b&#7843;n c&#7911;a vi: vi,elvis,vile,vim.M&#7897;t trong s&#7889; ch&uacute;ng
+c&oacute; &#7903; b&#7845;t k&igrave; phi&ecirc;n b&#7843;n Unix v&agrave; Linux.T&#7845;t c&#7843;
+ch&uacute;ng &#273;&#7873;u s&#7917; d&#7909;ng m&#7897;t t&#7853;p h&#7907;p c&aacute;c l&#7879;nh c&#7903; b&#7843;n,v&igrave;
+v&#7853;y s&#7917; d&#7909;ng th&agrave;nh th&#7841;o c&aacute;c l&#7879;nh c&#417; b&#7843;n b&#7841;n s&#7869; d&#7877;
+d&agrave;ng s&#7917; d&#7909;ng trong c&aacute;c phi&ecirc;n b&#7843;n kh&aacute;c.<br>
+<br>
+<span style="font-weight: bold;"> &nbsp;vi</span> ch&#7913;a m&#7897;t t&#7853;p h&#7907;p
+c&aacute;c c&ocirc;ng c&#7909; tr&#7907; gi&uacute;p h&ugrave;ng m&#7841;nh,bao g&#7891;m:c&#7845;u
+tr&uacute;c &aacute;nh s&aacute;ng(syntax highlighting),&#273;&#7883;nh d&#7841;ng
+m&atilde;(code formatting),macro,c&#417; ch&#7871; t&igrave;m ki&#7871;m v&agrave; thay
+th&#7871;....Nh&#7919;ng c&ocirc;ng c&#7909; n&agrave;y l&agrave;m cho vi tr&#7903; l&ecirc;n
+&#273;&#7863;c bi&#7879;t v&#7899;i c&aacute;c nh&agrave; l&#7853;p tr&igrave;nh.H&#7879; th&#7889;ng&nbsp;
+administrators s&#7869; &#273;&aacute;nh gi&aacute; cao kh&#7843; n&#259;ng t&#7921; &#273;&#7897;ng v&agrave;
+li&ecirc;n k&#7871;t v&#7899;i shell.<br>
+<br>
+Trong Slackware phi&ecirc;n b&#7843;n vi l&agrave; elsvi(theo m&#7863;c
+&#273;&#7883;nh).C&aacute;c phi&ecirc;n ph&#7843;n kh&aacute;c c&#361;ng c&oacute; th&#7875; s&#7917; d&#7909;ng
+l&agrave; vim v&agrave; gvim n&#7871;u b&#7841;n c&agrave;i &#273;&#7863;t theo packages t&#432;&#417;ng
+&#7913;ng.<br>
+<br>
+</a><a name="ch_5.8.1"><span style="font-weight: bold;">5.8.1 Kh&#7903;i &#273;&#7897;ng
+vi<br>
+</span><br>
+<span style="font-weight: bold;"> vi </span>c&oacute; th&#7875; ch&#7841;y t&#7915; v&#7887;
+l&#7879;nh theo nhi&#7873;u c&aacute;ch kh&aacute;c nhau:<br>
+<span style="font-weight: bold;"> $ vi<br>
+</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_5.8.1"><img
+ src="../../../../higiacmoquayve.narod.ru/root/slackware/image/vi/startvi.png" title="" alt=""
+ style="width: 560px; height: 348px;"></a><br>
+<a name="ch_5.8.1"></a></div>
+<a name="ch_5.8.1"> L&#7879;nh tr&ecirc;n s&#7869; ch&#7841;y vi t&#7915; m&#7897;t buffer r&#7895;ng,b&#7841;n s&#7869;
+nh&igrave;n th&#7845;y m&#7897;t m&agrave;n h&igrave;nh tr&#7889;ng kh&ocirc;ng.Ch&#432;&#417;ng
+tr&igrave;nh b&#7845;y gi&#7901; &#273;ang ch&#7901; &#273;&#7907;i b&#7841;n l&agrave;m m&#7897;t &#273;i&#7873;u g&igrave;
+&#273;&oacute;.B&#7841;n h&atilde;y &#273;&#7885;c ti&#7871;p ph&#7847;n sau &#273;&#7875; bi&#7871;t c&aacute;c
+c&aacute;ch ch&#7841;y vi.&#272;&#7875; tho&aacute;t kh&#7887;i vi h&atilde;y nh&#7853;p v&agrave;o<br>
+<br>
+:q<br>
+<br>
+N&#7871;u nh&#432; kh&ocirc;ng c&oacute; g&igrave; thay &#273;&#7893;i tr&ecirc;n t&#7853;p tin
+th&igrave; b&#7841;n s&#7869; tho&aacute;t kh&#7887;i ch&#432;&#417;ng tr&igrave;nh.N&#7871;u b&#7841;n thay &#273;&#7893;i
+&#273;i&#7873;u g&igrave; &#273;&oacute; th&igrave; ch&#432;&#417;ng tr&igrave;nh s&#7869; th&ocirc;ng
+b&aacute;o cho b&#7841;n r&#7857;ng n&#7897;i dung &#273;&atilde; b&#7883; thay &#273;&#7893;i&nbsp; v&agrave;
+b&#7841;n s&#7869; tho&aacute;t trong khi c&aacute;c thay &#273;&#7893;i &#273;&oacute; kh&ocirc;ng
+&#273;&#432;&#7907;c l&#432;u l&#7841;i.<br>
+<br>
+B&#7841;n c&oacute; th&#7875; m&#7903; m&#7897;t t&#7853;p tin &#273;&atilde; c&oacute; s&#7861;n b&#7857;ng
+vi.V&iacute; d&#7909; &#273;&#7875; m&#7903; /etc/resolv.conf c&#7847;n th&#7921;c hi&ecirc;n:<br>
+<br>
+<span style="font-weight: bold;"> $ vi /etc/resolv.conf<br>
+</span><br>
+C&#361;ng nh&#432; th&#7871; vi c&oacute; th&#7875; m&#7903; t&#7853;p tin t&#7841;i m&#7897;t d&ograve;ng &#273;&#432;&#7907;c &#273;&#7883;nh
+tr&#432;&#7899;c.V&iacute; d&#7909; nh&#432; ch&#7841;y vi t&#7915; d&ograve;ng 47 c&#7911;a t&#7853;p tin
+/usr/src/linux/init/main.c,b&#7841;n c&#7847;n l&agrave;m nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $ vi +47 /usr/src/linux/init/main.c</span><br>
+<br>
+<span style="font-weight: bold;"> vi</span> hi&#7875;n th&#7883; tr&ecirc;n
+m&agrave;n h&igrave;nh n&#7897;i dung t&#7853;p tin &#273;&#432;&#7907;c ch&#7881; ra v&agrave; con tr&#7887;
+&#273;&#432;&#7907;c &#273;&#7863;t t&#7841;i d&ograve;ng 47.N&ecirc;u nh&#432; con s&#7889; &#273;&#432;a ra l&#7899;n h&#417;n so v&#7899;i
+t&#7893;ng s&#7889; d&ograve;ng c&oacute; tr&ecirc;n t&#7853;p tin th&igrave; con tr&#7887; s&#7869;
+chuy&#7875;n &#273;&#7871;n d&ograve;ng cu&#7889;i c&ugrave;ng c&#7911;a t&#7853;p tin.&#272;i&#7873;u n&agrave;y
+c&oacute; l&#7907;i cho c&aacute;c nh&agrave; l&#7853;p tr&igrave;nh khi h&#7885; mu&#7889;n m&#7903;
+t&#7853;p l&#7879;nh t&#7841;i d&ograve;ng b&#7883; l&#7895;i.<br>
+<br>
+</a><a name="ch_5.8.2"><span style="font-weight: bold;">5.8.2 Ch&#7871; &#273;&#7897;
+l&agrave;m vi&#7879;c<br>
+</span><br>
+<span style="font-weight: bold;"> vi</span> &#273;&#432;&#7907;c s&#7917; d&#7909;ng trong c&aacute;c
+ch&#7871; &#273;&#7897; kh&aacute;c nhau,cho c&aacute;c m&#7909;c &#273;&iacute;ch kh&aacute;c
+nhau.N&#7871;u b&#7841;n ch&#7841;y vi l&agrave; b&#7841;n v&agrave;o ngay ch&#7871; &#273;&#7897; c&acirc;u
+l&#7879;nh.T&#7841;i &#273;&acirc;y b&#7841;n c&oacute; th&#7875; th&#7921;c hi&#7879;n nh&#7919;ng l&#7879;nh kh&aacute;c
+nhau &#273;&#7875; so&#7841;n th&#7843;o v&#259;n b&#7843;n,d&#7883; chuy&#7875;n b&ecirc;n trong t&#7853;p tin,l&#432;u tr&#7919;
+v&agrave; tho&aacute;t kh&#7887;i n&oacute;.&#272;&#7875; thay &#273;&#7893;i v&#259;n b&#7843;n h&atilde;y
+d&ugrave;ng ch&#7871; &#273;&#7897; insert(l&#7891;ng v&agrave;o).B&#7841;n c&oacute; th&#7875; chuy&#7875;n &#273;&#7893;i
+gi&#7919;a c&aacute;c ch&#7871; &#273;&#7897; kh&aacute;c nhau v&#7899;i t&#7893; h&#7907;p ph&iacute;m &#273;&#432;&#7907;c ghi
+&#7903; d&#432;&#7899;i.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> Ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh<br>
+</span><br>
+D&#7847;u ti&ecirc;n b&#7841;n r&#417;i v&agrave;o ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh.T&#7915; ch&#7871; &#273;&#7897;
+n&agrave;y b&#7841;n kh&ocirc;ng th&#7875; &#273;&aacute;nh th&#7859;ng n&#7897;i dung v&agrave;o
+&#273;&#432;&#7907;c ho&#7863;c so&#7843;n th&#7843;o l&#7841;i t&#7853;p tin c&oacute; s&#7861;n.Nh&#432;ng b&#7841;n c&oacute; th&#7875;
+&#273;i&#7873;u khi&#7875;n v&#259;n b&#7843;n,t&igrave;m ki&#7871;m,tho&aacute;t..T&#7845;t c&#7843; ch&#7881; l&agrave;
+&#7843;nh c&#7911;a ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh.&#272;&#7875; xem c&aacute;c l&#7879;nh kh&aacute;c nhau
+,h&atilde;y xem ph&#7847;n 5.8.7<br>
+<br>
+C&oacute; l&#7869; th&ocirc;ng th&#432;&#7901;n ng&#432;&#7901;i ta s&#7917; d&#7909;ng l&#7879;nh &#7903; ch&#7871; &#273;&#7897; c&acirc;u
+l&#7879;nh &#273;&#7875; chuy&#7875;n sang ch&#7871; &#273;&#7897; insert.H&atilde;y nh&#7845;n i v&agrave; b&#7841;n &#273;i
+v&agrave;o ch&#7871; &#273;&#7897; insert.Con tr&#7887; &#273;&#432;&#7907;c thay &#273;&#7893;i h&igrave;nh d&#7841;ng
+v&agrave; d&ograve;ng " -INSERT-" s&#7869; s&aacute;ng l&ecirc;n &#7903; g&oacute;c
+cu&#7889;i m&agrave;n h&igrave;nh(trong c&aacute;c b&#7843;n sao kh&ocirc;ng
+c&oacute;).Trong ch&#7871; &#273;&#7897; n&agrave;y b&#7841;n c&oacute; th&#7875; nh&#7853;p v&agrave;o
+c&aacute;c c&acirc;u,d&ograve;ng,&#273;o&#7841;n v&#259;n b&#7843;n.. v&agrave; n&oacute; s&#7869;
+hi&#7875;n th&#7883; tr&ecirc;n m&agrave;n h&igrave;nh.&#272;&#7875; chuy&#7875;n v&#7873; ch&#7871; &#273;&#7897; c&acirc;u
+l&#7879;nh h&atilde;y nh&#7845;n ESC.<br>
+<br>
+Ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh thu&#7853;n ti&#7879;n th&#7875; di chuy&#7875;n b&ecirc;n trong t&#7853;p
+tin.Tr&ecirc;n c&aacute;c h&#7879; th&#7889;ng kh&aacute;c c&oacute; th&#7875; s&#7917; d&#7909;ng
+c&aacute;c ph&iacute;m l&ecirc;n,xu&#7889;ng,tr&aacute;i,ph&#7843;i &#273;&#7875; &#273;i&#7873;u
+khi&#7875;n.Trong c&aacute;c h&#7879; th&#7889;ng kh&aacute;c b&#7841;n s&#7869; ph&#7843;i s&#7917; d&#7909;ng
+c&aacute;ch truy&#7873;n th&#7889;ng l&agrave; "hjkl".<br>
+<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.8.2"> h &#273;i sang
+tr&aacute;i m&#7897;t k&iacute; t&#7921;</a><br>
+<a name="ch_5.8.2"> l &#273;i sang ph&#7843;i m&#7897;t k&iacute; t&#7921;</a><br>
+<a name="ch_5.8.2"> k &#273;i l&ecirc;n tr&ecirc;n m&#7897;t k&iacute; t&#7921;</a><br>
+<a name="ch_5.8.2"> j &#273;i xu&#7889;ng d&#432;&#7899;i m&#7897;t k&iacute; t&#7921;</a><br>
+<a name="ch_5.8.2"></a></div>
+<a name="ch_5.8.2"><br>
+Ch&#7881; &#273;&#417;n gi&#7843;n s&#432; d&#7909;ng ch&#7919; c&aacute;i t&#432;&#417;ng &#7913;ng v&#7899;i c&aacute;c h&#432;&#7899;ng c&#7847;n
+thi&#7871;t.Tuy nhi&ecirc;n v&#7851;n c&oacute; c&aacute;c t&#7893; h&#7907;p ph&iacute;m
+l&agrave;m cho q&uacute;a tr&igrave;nh di chuy&#7875;n nhanh h&#417;n.R&#7845;t nhi&#7873;u
+l&#7879;nh trong ch&#7871; &#273;&#7897; n&agrave;y b&#7855;t &#273;&#7847;u b&#7857;ng d&#7845;u ":".V&iacute; d&#7909; &#273;&#7875;
+tho&aacute;t ra ch&#432;&#417;ng tr&igrave;nh ":q"....<br>
+<br>
+D&#7845;u ":" &#273;&#417;n gi&#7843;n ch&#7881; ra r&#7857;ng:&#273;&acirc;y l&agrave; l&#7879;nh,&#7903; th&#7901;i &#273;i&#7875;m
+&#273;&#7845;y.C&ograve;n "q" th&ocirc;ng b&aacute;o v&#7899;i vi l&agrave; b&#7841;n mu&#7889;n
+tho&aacute;t.C&ograve;n c&oacute; c&aacute;c t&#7893; h&#7907;p s&#7889;(kh&ocirc;ng nh&#7845;t
+thi&#7871;t) v&agrave; ch&#7919;.Tr&#432;&#7899;c&nbsp; c&aacute;c l&#7879;nh n&agrave;y,kh&ocirc;ng
+c&#7847;n ph&#7843;i d&ugrave;ng ":",ch&uacute;ng &#273;&#432;&#7907;c s&#7917; d&#7909;ng &#273;&#7875; di chuy&#7875;n trong
+v&#259;n b&#7843;n.<br>
+<br>
+V&iacute; d&#7909; nh&#432; &#273;&#7875; xo&aacute; m&#7897;t d&ograve;ng t&#7915; t&#7853;p tin.H&atilde;y di
+chuy&#7875;n con tr&#7887; &#273;&#7871;n d&ograve;ng c&#7847;n x&oacute;a v&agrave; th&#7921;c hi&#7879;n
+4dd,l&uacute;c &#273;&oacute; vi s&#7869; x&oacute;a d&ograve;ng t&#7841;i v&#7883; tr&iacute;
+con tr&#7887; v&agrave; ba d&ograve;ng sau n&oacute;.N&oacute;i chung con s&#7889;
+s&#7869;&nbsp; ch&#7881; &#273;&#7883;nh s&#7889; l&#7847;n vi th&#7921;c hi&#7879;n.V&iacute; d&#7909; nh&#432; 10k th&igrave; s&#7869;
+di chuy&#7875;n l&ecirc;n tr&ecirc;n 10 d&ograve;ng theo v&#259;n b&#7843;n.<br>
+<br>
+Ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh c&#361;ng c&oacute; th&#7875; d&ugrave;ng &#273;&#7875; c&#7855;t v&agrave;
+d&aacute;n c&aacute;c &#273;o&#7841;n v&#259;n b&#7843;n v&agrave; &#273;&#7885;c c&aacute;c t&#7853;p tin
+kh&aacute;c &#7903; buffer.Sao ch&eacute;p v&#259;n b&#7843;n &#273;&#432;&#7907;c th&#7921;c hi&#7879;n v&#7899;i s&#7921;
+gi&uacute;p &#273;&#7905; c&#7911;a ph&iacute;m "y".Sao ch&eacute;p d&ograve;ng hi&#7879;n th&#7901;i
+b&#7857;ng c&aacute;ch "yy" v&agrave; c&oacute; th&#7875; s&#7917; d&#7909;ng s&#7889; &#273;i k&egrave;m
+&#273;&#7875; sao ch&eacute;p li&ecirc;n ti&#7871;p nhi&#7873;u d&ograve;ng.Sau &#273;&oacute; di
+chuy&#7875;n &#273;&#7871;n v&#7883; tr&iacute; c&#7847;n thi&#7871;t v&agrave; nh&#7845;n "p".&#272;o&#7841;n v&#259;n b&#7843;n s&#7869;
+&#273;&#432;&#7907;c d&aacute;n v&agrave;o d&ograve;ng hi&#7879;n h&agrave;nh v&agrave;
+c&aacute;c d&ograve;ng ti&#7871;p theo.<br>
+C&#7855;t c&aacute;c &#273;o&#7841;n v&#259;n b&#7843;n th&#7921;c hi&#7879;n v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; dd
+v&agrave; p,&#273;&#432;&#7907;c s&#7917; d&#7909;ng &#273;&#7875; d&aacute;n c&aacute;c &#273;o&#7841;n v&#259;n b&#7843;n b&#7883; c&#7855;t
+ng&#432;&#7907;c l&#7841;i v&agrave;o t&#7853;p tin.&#272;&#7885;c t&#7915; c&aacute;c t&#7853;p tin kh&aacute;c
+th&igrave; l&#7841;i l&agrave; m&#7897;t qu&aacute; tr&igrave;nh &#273;&#417;n gi&#7843;n.H&atilde;y
+nh&#7845;n ":r",d&#7845;u c&aacute;ch " ",v&agrave; t&ecirc;n t&#7853;p tin ch&#7913;a &#273;o&#7841;n v&#259;n
+b&#7843;n &#7845;y m&agrave; b&#7841;n mu&#7889;n d&aacute;n.N&#7897;i dung c&#7911;a t&#7853;p tin s&#7869; &#273;&#432;&#7907;c chuy&#7875;n
+v&agrave;o buffer t&#7841;m th&#7901;i b&#7855;t &#273;&#7847;u t&#7915; d&ograve;ng m&agrave; con tr&#7887; &#273;&#7913;ng
+sau n&oacute;.C&aacute;c b&#7843;n sao ho&agrave;n thi&#7879;n c&#7911;a vi k&#7871;t
+th&uacute;c c&aacute;c t&#7853;p tin gi&#7889;ng nh&#432; l&agrave;m vi&#7879;c tr&ecirc;n
+shell.<br>
+<br>
+Ch&#7913;c n&#259;ng cu&#7889;i c&ugrave;ng trong ch&#7871; &#273;&#7897; n&agrave;y l&agrave; t&igrave;m
+ki&#7871;m.Ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh cho ph&eacute;p t&igrave;m ki&#7871;m th&ocirc;ng
+th&#432;&#7901;ng v&agrave; m&#7903; r&#7897;ng.<br>
+&#272;&#7875; t&igrave;m ki&#7871;m h&atilde;y nh&#7845;n "/" v&agrave; nh&#7853;p v&agrave;o n&#7897;i
+dung c&#7847;n t&igrave;m.vi s&#7869; b&#7855;t &#273;&#7847;u t&igrave;m ki&#7871;m t&#7915; v&#7883; tr&iacute; c&#7911;a
+con tr&#7887; v&agrave; h&#432;&#7899;ng &#273;&#7871;n cu&#7889;i t&#7853;p tin v&agrave; d&#7915;ng l&#7841;i t&#7841;i v&#7883;
+tr&iacute; tr&ugrave;ng l&#7863;p &#273;&#7847;u ti&ecirc;n.Ch&uacute; &yacute;
+tr&ugrave;ng l&#7863;p kh&ocirc;ng ho&agrave;n to&agrave;n c&#361;ng l&agrave;m cho
+qu&aacute; tr&igrave;nh t&igrave;m ki&#7871;m d&#7915;ng l&#7841;i.V&iacute; d&#7909; nh&#432;,c&#7847;n
+t&igrave;m ki&#7871;m "the" th&igrave; k&#7871;t q&#7911;a c&oacute; th&#7875; l&agrave; "then"
+ho&#7863;c "thenfor"...K&#7871;t q&#7911;a l&agrave; nh&#7919;ng g&igrave; ch&#7913;a "the".<br>
+<br>
+Sau khi t&igrave;m th&#7845;y s&#7921; tr&ugrave;ng l&#7863;p &#273;&#7847;u ti&ecirc;n th&igrave;
+b&#7841;n c&oacute; th&#7875; t&igrave;m ti&#7871;p b&#7857;ng c&aacute;ch nh&#7845;n "/" v&agrave;
+Enter.C&oacute; th&#7875; ch&#7881; &#273;&#7883;nh h&#432;&#7899;ng t&igrave;m ki&#7871;m t&#7915; v&#7883; tr&iacute; con
+tr&#7887; &#273;&#7871;n &#273;&#7847;u c&#7911;a t&#7853;p tin.&#272;&#7875; l&agrave;m vi&#7879;c &#273;&oacute; thay v&agrave;o ch&#7895;
+c&#7911;a "/" b&#7841;n c&#7847;n s&#7917; d&#7909;ng "?".v&iacute; d&#7909;: ?the(t&igrave;m ki&#7871;m "the" v&#7873;
+ph&iacute;a &#273;&#7847;u c&#7911;a t&#7853;p tin t&#7915; v&#7883; tr&iacute; con tr&#7887;).<br>
+<br>
+<span style="font-weight: bold;"> Ch&#7871; &#273;&#7897; insert<br>
+</span><br>
+D&aacute;n v&agrave; thay th&#7871; c&aacute;c &#273;o&#7841;n v&#259;n b&#7843;n th&#7921;c hi&#7879;n trong
+ch&#7871; &#273;&#7897; n&agrave;y.Gi&#7889;ng nh&#432; &#273;&atilde; n&oacute;i &#273;&#7875; chuy&#7875;n sang ch&#7871; &#273;&#7897;
+n&agrave;y c&#7847;n nh&#7845;n "i",v&agrave; t&#7845;t c&#7843; nh&#7919;ng g&igrave; b&#7841;n vi&#7871;t &#273;&#432;&#7907;c
+chuy&#7875;n v&agrave;o buffer hi&#7879;n th&#7901;i.Nh&acirc;n ESC &#273;&#7875; chuy&#7875;n v&#7873; ch&#7871; &#273;&#7897;
+c&acirc;u l&#7879;nh.<br>
+<br>
+Thay th&#7871; n&#7897;i dung c&aacute;c &#273;o&#7841;n v&#259;n b&#7843;n &#273;&#432;&#7907;c th&#7921;c hi&#7879;n b&#7903;i nhi&#7873;u
+c&aacute;ch kh&aacute;c nhau.Nh&#7845;n "r" t&#7915; ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh cho
+ph&eacute;p b&#7841;n thay th&ecirc; m&#7897;t k&iacute; t&#7921; t&#7841;i v&#7883; tr&iacute; con
+tr&#7887;.&#272;&#417;n gi&#7843;n l&agrave; nh&#7853;p v&agrave;o k&iacute; t&#7921; c&#7847;n thi&#7871;t v&agrave;
+n&oacute; s&#7869; chi&#7871;m l&#7845;y v&#7883; tr&iacute; m&agrave; con tr&#7887; &#273;ang s&aacute;ng
+nh&#7845;p nh&aacute;y.Ngay sau khi b&#7841;n quay l&#7841;i ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh
+h&atilde;y nh&#7845;n ngay "R",n&oacute; cho ph&eacute;p b&#7841;n thay th&#7871; bao
+nhi&ecirc;u tu&#7923; th&iacute;ch.&#272;&#7875; tho&aacute;t kh&#7887;i ch&#7871; &#273;&#7897; thay th&#7871;
+h&atilde;y nh&#7845;n ESC v&agrave; b&#7841;n r&#417;i v&agrave;o ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh.<br>
+<br>
+C&ograve;n c&oacute; ph&#432;&#417;ng ph&aacute;p kh&aacute;c &#273;&#7875; di chuy&#7875;n gi&#7919;a
+d&aacute;n v&agrave; thay th&#7871; l&agrave; nh&#7845;n n&uacute;t "insert" t&#7915; ch&#7871;
+&#273;&#7897; c&acirc;u l&#7879;nh,n&oacute; s&#7869; &#273;&#432;a b&#7841;n v&agrave;o ch&#7871; &#273;&#7897; insert.Khih b&#7841;n
+&#273;&atilde; &#7903; ch&#7871; &#273;&#7897; insert r&#7891;i th&igrave; n&uacute;t "insert" cho
+ph&eacute;p b&#7841;n thay &#273;&#7893;i gi&#7919;a ch&#7871; &#273;&#7897; d&aacute;n v&agrave; thay th&#7871;.<br>
+<br>
+</a><a name="ch_5.8.3"><span style="font-weight: bold;">5.8.3 M&#7903; t&#7853;p tin</span><br>
+<span style="font-weight: bold;"> vi</span> cho ph&eacute;p m&#7903; c&aacute;c
+t&#7853;p tin t&#7915; ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh nh&#432; v&#7887; l&#7879;nh,h&atilde;y ch&#7881; ra
+t&ecirc;n t&#7853;p tin sau ch&#432;&#417;ng tr&igrave;nh.&#272;&#7875; m&#7903; t&#7853;p tin <span
+ style="font-style: italic;">/etc/lilo.conf</span> ta l&agrave;m nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> :e /etc/lilo.conf <br>
+</span><br>
+N&#7871;u nh&#432; trong buffer c&oacute; nh&#7919;ng bi&#7871;n &#273;&#7893;i m&agrave; ch&#432;a &#273;&#432;&#7907;c l&#432;u
+l&#7841;i th&igrave; vi s&#7869; th&ocirc;ng b&aacute;o cho b&#7841;n bi&#7871;t.B&#7841;n c&oacute;
+th&#7875; m&#7903; t&#7853;p tin m&agrave; kh&ocirc;ng ghi buffer hi&#7879;n th&#7901;i l&agrave; b&#7857;ng
+:e!,d&#7845;u c&aacute;ch,t&ecirc;n t&#7853;p tin c&#7847;n thi&#7871;t.<br>
+N&#7871;u b&#7841;n th&iacute;ch &#273;&#7885;c l&#7841;i t&#7853;p tin hi&#7879;n h&agrave;nh th&igrave;
+c&oacute; th&#7875; ch&#7841;y e!.&#272;i&#7873;u n&agrave;y thu&#7853;n l&#7907;i khi b&#7841;n l&agrave;m h&#7887;ng
+m&#7897;t c&aacute;i g&igrave; &#273;&#7845;y v&agrave; mu&#7889;n &#273;&#7885;c l&#7841;i.<br>
+<br>
+M&#7897;t v&agrave;i b&#7843;n sao c&#7911;a vi(nh&#432; vim) cho ph&eacute;p m&#7903; nhi&#7873;u buffer
+c&ugrave;ng m&#7897;t l&uacute;c.V&iacute; d&#7909; &#273;&#7875; m&#7903; t&#7853;p tin 09-vi.sgml &#7903; trong
+catalog home,v&agrave; trong c&ugrave;ng th&#7901;i &#273;i&#7875;m &#273;&#7845;y m&#7903; m&#7897;t t&#7853;p tin
+kh&aacute;c.T&ocirc;i s&#7917; d&#7909;ng:<br>
+<br>
+<span style="font-weight: bold;"> :split /09-vi.sgml</span><br>
+<br>
+T&#7853;p tin m&#7899;i &#273;&#432;&#7907;c hi&#7879;n ra &#7903; n&#7917;a m&agrave;n h&igrave;nh ph&iacute;a
+tr&ecirc;n,c&ograve;n t&#7853;p tin c&#361; &#7903; n&#7917;a d&#432;&#7899;i.C&oacute; r&#7845;t nhi&#7873;u l&#7879;nh &#273;&#7875;
+&#273;i&#7873;u khi&#7875;n q&uacute;a tr&igrave;nh ph&acirc;n chia m&agrave;n
+h&igrave;nh,v&agrave; nhi&#7873;u trong ch&uacute;ng gi&#7889;ng nh&#432; &#7903;
+EMACS.H&atilde;y &#273;&#7885;c trang man c&#7911;a ch&uacute;ng &#273;&#7875; c&oacute; th&ecirc;m
+th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.8.4"><span style="font-weight: bold;">5.8.4 L&#432;u l&#7841;i
+c&aacute;c t&#7853;p tin<br>
+</span><br>
+&#272;&#7875; l&#432;u l&#7841;i c&aacute;c t&#7853;p tin &#417; vi b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng nhi&#7873;u l&#7879;nh
+kh&aacute;c nhau.N&#7871;u b&#7841;n mu&#7889;n l&#432;u buffer v&agrave;o t&#7853;p tin randomness
+th&igrave; h&atilde;y th&#7921;c hi&#7879;n:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> :w randomness</span><br>
+<br>
+Sau &#273;&oacute;,khi m&agrave; b&#7841;n &#273;&atilde; l&#432;u l&#7841;i l&#7847;n th&#7913; nh&#7845;t,&#273;&#7875; l&#7853;p
+l&#7841;i l&#7847;n th&#7913; hai th&igrave; &#273;&#417;n gi&#7843;n h&atilde;y nh&#7845;n :w.Khi &#273;&oacute; t&#7845;t
+c&#7843; nh&#7919;ng bi&#7871;n &#273;&#7893;i s&#7869; &#273;&#432;&#7907;c l&#432;u l&#7841;i.Sau khi l&#432;u tr&#7919;,b&#7841;n s&#7869; r&#417;i v&agrave;o
+ch&#7871; &#273;&#7897; c&acirc;u l&#7879;nh.N&#7871;u b&#7841;n mu&#7889;n l&#7921;u l&#7841;i bi&#7871;n &#273;&#7893;i v&agrave;
+tho&aacute;t kh&#7887;i vi th&igrave; h&atilde;y th&#7921;c hi&#7879;n l&#7879;nh sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> :wq<br>
+</span><br>
+Th&#7881;nh tho&#7843;ng b&#7841;n mu&#7889;n l&#432;u l&#7841;i t&#7853;p tin ch&#7881; c&oacute; quy&#7873;n h&#7841;n &#273;&#7885;c
+th&igrave; h&atilde;y l&agrave;m nh&#432; sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> :w!</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> :wq!</span><br
+ style="font-weight: bold;">
+<br>
+Trong c&aacute;c tr&#432;&#7901;ng h&#7907;p &#273;&#7863;c bi&#7879;t,b&#7841;n kh&ocirc;ng th&#7875; ghi nh&#7919;ng thay
+&#273;&#7893;i m&agrave; b&#7841;n l&agrave;m tr&ecirc;n t&#7853;p tin(n&#7871;u nh&#432; t&#7853;p tin thu&#7897;c
+m&#7897;t t&agrave;i kho&#7843;n kh&aacute;c) th&igrave; vi s&#7869; th&ocirc;ng
+b&aacute;o cho b&#7841;n bi&#7871;t r&#7857;ng b&#7841;n kh&ocirc;ng th&#7875; ghi l&ecirc;n t&#7853;p tin
+&#273;&#432;&#7907;c.N&#7871;u b&#7841;n th&#7921;c s&#7921; mu&#7889;n ghi l&ecirc;n th&igrave; b&#7841;n c&#7847;n ph&#7843;i quay v&#7873;
+s&#7917; d&#7909;ng root v&agrave; so&#7841;n th&#7843;o l&#7841;i.<br>
+<br>
+</a><a name="ch_5.8.5"><span style="font-weight: bold;">5.8.5
+Tho&aacute;t kh&#7887;i vi<br>
+</span><br>
+M&#7897;t c&aacute;ch &#273;&#7875; tho&aacute;t kh&#7887;i vi l&agrave; s&#7917; d&#7909;ng :wq - l&#432;u tr&#7919;
+buffer hi&#7879;n th&#7901;i v&agrave; tho&aacute;t kh&#7887;i ch&#432;&#417;ng tr&igrave;nh.B&#7841;n
+c&#361;ng c&oacute; th&#7875; tho&aacute;t kh&#7887;i ch&#432;&#417;ng tr&igrave;nh m&agrave;
+kh&ocirc;ng l&#432;u l&#7841;i s&#7921; bi&#7871;n &#273;&#7893;i khi s&#7917; d&#7909;ng ":q" ho&#7863;c l&agrave;
+":q!".Ph&#432;&#417;ng &aacute;n cu&#7889;i d&ugrave;ng khi b&#7841;n bi&#7871;n &#273;&#7893;i t&#7853;p tin nh&#432;ng
+l&#7841;i kh&ocirc;ng mu&#7889;n l&#432;u l&#7841;i c&aacute;c bi&#7871;n &#273;&#7893;i &#273;&oacute;.<br>
+<br>
+C&oacute; nh&#7919;ng tr&#432;&#7901;ng h&#7907;p khi h&#7879; th&#7889;ng ho&#7863;c l&agrave; vi b&#7883;
+&#273;&igrave;nh ch&#7881;.Khi &#7845;y c&#7843; hai b&#7843;n sao(elvis v&agrave; vim) s&#7869; c&#7889; g&#7855;ng
+l&agrave;m cho s&#7921; m&#7845;t m&aacute;t c&#7911;a buffer l&agrave; nh&#7887; nh&#7845;t.C&#7843; hai
+tr&igrave;nh tr&ecirc;n l&#432;u l&#7841;i c&aacute;c buffer &#273;ang m&#7903; b&#7857;ng
+c&aacute;c t&#7853;p tin t&#7841;m th&#7901;i.Nh&#7919;ng t&#7853;p tin n&agrave;y gi&#7889;ng nh&#432;
+c&aacute;c t&#7853;p tin &#273;ang m&#7903; nh&#432;ng v&#7899;i d&#7845;u "." &#7903; &#273;&#7847;u.N&oacute; l&agrave;
+t&#7853;p tin &#7849;n.<br>
+<br>
+Nh&#7919;ng t&#7853;p tin n&agrave;y s&#7869; t&#7921; &#273;&#7897;ng &#273;&#432;&#7907;c x&oacute;a &#273;i sau khi b&#7841;n
+ho&agrave;n th&agrave;nh c&ocirc;ng vi&#7879;c c&#7911;a m&igrave;nh m&#7897;t c&aacute;ch
+b&igrave;nh th&#432;&#7901;ng.C&ograve;n n&#7871;u nh&#432; ch&#432;&#417;ng tr&igrave;nh b&#7883; &#273;&igrave;nh
+ch&#7881; ho&#7841;t &#273;&#7897;ng th&igrave; t&#7853;p tin n&agrave;y s&#7869; t&#7891;n t&#7841;i.N&#7871;u b&#7841;n mu&#7889;n so&#7841;n
+th&#7843;o l&#7841;i t&#7853;p tin n&agrave;y th&igrave; ch&#432;&#417;ng tr&igrave;nh s&#7869; h&#7887;i b&#7841;n
+c&aacute;ch th&#7913;c nh&#432; th&#7871; n&agrave;o.Tuy nhi&ecirc;n ph&#7847;n l&#7899;n c&#7911;a
+c&ocirc;ng vi&#7879;c s&#7869; &#273;&#432;&#7907;c ph&#7909;c h&#7891;i.elvis th&#7853;m ch&iacute; c&ograve;n g&#7917;i
+cho b&#7841;n th&#432; th&ocirc;ng b&aacute;o v&#7873; b&#7843;n sao c&#7911;a t&#7853;p tin.<br>
+<br>
+</a><a name="ch_5.8.6"><span style="font-weight: bold;">5.8.6 C&#7845;u
+h&igrave;nh vi<br>
+</span><br>
+C&aacute;c phi&ecirc;n b&#7843;n c&#7911;a vi c&oacute; th&#7875;&nbsp; &#273;&#432;&#7907;c x&acirc;y
+d&#7921;ng b&#7857;ng c&aacute;c c&aacute;ch kh&aacute;c nhau.<br>
+T&#7853;p h&#7907;p c&aacute;c l&#7879;nh c&oacute; th&#7875; &#273;&#432;&#7907;c nh&#7853;p v&agrave;o &#7903; ch&#7871; &#273;&#7897;
+c&acirc;u l&#7879;nh cho c&#7845;u h&igrave;nh n&oacute; m&#7897;t c&aacute;ch t&#7921; do.B&#7841;n
+c&oacute; th&#7875; k&iacute;ch ho&#7841;t c&aacute;c h&agrave;m s&#7889;,r&uacute;t g&#7885;n
+l&#7853;p tr&igrave;nh,c&agrave;i &#273;&#7863;t macro cho c&aacute;c nhi&#7879;m v&#7909; t&#7921;
+&#273;&#7897;ng...t&#7845;t c&#7843; ph&#7909; thu&#7897;c v&agrave;o tr&igrave;nh so&#7841;n th&#7843;o c&#7911;a b&#7841;n.<br>
+<br>
+H&#7847;u nh&#432; t&#7845;t c&#7843; c&aacute;c l&#7879;nh &#273;&#7845;y c&oacute; th&#7875; &#273;&#432;a v&agrave;o t&#7853;p tin
+c&#7845;u h&igrave;nh trong catalog home c&#7911;a b&#7841;n.elvis s&#7869; t&igrave;m t&#7853;p tin
+.exrc c&ograve;n vim s&#7869; t&igrave;m .vimrc H&#7847;u nh&#432; c&aacute;c c&acirc;u
+l&#7879;nh c&#7845;u h&igrave;nh c&oacute; th&#7875; nh&#7853;p v&agrave;o t&#7915; v&#7887; l&#7879;nh ho&#7863;c
+chuy&#7875;n v&agrave;o c&aacute;c t&#7853;p tin c&#7845;u h&igrave;nh.Bao g&#7891;m c&aacute;c
+th&ocirc;ng tin c&agrave;i &#273;&#7863;t,ho&aacute;n v&#7883; v&#259;n b&#7843;n,macro...<br>
+Vi&#7879;c th&#7843;o lu&#7853;n v&#7873; c&aacute;c tham bi&#7871;n &#273;i k&egrave;m v&agrave; s&#7921;
+kh&aacute;c nhau gi&#7919;a c&aacute;c tr&igrave;nh so&#7841;n th&#7843;o kh&ocirc;ng ph&#7881;a
+l&agrave; m&#7909;c &#273;&iacute;ch c&#7911;a cu&#7889;n s&aacute;ch n&agrave;y.N&#7871;u nh&#432; b&#7841;n
+quan t&acirc;m &#273;&#7871;n c&aacute;c ch&#7913;c n&#259;ng m&#7903; r&#7897;ng c&#7911;a tr&igrave;nh so&#7841;n
+th&#7843;o th&igrave; h&atilde;y &#273;&#7885;c c&aacute;c trang man c&#7911;a n&oacute; ho&#7863;c
+theo l&#7879;nh ":help".B&#7841;n c&oacute; th&#7875; xem cu&#7889;n s&aacute;ch "C&ugrave;ng
+h&#7885;c so&#7841;n th&#7843;o tr&ecirc;n vi" c&#7911;a t&aacute;c gi&#7843; Lamb v&agrave; Robbins.<br>
+<br>
+C&oacute; nhi&#7873;u ch&#432;&#417;ng tr&igrave;nh &#7903; Linux m&#7903; c&aacute;c t&#7853;p tin theo
+m&#7863;c &#273;&#7883;nh b&#7857;ng vi.V&iacute; d&#7909; nh&#432; so&#7841;n th&#7843;o t&#7853;p tin crontab s&#7869; l&#7845;y vi
+l&agrave;m tr&igrave;nh so&#7841;n th&#7843;o m&#7863;c &#273;&#7883;nh.N&#7871;u b&#7841;n kh&ocirc;ng
+th&iacute;ch vi v&agrave; b&#7841;n mu&#7889;n ch&#432;&#417;ng tr&igrave;nh kh&aacute;c s&#7869;
+ch&#7841;y theo m&#7863;c &#273;&#7883;nh.B&#7841;n c&oacute; th&#7875; l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u &#273;&oacute; b&#7857;ng
+c&aacute;ch thi&#7871;t l&#7853;p gi&aacute; tr&#7883; VISUAL cho bi&#7871;n m&ocirc;i tr&#432;&#7901;ng
+b&#7857;ng t&ecirc;n c&#7911;a tr&igrave;nh so&#7841;n th&#7843;o m&agrave; b&#7841;n th&iacute;ch.&#272;&#7875;
+c&oacute; th&ocirc;ng tin v&#7873; bi&#7871;n&nbsp;  m&ocirc;i tr&#432;&#7901;ng h&atilde;y xem
+m&#7909;c 5.1.3.N&#7871;u b&#7841;n mu&#7889;n tr&igrave;nh so&#7841;n th&#7843;o c&#7911;a b&#7841;n &#273;&#432;&#7907;c coi l&agrave;
+ng&#7847;m &#273;&#7883;nh trong m&#7895;i l&#7847;n &#273;&#259;ng nh&#7853;p th&igrave; b&#7841;n h&atilde;y c&agrave;i
+&#273;&#7863;t gi&aacute; tr&#7883;&nbsp; cho bi&#7871;n VISUAL &#7903; t&#7853;p tin&nbsp; .bash_profile
+ho&#7863;c l&agrave; trong t&#7853;p tin .bashrc.<br>
+<br>
+</a><a name="ch_5.8.7"><span style="font-weight: bold;">5.8.7
+C&aacute;c ph&iacute;m &#273;i&#7873;u khi&#7875;n vi<br>
+</span><br>
+Ph&#7847;n n&agrave;y nh&#432; l&agrave; m&#7909;c tham kh&#7843;o nhanh c&aacute;c l&#7879;nh c&#417;
+b&#7843;n c&#7911;a vi.M&#7897;t v&agrave;i trong s&#7889;&nbsp; ch&uacute;ng b&#7841;n &#273;&atilde;
+l&agrave;m quen &#7903; tr&ecirc;n,m&#7897;t v&agrave;i l&agrave; m&#7899;i:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">
+Operators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ph&iacute;m</span><br>
+<br>
+<span style="font-style: italic;">
+Tr&aacute;i,d&#432;&#7899;i,tr&ecirc;n,ph&#7843;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+h,j,k,l</span><br style="font-style: italic;">
+<span style="font-style: italic;"> di chuy&#7875;n &#273;&#7871;n cu&#7889;i c&#7911;a
+d&ograve;ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$</span><br style="font-style: italic;">
+<span style="font-style: italic;"> di chuy&#7875;n &#273;&#7871;n &#273;&#7847;u d&ograve;ng &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ^</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> di chuy&#7875;n &#273;&#7871;n cu&#7889;i t&#7853;p
+tin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+G</span><br style="font-style: italic;">
+<span style="font-style: italic;"> di chuy&#7875;n &#273;&#7871;n &#273;&#7847;u t&#7853;p
+tin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:1(s&#7889; 1)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> di chuy&#7875;n &#273;&#7871;n d&ograve;ng th&#7913;
+47&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:47</span><br style="font-style: italic;">
+<br>
+<br>
+<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;">
+Operators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ph&iacute;m<br>
+</span><br>
+<span style="font-style: italic;"> x&oacute;a
+d&ograve;ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+dd</span><br style="font-style: italic;">
+<span style="font-style: italic;"> x&oacute;a 5
+d&ograve;ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5dd</span><br style="font-style: italic;">
+<span style="font-style: italic;"> thay th&#7871; k&iacute;
+t&#7921;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+r</span><br style="font-style: italic;">
+<span style="font-style: italic;"> x&oacute;a k&iacute;
+t&#7921;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+x</span><br style="font-style: italic;">
+<span style="font-style: italic;"> x&oacute;a 10 k&iacute;
+t&#7921;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10x</span><br style="font-style: italic;">
+<span style="font-style: italic;"> hu&#7927; b&#7887; t&aacute;c &#273;&ocirc;ng cu&#7889;i
+c&ugrave;ng&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+u</span><br style="font-style: italic;">
+<span style="font-style: italic;"> Li&ecirc;n k&#7871;t d&ograve;ng hi&#7879;n t&#7841;i
+v&#7899;i d&ograve;ng ti&#7871;p
+theo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+j</span><br style="font-style: italic;">
+<br style="font-style: italic;">
+<br>
+<br>
+<br>
+<span style="font-weight: bold;">
+Operators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ph&iacute;m<br>
+</span><br>
+<span style="font-weight: bold;"> t&igrave;m ki&#7871;m "asdf" sau v&#7883;
+tr&iacute; con
+tr&#7887;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/asdf</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> t&igrave;m ki&#7871;m "asdf" tr&#432;&#7899;c v&#7883;
+tr&iacute; con
+tr&#7887;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+?asdf</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> l&#7863;p l&#7841;i t&igrave;m ki&#7871;m cu&#7889;i
+c&ugrave;ng &#7903; v&#259;n
+b&#7843;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/ </span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> sau v&#7883; tr&iacute; con tr&#7887; </span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> l&#7863;p l&#7841;i t&igrave;m ki&#7871;m cu&#7889;i
+c&ugrave;ng &#7903; v&#259;n
+b&#7843;n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+?</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> tr&#432;&#7899;c v&#7883; tr&iacute; con tr&#7887; </span><br
+ style="font-weight: bold;">
+<br style="font-weight: bold;">
+<br>
+<br>
+<span style="font-weight: bold;">
+Operators&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Ph&iacute;m<br>
+</span><br>
+<span style="font-style: italic;"> Tho&aacute;t
+kh&#7887;i&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:q</span><br style="font-style: italic;">
+<span style="font-style: italic;"> Tho&aacute;t kh&ocirc;ng
+ghi&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:q!</span><br style="font-style: italic;">
+<span style="font-style: italic;"> l&#432;u l&#7841;i v&agrave;
+tho&aacute;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:wq</span><br style="font-style: italic;">
+<span style="font-style: italic;"> l&#432;u l&#7841;i kh&ocirc;ng
+tho&aacute;t&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:w</span><br style="font-style: italic;">
+<span style="font-style: italic;"> m&#7903; l&#7841;i t&#7853;p tin hi&#7879;n h&agrave;nh&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:e!</span><br style="font-style: italic;">
+<span style="font-style: italic;"> l&#432;u l&#7841;i n&#7897;i dung buffer hi&#7879;n
+h&agrave;nh&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:w asdf</span><br style="font-style: italic;">
+<span style="font-style: italic;"> m&#7903; t&#7853;p tin
+hejaz&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:e hejaz</span><br style="font-style: italic;">
+<span style="font-style: italic;"> g&#7917;i t&#7853;p tin asdf v&agrave;o
+buffer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:r asdf</span><br style="font-style: italic;">
+<span style="font-style: italic;"> g&#7917;i k&#7871;t qu&#7843; c&#7911;a ls v&agrave;o
+buffer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+:r !ls</span><br>
+</a>
+<div style="text-align: center;"><a name="ch_5.8.7"><span
+ style="font-style: italic;"><br>
+</span></a><a href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.8.7"></a></div>
+<a name="ch_5.8.7"> </a>
+<hr><span style="font-style: italic;"> Bi&ecirc;n d&#7883;ch: V&#361;
+D&#361;ng(vudung@mail.ru)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> website:</span><a
+ href="../../../default.htm" style="font-style: italic;">http://khigiacmoquayve.narod.ru</a><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1-9-2005 Voronezh Russian </span>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

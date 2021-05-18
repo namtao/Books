@@ -1,0 +1,259 @@
+WEBVTT
+
+1
+00:00:03.140 --> 00:00:07.430
+This lesson covers creating,
+deleting and persisting aliases.
+
+2
+00:00:08.670 --> 00:00:11.030
+If you find yourself typing
+the same command over and
+
+3
+00:00:11.030 --> 00:00:15.150
+over again, you can create a shortcut for
+it called an alias.
+
+4
+00:00:15.150 --> 00:00:18.630
+An alias can be thought
+of as a text expander.
+
+5
+00:00:18.630 --> 00:00:21.370
+Creating aliases for
+commands that are really long, or
+
+6
+00:00:21.370 --> 00:00:24.860
+that you use often is a common practice.
+
+7
+00:00:24.860 --> 00:00:30.360
+For example, if you type ls-l frequently,
+you may want to abbreviate it to ll.
+
+8
+00:00:30.360 --> 00:00:31.090
+As a matter of fact,
+
+9
+00:00:31.090 --> 00:00:34.450
+this alias often comes predefined
+in many Linux distributions.
+
+10
+00:00:35.600 --> 00:00:39.055
+The alias command can list or
+create aliases.
+
+11
+00:00:39.055 --> 00:00:42.495
+If you run alias without any additional
+information on the command line,
+
+12
+00:00:42.495 --> 00:00:45.755
+it displays the list of
+current aliases that are set.
+
+13
+00:00:45.755 --> 00:00:48.555
+If you want to create an alias use alias,
+
+14
+00:00:48.555 --> 00:00:53.165
+space, the alias name equals and
+the value for that alias.
+
+15
+00:00:55.170 --> 00:00:58.270
+Aliases don't have to be used for
+just shortcuts.
+
+16
+00:00:58.270 --> 00:01:01.680
+They can be used to fix
+common typing errors.
+
+17
+00:01:01.680 --> 00:01:06.560
+For example if you end up typing grpe,
+when you mean to type grep,
+
+18
+00:01:06.560 --> 00:01:11.190
+you can create an alias, and
+whenever you accidentally type grpe,
+
+19
+00:01:11.190 --> 00:01:14.270
+alias will fix that for
+you, and spell it grep.
+
+20
+00:01:15.330 --> 00:01:18.280
+You can also use aliases to
+make your work environment
+
+21
+00:01:18.280 --> 00:01:20.530
+similar to that of another platform.
+
+22
+00:01:20.530 --> 00:01:23.850
+For instance,
+in Windows cls clears the screen, but
+
+23
+00:01:23.850 --> 00:01:25.830
+in Linux the equivalent command is clear.
+
+24
+00:01:25.830 --> 00:01:29.380
+You could create the shortcuts
+to make you feel more at home.
+
+25
+00:01:30.780 --> 00:01:34.980
+To remove an alias type, unalias and
+the name of the alias, or
+
+26
+00:01:34.980 --> 00:01:40.690
+to remove all aliases use,
+unalias space -a.
+
+27
+00:01:40.690 --> 00:01:43.530
+If you were to create some aliases and
+log out and
+
+28
+00:01:43.530 --> 00:01:46.410
+back in, your aliases would be lost.
+
+29
+00:01:46.410 --> 00:01:49.790
+To make them persist between sessions,
+add them to your dot files,
+
+30
+00:01:49.790 --> 00:01:53.520
+such as .bash_profile.
+
+31
+00:01:53.520 --> 00:01:57.380
+The downside to creating several aliases
+is that when you're on a system that does
+
+32
+00:01:57.380 --> 00:02:00.070
+not have your aliases,
+you might feel lost.
+
+33
+00:02:00.070 --> 00:02:03.860
+If you want to be able to work effectively
+on any Linux system that you have access
+
+34
+00:02:03.860 --> 00:02:06.850
+to, keep your alias usage to a minimum.
+
+35
+00:02:06.850 --> 00:02:09.320
+Another way to handle this
+situation is to simply copy,
+
+36
+00:02:09.320 --> 00:02:12.360
+your configuration files to each Linux
+system that you're going to work on.
+
+37
+00:02:13.910 --> 00:02:17.720
+Let's say you run ls-l a lot.
+
+38
+00:02:17.720 --> 00:02:20.060
+Let's make this an alias, make it shorter.
+
+39
+00:02:20.060 --> 00:02:23.070
+Let's alias ll to be ls-l.
+
+40
+00:02:23.070 --> 00:02:29.139
+So now when you type ll, you'll get
+the same result as when you type ls-l.
+
+41
+00:02:30.570 --> 00:02:34.790
+Let's say you like to type cls because
+you come from a Windows background.
+
+42
+00:02:35.820 --> 00:02:37.820
+Cls is not available on Linux.
+
+43
+00:02:37.820 --> 00:02:39.990
+The equivalent command is clear.
+
+44
+00:02:39.990 --> 00:02:43.760
+You could create an alias for
+cls that equals clear.
+
+45
+00:02:43.760 --> 00:02:46.140
+So now when you type cls
+it will clear the screen.
+
+46
+00:02:47.940 --> 00:02:50.510
+To list aliases just
+use the alias command.
+
+47
+00:02:52.890 --> 00:02:56.788
+To make them persist you can
+edit your bash_profile file.
+
+48
+00:03:02.449 --> 00:03:03.129
+Let's do this.
+
+49
+00:03:03.129 --> 00:03:05.909
+Let's add mycls.
+
+50
+00:03:09.589 --> 00:03:11.109
+We can see that, that's not set.
+
+51
+00:03:11.109 --> 00:03:14.489
+Let's log out and log back in.
+
+52
+00:03:17.830 --> 00:03:20.328
+And you can see that mycls is set.
+
+53
+00:03:26.789 --> 00:03:29.807
+The alias command lists and
+creates aliases,
+
+54
+00:03:29.807 --> 00:03:33.530
+while the unaliases
+command deletes aliases.
+
+55
+00:03:33.530 --> 00:03:37.640
+To persist your aliases between
+login's add them to your dot files.
+

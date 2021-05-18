@@ -1,0 +1,427 @@
+WEBVTT
+
+00:00:03.060 --> 00:00:04.900
+Let's do an ls
+to get our bearings
+
+00:00:04.900 --> 00:00:07.320
+and see what files and directories
+we're working with.
+
+00:00:09.240 --> 00:00:15.300
+Let's use the asterisk or star and
+match all the files that end in .txt.
+
+00:00:16.220 --> 00:00:18.440
+ls *.txt.
+
+00:00:19.620 --> 00:00:22.980
+What just happened is the shell
+performed a globular operation
+
+00:00:23.000 --> 00:00:28.280
+to expand *.txt and it passed
+those results to the ls command.
+
+00:00:28.720 --> 00:00:31.940
+In this example running ls *.txt
+
+00:00:31.980 --> 00:00:39.480
+is the same as running ls ab.txt a.txt b.txt
+and songs.txt.
+
+00:00:40.100 --> 00:00:42.340
+Of course you can clearly see it's easier
+
+00:00:42.340 --> 00:00:45.080
+to use a pattern like *.txt
+
+00:00:45.080 --> 00:00:47.540
+than it is to type out 
+all the files by hand.
+
+00:00:47.900 --> 00:00:51.520
+I just wanted to be clear about
+what is happening when you use wildcards.
+
+00:00:52.140 --> 00:00:54.000
+Now let's look at all the files
+
+00:00:54.020 --> 00:00:55.700
+that start with the letter a.
+
+00:00:55.980 --> 00:00:57.080
+How would you do that?
+
+00:00:57.580 --> 00:01:00.500
+That's right, type in - ls a*.
+
+00:01:02.040 --> 00:01:04.020
+Now let's find all the files
+
+00:01:04.020 --> 00:01:07.880
+that start with an a
+and end in .txt.
+
+00:01:08.300 --> 00:01:13.070
+We can do that by typing
+in ls a*.txt.
+
+00:01:14.240 --> 00:01:17.820
+Can you see a way that we can make
+the wildcard even simpler?
+
+00:01:17.940 --> 00:01:19.030
+How about this?
+
+00:01:19.030 --> 00:01:21.380
+ls a*t.
+
+00:01:21.840 --> 00:01:23.940
+And that gives us the same results.
+
+00:01:24.700 --> 00:01:26.190
+Let me clear the screen here
+
+00:01:26.340 --> 00:01:29.820
+and you see that our bearings look at
+what we're working with.
+
+00:01:30.480 --> 00:01:32.640
+Now let's use the question mark wildcard.
+
+00:01:32.700 --> 00:01:36.940
+Let's match all the files that are
+exactly one character in length.
+
+00:01:37.180 --> 00:01:39.660
+Wé'll do that by running ls?
+
+00:01:40.600 --> 00:01:44.560
+If you want to display all the files
+that are two characters in length,
+
+00:01:44.560 --> 00:01:46.060
+then just use 2 question marks.
+
+00:01:46.420 --> 00:01:49.080
+Each question mark represents
+a single character.
+
+00:01:49.880 --> 00:01:51.880
+So do ??
+
+00:01:52.220 --> 00:01:56.800
+and we'll see that all the two character 
+files and directories are returned,
+
+00:01:56.800 --> 00:01:58.140
+in this case they're just files.
+
+00:01:59.360 --> 00:02:02.420
+Let's list all the files
+that start with an a,
+
+00:02:02.700 --> 00:02:06.740
+can contain exactly one character,
+and end in .txt.
+
+00:02:07.100 --> 00:02:11.040
+To do that, we'll run ls a
+followed by question mark
+
+00:02:11.040 --> 00:02:13.560
+which represents exactly one character
+
+00:02:13.960 --> 00:02:15.860
+and then .txt.
+
+00:02:17.440 --> 00:02:21.040
+Let's check out the difference between
+the question mark and star.
+
+00:02:21.280 --> 00:02:24.340
+Let's run la a *.txt.
+
+00:02:25.220 --> 00:02:28.200
+The star matches zero or more characters,
+
+00:02:28.200 --> 00:02:33.700
+so running ls a*.txt matches
+the file named a.txt.
+
+00:02:35.020 --> 00:02:37.080
+Before we continue,
+I want to point out that
+
+00:02:37.080 --> 00:02:39.280
+you can use the same flags and options
+
+00:02:39.280 --> 00:02:40.900
+as you normally do with the command
+
+00:02:40.900 --> 00:02:42.900
+while you're using wildcards.
+
+00:02:43.260 --> 00:02:45.300
+Let's get a long listing of all the files
+
+00:02:45.300 --> 00:02:46.720
+that start with the letter a.
+
+00:02:46.940 --> 00:02:50.680
+So, just like we normally would use
+with ls to get a long listing,
+
+00:02:50.680 --> 00:02:52.060
+we'll use ls -l
+
+00:02:52.220 --> 00:02:55.640
+and then we'll use a* to get
+every file and directory
+
+00:02:55.640 --> 00:02:57.520
+that began with the letter a.
+
+00:03:00.560 --> 00:03:02.500
+Let me clear the screen again here.
+
+00:03:03.860 --> 00:03:06.160
+Here's an example of using
+a character class.
+
+00:03:06.600 --> 00:03:09.180
+Let's match all the files that
+start with the letter c,
+
+00:03:09.320 --> 00:03:12.090
+then contain a vowel, and end in t.
+
+00:03:12.320 --> 00:03:15.120
+To do this, we'll run an ls c
+
+00:03:15.420 --> 00:03:17.920
+and then any other characters,
+or excuse me,
+
+00:03:17.940 --> 00:03:20.800
+all the characters we want to
+match with a, e, i, o, u.
+
+00:03:21.300 --> 00:03:22.760
+And then t.
+
+00:03:23.920 --> 00:03:26.080
+And I want to point out too
+that it doesn't matter
+
+00:03:26.080 --> 00:03:29.820
+what order the characters
+appear in the bracket.
+
+00:03:30.140 --> 00:03:33.090
+So we can use e, i, o, a, u,
+
+00:03:33.240 --> 00:03:35.140
+and we'll get the same results.
+
+00:03:35.840 --> 00:03:37.110
+And still another one here.
+
+00:03:42.700 --> 00:03:44.110
+Still get the same results.
+
+00:03:45.940 --> 00:03:47.140
+Let's use a range.
+
+00:03:47.140 --> 00:03:49.020
+This range will match all the files
+
+00:03:49.020 --> 00:03:52.540
+that start with an a, b, c, or d.
+
+00:03:52.600 --> 00:04:00.160
+To do that, we'll do ls a-d to
+represent a through d and then '*'.
+
+00:04:01.360 --> 00:04:04.480
+Here's an example of using
+a named character class.
+
+00:04:04.780 --> 00:04:07.880
+This command will return a list
+of files that end in a digit.
+
+00:04:15.500 --> 00:04:17.800
+I've simply been using an
+ls command to demonstrate
+
+00:04:17.800 --> 00:04:19.940
+how to match files using wildcards.
+
+00:04:19.940 --> 00:04:23.110
+But let's do a little bit of
+actual work with wildcards.
+
+00:04:23.480 --> 00:04:26.940
+Let's clear screen and run ls
+again to see what's in our directory.
+
+00:04:28.760 --> 00:04:32.660
+Let's move all of the text files
+into the directory named notes.
+
+00:04:32.880 --> 00:04:35.480
+To do this we can use the
+mv command to move.
+
+00:04:35.940 --> 00:04:39.520
+And then we'll use '*.txt'
+to match all the text files.
+
+00:04:39.860 --> 00:04:43.020
+And we'll end with the directory name,
+which is notes.
+
+00:04:44.000 --> 00:04:45.340
+And let's see if that worked.
+
+00:04:47.080 --> 00:04:51.000
+Okay I'm not seeing any other files
+that end in .txt.
+
+00:04:51.300 --> 00:04:53.400
+Let's look in the notes directory
+and see if they're there.
+
+00:04:54.980 --> 00:04:56.780
+And indeed they are.
+
+00:04:58.540 --> 00:05:02.000
+Let's move all of the mp3 files
+into the music directory.
+
+00:05:02.120 --> 00:05:04.700
+We can do this in a couple
+of different ways.
+
+00:05:04.940 --> 00:05:11.540
+One way would be to run mv *.mp3
+and specify the songs directory.
+
+00:05:12.000 --> 00:05:15.560
+We can also use '*3' since that would match
+
+00:05:15.820 --> 00:05:19.000
+and we can even use a character class like
+
+00:05:19.400 --> 00:05:21.460
+'*' and then digit.
+
+00:05:22.500 --> 00:05:27.160
+I'll go ahead and just use
+mv *.mp3 to perform the match.
+
+00:05:29.880 --> 00:05:31.720
+Let's look inside the music directory
+
+00:05:31.740 --> 00:05:34.220
+and we can see that the 2 mp3 files
+
+00:05:34.220 --> 00:05:36.360
+that match or start at mp3,
+
+00:05:36.700 --> 00:05:40.130
+extension are moved
+into the music directory.
+
+00:05:43.040 --> 00:05:45.340
+Let's use wildcards to delete some files.
+
+00:05:45.560 --> 00:05:47.620
+Here's a good pattern to follow.
+
+00:05:47.820 --> 00:05:50.440
+Test your wildcard pattern
+with the ls command
+
+00:05:50.440 --> 00:05:53.100
+before you use that pattern
+with the rm command.
+
+00:05:53.300 --> 00:05:55.900
+It's where you can hopefully
+avoid deleting any files
+
+00:05:55.900 --> 00:05:57.600
+that you do not intend to remove.
+
+00:05:58.220 --> 00:06:02.140
+Let's remove all the files
+that are 2 characters in length.
+
+00:06:03.040 --> 00:06:05.300
+We'll check our wildcard pattern here
+
+00:06:05.300 --> 00:06:07.600
+to make sure it returns what we want to do
+
+00:06:07.940 --> 00:06:09.280
+and it looks like it does,
+
+00:06:09.280 --> 00:06:13.400
+so we'll go ahead and run rm
+using that same expression.
+
+00:06:16.840 --> 00:06:20.020
+And now the files that match
+that pattern are gone.
+
+00:06:22.060 --> 00:06:24.400
+Today you learned how to use wildcards,
+
+00:06:24.660 --> 00:06:28.100
+you learned that the '*' matches
+zero or more characters.
+
+00:06:28.400 --> 00:06:32.720
+You also learned that the '?'
+matches exactly one of any character.
+
+00:06:33.180 --> 00:06:35.030
+You've learned about character classes
+
+00:06:35.030 --> 00:06:36.860
+and how you can match any character
+
+00:06:36.860 --> 00:06:38.680
+that is included between the brackets.
+
+00:06:39.060 --> 00:06:40.420
+You were taught about ranges
+
+00:06:40.420 --> 00:06:42.520
+and how you can create
+your own custom ranges
+
+00:06:42.520 --> 00:06:43.960
+by starting with the character,
+
+00:06:44.240 --> 00:06:45.560
+following it by a hyphen
+
+00:06:45.560 --> 00:06:47.620
+and then ending it with
+another character.
+
+00:06:48.060 --> 00:06:51.380
+Finally, you've learned about
+the various named character classes
+
+00:06:51.400 --> 00:06:54.540
+and how they can be used to match
+common sets of characters
+
+00:06:54.540 --> 00:06:58.170
+such as digits, uppercase letters
+and lowercase letters.

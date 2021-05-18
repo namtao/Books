@@ -1,0 +1,275 @@
+WEBVTT
+
+1
+00:00:02.933 --> 00:00:06.240
+This lesson will cover how to
+compare the contents of files.
+
+2
+00:00:08.250 --> 00:00:10.920
+If you want to compare two files and
+display the differences,
+
+3
+00:00:10.920 --> 00:00:13.020
+you can use the diff command.
+
+4
+00:00:13.020 --> 00:00:16.150
+The Sdiff command or vimdiff.
+
+5
+00:00:16.150 --> 00:00:19.570
+The diff command will display
+the differences between two files.
+
+6
+00:00:19.570 --> 00:00:24.090
+While the sdiff command will display
+the differences with file1 on the left and
+
+7
+00:00:24.090 --> 00:00:25.630
+file2 on the right.
+
+8
+00:00:26.780 --> 00:00:32.330
+Vimdiff will use the vim editor to display
+the differences between two files.
+
+9
+00:00:32.330 --> 00:00:35.880
+Here's just the first line
+of output produced by diff.
+
+10
+00:00:35.880 --> 00:00:39.310
+The first number represents line
+numbers from the first file and
+
+11
+00:00:39.310 --> 00:00:43.120
+the second number represents line
+numbers from the second file.
+
+12
+00:00:43.120 --> 00:00:46.750
+The middle character separating
+the line numbers will either be a C,
+
+13
+00:00:46.750 --> 00:00:51.390
+which represents a change, D,
+which represents a deletion, or
+
+14
+00:00:51.390 --> 00:00:54.280
+an A which represents an addition.
+
+15
+00:00:54.280 --> 00:00:57.470
+In this example the third line
+of the first file is changed or
+
+16
+00:00:57.470 --> 00:00:59.865
+different than the third
+line in the second file.
+
+17
+00:00:59.865 --> 00:01:04.905
+This is an example of an entire
+output from the diff command.
+
+18
+00:01:04.905 --> 00:01:09.035
+The output that follows the less
+than sign belongs to the first file.
+
+19
+00:01:09.035 --> 00:01:12.095
+The text following the greater than
+sign belongs to the second file.
+
+20
+00:01:13.115 --> 00:01:14.935
+The three dashes are just a separator.
+
+21
+00:01:16.975 --> 00:01:18.815
+In the sdiff output, the pipe or
+
+22
+00:01:18.815 --> 00:01:23.265
+vertical bar character means that the text
+differs in the files on that line.
+
+23
+00:01:24.920 --> 00:01:26.990
+You may also see the less than sign,
+
+24
+00:01:26.990 --> 00:01:29.810
+which means that the line only
+exists in the first file.
+
+25
+00:01:29.810 --> 00:01:33.960
+The greater than sign means that
+line only exists in the second file.
+
+26
+00:01:35.130 --> 00:01:39.350
+When you run vimdiff, both files will
+be pulled up in separate windows.
+
+27
+00:01:39.350 --> 00:01:41.680
+To switch between the windows,
+type CTL+WW.
+
+28
+00:01:41.680 --> 00:01:46.610
+To close the current file in
+the current window, type :q, Enter.
+
+29
+00:01:47.860 --> 00:01:52.380
+If you want to close both files
+at once and quit, type :qa, and
+
+30
+00:01:52.380 --> 00:01:57.070
+if you've made some changes that you
+don't want to save you can type :qa!
+
+31
+00:01:57.070 --> 00:01:57.710
+Enter.
+
+32
+00:02:01.450 --> 00:02:04.650
+We'll use the -n option for
+the cat command to display line numbers.
+
+33
+00:02:10.550 --> 00:02:13.870
+Let's use the diff command to look at
+the differences between those two files.
+
+34
+00:02:19.145 --> 00:02:23.151
+You'll notice that the line that begins
+with the less than symbol belongs
+
+35
+00:02:23.151 --> 00:02:24.184
+to the first file,
+
+36
+00:02:24.184 --> 00:02:28.080
+while the line with the greater than
+symbol belongs to the second file.
+
+37
+00:02:28.080 --> 00:02:34.050
+You'll also notice the first
+line of diff output says 4c4.
+
+38
+00:02:34.050 --> 00:02:36.820
+That means the fourth line of
+the first file is changed or
+
+39
+00:02:36.820 --> 00:02:39.000
+different than the fourth
+line of the second file.
+
+40
+00:02:41.460 --> 00:02:42.091
+Let's use sdiff.
+
+41
+00:02:46.311 --> 00:02:51.122
+And you can see that it places the files
+side by side, and the vertical bar, or
+
+42
+00:02:51.122 --> 00:02:54.839
+the pipe symbol,
+displays the line that has a difference.
+
+43
+00:02:57.440 --> 00:03:05.810
+Let's add a new last line to this file.
+
+44
+00:03:05.810 --> 00:03:06.400
+We'll append it.
+
+45
+00:03:08.040 --> 00:03:10.060
+And we'll run sdiff again.
+
+46
+00:03:10.060 --> 00:03:15.110
+And this time you can see that
+the less than sign represents that
+
+47
+00:03:15.110 --> 00:03:17.820
+there's a line in the first file
+that is not in the second file.
+
+48
+00:03:20.460 --> 00:03:21.296
+We'll use vimdiff.
+
+49
+00:03:25.976 --> 00:03:30.220
+You can see that vim is highlighting
+the differences between the files.
+
+50
+00:03:30.220 --> 00:03:33.710
+We can use CTL+WW to move between windows.
+
+51
+00:03:35.770 --> 00:03:40.900
+And if you wanna close one window,
+q, :q to close the other window.
+
+52
+00:03:40.900 --> 00:03:43.710
+Let's do that again and
+we'll close both of them at the same time.
+
+53
+00:03:43.710 --> 00:03:47.878
+You can look at the differences and
+
+54
+00:03:47.878 --> 00:03:51.336
+:qa Enter to exit vimdiff.
+
+55
+00:03:54.356 --> 00:03:59.158
+In this lesson we covered the diff command
+which displays the differences between two
+
+56
+00:03:59.158 --> 00:04:02.624
+files, the sdiff command which
+does the same thing except for
+
+57
+00:04:02.624 --> 00:04:05.359
+it displays the differences
+side-by-side and
+
+58
+00:04:05.359 --> 00:04:09.176
+the vimdiff command which displays
+differences in the vim editor.
+

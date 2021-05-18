@@ -1,0 +1,168 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/xorg.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>xorg</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr><span style="font-weight: bold;"> 4.3.1 <big>X Configuration</big><br>
+</span><br>
+H&#7879; th&#7889;ng X Window &#273;&#432;&#7907;c coi l&agrave; h&#7879; th&#7889;ng &#273;&#7891; ho&#7841; ti&ecirc;u chu&#7849;n
+cho ng&#432;&#7901;i s&#7917; d&#7909;ng(GUI) d&#432;&#7899;i t&#7845;t c&#7843; c&aacute;c phi&ecirc;n b&#7843;n Unix
+v&agrave; Linux.Kh&aacute;c v&#7899;i Windows,MacOS,trong Linux v&agrave; Unix
+th&igrave; GUI kh&ocirc;ng c&oacute; g&igrave; chung v&#7899;i Nh&acirc;n c&#7911;a
+h&#7879; th&#7889;ng.N&oacute; l&agrave; ph&#7847;n kh&ocirc;ng ph&#7909; thu&#7897;c.&#272;i&#7873;u n&agrave;y
+l&agrave;m cho h&#7879; th&#7889;ng b&#7873;n h&#417;n.<br>
+<br>
+B&#7855;t &#273;&#7847;u t&#7915; phi&ecirc;n b&#7843;n Slackware 10.0 th&igrave; X Window
+tr&ecirc;n Slackware s&#7869; &#273;&#432;&#7907;c thay b&#7857;ng <span style="font-weight: bold;">Xorg</span>.<br>
+&#272;&#7875; x&acirc;y d&#7921;ng X b&#7841;n&nbsp; c&#7847;n c&oacute; t&#7853;p tin <span
+ style="font-style: italic;">/etc/X11/xorg.conf</span>.&#272;&#7845;y l&agrave;
+t&#7853;p tin ch&#7913;a th&ocirc;ng tin v&#7873; video-card,chu&#7897;t v&agrave; m&agrave;n
+h&igrave;nh.N&oacute; l&agrave; m&#7897;t t&#7853;p tin c&#7845;u h&igrave;nh ph&#7913;c t&#7841;p
+tuy nhi&ecirc;n may m&#7855;n c&#417; m&#7897;t v&agrave;i ch&#432;&#417;ng tr&igrave;nh s&#7917; d&#7909;ng
+&#273;&#7875; t&#7841;o n&oacute; cho b&#7841;n.Ch&uacute;ng ta s&#7869; l&agrave;m quen v&#7899;i
+ch&uacute;ng &#7903; ph&#7847;n n&agrave;y.<br>
+<br>
+<span style="font-weight: bold;"> xorgconfig<br>
+</span><br>
+H&atilde;y ch&#7841;y xorgconfig,ngay l&#7853;p t&#7913;c s&#7869; c&oacute; m&#7897;t m&agrave;n
+h&igrave;nh ch&#7913;a &#273;&#7847;y th&ocirc;ng tin v&#7873; xorgconfig,&#273;&#7875; ti&#7871;p t&#7909;c
+h&atilde;y nh&#7845;n Enter.xorconfig s&#7869; h&#7887;i b&#7841;n v&#7873; &#273;&#432;&#7901;ng d&#7851;n ch&iacute;nh
+x&aacute;c.N&oacute; &#273;&atilde; &#273;&#432;&#7907;c n&ecirc;u &#7903; tr&ecirc;n,h&atilde;y
+&#273;i&#7873;n v&agrave;o v&agrave; Enter.<br>
+<br>
+<span style="font-weight: bold;"> Mouser Configuration</span><br
+ style="font-weight: bold;">
+<br>
+<div style="text-align: center;"><img src="image/xorg/mouse.png"
+ title="" alt="" style="width: 542px; height: 370px;"><br>
+<br>
+</div>
+B&#7841;n h&atilde;y ch&#7885;n chu&#7897;t c&#7911;a m&igrave;nh t&#7915; menu v&agrave; nh&#7845;n
+Enter.N&#7871;u b&#7841;n kh&ocirc;ng nh&igrave;n th&#7845;y chu&#7897;t c&#7911;a b&#7841;n trong &#273;&oacute;
+th&igrave; &#273;&#417;n gi&#7843;n h&atilde;y ch&#7885;n Mocrosoft protocol - &#273;&oacute;
+l&agrave; d&#7841;ng chung v&agrave; chu&#7897;t s&#7869; l&agrave;m vi&#7879;c b&igrave;nh
+th&#432;&#7901;ng.Sau &#273;&oacute; <span style="font-weight: bold;">xorgconfig</span>
+s&#7869; h&#7887;i b&#7841;n v&#7873; <span style="font-style: italic;">ChordMiddle v&agrave;
+Emulate3Buttons</span>.B&#7841;n s&#7869; th&#7845;y nh&#7919;ng h&#432;&#7899;ng d&#7851;n c&#7909; th&#7875; tr&ecirc;n
+m&agrave;n h&igrave;nh.S&#7917; d&#7909;ng n&oacute; n&#7871;u n&uacute;t th&#7913; ba
+kh&ocirc;ng l&agrave;m vi&#7879;c tr&ecirc;n X ho&#7863;c b&#7841;n c&oacute; chu&#7897;t hai
+n&uacute;t(khi &#273;&oacute; nh&#7845;n hai n&uacute;t &#273;&#7891;ng th&#7901;i s&#7869; l&agrave;
+n&uacute;t th&#432; ba).<br>
+<br>
+Ti&#7871;p t&#7909;c h&atilde;y ch&#7885;n t&ecirc;n cho mouse device(thi&#7871;t b&#7883;
+chu&#7897;t).Theo m&#7863;c &#273;&#7883;nh t&ecirc;n s&#7869; l&agrave; /dev/mouse.Tuy nhi&ecirc;n
+n&#7871;u b&#7841;n s&#7917; d&#7909;ng GPM(Linux mouse server)&#273;&#7875;&nbsp; thay ch&#7895; th&igrave; b&#7841;n
+c&#7847;n ch&#7885;n d&#7841;ng cho thi&#7871;t b&#7883; l&agrave;: <span style="font-weight: bold;">/dev/gpmdata</span>&#273;&#7875;
+c&oacute; nh&#7919;ng th&ocirc;ng tin v&#7873; chu&#7897;t qua <span
+ style="font-weight: bold;">gpm</span>.Trong m&#7897;t v&agrave;i tr&#432;&#7901;ng h&#7907;p
+n&oacute; s&#7869; l&agrave;m vi&#7879;c t&#7889;t h&#417;n nh&#7919;ng m&agrave; ch&uacute;ng
+t&ocirc;i kh&ocirc;ng khuy&#7871;n khich c&aacute;c b&#7841;n s&#7917; d&#7909;ng.<br>
+<br>
+Ti&#7871;p &#273;&#7871;n xorgconfig s&#7869; h&#7887;i b&#7841;n v&#7873; c&oacute; thi&#7871;t l&#7853;p c&aacute;c
+ph&iacute;m &#273;&#7863;c bi&#7879;t hay kh&ocirc;ng.N&#7871;u c&#7847;n th&igrave; h&atilde;y ch&#7885;n
+"y".H&#7847;u h&#7871;t &#273;&#7873;u ch&#7885;n "n".<br>
+<br>
+<span style="font-weight: bold;"> Horizontal Sync</span><br>
+<br>
+<div style="text-align: center;"><img
+ src="image/xorg/harizontalsync.png" title="" alt=""
+ style="width: 538px; height: 370px;"><br>
+<br>
+</div>
+&#7902; m&#7909;c n&agrave;y b&#7841;n ph&#7843;i ch&#7885;n b&#7873; ngang c&#7911;a m&agrave;n h&igrave;nh.B&#7841;n
+h&atilde;y ch&#7885;n m&#7897;t trong s&#7889; ch&uacute;ng.N&oacute; r&#7845;t l&agrave; quan
+tr&#7885;ng khi ch&#7885;n l&#7921;a.&#272;&#7915;ng ch&#7885;n chi&#7873;u ngang v&#432;&#7907;t qu&aacute; gi&#7899;i h&#7841;n cho
+ph&eacute;p c&#7911;a m&agrave;n h&igrave;nh.Tuy nhi&ecirc;n n&oacute;
+kh&ocirc;ng nguy hi&#7875;m v&#7899;i c&aacute;c m&agrave;n h&igrave;nh hi&#7879;n &#273;&#7841;i b&#7903;i
+v&igrave; ch&uacute;ng c&oacute; b&#7897; ph&#7853;n b&#7843;o v&#7879;,kh&ocirc;ng cho
+ph&eacute;p v&#432;&#7907;t qu&aacute; gi&#7899;i h&#7841;n.Nh&#7919;ng m&agrave;n h&igrave;nh c&#7893; x&#432;a
+c&oacute; th&#7875; b&#7883; h&#432; h&#7841;i khi v&#432;&#7907;t qu&aacute; m&#7913;c &#273;&#7897; cho ph&eacute;p c&#7911;a
+m&agrave;n h&igrave;nh.S&#7869; r&#7845;t l&agrave; c&oacute; l&#7907;i n&#7871;u b&#7841;n c&oacute;
+trong tay t&agrave;i li&#7879;u v&#7873; m&agrave;n h&igrave;nh.<br>
+Th&ocirc;ng th&#432;&#7901;ng v&#7899;i c&aacute;c m&agrave;n h&igrave;nh &#273;&#432;&#417;ng th&#7901;i
+c&oacute; th&#7875; ch&#7885;n 31.5-48.5 ho&#7863;c 31.5-57.0.N&#7871;u ai &#273;&oacute; c&oacute;
+m&agrave;n h&igrave;nh ch&#7845;t l&#432;&#7907;ng cao h&#417;n th&igrave; c&oacute; th&#7875; ch&#7885;n
+chi&#7873;u ngang nhi&#7873;u h&#417;n.Ho&#7863;c b&#7841;n c&oacute; th&#7875; nh&#7853;p v&agrave;o
+th&ocirc;ng s&#7889; c&#7911;a m&igrave;nh n&#7871;u ch&uacute;ng kh&ocirc;ng c&oacute;
+trong danh s&aacute;ch.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> Vertical Sunc</span><br>
+<div style="text-align: center;"><img src="image/xorg/verticalsyc.png"
+ title="" alt="" style="width: 544px; height: 202px;"><br>
+<br>
+</div>
+&#272;&acirc;y l&agrave; ph&#7847;n khai b&aacute;o chi&#7873;u cao c&#7911;a m&agrave;n
+h&igrave;nh.B&#7841;n n&ecirc;n t&igrave;m n&oacute; trong c&aacute;c
+t&agrave;i li&#7879;u v&#7873; m&aacute;y t&iacute;nh c&#7911;a m&igrave;nh.xorgconfig s&#7869;
+h&#7887;i b&#7841;n t&ecirc;n nh&#7853;n d&#7841;ng cho m&agrave;n h&igrave;nh trong
+xorg.conf.H&atilde;y &#273;i&#7873;n t&ecirc;n v&agrave;o.<br>
+<br>
+<span style="font-weight: bold;"> Video Card</span><br>
+<br>
+<div style="text-align: center;"><img src="image/xorg/videocard.png"
+ title="" alt="" style="width: 392px; height: 372px;"><br>
+<br>
+</div>
+B&acirc;y gi&#7901; b&#7841;n c&oacute; th&#7875; nh&igrave;n th&#7845;y c&#417; s&#7903; d&#7919; li&#7879;u v&#7873;
+video-card.N&#7871;u b&#7841;n mu&#7889;n s&#7917; d&#7909;ng ch&uacute;ng th&igrave; h&atilde;y
+n&oacute;i "y" v&agrave; ch&#7885;n card t&#7915; danh s&aacute;ch n&agrave;y.N&#7871;u
+b&#7841;n kh&ocirc;ng nh&igrave;n th&#7845;y t&ecirc;n card c&#7911;a m&igrave;nh
+th&igrave; h&atilde;y s&#7917; d&#7909;ng tr&ecirc;n c&aacute;c chipset kh&aacute;c
+m&agrave; n&oacute; c&oacute; th&#7875; ho&#7841;t &#273;&#7897;ng.<br>
+<br>
+Ti&#7871;p theo l&agrave; th&ocirc;ng b&aacute;o s&#7889; l&#432;&#7907;ng RAM tr&ecirc;n
+video-card.Ngo&agrave;i ra <span style="font-weight: bold;">xorgconfig</span>
+c&ograve;n mu&#7889;n b&#7841;n &#273;i&#7873;n v&agrave;o m&#7897;t v&agrave;i th&ocirc;ng tin b&#7893;
+sung cho video-card.N&#7871;u b&#7841;n th&iacute;ch h&atilde;y nh&#7853;p v&agrave;o.<br>
+<br>
+Ti&#7871;p &#273;&#7871;n b&#7841;n s&#7869; ph&#7843;i ch&#7885;n ch&#7871; &#273;&#7897; hi&#7875;n th&#7883;.B&#7841;n c&oacute; th&#7875; ch&#7885;n theo
+m&#7863;c &#273;&#7883;nh,sau &#273;&oacute; c&oacute; th&#7875; so&#7841;n th&#7843;o l&#7841;i t&#7853;p tin <span
+ style="font-style: italic;">/etc/X11/xorg.conf</span> v&agrave; ch&#7885;n
+1024x768 l&agrave;m ng&#7847;m &#273;&#7883;nh.<br>
+<br>
+C&#361;ng th&#7901;i &#273;i&#7875;m n&agrave;y xorgconfig s&#7869; h&#7887;i b&#7841;n:c&oacute; l&#432;u l&#7841;i t&#7853;p
+tin c&#7845;u h&igrave;nh n&agrave;y kh&ocirc;ng.H&atilde;y tr&#7843; l&#7901;i "yes"
+v&agrave; k&#7871;t th&uacute;c qu&aacute; tr&igrave;nh c&agrave;i &#273;&#7863;t.B&#7841;n
+c&oacute; th&#7875; ch&#7841;y X ngay b&#7857;ng <span style="font-weight: bold;">starx</span><br>
+<br>
+<span style="font-weight: bold;"> xorgsetup<br>
+</span><br>
+M&#7897;t ph&#432;&#417;ng &aacute;n th&#7913; hai &#273;&#7875; x&acirc;y d&#7921;ng X l&agrave; s&#7917; d&#7909;ng
+xorgsetup(s&#7917; d&#7909;ng &#7903; ch&#7871; &#273;&#7897; &#273;&#7891; h&#7885;a).&#272;&#7875; b&#7855;t &#273;&#7847;u h&atilde;y ch&#7841;y:xorgsetup
+tuy nhi&ecirc;n ch&uacute; &yacute; b&#7841;n ph&#7843;i ch&#7841;y b&#7857;ng root.<br>
+<br>
+<span style="font-weight: bold;"> #xorgsetup<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> xorgsetup</span> v&#7873; b&#7843;n ch&#7845;t gi&#7889;ng nh&#432;
+xorgconfig,n&oacute; s&#7869; h&#7887;i b&#7841;n m&#7897;t lo&#7841;t c&aacute;c c&acirc;u h&#7887;i v&#7873; h&#7879;
+th&#7889;ng c&#7911;a ban.H&atilde;y nh&#7899; nh&#7919;ng th&ocirc;ng tin b&#7841;n c&oacute; &#273;&#7875;
+x&acirc;y d&#7921;ng X.B&#7843;n th&acirc;n xorgsetup ch&#7913;a r&#7845;t nhi&#7873;u th&ocirc;ng
+tin s&#7869; gi&uacute;p &#273;&#7905; b&#7841;n thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh h&#7879; th&#7889;ng.<br>
+<br>
+Ch&uacute; &yacute; n&#7871;u b&#7841;n &#273;&atilde; c&oacute; m&#7897;t t&#7853;p tin <span
+ style="font-weight: bold;">xorgconf</span> &#7903; <span
+ style="font-style: italic;">/etc/X11/xorg.conf </span>th&igrave;
+ch&#432;&#417;ng tr&igrave;nh s&#7869; h&#7887;i b&#7841;n xem c&oacute; l&#432;u n&oacute; l&#7841;i tr&#432;&#7899;c
+khi b&#7855;t &#273;&#7847;u.T&#7853;p tin g&#7889;c s&#7869; c&oacute; t&ecirc;n l&agrave; <span
+ style="font-style: italic;">/etc/X11/xorg.conf.backup.</span><br>
+<div style="text-align: center;"><span style="font-style: italic;"><br>
+</span><a href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a></div>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

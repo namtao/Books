@@ -1,0 +1,135 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.740 --> 00:00:08.050
+This video is for Windows users only.  If you're using Mac, skip
+
+00:00:08.050 --> 00:00:10.150
+ahead to the next video.
+
+00:00:10.150 --> 00:00:19.480
+Open up a web browser and visit VirtualBox.org.
+
+00:00:19.480 --> 00:00:23.349
+Next, find the link that takes you to the download page.
+
+00:00:23.349 --> 00:00:28.660
+From here, select the file for your platform, which is Windows.  So we'll
+
+00:00:28.660 --> 00:00:34.600
+click on the link next to Windows hosts.
+Once the download is complete
+
+00:00:34.600 --> 00:00:40.180
+is you can click the file to begin the installation process. The installation is
+
+00:00:40.180 --> 00:00:41.530
+fairly easy.
+
+00:00:41.530 --> 00:00:45.280
+We're simply going to accept all the defaults and answer yes to all the
+
+00:00:45.280 --> 00:00:52.240
+questions. So here, I'll click next.
+
+00:00:52.300 --> 00:01:01.660
+If so, just click on install or yes.
+
+00:01:01.780 --> 00:01:06.460
+You might be prompted a few times during the install.
+
+00:01:08.780 --> 00:01:11.140
+At the end of the installation,
+
+00:01:11.240 --> 00:01:14.480
+clicking on Finish will start virtualbox.
+
+00:01:19.780 --> 00:01:21.560
+To start virtualbox
+
+00:01:21.560 --> 00:01:24.600
+in the future, you can click in the search
+
+00:01:24.600 --> 00:01:27.380
+bar and type "VirtualBox"
+
+00:01:33.960 --> 00:01:36.100
+or you can click on the
+
+00:01:36.100 --> 00:01:40.380
+windows button, and navigate your way to the VirtualBox Application.
+
+00:01:45.340 --> 00:01:51.070
+"Oracle VM VirtualBox".
+
+00:01:51.450 --> 00:01:52.650
+there
+
+00:01:52.650 --> 00:01:57.150
+Finally you'll see the application
+itself Oracle VM VirtualBox and that's
+
+00:01:57.150 --> 00:02:00.050
+how you would start in the future.
+
+00:02:00.060 --> 00:02:06.210
+Next, let's install a program called
+7-zip to do that will visit seven dash
+
+00:02:06.210 --> 00:02:12.720
+zip . o RG. You should see a download link right on the home page.
+
+00:02:12.720 --> 00:02:16.860
+Some reason you don't you can always
+click on downloads to go to the full
+
+00:02:16.860 --> 00:02:21.239
+download page. Here I'm just going to
+click the download link next to the
+
+00:02:21.239 --> 00:02:26.310
+64-bit file will click that and make
+sure that that downloads.
+
+00:02:26.310 --> 00:02:31.010
+Next we'll click on it to start the
+installation will click on yes here.
+
+00:02:31.020 --> 00:02:38.580
+Again we're going to accept the defaults
+just like we did with virtualbox. Now the
+
+00:02:38.580 --> 00:02:43.650
+installation is complete and we can
+click close. In an upcoming video you'll
+
+00:02:43.650 --> 00:02:48.420
+be asked to download and extract the contents of a compressed archive file.
+
+00:02:48.420 --> 00:02:52.470
+You'll do that with 7-zip.  Here's an
+
+00:02:52.470 --> 00:02:57.750
+example.  I have a file I downloaded that ends in 7z. I've
+
+00:02:57.750 --> 00:03:01.590
+navigated to that file using the file explorer. It's in my downloads directory
+
+00:03:01.590 --> 00:03:08.190
+here now i will right click on the file
+go to the 7-zip sub menu and then click
+
+00:03:08.190 --> 00:03:14.040
+"Extract Here."  You'll see that a new folder appears and it has the
+
+00:03:14.040 --> 00:03:17.910
+uncompressed version of the file in it. So i'm going to double-click in there
+
+00:03:17.910 --> 00:03:22.950
+and now you can see that it has a file
+there. Now you're ready to install Linux
+
+00:03:23.040 --> 00:03:24.780
+in a virtual machine using virtualbox.
+

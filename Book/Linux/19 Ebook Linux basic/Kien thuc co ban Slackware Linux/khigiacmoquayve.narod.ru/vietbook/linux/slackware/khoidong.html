@@ -1,0 +1,517 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/khoidong.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>khoidong</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span>
+<hr> <a name="ch_4.4"><big style="font-weight: bold;">4.4 Kh&#7903;i &#272;&#7897;ng H&#7879;
+Th&#7889;ng<br>
+</big><br>
+C&#7845;u h&igrave;nh kh&#7903;i &#273;&#7897;ng c&#7911;a Linux c&oacute; th&#7875; &#273;&#417;n gi&#7843;n ho&#7863;c ph&#7913;c
+t&#7841;p tu&#7923; theo m&#7913;c &#273;&#7897; s&#7917; d&#7909;ng. C&oacute; nhi&#7873;u ng&#432;&#7901;i d&ugrave;ng ch&#7881; &#273;&#417;n
+gi&#7843;n c&agrave;i nguy&ecirc;n Slackware tr&ecirc;n m&aacute;y c&#7911;a
+m&igrave;nh ch&iacute;nh v&igrave; th&#7871; h&#7885; ch&#7881; &#273;&#417;n gi&#7843;n b&#7853;t m&aacute;y
+v&agrave; s&#7917; d&#7909;ng,kh&ocirc;ng c&#7847;n ph&#7843;i suy ngh&#297; nhi&#7873;u l&agrave;m
+g&igrave;.C&ograve;n s&#7889; c&ograve;n l&#7841;i th&igrave; ng&#432;&#7907;c l&#7841;i,h&#7885; s&#7917; d&#7909;ng
+H&#272;H v&agrave;o c&aacute;c m&#7909;c &#273;&iacute;ch kh&aacute;c nhau ch&iacute;nh
+v&igrave; th&#7871; &#273;&ograve;i h&#7887;i c&oacute; s&#7921; li&ecirc;n k&#7871;t gi&#432;a c&aacute;c
+H&#272;H &#273;&#7875; cho kh&ocirc;ng c&oacute; m&#7897;t c&aacute;i n&agrave;o b&#7883; ch&#7871;t. <br>
+Trong ph&#7847;n n&agrave;y ch&#7881; mi&ecirc;u t&#7843; chi ti&#7871;t c&aacute;ch s&#7917; d&#7909;ng
+Lilo v&agrave; Loadlin - hai thi&#7871;t b&#7883; kh&#7903;i &#273;&#7897;ng c&oacute; &#273;&#432;&#7907;c
+tr&ecirc;n Slackware.<br>
+<br>
+</a><a name="ch_4.4.1"><span style="font-weight: bold;">4.4.1 LILO<br>
+</span><br>
+Lilo(Linux Loader) l&agrave; c&ocirc;ng c&#7909; kh&#7903;i &#273;&#7897;ng ph&#7893; bi&#7871;n s&#7917; d&#7909;ng
+trong c&aacute;c phi&ecirc;n b&#7843;n Linux.N&oacute; c&oacute; c&#7845;u
+h&igrave;nh t&#432;&#417;ng &#273;&#7889;i ch&#7863;t ch&#7869; v&agrave; c&oacute; th&#7875; s&#7917; d&#7909;ng cho
+c&aacute;c H&#272;H kh&aacute;c nhau.<br>
+<br>
+Slackware Linux cho ph&eacute;p s&#7917; d&#7909;ng Lilo b&#7857;ng menu-program &#273;&#7875; thi&#7871;t
+l&#7853;p c&#7845;u h&igrave;nh lilo,&#7913;ng d&#7909;ng g&#7885;i l&agrave; liloconfig.&#7912;ng d&#7909;ng
+n&agrave;y &#273;&#432;&#7907;c g&#7885;i ra l&#7847;n &#273;&#7847;u trong qu&aacute; tr&igrave;nh c&agrave;i
+&#273;&#7863;t h&#7879; th&#7889;ng.<br>
+<br>
+Lilo &#273;&#7885;c nh&#7919;ng tham bi&#7871;n c&#7911;a m&igrave;nh tr&ecirc;n file
+/etc/lilo.conf(5). T&#7879;p tin n&agrave;y kh&ocirc;ng &#273;&#432;&#7907;c s&#7917; d&#7909;ng trong
+c&aacute;c l&#7847;n kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng m&agrave; &#273;&#432;&#7907;c s&#7917; d&#7909;ng khi c&agrave;i
+&#273;&#7863;t LILO. Lilo c&#7847;n ph&#7843;i &#273;&#432;&#7907;c c&agrave;i l&#7841;i sau m&#7895;i l&#7847;n thay &#273;&#7893;i c&#7845;u
+h&igrave;nh c&#7911;a n&oacute;.<span style="font-weight: bold;">liloconfig<span
+ style="font-weight: bold;"> </span></span>gi&uacute;p &#273;&#7905; b&#7841;n x&acirc;y
+d&#7921;ng c&#7845;u h&igrave;nh file m&#7897;t c&aacute;ch h&#7907;p l&yacute;.<br>
+&nbsp;N&#7871;u b&#7841;n th&iacute;ch s&#7917;a ch&#7919;a file /etc/lilo.conf b&#7857;ng tay
+th&igrave; khi c&agrave;i l&#7841;i LILO c&#7847;n g&#7885;i <span
+ style="font-weight: bold;">/sbin/lilo</span>t&#7915; v&#7887; l&#7879;nh(shell prompt)<br>
+Khi d&ugrave;ng liloconfig b&#7841;n s&#7869; nh&igrave;n th&#7845;y m&agrave;n
+h&igrave;nh tr&ecirc;n v&#7887; l&#7879;nh nh&#432; sau:<br>
+</a>
+<div style="text-align: center;"><a name="ch_4.4.1"><img
+ src="image/khoidong/lilo.png" title="" alt=""
+ style="width: 478px; height: 286px;"></a><br>
+<a name="ch_4.4.1"></a></div>
+<a name="ch_4.4.1"> N&#7871;u nh&#432; b&#7841;n &#273;&atilde; c&agrave;i Lilo &#273;&#7847;u ti&ecirc;n
+r&#7891;i th&igrave; b&#7841;n l&ecirc;n ch&#7885;n "simple".Trong c&aacute;c tr&#432;&#7901;ng h&#7907;p
+kh&aacute;c b&#7841;n ch&#7885;n "expert" cho nhanh h&#417;n n&#7871;u b&#7841;n &#273;&atilde;
+qu&ecirc;n l&agrave;m vi&#7879;c v&#7899;i Linux v&agrave; Lilo.Ch&#7885;n "simple" s&#7869;
+b&#7855;t &#273;&#7847;u x&acirc;y d&#7921;ng c&#7845;u h&igrave;nh Lilo.<br>
+<br>
+N&#7871;u nh&#432; <span style="font-style: italic;">framebuffer</span>&nbsp;
+c&oacute; trong nh&acirc;n th&igrave;&nbsp; <span
+ style="font-style: italic;">liloconfig&nbsp;</span> s&#7869; h&#7887;i b&#7841;n&nbsp;
+xem&nbsp; ch&#7871; &#273;&#7897; video n&agrave;o b&#7841;n mu&#7889;n s&#7917; d&#7909;ng. Ch&#7871; &#273;&#7897; video
+n&agrave;y s&#7869; &#273;&#432;&#7907;c s&#7917; d&#7909;ng cho XFree86 frame bufer Server.N&#7871;u nh&#432; b&#7841;n
+kh&ocirc;ng mu&#7889;n ch&#7841;y console &#7903; ch&#7871; &#273;&#7897; video th&igrave; n&ecirc;n ch&#7885;n
+&#7903; ch&#7871; &#273;&#7897; ti&ecirc;u chu&#7849;n 80x25 &#7903; ch&#7871; &#273;&#7897; v&#259;n b&#7843;n (text mode)<span
+ style="font-weight: bold;"><span style="font-weight: bold;"><span
+ style="font-weight: bold;"></span></span></span><span
+ style="font-weight: bold;"><br>
+</span>B&#432;&#7899;c ti&#7871;p theo l&agrave; ph&#7847;n c&#7845;u h&igrave;nh LILO - &#272;&oacute;
+l&agrave; ch&#7885;n ch&#7895; &#273;&#7875; c&agrave;i &#273;&#7863;t LILO c&oacute; l&#7869; &#273;&acirc;y
+l&agrave; b&#432;&#7899;c quan tr&#7885;ng nh&#7845;t. B&#7843;ng sau &#273;&acirc;y s&#7869; gi&#7843;i th&iacute;ch
+r&otilde; h&#417;n c&aacute;c l&#7921;a ch&#7885;n<br>
+<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 20%; font-style: italic;">Root<br>
+      </td>
+      <td style="vertical-align: top;">&#272;&acirc;y l&agrave; ph&#432;&#417;ng
+&aacute;n c&agrave;i &#273;&#7863;t lilo tr&ecirc;n&nbsp; &#273;&#7847;u catalog&nbsp; g&#7889;c
+.N&oacute; l&agrave; c&aacute;ch ch&#7885;n l&#7921;a kh&ocirc;ng nguy hi&#7875;m n&#7871;u nh&#432;
+tr&ecirc;n m&aacute;y c&#7911;a b&#7841;n c&oacute; c&aacute;c H&#272;H kh&aacute;c.B&#7841;n
+c&oacute; th&#7875; y&ecirc;n t&acirc;m r&#7857;ng kh&ocirc;ng m&#7897;t booter(v&#7853;t kh&#7903;i
+&#273;&#7897;ng) c&#7911;a c&aacute;c H&#272;H kh&aacute;c b&#7883; &#7843;nh h&#432;&#7903;ng.Nh&#432;ng m&agrave; &#273;i&#7875;m
+y&#7871;u c&#7911;a n&oacute; l&agrave; Lilo c&oacute; th&#7875; &#273;&#432;&#7907;c kh&#7903;i &#273;&#7897;ng ch&#7881; khi
+Linux l&agrave; &#273;&#7847;u ti&ecirc;n tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">Floppy<br>
+      </td>
+      <td style="vertical-align: top;">Ph&#432;&#417;ng &aacute;n n&agrave;y h&#7847;u
+nh&#432; la kh&ocirc;ng c&oacute; nguy hi&#7875;m.N&oacute; t&#7841;o ra m&#7897;t &#273;&#297;a kh&#7903;i
+&#273;&#7897;ng d&ugrave;ng &#273;&#7875; kh&#7903;i &#273;&#7897;ng Linux tr&ecirc;n m&aacute;y c&#7911;a b&#7841;n.
+V&acirc;t kh&#7903;i &#273;&#7897;ng(booter) kh&ocirc;ng n&#7857;m tr&ecirc;n h&#7879; th&#7889;ng n&#7919;a
+m&agrave; n&oacute; n&#7857;m tr&ecirc;n floppy.Nh&#432;ng &#273;i&#7875;m y&#7871;u c&#7911;a n&oacute;
+l&agrave; n&#7871;u nh&#432; floppy b&#7883; h&#7887;ng ho&#7863;c kh&ocirc;ng &#273;&#7885;c &#273;&#432;&#7907;c.B&#7841;n s&#7869; ph&#7843;i
+ti&#7871;n h&agrave;nh kh&#7903;i &#273;&#7897;ng t&#7915; CD-ROM ho&#7863;c l&agrave;m l&#7841;i &#273;&#297;a kh&#7903;i &#273;&#7897;ng
+kh&aacute;c<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">MBR<br>
+      </td>
+      <td style="vertical-align: top;">Ph&#432;&#417;ng ph&aacute;p n&agrave;y
+khuy&#7871;n kh&iacute;ch khi tr&ecirc;n m&aacute;y b&#7841;n c&oacute; duy nh&#7845;t
+Slackware<br>
+N&#7871;u b&#7841;n quy&#7871;t &#273;&#7883;nh s&#7917; d&#7909;ng ph&#432;&#417;ng ph&aacute;p n&agrave;y th&igrave;
+n&oacute; s&#7869; ghi l&#7841;i m&#7885;i booter tr&ecirc;n MBR<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<a name="ch_4.4.1">Sau khi ch&#7885;n ch&#7895; cho booter th&igrave; liloconfig s&#7869;
+ghi c&#7845;u h&igrave;nh c&#7911;a n&oacute; v&agrave; c&agrave;i &#273;&#7863;t lilo
+v&agrave; k&#7871;t th&uacute;c.<br>
+B&acirc;y gi&#7901; chuy&#7875;n sang ph&#432;&#417;ng &aacute;n ch&#7885;n l&agrave; "expert"
+th&igrave; b&#7841;n c&oacute; &#273;&#432;&#7907;c m&#7897;t menu r&#7845;t &#273;&#7863;c bi&#7879;t. C&aacute;c menu con
+trong n&oacute; &#273;&#432;&#7907;c &#273;&#7885;c trong file /etc/lilo.conf. Menu "expert" nh&#432;
+d&#432;&#7899;i &#273;&acirc;y:<br>
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_4.4.1"><img
+ src="image/khoidong/liloexpert.png" title="" alt=""
+ style="width: 524px; height: 320px;"></a><br>
+<a name="ch_4.4.1"></a></div>
+<a name="ch_4.4.1"> V&#7853;y &#273;&#7845;y,vi&#7879;c thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh lilo th&#7853;t &#273;&#417;n
+gi&#7843;n.Nh&#432;ng khi m&agrave; lilo &#273;&#7897;t nhi&ecirc;n kh&ocirc;ng l&agrave;m
+vi&#7879;c th&igrave; b&#7841;n h&atilde;y y&ecirc;n t&acirc;m v&#7851;n c&ograve;n
+c&oacute; c&aacute;c c&aacute;ch kh&aacute;c &#273;&#7875; kh&#7903;i &#273;&#7897;ng Linux<br>
+<br>
+</a><a name="ch_4.4.2"><span style="font-weight: bold;">4.4.2 LOADLIN<br>
+</span><br>
+Loadlin l&agrave; m&#7897;t c&ocirc;ng c&#7909; kh&#7903;i &#273;&#7897;ng c&#7911;a Linux &#273;&#432;&#7907;c s&#7917; d&#7909;ng
+tr&ecirc;n Slackware Linux.Loadlin &#273;&#432;&#7907;c coi nh&#432; l&agrave; ph&#432;&#417;ng
+ph&aacute;p kh&#7903;i &#273;&#7897;ng Linux t&#7915; m&ocirc;i tr&#432;&#7901;ng DOS.&#272;&#7875; ch&#432;&#417;ng
+tr&igrave;nh c&oacute; th&#7875; l&agrave;m vi&#7879;c th&igrave; b&#7841;n c&#7847;n c&oacute;
+nh&acirc;n n&#7857;m trong ph&acirc;n v&ugrave;ng DOS.<br>
+<br>
+Khi c&agrave;i &#273;&#7863;t Linux th&igrave; loadlin n&#7857;m trong th&#432; m&#7909;c /root &#7903;
+d&#7841;ng zip.&#272;&#7875; cho loadlin kh&ocirc;ng t&#7921; &#273;&#7897;ng c&agrave;i &#273;&#7863;t th&igrave;
+b&#7841;n c&#7847;n xao ch&eacute;p nh&acirc;n Linux (vmlinuz) v&agrave; loadlin t&#7915;
+home catalog root v&agrave;o ph&acirc;n v&ugrave;ng DOS<br>
+Loadlin r&#7845;t ti&#7879;n l&#7907;i n&#7871;u nh&#432; b&#7841;n th&iacute;ch t&#7841;o menu-kh&#7903;i &#273;&#7897;ng &#7903;
+ph&acirc;n v&ugrave;ng DOS.Menu c&oacute; th&#7875; b&#7893; sung v&agrave;o file
+AUTOEXEC.BAT &#273;&#7875; ti&#7879;n cho vi&#7879;c ch&#7885;n l&#7921;a H&#272;H n&agrave;o t&#7915;&nbsp; h&#7879;
+th&#7889;ng&nbsp; khi b&#7853;t m&aacute;y.<br>
+<br>
+N&#7871;u b&#7841;n ch&#7885;n Linux th&igrave; menu loadlin s&#7869; g&#7885;i loadlin.exe &#273;&#7875; kh&#7903;i
+&#273;&#7897;ng&nbsp; Slackware.V&iacute; d&#7909; d&#432;&#7899;i d&agrave;nh cho AUTOEXEC.BAT
+&#7903;&nbsp; Windows 95:<br>
+<br>
+@ECHO OFF<br>
+SET PROMPT=$P$G<br>
+SET PATH=C:\WINDOWS;C:\WINDOWS\COMMAND;C:\<br>
+CLS<br>
+ECHO Please Select Your Operating System:<br>
+ECHO.<br>
+ECHO [1] Slackware Linux<br>
+ECHO [2] Windows 95<br>
+ECHO.<br>
+CHOICE /C:12 "Selection? -&gt; "<br>
+IF ERRORLEVEL 2 GOTO WIN<br>
+IF ERRORLEVEL 1 GOTO LINUX<br>
+:WIN<br>
+CLS<br>
+ECHO Starting Windows 95...<br>
+WIN<br>
+GOTO END<br>
+:LINUX<br>
+ECHO Starting Slackware Linux...<br>
+CD \LINUX<br>
+LOADLIN C:\LINUX\VMLINUZ ROOT=&lt;root partition device&gt; RO<br>
+GOTO END<br>
+:END&nbsp; <br>
+<br>
+B&#7841;n c&#7847;n ph&#7843;i ch&#7881; ra t&ecirc;n ph&acirc;n v&ugrave;ng m&agrave;
+c&agrave;i &#273;&#7863;t Linux(v&iacute; d&#7909; /dev/hda2). V&agrave; t&#7845;t nhi&ecirc;n
+ch&uacute;ng ta s&#7869; s&#7917; d&#7909;ng loadlin &#7903; v&#7887; l&#7879;nh(shell prompt).B&#7841;n c&#7847;n ph&#7843;i
+ch&#7881; tham bi&#7871;n cho ch&#432;&#417;ng tr&igrave;nh.B&#7841;n c&oacute; th&#7875; &#273;&#7885;c th&ecirc;m
+h&#432;&#7899;ng d&#7851;n v&#7873; loadlin trong t&agrave;i li&#7879;u k&egrave;m theo.<br>
+<br>
+</a><a name="ch_4.4.3"><span style="font-weight: bold;">4.4.3 Hai T&#7847;ng
+kh&#7903;i &#273;&#7897;ng<br>
+</span><br>
+R&#7845;t nhi&#7873;u ng&#432;&#7901;i s&#7917; d&#7909;ng x&acirc;y d&#7921;ng c&#7845;u h&igrave;nh m&aacute;y
+t&iacute;nh c&#7911;a m&igrave;nh &#273;&#7875; kh&#7903;i &#273;&#7897;ng Slackware Linux v&agrave;
+th&ecirc;m H&#272;H kh&aacute;c n&#7919;a .D&#432;&#7899;i &#273;&acirc;y mi&ecirc;u t&#7843; m&#7897;t
+v&agrave;i h&igrave;nh &#7843;nh kh&#7903;i &#273;&#7897;ng<br>
+<br>
+<span style="font-weight: bold;"> Windows 9x/DOS<br>
+</span><br>
+C&#7845;u h&igrave;nh c&#7911;a m&aacute;y t&iacute;nh cho kh&#7903;i &#273;&#7897;ng windows
+9x/Linux c&oacute; l&#7869; l&agrave; th&#432;&#7901;ng g&#7863;p trong c&aacute;c h&#7885; hai t&#7847;ng
+kh&#7903;i &#273;&#7897;ng.C&oacute; r&#7845;t nhi&#7873;u c&aacute;ch th&#7921;c hi&#7879;n cho kh&#7903;i &#273;&#7897;ng ki&#7875;u
+n&agrave;y.Ch&uacute;ng t&ocirc;i gi&#7899;i thi&#7879;u hai c&aacute;ch
+ch&iacute;nh.<br>
+Th&ocirc;ng th&#432;&#7901;ng th&igrave; c&#7845;u h&igrave;nh hai t&#7847;ng kh&#7903;i &#273;&#7897;ng h&#7879;
+th&#7889;ng &#273;&#432;&#7907;c th&#7921;c hi&#7879;n sao cho qua tr&igrave;nh kh&#7903;i &#273;&#7897;ng H&#272;H kh&ocirc;ng
+nh&#7847;m l&#7851;n. C&oacute; ngh&#297;a l&agrave; c&aacute;c H&#272;H tr&ecirc;n m&aacute;y
+c&#7847;n ph&#7843;i c&oacute; m&#7897;t th&#7913; t&#7921; nh&#7845;t &#273;&#7883;nh &#273;&#7875; cho kh&ocirc;ng c&oacute; H&#272;H
+n&agrave;o b&#7883; ch&#7871;t. Linux th&#432;&#7901;ng chi&#7871;m quy&#7873;n ki&#7875;m so&aacute;t n&#7897;i dung
+MBR.Ch&iacute;nh v&igrave; th&#7871; ch&uacute;ng t&ocirc;i khuy&#7871;n
+kh&iacute;ch c&aacute;c b&#7841;n n&ecirc;n c&agrave;i Linux sau
+c&ugrave;ng,v&agrave; &#273;&#7847;u ti&ecirc;n l&uacute;c n&agrave;o c&#361;ng
+l&agrave; windows b&#7903;i v&igrave; n&oacute; s&#7869; ghi ch&egrave;n l&ecirc;n
+MBR c&#7845;u h&igrave;nh kh&#7903;i &#273;&#7897;ng c&#7911;a m&igrave;nh<br>
+<br>
+<span style="font-weight: bold;"> S&#7917; D&#7909;ng Lilo<br>
+</span><br>
+H&#7847;u h&#7871;t ng&#432;&#7901;i d&ugrave;ng th&iacute;ch s&#7917; d&#7909;ng LILO &#273;&#7875; ch&#7885;n H&#272;H&nbsp;
+trong qu&aacute; tr&igrave;nh kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng&nbsp; v&agrave; t&#7845;t
+nhi&ecirc;n l&agrave; Windows &#7903; v&#7883; tr&iacute; &#273;&#7847;u ti&ecirc;n.<br>
+Ch&uacute;ng ta gi&#7843; thi&#7871;t l&agrave; b&#7841;n c&oacute; m&#7897;t HDD 47Gb IDE,gi&#7843;
+s&#7917; b&#7841;n s&#7917; d&#7909;ng m&#7897;t n&#7917;a &#273;&#297;a &#273;&#7875; cho Windows v&agrave; c&ograve;n l&#7841;i cho
+Linux. Trong tr&#432;&#7901;ng h&#7907;p n&agrave;y s&#7869; c&oacute; v&#7845;n &#273;&#7873; cho kh&#7903;i &#273;&#7897;ng
+Linux. t&ocirc;i kh&ocirc;ng bi&#7871;t c&#7845;u tr&uacute;c h&igrave;nh h&#7885;c c&#7911;a
+&#273;&#297;a c&#7913;ng th&#7871; n&agrave;o b&#7903;i v&igrave; 23.5Gb &#273;&atilde; v&#432;&#7907;t q&uacute;a
+gi&#7899;i h&#7841;n trong 1024-cylinder. T&#7889;t nh&#7845;t b&#7841;n n&ecirc;n chia &#273;&#297;a c&#7913;ng nh&#432;
+sau:<br>
+<br>
+<span style="font-style: italic;"> 1GB&nbsp; Windows boot (C:)</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1GB&nbsp; Linux root&nbsp;&nbsp; (/)</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 22.5&nbsp; Windows misc (D:)</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 22.5&nbsp; Linux /usr&nbsp; (/usr) </span><br>
+<br>
+&#272;&#7915;ng quy&ecirc;n r&#7857;ng b&#7841;n ph&#7843;i c&oacute; ph&#7847;n kh&ocirc;ng gian &#273;&#297;a c&#7913;ng
+cho ph&acirc;n v&ugrave;ng swap-linux.T&#7845;t nhi&ecirc;n theo nh&#432; ng&#432;&#7901;i ta
+n&oacute;i:" Dung l&#432;&#7907;ng ph&acirc;n v&ugrave;ng swap c&#7847;n l&#7899;n h&#417;n hai l&#7847;n
+dung l&#432;&#7907;ng RAM(v&iacute; d&#7909; cho m&aacute;y c&oacute; 64Mb th&igrave; c&#7847;n
+c&oacute; 128Mb swap".Sau &#273;&oacute; b&#7841;n ti&#7871;n h&agrave;nh c&agrave;i &#273;&#7863;t
+Windows v&agrave; sau &#273;&oacute; c&agrave;i th&ecirc;m Linux.C&agrave;i
+&#273;&#7863;t LILO &#273;&ograve;i h&#7887;i b&#7841;n c&#7847;n ch&uacute; &yacute; h&#417;n khuy&#7871;n
+kh&iacute;ch b&#7841;n ch&#7885;n ph&#432;&#417;ng &aacute;n "expert" cho LILO.<br>
+<br>
+V&#7853;y l&agrave; &#273;&atilde; c&oacute; m&#7897;t c&#7845;u h&igrave;nh m&#7899;i cho LILO
+v&agrave; b&#7841;n l&ecirc;n ch&#7885;n ph&#432;&#417;ng &aacute;n c&agrave;i v&agrave;o MBR
+&#273;&#7875; c&oacute; th&#7875; s&#7917; d&#7909;ng LILO cho vi&#7879;c ch&#7885;n c&aacute;c H&#272;H kh&aacute;c
+nhau.Sau &#273;&oacute; t&#7915; menu b&#7841;n b&#7893; sung th&ecirc;m v&agrave;o ph&acirc;n
+v&ugrave;ng Linux,Windows c&#361;ng nh&#432; DOS v&agrave; cu&#7889;i c&ugrave;ng
+l&agrave; ch&#7841;y "install lilo"<br>
+<br>
+Kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y t&iacute;nh,LILO nh&#7845;t &#273;&#7883;nh s&#7869; ch&#7841;y v&agrave;
+ch&#7901; &#273;&#7907;i s&#7921; ch&#7885;n l&#7921;a c&#7911;a b&#7841;n.B&#7841;n c&oacute; th&#7875; &#7845;n ph&iacute;m Alt &#273;&#7875;
+c&oacute; &#273;&#432;&#7907;c l&#7901;i m&#7901;i t&#7915; v&#7887; l&#7879;nh "boot:".B&#7841;n &#273;i&#7873;n t&ecirc;n h&#7879; th&#7889;ng
+m&agrave; b&#7841;n mu&#7889;n kh&#7903;i &#273;&#7897;ng(Nh&#7919;ng t&ecirc;n n&agrave;y ch&#7885;n khi b&#7841;n
+c&agrave;i &#273;&#7863;t LILO).N&#7871;u b&#7841;n kh&ocirc;ng nh&#7899; th&igrave; h&atilde;y nh&#7845;n
+ph&iacute;m TAB &#273;&#7875; c&oacute; &#273;&#432;&#7907;c danh s&aacute;ch c&aacute;c H&#272;H cho
+ph&eacute;p kh&#7903;i &#273;&#7897;ng.B&#7841;n c&oacute; th&#7875; x&acirc;y d&#7921;ng LILO m&#7897;t
+c&aacute;ch chi ti&#7871;t h&#417;n b&#7857;ng con &#273;&#432;&#7901;ng hi&#7879;u &#273;&iacute;nh file
+/etc/lilo.conf.B&#7841;n c&oacute; th&#7875; c&#7845;u h&igrave;nh n&oacute; nh&#432; th&#7871;
+n&agrave;o &#273;&oacute; &#273;&#7875; khi kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y t&iacute;nh b&#7841;n thu
+&#273;&#432;&#7907;c m&#7897;t menu nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> System Boot Menu</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> ================</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1 - Linux</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 2 - Windows</span><br>
+<br>
+<span style="font-weight: bold;"> LILO boot:</span><br>
+Khi &#7845;y t&#7879;p tin /etc/lilo.conf c&#7911;a t&ocirc;i nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> # LILO configuration file</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> boot = /dev/hda</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> vga = normal</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> message = /boot/message</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> image = /vmlinuz</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> root = /dev/hda2</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> label = 1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> read-only</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> other = /dev/hda1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> label = 2</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> table = /dev/hda</span><br>
+<br>
+c&ograve;n&nbsp; /boot/message s&#7869; c&oacute; d&#7841;ng sau:<br>
+<br>
+<span style="font-style: italic;"> System Boot Menu</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> ================</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1 - Linux</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 2 - Windows</span><br
+ style="font-style: italic;">
+<br>
+Lilo l&agrave; m&#7897;t phong c&aacute;ch nh&#7865; nh&agrave;ng cho c&#7845;u
+h&igrave;nh h&#7879; th&ocirc;ng kh&#7903;i &#273;&#7897;ng m&aacute;y t&iacute;nh.N&oacute;
+kh&ocirc;ng ch&#7881; gi&#7899;i &#7903; Linux v&agrave; DOS.N&oacute; c&oacute; th&#7875; kh&#7903;i
+&#273;&#7897;ng b&#7845;t c&#7913; m&#7897;t H&#272;H n&agrave;o(Theo L&yacute; Thuy&#7871;t).B&#7841;n c&oacute; th&#7875;
+th&ecirc;m chi ti&#7871;t v&#7873; lilo qua l&#7879;nh man<span style="font-style: italic;">
+l</span><span style="font-style: italic;">ilo(8).</span><br>
+<br>
+Nh&#432;ng m&agrave; &#273;i&#7873;u &#273;&aacute;ng ng&#7841;i l&agrave; LILO kh&ocirc;ng
+l&agrave;m vi&#7879;c.C&oacute; nh&#7919;ng m&aacute;y m&agrave; kh&ocirc;ng h&#7873;
+l&agrave;m vi&#7879;c v&#7899;i LILO.B&#7841;n s&#7869; l&agrave;m g&igrave;.D&#7915;ng lo &#273;&atilde;
+c&oacute; nh&#7919;ng c&ocirc;ng c&#7909; kh&aacute;c &#273;&#7875; kh&#7903;i &#273;&#7897;ng Linux.Trong
+Slackware Linux c&ograve;n cho ph&eacute;p m&#7897;t c&ocirc;ng c&#7909; k&egrave;m
+theo l&agrave; LOADLIN<br>
+<br>
+<span style="font-weight: bold;"> S&#7917; d&#7909;ng LOADLIN</span><br>
+<br>
+&#272;&acirc;y l&agrave; ph&#432;&#417;ng &aacute;n&nbsp; khi m&agrave; lilo
+kh&ocirc;ng l&agrave;m vi&#7879;c tr&ecirc;n m&aacute;y t&iacute;nh c&#7911;a b&#7841;n
+ho&#7863;c l&agrave; b&#7841;n mu&#7889;n c&oacute; c&aacute;i g&igrave; &#273;&oacute; m&#7899;i m&#7867;
+h&#417;n.Ph&#432;&#417;ng &aacute;n n&agrave;y th&#432;&#7901;ng d&ugrave;ng cho nh&#7919;ng ng&#432;&#7901;i hay
+c&agrave;i l&#7841;i Windows.M&#7895;i l&#7847;n c&agrave;i l&#7841;i Windows l&agrave;
+n&oacute; l&#7841;i ghi ch&egrave;n l&ecirc;n MBR c&#7845;u h&igrave;nh c&#7911;a
+m&igrave;nh.T&#7845;t nhi&ecirc;n LOADLIN ch&#7881; d&agrave;nh cho kh&#7903;i &#273;&#7897;ng LINUX.<br>
+<br>
+Khi s&#7917; d&#7909;ng LOADLIN b&#7841;n c&oacute; th&#7875; c&agrave;i &#273;&#7863;t c&aacute;c H&#272;H
+theo b&#7845;t c&#7913; th&#7913; t&#7921; n&agrave;o b&#7841;n th&iacute;ch.Nh&#432;ng khi c&agrave;i
+Linux th&igrave; &#273;&#7915;ng ghi l&ecirc;n MBR.T&#7889;t nh&#7845;t ch&#7881; l&ecirc;n
+c&agrave;i &#273;&#7863;t LILO v&agrave; k&#7871;t th&uacute;c.<br>
+Sau khi c&agrave;i &#273;&#7863;t xong Linux th&igrave; b&#7841;n xao ch&eacute;p t&#7879;p
+tin loadlinX.zip(X-m&atilde; s&#7889; phi&ecirc;n b&#7843;n) t&#7917; catalog c&#7911;a
+root(/root) v&agrave;o ph&acirc;n v&ugrave;ng Windows.&#272;&#7915;ng quy&ecirc;n
+xao ch&eacute;p &#7843;nh kernel&nbsp; l&ecirc;n &#273;&acirc;y.Mi&ecirc;u t&#7843; &#273;&#417;n
+gi&#7843;n nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> # mkdir /win</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # mount -t vfat /dev/hda1 /win</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # mkdir /win/linux</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # cd /root</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # cp loadlin* /win/linux</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # cp /vmlinuz /win/linux</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # cd /win/linuz</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # unzip loadlin16a.zip<br>
+</span><br>
+T&#7841;o catalog&nbsp; C:\LINUX tr&ecirc;n ph&acirc;n v&ugrave;ng
+windows(c&oacute; th&#7875; coi l&agrave; /dev/hda1) v&agrave; xao ch&eacute;p
+t&#7845;t c&#7843; c&#7847;n thi&#7871;t cho LOADLIN.Sau &#273;&oacute; kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y
+t&iacute;nh,&#273;&#259;ng nh&#7853;t v&agrave;o Windows &#273;&#7875; l&#7853;p menu kh&#7903;i &#273;&ocirc;ng.B&#7841;n
+v&agrave;o d&ograve;ng l&#7879;nh&nbsp; DOS&nbsp; trong Windows.Th&#7921;c hi&#7879;n
+c&ocirc;ng vi&#7879;c sau:<br>
+<br>
+<span style="font-weight: bold;"> C:\&gt; cd \</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> C:\&gt; cattrib -r -a -s -h MSDOS.SYS</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> C:\&gt; edit MSDOS.SYS</span><br
+ style="font-weight: bold;">
+<br>
+B&#7841;n b&#7893; sung th&ecirc;m d&ograve;ng sau:<br>
+<br>
+BootGUI=0<br>
+<br>
+L&#432;u l&#7841;i s&#7921; bi&#7871;n &#273;&#7893;i.Tho&aacute;t kh&#7887;i tr&igrave;nh so&#7841;n th&#7843;o.B&acirc;y
+gi&#7901; c&#7847;n th&ecirc;m menu v&agrave;o t&#7879;p tin<br>
+<br>
+&nbsp;C:\AUTOEXEC.BAT(B&#7841;n h&atilde;y xem v&iacute; d&#7909; d&#432;&#7899;i &#273;&acirc;y)<br>
+<br>
+cls<br>
+echo System Boot Menu<br>
+echo.<br>
+echo 1 - Linux<br>
+echo 2 - Windows<br>
+echo.<br>
+choice /c:12 ''Selection? -&gt; ''<br>
+if errorlevel 2 goto WIN<br>
+if errorlevel 1 goto LINUX<br>
+:LINUX<br>
+cls<br>
+echo ''Starting Linux...''<br>
+cd \linux<br>
+loadlin c:\linux\vmlinuz root=/dev/hda2 ro<br>
+goto END<br>
+:WIN<br>
+cls<br>
+echo ''Starting Windows...''<br>
+win<br>
+goto END<br>
+:END<br>
+<br>
+&nbsp;Ch&igrave;a kho&aacute; c&#7911;a gi&#7843;i ph&aacute;p l&agrave;
+LOADLIN,ch&uacute;ng ta th&ocirc;ng b&aacute;o cho n&oacute; nh&#7919;ng
+th&ocirc;ng tin sau &#273;&#7875; kh&#7903;i &#273;&#7897;ng H&#272;H(Nh&acirc;n(kernel),catalog g&#7889;c
+Linux...).<br>
+T&#7845;t c&#7843; c&aacute;c c&ocirc;ng c&#7909; c&#7847;n cho ph&#432;&#417;ng &aacute;n n&agrave;y
+&#273;&#432;&#7907;c chu&#7849;n b&#7883; s&#7861;n tr&ecirc;n SlackWare Linux.Tuy nhi&ecirc;n tr&ecirc;n
+ch&#7907; LINUX t&#7891;n t&#7841;i m&#7897;t kh&#7889;i l&#432;&#7907;ng kh&#7893;ng l&#7891; c&aacute;c v&#7853;t mang kh&#7903;i &#273;&#7897;ng
+&#273;&#7875; th&#7921;c hi&#7879;n b&#7845;t c&#7913; c&aacute;c lo&#7841;i hai t&#7847;ng kh&#7903;i &#273;&#7897;ng n&agrave;o.<br>
+<br>
+<span style="font-weight: bold;"> Windows NT</span><br>
+<br>
+M&#7897;t trong c&aacute;c&nbsp; ph&#432;&#417;ng &aacute;n ph&#7893; bi&#7871;n cho hai t&#7847;ng kh&#7903;i
+&#273;&#7897;ng Windows NT v&agrave; LINUX.V&#7899;i Windows NT th&igrave; c&oacute; ph&#7913;c
+t&#7841;p h&#417;n,c&oacute; nhi&#7873;u v&#7845;n &#273;&#7873; h&#417;n.V&#7845;n &#273;&#7873; ch&iacute;nh l&agrave; khi
+LILO ghi l&ecirc;n MBR th&igrave; b&#7841;n th&acirc;n Windows NT s&#7869;
+kh&ocirc;ng kh&#7903;i &#273;&#7897;ng &#273;&#432;&#7907;c.Ch&iacute;nh v&igrave; th&#7871; khi quy&#7871;t
+&#273;&#7883;nh&nbsp; s&#7917; d&#7909;ng lo&#7841;i n&agrave;y th&igrave; c&#7847;n c&oacute;&nbsp; m&#7897;t
+th&#7913; t&#7921; ti&#7871;n h&agrave;nh c&aacute;ch b&#432;&#7899;c sau:<br>
+<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; height: 10px; width: 10px;">1</td>
+      <td style="vertical-align: top;">C&agrave;i &#273;&#7863;t Windows NT<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">2<br>
+      </td>
+      <td style="vertical-align: top;">C&agrave;i &#273;&#7863;t Linux,c&ograve;n
+LILO c&agrave;i &#7903; sperblock ph&acirc;n v&ugrave;ng Linux<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">3<br>
+      </td>
+      <td style="vertical-align: top;">&#272;&#7885;c 512bytes &#273;&#7847;u ti&ecirc;n &#7903;
+ph&acirc;n v&ugrave;ng g&#7889;c Linux v&agrave; khi l&ecirc;n ph&acirc;n
+v&ugrave;ng Windows NT<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">4<br>
+      </td>
+      <td style="vertical-align: top;">So&#7841;n th&#7843;o l&#7841;i C:\BOOT.INI t&#7915;
+Windows NT v&agrave; b&#7893; sung v&agrave;o Linux<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_4.4.2">&nbsp;<br>
+C&agrave;i &#273;&#7863;t Windows NT c&oacute; th&#7875; coi l&agrave; c&ocirc;ng vi&#7879;c
+&#273;&#417;n gi&#7843;n c&#361;ng nh&#432; v&#7899;i Linux.Vi&#7879;c xao ch&eacute;p l&#7841;i 512bytes &#273;&#7847;u
+ti&ecirc;n tr&ecirc;n ph&acirc;n v&ugrave;ng g&#7889;c c&#7911;a Linux c&#361;ng
+kh&ocirc;ng kh&oacute; l&#7855;m.B&#7841;n h&atilde;y &#273;&#259;ng nh&#7853;p v&agrave;o
+Linux(gi&#7843; thuy&#7871;t ph&acirc;n v&ugrave;ng l&agrave; /dev/hda2)<br>
+<br>
+<span style="font-weight: bold;"> # dd if=/dev/hda2 of=/tmp/bootsect.lnx
+bs=1 count=512</span><br style="font-weight: bold;">
+<br>
+V&#7853;y l&agrave; b&#7841;n &#273;&atilde; chu&#7849;n b&#7883; xong.B&#7841;n c&#7847;n xao ch&eacute;p
+bootsect.lnx sang ph&acirc;n v&ugrave;ng Windows NT.Nh&#432;ng b&#7841;n &#273;&#7915;ng v&#7897;i
+m&#7915;ng,Linux kh&ocirc;ng cho ph&eacute;p ghi l&ecirc;n ph&acirc;n
+v&ugrave;ng &#273;&#7883;nh d&#7841;ng NTFS.N&#7871;u nh&#432; khi c&agrave;i &#273;&#7863;t Windows NT b&#7841;n
+ch&#7885;n &#273;&#7883;nh d&#7841;ng l&agrave; NTFS th&igrave; b&#7841;n l&ecirc;n xao ch&eacute;p
+bootsect.lnx sang m&#7897;t disk &#273;&#7883;nh d&#7841;ng FAT ho&#7863;c FAT32.Sau &#273;&oacute; &#273;&#259;ng
+nh&#7853;p v&agrave;o Windows NT v&agrave; &#273;&#7885;c n&oacute;.<br>
+<br>
+C&ograve;n may m&#7855;n n&#7871;u b&#7841;n ch&#7885;n ph&acirc;n v&ugrave;ng Windows NT
+l&agrave; FAT th&igrave; b&#7841;n ch&#7881; &#273;&#417;n gi&#7843;n l&agrave; xao ch&eacute;p
+n&oacute; sang l&agrave; xong.Tuy nhi&ecirc;n m&#7885;i con &#273;&#432;&#7901;ng &#273;&#7873;u d&#7851;n &#273;&#7871;n
+vi&#7879;c copy t&#7879;p tin /tmp/bootsect.lnx&nbsp; &#273;&#7871;n C:\BOOTSCT.LNX tr&ecirc;n
+Windows NT.<br>
+<br>
+B&#432;&#7899;c cu&#7889;i cung l&agrave; b&#7893; sung Linux&nbsp; v&agrave;o menu-kh&#7903;i &#273;&#7897;ng
+c&#7911;a Windows NT.Ch&#7841;y DOS,th&#7921;c hi&#7879;n c&ocirc;ng vi&#7879;c sau:<br>
+<br>
+<span style="font-style: italic;"> C:\WINNT&gt; cd \</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> C:\&gt; attrib -r -a -s -h boot.ini</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> C:\&gt; edit boot.ini</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> B&#7893; sung v&agrave;o d&ograve;ng sau:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> C:\bootsect.lnx=''Slackware Linux'' </span><br>
+<br>
+L&#432;u l&#7841;i s&#7921; thay &#273;&#7893;i v&agrave; tho&aacute;t kh&#7887;i tr&igrave;nh so&#7841;n
+th&#7843;o.Kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y t&iacute;nh. T&#7915; m&agrave;n h&igrave;nh b&#7841;n
+ch&#7885;n m&#7909;c "Slackware Linux" v&agrave; ti&#7871;p theo la Linux &#273;&#432;&#7907;c Kh&#7907;i &#273;&#7897;ng.<br>
+Ch&uacute;c c&aacute;c b&#7841;n may m&#7855;n v&#7899;i nh&#7919;ng b&agrave;i th&#7921;c
+h&agrave;nh n&agrave;y.</a><a name="ch_4.4.2" style="font-weight: bold;"
+ href="index.html"><br>
+</a>
+<div style="text-align: center;"><a name="ch_4.4.2"
+ style="font-weight: bold;" href="index.html">M&#7909;c L&#7909;c</a></div>
+<hr><span style="font-style: italic;">Bi&ecirc;n d&#7883;ch: V&#361;
+D&#361;ng(vudung@mail.ru)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> website:</span><a
+ href="../../../default.htm" style="font-style: italic;">http://khigiacmoquayve.narod.ru</a><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> 1-9-2005 Voronezh Russian</span>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

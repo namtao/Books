@@ -1,0 +1,454 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:10.000
+[MUSIC]
+
+2
+00:00:12.314 --> 00:00:15.446
+In today's lesson, we are going
+to talk about two commands that
+
+3
+00:00:15.446 --> 00:00:17.480
+can help you find files and directories.
+
+4
+00:00:18.950 --> 00:00:22.050
+The first command we are going
+to cover is the find command.
+
+5
+00:00:23.220 --> 00:00:26.940
+You supply a path to find and
+a search expression and
+
+6
+00:00:26.940 --> 00:00:31.030
+find will return the results that
+match the path and expression.
+
+7
+00:00:31.030 --> 00:00:34.870
+If you don't tell find what to look for
+it just returns all the files that are in
+
+8
+00:00:34.870 --> 00:00:38.810
+your current directory and all
+the sub-directories below that directory.
+
+9
+00:00:38.810 --> 00:00:43.260
+You can give find a search pattern
+by using the dash name option, and
+
+10
+00:00:43.260 --> 00:00:46.560
+find will return all the files and
+directories that match that pattern.
+
+11
+00:00:47.790 --> 00:00:51.730
+If you use -iname,
+that tells find to ignore case.
+
+12
+00:00:53.400 --> 00:00:58.710
+If you provide the -ls option to find,
+it will run ls -l,
+
+13
+00:00:58.710 --> 00:01:02.389
+a long listing format display of
+the files and directories that it finds.
+
+14
+00:01:03.730 --> 00:01:08.930
+You can search for files by modification
+time by using the -mtime option to find.
+
+15
+00:01:10.090 --> 00:01:15.520
+You can also search for
+files based on size using -size.
+
+16
+00:01:15.520 --> 00:01:19.670
+To find files in directories that
+were created after another file,
+
+17
+00:01:19.670 --> 00:01:23.134
+you can give that file
+to find with -newer.
+
+18
+00:01:24.220 --> 00:01:29.764
+If you want to execute a command against
+all the results that find returns,
+
+19
+00:01:29.764 --> 00:01:33.636
+you can use the -exec option,
+or dash e-x-e-c.
+
+20
+00:01:33.636 --> 00:01:37.272
+You then provide the command that
+you want to run, and in the command,
+
+21
+00:01:37.272 --> 00:01:39.630
+with an escaped semi colon.
+
+22
+00:01:39.630 --> 00:01:43.900
+The matching curly braces represent the
+file or directory that was found by find.
+
+23
+00:01:45.620 --> 00:01:47.830
+If you run find without any options,
+
+24
+00:01:47.830 --> 00:01:51.690
+it just finds everything in your
+present working directory and below.
+
+25
+00:01:53.160 --> 00:01:55.110
+That's the same really as running find.
+
+26
+00:01:56.340 --> 00:02:00.398
+Which dot represents this directory.
+
+27
+00:02:00.398 --> 00:02:05.178
+Let's look in /sbin for
+something named makedev.
+
+28
+00:02:05.178 --> 00:02:06.598
+Didn't return any results.
+
+29
+00:02:06.598 --> 00:02:09.478
+Let's do a case insensitive search.
+
+30
+00:02:09.478 --> 00:02:12.138
+-iname.
+
+31
+00:02:12.138 --> 00:02:17.878
+And we can see that there's a file
+named makedev but it's all uppercase.
+
+32
+00:02:17.878 --> 00:02:20.218
+So when using name it matches case.
+
+33
+00:02:20.218 --> 00:02:22.778
+When using iname it ignores case.
+
+34
+00:02:27.638 --> 00:02:31.195
+Let's look in bin and
+find any file that ends in *v.
+
+35
+00:02:32.250 --> 00:02:34.267
+So star means match anything.
+
+36
+00:02:34.267 --> 00:02:38.485
+And we can see that it
+returns two results.
+
+37
+00:02:40.115 --> 00:02:42.525
+Let's look for
+files that are more than 10 days old, but
+
+38
+00:02:42.525 --> 00:02:45.115
+less than 13 days old in
+the current directory.
+
+39
+00:02:45.115 --> 00:02:48.813
+So we can use -mtime for
+modification time.
+
+40
+00:02:53.153 --> 00:02:55.700
+And those are the files that it returns.
+
+41
+00:02:55.700 --> 00:02:58.760
+It's also important to note
+that you can use multiple
+
+42
+00:02:58.760 --> 00:03:00.330
+options to find at the same time.
+
+43
+00:03:02.620 --> 00:03:08.320
+So let's find anything that begins
+with s* and perform an -ls on it.
+
+44
+00:03:10.270 --> 00:03:11.750
+Okay, just one file.
+
+45
+00:03:11.750 --> 00:03:17.380
+Let's find things that are of size +1M or
+greater.
+
+46
+00:03:19.730 --> 00:03:22.130
+And we find one result there.
+
+47
+00:03:22.130 --> 00:03:28.610
+So, this you can use 1 megabyte,
+1 kilobyte, 1 gigabyte, et cetera.
+
+48
+00:03:28.610 --> 00:03:32.010
+So, no files that are over
+a gigabyte in size in my directory.
+
+49
+00:03:34.640 --> 00:03:40.277
+Let's find all the directories
+that are newer than file.txt.
+
+50
+00:03:45.278 --> 00:03:50.960
+You can see file.txt was
+created on February 15th.
+
+51
+00:03:50.960 --> 00:03:54.250
+Tpsreports was created on February 16th.
+
+52
+00:03:54.250 --> 00:03:57.074
+So, it is indeed newer than file.txt.
+
+53
+00:04:03.180 --> 00:04:07.550
+So this command will find everything
+in the current directory.
+
+54
+00:04:07.550 --> 00:04:09.100
+Find dot, and
+
+55
+00:04:09.100 --> 00:04:12.910
+it's going to execute the file command
+against all the search results.
+
+56
+00:04:13.920 --> 00:04:15.870
+Let's just run this.
+
+57
+00:04:15.870 --> 00:04:16.528
+The file command.
+
+58
+00:04:19.648 --> 00:04:21.475
+Just tells what kind of file it is,
+
+59
+00:04:21.475 --> 00:04:25.580
+it's the best guess as to what it thinks
+the contents of the file represents.
+
+60
+00:04:27.200 --> 00:04:31.140
+The locate command is similar to the find
+command in that you can tell it what to
+
+61
+00:04:31.140 --> 00:04:35.020
+look for, and it will return a list of
+results that match your search pattern.
+
+62
+00:04:36.540 --> 00:04:40.000
+Locate is faster than the find command.
+
+63
+00:04:40.000 --> 00:04:43.870
+The find command looks through the path
+you gave it and evaluates each and
+
+64
+00:04:43.870 --> 00:04:47.900
+every file and directory and determines
+if that matches your search pattern or
+
+65
+00:04:47.900 --> 00:04:49.920
+not and then returns those results.
+
+66
+00:04:50.990 --> 00:04:54.200
+The locate command, however,
+works off of an index.
+
+67
+00:04:54.200 --> 00:04:57.020
+Typically, the index is rebuilt every day.
+
+68
+00:04:57.020 --> 00:05:01.513
+Instead of evaluating each and every
+file to see if it matches the pattern,
+
+69
+00:05:01.513 --> 00:05:03.878
+locate just does a lookup in the index.
+
+70
+00:05:03.878 --> 00:05:08.080
+What you need to know about this is
+that the results are not in real time.
+
+71
+00:05:08.080 --> 00:05:11.910
+There is a lag between the time
+that the index gets created and
+
+72
+00:05:11.910 --> 00:05:13.590
+the time that you run the locate command.
+
+73
+00:05:14.790 --> 00:05:18.010
+So if you're looking for a file that was
+created just two or three minutes ago,
+
+74
+00:05:18.010 --> 00:05:21.300
+chances are it's not
+going to be in the index.
+
+75
+00:05:21.300 --> 00:05:25.330
+Your only hope for finding that file is
+with the find command that evaluates files
+
+76
+00:05:25.330 --> 00:05:27.450
+and directories in real time.
+
+77
+00:05:27.450 --> 00:05:31.168
+Also on some systems,
+locate is not enabled by default.
+
+78
+00:05:34.168 --> 00:05:36.927
+Let's use the locate
+command to find files and
+
+79
+00:05:36.927 --> 00:05:39.410
+directories that have sales in the name.
+
+80
+00:05:41.460 --> 00:05:43.000
+Get four results back.
+
+81
+00:05:43.000 --> 00:05:44.338
+Let's do another example.
+
+82
+00:05:47.078 --> 00:05:49.458
+You don't have to specify a full name.
+
+83
+00:05:49.458 --> 00:05:51.440
+You can specify a part of a name.
+
+84
+00:05:51.440 --> 00:05:53.970
+So, let's look for t-p-s-r-e.
+
+85
+00:05:53.970 --> 00:05:56.240
+And that returns three results.
+
+86
+00:05:58.190 --> 00:05:59.350
+Let's create a new file.
+
+87
+00:06:03.180 --> 00:06:05.680
+And the touch command just
+simply creates an empty file.
+
+88
+00:06:07.920 --> 00:06:13.930
+Now if we run our locate command again
+we can see that the file is not found.
+
+89
+00:06:13.930 --> 00:06:17.248
+Let's do it with the file's name.
+
+90
+00:06:17.248 --> 00:06:19.760
+That's because the index
+is not up-to-date.
+
+91
+00:06:19.760 --> 00:06:24.460
+Let's use the find command to evaluate all
+of these in real time, and we'll see that,
+
+92
+00:06:24.460 --> 00:06:27.110
+indeed, we can find the file
+with the find command.
+
+93
+00:06:29.460 --> 00:06:32.910
+Today we talked about the find command and
+locate command.
+
+94
+00:06:32.910 --> 00:06:36.180
+Find searches for files and
+directories in real time.
+
+95
+00:06:36.180 --> 00:06:39.258
+Find is very powerful and
+has many options.
+
+96
+00:06:39.258 --> 00:06:42.618
+The locate command can
+be faster than find, but
+
+97
+00:06:42.618 --> 00:06:46.238
+the disadvantage is is that
+it's not in real time.
+
+98
+00:06:46.238 --> 00:06:55.769
+[MUSIC]
+

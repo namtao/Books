@@ -1,0 +1,337 @@
+WEBVTT
+
+00:00:03.000 --> 00:00:05.900
+In this lesson you'll learn
+what wildcards are,
+
+00:00:06.520 --> 00:00:07.740
+when you can use them
+
+00:00:07.920 --> 00:00:10.160
+and the various types of wildcards.
+
+00:00:10.780 --> 00:00:12.700
+Finally you get to look over my shoulder
+
+00:00:12.700 --> 00:00:14.540
+as I run through several examples
+
+00:00:14.560 --> 00:00:17.540
+of how to use wildcards on
+an actual Linux system.
+
+00:00:18.440 --> 00:00:21.100
+A wildcard is a character or a string
+
+00:00:21.120 --> 00:00:23.860
+that is used to match file
+and directory names.
+
+00:00:24.760 --> 00:00:27.240
+You can use wildcards to
+create search patterns
+
+00:00:27.240 --> 00:00:29.070
+that when expanded will return
+
+00:00:29.070 --> 00:00:31.420
+a list of matching files
+and directories.
+
+00:00:32.120 --> 00:00:36.340
+Sometimes wildcards are referred
+to as globs or glob patterns.
+
+00:00:36.800 --> 00:00:39.600
+Globbing is the act of
+expanding a wildcard
+
+00:00:39.600 --> 00:00:42.190
+into the list of matching files
+and directories.
+
+00:00:43.040 --> 00:00:46.340
+Wildcards can be used in conjunction
+with most Linux commands.
+
+00:00:46.740 --> 00:00:49.860
+If a command accepts a file
+or directory as an argument,
+
+00:00:49.860 --> 00:00:52.060
+then you can use a wildcard
+in this argument
+
+00:00:52.060 --> 00:00:54.760
+to specify a file or set of files.
+
+00:00:55.780 --> 00:00:58.160
+You find yourself using
+wildcards with commands
+
+00:00:58.160 --> 00:01:02.640
+like ls, rm, cp, mv, and others.
+
+00:01:03.620 --> 00:01:06.040
+Here are the 2 main wildcards.
+
+00:01:06.380 --> 00:01:09.050
+They are the asterisk and
+the question mark.
+
+00:01:09.050 --> 00:01:11.600
+The asterisk or star as
+I like to call it,
+
+00:01:11.940 --> 00:01:16.050
+matches zero or more characters,
+it matches anything.
+
+00:01:16.980 --> 00:01:19.240
+By itself, it's not really that useful,
+
+00:01:19.500 --> 00:01:22.820
+but when you combine it with
+other parts of file or directory names
+
+00:01:22.840 --> 00:01:25.100
+that you're looking for,
+it becomes powerful.
+
+00:01:25.780 --> 00:01:30.820
+For example, we could use *.txt
+to find all the files
+
+00:01:30.820 --> 00:01:32.540
+that end in .txt.
+
+00:01:33.320 --> 00:01:35.520
+If you wanted to list all the files
+
+00:01:35.520 --> 00:01:38.760
+that start with the letter a,
+then use a*.
+
+00:01:39.340 --> 00:01:41.020
+If you want to find all the files
+
+00:01:41.020 --> 00:01:44.440
+that start with an a and end in .txt,
+
+00:01:44.720 --> 00:01:47.760
+then use a*.txt.
+
+00:01:48.740 --> 00:01:52.110
+The question mark matches
+exactly 1 character.
+
+00:01:52.520 --> 00:01:54.360
+If you want to find all the files
+
+00:01:54.380 --> 00:01:57.500
+that only have 1 character
+preceeding .txt,
+
+00:01:57.680 --> 00:02:00.400
+then use ?.txt.
+
+00:02:01.100 --> 00:02:04.020
+To match all the 2 letter files
+that begin with an a,
+
+00:02:04.160 --> 00:02:06.940
+use the letter a followed by a ?.
+
+00:02:07.800 --> 00:02:10.020
+To match all the files that start with a,
+
+00:02:10.080 --> 00:02:13.080
+and then are followed by
+exactly one more character,
+
+00:02:13.260 --> 00:02:15.090
+and then end in .txt,
+
+00:02:15.440 --> 00:02:18.660
+use a?.txt.
+
+00:02:20.540 --> 00:02:22.840
+You can use something called
+a character class
+
+00:02:22.840 --> 00:02:25.160
+to create very specific search patterns.
+
+00:02:25.820 --> 00:02:27.180
+Start with the left bracket,
+
+00:02:27.180 --> 00:02:29.860
+then list one or more characters
+you want to match
+
+00:02:29.860 --> 00:02:31.720
+and then end with the right bracket.
+
+00:02:31.720 --> 00:02:35.200
+For example, if you wanted to match
+a one character long file name
+
+00:02:35.560 --> 00:02:36.520
+that was a vowel,
+
+00:02:36.840 --> 00:02:41.170
+you would use [aeiou].
+
+00:02:41.760 --> 00:02:44.340
+If you wanted to match files
+that start with ca
+
+00:02:44.340 --> 00:02:47.420
+followed by either an 'n' or a 't',
+
+00:02:47.680 --> 00:02:49.920
+followed by zero or more characters,
+
+00:02:50.200 --> 00:02:54.110
+then use 'ca[nt]*'.
+
+00:02:54.700 --> 00:02:56.580
+This pattern will match files named,
+
+00:02:56.580 --> 00:03:00.000
+can, cat, candy and catch.
+
+00:03:00.860 --> 00:03:02.940
+If you want to exclude 
+characters in a match,
+
+00:03:02.960 --> 00:03:04.480
+use an exclamation mark.
+
+00:03:05.160 --> 00:03:07.500
+For example, if you 
+wanted to find all the files
+
+00:03:07.500 --> 00:03:09.080
+that do not start with the vowel,
+
+00:03:09.180 --> 00:03:14.540
+use [!aeiou]*.
+
+00:03:15.140 --> 00:03:17.240
+'baseball' and 'cricket' match this pattern
+
+00:03:17.240 --> 00:03:22.100
+because the first character is not an
+a, e, i, o, or u.
+
+00:03:23.040 --> 00:03:24.600
+When using character classes,
+
+00:03:24.600 --> 00:03:28.050
+you can create a range by separating
+two characters with a hyphen.
+
+00:03:28.380 --> 00:03:31.460
+If you want to match all the
+characters from a to g,
+
+00:03:31.640 --> 00:03:34.900
+use [a-g].
+
+00:03:35.500 --> 00:03:39.000
+If you want to match the numbers
+- 3, 4, 5 and 6,
+
+00:03:39.200 --> 00:03:42.220
+use [3-6].
+
+00:03:43.010 --> 00:03:44.840
+Instead of creating your own ranges,
+
+00:03:44.880 --> 00:03:48.070
+you can use predefined named
+character classes.
+
+00:03:48.680 --> 00:03:52.800
+These named character classes represent
+the most commonly used ranges.
+
+00:03:53.560 --> 00:03:55.700
+Alpha matches alphabetic letters.
+
+00:03:56.000 --> 00:03:59.300
+This means it matches both -
+lower and upper case letters.
+
+00:04:00.060 --> 00:04:04.260
+alnum or alnum matches
+alphanumeric characters.
+
+00:04:04.680 --> 00:04:07.110
+This means it matches alpha and digits.
+
+00:04:07.440 --> 00:04:11.400
+Said another way, it matches any
+uppercase or lowercase letters
+
+00:04:11.420 --> 00:04:13.200
+or any decimal digits.
+
+00:04:14.220 --> 00:04:18.200
+'digit' represents the numbers
+and decimal from 0 to 9.
+
+00:04:18.800 --> 00:04:21.040
+'lower' matches any lowercase letters.
+
+00:04:21.360 --> 00:04:23.820
+'space' matches wide space.
+
+00:04:23.880 --> 00:04:27.740
+This means characters such as spaces,
+tabs and newline characters.
+
+00:04:28.460 --> 00:04:30.980
+'upper' only matches uppercase letters.
+
+00:04:33.260 --> 00:04:35.840
+What if you want to match one
+of the wildcard characters?
+
+00:04:36.300 --> 00:04:39.320
+Then you would escape 
+that character with a \.
+
+00:04:39.500 --> 00:04:44.400
+To escape the wildcard, simply place
+the \ before the wildcard character.
+
+00:04:45.120 --> 00:04:46.840
+If you wanna make your life easier,
+
+00:04:47.040 --> 00:04:49.780
+don't name your files with
+question marks and asterisks.
+
+00:04:50.220 --> 00:04:53.460
+However you may end up receiving a
+file with these characters in them,
+
+00:04:53.460 --> 00:04:55.220
+so you need to know
+how to handle them.
+
+00:04:55.460 --> 00:04:57.960
+For example, if you wanted
+to match all the files
+
+00:04:57.960 --> 00:04:59.340
+that end with a question mark,
+
+00:04:59.500 --> 00:05:02.380
+then use *\?
+
+00:05:02.840 --> 00:05:07.660
+An example match would be
+a file named, done?

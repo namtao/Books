@@ -1,0 +1,655 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/configsystem.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>configsystem</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <big style="font-weight: bold;"><big> Ch&#432;&#417;ng 4 C&#7845;u h&igrave;nh<br>
+</big></big><br>
+<a name="ch_4.1"><span style="font-weight: bold;">4.1 C&#7845;u h&igrave;nh
+h&#7879; th&#7889;ng<br>
+</span><br>
+Tr&#432;&#7899;c khi ti&#7871;n t&#7899;i c&#7845;u h&igrave;nh h&#7879; th&#7889;ng th&igrave; b&#7841;n n&ecirc;n
+l&agrave;m quen v&#7899;i h&#7879; th&#7889;ng,c&aacute;ch h&igrave;nh th&agrave;nh
+n&oacute;,c&aacute;ch t&igrave;m ki&#7871;m trong n&oacute; m&#7897;t ch&#432;&#417;ng
+tr&igrave;nh,m&#7897;t t&#7853;p tin.B&#7841;n c&#7847;n phi&ecirc;n d&#7883;ch l&#7841;i nh&acirc;n h&#7879;
+th&#7889;ng hay kh&ocirc;ng?Ph&#7847;n n&agrave;y gi&uacute;p b&#7841;n l&agrave;m quen
+v&#7899;i c&aacute;c t&#7893; ch&#7913;c h&#7879; th&#7889;ng c&#361;ng nh&#432; c&#7845;u h&igrave;nh c&aacute;c t&#7853;p
+tin,sau &#273;&oacute;&nbsp; ti&#7871;n t&#7899;i thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh ph&#7913;c t&#7841;p h&#417;n
+c&#7911;a c&aacute;c th&agrave;nh ph&#7847;n kh&aacute;c.<br>
+<br>
+</a><a name="ch_4.1.1"><span style="font-weight: bold;">4.1.1
+H&igrave;nh &#7843;nh h&#7879; th&#7889;ng.<br>
+</span><br>
+S&#7869; r&#7845;t quan tr&#7885;ng khi b&#7841;n n&#7855;m r&otilde; c&aacute;ch t&#7893; ch&#7913;c Linux tr&#432;&#7899;c
+khi th&#7921;c hi&#7879;n c&aacute;c khuynh h&#432;&#7899;ng kh&aacute;c nhau theo c&#7845;u
+h&igrave;nh c&#7911;a n&oacute;.H&#7879; th&#7889;ng Linux kh&aacute;c v&#7899;i h&#7879; th&#7889;ng DOS
+ho&#7863;c Windows( k&#7875; c&#7843; Macintosh OS).Ph&#7847;n n&agrave;y gi&uacute;p b&#7841;n
+l&agrave;m quen v&#7899;i s&#7921; ph&acirc;n b&#7889; c&aacute;c th&agrave;nh ph&#7847;n
+ch&iacute;nh c&#7911;a h&#7879; th&#7889;ng.<br>
+<br>
+<span style="font-weight: bold;"> T&#7893; ch&#7913;c h&#7879; th&#7889;ng c&aacute;c t&#7853;p tin<br>
+</span><br>
+Nguy&ecirc;n t&#7855;c kh&aacute;c bi&#7879;t &#273;&#7847;u ti&ecirc;n c&#7911;a Slackware Linux
+v&#7899;i DOS v&agrave; Windows ch&iacute;nh l&agrave; vi&#7879;c t&#7893; ch&#7913;c h&#7879; th&#7889;ng
+c&aacute;c t&#7853;p tin.&#272;&#7889;i v&#7899;i c&aacute;c ng&#432;&#7901;i m&#7899;i s&#7917; d&#7909;ng: &#7903; Linux
+th&igrave; c&aacute;c ph&acirc;n v&ugrave;ng &#273;&#297;a c&#7913;ng kh&ocirc;ng
+ph&acirc;n bi&#7879;t b&#7903;i c&aacute;c ch&#7919;.&#7902; trong h&#7879; th&#7889;ng n&agrave;y ch&#7881;
+c&oacute; duy nh&#7845;t m&#7897;t catalog g&#7889;c(ch&iacute;nh).B&#7841;n c&oacute; th&#7875; coi
+n&oacute; nh&#432; l&agrave; C: &#7903; trong DOS.C&aacute;c ph&acirc;n v&ugrave;ng
+kh&aacute;c c&#7911;a &#273;&#297;a c&#7913;ng c&oacute; th&#7875; <span style="font-weight: bold;">mount</span>(k&#7871;t
+n&#7889;i) t&#7899;i m&#7897;t trong c&aacute;c catalog kh&aacute;c.<br>
+<br>
+Ch&uacute;ng ta g&#7885;i th&#432; m&#7909;c g&#7889;c c&#7911;a ph&acirc;n v&ugrave;ng l&agrave;
+catalog g&#7889;c,n&oacute; &#273;&#432;&#7907;c ph&acirc;n bi&#7879;t l&agrave; (/).C&aacute;i h&#7879;
+th&#7889;ng n&agrave;y c&oacute; th&#7875; l&agrave;m cho b&#7841;n l&#7841; nh&#432;ng m&agrave;
+tr&ecirc;n th&#7921;c t&#7871; n&oacute; r&uacute;t ng&#7855;n &#273;i &#273;&#7901;i s&#7889;ng&nbsp; khi
+m&agrave; b&#7841;n mu&#7889;n t&#259;ng k&iacute;ch c&#7905; s&#7917; d&#7909;ng kh&ocirc;ng &#273;&#297;a
+c&#7913;ng.V&iacute; d&#7909; nh&#432; b&#7841;n kh&ocirc;ng c&oacute; &#273;&#7911; kh&ocirc;ng gian
+tr&ecirc;n &#273;&#297;a c&#7913;ng m&agrave; &#273;&#432;&#7907;c ch&#7913;a trong /home(Th&ocirc;ng th&#432;&#7901;ng
+khi c&agrave;i Slackware ng&#432;&#7901;i s&#7917; d&#7909;ng th&#432;&#7901;ng t&#7841;o m&#7897;t ph&acirc;n
+v&ugrave;ng &#273;&#297;a c&#7913;ng r&#7845;t l&#7899;n l&agrave;m ph&acirc;n vung g&#7889;c - &#273;&oacute;
+ch&#7881; l&agrave; v&iacute; d&#7909;).B&#7903;i v&igrave; c&aacute;c ph&acirc;n
+v&ugrave;ng &#273;&#297;a c&#7913;ng c&oacute; th&#7875; k&#7871;t n&#7889;i v&agrave;o b&#7845;t k&igrave;
+catalog n&agrave;o cho l&ecirc;n trong tr&#432;&#7901;ng h&#7907;p n&agrave;y b&#7841;n ch&#7881;
+c&#7847;n v&agrave;o c&#7917;a h&agrave;ng vi t&iacute;nh v&agrave; mua m&#7897;t HDD n&#7919;a
+&#273;&#7875; k&#7871;t n&#7889;i v&agrave;o /home.V&#7853;y l&agrave; b&#7841;n kh&ocirc;ng s&#7907; thi&#7871;u
+kh&ocirc;ng gian cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n n&#7919;a.T&#7845;t c&#7843; &#273;&#7873;u kh&ocirc;ng c&#7847;n
+thi&#7871;t l&#7853;p l&#7841;i h&#7879; th&#7889;ng c&#361;ng nh&#432; kh&ocirc;ng c&#7847;n di chuy&#7875;n c&aacute;c
+ch&#432;&#417;ng tr&igrave;nh.<br>
+D&#432;&#7899;i &#273;&acirc;y l&agrave; nh&#7919;ng th&ocirc;ng tin c&#417; b&#7843;n v&#7873; nh&#7919;ng catalog
+ch&iacute;nh b&#7853;c tr&ecirc;n c&#7911;a h&#7879; th&#7889;ng Slackware.<br>
+<br>
+</a>
+<div style="margin-left: 40px;">
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 20%; font-style: italic;">/bin<br>
+      </td>
+      <td style="vertical-align: top;">Ch&#7913;a nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh
+quan tr&#7885;ng cho ng&#432;&#7901;i s&#7917; d&#7909;ng.C&oacute; th&#7875; n&oacute;i &#273;&acirc;y
+l&agrave; nh&#7919;ng l&#7879;nh quan tr&#7885;ng c&#7847;n cho ng&#432;&#7901;i d&ugrave;ng khi l&agrave;m
+vi&#7879;c v&#7899;i h&#7879; th&#7889;ng.V&iacute; d&#7909; nh&#432; v&#7887; l&#7879;nh v&agrave; l&#7879;nh c&#7911;a h&#7879; th&#7889;ng
+t&#7853;p tin(ls,cp..).Catalog /bin th&ocirc;ng th&#432;&#7901;ng kh&ocirc;ng ch&#7883;u s&#7921;
+thay &#273;&#7893;i sau khi c&agrave;i &#273;&#7863;t.N&#7871;u nh&#432; c&oacute; ch&#7881; l&agrave; nh&#7919;ng
+packages &#273;&#432;&#7907;c n&acirc;ng c&#7845;p <br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/boot<br>
+      </td>
+      <td style="vertical-align: top;">t&#7853;p tin&nbsp;s&#7917; d&#7909;ng &#273;&#7875; kh&#7903;i
+&#273;&#7897;ng Linux l&agrave; LILO.M&#7909;c l&#7909;c n&agrave;y c&#361;ng s&#7869; kh&ocirc;ng thay
+&#273;&#7893;i sau khi c&agrave;i &#273;&#7863;t<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/cdrom<br>
+(/mnt/cdrom)<br>
+      </td>
+      <td style="vertical-align: top;">H&atilde;y nh&#7899; r&#7857;ng t&#7845;t c&#7843;
+c&aacute;c disk &#273;&#432;&#7907;c k&#7871;t n&#7889;i v&#7899;i m&#7897;t catalog x&aacute;c &#273;&#7883;nh.V&agrave;
+catalog /cdrom ch&#7881; d&ugrave;ng cho vi&#7879;c k&#7871;t n&#7889;i v&#7899;i &#273;&#297;a compact c&#7911;a b&#7841;n<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/dev<br>
+      </td>
+      <td style="vertical-align: top;">Trong Linux t&#7845;t c&#7843; coi l&agrave;
+t&#7853;p tin.Th&#7853;m ch&iacute; k&#7875; c&#7843; c&aacute;c b&#7897; ph&#7853;n c&#7913;ng c&#361;ng nh&#432;
+c&aacute;c c&ocirc;ng n&#7889;i ti&#7871;p,m&aacute;y scan.&#273;&#297;a c&#7913;ng...Vi&#7879;c s&#7917; d&#7909;ng
+v&#7899;i c&aacute;c b&#7897; ph&#7853;n kh&aacute;c nhau s&#7869; &#273;&#432;&#7907;c th&#7921;c hi&#7879;n b&#7903;i c&aacute;c
+t&#7853;p tin kh&aacute;c nhau(g&#7885;i l&agrave; device node).Ch&uacute;ng n&#7857;m
+trong catalog /dev.N&oacute; gi&#7889;ng nh&#432; trong Unix v&agrave; c&aacute;c
+phi&ecirc;n b&#7843;n kh&aacute;c.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/etc<br>
+      </td>
+      <td style="vertical-align: top;">Ch&#7913;a c&aacute;c t&#7853;p tin c&#7845;u
+h&igrave;nh.T&#7845;t c&#7843; t&#7915; t&#7853;p tin c&#7845;u h&igrave;nh X-Windows,c&#417; s&#7903; d&#7919; li&#7879;u
+ng&#432;&#7901;i s&#7917; d&#7909;ng t&#7899;i c&aacute;c script t&#7921; th&#7921;c thi.Administrator t&#7845;t
+nhi&ecirc;n c&#7847;n ph&#7843;i n&#7855;m r&otilde; catalog n&agrave;y<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/home<br>
+      </td>
+      <td style="vertical-align: top;">Linux &#273;&#432;&#7907;c coi l&agrave; h&#7879;
+th&#7889;ng &#273;a t&agrave;i kho&#7843;n.M&#7895;i t&agrave;i kho&#7843;n c&oacute; m&#7897;t th&#432; m&#7909;c
+ri&ecirc;ng bi&#7879;t l&agrave;m n&#417;i g&#7889;c c&#7911;a m&igrave;nh.T&ecirc;n chung c&#7911;a
+n&oacute; l&agrave; "home" catalog t&agrave;i kho&#7843;n.Catalog /home
+ch&iacute;nh l&agrave; v&#7883; tr&iacute; c&#7911;a nh&#7919;ng catalog home c&#7911;a
+c&aacute;c t&agrave;i kho&#7843;n.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/lib<br>
+      </td>
+      <td style="vertical-align: top;">H&#7879; th&#7889;ng th&#432; vi&#7879;n c&#7847;n thi&#7871;t cho
+c&aacute;c ch&#432;&#417;ng tr&igrave;nh.Th&#432; vi&#7879;n C,th&#432; vi&#7879;n &#273;&#7897;ng c&#7911;a v&#7853;t mang
+kh&#7903;i &#273;&#7897;ng,th&#432; vi&#7879;n ncurses v&agrave; module kernel - &#273;&acirc;y l&agrave;
+n&#417;i l&#432;u tr&#7919; ch&iacute;nh.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/lost+found<br>
+      </td>
+      <td style="vertical-align: top;">Khi kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng c&oacute;
+s&#7843;y ra hi&#7879;n t&#432;&#7907;ng ki&#7875;m tra h&#7879; th&#7889;ng t&#7853;p tin b&#7883; l&#7895;i.N&#7871;u nh&#432; c&oacute; l&#7895;i
+th&igrave; th&#7921;c thi fsck v&agrave; s&#7917;a ch&#7919;a ch&uacute;ng.Ph&#7847;n t&ecirc;p
+tin &#273;&#432;&#7907;c kh&ocirc;i ph&#7909;c s&#7869; &#273;&#432;&#7907;c c&#7845;t d&#7919; t&#7841;i &#273;&acirc;y<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/mnt<br>
+      </td>
+      <td style="vertical-align: top;">Catalog d&ugrave;ng l&agrave;m
+&#273;i&#7875;m k&#7871;t n&#7889;i t&#7841;m th&#7901;i cho c&aacute;c &#273;&#297;a c&#7913;ng ho&#7863;c ng&#432;ng k&#7871;t n&#7889;i v&#7899;i
+c&aacute;c b&#7897; ph&#7853;n<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/opt<br>
+      </td>
+      <td style="vertical-align: top;">D&ugrave;ng cho c&aacute;c
+packages b&#7893; sung.&Yacute; t&#432;&#7903;ng nh&#432; sau,t&#7845;t c&#7843; c&aacute;c packages s&#7869;
+&#273;&#432;&#7907;c c&agrave;i &#273;&#7863;t v&agrave;o &#273;&#7845;y(v&iacute; d&#7909;
+/opt/&lt;program&gt;)v&agrave; cu&#7889;i c&ugrave;ng n&#7871;u nh&#432; packages
+kh&ocirc;ng c&#7847;n thi&#7871;t th&igrave; ch&#7881; c&#7847;n x&oacute;a b&#7887; catalog c&#7911;a
+packages l&agrave; k&#7871;t th&uacute;c.&#7902; Slackware m&#7897;t v&agrave;i ch&#432;&#417;ng
+tr&igrave;nh &#273;&#432;&#7907;c &#273;&#7863;t v&agrave;o /opt(nh&#432; KDE /opt/kde)nh&#432;ng b&#7841;n
+c&oacute; th&#7875; tho&#7843;i m&aacute;i b&#7893; sung v&agrave;o /opt<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/proc<br>
+      </td>
+      <td style="vertical-align: top;">C&oacute; l&#7869; &#273;&acirc;y l&agrave;
+m&#7897;t catalog &#273;&#7863;c bi&#7879;t.Th&#7921;c t&#7871; n&oacute; kh&ocirc;ng coi l&agrave; m&#7897;t
+ph&#7847;n c&#7911;a h&#7879; th&#7889;ng.N&oacute; l&agrave; h&#7879; th&#7889;ng file &#7843;o m&agrave; coi
+l&agrave; truy c&#7853;p t&#7915; nh&acirc;n.Nh&#7919;ng th&ocirc;ng tin kh&aacute;c nhau
+m&agrave; nh&acirc;n mu&#7889;n th&ocirc;ng b&aacute;o &#273;&#7871;n b&#7841;n.N&oacute; &#273;&#432;&#7907;c
+th&#7875; hi&#7879;n th&ocirc;ng qua c&aacute;c t&#7853;p tin trong /proc.B&#7841;n c&oacute;
+th&#7875; th&#7917; nh&#432; <br>
+cat /proc/cpuinfo<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/root<br>
+      </td>
+      <td style="vertical-align: top;">Administrator c&#7911;a h&#7879; th&#7889;ng -
+root.Catalog home c&#7911;a n&oacute; l&agrave; /root thay v&igrave;
+/home/root.Nguy&ecirc;n nh&acirc;n l&agrave; catalog /home c&oacute; th&#7875;
+n&#7857;m &#7903; nh&#7919;ng ph&acirc;n v&ugrave;ng ngo&agrave;i (/).N&#7871;u nh&#432;&nbsp; /home
+c&oacute; th&#7875; kh&ocirc;ng &#273;&#432;&#7907;c k&#7871;t n&#7889;i t&#7899;i th&igrave; b&#7843;n th&acirc;n
+root s&#7869; c&#7847;n ph&#7843;i &#273;&#259;ng nh&#7853;p &#273;&#7875; gi&#7843;i quy&#7871;t v&#7845;n &#273;&#7873; n&agrave;y.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/sbin<br>
+      </td>
+      <td style="vertical-align: top;">Nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh
+ch&iacute;nh th&#7921;c hi&#7879;n b&#7903;i root c&#361;ng nh&#432; c&aacute;c ti&#7871;n tr&igrave;nh
+kh&#7903;i &#273;&#7897;ng c&#361;ng &#273;&#432;&#7907;c l&#432;u tr&#7919; t&#7841;i &#273;&acirc;y.Nh&#7919;ng t&agrave;i kho&#7843;n
+th&ocirc;ng th&#432;&#7901;ng kh&ocirc;ng s&#7917; d&#7909;ng nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh
+n&agrave;y.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/tmp<br>
+      </td>
+      <td style="vertical-align: top;">&#272;&acirc;y l&agrave; m&ocirc;i
+tr&#432;&#7901;ng l&#432;u tr&#7919; t&#7841;m th&#7901;i c&#417; s&#7903; d&#7919; li&#7879;u.T&#7845;t c&#7843; c&aacute;c t&agrave;i kho&#7843;n
+c&oacute; quy&#7873;n &#273;&#7885;c,ghi v&agrave;o catalog n&agrave;y<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/usr<br>
+      </td>
+      <td style="vertical-align: top;">&#272;&acirc;y l&agrave; m&#7897;t catalog
+l&#7899;n trong Linux c&oacute; th&#7875; n&oacute;i t&#7845;t c&#7843; nh&#7919;ng g&igrave;
+c&ograve;n l&#7841;i &#273;&#7873;u n&#7857;m &#7903; &#273;&acirc;y.Ch&#432;&#417;ng tr&igrave;nh,t&agrave;i
+li&#7879;u,m&atilde; g&#7889;c nh&acirc;n v&agrave; X-Windows.Ch&iacute;nh
+x&aacute;c v&agrave;o catalog n&agrave;y b&#7841;n s&#7869; c&agrave;i &#273;&#7863;t
+c&aacute;c ch&#432;&#417;ng tr&igrave;nh.<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; font-style: italic;">/var<br>
+      </td>
+      <td style="vertical-align: top;">H&#7879; th&#7889;ng t&#7853;p tin log,t&#7853;p tin
+&#273;&#7879;m...Catalog n&agrave;y th&#432;&#7901;ng xuy&ecirc;n thay &#273;&#7893;i.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_4.1.1"><br>
+</a></div>
+<a name="ch_4.1.1">B&acirc;y gi&#7901; b&#7841;n &#273;&atilde; c&oacute; m&#7897;t
+h&igrave;nh t&#432;&#7907;ng kh&aacute;ch quan v&#7873; nh&#7919;ng c&aacute;i n&agrave;o ch&#7913;a
+trong nh&#7919;ng catalog n&agrave;o.V&agrave; b&#7841;n s&#7869; d&#7877; d&agrave;ng
+t&igrave;m &#273;&#432;&#7907;c t&#7853;p tin m&agrave; b&#7841;n mu&#7889;n t&igrave;m tr&ecirc;n h&#7879;
+th&#7889;ng(t&#7845;t nhi&ecirc;n kh&ocirc;ng b&#7857;ng tay).<br>
+<br>
+<span style="font-weight: bold;"> T&igrave;m ki&#7871;m t&#7853;p tin<br>
+</span><br>
+B&#7841;n &#273;&atilde; bi&#7871;t nh&#7919;ng c&aacute;i n&agrave;o ch&#7913;a trong nh&#7919;ng
+c&aacute;i catalog n&agrave;o r&#7891;i nh&#7919;ng c&#361;ng kh&ocirc;ng c&oacute; ngh&#297;a
+l&agrave; gi&uacute;p b&#7841;n t&igrave;m &#273;&#432;&#7907;c c&aacute;c t&#7853;p tin c&#7909; th&#7875;.T&#7845;t
+nhi&ecirc;n b&#7841;n c&oacute; th&#7875; th&#7921;c hi&#7879;n tr&ecirc;n t&#7845;t c&#7843; c&aacute;c
+catalog vi&#7879;c t&igrave;m ki&#7871;m tuy nhi&ecirc;n c&oacute; nhi&#7873;u bi&#7879;n
+ph&aacute;p nhanh h&#417;n.Trong Slackware c&oacute; b&#7889;n c&ocirc;ng c&#7909; ch&#7911;
+y&ecirc;u cho vi&#7879;c t&igrave;m ki&#7871;m t&#7853;p tin.<br>
+<br>
+<span style="font-weight: bold;"> which<br>
+</span><br>
+M&#7897;t c&ocirc;ng c&#7909; &#273;&#7847;u ti&ecirc;n&nbsp; &#273;&oacute; l&agrave; l&#7879;nh
+which(1).Th&ocirc;ng th&#432;&#7901;ng s&#7917; d&#7909;ng &#273;&#7875; t&igrave;m ki&#7871;m nhanh c&aacute;c
+ch&#432;&#417;ng tr&igrave;nh.N&oacute; &#273;&#417;ng gi&#7843;n l&agrave; t&igrave;m ki&#7871;m &#7903;
+c&aacute;c catalog &#273;&#432;&#7907;c ch&#7881; ra tr&ecirc;n &#273;&#432;&#7901;ng d&#7851;n m&agrave; b&#7841;n ch&#7881; ra
+v&agrave;&nbsp; &#273;&#432;a ra&nbsp; nh&#7919;ng t&#432;&#417;ng &#7913;ng v&agrave; c&#7843; &#273;&#432;&#7901;ng d&#7851;n t&#7899;i
+t&#7853;p tin.<br>
+$ which bash<br>
+/bin/bash<br>
+C&oacute; ngh&#297;a l&agrave;&nbsp; bash n&#7857;m &#7903;&nbsp; catalog /bin.Nh&#432;ng h&#7841;n
+ch&#7871; l&agrave; n&oacute; ch&#7881; t&igrave;m trong &#273;&#432;&#7901;ng d&#7851;n c&#7911;a b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> whereis</span><br>
+<br>
+L&#7879;nh <span style="font-weight: bold;">whereis(1)</span> l&agrave;m vi&#7879;c
+gi&#7889;ng nh&#432; which nh&#432;ng c&oacute; b&#7893; sung th&ecirc;m th&ocirc;ng tin
+v&agrave;o cu&#7889;i th&ocirc;ng tin man-pages(trang man) c&#361;ng nh&#432; ch&#432;&#417;ng
+g&#7889;c.K&#7871;t qu&#7843; c&#7911;a vi&#7879;c t&igrave;m ki&#7871;m nh&#432; sau:<br>
+<br>
+$ <span style="font-weight: bold;">whereis bash</span><br>
+<br>
+<span style="font-style: italic;"> bash: /bin/bash /usr/bin/bash
+/usr/man/man1/bash.1.gz <br>
+</span><br>
+L&#7879;nh kh&ocirc;ng ch&#7881; n&oacute;i xen ch&#432;&#417;ng tr&igrave;nh n&#7857;m &#7903; &#273;&acirc;u
+m&agrave; c&ograve;n ch&#7881; ra nh&#7919;ng t&agrave;i li&#7879;u online c&#7911;a n&oacute;
+n&#7857;m &#7903; &#273;&acirc;u.Nh&#432;ng m&agrave; n&oacute; v&#7851;n h&#7841;n ch&#7871;.N&ecirc;u nh&#432; b&#7841;n
+mu&#7889;n t&igrave;m ki&#7871;m nh&#7919;ng t&#7853;p tin c&#7845;u h&igrave;nh.&#272;i&ecirc;u n&agrave;y
+th&igrave; which v&agrave; <span style="font-weight: bold;">whereis</span>
+kh&ocirc;ng gi&uacute;p &#273;&#7905; &#273;&#432;&#7907;c.<br>
+<span style="font-weight: bold;"> find</span><br>
+L&#7879;nh <span style="font-weight: bold;">find(1)</span> c&oacute; th&#7875;
+gi&uacute;p b&#7841;n t&igrave;m ki&#7871;m t&#7845;t c&#7843;.Ch&#7859;ng h&#7841;n t&ocirc;i mu&#7889;n
+t&igrave;m ki&#7871;m <span style="font-weight: bold;">xinitrc</span>
+tr&ecirc;n h&#7879; th&#7889;ng<br>
+<br>
+$ <span style="font-weight: bold;">find / -name xinitrc</span><br>
+<span style="font-style: italic;"> /var/X11R6/lib/xinit/xinitrc </span><br>
+<br>
+<span style="font-weight: bold;"> find </span>c&#7847;n ph&#7843;i c&oacute; nhi&#7873;u
+th&#7901;i gian &#273;&#7875; t&igrave;m ki&#7871;m b&#7903;i v&igrave; n&oacute; th&#7921;c hi&#7879;n
+tr&ecirc;n t&#7845;t c&#7843; c&aacute;c catalog c&#7911;a h&#7879; th&#7889;ng.N&#7871;u b&#7841;n l&agrave; m&#7897;t
+t&agrave;i kho&#7843;n b&igrave;nh th&#432;&#7901;ng th&igrave; l&#7879;nh n&agrave;y
+c&oacute; l&#7869; s&#7869; kh&ocirc;ng &iacute;t l&#7847;n th&ocirc;ng b&aacute;o v&#7873; l&#7895;i
+truy c&#7853;p t&#7915; nh&#7919;ng catalog c&#7845;m(v&#7899;i nh&#7919;ng ng&#432;&#7901;i c&oacute; th&#7875; truy c&#7853;p
+v&agrave;o root).Nh&#432;ng cu&#7889;i c&ugrave;ng find t&igrave;m ra t&#7853;p tin c&#7847;n
+thi&#7871;t.&#272;&#7845;y l&agrave; t&ocirc;t r&#7891;i.N&#7871;u nh&#432; c&oacute; th&#7875; n&oacute;
+l&agrave;m vi&#7879;c nhanh h&#417;n...<br>
+<br>
+<span style="font-weight: bold;"> locate</span><br>
+<br>
+L&#7879;nh <span style="font-weight: bold;">locate(1)</span> th&#7921;c hi&#7879;n
+c&ocirc;ng vi&#7879;c t&igrave;m ki&#7871;m gi&#7889;ng nh&#432; find nh&#432;ng n&oacute;
+t&igrave;m ki&#7871;m tr&ecirc;n c&#417; s&#7903; d&#7919; li&#7879;u c&#7911;a m&igrave;nh thay v&igrave;
+tr&ecirc;n to&agrave;n b&#7897; catalog h&#7879; th&#7889;ng.C&#417; s&#7903; d&#7919; li&#7879;u c&#7911;a n&oacute;
+&#273;&#432;&#7907;c k&#7871;t c&#7845;u sao cho t&#7921; &#273;&#7897;ng c&#7853;p nh&#7853;t v&agrave;o 4:40 s&aacute;ng.B&#7841;n
+c&oacute; th&#7875; b&#7857;ng tay th&#7921;c hi&#7879;n &#273;i&#7873;u n&agrave;y b&#7857;ng updatedb(1) &#273;&#7875;
+c&#7853;p nh&#7853;t d&#7919; li&#7879;u tr&#432;&#7899;c khi t&igrave;m ki&#7871;m(tr&#432;&#7899;c khi th&#7921;c hi&#7879;n b&#7857;ng tay
+c&#7847;n th&#7921;c thi <span style="font-weight: bold;">su nobody</span>).V&iacute;
+d&#7909; c&#7911;a <span style="font-weight: bold;">locate</span>:<br>
+<br>
+$ <span style="font-weight: bold;">locate xinitrc</span> # Kh&ocirc;ng
+nh&#7845;t thi&#7871;t l&agrave; root<br>
+<span style="font-style: italic;"> /var/X11R6/lib/xinit/xinitrc</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /var/X11R6/lib/xinit/xinitrc.fvwm2</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /var/X11R6/lib/xinit/xinitrc.openwin</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /var/X11R6/lib/xinit/xinitrc.twm</span><br>
+<br>
+Ch&uacute;ng ta nh&#7853;n &#273;&#432;&#7907;c nhi&#7873;u h&#417;n so v&#7899;i mong &#273;&#7907;i v&agrave; r&#7845;t
+nhanh.B&#7841;n c&oacute; th&#7875; t&igrave;m th&#7845;y m&#7885;i th&#7913; tr&ecirc;n Linux.<br>
+<br>
+<span style="font-weight: bold;"> Catalog /etc/rc.d</span><br>
+<br>
+Nh&#7919;ng t&#7853;p tin &#273;&#432;&#7907;c th&#7921;c thi b&#7903;i h&#7879; th&#7889;ng trong q&uacute;a tr&igrave;nh
+kh&#7903;i t&#7841;o(initialization) &#273;&#432;&#7907;c l&#432;u trong catalog /etc/rc.d. Slackware s&#7917;
+d&#7909;ng script kh&#7903;i t&#7841;o theo phong c&aacute;ch c&#7911;a BSD.T&#7915;ng nhi&#7879;m v&#7909; ho&#7863;c
+t&#7847;ng th&#7921;c thi(runlevel) c&oacute; t&#7853;p tin rc c&#7911;a
+m&igrave;nh.Ch&iacute;nh th&#7871; c&#7845;u tr&uacute;c m&agrave; ch&uacute;ng ta
+nh&#7853;n &#273;&#432;&#7907;c s&#7869; r&#7845;t d&#7877; d&agrave;ng s&#7917; d&#7909;ng.<br>
+<br>
+C&oacute; m&#7897;t v&agrave;i m&#7909;c script kh&#7903;i t&#7841;o.Kh&#7903;i &#273;&#7897;ng ban &#273;&#7847;u h&#7879;
+th&#7889;ng,t&#7847;ng th&#7921;c thi,kh&#7903;i t&#7841;o m&#7841;ng v&agrave; th&iacute;ch &#7913;ng System
+V.Theo truy&#7873;n th&#7889;ng ch&uacute;ng ta&nbsp; chuy&#7875;n&nbsp; t&#7845;t c&#7843; c&ograve;n
+l&#7841;i t&#7899;i m&#7897;t ph&#7841;m tr&ugrave; kh&aacute;c(other category)<br>
+<br>
+<span style="font-weight: bold;"> B&#432;&#7899;c &#273;&#7847;u q&uacute;a tr&igrave;nh kh&#7903;i
+&#273;&#7897;ng h&#7879; th&#7889;ng<br>
+</span><br>
+Ch&#432;&#417;ng tr&igrave;nh &#273;&#7847;u ti&ecirc;n m&agrave; Slackware th&#7921;c hi&#7879;n sau
+nh&acirc;n Linux l&agrave; <span style="font-weight: bold;">init(8)</span>.Ch&#432;&#417;ng
+tr&igrave;nh n&agrave;y &#273;&#7885;c t&#7853;p tin <span style="font-weight: bold;">/etc/inittab(5)</span>
+&#273;&#7875; bi&#7871;t c&aacute;ch kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng.Th&#7921;c hi&#7879;n <span
+ style="font-style: italic;">/etc/rc.d/rc.S</span> script &#273;&#7875; chu&#7849;n b&#7883;
+cho qu&aacute; tr&igrave;nh chuy&#7875;n ti&#7871;p ch&#7885;n t&#7847;ng th&#7921;c thi(<span
+ style="font-style: italic;">runlevel</span>).t&#7853;p tin <span
+ style="font-style: italic;">rc.S</span> k&iacute;ch ho&#7841;t b&#7897; nh&#7899; &#7843;o,k&#7871;t
+n&#7889;i c&aacute;c t&#7853;p tin h&#7879; th&#7889;ng,x&oacute;a b&#7887; nh&#7919;ng t&#7853;p tin log c&#7911;a
+catalog kh&#7903;i t&#7841;o c&aacute;c thi&#7871;t b&#7883; plug v&agrave; play,kh&#7903;i &#273;&#7897;ng
+module nh&acirc;n,thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh thi&#7871;t b&#7883; PCMCIA,k&iacute;ch
+ho&#7841;t c&aacute;c c&#7893;ng n&#7889;i ti&#7871;p,v&agrave; t&#7845;t nhi&ecirc;n cho &#273;&#7871;n khi k&#7871;t
+th&uacute;c c&ocirc;ng vi&#7879;c c&#7911;a m&igrave;nh.N&oacute; g&#7885;i ra nh&#7919;ng
+script d&#432;&#7899;i &#273;&acirc;y t&#7915; catalog <span style="font-weight: bold;">/etc/rc.d</span><br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_4.1.1"><span
+ style="font-style: italic;">rc.S</span><span style="font-weight: bold;"> </span>N&oacute;
+l&agrave; kh&#7903;i t&#7841;o c&aacute;c script<br>
+<span style="font-style: italic;"> rc.modules</span> Kh&#7903;i &#273;&#7897;ng modules
+nh&acirc;n.Nh&#432; l&agrave; thi&#7871;t b&#7883; m&#7841;ng,PPP v&agrave; nhi&#7873;u thi&#7871;t b&#7883;
+kh&aacute;c.N&#7871;u nh&#432; script t&igrave;m th&#7845;y rc.netdevice th&igrave;
+n&oacute; s&#7869; th&#7921;c hi&#7879;n<br>
+<span style="font-style: italic;"> rc.pcmcia</span> Ki&#7875;m tra s&#7921; c&oacute;
+m&#7863;t v&agrave; thi&#7871;t l&#7853;p c&#7845;u h&igrave;nh t&#7845;t c&#7843; thi&#7871;t b&#7883;
+PCMCIA(c&oacute; m&#7863;t tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n).N&oacute; thu&#7853;n l&#7907;i
+cho ng&#432;&#7901;i s&#7917; d&#7909;ng c&aacute;c m&aacute;y latop m&agrave; c&oacute;
+PCMCIA modem v&agrave; thi&#7871;t b&#7883; m&#7841;ng.<br>
+<span style="font-style: italic;"> rc.serial</span> Thi&#7871;t l&#7853;p c&#7845;u
+h&igrave;nh c&#7893;ng n&#7889;i ti&#7871;p v&agrave; th&#7921;c hi&#7879;n t&#432;&#417;ng &#7913;ng v&#7899;i l&#7879;nh
+setserial<br>
+<span style="font-style: italic;"> rc.sysvinit</span> T&igrave;m ki&#7871;m
+kh&#7903;i t&#7841;o System V t&#432;&#417;ng &#7913;ng v&#7899;i t&#7847;ng th&#7921;c thi(runlevel) &#273;&atilde; ch&#7885;n
+v&agrave; kh&#7903;i &#273;&#7897;ng ch&uacute;ng.Ch&uacute;ng ta s&#7869; th&#7843;o lu&#7853;n &#7903;
+ph&iacute;a d&#432;&#7899;i.<br>
+<br>
+</a></div>
+<a name="ch_4.1.1"><span style="font-weight: bold;">Script Kh&#7903;i t&#7841;o
+t&#7847;ng th&#7921;c thi</span><br>
+<br>
+Sau khi qu&aacute; tr&igrave;nh kh&#7903;i t&#7841;o ho&agrave;n th&agrave;nh init
+chuy&#7875;n sang kh&#7903;i t&#7841;o t&#7847;ng th&#7921;c thi.T&#7847;ng th&#7921;c thi di&#7877;n t&#7843; xem &#7903; trong ch&#7871;
+&#273;&#7897; n&agrave;o h&#7879; th&#7889;ng s&#7869; l&agrave;m vi&#7879;c.M&#7897;t &acirc;m thanh th&#7915;a vang
+l&ecirc;n.V&#7853;y l&agrave; runlevel&nbsp; th&ocirc;ng b&aacute;o cho init
+"s&#7869; &#7903; ch&#7871; &#273;&#7897; &#273;a t&agrave;i kho&#7843;n(multiuser login) hay l&agrave; ch&#7881;
+l&agrave; &#273;&#417;n t&agrave;i kho&#7843;n(single user),s&#7869; s&#7917; d&#7909;ng hay kh&ocirc;ng
+d&#7883;ch v&#7909; m&#7841;ng,s&#7917; d&#7909;ng hay kh&ocirc;ng X Windows ho&#7863;c agetty(8) cho vi&#7879;c
+qu&#7843;n l&yacute; &#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng(logins).Nh&#7919;ng t&#7853;p tin d&#432;&#7899;i
+&#273;&acirc;y x&aacute;c &#273;&#7883;nh nh&#7919;ng t&#7847;ng th&#7921;c thi kh&aacute;c nhau trong
+Slackware<br>
+<br>
+</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">&nbsp;rc.0</span> T&#7855;t h&#7879; th&#7889;ng(runlevel
+0).Theo m&#7863;c &#273;&#7883;nh n&oacute; l&agrave; &#7843;nh v&agrave;o rc.6<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span style="font-style: italic;">&nbsp;rc.4</span>
+Ch&#7871; &#273;&#7897; &#273;a t&agrave;i kho&#7843;n(runlevel 4),nh&#432;ng X11 v&#7899;i XDM,GDM ho&#7863;c KDM
+l&agrave;m m&ocirc;i &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp;tr&#432;&#7901;ng &#273;&#259;ng nh&#7853;p.<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span
+ style="font-style: italic;"> rc.K</span> Ch&#7871; &#273;&#7897; &#273;&#417;n t&agrave;i
+kho&#7843;n(runlevel 1).<br>
+&nbsp; &nbsp; &nbsp;<a name="ch_4.1.1"> <span
+ style="font-style: italic;">rc.M</span> Ch&#7871; &#273;&#7897; &#273;a t&agrave;i kho&#7843;n
+(runlevel 2 v&agrave; 3) nh&#432;ng v&#7899;i m&ocirc;i tr&#432;&#7901;ng &#273;&#259;ng nh&#7853;p l&agrave;
+v&#259;n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp;b&#7843;n(text-based login).N&oacute; coi l&agrave; m&#7863;c &#273;&#7883;nh
+trong Slackware</a> <a name="ch_4.1.1"><br>
+<span style="font-weight: bold;">Kh&#7903;i t&#7841;o m&#7841;ng<br>
+</span><br>
+&nbsp;C&aacute;c t&#7847;ng th&#7921;c thi 2,3 v&agrave; 4 ti&#7871;n h&agrave;nh kh&#7903;i
+&#273;&#7897;ng c&aacute;c d&#7883;ch v&#7909; m&#7841;ng.Nh&#7919;ng t&#7853;p tin sau &nbsp; &nbsp; &nbsp;
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;ch&#7883;u tr&aacute;ch nhi&#7879;m cho
+qu&aacute; tr&igrave;ng kh&#7903;i t&#7841;o m&#7841;ng:<br>
+<br>
+</a> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">rc.inet1</span> T&#7841;o th&agrave;nh t&#7915; &#7913;ng
+d&#7909;ng netconfig ,ch&#7883;u tr&aacute;ch nhi&#7879;m v&#7873; c&#7845;u h&igrave;nh m&#7841;ng<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">rc.inet2</span> Th&#7921;c hi&#7879;n sau rc.inet1
+v&agrave; kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909; m&#7841;ng ch&iacute;nh <br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<span
+ style="font-style: italic;"> rc.atalk</span> Kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909; AppleTalk<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">rc.httpd</span> Kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909; web Apache<br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">rc.samba</span> Kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909; Samba<a
+ name="ch_4.1.1"><br>
+&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <span
+ style="font-style: italic;">rc.news </span>Kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909; tin t&#7913;c</a> <br>
+<a name="ch_4.1.1"><br>
+<span style="font-weight: bold;">S&#7921; t&#432;&#417;ng h&#7907;p v&#7899;i System V</span><br>
+<br>
+Vi&#7879;c t&#432;&#417;ng h&#7907;p v&#7899;i System V &#273;&#432;&#7907;c ti&#7871;n h&agrave;nh tr&ecirc;n Slackware
+7.0.C&oacute; r&#7845;t nhi&#7873;u phi&ecirc;n b&#7843;n Linux s&#7917; d&#7909;ng &#273;&#7883;nh d&#7841;ng
+n&agrave;y c&ugrave;ng v&#7899;i BSD.Trong m&ocirc;i tr&#432;&#7901;ng &#273;&oacute; m&#7895;i m&#7897;t
+catalog script t&#432;&#417;ng &#7913;ng v&#7899;i m&#7897;t t&#7847;ng th&#7921;c thi(runlevel) c&ograve;n BSD
+th&igrave; ch&#7881; c&oacute; m&#7897;t script t&#432;&#417;ng &#7913;ng v&#7899;i m&#7897;t t&#7847;ng th&#7921;c thi.<br>
+<span style="font-style: italic;"> rc.sysint</span> l&agrave; m&#7897;t script
+h&#432;&#7899;ng d&#7851;n t&igrave;m ki&#7871;m t&#7845;t c&#7843; System V init script &#7903; trong catalog
+/etc/rc.d v&agrave; <br>
+th&#7921;c hi&#7879;n n&oacute;(n&#7871;u nh&#432; th&iacute;ch &#7913;ng v&#7899;i t&#7847;ng th&#7921;c thi).&#272;i&#7873;u
+n&atilde;y s&#7869; c&oacute; l&#7907;i n&#7871;u nh&#432; b&#7841;n s&#7917; d&#7909;ng c&aacute;c ch&#432;&#417;ng
+tr&igrave;nh th&#432;&#417;ng nghi&#7879;p m&agrave; c&agrave;i &#273;&#7863;t c&aacute;c script
+System V,tuy nhi&ecirc;n trong c&ugrave;ng th&#7901;i gian &#273;&oacute; b&#7841;n c&#361;ng
+c&oacute; th&#7875; s&#7917; d&#7909;ng BSD script.<br>
+<br>
+<span style="font-weight: bold;"> C&aacute;c files kh&aacute;c</span><br>
+<br>
+Nh&#7919;ng script d&#432;&#7899;i &#273;&acirc;y l&agrave; c&aacute;c script kh&#7903;i
+&#273;&#7897;ng,ch&uacute;ng th&ocirc;ng th&#432;&#7901;ng &#273;&#432;&#7907;c ch&#7841;y b&#7903;i m&#7897;t hay nhi&#7873;u script
+k&#7875; tr&ecirc;n,ch&iacute;nh v&igrave; th&#7871; t&#7845;t c&#7843;&nbsp; nh&#7919;ng g&igrave;
+b&#7841;n mu&#7889;n thay &#273;&#7893;i c&#7845;u h&igrave;nh h&#7879; th&#7889;ng ch&iacute;nh l&agrave; so&#7841;n
+th&#7843;o l&#7841;i n&#7897;i dung c&#7911;a n&oacute;.<br>
+<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_4.1.1"><span
+ style="font-style: italic;"><br>
+rc.cdrom </span>N&#7871;u nh&#432; k&iacute;ch ho&#7841;t th&igrave; n&oacute; s&#7869; ki&#7875;m
+tra xem c&oacute; compact disk trong &#7893; &#273;&#297;a hay kh&ocirc;ng,n&#7871;u
+c&oacute; th&igrave; n&oacute; s&#7869; k&#7871;t n&#7889;i t&#7899;i /cdrom<br>
+<span style="font-style: italic;"> rc.gpm</span> Kh&#7903;i &#273;&#7897;ng d&#7883;ch v&#7909;
+l&agrave;m vi&#7879;c v&#7899;i chu&#7897;t(general purpose mouse).N&oacute; cho
+ph&eacute;p b&#7841;n c&oacute; th&#7875; sao ch&eacute;p,d&aacute;n trong console.<br>
+<span style="font-style: italic;"> rc.ibcs2 </span>&#272;&#7843;m b&#7843;o ho&#7841;t &#273;&#7897;ng
+trong m&ocirc;i tr&#432;&#7901;ng Intel Binary Compatibility.&#272;i&#7873;u n&agrave;y c&#7847;n
+thi&#7871;t khi b&#7841;n thi&#7871;t k&#7871; nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh c&#7847;n bi&ecirc;n dich
+cho SCO Unix ho&#7863;c nh&#7919;ng phi&ecirc;n b&#7843;n th&#432;&#417;ng m&#7841;i Intel Unix.Khi
+&#273;&oacute; kh&ocirc;ng nh&#7845;t thi&#7871;t ph&#7843;i ch&#7841;y c&aacute;c ch&#432;&#417;ng
+tr&igrave;nh Linux<br>
+<span style="font-style: italic;"> rc.font</span> Kh&#7903;i &#273;&#7897;ng ph&ocirc;ng
+ch&#7919; theo ch&#7885;n l&#7921;a c&#7911;a ng&#432;&#7901;i d&ugrave;ng cho v&#7887; l&#7879;nh<br>
+<span style="font-style: italic;"> rc.local</span> Ch&#7913;a t&#7845;t c&#7843; c&aacute;c
+th&ocirc;ng tin kh&#7903;i &#273;&#7897;ng &#273;&#7863;c bi&#7879;t cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n.Trong nh&#7919;ng
+phi&ecirc;n b&#7843;n Slackware g&#7847;n &#273;&acirc;y nh&#7919;ng t&#7853;p tin n&agrave;y
+r&#7895;ng.N&oacute; l&#432;u tr&#7919; cho ho&#7841;t &#273;&#7897;ng c&#7911;a administrator h&#7879; th&#7889;ng.Script
+n&agrave;y th&#7921;c hi&#7879;n cu&#7889;i c&ugrave;ng khi kh&#7903;i &#273;&#7897;ng h&#7879; th&#7889;ng.<br>
+</a></div>
+<a name="ch_4.1.1">&#272;&#7875; k&iacute;ch ho&#7841;t t&#7845;t c&#7843; c&aacute;c script b&#7841;n c&#7847;n
+b&#7893; sung cho n&oacute; th&ecirc;m quy&#7873;n h&#7841;n th&#7921;c thi v&#7899;i l&#7879;nh chmod.&#272;&#7875;
+script ng&#7915;ng th&#7921;c hi&#7879;n b&#7841;n ch&#7881; c&#7847;n xo&aacute; b&#7887; quy&#7873;n h&#7841;n th&#7921;c thi
+l&agrave; xong.&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin v&#7873; chmod b&#7841;n
+c&oacute; th&#7875; &#273;&#7885;c th&ecirc;m &#7903; trang man c&#7911;a n&oacute;.<br>
+<br>
+</a><a name="ch_4.1.2"><span style="font-weight: bold;">4.1.2 Ch&#7885;n
+kernel<br>
+</span><br>
+Nh&acirc;n l&agrave; m&#7897;t ph&#7847;n c&#7911;a H&#272;H m&agrave; cho ph&eacute;p truy
+c&#7853;p t&#7899;i c&aacute;c thi&#7871;t b&#7883; ph&#7909; tr&#7907; m&aacute;y t&iacute;nh,&#273;i&#7873;u khi&#7875;n
+c&aacute;c ti&#7871;n tr&igrave;nh v&agrave; ki&#7875;m so&aacute;t c&ocirc;ng vi&#7879;c
+to&agrave;n h&#7879; th&#7889;ng.Nh&acirc;n &#273;&#7843;m b&#7843;o ho&#7841;t &#273;&#7897;ng c&aacute;c thi&#7871;t b&#7883;
+ph&#7847;n c&#7913;ng,v&igrave; th&#7871; ch&#7885;n l&#7921;a nh&acirc;n cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n
+l&agrave; m&#7897;t c&ocirc;ng vi&#7879;c r&#7845;t quan tr&#7885;ng khi c&agrave;i &#273;&#7863;t.<br>
+<br>
+Slackware c&oacute; kho&#7843;ng 60-nh&acirc;n &#273;&atilde; bi&ecirc;n d&#7883;ch.Nh&#432;
+v&#7853;y l&agrave; b&#7841;n &#273;&atilde; c&oacute; r&#7845;t nhi&#7873;u c&#417; h&#7897;i &#273;&#7875; ch&#7885;n l&#7921;a.M&#7895;i
+kernel ch&#7913;a t&#7893; h&#7907;p c&aacute;c driver(theo ti&ecirc;u chu&#7849;n) c&#7897;ng
+th&ecirc;m nh&#7919;ng driver &#273;&#7863;c bi&#7879;t.B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng m&#7897;t t&#7915; nh&#7919;ng
+nh&acirc;n &#273;&atilde; bi&ecirc;n d&#7883;ch ho&#7863;c c&oacute; th&#7875; m&igrave;nh
+bi&ecirc;n d&#7883;ch cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n.Khi &#273;&oacute; b&#7841;n s&#7869; ch&#7855;c ch&#7855;n r&#7857;ng
+nh&acirc;n c&#7911;a b&#7841;n &#273;&#7843;m b&#7843;o cho c&aacute;c thi&#7871;t b&#7883; ph&#7847;n c&#7913;ng ho&#7841;t &#273;&#7897;ng
+tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> Catalog </span><span
+ style="font-weight: bold; font-style: italic;">/kernels</span><span
+ style="font-weight: bold;"> tr&ecirc;n Slackware CD-ROM</span><br>
+<br>
+Nh&acirc;n Slackware ch&#432;a bi&ecirc;n d&#7883;ch &#273;&#432;&#7907;c ch&#7913;a tr&ecirc;n catalog
+/kernels c&#7911;a Slackware CD-ROM v&agrave; tr&ecirc;n site&nbsp; FTP&nbsp;
+trong catalog ch&iacute;nh Slackware.Vi&#7879;c xu&#7845;t hi&#7879;n c&aacute;c
+phi&ecirc;n b&#7843;n m&#7899;i s&#7869; d&ugrave;ng &#273;&#7875; n&acirc;ng c&#7845;p nh&acirc;n
+v&agrave; t&#7845;t c&#7843; c&aacute;c t&agrave;i li&#7879;u li&ecirc;n quan t&#7899;i
+n&oacute; n&#7857;m trong c&ugrave;ng catalog v&#7899;i nh&acirc;n.Catalog <span
+ style="font-style: italic; font-weight: bold;">/kernels</span> ch&#7913;a
+c&aacute;c catalog con cho t&#7915;ng ph&#7847;n c&#7911;a nh&acirc;n.T&ecirc;n c&#7911;a
+catalog con tr&ugrave;ng v&#7899;i t&ecirc;n nh&acirc;n.Trong t&#7915;ng catalog con
+b&#7841;n c&oacute; th&#7875; t&igrave;m th&#7845;y nh&#7919;ng t&#7853;p tin sau:<br>
+<br>
+<span style="font-weight: bold;"> T&#7853;p tin
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&Yacute; ngh&#297;a</span><br>
+<br>
+<span style="font-style: italic;"> System.map&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+H&#7879; th&#7889;ng map files cho nh&acirc;n<br>
+<span style="font-style: italic;"> bzImage(zImage)&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&#7842;nh c&#7911;a nh&acirc;n<br>
+<span style="font-style: italic;"> config</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t&#7853;p tin g&#7889;c c&#7845;u h&igrave;nh c&#7911;a nh&acirc;n<br>
+<br>
+&#272;&#7875; c&agrave;i &#273;&#7863;t nh&acirc;n h&atilde;y sao ch&eacute;p System.map
+v&agrave; config v&agrave;o catalog /boot c&#7911;a h&#7879; th&#7889;ng,c&ograve;n &#7843;nh
+c&#7911;a nh&acirc;n th&igrave; sao ch&eacute;p v&agrave;o /vmlinuz.Th&#7921;c hi&#7879;n
+&#7913;ng d&#7909;ng /sbin/lilo(8) &#273;&#7875; c&agrave;i &#273;&#7863;t LILO cho nh&acirc;n m&#7899;i sau
+&#273;&oacute; kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879; th&#7889;ng.T&#7845;t c&#7843; nh&#7919;ng c&ocirc;ng vi&#7879;c n&agrave;y
+b&#7841;n ph&#7843;i l&agrave;m cho c&agrave;i &#273;&#7863;t nh&acirc;n t&#7915; nh&#7919;ng nh&acirc;n
+ch&#432;a &#273;&#432;&#7907;c bi&ecirc;n d&#7883;ch cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n.<br>
+<br>
+Nh&acirc;n k&#7871;t th&uacute;c t&#7841;i ".i" - &#273;&oacute; l&agrave; IDE kernel.
+C&oacute; ngh&#297;a l&agrave; kh&ocirc;ng ch&#7913;a d&#7883;ch v&#7909; &#273;&#7843;m b&#7843;o ho&#7841;t &#273;&#7897;ng cho
+SCSI trong nh&acirc;n.Nh&acirc;n k&#7871;t th&uacute;c t&#7841;i ".s" - &#273;&oacute;
+l&agrave; SCSI kernel.Ch&uacute;ng ch&#7913;a d&#7883;ch v&#7909; &#273;&#7843;m b&#7843;o ho&#7841;t &#273;&#7897;ng  cho
+IDE nh&#432; ".i" v&agrave; c&#7897;ng v&#7899;i SCSI.<br>
+<br>
+<span style="font-weight: bold;"> Bi&ecirc;n d&#7883;ch kernel t&#7915; m&atilde; g&#7889;c</span><br>
+<br>
+Nh&#7919;ng ng&#432;&#7901;i m&#7899;i s&#7917; d&#7909;ng th&#432;&#7901;ng h&#7887;i :"T&ocirc;i c&oacute; l&ecirc;n
+bi&ecirc;n dich nh&acirc;n cho h&#7879; th&#7889;ng c&#7911;a m&igrave;nh
+kh&ocirc;ng?".C&acirc;u tr&#7843; l&#7901;i l&agrave; c&oacute; th&#7875;.H&#7847;u nh&#432;&nbsp;
+ng&#432;&#7901;i s&#7917; d&#7909;ng m&#7897;t trong nh&#7919;ng nh&acirc;n &#273;&atilde; bi&ecirc;n d&#7883;ch v&#7899;i
+nh&#7919;ng modules cho c&aacute;c thi&#7871;t b&#7883; tr&ecirc;n m&aacute;y m&agrave;
+c&aacute;c nh&acirc;n c&#361; kh&ocirc;ng c&oacute;.B&#7841;n mu&#7889;n t&#7921; bi&ecirc;n
+d&#7883;ch nh&acirc;n ch&#7881; khi m&agrave; b&#7841;n mu&#7889;n n&acirc;ng c&#7845;p nh&acirc;n
+l&ecirc;n m&#7897;t phi&ecirc;n b&#7843;n cao h&#417;n m&agrave; v&#7851;n ch&#432;a &#273;&#432;&#7907;c &#273;&#7863;t
+v&agrave;o trong c&aacute;c phi&ecirc;n b&#7843;n Slackware ho&#7863;c l&agrave; b&#7841;n
+mu&#7889;n v&aacute; l&#7841;i nh&acirc;n tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n.<br>
+<br>
+Vi&#7879;c t&ocirc;ng h&#7907;p kernel c&#7911;a m&igrave;nh kh&ocirc;ng
+kh&oacute;.C&ocirc;ng vi&#7879;c &#273;&#7847;u ti&ecirc;n l&agrave; c&#7847;n ph&#7843;i bi&#7871;t
+c&oacute; c&aacute;i g&igrave; tr&ecirc;n t&#7853;p tin c&#7845;u h&igrave;nh c&#7911;a
+nh&acirc;n tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a b&#7841;n. Ch&uacute; &yacute; l&agrave;
+b&#7841;n &#273;&atilde; c&agrave;i &#273;&#7863;t t&#7915; khu v&#7921;c K trong qu&aacute; tr&igrave;nh
+c&agrave;i &#273;&#7863;t h&#7879; th&#7889;ng.B&#7841;n c&#7847;n b&#7893; sung th&ecirc;m packages t&#7915; khu v&#7921;c D
+v&agrave; m&#7897;t ph&#7847;n tr&igrave;nh bi&ecirc;n d&#7883;ch C,GNU make c&ugrave;ng
+GNU binutils.N&oacute;i chung l&agrave; kh&ocirc;ng t&#7891;i n&#7871;u nh&#432;
+to&agrave;n b&#7897; khu v&#7921;c D &#273;&atilde; &#273;&#432;&#7907;c c&agrave;i &#273;&#7863;t n&#7871;u nh&#432; b&#7841;n d&#7921;
+&#273;&#7883;nh ti&#7871;n h&agrave;nh tinh ch&#7871; c&agrave;i g&igrave; &#273;&oacute;.B&acirc;y
+gi&#7901; ch&uacute;ng ta &#273;&atilde; chu&#7849;n b&#7883; cho t&#7893;ng h&#7907;p nh&acirc;n.<br>
+<br>
+$ <span style="font-weight: bold;">su</span> <br>
+Password:<br>
+<span style="font-weight: bold;"> # cd /usr/src/linux<br>
+</span><br>
+C&ocirc;ng vi&#7879;c &#273;&#7847;u ti&ecirc;n l&agrave; &#273;&#432;a m&atilde; g&#7889;c nh&acirc;n
+v&#7873; tr&#7841;ng th&aacute;i ban &#273;&#7847;u c&#7911;a n&oacute;.B&#7841;n th&#7921;c hi&#7879;n nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> # make mrproper</span><br>
+<br>
+B&acirc;y gi&#7901; b&#7841;n s&#7869; x&acirc;y d&#7921;ng nh&acirc;n tr&ecirc;n h&#7879; th&#7889;ng c&#7911;a
+b&#7841;n.Nh&#7919;ng kernel m&#7899;i th&#432;&#7901;ng gi&#7899;i thi&#7879;u ba ph&#432;&#417;ng ph&aacute;p &#273;&#7875; th&#7921;c
+hi&#7879;n c&ocirc;ng vi&#7879;c n&agrave;y.Ph&#432;&#417;ng ph&aacute;p 1:&#272;&oacute; l&agrave;
+h&#7879; th&#7889;ng ti&ecirc;u chu&#7849;n c&acirc;u h&#7887;i-c&acirc;u tr&#7843; l&#7901;i&nbsp;
+kh&ocirc;ng s&#7917; d&#7909;ng menu.H&#7879; th&#7889;ng s&#7869; &#273;&#432;a ra r&#7845;t nhi&#7873;u c&acirc;u h&#7887;i cho
+b&#7841;n tr&#7843; l&#7901;i sau &#273;&oacute; ti&#7871;n h&agrave;nh t&#7841;o t&#7853;p tin c&#7845;u
+h&igrave;nh.Nh&#432;ng c&oacute; m&#7897;t v&#7845;n &#273;&#7873; l&agrave; n&#7871;u b&#7841;n tr&#7843; l&#7901;i sai
+th&igrave; b&#7841;n c&#7847;n ph&#7843;i l&agrave;m l&#7841;i ho&agrave;n to&agrave;n t&#7915;
+&#273;&#7847;u.Ph&#432;&#417;ng ph&aacute;p th&#7913; 2: &#272;&#432;&#7907;c &#273;&ocirc;ng &#273;&#7843;o s&#7917; d&#7909;ng l&agrave; s&#7917;
+d&#7909;ng menu.V&agrave; cu&#7889;i c&ugrave;ng l&agrave; ph&#432;&#417;ng ph&aacute;p s&#7917;
+d&#7909;ng c&ocirc;ng c&#7909; X &#273;&#7875; c&#7845;u h&igrave;nh nh&acirc;n.Ch&#7885;n ph&#432;&#417;ng
+ph&aacute;p n&agrave;o m&agrave; b&#7841;n th&iacute;ch theo c&aacute;c l&#7879;nh
+t&#432;&#417;ng &#7913;ng sau:<br>
+<br>
+<span style="font-weight: bold;"> # make config</span>&nbsp;&nbsp;&nbsp;&nbsp;
+(c&acirc;u h&#7887;i-c&acirc;u tr&#7843; l&#7901;i,ch&#7871; &#273;&#7897; d&ograve;ng l&#7879;nh)<br>
+<span style="font-weight: bold;"> #make menuconfig</span> (menu,ch&#7871; &#273;&#7897;
+d&ograve;ng l&#7879;nh)<br>
+<span style="font-weight: bold;"> #make xconfig&nbsp;</span>&nbsp;&nbsp;
+(X-c&ocirc;ng c&#7909;,ch&uacute; &yacute; b&#7841;n ph&#7843;i &#7903; trong X)<br>
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_4.1.2"><img
+ src="image/kernelconfig.png" title="" alt=""
+ style="width: 550px; height: 338px;"></a><br>
+<a name="ch_4.1.2"></a></div>
+<a name="ch_4.1.2"> &#272;&#7889;i v&#7899;i ng&#432;&#7901;i m&#7899;i s&#7917; d&#7909;ng c&oacute; l&#7869; <span
+ style="font-weight: bold;">menuconfig</span> &#273;&#432;&#7907;c coi l&agrave; ph&#432;&#417;ng
+&aacute;n &#273;&#417;n gi&#7843;n.B&#7841;n c&oacute; th&#7875; t&igrave;m th&#7845;y nh&#7919;ng th&ocirc;ng
+tin ch&#7881; d&#7851;n t&#7915;ng ph&#7847;n c&#7911;a nh&acirc;n tr&ecirc;n m&agrave;n
+h&igrave;nh.Sau khi x&acirc;y d&#7921;ng c&#7845;u h&igrave;nh c&#7911;a nh&acirc;n b&#7841;n
+h&atilde;y tho&aacute;t ra kh&#7887;i ch&#432;&#417;ng tr&igrave;nh.N&oacute; s&#7869; t&#7841;o ra
+t&#7853;p tin c&#7845;u h&igrave;nh.B&acirc;y gi&#7901; ch&uacute;ng ta c&oacute; th&#7875;
+chu&#7849;n b&#7883; cho t&#7893;ng h&#7907;p nh&acirc;n:<br>
+<br>
+<span style="font-weight: bold;"> # make dep</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # make clean</span><br>
+<br>
+B&#432;&#7899;c ti&#7871;p theo l&agrave; bi&ecirc;n d&#7883;ch nh&acirc;n.&#272;&#7847;u ti&ecirc;n &#273;&#432;a
+ra l&#7879;nh <span style="font-weight: bold;">zImage</span>.N&#7871;u nh&#432;
+kh&ocirc;ng th&agrave;nh c&ocirc;ng do nh&acirc;n qu&aacute; l&#7899;n
+th&igrave; &#273;&#7915;ng lo b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng <span
+ style="font-weight: bold;">bzImage<br>
+</span><br>
+<span style="font-weight: bold;"> # make zImage</span>(th&#7917; ban &#273;&#7847;u)<br>
+<span style="font-weight: bold;"> # make bzImage</span>(D&ugrave;ng khi
+l&#7879;nh tr&ecirc;n kh&ocirc;ng th&agrave;nh c&ocirc;ng)<br>
+<br>
+D&#7921;a v&agrave;o t&#7889;c &#273;&#7897; c&#7911;a processor m&agrave; qu&aacute; tr&igrave;nh
+n&agrave;y c&oacute; th&#7875; l&acirc;u hay nhanh.Trong qu&aacute;
+tr&igrave;nh t&#7893;ng h&#7907;p b&#7841;n s&#7869; nh&igrave;n th&#7845;y tr&ecirc;n m&agrave;n
+h&igrave;nh c&aacute;c l&#7879;nh bi&ecirc;n d&#7883;ch nh&acirc;n.Sau khi t&#7893;ng h&#7907;p
+&#7843;nh c&#7911;a nh&acirc;n b&#7841;n th&iacute;ch t&#7893;ng h&#7907;p t&#7845;t c&#7843; c&aacute;c ph&#7847;n c&#7911;a
+kernel m&agrave; b&#7841;n ch&#7881; ra s&#7869; th&#7921;c hi&#7879;n nh&#432; <span
+ style="font-weight: bold;">modules<br>
+</span><br>
+<span style="font-weight: bold;"> # make modules</span><br>
+<br>
+B&acirc;y gi&#7901; ch&uacute;ng ta c&oacute; th&#7875; c&agrave;i &#273;&#7863;t kernel m&#7899;i
+c&ugrave;ng v&#7899;i c&aacute;c modules c&#7911;a n&oacute;.&#272;&#7875; c&agrave;i &#273;&#7863;t
+nh&acirc;n tr&ecirc;n Slackware b&#7841;n c&#7847;n th&#7921;c hi&#7879;n theo sau:<br>
+<br>
+<span style="font-weight: bold;"> # mv /vmlinuz /vmlinuz.old</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # cat arch/i386/boot/zImage &gt;
+/vmlinuz</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> # mv /boot/System.map
+/boot/System.map.old</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> # cp System.map /boot/System.map</span><br
+ style="font-weight: bold;">
+<br>
+Thay <span style="font-weight: bold;">zImage</span> b&#7857;ng <span
+ style="font-weight: bold;">bzImage</span> n&#7871;u b&#7841;n t&#7893;ng h&#7907;p kernel r&#7845;t
+l&#7899;n.C&oacute; l&#7869; b&#7841;n th&iacute;ch so&#7841;n th&#7843;o l&#7841;i t&#7853;p tin /etc/lilo.conf
+v&agrave; b&#7893; sung v&agrave;o n&oacute; m&#7897;t ph&#7847;n ri&ecirc;ng cho
+nh&acirc;n c&#361; c&#7911;a b&#7841;n,d&ugrave;ng k

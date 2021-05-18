@@ -1,0 +1,611 @@
+WEBVTT
+
+1
+00:00:02.843 --> 00:00:06.850
+In this lesson we'll be talking
+about how to use the vi editor.
+
+2
+00:00:08.490 --> 00:00:11.017
+While nano is great for
+simple edits, vi and
+
+3
+00:00:11.017 --> 00:00:13.899
+Emacs have more advanced and
+powerful features.
+
+4
+00:00:14.970 --> 00:00:18.270
+There'll be a learning curve to using
+these editors as they're not exactly
+
+5
+00:00:18.270 --> 00:00:19.360
+intuitive.
+
+6
+00:00:19.360 --> 00:00:23.400
+Learning vi will definitely be
+harder than say, learning nano.
+
+7
+00:00:23.400 --> 00:00:27.260
+It will require a bit of a time
+investment to become proficient.
+
+8
+00:00:27.260 --> 00:00:30.220
+To use the vi editor,
+simply type vi, Space, and
+
+9
+00:00:30.220 --> 00:00:33.170
+the file name that you want to edit.
+
+10
+00:00:33.170 --> 00:00:36.640
+You can also use vim, Space, file name.
+
+11
+00:00:36.640 --> 00:00:40.090
+Vim stands for vi improved.
+
+12
+00:00:40.090 --> 00:00:43.070
+It's compatible with all
+the commands found at vi, however,
+
+13
+00:00:43.070 --> 00:00:44.630
+it has some additional features,
+
+14
+00:00:44.630 --> 00:00:49.500
+like syntax highlighting and
+ability to edit files over the network.
+
+15
+00:00:49.500 --> 00:00:50.940
+On many Linux distributions,
+
+16
+00:00:50.940 --> 00:00:55.170
+when you type vi you're actually
+running vim or vi improved.
+
+17
+00:00:56.750 --> 00:01:00.250
+If you wanna view a file but make sure
+you don't change any of it's contents,
+
+18
+00:01:00.250 --> 00:01:01.460
+you can use the view command.
+
+19
+00:01:02.750 --> 00:01:05.750
+I'd like to point out that
+an advantage of using vi
+
+20
+00:01:05.750 --> 00:01:08.297
+is that it's always
+available on a Linux system.
+
+21
+00:01:08.297 --> 00:01:12.550
+Another advantage is that once you
+learn the key mappings for vi,
+
+22
+00:01:12.550 --> 00:01:17.240
+you can apply them to other commands,
+like man, or more, or less, or
+
+23
+00:01:17.240 --> 00:01:22.330
+view, or you can even use vi mode for
+editing shell commands.
+
+24
+00:01:22.330 --> 00:01:24.560
+Vi has the concept of modes.
+
+25
+00:01:24.560 --> 00:01:29.500
+You are always working in one of three
+modes, Command mode, Insert mode, or
+
+26
+00:01:29.500 --> 00:01:30.720
+Line mode.
+
+27
+00:01:30.720 --> 00:01:33.780
+When vi starts you are placed
+into Command mode.
+
+28
+00:01:33.780 --> 00:01:36.950
+To get back to Command mode at
+anytime simply hit the Esc key.
+
+29
+00:01:38.370 --> 00:01:41.120
+Letters typed while in Command
+mode are not sent to the file,
+
+30
+00:01:41.120 --> 00:01:43.540
+but they are interpreted as commands.
+
+31
+00:01:43.540 --> 00:01:48.200
+Command mode allows you to navigate about
+the file, perform searches, delete text,
+
+32
+00:01:48.200 --> 00:01:50.053
+copy text, and paste text.
+
+33
+00:01:50.053 --> 00:01:54.910
+Here are some of the commonly used
+key bindings with navigation and
+
+34
+00:01:54.910 --> 00:01:59.220
+Command mode: k goes up one line, j,
+
+35
+00:01:59.220 --> 00:02:05.120
+down, h, left, l, right one character,
+
+36
+00:02:05.120 --> 00:02:11.950
+to move right one word, w,
+b moves it back one word or left one word.
+
+37
+00:02:11.950 --> 00:02:14.490
+The caret symbol takes you
+to the beginning of the line
+
+38
+00:02:14.490 --> 00:02:16.720
+while the dollar symbol takes
+you to the end of the line.
+
+39
+00:02:17.840 --> 00:02:23.380
+This graphic shows how the h, j, k, and
+l keys act as the arrow keys in vi.
+
+40
+00:02:24.690 --> 00:02:29.110
+In order to insert text in a file,
+enter vi's Insert mode.
+
+41
+00:02:29.110 --> 00:02:35.610
+Do this by pressing lowercase i,
+uppercase I, lowercase a, or uppercase A.
+
+42
+00:02:35.610 --> 00:02:41.230
+The lowercase i inserts text at
+the current cursor position.
+
+43
+00:02:41.230 --> 00:02:43.950
+Capital I inserts texts at
+the beginning of the line,
+
+44
+00:02:44.960 --> 00:02:50.430
+a appends after the cursor position, [and]
+capital A appends to the end of the line.
+
+45
+00:02:51.490 --> 00:02:55.710
+To use vi as a Line mode,
+begin a command with colon.
+
+46
+00:02:55.710 --> 00:03:02.260
+For example, to write the file or
+save the file, type :w inner.
+
+47
+00:03:02.260 --> 00:03:05.795
+To force a file to be saved, type :w!
+
+48
+00:03:05.795 --> 00:03:08.100
+To quit, :q.
+
+49
+00:03:08.100 --> 00:03:11.330
+To force quit, :q!
+
+50
+00:03:11.330 --> 00:03:18.360
+To save the file and quit or
+write and quit, :wq!
+
+51
+00:03:18.360 --> 00:03:21.370
+And :x is the same as wq.
+
+52
+00:03:22.730 --> 00:03:25.360
+Line mode can be used for navigation too.
+
+53
+00:03:25.360 --> 00:03:30.570
+If you wanna go to line 15 in a file,
+type :15 enter.
+
+54
+00:03:30.570 --> 00:03:34.390
+To go to the last of the file, type :$.
+
+55
+00:03:34.390 --> 00:03:39.970
+If you want to see line numbers,
+type :set nu.
+
+56
+00:03:39.970 --> 00:03:45.200
+And to turn off line numbering, :set nonu.
+
+57
+00:03:45.200 --> 00:03:48.760
+To get help, type :help, and
+the command that you're interested in.
+
+58
+00:03:50.060 --> 00:03:53.920
+Again, the modes in vi are Command
+mode which you can enter
+
+59
+00:03:53.920 --> 00:03:58.618
+by hitting the Esc key,
+Insert mode by using iI or
+
+60
+00:03:58.618 --> 00:04:02.280
+aA, and Line mode by beginning
+commands with a colon character.
+
+61
+00:04:03.360 --> 00:04:07.450
+You can repeat commands in vi
+by preceding them with a number.
+
+62
+00:04:07.450 --> 00:04:12.750
+For instance, if you'd like to move
+the cursor up five lines, simply type 5k.
+
+63
+00:04:12.750 --> 00:04:17.680
+If you'd like to insert a piece
+of text 80 times, type 80i, and
+
+64
+00:04:17.680 --> 00:04:19.510
+start entering the text.
+
+65
+00:04:19.510 --> 00:04:22.750
+Once you are done you hit the Esc
+key to return to command mode, and
+
+66
+00:04:22.750 --> 00:04:25.910
+the text you typed will
+be repeated 80 times.
+
+67
+00:04:25.910 --> 00:04:30.820
+This simple feature alone already makes it
+much more powerful than the nano editor.
+
+68
+00:04:30.820 --> 00:04:36.670
+While in Command mode you can use x to
+delete a character, dw to delete a word,
+
+69
+00:04:36.670 --> 00:04:42.160
+dd to delete a line, and capital D to
+delete the remaining text on the line.
+
+70
+00:04:42.160 --> 00:04:45.700
+To replace text, type r for
+just one character,
+
+71
+00:04:45.700 --> 00:04:50.495
+cw to change an entire word,
+cc to change an entire line,
+
+72
+00:04:50.495 --> 00:04:56.540
+c$ to change the text from the current
+position to the end of the line.
+
+73
+00:04:56.540 --> 00:04:59.370
+You can also use capital c for that.
+
+74
+00:04:59.370 --> 00:05:01.930
+The tilde command reverses
+the case of the character.
+
+75
+00:05:03.330 --> 00:05:06.510
+To yank or copy the current line, type yy.
+
+76
+00:05:06.510 --> 00:05:11.160
+To yank a position, type y and
+a position character.
+
+77
+00:05:11.160 --> 00:05:15.180
+For instance, to yank a word, type yw.
+
+78
+00:05:15.180 --> 00:05:19.675
+If you want to repeat this,
+you could yank three words with y3w,
+
+79
+00:05:19.675 --> 00:05:25.260
+[and] p will paste the most
+recently deleted or yanked text.
+
+80
+00:05:25.260 --> 00:05:30.880
+The undo command in vi is u, and
+the redo command is CTRL + R.
+
+81
+00:05:30.880 --> 00:05:37.150
+To start a forward search, type a forward
+slash and a search pattern and hit Enter.
+
+82
+00:05:37.150 --> 00:05:40.120
+To go to the next match, type n.
+
+83
+00:05:40.120 --> 00:05:43.990
+To go to the previous match,
+type capital N.
+
+84
+00:05:43.990 --> 00:05:45.550
+To start a reverse search,
+
+85
+00:05:45.550 --> 00:05:49.450
+use the question mark followed by
+a search pattern, and then hit Enter.
+
+86
+00:05:51.350 --> 00:05:53.210
+Let's use vi to edit a file.
+
+87
+00:05:55.760 --> 00:06:01.710
+You'll notice at the bottom of
+the screen you see a series of tildes.
+
+88
+00:06:01.710 --> 00:06:04.750
+These represent lines
+that are beyond the file.
+
+89
+00:06:06.830 --> 00:06:09.770
+So we start out vi in Command mode, and
+
+90
+00:06:09.770 --> 00:06:16.560
+we can use the j key to navigate down,
+k goes up,
+
+91
+00:06:16.560 --> 00:06:21.430
+l to the right,
+h to the left, caret symbol
+
+92
+00:06:21.430 --> 00:06:26.150
+goes to the beginning of the line, and the
+dollar sign goes to the end of the line.
+
+93
+00:06:28.460 --> 00:06:31.030
+If we want to enter Insert mode,
+
+94
+00:06:31.030 --> 00:06:34.500
+we can use lowercase i to insert
+text at the current position.
+
+95
+00:06:38.605 --> 00:06:41.690
+Esc will take us back to Command mode.
+
+96
+00:06:41.690 --> 00:06:45.979
+To insert text at the very beginning
+of the line, shift I for capital I.
+
+97
+00:06:52.840 --> 00:06:57.065
+To append, we'll just use a, and
+
+98
+00:06:57.065 --> 00:07:02.760
+then to append to the end
+of the line is shift A.
+
+99
+00:07:06.680 --> 00:07:13.064
+To delete some text we can use
+the x to delete a character,
+
+100
+00:07:13.064 --> 00:07:18.120
+and if we want to delete a word,
+we can use dw.
+
+101
+00:07:19.620 --> 00:07:22.280
+And dd will delete a line.
+
+102
+00:07:22.280 --> 00:07:26.930
+And a d, capitol D, will delete from the
+current position to the end of the line.
+
+103
+00:07:29.110 --> 00:07:31.180
+To replace text, we can use r.
+
+104
+00:07:32.930 --> 00:07:34.690
+We'll replace this.
+
+105
+00:07:34.690 --> 00:07:40.406
+We can replace an entire word with cw for
+change word.
+
+106
+00:07:46.386 --> 00:07:51.686
+Esc to get back to Command mode,
+cc to change the entire line.
+
+107
+00:07:58.326 --> 00:08:02.387
+The tilde changes the case.
+
+108
+00:08:02.387 --> 00:08:05.614
+So, if it's lowercase,
+it will become uppercase.
+
+109
+00:08:05.614 --> 00:08:08.000
+If it's uppercase,
+it will become lowercase.
+
+110
+00:08:11.180 --> 00:08:14.790
+To yank a line, yy.
+
+111
+00:08:14.790 --> 00:08:15.854
+To paste, p.
+
+112
+00:08:19.404 --> 00:08:24.549
+To do a forward search,
+type the forward slash and
+
+113
+00:08:24.549 --> 00:08:28.958
+then lowercase n to move
+to the next item and
+
+114
+00:08:28.958 --> 00:08:33.260
+uppercase N to move to the previous item.
+
+115
+00:08:35.760 --> 00:08:38.831
+To do a backward search,
+start with a question mark.
+
+116
+00:08:42.732 --> 00:08:46.140
+And to write changes to a file,
+we can use w.
+
+117
+00:08:46.140 --> 00:08:51.110
+Let's enter some more text.
+
+118
+00:08:52.620 --> 00:08:55.030
+And to quit we can type q.
+
+119
+00:08:55.030 --> 00:09:00.980
+Now that there's saved changes,
+it won't let us stop, so we'll just use q!
+
+120
+00:09:00.980 --> 00:09:02.072
+to force our quit.
+
+121
+00:09:07.172 --> 00:09:08.512
+Let's go back in.
+
+122
+00:09:08.512 --> 00:09:14.570
+Let's turn on line numbering with :set nu.
+
+123
+00:09:16.100 --> 00:09:21.490
+And we can go to line 10 by typing :10,
+or line 5, :5 Enter.
+
+124
+00:09:24.350 --> 00:09:25.450
+And we'll quit with q.
+
+125
+00:09:25.450 --> 00:09:28.680
+There's also a tutor that's very nice.
+
+126
+00:09:28.680 --> 00:09:32.810
+You can run vimtutor and follow along, and
+
+127
+00:09:32.810 --> 00:09:37.550
+it will take you through some of
+the commands and features of vi.
+
+128
+00:09:37.550 --> 00:09:42.030
+The vi editor is more powerful and
+advanced than nano.
+
+129
+00:09:42.030 --> 00:09:45.560
+However it's not as intuitive, and
+it can take some time to learn.
+
+130
+00:09:46.730 --> 00:09:50.790
+One of the unique things about
+vi is the concept of modes.
+
+131
+00:09:50.790 --> 00:09:55.350
+You're either in Command mode,
+Insert mode, or Line mode.
+

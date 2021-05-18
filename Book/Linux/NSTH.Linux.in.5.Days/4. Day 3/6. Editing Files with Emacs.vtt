@@ -1,0 +1,389 @@
+WEBVTT
+
+1
+00:00:02.890 --> 00:00:06.220
+>> In today's lesson we'll be
+learning how to use the Emacs editor.
+
+2
+00:00:08.470 --> 00:00:11.720
+Emacs, like vi, is a powerful editor.
+
+3
+00:00:11.720 --> 00:00:15.800
+Some people prefer vi,
+others prefer Emacs.
+
+4
+00:00:15.800 --> 00:00:20.410
+My recommendation to you is to experiment
+with the Emacs editor and the vi editor,
+
+5
+00:00:20.410 --> 00:00:23.220
+and see which one you feel
+more comfortable with.
+
+6
+00:00:23.220 --> 00:00:24.779
+You can't make a bad choice.
+
+7
+00:00:26.380 --> 00:00:28.960
+To edit a file with Emacs, run Emacs and
+
+8
+00:00:28.960 --> 00:00:31.110
+provide it the file name
+that you wish to edit.
+
+9
+00:00:32.430 --> 00:00:37.940
+When you look at the Emacs documentation,
+you'll see C dash character.
+
+10
+00:00:37.940 --> 00:00:41.008
+This means to hold down the control
+key while pressing that character.
+
+11
+00:00:41.008 --> 00:00:46.605
+For example, C dash H means to hold down
+the control key while pressing the H key.
+
+12
+00:00:46.605 --> 00:00:50.880
+</char> We see C dash H space T.
+
+13
+00:00:50.880 --> 00:00:54.060
+That means to hold down the Ctrl
+key while pressing the H key.
+
+14
+00:00:54.060 --> 00:00:56.860
+Release the Ctrl key and
+then type the letter T.
+
+15
+00:00:58.500 --> 00:01:01.810
+When you see M dash character,
+that means to hold down the Meta key.
+
+16
+00:01:03.000 --> 00:01:05.650
+The Meta key is the Alt key.
+
+17
+00:01:05.650 --> 00:01:08.720
+You can also substitute the escape key for
+the alt key.
+
+18
+00:01:08.720 --> 00:01:12.770
+For example, M dash F translates
+to holding down the alt key and
+
+19
+00:01:12.770 --> 00:01:19.090
+pressing F or pressing and
+releasing escape followed by the F key.
+
+20
+00:01:19.090 --> 00:01:21.460
+You may need to use the escape
+key as the meta key,
+
+21
+00:01:21.460 --> 00:01:25.880
+since alt can sometimes be intercepted
+by your terminal program, for instance.
+
+22
+00:01:25.880 --> 00:01:29.460
+If you want to simplify things just always
+use the escape key for the meta key.
+
+23
+00:01:31.010 --> 00:01:33.530
+Use control H to get help.
+
+24
+00:01:33.530 --> 00:01:38.200
+Type control X followed by
+control C to exit Emacs.
+
+25
+00:01:38.200 --> 00:01:41.370
+Control X, control S, saves the file.
+
+26
+00:01:41.370 --> 00:01:45.270
+Control H, T,
+will start the built in tutorial.
+
+27
+00:01:45.270 --> 00:01:49.730
+Ctrl H, K followed by a key
+will describe that key.
+
+28
+00:01:49.730 --> 00:01:53.320
+You can use this to get help on a specific
+key command or key combination.
+
+29
+00:01:54.835 --> 00:01:58.020
+Control P will take you to
+the previous line while contril
+
+30
+00:01:58.020 --> 00:02:00.345
+N will take you to the next line.
+
+31
+00:02:00.345 --> 00:02:03.295
+Control B is to go backward one character.
+
+32
+00:02:03.295 --> 00:02:06.530
+Control F is to go forward one character.
+
+33
+00:02:06.530 --> 00:02:12.070
+Meta F will move you forward one word,
+and meta B will take you back one word.
+
+34
+00:02:14.060 --> 00:02:16.750
+Control A will take you to
+the beginning of the line.
+
+35
+00:02:16.750 --> 00:02:19.775
+Control E will take you
+to the end of a line.
+
+36
+00:02:19.775 --> 00:02:23.360
+Meta less than will take you to
+the beginning of the file, and
+
+37
+00:02:23.360 --> 00:02:27.030
+meta followed by the greater than symbol
+will take you to the end of the file.
+
+38
+00:02:28.280 --> 00:02:32.917
+To delete a character, type control D,
+to delete a word it's meta D.
+
+39
+00:02:32.917 --> 00:02:36.880
+Control K will kill the rest
+of the current line.
+
+40
+00:02:36.880 --> 00:02:40.490
+To kill the entire line, just position the
+cursor at the beginning of the line and
+
+41
+00:02:40.490 --> 00:02:43.060
+type Control K.
+
+42
+00:02:43.060 --> 00:02:48.710
+In VI yank means to copy,
+in Emacs yank means to paste.
+
+43
+00:02:48.710 --> 00:02:53.880
+So control Y means to yank or
+paste from the previously killed text.
+
+44
+00:02:53.880 --> 00:02:56.090
+To undo, type control X, U.
+
+45
+00:02:58.150 --> 00:03:01.040
+Control S will start a forward search.
+
+46
+00:03:01.040 --> 00:03:03.260
+Type the text you're looking for, and
+
+47
+00:03:03.260 --> 00:03:07.110
+type Control S again to move to
+the next occurrence of that text.
+
+48
+00:03:07.110 --> 00:03:08.735
+Press enter when you're done searching.
+
+49
+00:03:08.735 --> 00:03:11.550
+Control R starts a reverse search.
+
+50
+00:03:12.600 --> 00:03:15.780
+Like VI,
+Emacs provides a way to repeat commands.
+
+51
+00:03:15.780 --> 00:03:22.380
+For instance, to kill three lines of text,
+type Control U, three, Control K.
+
+52
+00:03:22.380 --> 00:03:23.996
+Let's edit a file with emacs.
+
+53
+00:03:23.996 --> 00:03:29.750
+We'll do file dot text.
+
+54
+00:03:29.750 --> 00:03:34.087
+To navigate, we can use control
+N to go to the next slide, and
+
+55
+00:03:34.087 --> 00:03:37.685
+control F will go forward one character.
+
+56
+00:03:37.685 --> 00:03:40.922
+Control P will go previous slide.
+
+57
+00:03:40.922 --> 00:03:44.340
+Control B will go back a character.
+
+58
+00:03:45.390 --> 00:03:49.160
+To get to the beginning of the line,
+type Control A, and
+
+59
+00:03:49.160 --> 00:03:53.330
+to the end, Control E.
+
+60
+00:03:53.330 --> 00:03:56.655
+And you can just start typing
+text wherever your cursor is.
+
+61
+00:03:56.655 --> 00:04:00.611
+[SOUND] Let's delete
+
+62
+00:04:00.611 --> 00:04:06.201
+a character with control D.
+
+63
+00:04:06.201 --> 00:04:12.761
+To delete a word type meta D.
+
+64
+00:04:12.761 --> 00:04:17.861
+Then I can use alt D or
+
+65
+00:04:17.861 --> 00:04:20.590
+Escape D.
+
+66
+00:04:20.590 --> 00:04:23.773
+Let's kill a line of text with control K,
+
+67
+00:04:23.773 --> 00:04:27.820
+and I'll move to the bottom of
+the file and yank it, or paste it in.
+
+68
+00:04:30.100 --> 00:04:31.450
+Let's start a search.
+
+69
+00:04:31.450 --> 00:04:32.862
+Let's search for the.
+
+70
+00:04:32.862 --> 00:04:38.340
+Control S will take you
+to the next occurrence,
+
+71
+00:04:38.340 --> 00:04:40.610
+and then when you're done,
+you can just hit enter.
+
+72
+00:04:41.910 --> 00:04:46.000
+And if we do a reverse search,
+we can do that with control R.
+
+73
+00:04:46.000 --> 00:04:47.067
+Let's do the same thing.
+
+74
+00:04:47.067 --> 00:04:50.715
+Control R takes you to the previous one,
+and when you're done, you can hit enter.
+
+75
+00:04:50.715 --> 00:04:53.927
+To exit, control X, control C.
+
+76
+00:04:53.927 --> 00:04:57.889
+And I'm not going to save my changes.
+
+77
+00:05:01.620 --> 00:05:06.988
+Let's get back into Emacs again.
+
+78
+00:05:06.988 --> 00:05:14.552
+[SOUND] And we can save the file
+with control X, control S.
+
+79
+00:05:14.552 --> 00:05:17.877
+Again, to exit, control X, control C.
+
+80
+00:05:17.877 --> 00:05:22.020
+Emacs is a more powerful editor than nano.
+
+81
+00:05:22.020 --> 00:05:24.670
+Emacs is also an alternative for vi.
+
+82
+00:05:24.670 --> 00:05:28.200
+Again some people prefer vi,
+others prefer Emacs.
+
+83
+00:05:28.200 --> 00:05:30.980
+I suggest you try them both and
+see what you feel comfortable with.
+
+84
+00:05:30.980 --> 00:05:35.590
+I also suggest that you take
+the tutorial by starting Emacs and
+
+85
+00:05:35.590 --> 00:05:40.745
+pressing control H, T.
+

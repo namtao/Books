@@ -1,0 +1,675 @@
+WEBVTT
+
+1
+00:00:02.949 --> 00:00:09.560
+This lesson will cover how to delete,
+copy, move, rename and compress files.
+
+2
+00:00:10.800 --> 00:00:13.720
+Eventually you'll get tired of all
+the files you have laying around and
+
+3
+00:00:13.720 --> 00:00:15.100
+want to delete some of them.
+
+4
+00:00:15.100 --> 00:00:17.790
+To do that use the rm command.
+
+5
+00:00:17.790 --> 00:00:22.280
+rm space file name is the simplest
+form of this command.
+
+6
+00:00:22.280 --> 00:00:25.098
+If you want to remove a directory and
+its contents recursively,
+
+7
+00:00:25.098 --> 00:00:29.640
+use rm -r and the name of the directory.
+
+8
+00:00:29.640 --> 00:00:33.220
+If you want to force removal, use rm -f.
+
+9
+00:00:34.490 --> 00:00:38.210
+Search patterns can be used to
+delete multiple files at once.
+
+10
+00:00:38.210 --> 00:00:41.760
+It's a good idea to double check what
+you're going to delete with an ls command
+
+11
+00:00:41.760 --> 00:00:45.330
+before you actually run
+an rm command against it.
+
+12
+00:00:45.330 --> 00:00:50.320
+In this example, you can see
+that rm .* will not move '.' and
+
+13
+00:00:50.320 --> 00:00:54.170
+'..' which represent this directory and
+the parent directory.
+
+14
+00:00:55.760 --> 00:00:58.130
+To copy files, use the cp command.
+
+15
+00:00:58.130 --> 00:01:00.190
+If you want to create a copy of a file,
+
+16
+00:01:00.190 --> 00:01:03.880
+you just run cp source_file
+destination_file.
+
+17
+00:01:03.880 --> 00:01:08.790
+You can also copy a file or a series
+of files to a directory by using cp and
+
+18
+00:01:08.790 --> 00:01:12.770
+then listing the file or files and
+ending the line with a directory name.
+
+19
+00:01:13.900 --> 00:01:17.620
+To run cp in interactive mode, use cp -i.
+
+20
+00:01:17.620 --> 00:01:23.140
+If the destination file exists, cp will
+prompt you before it overwrites the file.
+
+21
+00:01:23.140 --> 00:01:28.200
+If you use cp -r source_directory and
+destination,
+
+22
+00:01:28.200 --> 00:01:33.010
+cp will recursively copy source_directory
+into the destination directory.
+
+23
+00:01:33.010 --> 00:01:35.760
+If the destination
+directory doesn't exist,
+
+24
+00:01:35.760 --> 00:01:39.740
+it will create the destination directory
+with the contents of the source directory.
+
+25
+00:01:41.130 --> 00:01:43.410
+Let's copy a file with the cp command.
+
+26
+00:01:43.410 --> 00:01:45.770
+We'll copy file1 to file2,
+
+27
+00:01:45.770 --> 00:01:51.079
+and you can see that there are no
+differences between the files.
+
+28
+00:01:52.540 --> 00:01:57.120
+Let's create a directory, and let's
+copy these files into that directory.
+
+29
+00:01:57.120 --> 00:02:01.660
+So we can list as many files as we
+want and when we end the command with
+
+30
+00:02:01.660 --> 00:02:04.910
+a directory, it will copy all those
+files that we listed into the directory.
+
+31
+00:02:06.640 --> 00:02:09.585
+You can see that the files
+are in the directory.
+
+32
+00:02:09.585 --> 00:02:13.909
+If you use cp -i,
+it's interactive mode, and
+
+33
+00:02:13.909 --> 00:02:19.420
+it'll prompt you if
+the destination file exists.
+
+34
+00:02:19.420 --> 00:02:22.980
+Do we want to overwrite file2?
+
+35
+00:02:22.980 --> 00:02:27.880
+Let's do a recursive copy on dir dir2.
+
+36
+00:02:27.880 --> 00:02:32.219
+Dir2 doesn't exist, so
+
+37
+00:02:32.219 --> 00:02:36.756
+cp creates dir2 and places
+
+38
+00:02:36.756 --> 00:02:42.092
+the contents of dir into dir2.
+
+39
+00:02:42.092 --> 00:02:48.370
+If we try to copy dir into dir3,
+dir3 does not exist.
+
+40
+00:02:48.370 --> 00:02:49.450
+We'll see what happens.
+
+41
+00:02:50.680 --> 00:02:53.570
+And we see that copy skips directories.
+
+42
+00:02:53.570 --> 00:02:57.260
+Copy will only work on directories
+if you give it a -r for recursive.
+
+43
+00:02:58.390 --> 00:02:59.680
+So let's create dir3.
+
+44
+00:03:01.940 --> 00:03:09.030
+Let's recursively copy dir and
+dir2 into dir3.
+
+45
+00:03:10.870 --> 00:03:13.799
+You can see that the two
+directories are in dir3.
+
+46
+00:03:19.400 --> 00:03:22.550
+To move or rename files,
+use the mv command.
+
+47
+00:03:23.690 --> 00:03:28.300
+If you were to run mv source destination,
+
+48
+00:03:28.300 --> 00:03:31.760
+move will move the source
+into the destination.
+
+49
+00:03:31.760 --> 00:03:34.760
+Otherwise source will
+be renamed destination.
+
+50
+00:03:36.120 --> 00:03:39.760
+Like cp, mv has an interactive mode.
+
+51
+00:03:39.760 --> 00:03:45.198
+So if you were to run mv -i source
+destination, and destination existed,
+
+52
+00:03:45.198 --> 00:03:49.360
+mv will ask you if you want
+to overwrite the destination.
+
+53
+00:03:51.900 --> 00:03:57.700
+Let's use the move command
+to rename a directory.
+
+54
+00:03:57.700 --> 00:04:02.890
+You can see that dir has
+been renamed to firstdir.
+
+55
+00:04:04.330 --> 00:04:06.380
+Let's do the same thing with a file.
+
+56
+00:04:06.380 --> 00:04:11.730
+Rename file1 to file1.renamed.
+
+57
+00:04:11.730 --> 00:04:16.420
+Let's look at how move will handle
+moving a file into a directory.
+
+58
+00:04:16.420 --> 00:04:20.225
+file1.renamed into firstdir.
+
+59
+00:04:25.455 --> 00:04:29.381
+You can see that the file
+is now in firstdir.
+
+60
+00:04:33.411 --> 00:04:35.131
+This is the contents of file1.
+
+61
+00:04:35.131 --> 00:04:37.231
+This is the contents of file2.
+
+62
+00:04:37.231 --> 00:04:44.551
+If we run mv file1 file2,
+that will rename file1 to file2.
+
+63
+00:04:44.551 --> 00:04:46.571
+It will overwrite file2.
+
+64
+00:04:51.011 --> 00:04:56.820
+You can see file1 is gone, because
+it's been renamed and overwrote file2.
+
+65
+00:04:56.820 --> 00:05:00.596
+If you want to do this in
+interactive mode, use -i.
+
+66
+00:05:03.776 --> 00:05:07.135
+And in this case it says, hey,
+there's a file that already exists.
+
+67
+00:05:07.135 --> 00:05:08.735
+Do you wanna overwrite it or not?
+
+68
+00:05:12.720 --> 00:05:16.878
+You've already used the sort command
+a couple of times in this course, but
+
+69
+00:05:16.878 --> 00:05:21.433
+as a reminder, the sort command at its
+most basic level sorts text alphabetically
+
+70
+00:05:21.433 --> 00:05:22.770
+that appears in a file.
+
+71
+00:05:25.050 --> 00:05:28.830
+You can use sort with a -k option and
+supply a field.
+
+72
+00:05:28.830 --> 00:05:31.730
+So you can sort by a different
+field than the first field.
+
+73
+00:05:32.955 --> 00:05:35.691
+-r sorts in reverse order, and
+
+74
+00:05:35.691 --> 00:05:39.950
+-u removes duplicate lines and
+only provides unique results.
+
+75
+00:05:42.390 --> 00:05:45.165
+Let's look at the contents
+of more-secrets.
+
+76
+00:05:46.960 --> 00:05:50.270
+If we sort this file,
+it will sort on the first column.
+
+77
+00:05:53.470 --> 00:05:57.825
+You can see that p comes before
+s which comes before t, etc.
+
+78
+00:06:01.270 --> 00:06:03.600
+You'll also notice that there
+are two duplicate lines.
+
+79
+00:06:03.600 --> 00:06:07.331
+So to remove those we can run
+sort with a -u for unique.
+
+80
+00:06:09.680 --> 00:06:12.410
+And we see that we only get one tags line.
+
+81
+00:06:13.480 --> 00:06:18.650
+If we want to reverse the order, -r.
+
+82
+00:06:18.650 --> 00:06:23.368
+And if we want to sort
+by the second column,
+
+83
+00:06:23.368 --> 00:06:27.570
+we can use -k2 for the second field.
+
+84
+00:06:28.800 --> 00:06:33.160
+And we could even combine options,
+use the -u for unique.
+
+85
+00:06:33.160 --> 00:06:39.780
+Now you can see the second field, a,
+comes before b, before c and before f.
+
+86
+00:06:42.590 --> 00:06:45.250
+If you want to bundle a group of files or
+
+87
+00:06:45.250 --> 00:06:48.480
+directories together in an archive,
+use the tar command.
+
+88
+00:06:49.490 --> 00:06:53.110
+You may wanna create a copy or
+a backup of a group of files.
+
+89
+00:06:53.110 --> 00:06:56.420
+You may also have several files that
+you want to transfer at once or
+
+90
+00:06:56.420 --> 00:06:58.020
+transfer as a set.
+
+91
+00:06:58.020 --> 00:07:00.010
+In these situations tar can help.
+
+92
+00:07:01.120 --> 00:07:05.590
+You'll that notice tar does not require
+a hyphen to proceed its arguments.
+
+93
+00:07:05.590 --> 00:07:08.970
+The hyphen or the dash is in brackets.
+
+94
+00:07:08.970 --> 00:07:13.050
+Traditionally the hyphen is excluded,
+but tar still works with it.
+
+95
+00:07:13.050 --> 00:07:17.972
+So if you see tar cf file.tar,
+it's the same as tar
+
+96
+00:07:17.972 --> 00:07:22.920
+-cf file.tar.
+
+97
+00:07:22.920 --> 00:07:28.250
+Some of the most commonly used tar options
+include c to create a tar archive.
+
+98
+00:07:28.250 --> 00:07:31.060
+x to extract files from the archive.
+
+99
+00:07:31.060 --> 00:07:34.210
+t to display a table of contents.
+
+100
+00:07:34.210 --> 00:07:36.230
+v to be verbose.
+
+101
+00:07:36.230 --> 00:07:38.020
+z to use compression.
+
+102
+00:07:38.020 --> 00:07:40.652
+And f to specify the file
+that you'll be working with.
+
+103
+00:07:43.912 --> 00:07:49.090
+Let's create a tar archive
+of tpsreports directory.
+
+104
+00:07:50.710 --> 00:07:54.678
+So tar, c for create, f for
+the file we want to use.
+
+105
+00:07:54.678 --> 00:07:57.680
+We'll use tps.tar.
+
+106
+00:07:57.680 --> 00:08:01.570
+And we'll supply the directory
+that we're going to archive.
+
+107
+00:08:03.740 --> 00:08:06.000
+We can use t for list.
+
+108
+00:08:08.290 --> 00:08:11.610
+And it shows the directory and two files.
+
+109
+00:08:11.610 --> 00:08:15.410
+So let's move into the tmp directory and
+extract the archive.
+
+110
+00:08:17.250 --> 00:08:19.820
+Extract, f for the file.
+
+111
+00:08:19.820 --> 00:08:22.380
+We'll give it the file name.
+
+112
+00:08:24.220 --> 00:08:30.050
+And you can see that it extracted
+the contents into tpsreports.
+
+113
+00:08:30.050 --> 00:08:34.190
+If you wanna get a verbose listing of what
+tar is doing, you can use a v option.
+
+114
+00:08:34.190 --> 00:08:41.750
+So we could have ran tar
+xvf /home/jason/tps.tar.
+
+115
+00:08:41.750 --> 00:08:43.863
+And it will list the files
+that it's extracting.
+
+116
+00:08:46.824 --> 00:08:51.800
+To compress files and
+save space you can use the gzip command.
+
+117
+00:08:51.800 --> 00:08:55.780
+To uncompress the file you use gunzip.
+
+118
+00:08:55.780 --> 00:09:01.130
+And if you want to view the contents of
+a zip archive you can use gzcat or zcat.
+
+119
+00:09:03.788 --> 00:09:08.500
+You can use the du command to display
+how much disk space is used by a file.
+
+120
+00:09:08.500 --> 00:09:12.710
+So du -k displays sizes in kilobytes.
+
+121
+00:09:12.710 --> 00:09:17.220
+du -h displays sizes in
+a human readable format.
+
+122
+00:09:17.220 --> 00:09:21.269
+So if the file is 5 megabytes,
+it will say 5 M.
+
+123
+00:09:21.269 --> 00:09:25.071
+Or 3.7 gigabytes, 3.7 G.
+
+124
+00:09:27.829 --> 00:09:32.230
+Let's use the du command to see how
+much space that this data file is using.
+
+125
+00:09:32.230 --> 00:09:33.704
+It's using 80K.
+
+126
+00:09:33.704 --> 00:09:37.524
+We can compress it with gzip.
+
+127
+00:09:37.524 --> 00:09:41.588
+When you compress a file with gzip,
+it compresses it and
+
+128
+00:09:41.588 --> 00:09:44.624
+adds the .gz extension to the file name.
+
+129
+00:09:49.004 --> 00:09:51.124
+Let's see if that saved us any space.
+
+130
+00:09:51.124 --> 00:09:52.384
+And it did, 4k.
+
+131
+00:09:52.384 --> 00:09:56.980
+80 uncompressed, 76k compressed.
+
+132
+00:09:56.980 --> 00:09:58.670
+We can uncompress it with gunzip.
+
+133
+00:10:02.360 --> 00:10:04.350
+We can see it's back
+to its original state.
+
+134
+00:10:06.330 --> 00:10:09.810
+If you wanna create a tar
+archive that is compressed,
+
+135
+00:10:09.810 --> 00:10:12.810
+you can use the z option for compression.
+
+136
+00:10:12.810 --> 00:10:14.740
+We'll do c for create, f.
+
+137
+00:10:14.740 --> 00:10:19.280
+We'll name the file tps.tgz.
+
+138
+00:10:19.280 --> 00:10:21.570
+This is a naming convention.
+
+139
+00:10:21.570 --> 00:10:23.140
+You don't have to name files this way.
+
+140
+00:10:23.140 --> 00:10:28.260
+Sometimes you'll see it tps.tar.gz, but
+
+141
+00:10:28.260 --> 00:10:32.670
+tgz is short for
+a tar that's been compressed with gzip.
+
+142
+00:10:34.670 --> 00:10:36.970
+We'll compress the tpsreports directory.
+
+143
+00:10:40.020 --> 00:10:43.040
+And if you want to work on
+a compressed file you need to use z.
+
+144
+00:10:46.650 --> 00:10:49.010
+And it lists the files
+that are in that archive.
+
+145
+00:10:51.480 --> 00:10:55.548
+In this lesson we covered
+the rm command to delete files,
+
+146
+00:10:55.548 --> 00:11:00.378
+cp command to copy files, the mv
+command to move and rename files and
+
+147
+00:11:00.378 --> 00:11:04.726
+directories, gzip to compress and
+tar to create archives.
+

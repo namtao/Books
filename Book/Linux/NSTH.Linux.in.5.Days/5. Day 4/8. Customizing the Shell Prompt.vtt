@@ -1,0 +1,324 @@
+WEBVTT
+
+1
+00:00:02.872 --> 00:00:06.352
+This lesson will cover how to
+customize your shell prompt.
+
+2
+00:00:06.352 --> 00:00:09.056
+As you've seen earlier in this course,
+
+3
+00:00:09.056 --> 00:00:12.930
+default prompts can vary
+from system to system.
+
+4
+00:00:12.930 --> 00:00:14.470
+No matter what shell you're using,
+
+5
+00:00:14.470 --> 00:00:18.220
+you can customize your prompt by
+setting an environment variable.
+
+6
+00:00:18.220 --> 00:00:20.940
+For shells like bash, ksh, and sh,
+
+7
+00:00:20.940 --> 00:00:27.160
+the environment variable $PS1 is used
+to set the primary prompt stream.
+
+8
+00:00:27.160 --> 00:00:35.170
+For shells like Csh, tcsh and zsh,
+they use a $prompt environment variable.
+
+9
+00:00:35.170 --> 00:00:36.460
+The format stream in place in and
+
+10
+00:00:36.460 --> 00:00:39.760
+environment variable determines
+the look and feel of your prompt.
+
+11
+00:00:39.760 --> 00:00:42.100
+Each shell uses uses slightly
+different format strings, so
+
+12
+00:00:42.100 --> 00:00:44.359
+consult the documentation for
+the shell that you are using.
+
+13
+00:00:45.840 --> 00:00:49.580
+Let's look at customizing the bash prompt
+since bash is the most popular default
+
+14
+00:00:49.580 --> 00:00:52.160
+shell for user accounts on Linux systems.
+
+15
+00:00:52.160 --> 00:00:55.520
+These are some of the most commonly
+used formatting stream options for bash.
+
+16
+00:00:55.520 --> 00:01:01.350
+\d will give you the date in the weekday,
+month, date format.
+
+17
+00:01:01.350 --> 00:01:05.820
+\h will give you the host name up to
+the first dot or the short host name.
+
+18
+00:01:05.820 --> 00:01:10.325
+\H will give you the fully qualified
+domain name of the server.
+
+19
+00:01:12.340 --> 00:01:15.675
+\n will give you a new line so
+you can have a multi-line prompt.
+
+20
+00:01:15.675 --> 00:01:19.414
+\t will give you current
+time in 24-hour format,
+
+21
+00:01:19.414 --> 00:01:23.829
+while \T will give you the current
+time in 12-hour format.
+
+22
+00:01:26.709 --> 00:01:32.020
+\@ will give you the current time in
+12-hour format with AM and PM included.
+
+23
+00:01:33.285 --> 00:01:38.590
+\A will give you the current time in
+24-hour format just using using hours and
+
+24
+00:01:38.590 --> 00:01:39.945
+minutes.
+
+25
+00:01:39.945 --> 00:01:42.885
+\U is the user name of the current user.
+
+26
+00:01:42.885 --> 00:01:45.285
+\w is the current working directory.
+
+27
+00:01:45.285 --> 00:01:49.840
+\W will give you the base name
+of the current working directory
+
+28
+00:01:49.840 --> 00:01:51.125
+instead of the full path.
+
+29
+00:01:51.125 --> 00:01:55.090
+\$ will let you know if
+you're a normal user.
+
+30
+00:01:55.090 --> 00:01:56.715
+It will display $.
+
+31
+00:01:56.715 --> 00:02:02.320
+Or if you're the super user or
+root account, it will display a #.
+
+32
+00:02:02.320 --> 00:02:06.770
+For a complete listing of all the
+formatting options, see the bash man page.
+
+33
+00:02:08.070 --> 00:02:11.380
+To make your customized shell
+prompt persist between logins,
+
+34
+00:02:11.380 --> 00:02:15.730
+add the PS1 value to your
+personal initialization files.
+
+35
+00:02:15.730 --> 00:02:19.300
+Personal initialization files
+are commonly referred to as dot files,
+
+36
+00:02:19.300 --> 00:02:21.990
+since they begin with a dot or a period.
+
+37
+00:02:21.990 --> 00:02:27.770
+You could also use Nano, vVI or
+Emacs to edit your dash Bash_profile file.
+
+38
+00:02:27.770 --> 00:02:30.094
+This example just uses echo
+to accomplish the same thing.
+
+39
+00:02:32.234 --> 00:02:33.954
+Let's look at our current prompt string.
+
+40
+00:02:36.534 --> 00:02:38.714
+And let's change it in some way.
+
+41
+00:02:38.714 --> 00:02:42.754
+Let's set it to username add host.
+
+42
+00:02:45.994 --> 00:02:48.674
+And you can see that it's customized now.
+
+43
+00:02:48.674 --> 00:02:50.394
+Let's add the time to our prompt.
+
+44
+00:02:56.474 --> 00:02:58.034
+And the working directory too.
+
+45
+00:03:01.035 --> 00:03:04.216
+And the tilde you can see
+represents our home directory.
+
+46
+00:03:04.216 --> 00:03:09.650
+Let's go to /var/log,
+
+47
+00:03:09.650 --> 00:03:12.330
+so you can see that /var/log
+is the current directory.
+
+48
+00:03:13.450 --> 00:03:20.020
+And let's use base names for directories
+this time, with that capital W.
+
+49
+00:03:20.020 --> 00:03:26.830
+Now you can see that even though
+we're in /var/log, it only says, log.
+
+50
+00:03:29.990 --> 00:03:31.550
+Let's go back to our home directory.
+
+51
+00:03:31.550 --> 00:03:35.574
+If we want to persist changes between
+logins, we need to put these in our
+
+52
+00:03:35.574 --> 00:03:38.806
+personalization file, so
+let's edit bash_profile.
+
+53
+00:03:47.185 --> 00:03:48.875
+Set this environment variable,
+
+54
+00:03:48.875 --> 00:03:51.840
+we'll just set it to this to
+show that it's going to work.
+
+55
+00:03:53.030 --> 00:03:56.817
+We'll include our user name,
+the host we're on,
+
+56
+00:03:56.817 --> 00:03:59.825
+the directory we're in, and a dollar.
+
+57
+00:04:09.095 --> 00:04:13.870
+And now you can see that the prompt
+is retained between log-ins.
+
+58
+00:04:13.870 --> 00:04:14.870
+Let's do one more thing.
+
+59
+00:04:14.870 --> 00:04:16.560
+Let's make a multiline prompt.
+
+60
+00:04:18.940 --> 00:04:20.970
+We'll put time on one line.
+
+61
+00:04:20.970 --> 00:04:25.205
+And let's put post and
+working directory on the next line.
+
+62
+00:04:30.602 --> 00:04:32.044
+Clear the screen here.
+
+63
+00:04:32.044 --> 00:04:36.784
+And you can see that every time that
+we hit Enter, we get a new prompt with
+
+64
+00:04:36.784 --> 00:04:42.090
+the current time on one line and a normal
+pool looking prompt on the second line.
+
+65
+00:04:44.360 --> 00:04:48.250
+Shell prompts can be customized by
+setting an environment variable.
+
+66
+00:04:48.250 --> 00:04:50.440
+This can differ from shell to shell.
+
+67
+00:04:50.440 --> 00:04:54.370
+Lot of shells use PS1, others use prompt.
+
+68
+00:04:54.370 --> 00:04:58.820
+To save your custom shell prompt between
+log ins, you need to add that environment
+
+69
+00:04:58.820 --> 00:05:02.120
+variable setting to your
+personal initialization files,
+
+70
+00:05:02.120 --> 00:05:03.620
+such as .bash profile.
+

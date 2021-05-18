@@ -1,0 +1,61 @@
+WEBVTT
+
+1
+00:00:01.740 --> 00:00:05.228
+Open up a web browser,
+and visit virtualbox.org.
+
+2
+00:00:08.167 --> 00:00:09.810
+Look for the downloads link.
+
+3
+00:00:12.020 --> 00:00:14.970
+Now click on the installation file for
+your platform.
+
+4
+00:00:14.970 --> 00:00:16.970
+In this case, we're downloading
+the MAC installation file.
+
+5
+00:00:20.551 --> 00:00:22.790
+Once the download is complete,
+open the file.
+
+6
+00:00:33.510 --> 00:00:36.580
+Now double-click on VirtualBox.pkg.
+
+7
+00:00:36.580 --> 00:00:40.720
+That will start the installation process.
+
+8
+00:00:40.720 --> 00:00:42.400
+Click continue.
+
+9
+00:00:42.400 --> 00:00:43.530
+Click continue again.
+
+10
+00:00:44.810 --> 00:00:46.600
+You're just going to
+accept all the defaults.
+
+11
+00:00:46.600 --> 00:00:47.100
+Click Install.
+
+12
+00:01:00.150 --> 00:01:05.707
+At the end of the installation you can
+start VirtualBox by opening up the finder,
+
+13
+00:01:05.707 --> 00:01:11.280
+navigating to the applications folder,
+and double-clicking on VirtualBox.
+

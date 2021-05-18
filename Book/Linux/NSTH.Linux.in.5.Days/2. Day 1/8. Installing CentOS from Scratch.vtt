@@ -1,0 +1,664 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.000 --> 00:00:07.700
+At this point you should have virtual
+box installed for your operating system.
+
+00:00:07.890 --> 00:00:13.320
+The next thing we're going to do is download CentOS from centos.org.
+
+00:00:13.320 --> 00:00:18.360
+We'll click on "get centos now" or whatever the link to the download section
+
+00:00:18.460 --> 00:00:22.560
+of the website happens to be at the time you watch this video.
+
+00:00:22.560 --> 00:00:25.340
+You'll notice you have a few options here.
+
+00:00:25.340 --> 00:00:29.300
+The DVD ISO is perfect for what we're about to do.
+
+00:00:29.420 --> 00:00:34.480
+This DVD image contains all the packages that can be installed using the installer.
+
+00:00:34.480 --> 00:00:39.240
+So we're going to click on "DVD ISO" to download it.
+
+00:00:45.780 --> 00:00:50.460
+The previous page and let's talk about
+the everything ISO and the minimal ISO.
+
+00:00:50.480 --> 00:00:55.800
+So the everything I so contains the
+complete set of packages for CentOS.
+
+00:00:55.800 --> 00:01:00.090
+You would use this image if you wanted to create a local mirror of CentOS packages.
+
+00:01:00.090 --> 00:01:01.230
+For example
+
+00:01:01.230 --> 00:01:06.910
+Finally, the Minimal ISO will allow you to install a very basic CentOS system.
+
+00:01:06.920 --> 00:01:11.680
+If you use this image it won't install a graphical user environment.
+
+00:01:11.740 --> 00:01:16.180
+If you wanted a graphical user environment, and almost any other type of software,
+
+00:01:16.260 --> 00:01:21.000
+you would have to install it manually after the initial OS install.
+
+00:01:21.080 --> 00:01:24.840
+So again, the best choice for us is the DVD ISO.
+
+00:01:24.840 --> 00:01:28.540
+Once we have our ISO Downloaded, we're ready to create a virtual machine.
+
+00:01:28.540 --> 00:01:33.160
+Go ahead and start the virtualbox application.
+
+00:01:33.200 --> 00:01:38.660
+Create a new container or virtual machine for our CentOS operating system installation.
+
+00:01:39.630 --> 00:01:44.670
+You can see here that it asks you for a few bits of information.
+
+00:01:44.670 --> 00:01:49.550
+I'm going to name it centosdesktop.
+
+00:01:50.000 --> 00:02:00.160
+As I typed that in, virtualbox automatically selected Linux as the type and RedHat as the version.
+
+00:02:01.280 --> 00:02:05.689
+When we're doing a CentOS installation
+now remember that Santos is a red hat.
+
+00:02:05.689 --> 00:02:08.042
+linux derivative so that's the version.
+
+00:02:08.080 --> 00:02:13.660
+We're going to tell virtualbox that were
+using virtualbox didn't automatically select the type
+
+00:02:13.660 --> 00:02:16.380
+or version for you you can simply
+click on it and select the type from the
+
+00:02:16.990 --> 00:02:22.840
+list which again is linux or the version
+here which is red hat 64-bit
+
+00:02:22.840 --> 00:02:26.860
+going to go ahead and click continue and go to the
+next step. Here it's saying the
+
+00:02:26.860 --> 00:02:30.730
+recommended memory sizes a thousand
+twenty four megabytes which is one
+
+00:02:30.730 --> 00:02:36.430
+gigabyte. You can see that in my system
+here i have 16384 megabytes or 16
+
+00:02:36.430 --> 00:02:40.450
+gigabytes about, so I'm going to
+dedicate about half my resources to this virtual machine.
+
+00:02:40.450 --> 00:02:45.450
+So, I'll use 8192 MB or 8 gigabytes.
+
+00:02:45.450 --> 00:02:49.860
+maybe you could devote to gig to your
+virtual machine etcera. So i'll click
+
+00:02:49.870 --> 00:02:55.720
+continue to continue and what we need to
+do now is create a hard disk of virtual
+
+00:02:55.720 --> 00:02:57.610
+hard disk for this system.
+
+00:02:57.610 --> 00:03:02.410
+Go ahead and click create at this step
+you want to choose the hard disk type
+
+00:03:02.410 --> 00:03:07.600
+we're going to leave it at the default
+of vdi a virtualbox disk image. At this
+
+00:03:07.600 --> 00:03:12.790
+point we have two choices one is
+dynamically allocated and the other is
+
+00:03:12.790 --> 00:03:17.860
+fixed size. Primary concern is
+about preserving this space or using as
+
+00:03:17.860 --> 00:03:22.140
+little disk space as possible, choose Dynamically allocated.
+
+00:03:22.280 --> 00:03:26.920
+However, if you're looking for better performance, use Fixed Size.
+
+00:03:26.980 --> 00:03:30.420
+I'm going to go ahead and
+use dynamically allocated press continue here.
+
+00:03:30.430 --> 00:03:37.209
+Now we need to specify a size
+for our disc i'm going to specify 100
+
+00:03:37.209 --> 00:03:39.489
+gigabytes for my hard drive,
+
+00:03:39.489 --> 00:03:43.900
+although 8 gigabytes is sufficient to
+install CentOS to. I like having some
+
+00:03:43.900 --> 00:03:48.670
+additional space so that's why I'm going
+with a larger size. So we'll click create
+
+00:03:50.540 --> 00:03:53.659
+so now we have our virtual machine.
+
+00:03:53.659 --> 00:03:58.159
+Next, we need to install CentOS. Let's
+power on the virtual machine to do that
+
+00:03:58.840 --> 00:04:03.439
+you can either click start at the top or
+right click and press start. Like I'm
+
+00:04:03.440 --> 00:04:08.460
+going to do I'll do a normal start.
+
+00:04:08.940 --> 00:04:15.160
+Now it's going to ask us for a disk image to boot this system from and what you want
+to do is click on the folder icon and
+
+00:04:15.660 --> 00:04:20.180
+navigate to the location that you
+downloaded the ISO from centos dot org.
+
+00:04:21.220 --> 00:04:31.700
+So i'll click on that and click here
+click open and now we'll hit start to boot the system.
+
+00:04:36.200 --> 00:04:39.220
+You'll notice that you
+have a couple of options.
+
+00:04:39.280 --> 00:04:44.419
+The "Check media and install CentOS" is highlight. What
+this will do is make sure that the image
+
+00:04:44.420 --> 00:04:48.710
+you are using isn't corrupted. The ISO
+image that you downloaded from centos.
+
+00:04:48.710 --> 00:04:52.739
+I recommend going with the default
+here so press ENTER to start the
+
+00:04:52.760 --> 00:04:56.900
+installation. I'll click inside the
+virtual machine and then press enter.
+
+00:04:59.540 --> 00:05:03.000
+You'll see that the system starts to
+boot and then it starts checking the media.
+
+00:05:03.080 --> 00:05:06.830
+The ISO image that were using
+to do the installation.
+
+00:05:09.800 --> 00:05:14.419
+Here is the first install screen. There's
+a button at the bottom of this
+
+00:05:14.419 --> 00:05:18.650
+installation screen that I can't even
+see. I want to make sure that I see
+
+00:05:18.650 --> 00:05:23.150
+everything that centos is showing me, so
+I'm going to put this virtual machine
+
+00:05:23.150 --> 00:05:28.250
+into scale mode. What this will do is fit
+the virtual machine screen inside my
+
+00:05:28.250 --> 00:05:33.020
+virtualbox window. So I can make the
+window as small or as large as I want,
+
+00:05:33.020 --> 00:05:38.000
+and I can still see the entire screen of
+the virtual machine. Since we've already
+
+00:05:38.000 --> 00:05:42.409
+clicked inside the virtual machine
+window, the virtual machine has control
+
+00:05:42.409 --> 00:05:46.610
+over the mouse and keyboard. So anything
+that I type, or any mouse movements that
+
+00:05:46.610 --> 00:05:51.110
+I make are going to the virtual machine.
+To get control back to the whole system,
+
+00:05:51.110 --> 00:05:56.090
+we need to press the host key which is a
+special key reserved for Virtualbox actions.
+
+00:05:56.090 --> 00:06:02.000
+By default the host key is the
+left Command Key on a Mac, on Windows it's the right control key.
+
+00:06:02.000 --> 00:06:06.710
+Even if it's something different, you can always tell
+
+00:06:06.710 --> 00:06:11.479
+what the host key is by looking in the
+bottom right of your VM window. I'm on a
+
+00:06:11.479 --> 00:06:15.710
+Mac and so you can see that Left
+followed by the Command symbol is
+
+00:06:15.710 --> 00:06:20.090
+displayed in the bottom right of the VM
+window. When I press that designated
+
+00:06:20.090 --> 00:06:23.719
+host key, the control of the mouse and
+keyboard are returned to the host computer.
+
+00:06:26.120 --> 00:06:30.169
+Now I can go to the view menu and select on Scaled Mode.
+
+00:06:32.729 --> 00:06:40.009
+On a Windows system you'll go to the View menu that is in the menu bar at the top of your VM window and select Scaled Mode.
+
+00:06:40.320 --> 00:06:44.420
+VirtualBox will tell you how to get out of this scaled mode if you want to.
+
+00:06:44.610 --> 00:06:49.810
+It says press Host+C and it tells you what the host key is set to.
+
+00:06:50.440 --> 00:06:55.920
+I'm going to go ahead and click on
+switch to switch to scale mode.
+
+00:06:56.300 --> 00:07:01.020
+Now I can see the entire screen of the virtual machine in my window so now i'm just
+
+00:07:01.020 --> 00:07:05.840
+going to increase the size of the window
+so I can really see what's going on inside the virtual machine.
+
+00:07:14.200 --> 00:07:16.760
+At this point
+i'll click in the virtual machine and
+
+00:07:16.840 --> 00:07:21.660
+now the virtual machine has control of
+my mouse and keyboard so now i'm just
+
+00:07:21.780 --> 00:07:26.939
+going to mouse over the continue button
+and click to start the installation.
+
+00:07:26.939 --> 00:07:31.379
+On this installation summary screen we can go through each item if we want and make
+
+00:07:31.379 --> 00:07:36.180
+some changes for example the date and
+time is set to America's new york for me
+
+00:07:36.180 --> 00:07:39.930
+if you want to change this you would
+simply click on that and then select
+
+00:07:39.930 --> 00:07:43.969
+your place in the world and then click
+done. So i'm just going to leave it as
+
+00:07:43.979 --> 00:07:47.879
+America's new york and i'll click done
+and again the same thing with the
+
+00:07:47.880 --> 00:07:51.689
+keyboard and the language support. The
+one thing that we really need to change
+
+00:07:51.689 --> 00:07:56.099
+is the software selection so make sure
+to click on this so what we want is a
+
+00:07:56.100 --> 00:08:02.249
+graphical user environment, so let's
+click on a gnome desktop here and then
+
+00:08:02.249 --> 00:08:05.870
+there are some add-ons to the right
+these are optional. However, there is one
+
+00:08:05.879 --> 00:08:09.749
+that I want you to click because we're
+going to be using some of the software
+
+00:08:09.749 --> 00:08:13.722
+that gets included. There in just a few
+minutes, so head on over to the right
+
+00:08:13.740 --> 00:08:18.659
+side of the screen and make sure that
+the development tools are check. So when
+
+00:08:18.659 --> 00:08:23.399
+we've done that we'll just go up here
+and click done and then the installation
+
+00:08:23.399 --> 00:08:28.740
+destination. Will click on that and then
+you can see that it automatically
+
+00:08:28.740 --> 00:08:34.169
+selects our virtual hard disk. So when
+we're doing this installation it may say
+
+00:08:34.169 --> 00:08:37.289
+that we're going to overwrite everything.
+On the hard disk well it's going to
+
+00:08:37.289 --> 00:08:42.140
+overwrite everything on the virtual hard
+disk and that is just fine, so everything
+
+00:08:42.140 --> 00:08:47.360
+looks good on the screen.There's nothing
+to change you just need to go in here firm, so we'll click done.
+
+00:08:50.740 --> 00:08:54.160
+So now it gives us the option to begin installation and
+
+00:08:54.160 --> 00:08:57.160
+that's what we're going to do will click
+that button.
+
+00:08:58.060 --> 00:09:01.900
+On the screen you can do two things here
+the first thing is set a root password
+
+00:09:01.900 --> 00:09:06.400
+which will go ahead and do will click on
+that and then you're going to set a
+
+00:09:06.400 --> 00:09:10.360
+password for the root account and we'll
+be talking about the root account later
+
+00:09:10.360 --> 00:09:15.420
+in this course. So just go ahead and pick
+a password and be sure to remember that password.
+
+00:09:20.260 --> 00:09:23.960
+Then we'll click on done,
+now if you choose a weak password it
+
+00:09:23.980 --> 00:09:28.570
+will make you press done twice to
+confirm that you're going with a less
+
+00:09:28.570 --> 00:09:34.540
+secure password. So in any case will
+click done, so now we have the option of
+
+00:09:34.600 --> 00:09:38.650
+creating a user and we want to go ahead
+and do that as well so we'll just mouse
+
+00:09:38.650 --> 00:09:44.820
+over to the right there and click on
+user creation. So here is where you'll
+
+00:09:44.820 --> 00:09:49.170
+enter your information for your personal
+account on this system, so i'm going to
+
+00:09:49.180 --> 00:09:56.560
+enter my name and you want to make sure
+that you check this box is make this
+
+00:09:56.560 --> 00:10:00.910
+user administrator checking, that box
+will make it easier for you to do things
+
+00:10:00.910 --> 00:10:05.500
+on the system such as install software
+and do other kind of administrative
+
+00:10:05.500 --> 00:10:10.270
+tasks like that will be covering that
+later in this course as well. So now we
+
+00:10:10.270 --> 00:10:17.590
+need to supply a password. Then
+that's all we need to do on this screen.
+
+00:10:17.640 --> 00:10:23.600
+Will click done and then we'll just wait
+for centos to perform its installation.
+
+00:10:23.940 --> 00:10:28.220
+Now that the main installation is done
+we need to go ahead and reboot the
+
+00:10:28.260 --> 00:10:32.560
+system and finish up the installation. So
+go ahead and click on the reboot button now.
+
+00:10:43.420 --> 00:10:47.740
+When the system first boots you may need
+to accept the license information. So
+
+00:10:47.740 --> 00:10:53.530
+right here we just hit one and press
+enter and now will enter 2 to accept the
+
+00:10:53.530 --> 00:10:59.410
+license agreement. Now we just press
+C to continue and then now that the
+
+00:10:59.410 --> 00:11:05.830
+license information has been accepted
+will see an x + 7 ! there beside number
+
+00:11:05.830 --> 00:11:09.880
+one license information. So we're
+done with this so we can have C to
+
+00:11:09.910 --> 00:11:15.940
+continue and complete our first boot
+into centos. Now that the system is
+
+00:11:15.940 --> 00:11:22.090
+booted up i'm going to go ahead and
+login as myself here.
+
+00:11:22.090 --> 00:11:26.050
+When you first login, will ask you to confirm your language I'm English so that's already
+
+00:11:26.050 --> 00:11:30.460
+selected and i'll click next, here we'll
+also ask you about your keyboard layout
+
+00:11:30.460 --> 00:11:35.290
+and English US is checked and that's
+what i'm using some and click next and
+
+00:11:35.290 --> 00:11:39.610
+now we're all set the installation is
+complete. So i'll just click start using
+
+00:11:39.610 --> 00:11:44.440
+centos now. Now this getting started
+screen is displayed and so you can take
+
+00:11:44.440 --> 00:11:47.500
+some time and read through some of the
+documentation and watch some of the
+
+00:11:47.500 --> 00:11:52.450
+videos for example and so at this point
+the installation is really complete. So
+
+00:11:52.450 --> 00:11:56.320
+our job would be done right here if
+we're running on physical hardware such
+
+00:11:56.320 --> 00:11:59.440
+as a desktop a laptop or server.
+
+00:11:59.440 --> 00:12:03.100
+However, since we're using a virtual
+machine we need to perform one
+
+00:12:03.100 --> 00:12:07.300
+additional step. That additional step is
+to install some software that helps
+
+00:12:07.300 --> 00:12:11.830
+linux understand. The virtual hardware
+that it's working with and that piece of
+
+00:12:11.830 --> 00:12:17.050
+software is called virtualbox guest
+additions. Now what we need to do is
+
+00:12:17.050 --> 00:12:22.290
+insert the guest additions CD image and
+install those guest additions. So i'm
+
+00:12:22.300 --> 00:12:27.490
+going to press the host key to get
+control of the keyboard and mouse and
+
+00:12:27.490 --> 00:12:32.190
+now i'm going to go to the devices menu
+and click insert guest additions CD image.
+
+00:12:32.200 --> 00:12:37.150
+You'll see a pop-up that ask you
+if you'd like to run the software that's
+
+00:12:37.150 --> 00:12:41.140
+on this image and we do so i'm going to
+click inside the virtual machine here to
+
+00:12:41.160 --> 00:12:44.580
+get the mouse control back to the
+virtual machine. I'm going to hover over
+
+00:12:44.590 --> 00:12:47.920
+run and click it.
+
+00:12:47.920 --> 00:12:52.240
+Now we need to enter our password for
+the account since we have administrative
+
+00:12:52.240 --> 00:12:56.800
+privileges that we specified during the
+installation. We can do things as such as
+
+00:12:56.800 --> 00:13:00.550
+install software which is what we're
+doing out so i'll just go ahead and
+
+00:13:00.550 --> 00:13:07.560
+enter in my password. Click on
+authenticate and now the guest additions
+
+00:13:07.570 --> 00:13:12.250
+will be installed guest additions
+requires that the development tools were
+
+00:13:12.250 --> 00:13:15.730
+installed and if you remember when we
+selected the software for the
+
+00:13:15.730 --> 00:13:21.000
+installation. We check the checkbox
+beside development tools so if you have
+
+00:13:21.010 --> 00:13:24.339
+problem installing the guest additions
+you need to make sure that, that was
+
+00:13:24.339 --> 00:13:28.000
+checked during your installation. So now
+that the installation is done we can
+
+00:13:28.000 --> 00:13:32.980
+press return to close the window, so i'm
+going to go ahead and X out of the
+
+00:13:32.980 --> 00:13:36.910
+getting started and i'm actually going
+to reboot the virtual machine to show
+
+00:13:36.910 --> 00:13:41.250
+you what happens when you have guest
+additions install. So I click on the
+
+00:13:41.260 --> 00:13:46.120
+right part of the screen at the power
+button here and i'll just do a restart.
+
+00:13:51.900 --> 00:13:55.860
+Go ahead and again, so i'm
+
+00:13:55.860 --> 00:14:00.020
+going to press the host
+key again to get control of the mouse
+
+00:14:00.020 --> 00:14:04.430
+and i'm going to go to the menu here and
+then I'm going to click view and take us
+
+00:14:04.430 --> 00:14:09.510
+out of scale mode. So I'm just going to
+hit scale mode there and then the screen
+
+00:14:09.530 --> 00:14:13.670
+will snap to a smaller size and so
+what's interesting now is the resolution
+
+00:14:13.670 --> 00:14:19.330
+is better. So now I can take the screen
+and drag it to how whatever size I want
+
+00:14:19.340 --> 00:14:25.400
+and now the graphics and the desktop.
+Look a lot better than they did on the
+
+00:14:25.400 --> 00:14:30.200
+first insulation and in that scale mode.
+So one of the things that the virtualbox
+
+00:14:30.200 --> 00:14:34.790
+guest additions does is provide a better
+display experience for you.
+
+00:14:34.790 --> 00:14:38.090
+Okay that wraps up the manual
+installation of centos
+

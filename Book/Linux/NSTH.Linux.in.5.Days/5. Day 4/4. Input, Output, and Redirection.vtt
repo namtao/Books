@@ -1,0 +1,472 @@
+WEBVTT
+
+1
+00:00:03.970 --> 00:00:07.970
+In this lesson, we'll be talking about
+the different types of I/O, input and
+
+2
+00:00:07.970 --> 00:00:11.260
+output, and how to redirect that I/O.
+
+3
+00:00:11.260 --> 00:00:14.284
+There are three default types of input and
+output.
+
+4
+00:00:14.284 --> 00:00:19.045
+They are standard input,
+standard output, and standard error.
+
+5
+00:00:20.125 --> 00:00:24.335
+By default, standard input comes from
+the keyboard, and standard output and
+
+6
+00:00:24.335 --> 00:00:27.225
+standard error are displayed
+to the screen.
+
+7
+00:00:27.225 --> 00:00:30.705
+Each one of these I/O types
+is given a file descriptor.
+
+8
+00:00:30.705 --> 00:00:35.120
+File descriptors are just numbers
+that represent open files.
+
+9
+00:00:35.120 --> 00:00:38.790
+For us humans, it's easier to reference
+files by name, but it's easier for
+
+10
+00:00:38.790 --> 00:00:41.370
+computers to reference them by number.
+
+11
+00:00:41.370 --> 00:00:45.670
+You might be thinking,
+my keyboard isn't a file nor is my screen.
+
+12
+00:00:45.670 --> 00:00:50.310
+On one level, that's true, but
+on another level, it's not.
+
+13
+00:00:50.310 --> 00:00:54.070
+Linux represents practically
+everything as a file.
+
+14
+00:00:54.070 --> 00:00:57.720
+This abstraction allows you to do some
+powerful things like take the standard
+
+15
+00:00:57.720 --> 00:01:01.910
+output of one command that would
+normally be displayed to your screen and
+
+16
+00:01:01.910 --> 00:01:06.720
+use it as the input to another command,
+or even redirect that output to a file.
+
+17
+00:01:08.290 --> 00:01:10.890
+Use the greater than sign
+to redirect output and
+
+18
+00:01:10.890 --> 00:01:12.720
+the less than sign to redirect input.
+
+19
+00:01:13.970 --> 00:01:17.680
+The greater than sign redirects
+output from a command to a file,
+
+20
+00:01:17.680 --> 00:01:21.350
+while the less than sign redirects
+input from a file to a command.
+
+21
+00:01:22.470 --> 00:01:26.640
+The explicit way of using redirection
+is to provide a file descriptor number.
+
+22
+00:01:26.640 --> 00:01:31.140
+However, if one is omitted, then the file
+descriptor zero is assumed for input, and
+
+23
+00:01:31.140 --> 00:01:33.260
+one for output redirection.
+
+24
+00:01:33.260 --> 00:01:38.140
+When you use two greater than signs, the
+redirected output will append to the file.
+
+25
+00:01:38.140 --> 00:01:42.310
+Normally, with redirection,
+a file follows the redirection operator.
+
+26
+00:01:42.310 --> 00:01:45.460
+If you want to use a file
+descriptor instead of a file name,
+
+27
+00:01:45.460 --> 00:01:47.430
+use the ampersand symbol.
+
+28
+00:01:47.430 --> 00:01:53.035
+So, instead of redirecting standard error
+to a file would two greater than out.err,
+
+29
+00:01:53.035 --> 00:01:54.033
+for instance,
+
+30
+00:01:54.033 --> 00:01:59.580
+you could redirect it to standard output
+with two greater than ampersand one.
+
+31
+00:01:59.580 --> 00:02:02.720
+This effectively combines standard
+input and standard output.
+
+32
+00:02:04.640 --> 00:02:09.712
+If you want to ignore output, you can send
+it to the null device which is dev/null.
+
+33
+00:02:09.712 --> 00:02:14.650
+The null device is a special file that
+throws away whatever is fed to it.
+
+34
+00:02:14.650 --> 00:02:17.620
+You may hear people refer
+to this as a bit bucket.
+
+35
+00:02:17.620 --> 00:02:21.140
+If you don't wanna see errors on your
+screen and you don't wanna save them to
+
+36
+00:02:21.140 --> 00:02:27.570
+a file, you can redirect them
+to dev/null for instance.
+
+37
+00:02:27.570 --> 00:02:29.704
+Let's look at the output
+of the ls-l command.
+
+38
+00:02:31.160 --> 00:02:34.420
+Let's redirect that
+standard output to a file.
+
+39
+00:02:34.420 --> 00:02:37.790
+Use the greater than symbol and
+follow it with a file name.
+
+40
+00:02:37.790 --> 00:02:39.340
+So, use files.txt.
+
+41
+00:02:41.628 --> 00:02:45.438
+So, if we look at
+the contents of files.txt,
+
+42
+00:02:45.438 --> 00:02:48.970
+we'll see that it has the output of ls-l.
+
+43
+00:02:48.970 --> 00:02:54.570
+You can append to an existing file
+with two greater than symbols.
+
+44
+00:02:54.570 --> 00:02:58.689
+So, let's take the standard output
+of ls and append it to files.txt.
+
+45
+00:03:02.345 --> 00:03:07.958
+We can see that this is
+the ls-l output from earlier,
+
+46
+00:03:07.958 --> 00:03:12.590
+and then at the bottom
+is just the ls output.
+
+47
+00:03:12.590 --> 00:03:15.130
+Input redirection works like this.
+
+48
+00:03:15.130 --> 00:03:19.202
+Let's take files.txt and
+
+49
+00:03:19.202 --> 00:03:24.340
+redirect the contents into sort.
+
+50
+00:03:24.340 --> 00:03:27.220
+And you see that sort
+was run on the command.
+
+51
+00:03:27.220 --> 00:03:31.009
+This is really equivalent
+to sort files.txt, but
+
+52
+00:03:31.009 --> 00:03:33.130
+this is another way to do it.
+
+53
+00:03:36.137 --> 00:03:39.558
+File descriptor one is assumed for
+output redirection, and
+
+54
+00:03:39.558 --> 00:03:42.720
+file descriptor two is assumed for
+input redirection.
+
+55
+00:03:42.720 --> 00:03:48.968
+So, this is the same ls-l >
+files.txt is the same as ls-l 1,
+
+56
+00:03:48.968 --> 00:03:53.505
+the file descriptor number, to files.txt.
+
+57
+00:03:53.505 --> 00:03:56.633
+However, make sure you don't leave
+a space if you're gonna use this.
+
+58
+00:04:03.428 --> 00:04:07.549
+Input and
+output redirection can be combined, so
+
+59
+00:04:07.549 --> 00:04:12.061
+lets use files.txt as the input for
+sort command, and
+
+60
+00:04:12.061 --> 00:04:16.588
+let's redirect that output
+to sorted_files.txt.
+
+61
+00:04:21.588 --> 00:04:24.671
+And you can see that that worked.
+
+62
+00:04:26.675 --> 00:04:32.180
+When a program encounters an error,
+it reports its findings on standard error.
+
+63
+00:04:32.180 --> 00:04:36.570
+File descriptor one is for standard
+output while two is for standard error.
+
+64
+00:04:37.620 --> 00:04:41.120
+File descriptor one is the default
+descriptor for output redirection.
+
+65
+00:04:41.120 --> 00:04:43.980
+So, this can mean that not all
+of the output generated by
+
+66
+00:04:43.980 --> 00:04:46.810
+a program is captured by default.
+
+67
+00:04:46.810 --> 00:04:47.910
+Let's look at this example.
+
+68
+00:04:53.470 --> 00:04:58.720
+You can see that this ls command found
+files.text, but it also had an error.
+
+69
+00:04:58.720 --> 00:05:01.880
+The file not here was not there.
+
+70
+00:05:01.880 --> 00:05:03.963
+Let's run the same command again.
+
+71
+00:05:05.467 --> 00:05:10.695
+So, in this situation,
+file descriptor one,
+
+72
+00:05:10.695 --> 00:05:17.430
+standard out was redirected
+to the file called out.
+
+73
+00:05:17.430 --> 00:05:21.280
+Standard error was not redirected so
+it was displayed to our screen.
+
+74
+00:05:22.537 --> 00:05:26.920
+You can see that standard
+out did go to out.
+
+75
+00:05:33.720 --> 00:05:38.840
+Let's redirect standard
+error into out.err.
+
+76
+00:05:38.840 --> 00:05:43.170
+So, standard output came to our screen,
+standard error went to this file.
+
+77
+00:05:47.470 --> 00:05:51.547
+This can actually be handy because you
+can send standard output one place,
+
+78
+00:05:51.547 --> 00:05:54.340
+and standard error to another,
+so let's do that.
+
+79
+00:06:05.500 --> 00:06:08.880
+That's standard out, and
+this is standard error.
+
+80
+00:06:08.880 --> 00:06:11.420
+And you could use that for
+an error log, for instance.
+
+81
+00:06:11.420 --> 00:06:14.260
+You can also combine standard output and
+standard error.
+
+82
+00:06:14.260 --> 00:06:15.050
+Let's do that.
+
+83
+00:06:19.840 --> 00:06:22.840
+Redirect output to out.both.
+
+84
+00:06:22.840 --> 00:06:27.550
+Take standard error and
+append it to standard input.
+
+85
+00:06:30.370 --> 00:06:34.594
+So, both the error message,
+no such file or directory,
+
+86
+00:06:34.594 --> 00:06:39.170
+and the standard output of
+files.txt ended up in out.both.
+
+87
+00:06:39.170 --> 00:06:40.550
+Let's use the null device.
+
+88
+00:06:45.760 --> 00:06:50.090
+If you wanna ignore errors,
+you can send the errors to dev/null,
+
+89
+00:06:53.340 --> 00:06:57.840
+Or send standard output to dev/null.
+
+90
+00:06:57.840 --> 00:07:00.840
+And then, now, you just get the error
+message or you can do both.
+
+91
+00:07:05.090 --> 00:07:10.590
+Redirect output to dev/null,
+append standard error to standard output.
+
+92
+00:07:13.090 --> 00:07:17.290
+This lesson covered standard input,
+standard output, and standard error.
+
+93
+00:07:18.700 --> 00:07:20.120
+The default file descriptor for
+
+94
+00:07:20.120 --> 00:07:25.210
+standard input is zero, while standard
+out is one and standard error is two.
+
+95
+00:07:26.420 --> 00:07:30.520
+You can redirect input and output with
+greater than and less than symbols.
+
+96
+00:07:30.520 --> 00:07:33.680
+If you want to use redirection in
+conjunction with file descriptors,
+
+97
+00:07:33.680 --> 00:07:35.540
+use an ampersand.
+
+98
+00:07:35.540 --> 00:07:39.751
+You can redirect output to dev/null to
+prevent output from being displayed to
+
+99
+00:07:39.751 --> 00:07:41.550
+your screen or written to a file.
+

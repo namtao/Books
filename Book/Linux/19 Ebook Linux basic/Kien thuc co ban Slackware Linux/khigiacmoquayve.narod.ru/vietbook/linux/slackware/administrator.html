@@ -1,0 +1,596 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/administrator.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>administrator</title>
+</head>
+<body>
+<div style="text-align: center;">
+<div style="text-align: left;"><span style="font-style: italic;">Ki&#7871;n
+Th&#7913;c C&#417; B&#7843;n</span><span style="font-style: italic;"> Slackware Linux</span><br>
+</div>
+</div>
+<hr> <a name="ch_5.5"><span style="font-weight: bold;">5.5 H&#7879; th&#7889;ng
+Administrator<br>
+</span><br>
+B&#7841;n l&agrave; administrator t&#7845;t c&#7843; c&aacute;c m&aacute;y t&iacute;nh
+n&#7871;u tr&ecirc;n &#273;&oacute; b&#7841;n l&agrave; <span style="font-weight: bold;">superuser
+- root</span>.C&oacute; th&#7875; l&agrave; m&#7897;t m&aacute;y t&iacute;nh
+c&aacute; nh&acirc;n &#273;&#7875; b&agrave;n v&#7899;i m&#7897;t ho&#7863;c hai t&agrave;i kho&#7843;n
+ho&#7863;c c&#361;ng c&oacute; th&#7875; l&agrave; m&#7897;t server v&#7899;i h&#7857;ng tr&#259;m t&agrave;i
+kho&#7843;n .Tuy vi&#7879;c &#7903; &#273;&acirc;y l&agrave; gi&uacute;p b&#7841;n c&oacute; ki&#7871;n
+th&#7913;c c&#417; b&#7843;n v&#7873; c&aacute;c s&#7917; l&yacute; v&#7899;i c&aacute;c t&agrave;i kho&#7843;n
+tr&ecirc;n m&aacute;y t&iacute;nh c&#361;ng nh&#432; c&aacute;ch t&#7855;t m&aacute;y
+an to&agrave;n.Tr&ecirc;n th&#7921;c t&#7871; &#273;i&#7873;u n&agrave;y kh&ocirc;ng
+kh&oacute; l&#7855;m c&oacute; l&#7869; c&oacute; th&#7875; t&#7853;p th&agrave;nh th&oacute;i
+quen &#273;&#432;&#7907;c.Th&ecirc;m v&agrave;o &#273;&oacute; b&#7841;n c&oacute; th&#7875; l&agrave;m
+quen v&#7899;i m&#7897;t v&agrave;i &yacute; t&#432;&#7903;ng,nguy&ecirc;n t&#7855;c l&agrave;m vi&#7879;c
+v&#7899;i m&#7853;t kh&#7849;u.<br>
+<br>
+</a><a name="ch_5.5.1"><span style="font-weight: bold;">5.5.1
+T&agrave;i kho&#7843;n v&agrave; Nh&oacute;m t&agrave;i kho&#7843;n<br>
+</span><br>
+M&#7897;t trong nh&#7919;ng th&#7911; thu&#7853;t v&#7899;i nh&#7919;ng t&agrave;i kho&#7843;n l&agrave; s&#7917; d&#7909;ng
+c&aacute;c script c&ugrave;ng c&aacute;c ch&#432;&#417;ng tr&igrave;nh kh&aacute;c
+nhau.Slackware cho ph&eacute;p l&agrave;m vi&#7879;c v&#7899;i c&aacute;c t&agrave;i
+kho&#7843;n b&#7857;ng c&aacute;c ch&#432;&#417;ng tr&igrave;nh sau:<span
+ style="font-weight: bold;">adduser(8),userdel(8),chfn(1),passwd(1)</span>.C&ograve;n
+l&agrave;m vi&#7879;c v&#7899;i c&aacute;c nh&oacute;m t&agrave;i kho&#7843;n c&oacute;
+c&aacute;c &#7913;ng d&#7909;ng sau:<span style="font-weight: bold;">groupadd(8),groupdel(8)
+v&agrave; groupmod(8)</span>.Ngo&#7841;i tr&#7915; <span style="font-weight: bold;">chfn,chsh,passwd</span>&nbsp;
+c&ograve;n c&aacute;c &#7913;ng d&#7909;ng k&#7875; tr&ecirc;n ch&#7881; c&oacute; th&#7875; s&#7917; d&#7909;ng
+cho Root&nbsp; b&#7903;i v&igrave; ch&uacute;ng n&#7857;m &#7903;&nbsp;<span
+ style="font-weight: bold;"> /usr/sbin</span>. &#272;&#7889;i v&#7899;i <span
+ style="font-weight: bold;">chfn,chsh,passwd</span> th&igrave; c&oacute;
+th&#7875; tho&#7843;i m&aacute;i b&#7903;i v&igrave; ch&uacute;ng n&#7857;m &#7903;<span
+ style="font-weight: bold;"> /usr/bin<br>
+</span><br>
+L&#7853;p th&ecirc;m t&agrave;i kho&#7843;n ch&#7881; c&oacute; th&#7875; v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; <span
+ style="font-weight: bold;">adduser</span>.Ch&uacute;ng ta s&#7869; xem
+x&eacute;t nh&#7919;ng c&acirc;u h&#7887;i c&#7847;n thi&#7871;t c&oacute; li&ecirc;n quan t&#7899;i
+&#7913;ng d&#7909;ng n&agrave;y,c&#361;ng nh&#432; nh&#7919;ng th&ocirc;ng tin c&#7847;n thi&#7871;t v&#7873;
+n&oacute;.<br>
+<br>
+<span style="font-weight: bold;"> #adduser</span><br>
+<br>
+<span style="font-style: italic;"> Login name for new user (8 characters
+or less) []: mt<br>
+</span><br>
+&#272;&#7845;y l&agrave; t&ecirc;n c&#7911;a t&agrave;i kho&#7843;n m&agrave; s&#7869; &#273;&#432;&#7907;c &#273;&#259;ng
+nh&#7853;p v&agrave;o h&#7879; th&#7889;ng.N&oacute; c&#7845;u th&agrave;nh t&#7915; t&aacute;m hay
+&iacute;t h&#417;n k&iacute; t&#7921; b&#7903;i v&igrave; t&#7845;t c&#7843; c&aacute;c &#7913;ng d&#7909;ng
+login ch&#7881; cho ph&eacute;p &#273;&#7871;n th&#7871;.Th&ocirc;ng th&#432;&#7901;ng s&#7917; d&#7909;ng ch&#7881; dung
+c&aacute;c ch&#7919; in th&#432;&#7901;ng nh&#432;ng c&oacute; th&#7875; d&ugrave;ng ch&#7919; in hoa.<br>
+<br style="font-style: italic;">
+<span style="font-style: italic;"> User id for mt [ defaults to next
+available]: </span><br>
+<br>
+<span style="font-weight: bold;"> ID(UID)</span> c&#7911;a t&agrave;i kho&#7843;n -
+th&ocirc;ng th&#432;&#7901;ng Linux s&#7917; d&#7909;ng nh&#7919;ng ID n&agrave;y &#273;&#7875; ki&#7875;m tra ai
+l&agrave; ch&#7911; s&#7903; h&#7919;u c&#7911;a t&#7879;p tin.M&#7895;i m&#7897;t t&agrave;i kho&#7843;n c&oacute; m&#7897;t
+s&#7889; ID ri&ecirc;ng bi&#7879;t kh&ocirc;ng tr&ugrave;ng l&#7863;p.Trong Slackware b&#7855;t
+&#273;&#7847;u t&#7915; 1000.B&#7841;n c&oacute; th&#7875; ch&#7885;n UID cho t&agrave;i kho&#7843;n m&#7899;i
+v&agrave; c&oacute; th&#7875; &#273;&#417;n gi&#7843;n cho ph&eacute;p adduser g&aacute;n
+t&agrave;i kho&#7843;n v&#7899;i m&#7897;t s&#7889; ID t&#7921; do.<br>
+<br style="font-style: italic;">
+<span style="font-style: italic;"> Initial group for mt [users]: <br>
+</span><br>
+T&#7845;t c&#7843; c&aacute;c t&agrave;i kho&#7843;n theo m&#7863;c &#273;&#7883;nh s&#7869; thu&#7897;c nh&oacute;m
+user.B&#7841;n c&oacute; th&#7875; mu&#7889;n t&#7841;o m&#7897;t nh&oacute;m t&agrave;i kho&#7843;n
+ri&ecirc;ng cho t&#7915;ng t&agrave;i kho&#7843;n tuy nhi&ecirc;n ch&uacute;ng
+t&ocirc;i kh&ocirc;ng khuy&#7871;n kh&iacute;ch &#273;i&#7873;u n&agrave;y.<br>
+<br style="font-style: italic;">
+<span style="font-style: italic;"> Additional groups for mt (seperated
+with commas, no spaces) []: </span><br>
+<br>
+&#7902; &#273;&acirc;y ch&uacute;ng t&ocirc;i gi&#7899;i thi&#7879;u c&aacute;ch b&#7893; sung
+c&aacute;c nh&oacute;m t&agrave;i kho&#7843;n m&#7899;i.M&#7897;t t&agrave;i kho&#7843;n
+c&oacute; th&#7875; tham gia v&agrave;o nhi&#7873;u nh&oacute;m t&agrave;i kho&#7843;n
+kh&aacute;c nhau.Th&#7853;t l&agrave; t&#7889;t n&#7871;u b&#7841;n thu&#7897;c v&agrave;o c&aacute;c
+nh&oacute;m t&agrave;i kho&#7843;n kh&aacute;c nhau.<br>
+mt's home directory [/home/mt]:<br>
+<br>
+Catalog nh&agrave; &#7903; c&#7911;a c&aacute;c t&agrave;i kho&#7843;n n&#7857;m &#7903; catalog
+/home.N&#7871;u b&#7841;n l&agrave;m vi&#7879;c tr&ecirc;n m&#7897;t h&#7879; th&#7889;ng l&#7899;n th&igrave;
+c&oacute; th&#7875; s&#7843;y ra tr&#432;&#7901;ng h&#7907;p di chuy&#7875;n&nbsp; catalog home &#273;i ra ch&#7895;
+kh&aacute;c.C&oacute; th&#7919;ng ch&#7885;n l&#7921;a gi&uacute;p b&#7841;n th&#7921;c hi&#7879;n &#273;&#432;&#7907;c &#273;i&#7873;u
+n&agrave;y.B&#7841;n c&oacute; th&#7875; &#273;&#7883;nh h&#432;&#7899;ng &#273;&#432;&#7907;c catalog home c&#7911;a t&agrave;i
+kho&#7843;n s&#7869; n&#7857;m &#7903; &#273;&acirc;u theo &yacute; mu&#7889;n.Nh&#432;ng t&ocirc;i kh&ocirc;ng
+khuy&#7871;n kh&iacute;ch c&aacute;c b&#7841;n l&agrave;m vi&#7879;c n&agrave;y.<br>
+<br>
+<span style="font-style: italic;">mt's shell [/bin/bash]:&nbsp; </span><br>
+<br>
+Bash ch&iacute;nh l&agrave; m&#7897;t m&ocirc;i tr&#432;&#7901;ng v&#7887; l&#7879;nh theo ng&#7847;m &#273;&#7883;nh
+c&#7911;a Slackware Linux v&agrave; &#273;&#432;&#7907;c nhi&#7873;u ng&#432;&#7901;i s&#7917; d&#7909;ng.Tuy nhi&ecirc;n
+n&#7871;u b&#7841;n l&agrave; ng&#432;&#7901;i s&#7917; d&#7909;ng Unix kinh nghi&#7879;m th&igrave; bnaj
+c&oacute; th&#7875; thay &#273;&#7893;i n&oacute; b&#7857;ng m&#7897;t v&#7887; l&#7879;nh kh&aacute;c m&agrave;
+b&#7841;n quen thu&#7897;c.B&#7841;n c&oacute; th&#7875; l&agrave;m ngay b&acirc;y gi&#7901; ho&#7863;c mu&#7897;n
+h&#417;n v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; chsh.<br>
+<br>
+<span style="font-style: italic;"> mt's account expiry date (YYYY-MM-DD)
+[]: <br>
+</span><br>
+B&#7841;n c&oacute; th&#7875; ch&#7881; &#273;&#7883;nh ng&agrave;y m&agrave; sau c&aacute;i
+ng&agrave;y &#273;&oacute; th&igrave; t&agrave;i kho&#7843;n s&#7869; kh&ocirc;ng
+c&oacute; qu&#7873;n truy c&#7853;p v&agrave;o h&#7879; th&#7889;ng n&#7919;a.Theo m&#7863;c &#273;&#7883;nh s&#7889;
+ng&agrave;y l&agrave; kh&ocirc;ng c&oacute; gi&#7899;i h&#7841;n.V&iacute; d&#7909;
+nh&#432;&nbsp; s&#7921; ch&#7885;n l&#7921;a n&agrave;y c&oacute; l&#7907;i cho ISP n&#7871;u h&#7885; mu&#7889;n t&#7841;o
+ra c&aacute;c t&agrave;i kho&#7843;n trong kho&#7843;ng th&#7901;i gian x&aacute;c &#273;&#7883;nh
+khi m&agrave; h&#7885; ch&#432;a nh&#7853;n &#273;&#432;&#7907;c ti&#7873;n thu&ecirc; bao cho n&#259;m t&#7899;i.<br>
+<br>
+<span style="font-style: italic;"> OK, I'm about to make a new account.
+Here's</span><br style="font-style: italic;">
+<span style="font-style: italic;"> what you entered so far:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> New login name: mt</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> New UID: [Next available]</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Initial group: users</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Additional groups: [none]</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Home directory: /home/mt</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Shell: /bin/bash</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Expiry date: [no expiration]</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> This is it... if you want to bail
+out, hit Control-C.</span><br style="font-style: italic;">
+<span style="font-style: italic;"> Otherwise, press ENTER to go ahead
+and make the account. </span><br>
+<br>
+B&acirc;y gi&#7901; b&#7841;n nh&igrave;n th&#7845;y nh&#7919;ng th&ocirc;ng tin c&#7847;n thi&#7871;t.N&#7871;u
+nh&#432; c&oacute; g&igrave; kh&ocirc;ng &#7893;n th&igrave; s&#7917; d&#7909;ng Ctrl+C &#273;&#7875; d&#7915;ng
+l&#7841;i v&agrave; b&#7855;t &#273;&#7847;u l&#7841;i t&#7915; &#273;&#7847;u.Ng&#432;&#7907;c l&#7841;i b&#7841;n c&oacute; th&#7875; nh&#7845;n Enter
+v&agrave; t&agrave;i kho&#7843;n s&#7869; &#273;&#432;&#7907;c t&#7841;o th&agrave;nh.<br>
+<br>
+<span style="font-style: italic;"> Making new account...</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Changing the user information for mt</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Enter the new value, or press return
+for the default</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Full Name
+[]: vudung</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Room Number
+[]: sovietskay 2</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Work Phone
+[]:</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Home Phone
+[]:</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Other:</span><br
+ style="font-style: italic;">
+<br>
+T&#7845;t c&#7843; c&aacute;c th&ocirc;ng tin b&#7893; sung d&ugrave;ng cho <span
+ style="font-weight: bold;">finger</span>.B&#7841;n c&oacute; th&#7875; &#273;&#7875;
+ch&uacute;ng ch&#7889;ng n&#7871;u mu&#7889;n.B&#7841;n c&oacute; th&#7875; thay &#273;&#7893;i nh&#7919;ng th&ocirc;ng
+tin n&agrave;y &#7903; b&#7845;t c&#7913; th&#7901;i &#273;i&#7875;m n&agrave;o v&#7899;i s&#7921; ch&#7907; gi&uacute;p c&#7911;a
+chfn.Tuy nhi&ecirc;n c&oacute; th&#7875; ti&#7879;n l&#7907;i h&#417;n n&#7871;u b&#7841;n ch&#7881; ra t&ecirc;n
+h&#7885;,s&#7889; &#273;i&#7879;n tho&#7841;i...v&agrave; khi c&#7847;n thi&#7871;t s&#7869; li&ecirc;n h&#7879;.<br>
+<br>
+<span style="font-style: italic;"> Changing password for mt</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Enter the new password (minimum of 5,
+maximum of 127 characters)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> Please use a combination of upper and
+lower case letters and numbers.</span><br style="font-style: italic;">
+<span style="font-style: italic;"> New password:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Re-enter new password:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Password changed.</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Done...</span><br
+ style="font-style: italic;">
+<br>
+B&#7841;n s&#7869; ph&#7843;i nh&#7853;p v&agrave;o m&#7853;t kh&#7849;u cho t&agrave;i kho&#7843;n m&#7899;i.N&#7871;u nh&#432;
+ng&#432;&#7901;i s&#7917; d&#7909;ng m&#7899;i&nbsp; kh&ocirc;ng c&oacute; m&#7863;t th&igrave; b&#7841;n ch&#7881; c&#7847;n
+&#273;&#7875; m&#7853;t kh&#7849;u ng&#7847;m &#273;&#7883;nh v&agrave; nh&#7855;n cho ng&#432;&#7901;i &#273;&#7845;y c&#7847;n thay &#273;&#7893;i m&#7853;t kh&#7849;u
+&#273;&#7875; an to&agrave;n h&#417;n.<br>
+<br>
+&nbsp; <span style="font-weight: bold;">&nbsp; &nbsp; Ch&#7885;n m&#7853;t kh&#7849;u</span>:Vi&#7879;c
+chon password t&#7889;t ch&iacute;nh l&agrave; b&#432;&#7899;c &#273;&#7847;u ti&ecirc;n &#273;&#7875; b&#7843;o v&#7879;
+h&#7879; th&#7889;ng c&#7911;a b&#7841;n.M&#7853;t kh&#7845;u kh&ocirc;ng &#273;&#432;&#7907;c d&#7877; d&agrave;ng &#273;o&aacute;n
+ra b&#7903;i v&igrave; &#273;&oacute; ch&iacute;nh l&agrave; c&#417; h&#7897;i &#273;&#7875; n&#7843;y sinh
+nh&#7919;ng v&#7845;n &#273;&#7873; kh&ocirc;ng an to&agrave;n cho h&#7879; th&#7889;ng.&Yacute; t&#432;&#7903;ng c&#7911;a
+vi&#7879;c ch&#7885;n m&#7853;t kh&#7849;u ch&iacute;nh l&agrave; t&#7893;ng h&#7907;p nh&#7919;ng k&iacute; t&#7921;
+m&#7897;t c&aacute;ch ng&#7851;u nhi&ecirc;n bao g&#7891;m c&#7843; ch&#7919; in hoa v&agrave; in
+th&#432;&#7901;ng,s&#7889; .....Theo t&ocirc;i&nbsp; TAB kh&ocirc;ng l&ecirc;n s&#7917;
+d&#7909;ng&nbsp; b&#7903;i v&igrave;&nbsp; khi &#273;&#259;ng nh&#7853;p t&#7915; xa s&#7869; c&oacute; v&#7845;n &#273;&#7873;
+n&oacute; ph&#7909; thu&#7897;c v&agrave;o k&#7871;t c&#7845;u t&#7915;ng h&#7879; th&#7889;ng.<br>
+&nbsp; &nbsp; &nbsp; &nbsp; N&oacute;i chung&nbsp; &#273;&#7915;ng n&ecirc;n ch&#7885;n
+m&#7853;t kh&#7849;u theo &yacute; t&#432;&#7903;ng sau: Ng&agrave;y sinh,nh&#7919;ng c&acirc;u
+chung,nh&#7919;ng c&aacute;i g&igrave; li&ecirc;n quan t&#7899;i b&#7841;n....v&iacute;
+d&#7909; "secure1" l&agrave; m&#7897;t&nbsp; m&#7853;t kh&#7849;u t&#7891;i.<br>
+<br>
+Vi&#7879;c x&oacute;a t&agrave;i kho&#7843;n l&#7841;i l&agrave; m&#7897;t qu&aacute;
+tr&igrave;nh &#273;&#417;n gi&#7843;n.B&#7841;n ch&#7881; c&#7847;n th&#7921;c thi userdel v&agrave; &#273;i&#7873;n
+t&ecirc;n t&agrave;i kho&#7843;n c&#7847;n xo&aacute; v&agrave;o.Nh&#432;ng b&#7841;n ph&#7843;i nh&#7899;
+r&#7857;ng khi &#7845;y t&agrave;i kho&#7843;n n&agrave;y kh&ocirc;ng &#273;&#259;ng nh&#7853;p trong h&#7879;
+th&#7889;ng,kh&ocirc;ng c&oacute; m&#7897;t ti&#7871;n tr&igrave;nh n&agrave;o &#273;&#432;&#7907;c th&#7921;c
+hi&#7879;n b&#7903;i n&oacute;.V&agrave; khi x&oacute;a t&#7913;c l&agrave; n&oacute; s&#7869;
+kh&ocirc;ng c&ograve;n t&#7891;n t&#7841;i tron h&#7879; th&#7889;ng n&#7919;a.<br>
+<br>
+<span style="font-weight: bold;"> #userdel mt</span><br>
+<br>
+H&atilde;y th&#7921;c hi&#7879;n l&#7879;nh n&agrave;y khi b&#7841;n mu&#7889;n x&oacute;a t&agrave;i
+kho&#7843;n "mt" ra kh&#7887;i h&#7879; th&#7889;ng c&#7911;a b&#7841;n.Q&uacute;a tr&igrave;nh nh&#432; sau.L&#7879;nh
+s&#7869; x&oacute;a t&agrave;i kho&#7843;n t&#7915; t&#7879;p tin <span
+ style="font-weight: bold;">/etc/passwd </span>v&agrave; <span
+ style="font-weight: bold;">/etc/group</span> nh&#432;ng kh&ocirc;ng
+x&oacute;a &#273;i catalog home c&#7911;a n&oacute;.N&#7871;u b&#7841;n mu&#7889;n xo&aacute; &#273;i
+catalog home c&#7911;a t&agrave;i kho&#7843;n "mt" th&igrave; c&#7847;n ph&#7843;i l&agrave;m
+nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #userdel -r mt</span><br>
+<br>
+Trong th&#7901;i gian &#273;&igrave;nh ch&#7881; ho&#7841;n &#273;&#7897;ng t&agrave;i kho&#7843;n &#273;&#432;&#7907;c vi&#7871;t
+r&otilde; trong m&#7909;c "Thay &#273;&#7893;i m&#7853;t kh&#7849;u" b&#7903;i v&igrave; &#7903; l&uacute;c
+&#273;&oacute; c&#7847;n ph&#7843;i thay &#273;&#7893;i l&#7841;i m&#7853;t kh&#7849;u t&agrave;i kho&#7843;n.Vi&#7879;c thay &#273;&#7893;i
+th&ocirc;ng tin c&aacute; nh&acirc;n c&#7911;a ng&#432;&#7901;i d&ugrave;ng s&#7869; &#273;&#432;&#7907;c di&#7877;n
+t&#7843; r&otilde; r&agrave;ng &#7903; ph&#7847;n "<span style="font-style: italic;">Thay
+&#273;&#7893;i m&#7853;t kh&#7849;u" v&agrave; "Thay &#273;&#7893;i th&ocirc;ng tin c&aacute; nh&acirc;n
+t&agrave;i kho&#7843;n</span>".<br>
+Ch&#432;&#417;ng tr&igrave;nh t&#7841;o v&agrave; x&oacute;a nh&oacute;m t&agrave;i
+kho&#7843;n r&#7845;t &#273;&#417;n gi&#7843;n groupadd.N&oacute; t&#7841;o ra m&#7897;t nh&oacute;m kh&aacute;c
+trong t&#7879;p tin <span style="font-style: italic;">/etc/group</span> v&#7899;i
+m&#7897;t nh&oacute;m ID ri&ecirc;ng bi&#7879;t.C&ograve;n groupdel th&igrave;
+x&oacute;a &#273;i t&ecirc;n c&#7911;a nh&oacute;m &#273;&atilde; &#273;&#432;&#7907;c t&#7841;o ra.<br>
+<br>
+<span style="font-weight: bold;"> T&#7841;o nh&oacute;m t&agrave;i kho&#7843;n<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> #groupadd cvs</span><br>
+<br>
+v&agrave; x&oacute;a nh&oacute;m t&agrave;i kho&#7843;n<br>
+<br>
+<span style="font-weight: bold;"> #grpoupdel cvs</span><br>
+<br>
+<span style="font-weight: bold;"> Th&#7921;c hi&#7879;n b&#7857;ng tay<br>
+</span><br>
+T&#7845;t nhi&ecirc;n c&oacute; kh&#7843; n&#259;ng b&#7893; sung ho&#7863;c x&oacute;a t&agrave;i
+kho&#7843;n c&#361;ng nh&#432; nh&oacute;m t&agrave;i kho&#7843;n b&#7857;ng tay.Khi m&agrave; b&#7841;n
+&#273;&atilde; l&agrave;m qu&ecirc;n v&#7899;i c&aacute;c h&agrave;m s&#7889;
+th&igrave;&nbsp; b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng c&aacute;c script &#273;&#7875; th&#7921;c
+hi&#7879;n c&aacute;c c&ocirc;ng vi&#7879;c n&agrave;y h&#417;n l&agrave; b&#7857;ng tay.<br>
+&#272;&#7847;u ti&ecirc;n,b&#7841;n b&#7893; sung t&ecirc;n t&agrave;i kho&#7843;n m&#7899;i v&agrave;o
+t&#7879;p tin <span style="font-weight: bold;">/etc/passwd(5),/etc/shadow(5),/etc/group(5)</span>.T&#7879;p
+tin <span style="font-weight: bold;">passwd</span> ch&#7913;a m&#7897;t v&agrave;i
+th&ocirc;ng tin v&#7873; t&agrave;i kho&#7843;n nh&#432;ng kh&ocirc;ng ch&#7913;a m&#7853;t kh&#7849;u.T&#7879;p
+tin n&agrave;y c&#7847;n ph&#7843;i &#273;&#432;&#7907;c c&#7845;p quy&#7873;n h&#7841;n "&#273;&#7885;c" cho t&#7845;t c&#7843; c&aacute;c
+t&agrave;i kho&#7843;n kh&aacute;c,nh&#432;ng b&#7841;n kh&ocirc;ng mu&#7889;n password (th&#7853;m
+ch&iacute; &#273;&atilde; &#273;&#432;&#7907;c m&atilde; ho&aacute;) c&oacute; quy&#7873;n truy
+c&#7853;p cho t&#7845;t c&#7843; m&#7885;i ng&#432;&#7901;i(b&#7903;i v&igrave; &#273;&oacute; s&#7869; l&agrave; m&#7897;t s&#7921;
+gi&uacute;p &#273;&#7905; cho nh&#7919;ng k&#7867; x&#7845;u).Ch&iacute;nh v&igrave; th&#7871; password
+(&#273;&atilde; m&atilde; h&oacute;a) c&#7847;n ph&#7843;i &#273;&#432;&#7907;c l&#432;u v&agrave;o m&#7897;t t&#7879;p
+tin b&#7843;o v&#7879; (shadow)(t&#7879;p tin b&oacute;ng) m&agrave; ch&#7881; c&oacute; quy&#7873;n
+h&#7841;n &#273;&#7885;c &#273;&#7889;i v&#7899;i root.<br>
+C&ograve;n &#7903; file passwd th&igrave; m&#7853;t kh&#7849;u &#273;&#432;&#7907;c bi&#7875;u di&#7877;n nh&#432; "x".T&#7879;p
+tin group hi&#7875;n th&#7883; danh s&aacute;ch t&#7845;t c&#7843; c&aacute;c nh&oacute;m
+v&agrave; quan h&#7879; c&#7911;a t&agrave;i kho&#7843;n v&#7899;i c&aacute;c nh&oacute;m.<br>
+<br>
+Ch&uacute;ng ta h&atilde;y xem t&#7879;p tin /etc/passwd &#273;&#7875; b&#7893; sung
+v&agrave;o th&ecirc;m ai &#273;&oacute;.M&#7897;t d&ograve;ng &#273;&#7841;i di&#7879;n nh&#432;:<br>
+chris:x:1000:100:Chris Lumens,Room 2,,:/home/chris:/bin/bash <br>
+<br>
+M&#7895;i m&#7897;t d&ograve;ng t&#432;&#417;ng &#7913;ng v&#7899;i m&#7897;t t&agrave;i kho&#7843;n.M&#7895;i m&#7897;t
+v&ugrave;ng ph&acirc;n c&aacute;ch nhau b&#7903;i d&#7845;u":".C&aacute;c kho&#7843;ng
+n&agrave;y s&#7855;p s&#7871;p t&#7915; tr&aacute;i sang ph&#7843;i: T&ecirc;n t&agrave;i
+kho&#7843;n,m&#7853;t kh&#7849;u(m&atilde; h&oacute;a k&iacute; hi&#7879;u "x" cho t&#7845;t c&#7843;
+c&aacute;c phi&ecirc;n b&#7843;n Slackware,b&#7903;i v&igrave; ch&uacute;ng
+t&ocirc;i s&#7917; d&#7909;ng file m&#7853;t kh&#7849;u b&oacute;ng),ID t&agrave;i kho&#7843;n,ID
+nh&oacute;m t&agrave;i kho&#7843;n,th&ocirc;ng tin b&#7893; sung v&#7873; t&agrave;i kho&#7843;n
+&#273;&#432;&#7907;c ph&acirc;n bi&#7879;t b&#7857;ng d&#7845;u";",catalog nh&agrave; &#7903;(home),v&agrave; v&#7887;
+l&#7879;nh.B&#7841;n c&#7847;n ph&#7843;i l&agrave;m g&igrave; ,ch&#7881; c&#7847;n b&#7893; sung v&agrave;o cu&#7889;i
+cung c&#7911;a t&#7879;p tin m&#7897;t d&ograve;ng m&agrave; &#273;&atilde; b&#7893; sung t&#7845;t c&#7843;
+c&aacute;c m&#7909;c k&#7875; tr&ecirc;n theo &#273;&uacute;ng th&#7913; t&#7921;.<br>
+<br>
+Ch&uacute; &yacute; l&agrave; m&#7853;t kh&#7849;u x,v&agrave; ID l&agrave;
+ri&ecirc;ng bi&#7879;t v&agrave; ID nh&oacute;m user c&#7911;a Slackware l&agrave;
+"100" v&agrave; ph&#7843;i ch&#7885;n &#273;&uacute;ng v&#7887; l&#7879;nh.<br>
+<br>
+B&acirc;y gi&#7901; b&#7841;n b&#7893; sung th&ecirc;m&nbsp; m&#7897;t d&ograve;ng v&agrave;o
+t&#7879;p tin /etc/shadow m&agrave; ch&#7913;a m&#7853;t kh&#7849;u.N&oacute; c&oacute; d&#7841;ng
+nh&#432; sau:<br>
+chris:$1$w9bsw/N9$UWLr2bRER6YyBS.CAEp7R.:11055:0:99999:7::: <br>
+<br>
+L&#7847;n n&agrave;y c&#361;ng v&#7853;y,t&#7915;ng d&ograve;ng t&#432;&#417;ng &#7913;ng v&#7899;i m&#7897;t t&agrave;i
+kho&#7843;n v&agrave; c&aacute;c v&ugrave;ng ph&acirc;n c&aacute;ch nhau b&#7903;i
+d&acirc;u":".T&ecirc;n t&agrave;i kho&#7843;n,m&#7853;t kh&#7849;u m&atilde; ho&aacute;,s&#7889;
+ng&agrave;y t&#7915; ng&agrave;y c&#7911;a m&#7897;t k&#7881; nguy&ecirc;n(1 th&aacute;ng 1
+1970) t&#7899;i ng&agrave;y,khi n&agrave;o m&#7853;t kh&#7849;u thay &#273;&#7893;i l&#7847;n cu&#7889;i,s&#7889;
+ng&agrave;y m&agrave; sau &#273;&oacute; m&#7853;t kh&#7849;u c&oacute; th&#7875; thay &#273;&#7893;i,s&#7889;
+ng&agrave;y m&agrave; sau &#273;&oacute; m&#7853;t kh&#7849;u c&#7847;n ph&#7843;i thay &#273;&#7893;i,s&#7889;
+ng&agrave;y tr&#432;&#7899;c khi t&agrave;i kho&#7843;n b&#7883; &#273;&oacute;ng,s&#7889; ng&agrave;y
+m&agrave; t&agrave;i kho&#7843;n nh&#7853;n &#273;&#432;&#7907;c th&ocirc;ng b&aacute;o v&#7873;
+&#273;&igrave;nh ch&#7881; ho&#7841;t &#273;&#7897;ng,s&#7889; ng&agrave;y m&agrave; sau &#273;&oacute;
+t&agrave;i kho&#7843;n b&#7883; kho&aacute; ho&agrave;n to&agrave;n,s&#7889; ng&agrave;y
+t&iacute;nh t&#7915; k&#7881; nguy&ecirc;n khi t&agrave;i kho&#7843;n b&#7883; &#273;&oacute;ng
+v&agrave; th&#7921;c hi&#7879;n l&#432;u tr&#7919;.<br>
+<br>
+Nh&#432; b&#7841;n &#273;&atilde; th&#7845;y &#273;&oacute; l&agrave; nh&#7919;ng th&ocirc;ng tin
+ch&iacute;nh v&#7873; qu&aacute; tr&igrave;nh kho&aacute; t&agrave;i kho&#7843;n.N&#7871;u
+b&#7841;n kh&ocirc;ng s&#7917; d&#7909;ng nh&#7919;ng th&ocirc;ng tin n&agrave;y th&igrave; b&#7841;n
+ch&#7881; c&#7847;n nh&#7899; m&#7897;t v&agrave;i t&#7915; nh&#7919;ng v&ugrave;ng ch&iacute;nh c&oacute;
+gi&aacute; tr&#7883; &#273;&#7863;c bi&#7879;t.Ng&#432;&#7907;c l&#7841;i b&#7841;n s&#7869; ph&#7843;i th&#7921;c hi&#7879;n l&#7841;i t&#7915; &#273;&#7847;u m&#7897;t
+v&agrave;i qu&aacute; tr&igrave;nh cho &#273;&#7871;n khi b&#7841;n nh&#7899; h&#7871;t c&aacute;c
+khu v&#7921;c n&agrave;y.C&ograve;n &#273;&#7889;i v&#7899;i t&agrave;i kho&#7843;n m&#7899;i th&igrave;
+b&#7841;n ch&#7881; c&#7847;n ghi c&aacute;i g&igrave; &#273;&#7845;y v&agrave;o v&ugrave;ng m&#7853;t
+kh&#7849;u.&#272;&#7915;ng c&oacute; s&#7907; &#273;&oacute; kh&ocirc;ng h&#7859;n l&agrave; m&#7853;t kh&#7849;u ngay
+&#273;&acirc;u b&#7903;i v&igrave; ch&uacute;ng ta s&#7869; thay &#273;&#7893;i n&oacute; ngay
+b&acirc;y gi&#7901;.&#7902; trong v&ugrave;ng m&#7853;t kh&#7849;u b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng b&#7845;t
+k&igrave; k&iacute; t&#7921; n&agrave;o (ch&uacute; &yacute; tr&#7915; d&#7845;u
+":").C&ograve;n s&#7889; ng&agrave;y t&#7915; ng&agrave;y thay &#273;&#7893;i m&#7853;t kh&#7849;u b&#7841;n &#273;&#7875;
+tr&#7889;ng,&#273;i&#7873;n ph&#7847;n ti&#7871;p theo 0,9999 v&agrave; 7 gi&#7889;ng nh&#432; v&iacute; d&#7909;
+tr&ecirc;n c&aacute;c v&ugrave;ng c&ograve;n l&#7841;i &#273;&#7875; tr&#7889;ng.<br>
+<br>
+&#272;&#7889;i v&#7899;i nh&#7919;ng ng&#432;&#7901;i trong c&aacute;c b&#7841;n nh&igrave;n th&#7845;y m&#7853;t kh&#7849;u c&#7911;a
+t&ocirc;i &#7903; trong v&iacute; d&#7909; tr&ecirc;n m&agrave; ngh&#297; c&oacute; th&#7875;
+gi&#7843;i m&atilde; &#273;&#432;&#7907;c m&#7853;t kh&#7849;u th&igrave; xin h&atilde;y c&#7913; l&agrave;m.B&#7841;n
+h&atilde;y nh&#7899; r&#7857;ng m&#7853;t kh&#7849;u &#273;&#432;&#7907;c b&#7843;o v&#7879; b&#7903;i firewall(n&oacute; s&#7869;
+gi&uacute;p &#273;&#7905; b&#7841;n).<br>
+<br>
+B&#7903;i v&igrave; t&#7845;t c&#7843; c&aacute;c t&agrave;i kho&#7843;n theo m&#7863;c &#273;&#7883;nh thu&#7897;c
+nh&oacute;m user cho n&ecirc;n b&#7841;n kh&ocirc;ng c&#7847;n ph&#7843;i b&#7893; sung
+n&oacute; v&agrave;o nh&oacute;m user.N&#7871;u nh&#432; b&#7841;n th&iacute;ch t&#7841;o m&#7897;t
+nh&oacute;m m&#7899;i ho&#7863;c b&#7893; sung v&agrave;o c&aacute;c nh&oacute;m
+t&agrave;i kho&#7843;n kh&aacute;c th&igrave; b&#7841;n c&#7847;n ph&#7843;i so&#7841;n th&#7843;o l&#7841;i
+/etc/group<br>
+cvs::102:chris,logan,david,root <br>
+V&ugrave;ng: t&ecirc;n nh&oacute;m,m&#7853;t kh&#7849;u nh&oacute;m,ID nh&oacute;m
+v&agrave; th&agrave;nh ph&#7847;n c&#7911;a nh&oacute;m.Vi&#7879;c t&#7841;o m&#7897;t nh&oacute;m m&#7899;i
+th&#7921;c ra l&agrave; b&#7893; sung m&#7897;t d&ograve;ng v&agrave;o t&#7879;p tin v&#7899;i ID
+ri&ecirc;ng c&ugrave;ng v&#7899;i danh s&aacute;ch t&agrave;i kho&#7843;n m&agrave;
+b&#7841;n mu&#7889;n b&#7893; sung v&agrave;o nh&oacute;m.N&#7871;u nh&#432; t&agrave;i kho&#7843;n &#7903; th&#7901;i
+&#273;i&#7875;m hi&#7879;n t&#7841;i &#273;ang &#273;&#259;ng nh&#7853;p th&igrave; c&#7847;n ph&#7843;i tho&aacute;t ra
+v&agrave; &#273;&#259;ng nh&#7853;p l&#7841;i &#273;&#7875; nh&#7919;ng bi&#7871;n &#273;&#7893;i c&oacute; hi&#7879;u qu&#7843;.<br>
+<br>
+B&acirc;y gi&#7901; ch&uacute;ng ta quay tr&#7903; l&#7841;i l&#7879;nh <span
+ style="font-weight: bold;">passwd</span> &#273;&#7875; t&#7841;o m&#7853;t kh&#7849;u cho t&agrave;i
+kho&#7843;n m&#7899;i sau &#273;&oacute; m&#7899;i d&ugrave;ng <span style="font-weight: bold;">mkdir</span>
+&#273;&#7875; t&#7841;o catalog nh&agrave; &#7903; cho t&agrave;i kho&#7843;n m&agrave; ch&uacute;ng
+ta &#273;&atilde; ch&#7881; ra trong /etc/passwd<br>
+N&#7871;u nh&#432; b&#7841;n c&agrave;i &#273;&#7863;t sendmail(8) th&igrave; b&#7841;n c&#7847;n ph&#7843;i t&#7841;o
+th&ecirc;m m&#7897;t t&#7879;p tin t&#432;&#417;ng &#7913;ng thu&#7897;c t&agrave;i kho&#7843;n &#273;&oacute; &#7903;
+/var/spool/mail nh&#432; v&iacute; d&#7909; sau:<br>
+<br>
+<span style="font-weight: bold;"> #touch /var/spool/mail/mt</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> #chown jellyd.users /var/spool/mail/mt</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> #chmod 660 /var/spool/mail/mt</span><br
+ style="font-weight: bold;">
+<br>
+Nh&#7919;ng l&#7879;nh n&agrave;y l&acirc;n l&#432;&#7907;t t&#7841;o c&aacute;c t&#7879;p tin th&#432; &#273;i&#7879;n
+t&#7917;(mail spool) cho t&agrave;i kho&#7843;n "mt" v&agrave; thi&#7871;t l&#7853;p &#273;&uacute;ng
+quy&#7873;n h&#7841;n s&#7917; d&#7909;ng cho file<br>
+&#272;&#7875; xo&aacute; t&agrave;i kho&#7843;n th&igrave; &#273;&#417;n gi&#7843;n l&agrave; x&oacute;a
+&#273;i to&agrave;n b&#7897; nh&#7919;ng g&igrave; m&agrave; b&#7841;n t&#7841;o ra.X&oacute;a
+th&ocirc;ng tin c&oacute; li&ecirc;n quan t&#7899;i t&agrave;i kho&#7843;n &#7903; trong <span
+ style="font-weight: bold;">/etc/passwd v&agrave; /etc/group</span>.Xo&aacute;
+&#273;i t&ecirc;n t&agrave;i kho&#7843;n t&#7915; t&#7845;t c&#7843; c&aacute;c nh&oacute;m &#7903; trong <span
+ style="font-weight: bold;">/etc/group</span>,x&oacute;a &#273;i h&#7871;t th&#432; c&#7911;a
+t&agrave;i kho&#7843;n n&ecirc;u nh&#432; c&oacute; v&agrave; &#273;&#7915;ng qu&ecirc;n
+x&oacute;a &#273;i catalog nh&agrave; &#7903; c&#7911;a n&oacute;(n&#7871;u nh&#432; th&#7845;y c&#7847;n
+thi&#7871;t).<br>
+<br>
+Vi&#7879;c xo&aacute; nh&oacute;m t&agrave;i kho&#7843;n c&oacute; v&#7867; d&#7877;
+r&agrave;ng h&#417;n.&#272;&#417;n gi&#7843;n ch&#7881; c&#7847;n x&oacute;a &#273;i d&ograve;ng nh&oacute;m
+t&#7915; <span style="font-weight: bold;">/etc/group</span><br>
+<br>
+<span style="font-weight: bold;"> Thay &#273;&#7893;i m&#7853;t kh&#7849;u<br>
+</span><br>
+Ch&#432;&#417;ng tr&igrave;nh <span style="font-weight: bold;">passwd </span>cho
+ph&eacute;p thay &#273;&#7893;i m&#7853;t kh&#7849;u v&agrave; l&#432;u l&#7841;i trong /etc/shadow.T&#7879;p
+tin n&agrave;y ch&#7913;a t&#7845;t c&#7843; m&#7853;t kh&#7849;u c&#7911;a h&#7879; th&#7889;ng &#7903; d&#7841;ng m&atilde;
+ho&aacute;.&#272;&#7875; thay &#273;&#7893;i m&#7853;t kh&#7849;u c&#7911;a b&#7841;n c&#7847;n l&agrave;m nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $passwd chirs</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Old password:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> Enter the new password (minumum of 5,
+maximum of 127 characters)</span><br style="font-style: italic;">
+<span style="font-style: italic;"> Please use a combination of upper and
+lower case letters and numbers.</span><br style="font-style: italic;">
+<span style="font-style: italic;"> New password: </span><br>
+<br>
+Nh&#432; b&#7841;n &#273;&atilde; nh&igrave;n th&#7845;y &#273;&#7847;u ti&ecirc;n h&#7879; th&#7889;ng h&#7887;i b&#7841;n m&#7853;t
+kh&#7849;u c&#361;.Sau &#273;&oacute; b&#7841;n c&#7847;n nh&#7853;p v&agrave;o m&#7853;t kh&#7849;u m&#7899;i.Passwd th&#7921;c
+hi&#7879;n nhi&#7873;u q&uacute;a tr&igrave;nh ki&#7875;m tra m&#7853;t kh&#7849;u c&#7911;a b&#7841;n v&agrave;
+nh&#7855;c nh&#7903; b&#7841;n n&#7871;u nh&#432; b&#7841;n c&oacute; m&#7853;t kh&#7849;u kh&ocirc;ng t&#7889;t.B&#7841;n
+c&oacute; th&#7875; kh&ocirc;ng c&#7847;n quan t&acirc;m &#273;&#7871;n th&ocirc;ng b&aacute;o
+&#273;&#7845;y(n&#7871;u nh&#432; c&oacute;).Sau &#273;&oacute; b&#7841;n c&#7847;n l&#7853;p l&#7841;i m&#7853;t kh&#7849;u m&#7897;t l&#7847;n
+n&#7919;a &#273;&#7875; kh&#7859;ng &#273;&#7883;nh.<br>
+<br>
+<span style="font-weight: bold;"> # passwd ted<br>
+</span><br>
+B&#7841;n c&#7847;n ph&#7843;i l&#7853;p l&#7841;i qu&aacute; tr&igrave;nh tr&ecirc;n nh&#432;ng m&agrave;
+l&#7841;i kh&ocirc;ng c&#7847;n nh&#7853;p v&agrave;o m&#7853;t kh&#7849;u c&#361; c&#7911;a t&agrave;i
+kho&#7843;n(&#273;&oacute; l&agrave; m&#7897;t trong c&aacute;c quy&#7873;n l&#7907;i c&#7911;a root).<br>
+<br>
+<span style="font-weight: bold;"> # passwd -l david<br>
+</span><br>
+Thay &#273;&#7893;i m&#7853;t kh&#7849;u david b&#7903;i v&igrave; kh&ocirc;ng th&#7875; m&atilde;
+h&oacute;a.&#272;&#7875; cho t&agrave;i kho&#7843;n ho&#7841;t &#273;&#7897;ng l&#7841;i c&#7847;n th&#7921;c hi&#7879;n:<br>
+<br>
+<span style="font-weight: bold;"> # passwd -u david<br>
+</span><br>
+B&acirc;y gi&#7901; david(b&#7883; kh&oacute;a) l&#7841;i b&#7855;t &#273;&#7847;u ho&#7841;t &#273;&#7897;ng l&#7841;i nh&#432;
+tr&#432;&#7899;c.Vi&#7879;c &#273;&igrave;nh ch&#7881; ho&#7841;t &#273;&#7897;ng c&oacute; th&#7875; c&oacute; l&#7907;i n&#7871;u nh&#432;
+t&agrave;i kho&#7843;n s&#7917; d&#7909;ng kh&ocirc;ng &#273;&uacute;ng quy&#7873;n h&#7841;n c&#7911;a
+m&igrave;nh tr&ecirc;n h&#7879; th&#7889;ng ho&#7863;c xu&#7845;t &#273;i qu&aacute;&nbsp; nhi&#7873;u b&#7843;n
+sao xeyes(1) v&agrave;o m&ocirc;i tr&#432;&#7901;ng X c&#7911;a b&#7841;n.<br>
+<br>
+<span style="font-weight: bold;"> Thay &#273;&#7893;i th&ocirc;ng tin t&agrave;i
+kho&#7843;n<br>
+</span><br>
+Ng&#432;&#7901;i s&#7917; d&#7909;ng c&oacute; th&#7875; thay &#273;&#7893;i m&ocirc;i tr&#432;&#7901;ng v&#7887; l&#7879;nh c&#7911;a
+m&igrave;nh c&#361;ng nh&#432; nh&#7919;ng th&ocirc;ng tin c&aacute; nh&acirc;n
+finger.Trong Slackware Linux s&#7917; d&#7909;ng &#7913;ng d&#7909;ng chsh(change shell -thay
+&#273;&#7893;i v&#7887; l&#7879;nh) v&agrave; chfn(change finger-thay &#273;&#7893;i finger).<br>
+<br>
+Ng&#432;&#7901;i s&#7917; d&#7909;ng c&oacute; th&#7875; ch&#7885;n b&#7845;t c&#7913; m&#7897;t v&#7887; l&#7879;nh n&agrave;o &#273;&#432;&#7907;c
+li&#7879;t k&ecirc; trong /etc/shell. Bash &#273;&#432;&#7907;c coi l&agrave; ph&#7893;
+bi&#7871;n.C&oacute; nh&#7919;ng ng&#432;&#7901;i th&iacute;ch l&agrave;m vi&#7879;c v&#7899;i v&#7887; l&#7879;nh
+trong c&aacute;c phi&ecirc;n b&#7843;n Unix truy&#7873;n th&#7889;ng.Vi&#7879;c ch&#7885;n v&#7887; l&#7879;nh
+c&oacute; th&#7875; th&#7921;c hi&#7879;n v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; chsh:<br>
+<br>
+<span style="font-weight: bold;"> $chsh</span><br>
+Password:<br>
+Changing the login shell for chris<br>
+Enter the new value, or press return for the default<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Login Shell [/bin/bash]: <br>
+<br>
+Sau khi nh&#7853;p v&agrave;o m&#7853;t kh&#7849;u th&igrave; b&#7841;n h&atilde;y nh&#7853;p
+v&agrave;o &#273;&#432;&#7901;ng d&#7851;n t&#7899;i v&#7887; l&#7879;nh m&#7899;i.Ch&uacute; &yacute; n&oacute; &#273;&#432;&#7907;c
+li&#7879;t k&ecirc; trong /etc/shell(5).T&agrave;i kho&#7843;n root c&oacute; th&#7875;
+thay &#273;&#7893;i m&ocirc;i tr&#432;&#7901;ng v&#7887; l&#7879;nh c&#7911;a&nbsp; c&aacute;c t&agrave;i kho&#7843;n
+kh&aacute;c.<br>
+finger -th&ocirc;ng tin c&aacute; nh&acirc;n c&oacute; th&#7875; kh&ocirc;ng
+b&#7855;t bu&#7897;c.N&oacute; ch&#7913;a nh&#7919;ng v&ugrave;ng nh&#432; t&ecirc;n ,s&#7889; &#273;i&#7879;n
+tho&#7841;i,v&#259;n ph&ograve;ng l&agrave;m vi&#7879;c.B&#7841;n c&oacute; th&#7875; thay &#273;&#7893;i khi s&#7917;
+d&#7909;ng chfn c&#361;ng nh&#432; khi b&#7883; kh&oacute;a.V&agrave; t&#7845;t nhi&ecirc;n root
+c&oacute; quy&#7873;n thay &#273;&#7893;i <span style="font-weight: bold;">finger</span>
+th&ocirc;ng tin c&#7911;a t&#7845;t c&#7843; c&aacute;c t&agrave;i kho&#7843;n.<br>
+<br>
+</a><a name="ch_5.5.2"><span style="font-weight: bold;">5.5.2 T&#7855;t
+m&aacute;y an to&agrave;n<br>
+</span><br>
+T&#7855;t m&aacute;y &#273;&uacute;ng c&aacute;ch c&#361;ng l&agrave; r&#7845;t quan
+tr&#7885;ng.Vi&#7879;c ng&#7855;t ngu&#7891;n &#273;i&#7879;n t&#7841;m th&#7901;i c&oacute; th&#7875; d&#7851;n &#273;&#7871;n th&#7843;m h&#7885;a cho
+h&#7879; th&#7889;ng.Khi m&agrave; m&aacute;y t&iacute;nh &#273;ang ch&#7841;y(th&#7853;m ch&iacute;
+khi&nbsp; b&#7841;n kh&ocirc;ng l&agrave;m g&igrave; c&#7843;)th&igrave; m&#7897;t
+v&agrave;i t&#7879;p tin v&#7851;n ch&#7841;y.H&atilde;y nh&#7899; r&#7857;ng ph&ocirc;ng n&#7873;n
+m&agrave;n h&igrave;nh c&#7911;a b&#7841;n c&#361;ng &#273;&#432;&#7907;c th&#7921;c hi&#7879;n b&#7903;i m&#7897;t ti&#7871;n
+tr&igrave;nh n&agrave;o &#273;&oacute;.C&aacute;c ti&#7871;n tr&igrave;nh
+n&agrave;y &#273;i&#7873;u khi&#7875;n h&#7879; th&#7889;ng v&agrave; c&aacute;c t&#7879;p tin kh&aacute;c
+trong su&#7889;t th&#7901;i gian n&agrave;y.N&#7871;u b&#7841;n ch&#7881; &#273;&#417;n gi&#7843;n t&#7855;t m&aacute;y
+th&igrave; c&oacute; th&#7875; l&agrave;m cho c&aacute;c t&#7879;p tin n&agrave;y
+kh&ocirc;ng &#273;&#432;&#7907;c &#273;&oacute;ng &#273;&uacute;ng c&aacute;ch v&agrave;
+ch&igrave;nh v&igrave; th&#7871; r&#7845;t l&agrave; h&#7841;i.Ph&#7909; thu&#7897;c v&agrave;o m&#7913;c &#273;&#7897;
+t&#7893;n h&#7841;i c&#7911;a c&aacute;c t&#7879;p tin n&agrave;y m&agrave; l&agrave;m cho h&#7879;
+th&#7889;ng b&#7883; h&#432; h&#7841;i.Trong b&#7845;t c&#7913; tr&#432;&#7901;ng h&#7907;p n&agrave;o b&#7841;n c&#361;ng s&#7869; ph&#7881;a tr&#7843;i
+qua m&#7897;t qu&aacute; tr&igrave;nh d&agrave;i &#273;&#7875; ki&#7875;m tra l&#7841;i h&#7879; th&#7889;ng &#7903;
+l&#7847;n kh&#7903;i &#273;&#7897;ng sau.<br>
+<br>
+Ch&iacute;nh v&igrave; th&#7871; n&ecirc;u b&#7841;n &#273;&#7883;nh kh&#7903;i &#273;&#7897;ng,t&#7855;t m&aacute;y
+th&igrave; c&#7847;n ph&#7843;i l&agrave;m &#273;&uacute;ng theo c&aacute;c ti&ecirc;u
+chu&#7849;n b&#7903;i v&igrave; n&oacute; r&#7845;t l&agrave; quan tr&#7885;ng.C&oacute; r&#7845;t
+nhi&#7873;u con &#273;&#432;&#7901;ng &#273;&#7875; l&agrave;m &#273;i&#7873;u &#273;&oacute; tuy nhi&ecirc;n b&#7841;n
+c&oacute; th&#7875; chon c&aacute;i n&agrave;o m&agrave; b&#7841;n th&iacute;ch.H&#7847;u
+nh&#432; t&#7845;t c&#7843; &#273;&#7873;u ch&#7885;n c&aacute;ch t&#7855;t m&aacute;y t&iacute;nh th&ocirc;ng
+qua kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y t&iacute;nh.<br>
+Ph&#432;&#417;ng &aacute;n th&ocirc;ng th&#432;&#7901;ng l&agrave; <span
+ style="font-weight: bold;">shutdown<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> # shutdown -h now<br>
+</span><br>
+Trong tr&#432;&#7901;ng h&#7907;p n&agrave;y ch&uacute;ng ta kh&ocirc;ng g&#7917;i &#273;i
+th&ocirc;ng b&aacute;o cho t&#7845;t c&#7843; c&aacute;c t&agrave;i kho&#7843;n
+kh&aacute;c .H&#7885; s&#7869; nh&igrave;n th&#7845;y th&ocirc;ng b&aacute;o t&#7915;
+tr&igrave;nh&nbsp; shutdown."now" ch&iacute;nh l&agrave; th&#7901;i gian khi
+b&#7841;n mu&#7889;n t&#7855;t m&aacute;y,c&ograve;n "-h" ch&iacute;nh l&agrave;&nbsp;
+halt(d&#7915;ng l&#7841;i).Nh&#432;ng &#273;&oacute; kh&ocirc;ng l&agrave; ph&#432;&#417;ng ph&aacute;p
+t&#7889;i &#432;u cho vi&#7879;c t&#7855;t m&aacute;y t&iacute;nh(&#273;&#7863;c bi&#7879;t v&#7899;i h&#7879; th&#7889;ng nhi&#7873;u
+t&agrave;i kho&#7843;n),c&ograve;n &#273;&#7889;i v&#7899;i m&aacute;y c&aacute; nh&acirc;n
+th&igrave; n&oacute; l&agrave; &#273;&#7911; r&#7891;i.T&#7889;i &#432;u h&#417;n &#273;&#7889;i v&#7899;i c&aacute;c h&#7879;
+th&#7889;ng nhi&#7873;u t&agrave;i kho&#7843;n l&agrave;:<br>
+<br>
+<span style="font-weight: bold;"> #shutdown -h +60</span><br>
+<br>
+L&#7879;nh n&agrave;y s&#7869; t&#7855;t m&aacute;y sau 60 ph&uacute;t.N&oacute;
+l&agrave; b&igrave;nh th&#432;&#7901;ng &#273;&#7889;i v&#7899;i c&aacute;c h&#7879; th&#7889;ng l&#7899;n.Th&#7853;m
+ch&iacute; nh&#7919;ng h&#7879; th&#7889;ng quan tr&#7885;ng c&ograve;n c&oacute; th&#7901;i gian bi&#7875;u
+t&#7855;t m&aacute;y,kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y &#7903; /etc/motd(5).<br>
+&#272;&#7875; kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879; th&#7889;ng th&igrave; v&#7851;n dung l&#7879;nh &#273;&#7845;y nh&#432;ng thay
+v&igrave; "-h" l&agrave; "-r".<br>
+<br>
+<span style="font-weight: bold;"> #shutdown -r now<br>
+</span><br>
+B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng th&#7901;i gian cho shutdown -r nh&#432; trong shutdown
+-h. Tuy nhi&ecirc;n c&oacute; nhi&#7873;u c&ocirc;ng vi&#7879;c kh&aacute;c
+m&agrave; b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng shutdown &#273;&#7875; ki&#7875;m so&aacute;t khi
+n&agrave;o l&agrave; t&#7855;t h&#7879; th&#7889;ng,khi n&agrave;o kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879;
+th&#7889;ng.&#272;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin h&atilde;y xem &#7903; trang man
+c&#7911;a n&oacute;.<br>
+Ph&#432;&#417;ng ph&aacute;p th&#7913; hai &#273;&#7875; t&#7855;t,kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879; th&#7889;ng l&agrave; s&#7917;
+d&#7909;ng halt(8) v&agrave; reboot(8).hatl kh&ocirc;ng ch&#7853;m ch&#7877; t&#7855;t ngay h&#7879;
+th&#7889;ng c&ograve;n reboot th&igrave; ch&#7881; l&agrave; &#7843;nh c&#7911;a halt.Th&#7921;c hi&#7879;n
+ch&uacute;ng nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #halt</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> #reboot</span><br
+ style="font-weight: bold;">
+<br>
+M&#7897;t m&#7913;c &#273;&#7897; th&#7845;t h&#417;n &#273;&#7875; kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879; th&#7889;ng l&agrave; th&ocirc;ng
+b&aacute;o tr&#7921;c ti&#7871;p cho init.T&#7845;t c&#7843; c&aacute;c ph&#432;&#417;ng ph&aacute;p
+tr&ecirc;n th&#7921;c ch&#7845;t l&agrave; c&aacute;c c&aacute;ch th&ocirc;ng
+b&aacute;o kh&aacute;c nhau cho init nh&#432;ng b&#7841;n c&oacute; th&#7875; th&ocirc;ng
+b&aacute;o tr&#7921;c ti&#7871;t cho init b&#7857;ng ti&#7879;n &iacute;ch telinit(8)(ch&uacute;
+&yacute; trong t&ecirc;n l&#7879;nh ch&#7881; c&oacute; m&#7897;t ch&#7919; "l").S&#7917; d&#7909;ng telinit
+&#273;&#7875; th&ocirc;ng b&aacute;o cho init chuy&#7875;n t&#7899;i t&#7847;ng th&#7921;c thi
+n&agrave;o(runlevel) v&agrave; th&#7921;c hi&#7879;n v&agrave;i tr&ograve; c&#7911;a
+m&igrave;nh ,ch&#7841;yc&aacute;c script &#273;&#7863;c bi&#7879;t.Nh&#7919;ng script n&agrave;y s&#7869;
+ti&ecirc;u di&#7879;t ho&#7863;c v&ocirc; hi&#7879;u ho&aacute; c&aacute;c ti&#7871;n
+tr&igrave;nh th&iacute;ch &#7913;ng v&#7899;i t&#7847;ng th&#7921;c thi &#273;&atilde; ch&#7885;n.&#272;i&#7873;u
+&#273;&oacute; c&oacute; th&#7875; s&#7917; d&#7909;ng &#273;&#7875; t&#7855;t h&#7879; th&#7889;ng ho&#7863;c kh&#7903;i &#273;&#7897;ng l&#7841;i b&#7903;i
+v&igrave; ch&uacute;ng &#273;&#432;&#7907;c x&aacute;c &#273;&#7883;nh &#7903; nh&#7919;ng t&#7847;ng th&#7921;c thi
+kh&aacute;c nhau.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> #telinit 0<br>
+</span><br>
+T&#7847;ng th&#7921;c thi 0 - &#273;&#7845;y l&agrave; ch&#7871; &#273;&#7897; t&#7855;t h&#7879; th&#7889;ng.Th&ocirc;ng
+b&aacute;o cho init &#273;i v&agrave; ch&#7871; &#273;&#7897; 0,ch&uacute;ng ta &eacute;p
+n&oacute; ti&ecirc;u di&#7879;t h&#7871;t t&#7845;t c&#7843; c&aacute;c ti&#7871;n tr&igrave;nh
+kh&aacute;c,ng&#7855;t li&ecirc;n k&#7871;t v&#7899;i c&aacute;c t&#7879;p tin h&#7879; th&#7889;ng
+v&agrave; h&#7879; th&#7889;ng d&#7915;ng l&#7841;i.N&oacute; kh&aacute;c v&#7899;i ph&#432;&#417;ng ph&aacute;p
+t&#7855;t m&aacute;y.Tr&ecirc;n c&aacute;c m&aacute;y laptop th&igrave;
+n&oacute; c&oacute; th&#7875; t&#7855;t &#273;i ngu&#7891;n &#273;i&#7879;n.<br>
+<br>
+<span style="font-weight: bold;"> #telinit 6<br>
+</span><br>
+T&#7847;ng th&#7921;c thi 6 - &#273;&#7845;y l&agrave; ch&#7871; &#273;&#7897; kh&#7903;i &#273;&#7897;ng l&#7841;i h&#7879; th&#7889;ng.T&#7845;t c&#7843;
+c&aacute;c ti&#7871;n tr&igrave;nh s&#7869; b&#7883; ti&ecirc;u di&#7879;t,c&aacute;c t&#7879;p tin h&#7879;
+th&#7889;ng s&#7869; unmount v&agrave; h&#7879; th&#7889;ng kh&#7903;i &#273;&#7897;ng lai.&#272;&#7845;y l&agrave; m&#7897;t
+ph&#432;&#417;ng ph&aacute;p &#273;&uacute;ng nh&#7845;t.<br>
+<br>
+V&#7851;n c&ograve;n c&oacute;&nbsp; m&#7897;t ph&#432;&#417;ng ph&aacute;p kh&#7903;i&nbsp; &#273;&#7897;ng
+m&aacute;y t&iacute;nh.Ph&#432;&#417;ng ph&aacute;p n&agrave;y ch&#7881; th&#7921;c hi&#7879;n b&#7903;i
+root.C&oacute; l&#7869; ch&#7881; d&ugrave;ng &#273;&#7875; kh&#7903;i &#273;&#7897;ng l&#7841;i,n&#7871;u nh&#432; b&#7841;n
+kh&ocirc;ng l&agrave; root m&agrave; khi b&#7841;n l&#7841;i c&oacute; quy&#7873;n s&#7917; s&#7909;ng
+b&agrave;n ph&iacute;m .Vi&#7879;c th&#7921;c hi&#7879;n t&#7893; h&#7907;p ph&iacute;m <span
+ style="font-weight: bold;">Ctrl+Alt+Delete</span> s&#7869; nhanh ch&oacute;ng
+kh&#7903;i &#273;&#7897;ng l&#7841;i m&aacute;y t&iacute;nh.Th&#7921;c t&#7871; b&#7841;n &#273;&atilde; s&#7917; d&#7909;ng &#7913;ng
+d&#7909;ng ctraltdel(8) trong <span style="font-weight: bold;">/usr/bin</span>.C&ograve;n
+n&#7871;u nh&#432; ch&uacute;ng kh&ocirc;ng t&#7891;n t&#7841;i ho&#7863;c kh&ocirc;ng c&oacute;
+c&aacute;c quy&#7873;n h&#7841;n l&#7841; th&igrave; vi&#7879;c s&#7917; d&#7909;ng t&#7893; h&#7907;p ph&iacute;m s&#7869;
+kh&ocirc;ng d&#7851;n &#273;&#7871;n h&#7853;u qu&#7843; gi &#273;&#432;&#7907;c.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.5.2"></a><a
+ href="index.html"><span style="font-weight: bold;">M&#7909;c L&#7909;c</span></a><br>
+<a name="ch_5.5.2"></a></div>
+<a name="ch_5.5.2"> </a>
+<hr>Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian<br>
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

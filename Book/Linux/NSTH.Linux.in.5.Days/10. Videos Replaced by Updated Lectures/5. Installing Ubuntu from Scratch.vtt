@@ -1,0 +1,520 @@
+WEBVTT
+
+1
+00:00:00.000 --> 00:00:09.505
+[MUSIC]
+
+2
+00:00:09.505 --> 00:00:15.377
+Today's video will show you how to install
+virtualization software that will allow
+
+3
+00:00:15.377 --> 00:00:20.760
+you to install guest operating systems and
+also how to install Ubuntu Linux.
+
+4
+00:00:23.630 --> 00:00:29.700
+To get started,
+let's go to virtualbox.org.
+
+5
+00:00:29.700 --> 00:00:31.300
+And click on Downloads.
+
+6
+00:00:31.300 --> 00:00:34.049
+This is the virtualization software
+that we're going to be using.
+
+7
+00:00:36.376 --> 00:00:41.292
+And then you select your platform,
+in this case I'm using Windows as
+
+8
+00:00:41.292 --> 00:00:46.120
+my host operating system and so
+I would click this link here.
+
+9
+00:00:46.120 --> 00:00:52.500
+You could also install VirtualBox
+on Linux, on Mac, or even Solaris.
+
+10
+00:00:52.500 --> 00:00:53.990
+I've already downloaded this.
+
+11
+00:00:53.990 --> 00:00:59.960
+So I'm going to just pull it up right
+now and then double-click to run it.
+
+12
+00:01:02.020 --> 00:01:03.835
+And I'm just going to accept the defaults.
+
+13
+00:01:03.835 --> 00:01:10.970
+Click Next Next again.
+
+14
+00:01:10.970 --> 00:01:11.596
+That looks fine,
+
+15
+00:01:24.234 --> 00:01:26.845
+Go in to click Install and
+do the same thing for
+
+16
+00:01:26.845 --> 00:01:29.262
+all the messages like this in the future.
+
+17
+00:01:46.593 --> 00:01:48.564
+Click Finish to complete the installation.
+
+18
+00:01:53.298 --> 00:01:54.965
+And then we'll restart later.
+
+19
+00:01:56.260 --> 00:02:01.490
+So the next piece of software we need
+to install Ubuntu is Ubuntu itself.
+
+20
+00:02:01.490 --> 00:02:08.690
+So we'll go to ubuntu.com,
+find the download link.
+
+21
+00:02:10.900 --> 00:02:13.710
+And then here we have a couple
+of different options.
+
+22
+00:02:13.710 --> 00:02:17.960
+The primary options are Ubuntu Desktop and
+Ubuntu Server.
+
+23
+00:02:17.960 --> 00:02:21.980
+The primary difference between Desktop and
+Server is that the desktop
+
+24
+00:02:21.980 --> 00:02:27.410
+edition provides a graphical user
+environment, whereas the server does not.
+
+25
+00:02:27.410 --> 00:02:32.370
+Ubuntu Server is best for things like
+web servers or database servers or
+
+26
+00:02:32.370 --> 00:02:34.010
+file servers.
+
+27
+00:02:34.010 --> 00:02:37.470
+It's going to be an installation of the
+operating system where you don't sit down
+
+28
+00:02:37.470 --> 00:02:41.140
+in front of it and use graphical programs.
+
+29
+00:02:41.140 --> 00:02:43.970
+Ubuntu Desktop, however, is for just that.
+
+30
+00:02:50.330 --> 00:02:54.910
+So I will click Download Ubuntu,
+and take the default 64-bit.
+
+31
+00:02:54.910 --> 00:02:58.250
+I've already done this
+to save us some time.
+
+32
+00:02:58.250 --> 00:03:00.840
+So I'll just close
+the web browser here and
+
+33
+00:03:00.840 --> 00:03:02.620
+you can see that I've downloaded Ubuntu.
+
+34
+00:03:02.620 --> 00:03:05.501
+I'll go ahead and start VirtualBox.
+
+35
+00:03:08.224 --> 00:03:11.244
+And create a new container or
+virtual machine for
+
+36
+00:03:11.244 --> 00:03:14.050
+our Ubuntu operating system installation.
+
+37
+00:03:15.930 --> 00:03:18.330
+We can see here that is asks for
+three bits of information.
+
+38
+00:03:18.330 --> 00:03:21.460
+The Name, the Type and the Version.
+
+39
+00:03:21.460 --> 00:03:27.180
+So, I'm going to name it ubuntudesktop.
+
+40
+00:03:27.180 --> 00:03:30.590
+And then as I type that in there it
+automatically selected Linux as the type
+
+41
+00:03:30.590 --> 00:03:32.360
+and Ubuntu as the version.
+
+42
+00:03:32.360 --> 00:03:35.207
+If it didn't you can simply
+use the drop down boxes and
+
+43
+00:03:35.207 --> 00:03:37.050
+select whatever is appropriate.
+
+44
+00:03:40.605 --> 00:03:45.300
+The minimum amount of RAM
+recommended is 512 megabytes.
+
+45
+00:03:45.300 --> 00:03:46.840
+I have plenty to use here,
+
+46
+00:03:46.840 --> 00:03:51.400
+so I'm gonna dedicate about half my
+resources to this virtual machine.
+
+47
+00:03:51.400 --> 00:03:55.185
+So I'll use 4096 megabytes or
+four gigabytes.
+
+48
+00:03:57.883 --> 00:04:00.010
+Next, we need to create
+a virtual hard drive.
+
+49
+00:04:01.560 --> 00:04:06.790
+Click on Create, and
+the default of VDI is fine.
+
+50
+00:04:06.790 --> 00:04:09.788
+Especially if you're not going
+to be using this disk image with
+
+51
+00:04:09.788 --> 00:04:11.439
+other virtualization software.
+
+52
+00:04:14.862 --> 00:04:16.420
+You have two choices here.
+
+53
+00:04:16.420 --> 00:04:20.990
+One is dynamically allocated and
+the other is fixed size.
+
+54
+00:04:20.990 --> 00:04:24.340
+If your primary concern is
+about preserving disk space or
+
+55
+00:04:24.340 --> 00:04:29.060
+using as little disk space as possible,
+choose Dynamically Allocated.
+
+56
+00:04:29.060 --> 00:04:32.520
+However if you're looking for
+performance use Fixed Size.
+
+57
+00:04:36.513 --> 00:04:37.840
+That's a fine name.
+
+58
+00:04:37.840 --> 00:04:42.750
+I will specify 100 gigabytes for
+my hard drive,
+
+59
+00:04:42.750 --> 00:04:45.480
+although eight gigabytes is
+sufficient to install Ubuntu too.
+
+60
+00:04:46.710 --> 00:04:48.170
+I like having some additional space.
+
+61
+00:04:51.471 --> 00:04:53.310
+So now we have our virtual machine.
+
+62
+00:04:54.560 --> 00:04:57.080
+Next, we need to install Ubuntu.
+
+63
+00:04:57.080 --> 00:05:00.680
+Lets power on the virtual
+machine to install Ubuntu.
+
+64
+00:05:00.680 --> 00:05:05.910
+Click Start or you can even right-click
+and click Start there, either one is fine.
+
+65
+00:05:08.130 --> 00:05:11.590
+And now it will ask us for
+the Ubuntu image that we downloaded.
+
+66
+00:05:14.440 --> 00:05:18.723
+I'll select where I downloaded it
+on my computer and click Start.
+
+67
+00:05:44.384 --> 00:05:45.795
+We have two options here.
+
+68
+00:05:45.795 --> 00:05:49.955
+One is Try Ubuntu and
+the second one is Install Ubuntu.
+
+69
+00:05:49.955 --> 00:05:54.995
+Try Ubuntu simply runs the operating
+system in memory and lets you try it out.
+
+70
+00:05:54.995 --> 00:05:58.415
+However, Install Ubuntu actually
+writes to your hard disk.
+
+71
+00:05:58.415 --> 00:06:01.965
+In this case it's going to write to the
+virtual hard disk in the virtual machine,
+
+72
+00:06:01.965 --> 00:06:04.880
+so we're not gonna lose any data,
+for example,
+
+73
+00:06:04.880 --> 00:06:06.780
+override our current operating system.
+
+74
+00:06:06.780 --> 00:06:08.880
+So, that's what we're going to do here,
+Install.
+
+75
+00:06:10.930 --> 00:06:13.520
+I'm going to click Continue and
+accept the defaults here, but
+
+76
+00:06:13.520 --> 00:06:18.390
+you can install third party software that
+allows you to play mp3's, for example.
+
+77
+00:06:18.390 --> 00:06:22.910
+And you could also download any patches or
+bug fixes or other updates for
+
+78
+00:06:22.910 --> 00:06:27.010
+the Ubuntu operating system by clicking
+Download updates while installing.
+
+79
+00:06:28.880 --> 00:06:29.811
+I'll click Continue.
+
+80
+00:06:32.506 --> 00:06:34.820
+And I'm going to just erase this disk.
+
+81
+00:06:34.820 --> 00:06:36.716
+Again, it's a virtual disk
+that we just created.
+
+82
+00:06:44.508 --> 00:06:47.080
+And then you can click on the map for
+your time zone.
+
+83
+00:06:47.080 --> 00:06:48.549
+I'm just gonna leave it at Chicago.
+
+84
+00:06:53.476 --> 00:06:55.305
+And you can choose your keyboard here.
+
+85
+00:07:06.469 --> 00:07:08.700
+And just fill out your
+account information.
+
+86
+00:07:10.770 --> 00:07:11.590
+And click Continue.
+
+87
+00:07:18.300 --> 00:07:20.790
+The installation will take
+several minutes to complete.
+
+88
+00:07:20.790 --> 00:07:23.240
+So I'm just going to fast
+forward from this point on.
+
+89
+00:07:24.650 --> 00:07:28.760
+Once the installation completes, your job
+is done if you're running on physical
+
+90
+00:07:28.760 --> 00:07:32.850
+hardware such as a desktop,
+a laptop, or a server.
+
+91
+00:07:32.850 --> 00:07:34.780
+However, since we're
+using a virtual machine,
+
+92
+00:07:34.780 --> 00:07:37.030
+we need to perform one additional step.
+
+93
+00:07:37.030 --> 00:07:40.990
+And that additional step is to
+install some software that helps
+
+94
+00:07:40.990 --> 00:07:44.760
+Linux understand the virtual
+hardware that it's working with.
+
+95
+00:07:44.760 --> 00:07:48.505
+And that piece of software is called
+Guest Additions in VirtualBox.
+
+96
+00:07:54.092 --> 00:07:58.190
+Now that the installation is finished,
+I'm going to power on the virtual machine.
+
+97
+00:07:58.190 --> 00:08:02.341
+You can highlight it and click Start,
+or right-click and click Start.
+
+98
+00:08:26.976 --> 00:08:31.547
+Going to log in with a password
+that I used during installation.
+
+99
+00:08:38.344 --> 00:08:41.274
+And next, since this is a virtual machine,
+
+100
+00:08:41.274 --> 00:08:46.511
+we need to insert the Guest Addition CD
+image and install the Guest Additions.
+
+101
+00:08:54.506 --> 00:09:00.680
+Then, we'll click Run And
+it will ask for our password again.
+
+102
+00:09:01.960 --> 00:09:04.811
+So we'll type that in and
+click Authenticate.
+
+103
+00:09:08.539 --> 00:09:11.648
+And we'll let
+the VirtualBox Guest Additions install.
+
+104
+00:09:21.126 --> 00:09:22.250
+Okay, that's complete.
+
+105
+00:09:22.250 --> 00:09:25.080
+We'll just hit Return or press Enter.
+
+106
+00:09:26.552 --> 00:09:29.680
+And then now I'm going to
+restart this virtual machine,
+
+107
+00:09:29.680 --> 00:09:32.709
+so we can use the Guest Additions.
+
+108
+00:09:35.930 --> 00:09:36.922
+And I'll click Restart.
+
+109
+00:09:57.534 --> 00:10:00.094
+Going to log in again with my account.
+
+110
+00:10:07.388 --> 00:10:09.030
+And there that's so much better though.
+
+111
+00:10:09.030 --> 00:10:14.725
+Graphics are filling up my display and
+Ubuntu is installed.
+
+112
+00:10:14.725 --> 00:10:24.059
+[MUSIC]
+

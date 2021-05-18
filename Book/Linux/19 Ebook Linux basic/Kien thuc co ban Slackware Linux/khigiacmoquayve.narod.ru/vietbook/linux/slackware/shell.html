@@ -1,0 +1,408 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/shell.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>shell</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <big style="font-weight: bold;"> Ch&#432;&#417;ng 5 S&#7917; d&#7909;ng Slackware Linux<br>
+</big><br>
+<a name="ch_5.1"><span style="font-weight: bold;">5.1 Shell(v&#7887;)<br>
+</span><br>
+Trong m&ocirc;i tr&#432;&#7901;ng &#273;&#7891; h&#7885;a th&igrave; interface ch&iacute;nh
+l&agrave; c&aacute;c ch&#432;&#417;ng tr&igrave;nh m&agrave; v&#7869; l&ecirc;n
+c&aacute;c c&#7917; s&#7893;,&#273;&#432;&#7901;ng th&#7859;ng,menu...Trong m&ocirc;i tr&#432;&#7901;ng c&acirc;u
+l&#7879;nh(d&ograve;ng l&#7879;nh) th&igrave; interface l&agrave; v&#7887;(shell)
+v&agrave; d&ugrave;ng &#273;&#7875; l&agrave;m s&aacute;ng t&#7887; c&aacute;c c&acirc;u
+l&#7879;nh.Ngay sau khi t&agrave;i kho&#7843;n &#273;&#259;ng nh&#7853;p th&igrave; s&#7869; &#273;i v&agrave;o
+shell ngay l&#7853;p t&#7913;c.B&#7841;n c&oacute; th&#7875; l&agrave;m vi&#7879;c &#7903; &#273;&#7845;y.Trong ph&#7847;n
+n&agrave;y ch&#7881; gi&#7899;i thi&#7879;u chung v&#7873; shell v&agrave; nh&#7919;ng th&ocirc;ng tin
+c&#7847;n thi&#7871;t v&#7873; m&ocirc;i tr&#432;&#7901;ng <span style="font-weight: bold;">bash</span>(Bourne
+Again Shell)- &#273;&#432;&#7907;c s&#7917; d&#7909;ng ph&#7893; bi&#7871;n trong th&#7871; gi&#7899;i Linux.&#272;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin h&atilde;y s&#7917; d&#7909;ng man c&#7911;a <span
+ style="font-weight: bold;">bash(1)</span>.<br>
+<br>
+</a><a name="ch_5.1.1"><span style="font-weight: bold;">5.1.1
+T&agrave;i kho&#7843;n s&#7917; d&#7909;ng<br>
+</span><br>
+<span style="font-weight: bold;"> &#272;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng</span><br>
+<br>
+Sau khi h&#7879; th&#7889;ng ho&agrave;n th&agrave;nh q&uacute;a tr&igrave;nh kh&#7903;i
+&#273;&#7897;ng.Tr&#432;&#7899;c m&#7863;t b&#7841;n s&#7869; hi&#7879;n ra nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> Welcome to Linux 2.2.14</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> darkstar login:&nbsp; </span><br>
+<br>
+uhm..kh&ocirc;ng c&oacute; ai n&oacute;i cho t&ocirc;i bi&#7871;t v&#7873; login?
+C&ograve;n darkstar l&agrave; gi?B&#7841;n kh&ocirc;ng ph&#7843;i lo l&#7855;ng.Darkstar
+ch&#7881; l&agrave; t&ecirc;n c&#7911;a m&aacute;y t&iacute;nh theo ng&#7847;m &#273;&#7883;nh.N&#7871;u
+nh&#432; trong q&uacute;a tr&igrave;nh c&agrave;i &#273;&#7863;t h&#7879; th&#7889;ng m&agrave; thay
+&#273;&#7893;i t&ecirc;n m&aacute;y t&iacute;nh th&igrave; khi &#273;&oacute; m&agrave;n
+h&igrave;nh login s&#7869; nh&#432; sau:<br>
+<br>
+<span style="font-style: italic;"> Welcome to Linux 2.2.14</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> &lt;t&ecirc;n m&agrave; thay &#273;&#7893;i&gt;
+login: </span><br style="font-style: italic;">
+<br>
+N&#7871;u nh&#432; b&#7841;n &#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng l&#7847;n &#273;&#7847;u ti&ecirc;n th&igrave;
+b&#7841;n c&#7847;n &#273;&#259;ng nh&#7853;p v&agrave;o b&#7857;ng root.H&#7879; th&#7889;ng h&#7887;i b&#7841;n password.N&#7871;u b&#7841;n
+thay &#273;&#7893;i n&oacute; trong q&uacute;a tr&igrave;nh c&agrave;i &#273;&#7863;t
+th&igrave; h&atilde;y nh&#7853;p v&agrave;o c&ograve;n kh&ocirc;ng th&igrave;
+ch&#7881; nh&#7845;n Enter l&agrave; &#273;&#432;&#7907;c.<br>
+<br>
+<span style="font-weight: bold;"> Root - superuser</span><br>
+<br>
+Nh&#432; v&#7853;y root l&agrave; g&igrave;?C&oacute; vai tr&ograve; g&igrave;
+trong h&#7879; th&#7889;ng.<br>
+C&oacute; th&#7875; n&oacute;i trong th&#7871; gi&#7899;i Unix v&agrave; c&aacute;c h&#7879;
+th&#7889;ng t&#432;&#417;ng t&#7921;(Linux) th&igrave; root l&agrave; t&agrave;i kho&#7843;n
+ch&iacute;nh c&#7911;a h&#7879; th&#7889;ng.N&oacute; c&oacute; &#273;&#7847;y &#273;&#7911; c&aacute;c quy&#7873;n
+h&#7841;n tr&ecirc;n h&#7879; th&#7889;ng.S&#7869; l&agrave; t&#7889;t nh&#7845;t n&#7871;u b&#7841;n l&agrave; root.<br>
+&#272;&oacute; c&oacute; &#273;&uacute;ng l&agrave; r&#7845;t tuy&#7879;t v&#7901;i.B&#7841;n c&#7847;n ph&#7843;i
+bi&#7871;t r&#7857;ng root c&oacute; th&#7875; ph&aacute; h&#7887;ng h&#7871;t m&#7885;i th&#7913; n&#7871;u mu&#7889;n.B&#7841;n
+c&oacute; th&#7875; xem ph&#7847;n "H&#7879; th&#7889;ng Administrator" &#273;&#7875; xem c&aacute;c quy&#7873;n
+h&#7841;n c&#7911;a root(b&#7893; sung t&agrave;i kho&#7843;n s&#7917; d&#7909;ng,&#273;&#259;ng nh&#7853;p c&aacute;c
+root...).M&#7897;t c&acirc;u n&oacute;i th&ocirc;ng minh th&#7871; n&agrave;y:S&#7917;
+d&#7909;ng root ch&#7881; khi n&agrave;o &#273;i&#7873;u &#273;&oacute; th&#7853;t c&#7847;n thi&#7871;t &#273;&#7875; s&#7917;a ch&#7919;a
+l&#7841;i h&#7879; th&#7889;ng.<br>
+<br>
+N&#7871;u b&#7841;n &#273;&#259;ng nh&#7853;p v&agrave;o h&#7879; th&#7889;ng nh&#432; c&aacute;c t&agrave;i kho&#7843;n
+th&ocirc;ng th&#432;&#7901;ng m&agrave; b&#7841;n mu&#7889;n th&#7921;c hi&#7879;n c&aacute;c l&#7879;nh nh&#7917; root
+th&igrave; h&atilde;y s&#7917; d&#7909;ng su(1).B&#7841;n c&#7847;n ph&#7843;i nh&#7853;p v&agrave;o m&#7853;t
+kh&#7849;u root.B&#7841;n tr&#7903; th&agrave;nh root cho &#273;&#7871;n khi k&#7871;t th&uacute;c
+c&ocirc;ng vi&#7879;c v&agrave; tho&aacute;t ra.Khi s&#7917; d&#7909;ng su b&#7841;n c&oacute;
+th&#7875; tr&#7903; th&agrave;nh b&#7845;t c&#7913; t&agrave;i kho&#7843;n n&agrave;o n&#7871;u b&#7841;n bi&#7871;t m&#7853;t
+kh&#7849;u c&#7911;a n&oacute;.V&iacute; d&#7909;: su logan...<br>
+<br>
+</a><a name="ch_5.1.2"><span style="font-weight: bold;">5.1.2 V&#7887; l&#7879;nh<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> &nbsp; Ch&#7841;y c&aacute;c ch&#432;&#417;ng
+tr&igrave;nh<br>
+</span><br>
+Th&#7853;t l&agrave; kh&oacute; c&oacute; th&#7875; l&agrave;m vi&#7879;c g&igrave;
+m&agrave; kh&ocirc;ng ph&#7843;i ch&#7841;y m&#7897;t ch&#432;&#417;ng tr&igrave;nh b&agrave;o
+c&#7843;.V&agrave; &#273;&#7915;ng qu&ecirc;n l&agrave; trong Linux t&#7845;t c&#7843; m&#7885;i th&#7913; &#273;&#7873;u
+l&agrave; c&aacute;c t&#7853;p tin.&#272;&#7889;i v&#7899;i c&aacute;c ch&#432;&#417;ng tr&igrave;nh c&#361;ng
+v&#7853;y.M&#7895;i m&#7897;t l&#7879;nh m&agrave; b&#7841;n th&#7921;c hi&#7879;n(n&#7871;u nh&#432; kh&ocirc;ng thu&#7897;c
+shell) s&#7869; t&#432;&#417;ng &#7913;ng v&#7899;i m&#7897;t t&#7853;p tin.B&#7841;n c&oacute; th&#7875; ch&#7841;y c&aacute;c
+ch&#432;&#417;ng tr&igrave;nh nh&#432;ng ph&#7843;i ch&#7881; r&otilde; &#273;&#7847;y &#273;&#7911; &#273;&#432;&#7901;ng d&#7851;n t&#7899;i
+n&oacute;.<br>
+<br>
+V&iacute; d&#7909; nh&#432; <span style="font-weight: bold;">su</span>?Th&#7921;c t&#7871;
+n&oacute; l&agrave; m&#7897;t t&#7879;p tin thu&#7897;c catalog <span
+ style="font-weight: bold;">/bin</span>.&#272;&#7875; g&#7885;i n&oacute; h&atilde;y
+th&#7921;c hi&#7879;n <span style="font-weight: bold;">/bin/su</span><br>
+Nh&#432;ng t&#7841;i sao ch&#7881; c&#7847;n su l&agrave; &#273;&#432;&#7907;c m&agrave; kh&ocirc;ng c&#7847;n ph&#7843;i
+ch&#7881; ra h&#7859;n /bin/su.T&#7841;i sao m&aacute;y t&iacute;nh l&#7841;i bi&#7871;t &#273;&#7875; th&#7921;c
+hi&ecirc;n...C&acirc;u tr&#7843; l&#7901;i l&agrave; bi&#7871;n PATH;H&#7847;u nh&#432; shell
+c&oacute; bi&#7871;n PATH ho&#7863;c l&agrave; m&#7897;t c&aacute;i g&igrave; &#273;&oacute;
+t&#432;&#417;ng t&#7921;.Trong &#273;&oacute; ch&#7913;a danh s&aacute;ch c&aacute;c catalog
+m&agrave; d&ugrave;ng &#273;&#7875; t&igrave;m c&aacute;c ch&#432;&#417;ng tr&igrave;nh khi
+b&#7841;n nh&#7853;p v&agrave;o.Ch&iacute;nh v&igrave; th&#7871; khi m&agrave; b&#7841;n ch&#7841;y su
+th&#7921;c ra l&agrave; shell &#273;&atilde; t&igrave;m ki&#7871;m su trong c&aacute;c
+catalog cho b&#7841;n,v&agrave; khi t&igrave;m th&#7845;y s&#7869; th&#7921;c thi
+n&oacute;.C&oacute; tr&#432;&#7901;ng h&#7907;p khi m&agrave; b&#7841;n ch&#7841;y ch&#432;&#417;ng
+tr&igrave;nh nh&#432;ng l&#7841;i nh&#7853;n &#273;&#432;&#7907;c th&ocirc;ng b&aacute;o "Command not
+found".&#272;i&#7873;u &#273;&oacute; c&oacute; ngh&#297;a l&agrave; ch&#432;&#417;ng tr&igrave;nh
+m&agrave; b&#7841;n &#273;&#7883;nh t&igrave;m kh&ocirc;ng c&oacute; trong c&aacute;c
+catalog li&#7879;t k&ecirc; trong PATH(N&oacute; c&oacute; ngh&#297;a l&agrave;
+ch&#432;&#417;ng tr&igrave;nh kh&ocirc;ng t&#7891;n t&#7841;i..).Ch&uacute;ng ta s&#7869; b&agrave;n
+lu&#7853;n v&#7873; PATH chi ti&#7871;t h&#417;n &#7903; <span style="font-weight: bold;">bash</span>.<br>
+<br>
+<span style="font-weight: bold;"> Wildcard Matching </span><br>
+<br>
+Th&#7921;c t&#7871; th&#7845;y r&#7857;ng m&#7885;i shell &#273;&#7873;u cho ph&eacute;p s&#7917; d&#7909;ng m&#7897;t v&agrave;i
+k&iacute; hi&#7879;u thay th&#7871;,"&#7903; &#273;&acirc;y c&oacute; th&#7875; b&#7845;t k&igrave;".Nh&#7919;ng
+k&iacute; hi&#7879;u n&agrave;y g&#7885;i l&agrave; "<span style="font-weight: bold;">wildcards</span>".<br>
+<br>
+Ph&#7893; bi&#7871;n trong ch&uacute;ng l&agrave; "*" v&agrave; "?".K&iacute; hi&#7879;u
+"?" c&oacute; th&#7875; thay th&#7871; b&#7845;t k&igrave; m&#7897;t k&iacute; hi&#7879;u
+n&agrave;o.Ch&#7859;ng h&#7841;n b&#7841;n c&oacute; catalog trong &#273;&oacute; c&oacute;:<span
+ style="font-weight: bold;">example1.txt,example2.txt,v&agrave;
+example3.txt</span>.B&#7841;n mu&#7889;n sao ch&eacute;p t&#7845;t c&#7843; nh&#7919;ng t&#7853;p tin
+n&agrave;y b&#7857;ng ch&#432;&#417;ng tr&igrave;nh cp v&agrave;o catalog /tmp<br>
+H&atilde;y th&#7921;c hi&ecirc;n nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> cp example1.txt example2.txt
+example3.txt /tmp</span><br>
+<br>
+&#272;i&#7873;u n&agrave;y s&#7869; th&#7921;c s&#7921; l&agrave; qu&aacute; nhi&#7873;u &#273;&#7875; ghi h&#7871;t
+c&acirc;u l&#7879;nh.C&oacute; l&#7869; &#273;&#417;ng gi&#7843;n h&#417;n<br>
+<br>
+<span style="font-weight: bold;"> cp example?.txt /tmp</span><br>
+<br>
+Khi &#7845;y "?" s&#7869; thay th&#7871; l&#7847;n l&#432;&#7907;t l&agrave; "1","2","3".Tuy nhi&ecirc;n
+v&#7851;n r&#7845;t l&agrave; nhi&#7873;u.Th&#7853;t l&agrave; kinh kh&#7911;ng n&#7871;u s&#7889; l&#432;&#7907;ng ph&#7843;i thay
+th&#7871; l&agrave; qu&aacute; l&#7899;n.Tuy nhi&ecirc;n b&#7841;n v&#7851;n c&oacute; th&#7875;
+tho&aacute;t kh&#7887;i n&oacute; b&#7857;ng k&iacute; hi&#7879;u "*".<br>
+<br>
+C&oacute; l&#7869; ph&#7843;i n&oacute;i th&ecirc;m "*" s&#7869; t&#7921; thay th&#7871; t&#7845;t c&#7843;
+c&aacute;c k&iacute; hi&#7879;u kh&ocirc;ng c&oacute; m&#7863;t.N&#7871;u nh&#432; tr&#432;&#7901;ng h&#7907;p
+b&#7841;n s&#7917; d&#7909;ng "*"&nbsp; thay th&#7871; cho t&#7845;t c&#7843; th&igrave; n&oacute; s&#7869; l&#7845;y
+h&#7871;t nh&#7919;ng g&igrave; n&oacute; g&#7863;p.<br>
+<br>
+Ch&#7859;ng h&#7841;n b&#7841;n c&oacute; example.txt v&agrave; hejaz.txt v&agrave;
+ch&uacute;ng ta mu&#7889;n sao ch&eacute;p example.txt c&ograve;n hejaz.txt &#273;&#7875;
+l&#7841;i.<br>
+<span style="font-weight: bold;"> cp example*.txt /tmp</span> s&#7869;
+gi&uacute;p b&#7841;n l&agrave;m &#273;i&#7873;u n&agrave;y.Nh&#432;ng c&ograve;n:<br>
+<br>
+<span style="font-weight: bold;"> cp example?.txt /tmp<br>
+</span><br>
+T&#7845;t nhi&ecirc;n c&#361;ng s&#7869; l&agrave;m vi&#7879;c nh&#432;ng ch&#7881; v&#7899;i ba t&#7853;p tin
+example1.txt example2.txt example3.txt&nbsp; m&agrave; th&ocirc;i
+c&ograve;n example.txt(m&agrave; c&#7847;n sao ch&eacute;p) th&igrave;
+n&oacute; b&#7887; l&#7841;i.Hic..b&#7841;n ngh&#297; th&#7871; n&agrave;o?<br>
+<br>
+<span style="font-weight: bold;"> &#272;&#7883;nh h&#432;&#7899;ng l&#7841;i v&agrave;o/ra v&agrave;
+piping</span><br>
+<br>
+(C&oacute; c&agrave;i g&igrave; &#273;&oacute; r&#7845;t h&#7845;p d&#7851;n &#7903; &#273;&acirc;y)<br>
+<span style="font-weight: bold;"> $ ps &gt; blargh<br>
+</span><br>
+&#272;i&#7873;u &#273;&oacute; c&oacute; ngh&#297;a l&agrave; g&igrave;.T&ocirc;i th&#7921;c
+hi&ecirc;n ps &#273;&#7875; xem c&oacute; nh&#7919;ng ti&#7871;n tr&igrave;nh n&agrave;o &#273;ang
+ho&#7841;t &#273;&#7897;ng(xem ph&#7847;n qu&#7843;n l&yacute; c&aacute;c ti&#7871;n tr&igrave;nh).Tuy
+nhi&ecirc;n &#273;&oacute; kh&ocirc;ng ph&#7843;i l&agrave; &#273;i&#7873;u ch&iacute;nh
+m&agrave; h&atilde;y &#273;&#7875; &yacute; &#273;&#7871;n&nbsp; "&gt; blargh".&Yacute; ngh&#297;a
+c&#7911;a n&oacute; ch&iacute;nh l&agrave; th&#7921;c hi&#7879;n ps v&agrave; ghi n&#7897;i dung
+thu &#273;&#432;&#7907;c l&ecirc;n t&#7853;p tin blargh.Tuy nhi&ecirc;n h&atilde;y ch&#7901; nhi&#7873;u
+&#273;i&#7873;u th&uacute; v&#7883; h&#417;n.<br>
+<br>
+<span style="font-weight: bold;"> $ ps | less<br>
+</span><br>
+C&oacute; ngh&#297;a l&agrave; th&#7921;c hi&#7879;n ps v&agrave; bi&#7875;u di&#7877;n qua less<br>
+<span style="font-weight: bold;"> $ ps &gt;&gt; blargh<br>
+</span><br>
+N&oacute; th&#7921;c hi&ecirc;n gi&#7889;ng nh&#432;&nbsp; ps &gt; blargh tuy
+nhi&ecirc;n b&#7893; sung v&agrave;o t&#7853;p tin blargh(c&oacute; s&#7861;n) n&#7897;i dung
+thu &#273;&#432;&#7907;c t&#7841;i th&#7901;i &#273;i&#7875;m hi&#7879;n t&#7841;i.,c&ograve;n n&#7871;u nh&#432; blargh kh&ocirc;ng
+t&#7891;n t&#7841;i thi n&oacute; ho&agrave;n to&agrave;n nh&#432; ps &gt; blargh.<br>
+(Ch&uacute; &yacute;:"&gt;" c&oacute; ngh&#297;a l&agrave; ghi n&#7897;i dung vao
+blargh c&ograve;n "&lt;" c&oacute; ngh&#297;a l&agrave; n&#7897;i dung &#273;&#432;&#7907;c l&#7845;y t&#7915;
+ngu&#7891;n sau &#273;&acirc;y.)<br>
+<br>
+<span style="font-weight: bold;"> $ fromdos &lt; dosfile.txt &gt;
+unixfile.txt<br>
+</span><br>
+Vi&#7879;c k&#7871;t h&#7907;p c&aacute;c to&aacute;n t&#7917; s&#7869; l&agrave;m cho qu&aacute;
+tr&igrave;nh &#273;&#7883;nh h&#432;&#7899;ng v&agrave;o/ra ch&#7903; l&ecirc;n hi&#7879;u qu&#7843; h&#417;n.<br>
+<br>
+<span style="font-weight: bold;"> $ ps | tac &gt;&gt; blargh<br>
+</span><br>
+L&uacute;c n&agrave;y ps s&#7869; th&#7921;c hi&#7879;n v&agrave; s&#7855;p s&#7871;p lai c&aacute;c
+d&ograve;ng thu &#273;&#432;&#7907;c &#273;&#7891;ng th&#7901;i ghi v&agrave;o t&#7853;p tin blargh.<br>
+B&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng t&#7893; h&#7907;p c&aacute;c l&#7879;nh tu&#7923; &yacute; nh&#432;ng
+ch&uacute; &yacute; l&agrave; ch&uacute;ng &#273;&#432;&#7907;c th&#7875; hi&#7879;n t&#7915; tr&aacute;i
+sang ph&#7843;i.<br>
+<br>
+</a><a name="ch_5.1.3"><span style="font-weight: bold;">5.1.3 The
+Bourne Again Shell (bash)</span><br>
+<span style="font-weight: bold;"> M&ocirc;i tr&#432;&#7901;ng bi&#7871;n s&#7889;</span><br>
+<br>
+H&#7879; th&#7889;ng Linux nh&#432; l&agrave; m&#7897;t cu&#7897;c th&#7917; th&aacute;ch.C&oacute; nhi&#7873;u
+th&#7913; m&agrave; c&#7847;n ph&#7843;i quan s&aacute;t,nhi&#7873;u chi ti&#7871;t nh&#7887; tham gia
+v&agrave;o nh&#7919;ng ho&#7841;t &#273;&#7897;ng th&ocirc;ng th&#432;&#7901;ng c&#7911;a b&#7841;n v&#7899;i nh&#7919;ng ch&#432;&#417;ng
+tr&igrave;nh kh&aacute;c nhau(m&#7897;t trong s&#7889; ch&uacute;ng th&#7853;m ch&iacute;
+b&#7841;n kh&ocirc;ng bi&#7871;t r&otilde;).Kh&ocirc;ng ai mu&#7889;n ch&#7881; ra qu&aacute;
+nhi&#7873;u tham bi&#7871;n &#273;&#7889;i v&#7899;i ch&#432;&#417;ng tr&igrave;nh,ch&#7881; ra d&#7841;ng terminal
+n&agrave;o m&agrave; s&#7869; s&#7917; d&#7909;ng,t&ecirc;n host m&aacute;y t&iacute;nh,..<br>
+<br>
+B&#7903;i v&igrave; nh&#432; li&ecirc;n k&#7871;t c&#417; h&#7885;c,c&aacute;c t&agrave;i kho&#7843;n
+nh&#7853;n &#273;&#432;&#7907;c nh&#7919;ng th&#7913; g&#7885;i l&agrave; environment(Bao quanh).M&ocirc;i
+tr&#432;&#7901;ng n&agrave;y x&aacute;c &#273;&#7883;nh &#273;i&#7873;u ki&#7879;n m&agrave; c&aacute;c ch&#432;&#417;ng
+tr&igrave;nh s&#7869; th&#7921;c hi&#7879;n trong &#273;&oacute;.M&#7897;t v&agrave;i &#273;i&#7873;u ki&ecirc;n
+coi l&agrave; tam th&#7901;i.T&agrave;i kho&#7843;n c&oacute; th&#7875; thay &#273;&#7893;i v&agrave;
+s&#7917; d&#7909;ng n&oacute; cho m&#7909;c &#273;&iacute;ch c&#7911;a m&igrave;nh.<br>
+<br>
+Th&#7921;c t&#7871; cho th&#7845;y,m&#7895;i shell c&oacute; m&#7897;t m&ocirc;i tr&#432;&ograve;ng bi&#7871;n
+s&#7889; (n&#7871;u nh&#432; kh&ocirc;ng th&igrave; c&oacute; l&#7869; l&agrave; m&#7897;t shell r&#7845;t
+l&agrave; t&#7889;t).&#7902; &#273;&acirc;y ch&uacute;ng ta s&#7869; &#273;&#432;a ra c&aacute;c l&#7879;nh s&#7917;
+d&#7909;ng trong bash &#273;&#7875; l&agrave;m r&otilde; v&#7899;i m&ocirc;i tr&#432;&#7901;ng bi&#7871;n s&#7889;:<br>
+<br>
+<span style="font-weight: bold;"> $ set<br>
+</span><br>
+B&#7843;n th&acirc;n c&#7911;a set s&#7869; hi&#7875;n th&#7883; t&#7845;t c&#7843; c&aacute;c m&ocirc;i tr&#432;&#7901;ng
+bi&#7871;n s&#7889; c&ugrave;ng v&#7899;i c&aacute;c gi&aacute; tr&#7883; c&#7911;a n&oacute; t&#7841;i
+th&#7901;i &#273;i&#7875;m t&#7841;m th&#7901;i.Gi&#7889;ng nh&#432; c&aacute;c l&#7879;nh kh&aacute;c trong bash,set
+c&#361;ng &#273;&#432;&#7907;c s&#7917; d&#7909;ng trong c&aacute;cm&#7909;c &#273;&iacute;ch
+kh&aacute;c.Ch&uacute;ng ta kh&ocirc;ng &#273;i s&acirc;u h&#417;n b&#7903;i v&igrave;
+c&aacute;c th&ocirc;ng tin &#273;&oacute; c&oacute; &#7903; tr&#7885;ng man c&#7911;a bash.<br>
+H&atilde;y ch&#7841;y set v&agrave; tr&ecirc;n m&agrave;n h&igrave;nh s&#7869; nh&#432;
+sau:<br>
+<br>
+<span style="font-style: italic;">
+PATH=/usr/local/lib/qt/bin:/usr/local/bin:/usr/bin:/bin:/usr/X11R6/bin:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+/usr/openwin/bin:/usr/games:.:/usr/local/ssh2/bin:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /usr/local/ssh1/bin:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+/usr/share/texmf/bin:/usr/local/sbin:/usr/sbin:/home/logan/bin</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PIPESTATUS=([0]="0")</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PPID=4978</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PS1='\h:\w~$ '</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PS2='&gt; '</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PS4='+ '</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> PWD=/home/logan</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> QTDIR=/usr/local/lib/qt</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> REMOTEHOST=ninja.tdn</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> SHELL=/bin/bash<br>
+</span><br>
+Ch&uacute; &yacute; r&#7857;ng,tr&ecirc;n PATH t&#7841;m th&#7901;i m&agrave;
+ch&uacute;ng ta &#273;&atilde; n&oacute;i &#7903; tr&ecirc;n,ch&uacute;ng ta
+c&oacute; th&#7875; th&#7921;c hi&ecirc;n m&#7885;i ch&#432;&#417;ng tr&igrave;nh thu&#7897;c catalog
+&#273;&atilde; nh&#7899;.&#272;&#417;n gi&#7843;n ch&#7881; c&#7847;n ch&#7881; ra t&ecirc;n c&#7911;a ch&#432;&#417;ng
+tr&igrave;nh(kh&ocirc;ng c&#7847;n &#273;&#432;&#7901;ng d&#7851;n).<br>
+<br>
+<span style="font-weight: bold;"> $ unset VARIABLE</span><br>
+<br>
+N&oacute; s&#7869; xo&aacute; &#273;i n&#7897;i dung &#273;&#432;&#7907;c ch&#7881; ra trong l&#7879;nh v&agrave; c&#7843;
+bi&#7871;n,bash s&#7869; qu&ecirc;n r&#7857;ng c&aacute;i bi&#7871;n &#273;&#7845;y &#273;&atilde; t&#7891;n t&#7915;ng t&#7841;i.<br>
+<br>
+<span style="font-weight: bold;"> $ export VARIABLE=some_value<br>
+</span><br>
+B&acirc;y gi&#7901; export th&#7921;c s&#7921; l&agrave; m&#7897;t l&#7879;nh c&oacute; l&#7907;i.V&#7899;i s&#7921;
+gi&uacute;p &#273;&#7905; c&#7911;a n&oacute; b&#7841;n c&oacute; th&#7875; g&aacute;n bi&#7871;n s&#7889; m&#7897;t
+v&agrave;i gi&aacute; tr&#7883;.N&#7871;u nh&#432; bi&#7871;n kh&ocirc;ng t&#7891;n t&#7841;i th&igrave;
+n&oacute; t&#7921; &#273;&#7897;ng s&#7869; &#273;&#432;&#7907;c t&#7841;o ra.N&#7871;u nh&#432; bi&#7871;n t&#7891;n t&#7841;i th&igrave;
+n&oacute; s&#7869; xo&aacute; n&#7897;i d&#7909;ng c&#361; &#273;i v&agrave; thay v&agrave;o n&#7897;i
+dung m&#7899;i.N&#7871;u b&#7841;n ch&#7881; &#273;&#417;n gi&#7843;n b&#7893; sung th&ecirc;m t&ecirc;n catalog
+v&agrave;o PATH,th&igrave; h&atilde;y th&#7921;c hi&#7879;n nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> $ export PATH=$PATH:/some/new/directory<br>
+</span><br>
+Ch&uacute; &yacute; v&agrave;o $PATH: khi b&#7841;n mu&#7889;n bash thay &#273;&#7893;i
+bi&#7871;n(bi&#7871;n n&oacute; th&agrave;nh gi&aacute; tr&#7883; c&#7911;a n&oacute;)
+th&igrave; h&atilde;y &#273;&#7863;t d&#7845;u "$" tr&#432;&#7899;c t&ecirc;n c&#7911;a bi&#7871;n($t&ecirc;n
+bi&#7871;n).V&iacute; d&#7909;:<br>
+<br>
+<span style="font-weight: bold;"> $ echo $PATH<br>
+</span><span style="font-style: italic;">/usr/local/lib/qt/bin:/usr/local/bin:/usr/bin:/bin:
+/usr/X11R6/bin:</span><br style="font-style: italic;">
+<span style="font-style: italic;">
+/usr/openwin/bin:/usr/games:.:/usr/local/ssh2/bin:/usr/local/ssh1/bin:</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;">
+/usr/share/texmf/bin:/usr/local/sbin:/usr/sbin:/home/logan/bin<br>
+</span><br>
+<span style="font-weight: bold;"> K&#7871;t th&uacute;c c&ocirc;ng vi&#7879;c b&#7857;ng
+TAB</span><br>
+<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.1.3"><br>
+<span style="font-weight: bold;">Interface commandline &#273;&ograve;i h&#7887;i
+ph&#7843;i &#273;&aacute;nh m&aacute;y r&#7845;t nhi&#7873;u</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> &#272;&aacute;nh m&aacute;y l&agrave;
+c&ocirc;ng vi&#7879;c.</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> Kh&ocirc;ng ai th&iacute;ch c&ocirc;ng
+vi&#7879;c n&agrave;y</span><br>
+</a></div>
+<a name="ch_5.1.3">C&oacute; l&#7869;<span style="font-weight: bold;"> bash</span>
+s&#7869; c&#7913;u gi&uacute;p ch&uacute;ng ta kh&#7887;i c&ocirc;ng vi&#7879;c n&agrave;y.<br>
+<br>
+<span style="font-style: italic;"> K&#7871;t th&uacute;c b&#7857;ng tab gi&#7889;ng nh&#432;
+sau:<br>
+</span>B&#7841;n h&atilde;y &#273;i&#7873;n t&ecirc;n t&#7853;p tin v&agrave;o.C&oacute; th&#7875;
+n&oacute; c&oacute; &#7903; PATH,c&oacute; th&#7875; &#7903; catalog tam th&#7901;i.Th&#7871;
+n&agrave;o c&#361;ng &#273;&#432;&#7907;c,&#273;&oacute; l&agrave; th&ocirc;ng tin c&#7847;n thi&#7871;t
+&#273;&aacute;nh v&agrave;o &#273;&#7875; x&aacute;c &#273;&#7883;nh t&#7853;p tin.Sau &#273;&oacute;
+h&atilde;y nh&#7845;n tab.<br>
+bash s&#7869; x&aacute;c &#273;&#7883;nh xem b&#7841;n c&#7847;n g&igrave; v&agrave; b&#7893; sung &#273;&#7847;y &#273;&#7911;
+t&ecirc;n t&#7853;p tin cho b&#7841;n.<br>
+<br>
+V&iacute; d&#7909; nh&#432;: Catalog <span style="font-weight: bold;">/usr/src </span>ch&#7913;a
+hai catalog con:<span style="font-weight: bold;"> /usr/src/linux
+v&agrave; /usr/src/sendmail</span>.T&ocirc;i mu&#7889;n ki&#7875;m tra xem c&oacute;
+cai g&igrave; thu&#7897;c <span style="font-weight: bold;">/usr/src/linux</span>.<br>
+<br>
+T&ocirc;i &#273;&aacute;nh v&agrave;o<span style="font-weight: bold;"> ls
+/usr/src/l</span>,v&agrave; nh&#7845;n TAB.Khi &#273;&oacute; <span
+ style="font-weight: bold;">bash</span> s&#7869; &#273;&#432;a ra <span
+ style="font-weight: bold;">ls  /usr/src/linux</span>.<br>
+<br>
+B&acirc;y gi&#7901; b&#7841;n h&atilde;y ngh&#297; l&agrave; b&#7841;n c&oacute; hai
+catalog&nbsp; <span style="font-weight: bold;">/usr/src/linux v&agrave;
+/usr/src/linux-old</span>.N&#7871;u b&#7841;n ch&#7881; &#273;&aacute;nh v&agrave;o <span
+ style="font-weight: bold;">ls /usr/src/l</span> v&agrave; nh&#7845;n TAB
+th&igrave; bash s&#7869; l&agrave;m &#273;&#7847;y&nbsp; &#273;&#7871;n m&#7913;c c&oacute; th&#7875; v&agrave;
+t&ocirc;i nh&#7853;n &#273;&#432;&#417;c&nbsp; <span style="font-weight: bold;">/usr/src/linux.<br>
+</span><br>
+T&ocirc;i c&oacute; th&#7875; d&#7915;ng l&#7841;i nh&#432; th&#7871; n&agrave;o ho&#7863;c khi nh&#7845;n TAB
+l&#7847;n n&#7919;a bash l&#7841;i hi&#7875;n th&#7883; cho t&ocirc;i danh s&aacute;ch catalog
+m&agrave; &#273;&atilde; &#273;&#432;&#7907;c &#273;&aacute;nh v&agrave;o.<br>
+Nh&#432; v&#7853;y l&agrave; kh&ocirc;ng ph&#7843;i &#273;&aacute;nh m&aacute;y qu&aacute;
+nhi&#7873;u.Th&#7853;t l&agrave; tuy&#7879;t ph&#7843;i kh&ocirc;ng.<br>
+<br>
+</a><a name="ch_5.1.4"><span style="font-weight: bold;">5.1.4 Virtual
+Terminal<br>
+</span><br>
+N&#7871;u b&#7841;n mu&#7889;n l&agrave;m m&#7897;t c&aacute;i g&igrave; &#273;&#7845;y th&igrave; b&#7841;n
+ph&#7843;i l&agrave;m m&#7897;t c&aacute;i g&igrave; &#273;&#7845;y.Theo &yacute; t&#432;&#7903;ng &#7845;y b&#7841;n
+c&oacute; th&#7875; v&#7913;t nh&#7919;ng c&aacute;i m&agrave; &#273;&atilde; l&agrave;m &#273;&#432;&#7907;c
+v&agrave; chuy&#7875;n sang l&agrave;m c&aacute;i kh&aacute;c.T&#7845;t c&#7843;
+n&oacute;i chung l&agrave; m&#7897;t h&#7879; &#273;a t&agrave;i kho&#7843;n.B&#7841;n c&oacute; th&#7875;
+&#273;&#259;ng nh&#7853;p bao nhi&ecirc;u tu&#7923; &yacute;.Sau &#273;&oacute; ti&#7871;n h&agrave;nh x&#7917;
+l&yacute; c&aacute;c c&ocirc;ng vi&#7879;c ho&#7863;c c&#361;ng c&oacute; th&#7875; song song
+l&agrave;m c&aacute;c c&ocirc;ng vi&#7879;c kh&aacute;c.<br>
+<br>
+V&#7845;n &#273;&#7873; l&agrave; ch&uacute;ng ta kh&ocirc;ng th&#7875; k&#7871;t n&#7889;i v&#7899;i m&#7897;t
+v&agrave;i b&agrave;n ph&iacute;m c&ugrave;ng,chu&#7897;t,m&agrave;n
+h&igrave;nh v&#7899;i m&#7897;t m&aacute;y t&iacute;nh.V&agrave; t&#7845;t nhi&ecirc;n &#273;&#7841;i
+&#273;a s&#7889; c&#361;ng kh&ocirc;ng mu&#7889;n &#273;i&#7873;u &#273;&oacute;.Th&#7921;c t&#7871; m&agrave;
+n&oacute;i,vi&#7879;c b&#7893; sung c&aacute;c thi&#7871;t b&#7883; kh&ocirc;ng ph&#7843;i l&agrave;
+gi&#7843;i ph&aacute;p t&#7889;t.C&ograve;n c&aacute;c ch&#432;&#417;ng tr&igrave;nh
+th&igrave; l&#7841;i c&oacute; th&#7875;.Linux l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u n&agrave;y b&#7857;ng
+c&aacute;ch s&#7917; d&#7909;ng c&aacute;c "Virtual Terminal"(VTs)<br>
+<br>
+Nh&#7845;n Alt c&#7897;ng v&#7899;i c&aacute;c ph&iacute;m h&agrave;m s&#7889;(F1,...F6(trong
+Slackware c&oacute; 6 VT)),b&#7841;n c&oacute; th&#7875; chuy&#7875;n &#273;&#7871;n l&agrave;m vi&#7879;c
+tr&ecirc;n c&aacute;c VT kh&aacute;c nhau.C&aacute;c ph&iacute;m
+h&agrave;m s&#7869; t&#432;&#417;ng &#7913;ng v&#7899;i terminal c&#7911;a m&igrave;nh.Slackware s&#7917; d&#7909;ng 6
+VT theo ng&#7847;m &#273;&#7883;nh.Atl+F2 - chuy&#7875;n sang VT th&#7913; hai,Alt+F3 - chuy&#7875;n sang
+VT th&#7913; ba...<br>
+<br>
+C&aacute;c ph&iacute;m h&agrave;m c&ograve;n l&#7841;i s&#7917; d&#7909;ng trong X
+session.M&#7895;i X session c&oacute; m&#7897;t VT c&#7911;a m&igrave;nh,&#273;&#432;&#7907;c b&#7855;t &#273;&#7847;u t&#7915;
+b&#7849;y(Alt+F7)v&agrave; cao h&#417;n.Khi b&#7841;n &#7903; tr&ograve;ng X,Atl+ph&iacute;m
+h&agrave;m &#273;&#432;&#7907;c thay b&#7857;ng Ctrl+Alt+ph&iacute;m h&agrave;m.Ch&iacute;nh
+v&igrave; th&#7871; khi &#7903; X m&agrave; mu&#7889;n chuy&#7875;n sang VT th&#7913; ba h&atilde;y
+nh&#7845;n Ctrl+Alt+F3(&#272;&#7875; quay tr&#7903; l&#7841;i X h&atilde;y nh&#7845;n Alt+F7 - n&#7871;u s&#7917; d&#7909;ng
+X session th&#7913; nh&#7845;t).<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.1.4"><span
+ style="font-style: italic;"><br>
+</span></a><a href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.1.4"></a></div>
+<a name="ch_5.1.4"> </a>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

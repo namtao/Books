@@ -1,0 +1,413 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/packages.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>packages</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.9"><span style="font-weight: bold;">5.9 Qu&#7843;n
+L&yacute; Packages Slackware<br>
+</span><br>
+Packages l&agrave; nh&#7919;ng g&oacute;i ch&#432;&#417;ng tr&igrave;nh &#273;&atilde; &#273;&#432;&#7907;c
+ki&#7875;m tra v&agrave; s&#7861;n s&agrave;ng cho c&agrave;i &#273;&#7863;t.Khi b&#7841;n t&#7843;i nh&#7919;ng
+ch&#432;&#417;ng tr&igrave;nh m&atilde; g&#7889;c tr&ecirc;n internet v&#7873; &#7903; d&#7841;ng
+n&#7871;n(.zip,.rar,.tag,.gz...)th&igrave; b&#7841;n c&#7847;n ph&#7843;i bi&ecirc;n d&#7883;ch
+n&oacute; l&#7841;i v&agrave; c&agrave;i &#273;&#7863;t b&#7857;ng tay. Packages l&agrave;
+nh&#7919;ng ch&#432;&#417;ng tr&igrave;nh &#273;&atilde; &#273;&#432;&#7907;c l&agrave;m s&#7861;n r&#7891;i.T&#7845;t c&#7843;
+c&ocirc;ng vi&#7879;c c&#7911;a b&#7841;n l&agrave; c&agrave;i &#273;&#7863;t.M&#7897;t v&#7845;n &#273;&#7873; n&#7919;a
+l&agrave; c&aacute;c packages r&#7845;t r&#7877; c&agrave;i &#273;&#7863;t,x&oacute;a
+b&#7887;,n&acirc;ng c&#7845;p khi b&#7841;n mu&#7889;n.<br>
+<br>
+</a><a name="ch_5.9.1"><span style="font-weight: bold;">5.9.1 D&#7841;ng
+format packages</span><br>
+Tr&#432;&#7899;c khi b&#7841;n h&#7885;c c&aacute;c c&ocirc;ng c&#7909; l&agrave;m vi&#7879;c v&#7899;i
+packages&nbsp; th&igrave; b&#7841;n h&atilde;y l&agrave;m quen v&#7899;i d&#7841;ng format
+packages c&#7911;a Slackware.N&oacute; l&agrave; t&#7853;p h&#7907;p c&aacute;c d&#7841;ng l&#432;u
+tr&#7919;&nbsp; tar,ho&#7863;c n&eacute;n d&#7841;ng gzip.Packages &#273;&#432;&#7907;c x&acirc;y d&#7921;ng &#273;&#7875;
+cho n&oacute; c&oacute; th&#7875; bung ra &#7903; catalog g&#7889;c c&#7911;a h&#7879; th&#7889;ng.<br>
+&#272;&acirc;y l&agrave; v&iacute; d&#7909; v&#7873; m&#7897;t &#7913;ng d&#7909;ng v&agrave; c&#7845;u
+tr&uacute;c packages c&#7911;a n&oacute;:<br>
+</a>
+<div style="margin-left: 40px;"><a name="ch_5.9.1"> ./ </a><br>
+<a name="ch_5.9.1"> usr/ </a><br>
+<a name="ch_5.9.1"> usr/bin/ </a><br>
+<a name="ch_5.9.1"> usr/bin/makehejaz </a><br>
+<a name="ch_5.9.1"> usr/doc/ </a><br>
+<a name="ch_5.9.1"> usr/doc/makehejaz-1.0/ </a><br>
+<a name="ch_5.9.1"> usr/doc/makehejaz-1.0/COPYING</a><br>
+<a name="ch_5.9.1"> usr/doc/makehejaz-1.0/README </a><br>
+<a name="ch_5.9.1"> usr/man/ </a><br>
+<a name="ch_5.9.1"> usr/man/man1 </a><br>
+<a name="ch_5.9.1"> usr/man/man1/makehejaz.1.gz </a><br>
+<a name="ch_5.9.1"> install/ </a><br>
+<a name="ch_5.9.1"> install/doinst.sh </a><br>
+<a name="ch_5.9.1"></a><br>
+<br>
+</div>
+<a name="ch_5.9.1"> H&#7879; th&#7889;ng qu&#7843;n l&yacute; packages s&#7869; bung files
+n&agrave;y v&agrave;o catalog g&#7889;c&nbsp; &#273;&#7875; c&agrave;i &#273;&#7863;t n&oacute;.
+C&ocirc;ng vi&#7879;c s&#7869; ti&#7871;n h&agrave;nh theo nh&#7919;ng c&#7845;u tr&uacute;c
+tr&ecirc;n c&#417; s&#7903; d&#7919; li&#7879;u c&#7911;a packages,bao g&#7891;m c&#7843; n&#7897;i dung c&#7911;a n&oacute;
+&#273;&#7875; sau n&agrave;y c&oacute; th&#7875; n&acirc;ng c&#7845;p ho&#7863;c l&agrave;
+xo&aacute; &#273;i.<br>
+<br>
+Ch&uacute; &yacute; &#7903; catalog con INSTALL/. &#272;&acirc;y l&agrave; m&#7897;t
+catalog &#273;&#7863;c bi&#7879;t ch&#7913;a c&aacute;c Script(&#273;o&#7841;n m&atilde;)m&agrave; s&#7869; &#273;&#432;&#7907;c
+thi h&agrave;nh sau khi sao ch&eacute;p t&#7853;p tin.Script c&oacute;
+t&ecirc;n l&agrave; doinst.sh.N&#7871;u nh&#432; ch&#432;ong tr&igrave;nh t&igrave;m
+th&#7845;y script tr&ecirc;n th&igrave; n&oacute; s&#7869; th&#7921;c hi&#7879;n sau khi
+c&agrave;i &#273;&#7863;t packages.<br>
+<br>
+</a><a name="ch_5.9.2"><span style="font-weight: bold;">5.9.2
+C&ocirc;ng c&#7909; l&agrave;m vi&#7879;c v&#7899;i packages<br>
+</span><br>
+C&oacute; b&#7889;n c&ocirc;ng c&#7909; ch&iacute;nh d&ugrave;ng &#273;&#7875; qu&#7843;n l&yacute;
+packages.V&#7899;i c&aacute;c c&ocirc;ng c&#7909; n&agrave;y ch&uacute;ng ta
+c&oacute; th&#7875; c&agrave;i &#273;&#7863;t,xo&aacute; b&#7887;,n&acirc;ng c&#7845;p c&aacute;c
+packages.<br>
+<br>
+<span style="font-weight: bold;"> pkgtool<br>
+</span><br>
+<span style="font-weight: bold;"> pkgtool(8) </span>l&agrave; m&#7897;t
+tr&igrave;nh qu&#7843;n l&yacute; menu,cho ph&eacute;p c&agrave;i &#273;&#7863;t ho&#7863;c
+xo&aacute; b&#7887; c&aacute;c packges.<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.9.2"> &nbsp;<img
+ src="image/pkgtool.png" title="" alt=""
+ style="width: 484px; height: 270px;"></a><br>
+<a name="ch_5.9.2"></a></div>
+<a name="ch_5.9.2"> C&agrave;i &#273;&#7863;t c&oacute; th&#7875; th&#7921;c hi&#7879;n &#7903; catalog
+hi&#7879;n h&agrave;nh ho&#7863;c t&#7915; c&aacute;c catalog kh&aacute;c ho&#7863;c t&#7915;
+floppy.Ch&#7881; &#273;&#417;n gi&#7843;n ch&#7885;n ph&#432;&#417;ng ph&aacute;p m&agrave; b&#7841;n th&iacute;ch
+v&agrave; pkhtool s&#7869;&nbsp; l&agrave;m vi&#7879;c v&#7899;i packages c&#7911;a b&#7841;n.<br>
+B&#7841;n c&oacute; th&#7875; nh&igrave;n th&#7845;y danh s&aacute;ch c&aacute;c packages
+nh&#432; sau:<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.9.2"><img
+ src="image/pkgtool-1.png" title="" alt=""
+ style="width: 468px; height: 246px;"></a><br>
+<a name="ch_5.9.2"></a></div>
+<a name="ch_5.9.2"> N&#7871;u nh&#432; b&#7841;n mu&#7889;n xo&aacute; packages
+th&igrave;&nbsp; h&atilde;y ch&#7885;n tham bi&#7871;n&nbsp; xo&aacute;
+packages.B&#7841;n s&#7869; nh&igrave;n th&#7845;y danh s&aacute;ch c&aacute;c packages
+&#273;&atilde; &#273;&#432;&#7907;c c&agrave;i&nbsp; &#273;&#7863;t.V&agrave; t&#7845;t nhi&ecirc;n l&agrave;
+c&oacute; th&#7875;&nbsp; x&oacute;a b&#7887; &#273;i m&#7897;t v&agrave;i packages m&agrave;
+b&#7841;n c&#7843;m th&#7845;y kh&ocirc;ng c&#7847;n thi&#7871;t.Ch&#7885;n packages m&agrave; b&#7841;n &#273;&#7883;nh
+xo&aacute; v&agrave; nh&#7845;n ph&iacute;m OK.Sau &#273;&oacute; pkgtool s&#7869;
+xo&aacute; b&#7887; n&oacute; &#273;i ra h&#7887;i h&#7879; th&#7889;ng.<br>
+<br>
+<span style="font-weight: bold;"> installpkg</span><br>
+<br>
+<span style="font-weight: bold;"> installpkg</span>&nbsp; th&#7921;c hi&#7879;n
+c&ocirc;ng vi&#7879;c c&agrave;i &#273;&#7863;t nh&#7919;ng packages m&#7899;i l&ecirc;n h&#7879; th&#7889;ng
+c&#7911;a b&#7841;n.C&#7845;u tr&uacute;c c&#7911;a n&oacute; nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #[ROOT=&lt;path&gt;]installpkg
+[option]&lt;packages name&gt;.....</span><br>
+<br>
+<span style="font-weight: bold;"> installpkg</span> c&oacute; ba tham
+bi&#7871;n ch&iacute;nh.Ch&#7881; c&oacute; m&#7897;t trong chung &#273;&#432;&#7907;c s&#7917; d&#7909;ng khi g&#7885;i
+ch&#432;&#417;ng tr&igrave;nh.<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 30%;">Tham bi&#7871;n<br>
+      </td>
+      <td style="vertical-align: top;">T&aacute;c &#272;&#7897;ng<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-m<br>
+      </td>
+      <td style="vertical-align: top;">Th&#7921;c hi&#7879;n makepkg &#7903; catalog hi&#7879;n
+h&agrave;nh<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-warn<br>
+      </td>
+      <td style="vertical-align: top;">Cho bi&#7871;t chuy&#7879;n g&igrave; s&#7869; s&#7843;y
+ra khi b&#7841;n c&agrave;i &#273;&#7863;t Packages<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-r<br>
+      </td>
+      <td style="vertical-align: top;">C&agrave;i &#273;&#7863;t packages theo
+tr&igrave;nh t&#7921; t&#7915; catalog hi&#7879;n h&agrave;nh.<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_5.9.2"><br>
+N&#7871;u nh&#432; b&#7841;n ch&#7881; ra m&ocirc;i tr&#432;&#7901;ng t&#7841;m th&#7901;i&nbsp; ROOT tr&#432;&#7899;c khi th&#7921;c
+hi&#7879;n installpkg th&igrave; &#273;&#432;&#7901;ng d&#7851;n s&#7869; s&#7917; d&#7909;ng&nbsp; t&#7841;m th&#7901;i
+l&agrave; catalog g&#7889;c c&#7911;a H&#272;H. &#272;i&#7873;u n&agrave;y c&oacute; l&#7907;i cho c&#7845;u
+h&igrave;nh h&#7879; th&#7889;ng v&#7899;i c&aacute;c &#273;&#297;a c&#7913;ng kh&aacute;c b&#7903;i v&igrave;
+th&ocirc;ng th&#432;&#7901;ng n&oacute; hay s&#7917; d&#7909;ng mount t&#7899;i /mnt hay ch&#7895;
+kh&aacute;c... nh&#432;ng kh&aacute;c v&#7899;i /<br>
+Th&ocirc;ng tin d&#7919; li&#7879;u v&#7873; c&aacute;c packages &#273;&atilde; c&agrave;i &#273;&#7863;t
+&#273;&#432;&#7907;c n&#7857;m &#7903; files /var/log/packages.<br>
+&#272;&#7889;i v&#7899;i m&#7897;t packages &#7903; &#273;&acirc;y s&#7869; t&#7841;o ra m&#7897;t t&#7853;p tin v&#259;n b&#7843;n.B&#7841;n
+c&oacute; th&#7875; t&igrave;m th&#7845;y nh&#7919;ng th&ocirc;ng tin kh&aacute;c v&#7873;
+packages m&igrave;nh &#273;&atilde; c&agrave;i &#273;&#7863;t t&#7841;i &#273;&acirc;y.<br>
+Ch&uacute; &yacute; r&#7857;ng installpkg kh&ocirc;ng th&ocirc;ng b&aacute;o
+cho b&#7841;n v&#7873; vi&#7879;c ghi l&#7841;i l&ecirc;n packages &#273;&atilde; c&agrave;i
+r&#7891;i.N&oacute; &#273;&#417;ng gi&#7843;n l&agrave; c&agrave;i l&ecirc;n tr&ecirc;n
+packages c&#361;.N&#7871;u b&#7841;n mu&#7889;n ch&#7855;c ch&#7855;n l&agrave; packages c&#361; &#273;&atilde; b&#7883;
+xo&aacute; &#273;i ra kh&#7887;i h&#7879; th&ocirc;ng th&igrave; h&atilde;y d&ugrave;ng <span
+ style="font-weight: bold;">upgradepkg<br>
+</span><br>
+<span style="font-weight: bold;"> removepkg<br>
+</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> removepkg(8)</span> th&#7921;c hi&#7879;n
+c&ocirc;ng vi&#7879;c xo&aacute; packages ra kh&#7887;i h&#7879; th&#7889;ng c&#7911;a b&#7841;n.C&#7845;u
+tr&uacute;c nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #&nbsp; [ROOT=&lt;path&gt;]removepkg
+[option] &lt;package name&gt;...</span><br>
+<br>
+&#272;&#7889;i v&#7899;i removepkg c&oacute; b&#7889;n ch&#7885;n l&#7921;a ch&iacute;nh:<br>
+<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 30%;">Tham bi&#7871;n<br>
+      </td>
+      <td style="vertical-align: top;">T&aacute;c &#272;&#7897;ng<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-copy<br>
+      </td>
+      <td style="vertical-align: top;">Packages s&#7869; &#273;&#432;&#7907;c sao ch&eacute;p
+v&agrave;o catalog l&#432;u tr&#7919;.N&oacute; &#273;&#432;&#7907;c t&#7841;o ra t&#7915; packages&nbsp; g&#7889;c
+tr&ecirc;n c&acirc;y catalog(&#272;&#7915;ng c&oacute; xo&aacute; n&oacute;)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-keep<br>
+      </td>
+      <td style="vertical-align: top;">L&#432;u l&#7841;i files th&#7901;i gian &#273;&#432;&#7907;c t&#7841;o
+ra khi x&oacute;a packages.N&oacute; c&oacute; l&#7907;i khi b&#7841;n ki&#7875;m tra l&#7841;i
+h&#7879; th&#7889;ng<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-preserve<br>
+      </td>
+      <td style="vertical-align: top;">Packages b&#7883; x&oacute;a ngay ra
+kh&#7887;i h&#7879; th&#7889;ng v&agrave; ngay l&uacute;c &#273;&oacute; b&#7843;n sao c&#7911;a n&oacute;
+&#273;&#432;&#7907;c l&#432;u l&#7841;i &#7903; catalog l&#432;u tr&#7919;<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">-warn<br>
+      </td>
+      <td style="vertical-align: top;">Th&ocirc;ng b&aacute;o cho b&#7841;n
+bi&#7871;t chuy&#7879;n g&igrave; s&#7843;y ra khi x&oacute;a packages<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_5.9.2"><br>
+N&#7871;u nh&#432; b&#7841;n ch&#7881; ra m&ocirc;i tr&#432;&#7901;ng t&#7841;m th&#7901;i&nbsp; ROOT tr&#432;&#7899;c khi th&#7921;c
+hi&#7879;n removepkg th&igrave; &#273;&#432;&#7901;ng d&#7851;n s&#7869; s&#7917; d&#7909;ng&nbsp; t&#7841;m th&#7901;i l&agrave;
+catalog g&#7889;c c&#7911;a H&#272;H. &#272;i&#7873;u n&agrave;y c&oacute; l&#7907;i cho c&#7845;u h&igrave;nh
+h&#7879; th&#7889;ng v&#7899;i c&aacute;c &#273;&#297;a c&#7913;ng kh&aacute;c b&#7903;i v&igrave; th&ocirc;ng
+th&#432;&#7901;ng n&oacute; hay s&#7917; d&#7909;ng mount t&#7899;i /mnt hay ch&#7895; kh&aacute;c...nh&#432;ng
+kh&aacute;c v&#7899;i /<br>
+Trong th&#7901;i gian x&oacute;a packages th&igrave; s&#7869; hi&#7875;n th&#7883; tr&#7841;ng
+th&aacute;i l&agrave;m vi&#7879;c,c&#7903; s&#7903; d&#7919; li&#7879;u &#273;&#432;&#7907;c ghi ch&eacute;p v&#7873; files
+/var/log/remove_packages<br>
+Gi&#7889;ng nh&#432; <span style="font-weight: bold;">installpkg</span>,b&#7841;n
+c&oacute; th&#7875; ch&#7881; ra m&#7897;t v&agrave;i packages &#273;&#7875; xo&aacute; ho&#7863;c
+c&oacute; th&#7875; d&ugrave;ng t&#7853;p h&#7907;p t&ecirc;n &#273;&#7841;i di&#7879;n.<br>
+<br>
+<span style="font-weight: bold;"> upgradepkg</span><br>
+<br>
+<span style="font-weight: bold;"> upgradepkg(8)</span> d&ugrave;ng &#273;&#7875;
+n&acirc;ng c&#7845;p packages &#273;&atilde; &#273;&#432;&#7907;c c&agrave;i v&agrave;o trong
+m&aacute;y t&iacute;nh c&#7911;a b&#7841;n.C&#7845;u tr&uacute;c nh&#432; sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> # [ROOT=&lt;path&gt;] upgradepkg
+&lt;package name&gt;...</span><br>
+ho&#7863;c l&agrave;<br>
+&nbsp;<span style="font-weight: bold;">[ROOT=&lt;path&gt;] upgradepkg \</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> &lt;old package name&gt;%&lt;new
+package name&gt;<br>
+</span><br>
+<span style="font-weight: bold;"> upgradepkg</span>&nbsp; &#273;&#7847;u ti&ecirc;n
+l&agrave; ti&#7871;n h&agrave;nh c&agrave;i &#273;&#7863;t packages m&#7899;i &agrave; sau
+&#273;&oacute; x&oacute;a &#273;i packages c&#361; theo c&aacute;ch sau:"Files
+t&#7915;&nbsp; packages c&#361; kh&ocirc;ng b&#7883; ch&#7871;t &#7903; trong catalog c&#7911;a b&#7841;n".N&#7871;u
+nh&#432; t&ecirc;n c&#7911;a packages n&acirc;ng c&#7845;p bi&#7871;n &#273;&#7893;i th&igrave;
+h&atilde;y s&#7917; d&#7909;ng ph&#432;&#417;ng &aacute;n th&#7913; hai l&agrave; l&agrave;m vi&#7879;c
+tr&#7921;c ti&#7871;p v&#7899;i ch&#432;&#417;ng tr&igrave;nh,ch&#7881; r&otilde; t&ecirc;n c&#7911;a packages
+c&#361;(&#273;&atilde; c&agrave;i v&agrave;o h&#7879; th&#7889;ng) v&agrave; sau d&#7845;u %
+l&agrave; t&ecirc;n c&#7911;a packages m&#7899;i(b&#7841;n s&#7869; c&agrave;i &#273;&#7863;t).<br>
+<br>
+N&#7871;u nh&#432; b&#7841;n ch&#7881; ra m&ocirc;i tr&#432;&#7901;ng t&#7841;m th&#7901;i&nbsp; ROOT tr&#432;&#7899;c khi th&#7921;c
+hi&#7879;n upgradepkg th&igrave; &#273;&#432;&#7901;ng d&#7851;n s&#7869; s&#7917; d&#7909;ng&nbsp; t&#7841;m th&#7901;i l&agrave;
+catalog g&#7889;c c&#7911;a H&#272;H. &#272;i&#7873;u n&agrave;y c&oacute; l&#7907;i cho c&#7845;u h&igrave;nh
+h&#7879; th&#7889;ng v&#7899;i c&aacute;c &#273;&#297;a c&#7913;ng kh&aacute;c b&#7903;i v&igrave; th&ocirc;ng
+th&#432;&#7901;ng n&oacute; hay s&#7917; d&#7909;ng mount t&#7899;i /mnt hay ch&#7895; kh&aacute;c...nh&#432;ng
+kh&aacute;c v&#7899;i /<br>
+Gi&#7889;ng nh&#432; installpkg,removerpkg,b&#7841;n c&oacute; th&#7875; ch&#7881; ra m&#7897;t v&agrave;i
+packages &#273;&#7875; xo&aacute; ho&#7863;c c&oacute; th&#7875; d&ugrave;ng t&#7853;p h&#7907;p t&ecirc;n
+&#273;&#7841;i di&#7879;n.<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> rpm2tgz/rpm2targz<br>
+</span><br>
+Red Hat Package Manager l&agrave; m&#7897;t trong nh&#7919;ng &#273;&#7883;nh d&#7841;ng packages
+r&#7847;t l&agrave; ph&#7893; bi&#7871;n.C&oacute; r&#7845;t nhi&#7873;u nh&agrave; l&#7853;p tr&igrave;nh
+&#273;&#7883;nh d&#7841;ng s&#7843;n ph&#7849;m c&#7911;a m&igrave;nh &#7903; d&#7841;ng .rpm format.Nh&#432;ng &#273;&oacute;
+kh&ocirc;ng ph&#7843;i l&agrave; d&#7841;ng chu&#7849;n format c&#7911;a Slackware
+Linux.Ch&iacute;nh v&igrave; th&#7871; ch&uacute;ng t&ocirc;i kh&ocirc;ng
+khuy&#7871;n kh&iacute;ch c&aacute;c b&#7841;n s&#7917; d&#7909;ng ch&uacute;ng.Tuy nhi&ecirc;n
+v&#7851;n c&oacute; c&aacute;c c&ocirc;ng c&#7909; cho ph&eacute;p s&#7917; d&#7909;ng &#273;&#432;&#7907;c c&#7843;
+m&atilde; ngu&#7891;n c&#7911;a RPM.Ch&uacute;ng ta gi&#7899;i thi&#7879;u &#7913;ng d&#7909;ng chuy&#7875;n &#273;&#7893;i
+t&#7915; d&#7841;ng RPM(.rpm) sang TGZ(.tgz) c&oacute; t&ecirc;n l&agrave; rpm2tgz
+v&agrave; rpm2targz d&ugrave;ng &#273;&#7875; chuy&#7875;n RPM(.rpm) sang TAR.GZ(.tar.gz).<br>
+<br>
+</a><a name="ch_5.9.3"><span style="font-weight: bold;">5.9.3 T&#7841;o
+packages <br>
+</span><br>
+Vi&#7879;c t&#7841;o packages c&oacute; th&#7875; n&oacute;i r&#7845;t &#273;&#417;n gi&#7843;n v&agrave; c&#361;ng
+r&#7845;t ph&#7913;c t&#7841;p.Kh&ocirc;ng c&oacute; m&#7897;t ph&#432;&#417;ng ph&aacute;p n&agrave;o
+chu&#7849;n m&#7921;c c&#7843;.Tuy nhi&ecirc;n y&ecirc;u c&#7847;u chung l&agrave; packages c&#7847;n
+ph&#7843;i &#7903; d&#7841;ng tar gziped n&#7871;u c&#7847;n script-install th&igrave; n&oacute; nh&#7845;t
+thi&#7871;t ph&#7843;i &#7903; catalog /install/doinst.sh.<br>
+N&#7871;u nh&#432; b&#7841;n th&iacute;ch t&#7841;o m&#7897;t packages cho h&#7879; th&#7889;ng c&#7911;a b&#7841;n ho&#7863;c
+m&#7841;ng th&igrave; b&#7841;n c&#7847;n ph&#7843;i xem x&eacute;t t&#7899;i nh&#7919;ng script-build
+kh&aacute;c nhau &#7903; catalog g&#7889;c h&#7879; th&#7889;ng Slackware.Tuy nhi&ecirc;n v&#7851;n
+c&ograve;n c&oacute; m&#7897;t v&agrave;i ph&#432;&#417;ng ph&aacute;p kh&aacute;c &#273;&#7875;
+t&#7841;o packages.<br>
+<br>
+<span style="font-weight: bold;"> explodepkg<br>
+</span><br>
+<span style="font-weight: bold;"> explodepkg(8) </span>&#273;&#432;&#7907;c coi
+l&agrave; nh&#432; installpkg d&ugrave;ng &#273;&#7875; bung packages ra nh&#432;ng
+m&agrave; kh&ocirc;ng ti&#7871;n h&agrave;nh c&agrave;i &#273;&#7863;t.Kh&ocirc;ng
+c&oacute; b&#7845;t c&#7913; m&#7897;t thay &#273;&#7893;i n&agrave;o v&#7873; c&#417; s&#7903; d&#7919; li&#7879;u
+packages.N&oacute; ch&#7881; &#273;&#417;n gi&#7843;n bung packages ra catalog hi&#7879;n
+h&agrave;nh.<br>
+<br>
+N&#7871;u nh&#432; b&#7841;n &#273;&#7875; &yacute; v&agrave;o c&acirc;y catalog g&#7889;c Slackware thi
+b&#7841;n s&#7869; nh&#7853;n th&#7845;y ch&uacute;ng t&ocirc;i s&#7917; d&#7909;ng n&oacute; cho&nbsp;
+khung c&#7845;u h&igrave;nh c&#7911;a packages.Nh&#7919;ng packages&nbsp; n&agrave;y
+ch&#7913;a&nbsp; nh&#7919;ng&nbsp; khung bao gi&#7889;ng nh&#432; v&#7867; b&ecirc;n ngo&agrave;i c&#7911;a
+n&oacute;.N&oacute; l&#432;u l&#7841;i t&#7845;t c&#7843; c&aacute;c th&ocirc;ng tin c&#7847;n
+thi&#7871;t,t&ecirc;n files,qu&#7873;n h&#7841;n,buid-script..<br>
+<br>
+<span style="font-weight: bold;"> makepkg</span><br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> makepkg(8)</span> &#273;&#432;&#7907;c&nbsp; ch&#7841;y t&#7915;
+catalog hi&#7879;n h&agrave;nh b&ecirc;n trong Slackware package.N&oacute;
+t&igrave;m h&#7871;t nh&#7919;ng li&ecirc;n k&#7871;t k&iacute; t&#7921;(link simbol) v&agrave;
+b&#7893; sung v&agrave;o ch&uacute;ng script-build package.Ch&#432;&#417;ng
+tr&igrave;nh &#273;&#432;a ra th&ocirc;ng b&aacute;o khi m&agrave;&nbsp;
+x&aacute;c &#273;&#7883;nh &#273;&#432;&#7907;c&nbsp; nh&#7919;ng file zero-lenght(&#273;&#7897; d&agrave;i
+kh&ocirc;ng) &#7903; c&acirc;y catalog trong package.<br>
+Ch&#432;&#417;ng tr&igrave;nh n&agrave;y th&#432;&#7901;ng &#273;&#432;&#7907;c th&#7921;c hi&#7879;n sau khi b&#7841;n
+&#273;&atilde; t&#7841;o ra c&acirc;y catalog trong package c&#7911;a b&#7841;n.<br>
+<br>
+</a><a name="ch_5.9.4"><span style="font-weight: bold;">5.9.4 T&#7841;o&nbsp;
+tags v&agrave;&nbsp; tagfiles(cho ch&#432;&#417;ng tr&igrave;nh&nbsp; c&agrave;i
+&#273;&#7863;t)<br>
+</span><br>
+Ch&#432;&#417;ng tr&igrave;nh&nbsp; c&agrave;i &#273;&#7863;t Slackware th&#7921;c hi&#7879;n c&agrave;i
+&#273;&#7863;t packages&nbsp; v&agrave;o h&#7879; th&#7889;ng c&#7911;a b&#7841;n.Tuy nhi&ecirc;n c&oacute;
+nh&#7919;ng t&#7853;p tin m&agrave;&nbsp; c&aacute;c &#7913;ng d&#7909;ng c&agrave;i &#273;&#7863;t th&#432;&#7901;ng
+n&oacute;i:"Nh&#7919;ng files n&agrave;y nh&#7845;t &#273;&#7883;nh ph&#7843;i c&agrave;i
+v&agrave;o,nh&#7919;ng files n&agrave;y kh&ocirc;ng nh&#7845;t thi&#7871;t,lo&#7841;i n&agrave;o
+theo ng&#7847;m &#273;&#7883;nh..."<br>
+tagfile s&#7869; t&igrave;m ki&#7871;m &#7903;&nbsp; catalog&nbsp; nh&#7919;ng&nbsp; b&#7897; t&#7853;p tin
+m&agrave; g&#7885;i l&agrave; tagfile.N&oacute; s&#7869; &#273;&#7871;m nh&#7919;ng packages
+tr&ecirc;n nh&#7919;ng &#273;&#297;a kh&aacute;c nhau v&agrave; tr&#7841;ng th&aacute;i c&#7911;a
+n&oacute;.Tr&#7841;ng th&aacute;i c&oacute; th&#7875; l&agrave;:<br>
+<br>
+</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 20%;">ADD<br>
+      </td>
+      <td style="vertical-align: top;">Package c&#7847;n thi&#7871;t cho h&#7879; th&#7889;ng
+l&agrave;m vi&#7879;c b&igrave;nh th&#432;&#7901;ng<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">SKP<br>
+      </td>
+      <td style="vertical-align: top;">Package c&#7847;n thi&#7871;t cho t&#7921; &#273;&#7897;ng
+th&#7921;c thi<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">REC<br>
+      </td>
+      <td style="vertical-align: top;">Package kh&ocirc;ng nh&#7845;t &#273;&#7883;nh
+c&#7847;n thi&#7871;t nh&#432;ng m&agrave; khuy&#7871;n kh&iacute;ch<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">OPT<br>
+      </td>
+      <td style="vertical-align: top;">Package kh&ocirc;ng nh&acirc;t
+&#273;&#7883;nh c&#7847;n thi&#7871;t<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_5.9.4">D&#7841;ng c&#7845;u tr&uacute;c &#273;&#417;n gi&#7843;n nh&#432; sau:<br>
+<br style="font-weight: bold;">
+<span style="font-weight: bold;"> &lt;package name&gt;: &lt;status&gt; <br>
+</span><br>
+M&#7897;t package tr&ecirc;n m&#7897;t d&ograve;ng.D&#7841;ng chu&#7849;n tagfiles cho m&#7895;i lo&#7841;i
+ch&#432;&#417;ng tr&igrave;nh &#273;&#432;&#7907;c l&#432;u l&#7841;i &#7903; tagfile.org. V&igrave; v&#7853;y n&#7871;u nh&#432;
+b&#7841;n c&#7843;m th&#7845;y c&oacute; g&igrave; kh&ocirc;ng &#7893;n th&igrave; c&oacute; th&#7875;
+kh&ocirc;i ph&#7909;c l&#7841;i d&#7841;ng chu&#7849;n c&#7911;a n&oacute;.C&oacute; r&#7845;t nhi&#7873;u
+nh&agrave; qu&#7843;n l&yacute;(Administrators) th&iacute;ch vi&#7871;t ra nh&#7919;ng
+tagfiles ri&ecirc;ng cho ch&iacute;nh m&igrave;nh v&agrave; sau
+&#273;&oacute; khi c&agrave;i &#273;&#7863;t ch&#7881; &#273;&#417;n gi&#7843;n chon "full".Ch&#432;ong
+tr&igrave;nh c&agrave;i &#273;&#7863;t t&igrave;m tagfiles v&agrave; th&#7921;c hi&#7879;n
+c&agrave;i &#273;&#7863;t v&#7899;i t&#432;&#417;ng &#7913;ng n&#7897;i dung trong n&oacute;.N&#7871;u nh&#432; b&#7841;n ch&#7885;n
+REC ho&#7863;c OPT th&igrave; xu&#7845;t hi&#7879;n h&#7897;p tho&#7841;i h&#7887;i b&#7841;n v&#7873; vi&#7879;c c&oacute;
+c&agrave;i ti&#7871;p package hay kh&ocirc;ng.Ch&iacute;nh v&igrave; th&#7871;
+khuy&#7871;n kh&iacute;ch ch&#7885;n l&#7921;a d&ugrave;ng ADD v&agrave; SKP n&#7871;u nh&#432; b&#7841;n
+t&#7921; m&igrave;nh t&#7841;o ra tagfiles cho qu&aacute; tr&igrave;nh t&#7921; &#273;&#7897;ng
+c&agrave;i &#273;&#7863;t.<br>
+<br>
+Ch&uacute; &yacute;&nbsp; t&#7853;p tin tagfiles c&#7911;a b&#7841;n s&#7869; c&#7847;n ph&#7843;i&nbsp;
+n&#7857;m &#7903; v&#7883; tr&iacute; ti&ecirc;u chu&#7849;n&nbsp; ho&#7863;c l&agrave; b&#7841;n c&oacute;
+th&#7875; ch&#7881; &#273;&#432;&#7901;ng d&#7851;n cho n&oacute; b&#7857;ng c&aacute;ch&nbsp; s&#7917; d&#7909;ng tagfile.<br>
+</a><br>
+<div style="text-align: center;"><a name="ch_5.9.4"><span
+ style="font-style: italic;"> </span></a><a
+ href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.9.4"></a></div>
+<a name="ch_5.9.4"> </a>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

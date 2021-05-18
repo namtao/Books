@@ -1,0 +1,763 @@
+WEBVTT
+
+1
+00:00:02.960 --> 00:00:07.585
+In this lesson, we will be covering
+packages, package managers, and
+
+2
+00:00:07.585 --> 00:00:13.310
+how to find, install, and remove software
+for the most popular Linux distributions.
+
+3
+00:00:14.600 --> 00:00:18.840
+Typically, when you install software in
+a Linux system you do so with a package.
+
+4
+00:00:18.840 --> 00:00:23.120
+A package is just a collection of
+files that make up an application.
+
+5
+00:00:23.120 --> 00:00:27.460
+Additionally a package contains data about
+the application as well as any steps
+
+6
+00:00:27.460 --> 00:00:31.910
+required to successfully install and
+remove that application.
+
+7
+00:00:31.910 --> 00:00:32.504
+The data or
+
+8
+00:00:32.504 --> 00:00:36.733
+metadata that is contained within
+a package can include such information as
+
+9
+00:00:36.733 --> 00:00:41.225
+the description of the application, the
+version and the list of dependencies or
+
+10
+00:00:41.225 --> 00:00:45.606
+other packages that this particular
+application needs in order to function.
+
+11
+00:00:47.351 --> 00:00:53.290
+A package manager is used to install,
+upgrade, and remove packages.
+
+12
+00:00:53.290 --> 00:00:56.100
+The package manager uses
+a package's metadata to
+
+13
+00:00:56.100 --> 00:00:59.820
+automatically install any
+required dependencies.
+
+14
+00:00:59.820 --> 00:01:03.840
+Package managers keep track of what
+files belong to what packages,
+
+15
+00:01:03.840 --> 00:01:08.080
+what packages are installed, and what
+versions of those packages are installed.
+
+16
+00:01:10.060 --> 00:01:15.030
+Here is a list of distributions that
+are based on the RPM package format.
+
+17
+00:01:15.030 --> 00:01:18.370
+RPM stands for RedHat Package Manager.
+
+18
+00:01:18.370 --> 00:01:22.130
+Obviously, the RedHat distribution
+uses RPMs, as well as,
+
+19
+00:01:22.130 --> 00:01:26.350
+CentOS, Fedora, Oracle Linux,
+and Scientific Linux.
+
+20
+00:01:27.840 --> 00:01:31.610
+The yum command line utility is
+a packaged management program for
+
+21
+00:01:31.610 --> 00:01:35.070
+those Linux distributions
+that use RPM packages.
+
+22
+00:01:35.070 --> 00:01:40.051
+You can find packages to install with yum
+search and provide that a search string.
+
+23
+00:01:40.051 --> 00:01:43.599
+You can also display
+information about a package or
+
+24
+00:01:43.599 --> 00:01:47.570
+an application by using yum,
+info and the package name.
+
+25
+00:01:48.710 --> 00:01:52.900
+You can install packages with
+the yum install package command.
+
+26
+00:01:52.900 --> 00:01:56.390
+Yum will typically ask you to
+review your request and say yes or
+
+27
+00:01:56.390 --> 00:01:57.670
+no if you want to continue.
+
+28
+00:01:58.770 --> 00:02:02.055
+To automatically answer yes
+to yum's question use -y.
+
+29
+00:02:03.650 --> 00:02:08.000
+Also note that installing or
+removing software requires root or
+
+30
+00:02:08.000 --> 00:02:09.360
+super user privileges.
+
+31
+00:02:10.410 --> 00:02:14.241
+To remove a package, it's simply yum
+remove and the name of the package.
+
+32
+00:02:14.241 --> 00:02:17.022
+In addition to the yum command,
+
+33
+00:02:17.022 --> 00:02:22.920
+you can also use the rpm command to
+interact with a package manager.
+
+34
+00:02:22.920 --> 00:02:26.592
+Rpm -qa lists all the installed packages.
+
+35
+00:02:26.592 --> 00:02:32.806
+Rpm -qf with a path to a file will tell
+you what package that file belongs to.
+
+36
+00:02:32.806 --> 00:02:37.752
+Using rpm -ql package name
+will list all the files
+
+37
+00:02:37.752 --> 00:02:41.890
+that belong to that particular package.
+
+38
+00:02:42.930 --> 00:02:49.400
+To install a package,
+use rpm -ivh and the package file.
+
+39
+00:02:49.400 --> 00:02:53.960
+To erase or uninstall a package,
+use rpm -e with a package name.
+
+40
+00:02:55.710 --> 00:02:57.990
+Let's look for an application to install.
+
+41
+00:02:57.990 --> 00:03:00.280
+Let's look for something called inkscape.
+
+42
+00:03:01.400 --> 00:03:02.038
+So we'll do a search.
+
+43
+00:03:05.686 --> 00:03:08.810
+And then we see three items returned.
+
+44
+00:03:08.810 --> 00:03:15.140
+Let's do yum info on each one of those and
+see what they do inkscape-docs.
+
+45
+00:03:18.701 --> 00:03:22.070
+It says it's a tutorial and
+examples for Inkscape.
+
+46
+00:03:22.070 --> 00:03:24.660
+That's not what we're looking for,
+let's look at the next one.
+
+47
+00:03:25.740 --> 00:03:26.640
+Two is Inkscape.
+
+48
+00:03:28.210 --> 00:03:33.000
+And that says it's a graphics editor so
+that is the package that we want.
+
+49
+00:03:33.000 --> 00:03:36.790
+So in order to install or
+remove software we need root privileges.
+
+50
+00:03:36.790 --> 00:03:41.480
+We can use sudo if that's configured or
+we can also just switch to the root user.
+
+51
+00:03:41.480 --> 00:03:46.300
+Now I'll just switch to root and use
+adminuser as the password for this server.
+
+52
+00:03:47.340 --> 00:03:49.241
+Then we'll do yum install inkscape.
+
+53
+00:03:55.271 --> 00:03:57.610
+So is it okay to download this?
+
+54
+00:03:57.610 --> 00:03:58.860
+Yes it is.
+
+55
+00:03:58.860 --> 00:03:59.981
+I'll hit y and Enter.
+
+56
+00:04:14.134 --> 00:04:17.130
+All right, it's says it
+installed their package there.
+
+57
+00:04:17.130 --> 00:04:19.460
+You can also use yum install with a -y,
+
+58
+00:04:19.460 --> 00:04:23.260
+so you don't have to answer
+y to the question here.
+
+59
+00:04:23.260 --> 00:04:25.731
+We'll do this with another
+piece of software called GIMP.
+
+60
+00:04:33.011 --> 00:04:35.635
+And you can see that this
+has several dependencies,
+
+61
+00:04:35.635 --> 00:04:37.721
+so it not only installs the application,
+
+62
+00:04:37.721 --> 00:04:41.671
+but it installs the other packages that
+are required for GIMP to run properly.
+
+63
+00:04:53.811 --> 00:04:57.815
+Okay, let's look in our
+applications list for graphics,
+
+64
+00:04:57.815 --> 00:05:03.580
+and you can see that Inkscape and
+GIMP has been installed on our system.
+
+65
+00:05:03.580 --> 00:05:07.820
+Let's remove some
+software with yum remove.
+
+66
+00:05:07.820 --> 00:05:08.720
+We'll do this to GIMP.
+
+67
+00:05:10.440 --> 00:05:14.311
+And then like install you could use
+-y to answer yes automatically.
+
+68
+00:05:16.131 --> 00:05:17.601
+I'll just do it manually here.
+
+69
+00:05:17.601 --> 00:05:20.620
+And it says it erased that package.
+
+70
+00:05:20.620 --> 00:05:22.806
+Let's look.
+Applications, graphics and
+
+71
+00:05:22.806 --> 00:05:25.561
+GIMP is no longer showing up in our menu.
+
+72
+00:05:29.881 --> 00:05:33.676
+Let's say there's some software that you
+want to install that's not included in
+
+73
+00:05:33.676 --> 00:05:34.721
+the package manager.
+
+74
+00:05:37.971 --> 00:05:39.410
+Let's look for Dropbox.
+
+75
+00:05:42.410 --> 00:05:46.803
+So you can't use yum to install Dropbox,
+or at least directly, so
+
+76
+00:05:46.803 --> 00:05:48.691
+we'll go to dropbox.com.
+
+77
+00:05:58.371 --> 00:05:59.911
+Download the RPM.
+
+78
+00:06:01.761 --> 00:06:09.110
+Let's save them, this directory here.
+
+79
+00:06:09.110 --> 00:06:14.110
+So, we can install an rpm with -i for
+install, v is verbose,
+
+80
+00:06:14.110 --> 00:06:17.770
+and h says print some hash
+marks to show our progress.
+
+81
+00:06:17.770 --> 00:06:18.681
+So we'll just do that here.
+
+82
+00:06:22.601 --> 00:06:24.070
+We'll answer OK.
+
+83
+00:06:26.600 --> 00:06:28.960
+Dropbox was successfully installed.
+
+84
+00:06:28.960 --> 00:06:30.855
+So, can see.
+
+85
+00:06:35.364 --> 00:06:36.670
+There it is, Dropbox.
+
+86
+00:06:36.670 --> 00:06:37.750
+We installed Dropbox.
+
+87
+00:06:39.820 --> 00:06:43.570
+You could also use rpm to do some queries.
+
+88
+00:06:43.570 --> 00:06:48.440
+So, we'll use rpm -qa to
+query all packages, or
+
+89
+00:06:48.440 --> 00:06:50.680
+to list all packages that
+are installed on the system.
+
+90
+00:06:52.060 --> 00:06:54.770
+And then when we do this we can see
+that they're in no particular order.
+
+91
+00:06:56.520 --> 00:06:58.840
+We'll sort the list so
+it makes it easier for us to read.
+
+92
+00:06:58.840 --> 00:07:03.260
+We'll sort it and pipe it to a pager so
+we can look at it one page at a time.
+
+93
+00:07:05.570 --> 00:07:06.870
+And there we go.
+
+94
+00:07:06.870 --> 00:07:09.640
+Yeah, all the way to the end,
+you can see yum, zlib, etc.
+
+95
+00:07:11.000 --> 00:07:15.520
+So, you can also ask rpm what
+file a package belongs to.
+
+96
+00:07:17.590 --> 00:07:20.510
+So the program which
+lives at user bin which.
+
+97
+00:07:20.510 --> 00:07:23.990
+We'll ask rpm what package
+does that belong to.
+
+98
+00:07:25.270 --> 00:07:26.900
+And it's the which package.
+
+99
+00:07:26.900 --> 00:07:29.190
+You can also say show me all the files or
+
+100
+00:07:29.190 --> 00:07:31.220
+list all the files that
+are in that package.
+
+101
+00:07:31.220 --> 00:07:33.710
+We'll just give it the package name.
+
+102
+00:07:33.710 --> 00:07:37.204
+And you can see that user bin which,
+in addition to these other files,
+
+103
+00:07:37.204 --> 00:07:39.406
+are contained in that particular package.
+
+104
+00:07:42.831 --> 00:07:47.760
+Another popular package format
+is the Debian package format.
+
+105
+00:07:47.760 --> 00:07:52.600
+In addition to Debian, distributions like
+Linux Mint and Ubuntu use DEB packages.
+
+106
+00:07:53.850 --> 00:07:57.440
+The Debian base distributions use
+a package manager called APT.
+
+107
+00:07:57.440 --> 00:07:58.651
+The advance packaging tool.
+
+108
+00:07:58.651 --> 00:08:02.052
+APT is comprised of a few
+small utilities with
+
+109
+00:08:02.052 --> 00:08:06.900
+the two most commonly used ones
+being apt -cache and apt-get.
+
+110
+00:08:07.930 --> 00:08:12.000
+To search for packages, use apt-cache
+search, and the search string.
+
+111
+00:08:13.128 --> 00:08:17.800
+To install the package, use apt-get,
+install and the package name.
+
+112
+00:08:17.800 --> 00:08:22.960
+You can use -y to automatically answer
+yes to any of apt-get's questions.
+
+113
+00:08:24.480 --> 00:08:27.700
+To remove a package, use apt-get remove.
+
+114
+00:08:27.700 --> 00:08:31.760
+If there are any configuration files,
+or configuration changes,
+
+115
+00:08:31.760 --> 00:08:35.370
+those will stay on your
+system with apt-get remove.
+
+116
+00:08:35.370 --> 00:08:39.170
+However, if you wanna get rid of the
+configuration in addition to the package,
+
+117
+00:08:39.170 --> 00:08:41.389
+you can use apt-get purge package.
+
+118
+00:08:43.290 --> 00:08:47.310
+To show information about a particular
+package, use apt-cache show and
+
+119
+00:08:47.310 --> 00:08:48.060
+the package name.
+
+120
+00:08:49.420 --> 00:08:51.200
+In addition to the app utilities,
+
+121
+00:08:51.200 --> 00:08:55.080
+you can use the dpkg command to
+interact with the package manager.
+
+122
+00:08:55.080 --> 00:09:00.103
+Dpkg -l lists the installed packages.
+
+123
+00:09:00.103 --> 00:09:01.345
+Dpkg space -S and
+
+124
+00:09:01.345 --> 00:09:06.545
+a path to a file, will display
+the package that the file belongs to.
+
+125
+00:09:07.835 --> 00:09:12.535
+Dpkg with a -L lists all
+the files in a package.
+
+126
+00:09:12.535 --> 00:09:17.051
+And to install a package,
+use dpkg space -i and the .deb file.
+
+127
+00:09:19.801 --> 00:09:23.830
+Here we are on an Ubuntu system.
+
+128
+00:09:23.830 --> 00:09:27.366
+Let's use app to look for
+and install some software.
+
+129
+00:09:30.051 --> 00:09:35.350
+Look for inkscape and the first result
+returned there looks like what we want.
+
+130
+00:09:35.350 --> 00:09:39.030
+Let's take a look at it
+with app cache show.
+
+131
+00:09:42.790 --> 00:09:47.947
+Give some information about the package,
+its dependencies, its description.
+
+132
+00:09:51.791 --> 00:09:56.670
+So we will install that
+with apt-get install.
+
+133
+00:09:57.820 --> 00:10:01.940
+And installing and removing
+software requires root privileges.
+
+134
+00:10:01.940 --> 00:10:05.860
+You can get root privileges by using
+the sudo command, that's one way.
+
+135
+00:10:05.860 --> 00:10:07.416
+You can also switch to the root account.
+
+136
+00:10:14.260 --> 00:10:16.210
+Do I want to continue?
+
+137
+00:10:16.210 --> 00:10:17.401
+Yes, we'll install this software.
+
+138
+00:10:35.058 --> 00:10:36.798
+Okay now the software
+installation is done.
+
+139
+00:10:36.798 --> 00:10:38.868
+We can see if we can find it.
+
+140
+00:10:43.321 --> 00:10:45.661
+And, sure enough,
+we can see that it's installed.
+
+141
+00:10:51.321 --> 00:10:55.540
+You can also just answer yes
+to apt's question with a -y.
+
+142
+00:10:55.540 --> 00:10:57.811
+So, we'll go ahead and
+install GIMP this way.
+
+143
+00:11:05.471 --> 00:11:07.260
+Okay GIMP is installed.
+
+144
+00:11:08.770 --> 00:11:10.250
+Now we can see there it is.
+
+145
+00:11:10.250 --> 00:11:12.420
+So we'll go ahead and just remove it.
+
+146
+00:11:12.420 --> 00:11:15.480
+We'll do app-get remove.
+
+147
+00:11:15.480 --> 00:11:18.531
+Again we need root privileges to add or
+remove software.
+
+148
+00:11:27.481 --> 00:11:29.331
+And GIMP is now gone from the system.
+
+149
+00:11:29.331 --> 00:11:34.461
+Let's look at that stalling
+software from a .deb file.
+
+150
+00:11:44.921 --> 00:11:46.680
+I'm on Ubuntu here.
+
+151
+00:11:46.680 --> 00:11:48.391
+Let's download the .deb for Ubuntu.
+
+152
+00:12:07.671 --> 00:12:10.731
+Going to use dpkg-i to
+do the installation.
+
+153
+00:12:18.091 --> 00:12:20.190
+And Dropbox is installed.
+
+154
+00:12:21.510 --> 00:12:26.181
+We can use dpkg -l to list
+all the installed packages.
+
+155
+00:12:34.801 --> 00:12:41.036
+Let's see, let's use dpg -S and
+see which file,
+
+156
+00:12:41.036 --> 00:12:46.550
+which package the which
+command belongs to.
+
+157
+00:12:48.260 --> 00:12:52.550
+It belongs to the debianutils package,
+so we can look at
+
+158
+00:12:52.550 --> 00:12:57.420
+all the files in the debianutils
+package with the -L command.
+
+159
+00:12:58.890 --> 00:13:02.135
+Let's, yeah, you can see at
+the very bottom, user bin which.
+
+160
+00:13:05.201 --> 00:13:10.350
+Packages are used to install
+software on Linux systems.
+
+161
+00:13:10.350 --> 00:13:12.695
+You can manipulate packages
+with a package manager.
+
+162
+00:13:12.695 --> 00:13:18.456
+Two of the most package
+formats are RPM and Debian.
+
+163
+00:13:18.456 --> 00:13:26.015
+For RPN based distributions, use the yum
+and RPM commands to manage packages.
+
+164
+00:13:26.015 --> 00:13:31.225
+For Debian based distributions use apt and
+dpkg to manage packages
+

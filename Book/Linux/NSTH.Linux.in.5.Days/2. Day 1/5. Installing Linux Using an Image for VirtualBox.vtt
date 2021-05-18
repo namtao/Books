@@ -1,0 +1,133 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:02.730 --> 00:00:08.610
+The first thing we need to do is download a CentOS VDI, or virtual disk
+
+00:00:08.610 --> 00:00:17.250
+image.  Open up a web browser and visit, LinuxTrainingAcademy.com/vdi.  Click
+
+00:00:17.250 --> 00:00:22.949
+on the CentOS 7 VDI download link.  This is a rather large file so this will take
+
+00:00:22.949 --> 00:00:27.810
+several minutes to download.
+Once the download is completed, we need to extract
+
+00:00:27.810 --> 00:00:32.220
+the contents of the archive.  First you're going to navigate to the folder where
+
+00:00:32.220 --> 00:00:37.079
+you saved the download. This is typically your downloads folder.  I'm on a mac, so
+
+00:00:37.079 --> 00:00:42.210
+I'm going to double click on the archive to extract its contents.  Remember
+
+00:00:42.210 --> 00:00:46.800
+that this process was covered in an earlier video, one for Mac users and
+
+00:00:46.800 --> 00:00:49.660
+another video for Windows users.
+
+00:00:49.700 --> 00:00:54.079
+Once the contents of the archive have been extracted,
+
+00:01:06.680 --> 00:01:10.980
+we'll start the virtual box application.
+Next, create a new container or virtual machine
+
+00:01:10.980 --> 00:01:14.360
+for our CentOS operating system installation.
+
+00:01:14.560 --> 00:01:19.960
+You can see here that it asks you for a few bits of information.
+
+00:01:20.240 --> 00:01:22.180
+The name, the type, and
+
+00:01:22.180 --> 00:01:27.960
+the version.
+I'm going to name it centosdesktop.
+As I typed that
+
+00:01:27.960 --> 00:01:32.850
+in, virtualbox automatically selected Linux as the type and RedHat as the
+
+00:01:32.850 --> 00:01:36.900
+version.
+If it didn't, we could simply use the dropdown boxes and make the
+
+00:01:36.900 --> 00:01:40.100
+appropriate selections.
+
+00:01:45.760 --> 00:01:50.460
+The minimum amount of ram recommended is 1024
+
+00:01:50.490 --> 00:01:55.080
+MB or 1 GB.
+I have plenty of RAM to use on my system, so I'm going to
+
+00:01:55.080 --> 00:02:02.400
+dedicated about half of my resources to this virtual machine.  So, I'll use 8192
+
+00:02:02.400 --> 00:02:06.420
+MB or 8 gigabytes.
+
+00:02:11.080 --> 00:02:13.900
+Choose "an existing virtual hard drive file"
+
+00:02:13.940 --> 00:02:17.920
+Click the folder icon, and navigate to where you extracted the virtual
+
+00:02:17.930 --> 00:02:22.520
+disk image.  This will probably be in your downloads
+
+00:02:23.360 --> 00:02:32.560
+folder.  Click on open and then click create.
+
+00:02:37.800 --> 00:02:44.460
+Let's power on the virtual machine by clicking on the virtual machine
+
+00:02:44.460 --> 00:02:50.040
+and then clicking on the start button at the top. You can also right-click and click start there,
+
+00:02:50.720 --> 00:02:54.320
+either way is fine.
+
+00:03:05.960 --> 00:03:10.560
+Once CentOS is booted up you'll be presented with a login screen.
+
+00:03:10.569 --> 00:03:14.260
+To log in as the adminuser, click on that username.  Now enter in the password,
+
+00:03:14.260 --> 00:03:20.410
+which is also adminuser.
+
+00:03:21.370 --> 00:03:25.750
+By the way, the username and password for the system will be supplied with
+
+00:03:25.750 --> 00:03:29.920
+the disk image.  So if you happen to use different disk image, look for the
+
+00:03:29.920 --> 00:03:35.319
+username and password combination that works with that particular image.
+
+00:03:35.320 --> 00:03:39.040
+The first time you log in you'll be asked a couple of questions to complete the
+
+00:03:39.040 --> 00:03:42.790
+setup for the account.
+
+00:04:12.760 --> 00:04:15.160
+Now that we see everything works,
+
+00:04:15.240 --> 00:04:19.520
+I'm going to shutdown the system by clicking
+
+00:04:20.220 --> 00:04:27.460
+in the top right hand corner and clicking on the power button.
+
+00:04:33.940 --> 00:04:40.540
+Now you can use this Linux installation to complete this course and practice your Linux skills.
+

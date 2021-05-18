@@ -1,0 +1,740 @@
+WEBVTT
+
+1
+00:00:03.378 --> 00:00:07.834
+In today's lesson we'll be talking
+about Symbolic permissions,
+
+2
+00:00:07.834 --> 00:00:11.899
+Numeric permissions,
+File versus directory permissions,
+
+3
+00:00:11.899 --> 00:00:17.150
+how to change permissions, how to work
+with groups and the File creation mask.
+
+4
+00:00:18.940 --> 00:00:24.280
+Here is some output from an ls -l command,
+and if you look at the permission string,
+
+5
+00:00:24.280 --> 00:00:30.440
+the first character will indicate whether
+it's a Regular file by beginning with a -,
+
+6
+00:00:30.440 --> 00:00:33.640
+or it will begin with
+a d if it's a Directory.
+
+7
+00:00:33.640 --> 00:00:35.700
+Or an l, if it's a Symbolic link.
+
+8
+00:00:36.980 --> 00:00:40.957
+Other characters that you'll encounter
+in the permissions stream include r, w,
+
+9
+00:00:40.957 --> 00:00:41.877
+and x.
+
+10
+00:00:41.877 --> 00:00:47.520
+r, w, and x represent the three
+main types of permissions.
+
+11
+00:00:47.520 --> 00:00:49.960
+They are Read, which is r.
+
+12
+00:00:49.960 --> 00:00:53.520
+Write, which is w, and
+Execute, which is x.
+
+13
+00:00:55.570 --> 00:00:59.630
+If you add Read permission to a file,
+that means you can see its contents.
+
+14
+00:00:59.630 --> 00:01:02.570
+For example,
+you could run KAT against the file and
+
+15
+00:01:02.570 --> 00:01:04.010
+you could see the file's contents.
+
+16
+00:01:06.170 --> 00:01:09.120
+If you have Write permissions to a file,
+you can modify it.
+
+17
+00:01:09.120 --> 00:01:10.540
+You can changes its contents.
+
+18
+00:01:11.760 --> 00:01:15.270
+If you have Execute permissions,
+you can run that file as a program.
+
+19
+00:01:16.650 --> 00:01:22.360
+Read, Write, and Execute are fairly self
+explanatory when there applied to files.
+
+20
+00:01:22.360 --> 00:01:25.000
+However, they have a slightly different
+meaning when they're applied to
+
+21
+00:01:25.000 --> 00:01:26.060
+directories.
+
+22
+00:01:26.060 --> 00:01:29.580
+For example, when Read permissions
+are applied to a directory,
+
+23
+00:01:29.580 --> 00:01:33.140
+that means you can see the file
+names in the directory.
+
+24
+00:01:33.140 --> 00:01:36.080
+If you don't have read permissions to
+a directory you will not be able to see
+
+25
+00:01:36.080 --> 00:01:37.310
+the directory's contents.
+
+26
+00:01:39.030 --> 00:01:41.120
+The Write permission,
+when applied to directories,
+
+27
+00:01:41.120 --> 00:01:44.330
+allows entries to be modified
+within the directory.
+
+28
+00:01:44.330 --> 00:01:46.710
+So you can edit files that
+are in the directory.
+
+29
+00:01:48.400 --> 00:01:51.760
+The Execute permission gives you
+the ability to see metadata about
+
+30
+00:01:51.760 --> 00:01:53.300
+the files that are in the directory.
+
+31
+00:01:54.420 --> 00:01:57.880
+Read permissions give you the ability
+to see file names whereas the Execute
+
+32
+00:01:57.880 --> 00:02:02.590
+permissions give you the ability
+to see modification dates and
+
+33
+00:02:02.590 --> 00:02:04.580
+owner and group information.
+
+34
+00:02:04.580 --> 00:02:07.970
+Just like you would see in a ls
+dash l long listing output.
+
+35
+00:02:10.500 --> 00:02:13.400
+There are categories of users
+that these read, write, and
+
+36
+00:02:13.400 --> 00:02:16.190
+execute permissions can be applied to.
+
+37
+00:02:16.190 --> 00:02:21.540
+These categories are User,
+Group, Other, and All.
+
+38
+00:02:21.540 --> 00:02:25.460
+And like the permission types, each
+one is represented by a single letter.
+
+39
+00:02:25.460 --> 00:02:29.970
+For example,
+u represents the User that owns the file.
+
+40
+00:02:29.970 --> 00:02:33.160
+The users that are in the file's
+Group are represented by g.
+
+41
+00:02:34.250 --> 00:02:39.010
+Users that are not the owner or are not
+in the file's group are considered Other.
+
+42
+00:02:39.010 --> 00:02:40.550
+Represented by o.
+
+43
+00:02:40.550 --> 00:02:43.080
+A is used to represent All, or everybody.
+
+44
+00:02:44.360 --> 00:02:48.100
+Every user on a Linux system
+belongs to at least one group,
+
+45
+00:02:48.100 --> 00:02:49.290
+called their primary group.
+
+46
+00:02:50.330 --> 00:02:53.150
+However, users can belong to many groups.
+
+47
+00:02:53.150 --> 00:02:58.010
+For example, if members of the sales team
+need access to some of the same files and
+
+48
+00:02:58.010 --> 00:03:00.970
+directories, they can be
+placed into the sales group.
+
+49
+00:03:02.230 --> 00:03:05.570
+Run the groups command to see
+what groups you're a member of,
+
+50
+00:03:05.570 --> 00:03:09.660
+if you supply another user's ID to
+an argument to the group's command.
+
+51
+00:03:09.660 --> 00:03:12.220
+You'll see a list of groups
+to which that user belongs.
+
+52
+00:03:13.220 --> 00:03:20.370
+You can also use id -Gn,
+as a synonym for groups.
+
+53
+00:03:20.370 --> 00:03:21.590
+It will give you the same output.
+
+54
+00:03:22.940 --> 00:03:23.760
+In this example,
+
+55
+00:03:23.760 --> 00:03:29.540
+running the groups command shows that I am
+in the Jason group and the sales group.
+
+56
+00:03:29.540 --> 00:03:37.410
+You can also see that id -Gn returns
+the same value as the groups command does.
+
+57
+00:03:37.410 --> 00:03:41.260
+If you run the groups command followed by
+another username you'll see the groups
+
+58
+00:03:41.260 --> 00:03:42.440
+that they are in.
+
+59
+00:03:42.440 --> 00:03:45.750
+For instance, Pat is in the finance and
+New York groups.
+
+60
+00:03:46.810 --> 00:03:49.860
+The adminuser is only
+in the adminuser group.
+
+61
+00:03:51.800 --> 00:03:54.960
+At this point you finally have enough
+background information to start
+
+62
+00:03:54.960 --> 00:03:57.370
+decoding the permission string.
+
+63
+00:03:57.370 --> 00:04:02.910
+We covered that the first character is
+the type, the directory, a file or a link.
+
+64
+00:04:04.080 --> 00:04:07.480
+The next route characters represent
+the permissions available to the user
+
+65
+00:04:07.480 --> 00:04:09.149
+also known as the owner of the file.
+
+66
+00:04:10.490 --> 00:04:13.400
+The next three characters represent
+the permissions available to
+
+67
+00:04:13.400 --> 00:04:16.230
+the members of the file's group.
+
+68
+00:04:16.230 --> 00:04:20.370
+The final three characters represent
+the permissions available to all users.
+
+69
+00:04:21.580 --> 00:04:24.210
+With permissions, order has meaning.
+
+70
+00:04:24.210 --> 00:04:27.380
+So, permissions will always
+be displayed in this order.
+
+71
+00:04:27.380 --> 00:04:31.490
+User, followed by Group,
+and finally Others.
+
+72
+00:04:31.490 --> 00:04:33.510
+Also, the permission types of read,
+write, and
+
+73
+00:04:33.510 --> 00:04:36.750
+execute are always displayed
+in that order, too.
+
+74
+00:04:36.750 --> 00:04:40.410
+So if a particular permission is not
+granted, a hyphen will take its place.
+
+75
+00:04:41.450 --> 00:04:44.360
+Permissions are also known as modes.
+
+76
+00:04:44.360 --> 00:04:48.270
+That's why the command you use to
+change permissions is called chmod,
+
+77
+00:04:48.270 --> 00:04:51.200
+which is short for change mode.
+
+78
+00:04:51.200 --> 00:04:55.490
+The format of the chmod
+command is chmod mode file.
+
+79
+00:04:56.590 --> 00:04:59.420
+And there are a couple of different
+ways to specify the mode.
+
+80
+00:04:59.420 --> 00:05:03.140
+One is symbolic notation, and
+the other is numeric notation.
+
+81
+00:05:04.440 --> 00:05:09.880
+To specify modes or permissions with
+symbolic notation, run the chmod command.
+
+82
+00:05:09.880 --> 00:05:15.540
+Followed by user, group, other or all.
+
+83
+00:05:15.540 --> 00:05:19.690
+And an operator to add,
+subtract or set permissions.
+
+84
+00:05:19.690 --> 00:05:25.962
+Followed by the permissions themself,
+read, write or execute.
+
+85
+00:05:25.962 --> 00:05:28.796
+[SOUND] You can add, subtract or
+
+86
+00:05:28.796 --> 00:05:34.355
+set permissions using user category and
+permission pairs.
+
+87
+00:05:34.355 --> 00:05:40.397
+So pick a category, user,
+group, other or all.
+
+88
+00:05:40.397 --> 00:05:47.297
+Let's pick group, what we wanna do,
+add, subtract or set the permission.
+
+89
+00:05:47.297 --> 00:05:51.080
+Let's add and add read, write, or execute.
+
+90
+00:05:51.080 --> 00:05:52.680
+So let's just add the write permission.
+
+91
+00:05:57.140 --> 00:05:59.677
+You can see that an extra W shows up in
+
+92
+00:05:59.677 --> 00:06:04.000
+the permissions string in
+the appropriate place for group.
+
+93
+00:06:06.730 --> 00:06:10.331
+Can undo this by removing or
+subtracting that permission.
+
+94
+00:06:14.551 --> 00:06:17.640
+You can also change more than
+just one permission at a time.
+
+95
+00:06:17.640 --> 00:06:22.391
+So, you can specify the group have
+write and execute permissions.
+
+96
+00:06:25.751 --> 00:06:29.533
+If you want to set different permissions
+for different user categories,
+
+97
+00:06:29.533 --> 00:06:33.060
+you can separate
+the specifications with a comma.
+
+98
+00:06:33.060 --> 00:06:36.850
+So for instance we can specify
+something for the user.
+
+99
+00:06:36.850 --> 00:06:39.370
+Let's add read, write, execute.
+
+100
+00:06:39.370 --> 00:06:41.551
+And for group let's take away execute.
+
+101
+00:06:46.593 --> 00:06:50.293
+And you can see that that
+change has taken effect.
+
+102
+00:06:50.293 --> 00:06:55.439
+When you specify an equals sign,
+that sets the permission
+
+103
+00:06:55.439 --> 00:07:00.910
+to exactly what you specify, so
+let's say all is set to read.
+
+104
+00:07:05.210 --> 00:07:09.197
+And we can see now that the owner,
+or the user, the group, and
+
+105
+00:07:09.197 --> 00:07:12.128
+other are all set,
+to just read permission.
+
+106
+00:07:18.072 --> 00:07:22.030
+[SOUND] Also if you don't specify
+permissions after the equal sign,
+
+107
+00:07:22.030 --> 00:07:24.050
+all the permissions are removed.
+
+108
+00:07:24.050 --> 00:07:29.410
+So let's set the user read, write,
+execute group to read execute.
+
+109
+00:07:29.410 --> 00:07:32.592
+And we'll give no permissions to others.
+
+110
+00:07:40.512 --> 00:07:42.982
+In addition to symbolic mode,
+octal mode or
+
+111
+00:07:42.982 --> 00:07:47.210
+numeric mode can be used with chmod to
+set file and directory permissions.
+
+112
+00:07:49.100 --> 00:07:52.530
+In octal mode,
+permissions are based in binary.
+
+113
+00:07:52.530 --> 00:07:59.280
+Each permission type is treated as a bit
+that is either set to off 0 or on 1.
+
+114
+00:07:59.280 --> 00:08:03.130
+Again, in permissions, order has meaning.
+
+115
+00:08:03.130 --> 00:08:07.340
+So permissions are always in read,
+write, and execute order.
+
+116
+00:08:07.340 --> 00:08:14.350
+So r, w and x are all set to off,
+the binary representation is 000.
+
+117
+00:08:14.350 --> 00:08:17.520
+If they're all set to on,
+the binary representation is 1 1 1.
+
+118
+00:08:17.520 --> 00:08:21.650
+If you wanna omit the right permission,
+
+119
+00:08:21.650 --> 00:08:25.910
+the binary representation would be 1 0 1.
+
+120
+00:08:25.910 --> 00:08:28.620
+To get a number that
+you can use with chmod
+
+121
+00:08:28.620 --> 00:08:33.350
+convert the binary representation
+into base ten or decimal.
+
+122
+00:08:33.350 --> 00:08:37.820
+So really the shortcut here is to
+remember that read equals four,
+
+123
+00:08:37.820 --> 00:08:41.090
+write equals two, and execute equals one.
+
+124
+00:08:42.360 --> 00:08:45.920
+The permissions number is determined
+by adding up all the values for
+
+125
+00:08:45.920 --> 00:08:47.780
+each permission type.
+
+126
+00:08:47.780 --> 00:08:53.140
+There are eight possible values from zero
+to seven, hence the name octal mode.
+
+127
+00:08:54.200 --> 00:08:56.948
+This graphic list all
+eight possible options.
+
+128
+00:08:59.727 --> 00:09:05.570
+The user categories are always
+in user group and other order.
+
+129
+00:09:06.680 --> 00:09:09.680
+So once you determine the octal value for
+each category,
+
+130
+00:09:09.680 --> 00:09:11.590
+you specify them in that order.
+
+131
+00:09:12.700 --> 00:09:16.800
+So, for example, to get read,
+write, execute for user.
+
+132
+00:09:16.800 --> 00:09:21.792
+Read and execute for group, and
+just read for other, you would specify
+
+133
+00:09:21.792 --> 00:09:27.242
+chmod spac 754, space the file name.
+
+134
+00:09:27.242 --> 00:09:32.210
+Here are are the most
+commonly used permissions.
+
+135
+00:09:32.210 --> 00:09:37.150
+So 700 ensures that a file can be read,
+edited and
+
+136
+00:09:37.150 --> 00:09:43.780
+executed by the owner and no one else on
+the system will have access to that file.
+
+137
+00:09:43.780 --> 00:09:47.590
+The 755 permission allows everyone
+on the system to execute the file.
+
+138
+00:09:47.590 --> 00:09:51.390
+But only the user or
+the owner of the file can edit that file.
+
+139
+00:09:52.865 --> 00:09:58.242
+664 allows a group of people to modify
+the file and let others read it.
+
+140
+00:09:58.242 --> 00:10:03.560
+And 660 allows a group of people to modify
+the file and not let others read it.
+
+141
+00:10:05.152 --> 00:10:09.060
+Mode 644 allows everyone on
+the system to read the file.
+
+142
+00:10:09.060 --> 00:10:12.540
+But only the user or
+owner of that file can edit that file.
+
+143
+00:10:14.420 --> 00:10:18.681
+If you're ever tempted to use seven,
+seven, seven or six, six, six, for
+
+144
+00:10:18.681 --> 00:10:22.900
+permissions, ask yourself if
+there's a better way to do that.
+
+145
+00:10:22.900 --> 00:10:24.698
+Because giving seven, seven,
+
+146
+00:10:24.698 --> 00:10:29.300
+seven permissions gives everyone on a
+system full access to that file directory.
+
+147
+00:10:30.780 --> 00:10:36.206
+For example, if a program or a script is
+set to seven, seven, seven permission,
+
+148
+00:10:36.206 --> 00:10:40.840
+then anyway on system can make
+changes to that script or program.
+
+149
+00:10:40.840 --> 00:10:42.550
+Since the execute bit is set for
+
+150
+00:10:42.550 --> 00:10:46.880
+everyone, that program can be
+executed by anyone on the system.
+
+151
+00:10:46.880 --> 00:10:50.780
+So if malicious code was
+either inserted on purpose or
+
+152
+00:10:50.780 --> 00:10:54.270
+by accident,
+it could cause unnecessary trouble.
+
+153
+00:10:54.270 --> 00:10:58.730
+If multiple people need right access
+to a file, consider using groups and
+
+154
+00:10:58.730 --> 00:11:01.740
+limiting that access to
+the members of that group.
+
+155
+00:11:03.350 --> 00:11:06.629
+In general, it's good to avoid seven,
+seven, seven and six, six,
+
+156
+00:11:06.629 --> 00:11:07.748
+six permission modes.
+

@@ -1,0 +1,475 @@
+<!-- Original URL: http://khigiacmoquayve.narod.ru/vietbook/linux/slackware/filesystems.html -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>filesystems</title>
+</head>
+<body>
+<span style="font-style: italic;">Ki&#7871;n Th&#7913;c C&#417; B&#7843;n Slackware Linux</span><br>
+<hr> <a name="ch_5.2"><big><span style="font-weight: bold;">5.2 C&#7845;u
+tr&uacute;c h&#7879; th&#7889;ng t&#7879;p tin(Filesystem Structure)<br>
+</span></big><br>
+Ch&uacute;ng ta &#273;&atilde; l&agrave;m quen v&#7899;i c&#7845;u tr&uacute;c catalog
+trong Slackware Linux.B&#7841;n bi&#7871;t c&aacute;ch t&igrave;m ki&#7871;m c&aacute;c
+t&#7879;p tin,catalog c&#7847;n thi&#7871;t.Linux l&agrave; m&#7897;t h&#7879; th&#7889;ng &#273;a t&agrave;i
+kho&#7843;n.T&#7845;t c&#7843; c&aacute;c th&agrave;nh ph&#7847;n coi nh&#432; l&agrave; m&#7897;t h&#7879; th&#7889;ng
+t&#7879;p tin.H&#7879; th&#7889;ng n&agrave;y c&#7845;t gi&#7919; th&ocirc;ng tin c&#7911;a t&#7915;ng ng&#432;&#7901;i
+ri&ecirc;ng bi&#7879;t kh&ocirc;ng x&acirc;m ph&#7841;m l&#7851;n nhau(n&#7871;u kh&ocirc;ng cho
+ph&eacute;p).V&agrave; no c&ograve;n cho ph&eacute;p s&#7917; d&#7909;ng &#7843;nh
+v&agrave; k&#7871;t n&#7889;i NFS.&#7902; trong ph&#7847;n n&agrave;y ch&uacute;ng ta ch&#7911; y&#7871;u
+xem x&eacute;t c&aacute;c kh&iacute;a c&#7841;nh kh&aacute;c nhau c&#7911;a
+t&iacute;nh &#273;a t&agrave;i kho&#7843;n tr&ecirc;n c&#7845;u tr&uacute;c h&#7879; th&#7889;ng t&#7879;p
+tin.<br>
+<br>
+</a><a name="ch_5.2.1"><span style="font-weight: bold;">5.2.1 Quy&#7873;n ch&#7911;
+s&#7903; h&#7919;u<br>
+</span><br>
+H&#7879; th&#7889;ng t&#7879;p tin l&#432;u tr&#7919; th&ocirc;ng tin v&#7873; quy&#7873;n ch&#7911; s&#7903; h&#7919;u cho t&#7915;ng
+t&#7879;p tin c&#361;ng nh&#432; catalog.Bao g&#7891;m th&ocirc;ng tin v&#7873; t&agrave;i
+kho&#7843;n,nh&oacute;m m&agrave; n&oacute; tr&#7921;c thu&#7897;c.Ph&#432;&#417;ng ph&aacute;p &#273;&#417;n
+gi&#7843;i &#273;&#7875; xem nh&#7919;ng th&ocirc;ng tin &#7845;y l&agrave; dung l&#7879;nh ls:<br>
+<br>
+<span style="font-weight: bold;"> $ ls -l /usr/bin/wc</span><br>
+<span style="font-style: italic;"> -rwxr-xr-x&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp; bin&nbsp;&nbsp;&nbsp; 7368 Jul 30&nbsp;
+1999 /usr/bin/wc</span> <br>
+<br>
+Ch&uacute;ng ta kh&ocirc;ng quan t&acirc;m t&#7899;i c&#7897;t th&#7913; ba v&agrave; th&#7913;
+t&#432;.Ch&uacute;nh ch&#7913;a th&ocirc;ng tin v&#7873; t&ecirc;n v&agrave; nh&oacute;m
+m&agrave; t&#7879;p tin tr&#7921;c thu&#7897;c.Trong v&iacute; d&#7909; tr&ecirc;n file thu&#7897;c
+t&agrave;i kho&#7843;n root v&agrave; nh&oacute;m bin.<br>
+<br>
+Ch&#7911; c&#7911;a file c&oacute; th&#7875; thay &#273;&#7893;i&nbsp; b&#7903;i l&#7879;nh <span
+ style="font-weight: bold;">chown(1)</span>(c&oacute; ngh&#297;a l&agrave;
+"change owner"- thay &#273;&#7893;i ch&#7911; s&#7903; h&#7919;u),c&ograve;n nh&oacute;m th&igrave;
+c&oacute; th&#7875; b&#7857;ng l&#7879;nh chgrp("change group -Thay &#273;&#7893;i nh&oacute;m s&#7903;
+h&#7919;u").&#272;&#7875; thay &#273;&#7893;i ch&#7911; s&#7903; h&#7919;u l&agrave; "daemon" th&igrave; c&#7847;n lam nh&#432;
+sau:<br>
+<br>
+<span style="font-weight: bold;"> #chown daemon /usr/bin/wc<br>
+</span><br>
+C&ograve;n mu&#7889;n chuy&#7875;n nh&oacute;m sang "root" th&igrave; l&agrave;m
+nh&#432; sau:<br>
+<br>
+<span style="font-weight: bold;"> #chgrp root /usr/bin/wc</span><br>
+<br>
+L&ecirc;nh chown c&oacute; th&#7875; s&#7917; d&#7909;ng&nbsp; theo c&aacute;ch sau:<br>
+<br>
+<span style="font-weight: bold;"> # chown daemon.root /usr/bin/wc</span><br>
+<br>
+T&iacute;nh s&#7903; h&#7919;u files &#273;&#432;&#7907;c coi l&agrave; m&#7897;t ph&#7847;n quan tr&#7885;ng
+tr&ecirc;n h&#7879; th&#7889;ng Linux th&#7853;m ch&iacute; ngay c&#7843; khi c&oacute; duy nh&#7845;t
+m&#7897;t t&agrave;i kho&#7843;n tr&ecirc;n h&#7879; th&#7889;ng m&agrave; &#273;&ocirc;i khi b&#7841;n v&#7851;n
+ph&#7843;i c&#7847;n ch&#7881;nh l&#7841;i quy&#7873;n s&#7903; h&#7919;u c&aacute;c files v&agrave; c&aacute;c
+nodes thi&#7871;t b&#7883;.<br>
+<br>
+</a><a name="ch_5.2.2"><span style="font-weight: bold;">5.2.2 Quy&#7873;n
+truy c&#7853;p<br>
+</span><br>
+<span style="font-weight: bold;"> Quy&#7873;n truy c&#7853;p</span> - c&#361;ng l&agrave;
+m&#7897;t trong nh&#7919;ng ph&aacute;t sinh tr&ecirc;n h&#7879; th&#7889;ng &#273;a t&agrave;i
+kho&#7843;n Linux.Nh&#7901; c&oacute; n&oacute; m&agrave; b&#7841;n c&oacute; th&#7875;
+&#273;&#7885;c,ghi,xo&aacute; ch&uacute;ng.<br>
+<br>
+Quy&#7873;n truy c&#7853;p &#273;&#432;&#7907;c l&#432;u tr&#7919; &#7903; d&#7841;ng b&#7889;n con s&#7889; thu&#7897;c c&#417; s&#7889;
+t&aacute;m.M&#7895;i s&#7889; &#273;&#7841;i di&#7879;n cho m&#7897;t quy&#7873;n h&#7841;n v&#7899;i m&#7897;t block
+ri&ecirc;ng.Block ch&#7911; s&#7903; h&#7919;u,block nh&oacute;m,v&agrave; block cho
+c&aacute;c &#273;&#7889;i t&#432;&#7907;ng c&ograve;n l&#7841;i.B&#7889;n s&#7889; h&#7879; t&aacute;m n&agrave;y s&#7917;
+d&#7909;ng &#273;&#7875; l&#432;u l&#7841;i th&ocirc;ng tin &#273;&#7863;c bi&#7879;t nh&#432; :<span
+ style="font-style: italic;">ID ch&#7911; s&#7903; h&#7919;u,ID nh&oacute;m s&#7903;
+h&#7919;u,"sticky" bits</span>.Gi&aacute; tr&#7883; c&aacute;c s&#7889; n&agrave;y t&#432;&#417;ng
+&#7913;ng v&#7899;i quy&#7873;n h&#7841;n s&#7917; d&#7909;ng(N&oacute; c&oacute; th&#7875; s&#7917; d&#7909;ng ch&#7919; &#273;&#7875; di&#7877;n
+t&#7843; v&agrave; &#273;&#432;&#7907;c hi&#7875;n th&#7883; b&#7903;i c&aacute;c ch&#432;&#417;ng tr&igrave;nh nh&#432; ls
+v&agrave; c&oacute; th&#7875; s&#7917; d&#7909;ng v&#7899;i <span style="font-weight: bold;">chmod</span>:</a>
+<table cellpadding="2" cellspacing="2" border="1"
+ style="text-align: left; width: 100%;">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; width: 30%; text-align: center; font-weight: bold;">Ki&#7875;u<br>
+      </td>
+      <td
+ style="vertical-align: top; width: 30%; text-align: center; font-weight: bold;">Gi&aacute;
+tr&#7883; (c&#417; s&#7889; 8)<br>
+      </td>
+      <td
+ style="vertical-align: top; width: 30%; text-align: center; font-weight: bold;">Ch&#7919;<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">"sticky"
+bits<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">t<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">set
+user ID<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">4<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">s<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">set
+group ID<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">2<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">s<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">read<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">4<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">r<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">write<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">2<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">w<br>
+      </td>
+    </tr>
+    <tr>
+      <td
+ style="vertical-align: top; text-align: center; font-style: italic;">execute<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">1<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">x<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<a name="ch_5.2.2"><br>
+G&iacute;a tr&#7883; c&#7911;a c&aacute;c nh&oacute;m quy&#7873;n h&#7841;n c&oacute; th&#7875; c&#7897;ng
+l&#7841;i.Ch&#7859;ng h&#7841;n b&#7841;n mu&#7889;n quy&#7873;n h&#7841;n c&#7911;a nh&oacute;m l&agrave; "read"
+v&agrave; "write" th&igrave; b&#7841;n c&oacute; th&#7875; s&#7917; d&#7909;ng gi&aacute; tr&#7883;
+"6".Qu&#7873;n h&#7841;n theo ng&#7847;m &#273;&#7883;ng c&#7911;a bash:<br>
+<br>
+<span style="font-weight: bold;"> $ ls -l /bin/bash</span><br>
+<span style="font-style: italic;"> -rwxr-xr-x&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp; bin&nbsp; 477692 Mar 21 19:57 /bin/bash </span><br>
+<br>
+Trong v&iacute; d&#7909; tr&ecirc;n ta th&#7845;y ti&#7873;n t&#7889; &#273;&#7847;u "-" l&agrave;
+d&ugrave;ng ch&#7881; &#273;&#7883;nh r&#7857;ng &#273;&#7845;y l&agrave; t&#7879;p tin,c&ograve;n n&#7871;u l&agrave;
+"d" - d&agrave;nh cho catalog.B&#7841;n nh&igrave;n th&#7845;y ba nh&oacute;m qu&#7873;n
+h&#7841;n s&#7917; d&#7909;ng(ch&#7911; s&#7903;&nbsp; h&#7919;u,nh&oacute;m s&#7903; h&#7919;u,nh&oacute;m c&ograve;n
+l&#7841;i),trong &#273;&oacute; ch&#7911; s&#7903; h&#7919;u c&oacute; qu&#7873;n h&#7841;n "rwx"(&#273;&#7885;c,ghi,th&#7921;c
+thi),c&ograve;n nh&oacute;m s&#7903; h&#7919;u c&oacute; quy&#7873;n h&#7841;n "r-x"(&#273;&#7885;c,th&#7921;c
+thi) v&agrave; c&aacute;c nh&oacute;m c&ograve;n l&#7841;i c&oacute; quy&#7873;n h&#7841;n
+"r-x"(&#273;&#7885;c,th&#7921;c thi).<br>
+<br>
+V&#7853;y ch&uacute;ng ta s&#7869; g&aacute;n qu&#7873;n h&#7841;n s&#7917; d&#7909;ng cho c&aacute;c t&#7879;p
+tin nh&#432; th&#7871; n&agrave;o.B&#7841;n h&atilde;y quan s&aacute;t v&iacute; d&#7909; sau:<br>
+<br>
+<span style="font-weight: bold;"> $ touch /tmp/example</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -l /tmp/example</span><br>
+<span style="font-style: italic;"> -rw-rw-r-&nbsp; 1
+david&nbsp;&nbsp;&nbsp; users&nbsp;&nbsp;&nbsp; 0 Apr 19 11:21
+/tmp/example </span><br style="font-style: italic;">
+<br>
+Ch&uacute;ng ta s&#7917; d&#7909;ng chmod(1)("change mode"- thay &#273;&#7893;i c&aacute;ch
+th&#7913;c) &#273;&#7875; ti&#7871;n h&agrave;nh g&aacute;n qu&#7873;n h&#7841;n s&#7917; d&#7909;ng cho t&#7879;p tin<br>
+<br>
+H&atilde;y c&#7897;ng c&aacute;c s&#7889;(trong c&#417; s&#7889; 8) &#273;&#7875; c&oacute; &#273;&#432;&#7907;c qu&#7873;n h&#7841;n
+m&agrave; b&#7841;n mu&#7889;n.&#272;&#7875; cho ch&#7911; s&#7903; h&#7919;u c&oacute; &#273;&#7911; qu&#7873;n h&#7841;n(&#273;&#7885;c,ghi,th&#7921;c
+thi) th&igrave; b&#7841;n c&#7847;n s&#7917; d&#7909;ng s&#7889; 7,(&#273;&#7885;c v&agrave; th&#7921;c thi) l&agrave;
+s&#7889; 5.Ch&uacute;ng ta h&atilde;y ti&#7871;n h&agrave;nh g&aacute;n ch&uacute;ng
+cho t&#7879;p tin:<br>
+<br>
+<span style="font-weight: bold;"> $ chmod 755 /tmp/example</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -l /tmp/example</span><br>
+<span style="font-style: italic;"> -rwxr-xr-x&nbsp;&nbsp; 1
+david&nbsp;&nbsp;&nbsp; users&nbsp;&nbsp;&nbsp; 0 Apr 19 11:21
+/tmp/example <br>
+</span><br>
+Tuy nhi&ecirc;n b&#7841;n c&oacute; th&#7875; gh&#297; r&#7857;ng t&#7841;i sao l&#7841;i kh&ocirc;ng
+x&aacute;c &#273;&#7883;nh ngay qu&#7873;n h&#7841;n theo ng&#7847;m &#273;&#7883;nh cho c&aacute;c t&#7879;p tin m&#7899;i
+&#273;&#432;&#7907;c t&#7841;o ra?.C&acirc;u tr&#7843; l&#7901;i r&#7845;t &#273;&#417;n gi&#7843;n.Bash c&oacute; th&#7875; th&#7921;c hi&#7879;n
+&#273;&#432;&#7907;c &#273;i&#7873;u n&agrave;y v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; c&#7911;a umask.&#272;&acirc;y l&agrave;
+m&#7897;t trong c&aacute;c &#7913;ng d&#7909;ng ti&ecirc;u chu&#7849;n tr&ecirc;n c&aacute;c
+phi&ecirc;n b&#7843;n Unix.N&oacute; x&aacute;c &#273;&#7883;nh qu&#7873;n h&#7841;n m&#7863;c &#273;&#7883;nh cho
+c&aacute;c t&#7879;p tin m&#7899;i &#273;&#432;&#7907;c sinh ra.Gi&aacute; tr&#7883; ng&#7847;m &#273;&#7883;nh c&#7911;a
+n&oacute; l&agrave; 0022.<br>
+<br>
+<span style="font-weight: bold;"> $umask</span><br>
+<span style="font-style: italic;"> 0022<br>
+</span><br>
+B&acirc;y gi&#7901; h&atilde;y x&aacute;c &#273;&#7883;nh gi&aacute; tr&#7883; m&#7863;c &#273;&#7883;nh cho h&#7879;
+th&#7889;ng l&agrave; 0077<br>
+<br>
+<span style="font-weight: bold;"> #umask 0077</span><br>
+<span style="font-weight: bold;"> $touch tempfile</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ls -l tempfile</span><br>
+<span style="font-style: italic;"> -rw-------- 1 david&nbsp;&nbsp;&nbsp;
+users&nbsp;&nbsp;&nbsp;&nbsp; 0 Apr&nbsp; 19 11:21&nbsp; tempfile<br>
+</span><br>
+B&#7841;n c&oacute; th&#7875; xem <span style="font-weight: bold;">man-pages</span>
+&#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin.<br>
+&#272;&#7875; t&#7841;o ra qu&#7873;n h&#7841;n &#273;&#7863;c bi&#7879;t th&igrave; b&#7841;n h&atilde;y c&#7897;ng c&aacute;c
+s&#7889; l&#7841;i v&agrave; &#273;&#7863;t ch&uacute;ng &#7903; c&#7897;t &#273;&#7847;u ti&ecirc;n.<br>
+<br>
+<span style="font-weight: bold;"> $ chmod 6755 /tmp/example</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ ls -l /tmp/example</span><br>
+<span style="font-style: italic;"> -rwsr-sr-x&nbsp;&nbsp; 1
+david&nbsp;&nbsp;&nbsp; users&nbsp;&nbsp;&nbsp; 0 Apr 19 11:21
+/tmp/example&nbsp; </span><br style="font-style: italic;">
+<br>
+Tuy nhi&ecirc;n n&#7871;u b&#7841;n kh&oacute; kh&#259;n trong vi&#7879;c nh&#7899; c&aacute;c s&#7889;
+th&igrave; h&atilde;y s&#7917; d&#7909;ng c&aacute;c ch&#7919; in.<br>
+<br>
+<span style="font-weight: bold;"> ch&#7911; s&#7903;
+h&#7919;u&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;u</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;">
+nh&oacute;m&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp; g</span><br style="font-weight: bold;">
+<span style="font-weight: bold;"> nh&oacute;m c&ograve;n
+l&#7841;i&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;a<br>
+</span><br>
+&#272;&#7875; l&agrave;m gi&#7889;ng nh&#432; tr&ecirc;n b&#7841;n c&#7847;n th&#7921;c hi&#7879;n nh&#7919;ng l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> $ chmod a+rx /tmp/example</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ chmod u+w /tmp/example</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> $ chmod ug+s /tmp/example</span><br>
+<br>
+M&#7897;t v&agrave;i th&iacute;ch l&agrave;m vi&#7879;c v&#7899;i c&aacute;c ch&#7919; in,tuy
+nhi&ecirc;n k&#7871;t q&#7911;a v&#7851;n l&agrave; nh&#432; nhau.T&oacute;m l&#7841;i ch&uacute;ng
+ta ph&#7843;i nh&#7899;&nbsp; c&aacute;ch g&aacute;n qu&#7873;n h&#7841;n s&#7917; d&#7909;ng t&#7879;p tin cho
+t&agrave;i kho&#7843;n v&agrave; nh&oacute;m t&agrave;i kho&#7843;n.C&oacute; khi
+n&agrave;o &#273;&oacute; b&#7841;n kh&ocirc;ng hi&#7875;u n&oacute; l&agrave; c&aacute;i
+gi?C&oacute; th&#7875; n&oacute;i th&ocirc;ng th&#432;&#7901;ng nh&#432; sau:Khi b&#7841;n kh&#7903;i &#273;&#7897;ng
+m&#7897;t t&#7879;p tin m&agrave; c&oacute; c&aacute;c qu&#7873;n h&#7841;n nh&#432;
+tr&ecirc;n,c&ograve;n b&#7841;n ch&#7881; l&agrave; m&#7897;t ng&#432;&#7901;i s&#7917; d&#7909;ng&nbsp;
+th&ocirc;ng th&#432;&#7901;ng.Th&#7853;t l&agrave; c&ocirc;ng b&#7857;ng,n&oacute; s&#7869; &#273;&#432;&#7907;c th&#7921;c
+hi&#7879;n v&#7899;i c&aacute;c qu&#7873;n h&#7841;n c&oacute; s&#7861;n m&agrave; b&#7841;n c&oacute;.Tuy
+nhi&ecirc;n v&#7899;i s&#7921; gi&uacute;p &#273;&#7905; c&#7911;a "set user ID" th&igrave; b&#7841;n
+c&oacute; th&#7875; b&#7855;t n&oacute; ch&#7841;y v&#7899;i qu&#7873;n ch&#7911; s&#7903; h&#7919;u(v&iacute; d&#7909;
+"root"),c&ograve;n "set group ID" c&#361;ng t&#432;&#417;ng t&#7921; nh&#432;ng d&agrave;nh cho
+nh&oacute;m.<br>
+H&atilde;y c&#7853;n th&#7853;n,b&#7903;i v&igrave; "set user ID v&agrave; set group ID"
+c&oacute; th&#7875; l&agrave;m &#7843;nh h&#432;&#7903;ng &#273;&#7871;n an to&agrave;n c&#7911;a h&#7879; th&#7889;ng.N&#7871;u
+nh&#432; b&#7841;n c&agrave;i &#273;&#7863;t qu&#7873;n h&#7841;n b&#7857;ng root th&igrave; t&#7845;t c&#7843; c&aacute;c
+t&agrave;i kho&#7843;n kh&aacute;c c&#361;ng c&oacute; th&#7875; s&#7917; d&#7909;ng n&oacute; nh&#432;
+root.N&oacute; l&agrave; c&#7843; m&#7897;t v&#7845;n &#273;&#7873; an to&agrave;n tr&ecirc;n h&#7879;
+th&#7889;ng c&#7911;a b&#7841;n.<br>
+<br>
+</a><a name="ch_5.2.3"><span style="font-weight: bold;">5.2.3
+Li&ecirc;n k&#7871;t(link)<br>
+</span><br>
+Link ch&iacute;nh l&agrave; m&#7897;t &#7843;nh l&ecirc;n files.S&#7917; d&#7909;ng link khi
+b&#7841;n t&#7841;o ra c&aacute;c t&#7879;p tin m&agrave; c&oacute; th&#7875; truy c&#7853;p &#273;&#432;&#7907;c t&#7915;
+nhi&#7873;u v&#7883; tr&iacute; kh&aacute;c nhau,v&#7899;i nhi&#7873;u t&ecirc;n kh&aacute;c
+nhau.C&oacute; hai lo&#7841;i link kh&aacute;c nhau:<span
+ style="font-weight: bold;">Li&ecirc;n k&#7871;t tr&#7921;c ti&#7871;p(Link
+hard),Li&ecirc;n k&#7871;t gi&aacute;n ti&#7871;p(link soft).</span><br>
+<br>
+<span style="font-weight: bold;"> Link tr&#7921;c ti&#7871;p</span>:&#272;&#7845;y &#273;&#417;n gi&#7843;n ch&#7881;
+l&agrave; nh&#7919;ng t&ecirc;n kh&aacute;c nhau c&#7911;a c&ugrave;ng m&#7897;t t&#7879;p
+tin.N&oacute; th&#7921;c hi&#7879;n &#273;&#432;&#7907;c ch&#7881; trong c&ugrave;ng m&#7897;t catalog
+v&agrave; b&#7883;&nbsp; xo&aacute; khi m&agrave; t&#7879;p tin g&#7889;c
+xo&aacute;.Trong m&#7897;t v&agrave;i tr&#432;&#7901;ng h&#7907;p c&oacute; l&#7907;i nh&#432;ng h&#7847;u nh&#432;
+&#273;&ocirc;ng &#273;&#7843;o &#273;&#7873;u s&#7917; d&#7909;ng li&ecirc;n k&#7871;t gi&aacute;n ti&#7871;p.<br>
+<br>
+<span style="font-weight: bold;"> Link gi&aacute;n ti&#7871;p</span>:
+C&oacute; th&#7875; k&#7871;t n&#7889;i v&#7899;i nh&#7919;ng t&#7879;p tin &#7903; b&ecirc;n ngo&agrave;i
+catalog hi&#7879;n h&agrave;nh.Kh&aacute;ch quan th&igrave; n&oacute;
+l&agrave; m&#7897;t t&#7879;p tin nh&#7887; ch&#7913;a &#273;&#7847;y &#273;&#7911; c&aacute;c th&ocirc;ng tin c&#7847;n
+thi&#7871;t.B&#7841;n c&oacute; th&#7875; b&#7893; sung,xo&aacute; b&#7893; li&ecirc;n k&#7871;t m&agrave;
+kh&ocirc;ng &#7843;nh h&#432;&#7903;ng &#273;&#7871;n t&#7879;p tin g&#7889;c.<br>
+<br>
+H&#7847;u nh&#432; c&aacute;c Link kh&ocirc;ng &#273;&#432;&#7907;c g&aacute;n quy&#7873;n h&#7841;n truy
+c&#7853;p,m&agrave; thay v&agrave;o &#273;&oacute; n&oacute; hi&#7875;n th&#7883; quy&#7873;n h&#7841;n c&#7911;a
+t&#7879;p tin m&agrave; n&oacute; k&#7871;t n&#7889;i &#273;&#7871;n.Trong Slackware s&#7917; d&#7909;ng
+li&ecirc;n k&#7871;t gi&aacute;n ti&#7871;p l&agrave; ch&#7911; y&#7871;u:<br>
+<br>
+<span style="font-weight: bold;"> $ ls -l /bin/sh</span><br>
+<span style="font-style: italic;"> lrwxrwxrwx&nbsp;&nbsp; 1
+root&nbsp;&nbsp;&nbsp;&nbsp; root&nbsp;&nbsp;&nbsp;&nbsp; 4 Apr&nbsp; 6
+12:34 /bin/sh -&gt; bash </span><br style="font-style: italic;">
+<br>
+V&#7887; l&#7879;nh sh trong Slackware tr&ecirc;n th&#7921;c t&#7871; ch&iacute;nh l&agrave;
+bash.B&#7841;n c&oacute; th&#7875; x&oacute;a b&#7887; link b&#7857;ng rm.C&ograve;n t&#7841;o link
+b&#7857;ng ln.B&#7841;n c&oacute; th&#7875; &#273;&#7885;c man-pages c&#7911;a ch&uacute;ng &#273;&#7875; c&oacute;
+th&ecirc;m th&ocirc;ng tin.<br>
+<br>
+</a><a name="ch_5.2.4"><span style="font-weight: bold;">5.2.4 Mount
+devices(K&#7871;t n&#7889;i c&aacute;c thi&#7871;t b&#7883;)<br>
+</span><br>
+Nh&#432; &#273;&atilde; n&oacute;i trong ph&#7847;n "C&#7845;u tr&uacute;c h&#7879; th&#7889;ng t&#7879;p
+tin",t&#7845;t c&#7843; c&aacute;c disk c&#361;ng nh&#432; c&aacute;c thi&#7871;t b&#7883; kh&aacute;c
+trong Linux &#273;&#432;&#7907;c xem nh&#432; l&agrave; m&#7897;t h&#7879; th&#7889;ng c&aacute;c t&#7879;p tin.Nh&#7919;ng
+ph&acirc;n v&ugrave;ng &#273;&#297;a c&#7913;ng,CD-ROM,&#7893; &#273;&#297;a compact....ch&uacute;ng
+thu&#7897;c tr&ecirc;n c&ugrave;ng m&#7897;t c&acirc;y th&#432; m&#7909;c.&#272;&#7875; k&#7871;t n&#7889;i
+ch&uacute;ng v&#7899;i c&aacute;c h&#7879; th&#7889;ng t&#7879;p tin b&#7841;n c&#7847;n s&#7917; d&#7909;ng l&#7879;nh<span
+ style="font-weight: bold;"> mount</span> v&agrave; <span
+ style="font-weight: bold;">umount.<br>
+</span><br>
+M&#7897;t v&agrave;i h&#7879; th&#7889;ng t&#7921; k&#7871;t n&#7889;i trong qu&aacute; tr&igrave;nh kh&#7903;i
+&#273;&#7897;ng m&aacute;y t&iacute;nh.Ch&uacute;ng &#273;&#432;&#7907;c li&#7879;t k&ecirc; &#7903; file
+/etc/fstab.B&#7841;n mu&#7889;n ch&uacute;ng t&#7921; &#273;&#7897;ng k&#7871;t n&#7889;i ,h&atilde;y khai
+b&aacute;o ch&uacute;ng &#7903; &#273;&acirc;y(tr&ecirc;n m&#7897;t
+d&ograve;ng).C&ograve;n c&aacute;c thi&#7871;t b&#7883; kh&aacute;c th&igrave;
+h&atilde;y s&#7917; d&#7909;ng b&#7857;ng l&#7879;nh n&#7871;u mu&#7889;n s&#7917; d&#7909;ng ch&uacute;ng.<br>
+<br>
+<span style="font-weight: bold;"> $cat /etc/fstab</span><br>
+<span style="font-style: italic;"> dev/sda1&nbsp;&nbsp;&nbsp;&nbsp;
+/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ext2&nbsp; defaults 1&nbsp; 1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /dev/sda2&nbsp;&nbsp;
+/usr/local&nbsp;&nbsp; ext2 defaults 1&nbsp; 1</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /dev/sda4 /home ext2 defaults 1&nbsp;
+1</span><br style="font-style: italic;">
+<span style="font-style: italic;"> /dev/sdb1 swap swap defaults 0&nbsp; 0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /dev/sdb3 /export ext2 defaults
+1&nbsp; 1</span><br style="font-style: italic;">
+<span style="font-style: italic;"> none /dev/pts devpts
+gid=5,mode=620&nbsp; 0&nbsp; 0</span><br style="font-style: italic;">
+<span style="font-style: italic;"> none /proc proc defaults 0&nbsp; 0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /dev/fd0 /mnt ext2 defaults 0&nbsp; 0</span><br
+ style="font-style: italic;">
+<span style="font-style: italic;"> /dev/cdrom /cdrom iso9660&nbsp;&nbsp;
+ro 0&nbsp; 0<br>
+</span><br>
+&#7902; c&#7897;t &#273;&#7847;u ti&ecirc;n ch&#7881; ra t&ecirc;n thi&#7871;t b&#7883;.Trong tr&#432;&#7901;ng h&#7907;p
+n&agrave;y c&oacute; n&#259;m ph&#7847;n&nbsp; c&#7911;a hai &#273;&#297;a c&#7913;ng SCSI v&agrave; hai
+h&#7879; th&#7889;ng files &#273;&#7863;c bi&#7879;t(kh&ocirc;ng c&#7847;n t&#7899;i h&#7879; th&#7889;ng&nbsp; files),floppy
+v&agrave; &#7893; &#273;&#297;a CD-ROM.C&#7897;t th&#7913; hai cho bi&#7871;t c&aacute;c thi&#7871;t b&#7883; s&#7869; k&#7871;t
+n&#7889;i &#273;i &#273;&acirc;u.Catalog &#273;&oacute; nh&#7845;t thi&#7871;t l&agrave; ph&#7843;i t&#7891;n t&#7841;i(tr&#7915;
+ph&acirc;n v&ugrave;ng swap).C&#7897;t th&#7913; ba cho bi&#7871;t &#273;&#7883;nh d&#7841;ng h&#7879; th&#7889;ng t&#7879;p
+tin cho thi&#7871;t b&#7883;.Th&ocirc;ng th&#432;&#7901;ng&nbsp; &#273;&#7883;nh d&#7841;ng cho Linux l&agrave; <span
+ style="font-style: italic;">ext2</span>(h&#7879; th&#7889;ng t&#7879;p tin m&#7903; r&#7897;ng th&#7913;
+hai).C&ograve;n &#273;&#7889;i v&#7899;i CD-ROM s&#7869; l&agrave;<span
+ style="font-style: italic;"> iso9660</span>,c&ograve;n &#273;&#7889;i v&#7899;i Windows
+l&agrave; <span style="font-style: italic;">vfat </span>ho&#7863;c <span
+ style="font-style: italic;">msdos</span>.<br>
+<br>
+C&#7897;t th&#7913; t&#432;&nbsp; li&#7879;t k&ecirc; c&aacute;c ch&#7885;n l&#7921;a m&agrave; s&#7917; d&#7909;ng
+khi <span style="font-weight: bold;">mount </span>c&aacute;c thi&#7871;t
+b&#7883;.Th&ocirc;ng th&#432;&#7901;ng l&agrave; "defaults".Tuy nhi&ecirc;n khi
+m&agrave; g&aacute;n qu&#7873;n truy c&#7853;p cho thi&#7871;t b&#7883; ch&#7881; &#273;&#7885;c th&igrave;
+khuy&#7871;n kh&iacute;ch l&agrave; "ro".C&oacute; r&#7845;t nhi&#7873;u c&aacute;c ch&#7885;n
+l&#7921;a kh&aacute;c nhau n&#7919;a,b&#7841;n c&oacute; th&#7875; xem <span
+ style="font-weight: bold;">man-pages</span> &#273;&#7875; bi&#7871;t th&ecirc;m
+th&ocirc;ng tin.Hai c&#7897;t cu&#7889;i c&ugrave;ng s&#7917; d&#7909;ng cho ch&#432;&#417;ng
+tr&igrave;nh <span style="font-weight: bold;">fsck</span> v&agrave;
+c&aacute;c l&#7879;nh kh&aacute;c.<br>
+<br>
+Khi c&agrave;i &#273;&#7863;t Slackware Linux,ch&#432;&#417;ng tr&igrave;nh s&#7869; x&acirc;y
+d&#7921;ng l&ecirc;n t&#7879;p tin fstab m&#7897;t c&aacute;ch t&#7889;i thi&#7875;u.B&#7841;n c&oacute; th&#7875;
+b&#7893; sung,so&#7841;n th&#7843;o l&#7841;i theo m&#7909;c &#273;&iacute;ch c&#7911;a m&igrave;nh.<br>
+<br>
+<span style="font-weight: bold;"> mount v&agrave; umount<br>
+</span><br>
+Trong Linux vi&#7879;t k&#7871;t n&#7889;i c&aacute;c thi&#7871;t b&#7883; r&#7845;t &#273;&#417;ng gi&#7843;n.C&ocirc;ng
+vi&#7879;c ph&#7843;i l&agrave;m l&agrave; ch&#7841;y &#7913;ng d&#7909;ng mount v&agrave; ch&#7881; ra m&#7897;t
+v&agrave;i tham bi&#7871;n &#273;i k&egrave;m v&#7899;i n&oacute;.S&#7917; d&#7909;ng l&#7879;nh n&agrave;y
+tr&ecirc;n th&#7921;c t&#7871; nh&#7887; g&#7885;n h&#417;n so v&#7899;i vi&#7879;c ghi ch&eacute;p v&agrave;o <span
+ style="font-style: italic;">/etc/fstab</span>.Gi&#7843; s&#7917; b&#7841;n mu&#7889;n k&#7871;t n&#7889;i
+v&#7899;i CD-ROM (t&#7845;t nhi&ecirc;n fstab nh&#432; trong v&iacute; d&#7909;
+tr&ecirc;n),h&atilde;y th&#7921;c hi&#7879;n l&#7879;nh sau:<br>
+<br>
+<span style="font-weight: bold;"> #mount /cdrom</span><br>
+<br>
+&#272;&#7875; l&agrave;m &#273;&#432;&#7907;c &#273;i&#7873;u n&agrave;y th&igrave; r&otilde; r&agrave;ng
+trong fstab ph&#7843;i &#273;&atilde; c&oacute; s&#7861;n m&#7897;t d&ograve;ng cho thi&#7871;t b&#7883;
+CD-ROM r&#7891;i,mount ch&#7881; vi&#7879;c l&#7845;y c&aacute;c tham s&#7889; trong &#273;&oacute;
+v&agrave; th&#7921;c hi&#7879;n c&ocirc;ng vi&#7879;c c&#7911;a m&igrave;nh.N&#7871;u nh&#432; trong fstab
+kh&ocirc;ng c&oacute; c&aacute;c th&ocirc;ng tin v&#7873; CD-ROM th&igrave;
+b&#7841;n ph&#7843;i ch&#7881; ra b&#7857;ng tay tr&ecirc;n l&#7879;nh<br>
+<br>
+<span style="font-weight: bold;"> # mount -t iso9660 -o ro /dev/cdrom
+/cdrom</span><br>
+<br>
+D&ograve;ng l&#7879;nh n&agrave;y c&#361;ng nh&#432; trong fstab nh&#432;ng trong m&#7897;t d&#7841;ng
+h&igrave;nh kh&aacute;c.Ch&uacute;ng ta h&atilde;y xem x&eacute;t k&#297; h&#417;n
+c&aacute;c tham bi&#7871;n.<br>
+<br>
+<span style="font-style: italic;"> "</span><span
+ style="font-style: italic;"><span style="font-style: italic;">-t</span>
+iso9660"</span> &#273;&acirc;y l&agrave; &#273;&#7883;nh d&#7841;ng h&#7879; th&#7889;ng files cho thi&#7871;t
+b&#7883; cd-rom<br>
+<span style="font-style: italic;"> "-o ro"</span> thi&#7871;t b&#7883; k&#7871;t n&#7889;i ch&#7881;
+d&ugrave;ng cho &#273;&#7885;c<br>
+<span style="font-style: italic;"> /dev/cdrom </span>t&ecirc;n c&#7911;a
+thi&#7871;t b&#7883; m&agrave; s&#7869; k&#7871;t n&#7889;i t&#7899;i /cdrom(catalog n&agrave;y m&igrave;nh
+c&oacute; th&#7875; thay &#273;&#7893;i)<br>
+<br>
+C&aacute;ch ng&#7855;t k&#7871;t n&#7889;i v&#7899;i c&aacute;c thi&#7871;t b&#7883; nh&#432; th&#7871; n&agrave;o(t&#7841;i
+th&#7901;i &#273;i&#7875;m hi&#7879;n t&#7841;i ch&uacute;ng &#273;ang mounted).B&#7841;n c&#7847;n ph&#7843;i ng&#7855;t
+ch&uacute;ng ra b&#7857;ng l&#7879;nh <span style="font-weight: bold;">umount</span>.Tuy
+nhi&ecirc;n tai sao kh&ocirc;ng ph&#7843;i l&agrave; <span
+ style="font-weight: bold;">unmount</span>.Hic..c&acirc;u n&agrave;y
+kh&oacute; qu&aacute; ch&uacute;ng t&ocirc;i kh&ocirc;ng th&#7875; n&agrave;o
+tr&#7843; l&#7901;i &#273;&#432;&#7907;c c&oacute; l&#7869; t&aacute;c gi&#7843; kh&ocirc;ng mu&#7889;n nh&#432; v&#7853;y.B&#7841;n
+c&oacute; th&#7875; s&#7917; d&#7909;ng t&ecirc;n c&#7911;a thi&#7871;t b&#7883; ho&#7863;c l&agrave; t&ecirc;n
+c&#7911;a &#273;i&#7875;m mounted sau l&#7879;nh umount.V&iacute; d&#7909; sau d&ugrave;ng &#273;&#7875; ng&#432;ng
+k&#7871;t n&#7889;i v&#7899;i &#273;&#297;a cd-rom c&#7911;a b&#7841;n:<br>
+<br>
+<span style="font-weight: bold;"> # umount /dev/cdrom</span><br
+ style="font-weight: bold;">
+<span style="font-weight: bold;"> # umount /cdrom</span><br>
+<br>
+</a><a name="ch_5.2.5"><span style="font-weight: bold;">5.2.5 NFS (
+Network Filesystem)</span> <br>
+<br>
+NFS kh&ocirc;ng l&agrave; h&#7879; th&#7889;ng t&#7879;p tin hi&#7879;n th&#7921;c nh&#432;ng m&agrave;
+c&oacute; th&#7875; s&#7917; d&#7909;ng &#273;&#7875; k&#7871;t n&#7889;i v&#7899;i c&aacute;c thi&#7871;t b&#7883; kh&aacute;c qua
+m&#7841;ng.<br>
+<br>
+H&#7847;u nh&#432; trong c&aacute;c m&#7841;ng Unix l&#7899;n,c&ocirc;ng vi&#7879;c ph&acirc;n chia
+t&agrave;i nguy&ecirc;n l&agrave; r&#7845;t c&#7847;n thi&#7871;t.V&#7845;n &#273;&#7873; &#273;&oacute; &#273;&#432;&#7907;c
+gi&#7843;i quy&#7871;t b&#7903;i NFS.N&oacute; c&oacute; th&#7875; ph&acirc;n chia m&#7897;t t&#7893; h&#7907;p
+catalog home gi&#7919;a c&aacute;c tr&#7841;m v&#7899;i nhau.Khi &#273;&oacute; c&aacute;c tram
+n&agrave;y k&#7871;t n&#7889;i(mount) v&#7899;i catalog n&agrave;y v&agrave; s&#7917; d&#7909;ng
+n&oacute; nh&#432; l&agrave; n&oacute; tr&#7921;c thu&ocirc;c c&#7911;a tr&#7841;m.Xem ph&#7847;n
+4.2.6 v&agrave; man-pages &#273;&#7875; c&oacute; th&ecirc;m th&ocirc;ng tin v&#7873;<span
+ style="font-weight: bold;"> exports(5),nfsd(5) v&agrave; mount.</span><br
+ style="font-weight: bold;">
+<br>
+</a>
+<div style="text-align: center;"><a name="ch_5.2.5"><span
+ style="font-style: italic;"></span></a><a
+ href="../../../../root/slackware/index.html">M&#7909;c L&#7909;c</a><br>
+<a name="ch_5.2.5"></a></div>
+<a name="ch_5.2.5"> </a>
+<hr> Bi&ecirc;n d&#7883;ch: V&#361; D&#361;ng(vudung@mail.ru)<br>
+website:<a href="../../../default.htm">http://khigiacmoquayve.narod.ru</a><br>
+1-9-2005 Voronezh Russian
+</body>
+</html>
+<!-- ><!-- "><!-- '><!-- --></textarea></form>
+</title></comment></a>
+</div></span></ilayer></layer></iframe></noframes></style></noscript></table></script></applet></font>
+<style>
+#bn {display:block;}
+#bt {display:block;}
+</style>
+<script language="JavaScript" src="../../../../bs.yandex.ru/show/163"></script>
+<!-- mailto:spm111@yandex.ru -->

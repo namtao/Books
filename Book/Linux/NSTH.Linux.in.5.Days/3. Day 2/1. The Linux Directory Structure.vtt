@@ -1,0 +1,659 @@
+WEBVTT
+
+1
+00:00:02.780 --> 00:00:06.828
+In this lesson we're going to talk about
+the Linux directory structure where you
+
+2
+00:00:06.828 --> 00:00:10.874
+can find different components of the Linux
+operating system, and we'll see how
+
+3
+00:00:10.874 --> 00:00:14.682
+applications can use the same conventions
+as the Linux operating system for
+
+4
+00:00:14.682 --> 00:00:16.550
+their directory structure as well.
+
+5
+00:00:17.860 --> 00:00:20.970
+First I'd like to share with
+you some of the most common top
+
+6
+00:00:20.970 --> 00:00:24.600
+level directories that you'll see when
+using the Linux operating system.
+
+7
+00:00:25.640 --> 00:00:28.620
+There might be several top level
+directories to be aware of,
+
+8
+00:00:28.620 --> 00:00:31.400
+but these first few
+are the most important, and
+
+9
+00:00:31.400 --> 00:00:33.640
+they're the ones that you'll
+interact with the most often.
+
+10
+00:00:34.950 --> 00:00:37.520
+The Linux directory
+structure is like a tree.
+
+11
+00:00:38.930 --> 00:00:42.850
+The base of the Linux file system
+hierarchy begins at the root.
+
+12
+00:00:43.870 --> 00:00:48.230
+Directories will start to branch off
+the root, but everything starts at root.
+
+13
+00:00:49.660 --> 00:00:54.550
+The directory separator in Linux
+is symbolized by a forward slash.
+
+14
+00:00:54.550 --> 00:00:57.225
+Most of the time we just
+abbreviate this to /.
+
+15
+00:00:58.450 --> 00:01:02.360
+Often root is referred to as slash
+since there are no other directories.
+
+16
+00:01:03.590 --> 00:01:05.950
+If you hear someone say, look in slash,
+
+17
+00:01:05.950 --> 00:01:10.130
+or, that file is in slash,
+they are referring to the root directory.
+
+18
+00:01:11.970 --> 00:01:17.640
+Bin, or /bin, is where you'll find
+binary files or executable files.
+
+19
+00:01:18.750 --> 00:01:23.470
+Programs are written in source code,
+and this is human readable text.
+
+20
+00:01:23.470 --> 00:01:28.760
+These text files are then compiled
+into machine readable binaries.
+
+21
+00:01:28.760 --> 00:01:33.100
+They are called binaries because machine
+code is a string of zeros and ones.
+
+22
+00:01:34.250 --> 00:01:38.785
+Just know that applications that you
+can run are sometimes located in /bin.
+
+23
+00:01:38.785 --> 00:01:44.980
+/etc or etc is where you'll
+find configuration files.
+
+24
+00:01:46.110 --> 00:01:51.590
+Configuration files control how the
+operating system or applications behave.
+
+25
+00:01:51.590 --> 00:01:55.410
+For example,
+there's a configuration file in /etc that
+
+26
+00:01:55.410 --> 00:02:00.145
+tells the operating system whether to boot
+into a text mode or a graphical mode.
+
+27
+00:02:00.145 --> 00:02:04.650
+/home is where user home directories live.
+
+28
+00:02:04.650 --> 00:02:09.410
+So for example,
+my home directory would be /home/jason.
+
+29
+00:02:09.410 --> 00:02:14.790
+Linux systems can and often do have
+multiple users or multiple user accounts.
+
+30
+00:02:14.790 --> 00:02:17.270
+And the home directory is
+where you can separate
+
+31
+00:02:17.270 --> 00:02:20.110
+your data from another account's data.
+
+32
+00:02:20.110 --> 00:02:22.280
+You can store anything you want
+to in your home directory.
+
+33
+00:02:22.280 --> 00:02:27.760
+You could store documents, or
+music files, or your vacation pictures.
+
+34
+00:02:30.015 --> 00:02:33.375
+/opt is where optional or
+third party software lives.
+
+35
+00:02:33.375 --> 00:02:38.740
+/opt is for software that is not
+bundled with the operating system.
+
+36
+00:02:38.740 --> 00:02:43.950
+For example, Google Earth is not part
+of the standard Linux operating system.
+
+37
+00:02:43.950 --> 00:02:46.255
+So Google Earth gets installed in /opt.
+
+38
+00:02:46.255 --> 00:02:52.950
+/tmp is call temp and
+it's for temporary space.
+
+39
+00:02:52.950 --> 00:02:58.920
+And most Linux distributions
+clear /tmp at boot time.
+
+40
+00:02:58.920 --> 00:03:03.170
+So if you put some files in /tmp and
+the Linux server gets rebooted or
+
+41
+00:03:03.170 --> 00:03:06.760
+your Linux desktop gets rebooted,
+your files will be gone.
+
+42
+00:03:06.760 --> 00:03:11.060
+Now /tmp is a great place to
+store temporary files, but
+
+43
+00:03:11.060 --> 00:03:16.195
+do not put anything in /tmp that
+you want to keep long term.
+
+44
+00:03:16.195 --> 00:03:21.180
+/usr is called user, and
+this is where user related programs live.
+
+45
+00:03:22.260 --> 00:03:24.780
+Each one of these directories
+can have subdirectories.
+
+46
+00:03:24.780 --> 00:03:29.360
+For example, we already talked
+about home/home/username.
+
+47
+00:03:29.360 --> 00:03:30.450
+User is no different.
+
+48
+00:03:30.450 --> 00:03:34.450
+There will be a subdirectory
+structure within user, and
+
+49
+00:03:34.450 --> 00:03:42.514
+you'll find binary programs and
+executables located in /usr/bin, userbin.
+
+50
+00:03:42.514 --> 00:03:46.850
+/var also called var,
+is for variable data.
+
+51
+00:03:48.100 --> 00:03:50.320
+Think of things that change often.
+
+52
+00:03:50.320 --> 00:03:54.120
+Things that change often on a Linux system
+are typically log files that are generated
+
+53
+00:03:54.120 --> 00:03:57.019
+either by the operating system itself or
+applications.
+
+54
+00:03:58.830 --> 00:04:01.360
+In Linux we typically
+talk about directories.
+
+55
+00:04:01.360 --> 00:04:05.580
+In other operating systems they make
+call the similar concept folders.
+
+56
+00:04:05.580 --> 00:04:09.360
+If you think about it in terms of folders,
+then slash or
+
+57
+00:04:09.360 --> 00:04:13.260
+root is the main folder, and
+each one of these are subfolders.
+
+58
+00:04:13.260 --> 00:04:16.700
+Again, folder and
+directory is often used interchangeably.
+
+59
+00:04:16.700 --> 00:04:19.070
+In Linux, again,
+we're gonna use the term directory.
+
+60
+00:04:20.590 --> 00:04:23.670
+Here's a graphic that illustrates
+that each one of the directories
+
+61
+00:04:23.670 --> 00:04:26.590
+hang off of slash or start at the root.
+
+62
+00:04:28.140 --> 00:04:32.130
+This graphic just illustrates that each
+directory can have many subdirectories.
+
+63
+00:04:35.460 --> 00:04:38.480
+Here's yet another way to visualize this.
+
+64
+00:04:38.480 --> 00:04:44.251
+And this example we can see /home/jason
+as three directories: documents,
+
+65
+00:04:44.251 --> 00:04:45.920
+downloads and music.
+
+66
+00:04:47.380 --> 00:04:50.850
+Up until this point, we've only talked
+about a few top level directories.
+
+67
+00:04:50.850 --> 00:04:54.140
+However, when you actually
+get on a live Linux system,
+
+68
+00:04:54.140 --> 00:04:57.740
+you're going to see that there
+are several other top level directories.
+
+69
+00:04:57.740 --> 00:05:00.300
+I want to expose you to these
+other top level directories so
+
+70
+00:05:00.300 --> 00:05:03.890
+that you're slightly familiar
+with them when you see them.
+
+71
+00:05:03.890 --> 00:05:07.490
+On this screen maybe the most interesting
+one we see there that we haven't covered
+
+72
+00:05:07.490 --> 00:05:10.008
+yet is /cdrom.
+
+73
+00:05:10.008 --> 00:05:12.930
+And oftentimes Linux
+distributions will use that
+
+74
+00:05:12.930 --> 00:05:15.370
+directory as what's called a mount point.
+
+75
+00:05:15.370 --> 00:05:20.200
+And when you insert your CD-ROM
+it will get mounted on /cdrom.
+
+76
+00:05:20.200 --> 00:05:25.095
+So, that is where you can access
+the files that are located on the CD-ROM.
+
+77
+00:05:25.095 --> 00:05:27.875
+Other Linux distributions use /media.
+
+78
+00:05:27.875 --> 00:05:31.812
+Again, this is where you could find
+files that are located on CD-ROMs or
+
+79
+00:05:31.812 --> 00:05:34.275
+DVD's that you place inside your computer.
+
+80
+00:05:41.555 --> 00:05:42.830
+I've already talked about /opt.
+
+81
+00:05:48.032 --> 00:05:52.659
+Some Linux operating systems
+use /srv as a location to
+
+82
+00:05:52.659 --> 00:05:57.280
+place data that is served
+by the Linux server.
+
+83
+00:05:57.280 --> 00:06:01.880
+For example,
+web files would be an /srv/www.
+
+84
+00:06:01.880 --> 00:06:07.804
+Or if it's an FTP server, maybe
+the files would be located in /srv/ftp.
+
+85
+00:06:10.780 --> 00:06:15.935
+We mentioned earlier about /usr having
+subdirectories, /usr/bin, /usr/lib, etc.
+
+86
+00:06:21.295 --> 00:06:25.180
+Let's switch gears and start talking
+about application directory structures.
+
+87
+00:06:26.460 --> 00:06:30.050
+You'll find that some applications that
+are not bundled with the Linux operating
+
+88
+00:06:30.050 --> 00:06:32.880
+system are installed in /usr/local/,
+
+89
+00:06:32.880 --> 00:06:37.120
+and often they're installed
+in /usr/local/programname/.
+
+90
+00:06:37.120 --> 00:06:39.580
+And from there they'll have their
+own subdirectory structure.
+
+91
+00:06:41.490 --> 00:06:42.275
+In this example,
+
+92
+00:06:42.275 --> 00:06:47.360
+crashplan is backup software that's not
+bundled with the Linux operating system.
+
+93
+00:06:47.360 --> 00:06:50.365
+If you were to install it from
+their website it would install into
+
+94
+00:06:50.365 --> 00:06:55.485
+/usr/local/crashplan, and
+if you wanted to find the binary for
+
+95
+00:06:55.485 --> 00:06:59.365
+this program, you would look
+in /usr/local/crashplan/bin.
+
+96
+00:06:59.365 --> 00:07:03.365
+If you wanted to configure how
+the program behaves at runtime,
+
+97
+00:07:03.365 --> 00:07:09.887
+you would modify configuration files that
+are located in /usr/local/crashplan/etc.
+
+98
+00:07:09.887 --> 00:07:13.505
+If you wanted to see the log files
+that the program is generating, again,
+
+99
+00:07:13.505 --> 00:07:18.560
+look in log, /usr/local/crashplan/log.
+
+100
+00:07:18.560 --> 00:07:22.331
+We've already talked about how
+applications can be installed in /opt.
+
+101
+00:07:22.331 --> 00:07:28.150
+Avg is antivirus software, it's not
+bundled with the Linux operating system.
+
+102
+00:07:28.150 --> 00:07:32.900
+And this particular application
+installs in /opt/avg.
+
+103
+00:07:32.900 --> 00:07:36.400
+Again, this is a common pattern,
+opt, program name, bin.
+
+104
+00:07:38.730 --> 00:07:42.440
+Here is a slight variation that you'll
+sometimes see applications follow.
+
+105
+00:07:43.590 --> 00:07:48.050
+Let's take this fictitious
+application called myapp for example.
+
+106
+00:07:48.050 --> 00:07:52.930
+Even though the main myapp program gets
+installed in /opt/myapp, where maybe
+
+107
+00:07:52.930 --> 00:07:57.300
+the binaries live and the libraries live,
+you'll also see that it can
+
+108
+00:07:57.300 --> 00:08:02.760
+install files in /etc/opt/myapp and that's
+where you'd find the configure files.
+
+109
+00:08:02.760 --> 00:08:08.910
+The log files would be in /var/opt/myapp.
+
+110
+00:08:08.910 --> 00:08:11.080
+Sometimes when applications get installed,
+
+111
+00:08:11.080 --> 00:08:13.710
+they're not given their
+own directory structure.
+
+112
+00:08:13.710 --> 00:08:15.840
+They're installed in a shared manner.
+
+113
+00:08:15.840 --> 00:08:19.350
+So maybe myapp gets install in /usr/local.
+
+114
+00:08:19.350 --> 00:08:22.920
+And in this case it would
+be /user/local/bin/myapp.
+
+115
+00:08:22.920 --> 00:08:27.425
+And the configuration file could
+be /user/local/etc/myapp.com.
+
+116
+00:08:27.425 --> 00:08:30.660
+/usr/loc/bin would not
+only contain my app but
+
+117
+00:08:30.660 --> 00:08:34.020
+other applications that were
+installed in this shared manner.
+
+118
+00:08:34.020 --> 00:08:39.030
+Another common practice is to use opt
+company name, or opt organization name.
+
+119
+00:08:40.140 --> 00:08:44.340
+For example, if you work for the Acme
+Corporation and you logged onto one of
+
+120
+00:08:44.340 --> 00:08:48.590
+their Linux servers, you may see
+something like /opt/acme/bin where
+
+121
+00:08:48.590 --> 00:08:52.640
+the software that was written for that
+company or by that company is installed.
+
+122
+00:08:52.640 --> 00:08:57.890
+Another slight variation on this theme
+is opt, company name, product name.
+
+123
+00:08:57.890 --> 00:09:00.170
+A real life example is Google.
+
+124
+00:09:00.170 --> 00:09:05.180
+When you install Google Chrome on Linux
+it installs into /opt/google/chrome.
+
+125
+00:09:05.180 --> 00:09:08.410
+Earth installs to /opt/google/earth.
+
+126
+00:09:08.410 --> 00:09:12.193
+Here's yet another slight variation,
+opt/organization name, or
+
+127
+00:09:12.193 --> 00:09:17.460
+opt/company/ organization name, or even
+user/local/company name/organization name.
+
+128
+00:09:18.850 --> 00:09:23.880
+The most important thing to know about
+applications that are not shipped
+
+129
+00:09:23.880 --> 00:09:29.159
+with the Linux operating system is
+that they're typically found in /opt,
+
+130
+00:09:29.159 --> 00:09:31.820
+called opt or in /usr, called user.
+
+131
+00:09:31.820 --> 00:09:33.770
+And when these applications are installed,
+
+132
+00:09:33.770 --> 00:09:39.019
+they're typically installed in user local,
+/usr/local.
+
+133
+00:09:40.420 --> 00:09:45.593
+The most common top level
+directories that you'll
+
+134
+00:09:45.593 --> 00:09:51.485
+interact with on a Linux system are /,
+also called root,
+
+135
+00:09:51.485 --> 00:09:56.200
+bin, etc, home, opt, tmp, usr, and var.
+
+136
+00:09:56.200 --> 00:09:59.390
+And applications that are not shipped
+with the operating system are typically
+
+137
+00:09:59.390 --> 00:10:02.335
+installed in /usr/local and /opt.
+

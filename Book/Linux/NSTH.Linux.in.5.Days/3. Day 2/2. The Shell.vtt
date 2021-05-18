@@ -1,0 +1,579 @@
+WEBVTT
+
+1
+00:00:03.630 --> 00:00:08.020
+In today's lesson, you will learn what
+the shell is, how to access it, and
+
+2
+00:00:08.020 --> 00:00:10.320
+we'll talk a little bit
+about the superuser account.
+
+3
+00:00:12.870 --> 00:00:16.910
+The Shell is the default user
+interface to a Linux system.
+
+4
+00:00:16.910 --> 00:00:20.760
+When you log in to a Linux server over the
+network, the Shell is the program that is
+
+5
+00:00:20.760 --> 00:00:23.620
+started and it acts as your
+default interface to the system.
+
+6
+00:00:24.740 --> 00:00:27.510
+Also, if you're presented with
+a text based login prompt,
+
+7
+00:00:27.510 --> 00:00:29.930
+you'll also be interacting
+with a shell by default.
+
+8
+00:00:31.400 --> 00:00:35.330
+If you login to a graphical user
+interface, then you'll need to start
+
+9
+00:00:35.330 --> 00:00:38.490
+a terminal emulator application
+to gain access to the shell.
+
+10
+00:00:39.560 --> 00:00:41.562
+In CentOS, for example,
+
+11
+00:00:41.562 --> 00:00:46.480
+you can go to the Applications
+menu > System Tools > Terminal.
+
+12
+00:00:47.670 --> 00:00:51.530
+In Ubuntu, you need to start
+a program called The Dash.
+
+13
+00:00:51.530 --> 00:00:53.480
+To do that, you click on the top icon and
+
+14
+00:00:53.480 --> 00:00:57.140
+the launcher, which is on the left
+hand side of your screen.
+
+15
+00:00:57.140 --> 00:00:59.190
+It's the icon with the Ubuntu logo on it.
+
+16
+00:01:00.810 --> 00:01:03.580
+Start typing the word terminal and
+you should see the terminal
+
+17
+00:01:03.580 --> 00:01:06.220
+application pop up, and
+you can click on it to start it.
+
+18
+00:01:07.460 --> 00:01:11.320
+The graphical user interface on
+a Linux system is also called a shell.
+
+19
+00:01:11.320 --> 00:01:13.260
+Its a graphical shell.
+
+20
+00:01:13.260 --> 00:01:14.870
+However, if someone isn't specific and
+
+21
+00:01:14.870 --> 00:01:18.480
+they say shell, they're typically talking
+about the command line interface.
+
+22
+00:01:19.640 --> 00:01:23.980
+The shell is really nothing more
+than an application or program
+
+23
+00:01:23.980 --> 00:01:27.790
+that takes the command you feed it, and
+it executes those commands for you.
+
+24
+00:01:29.260 --> 00:01:33.120
+Sometimes, you'll hear the Shell refered
+to as a command line interpreter.
+
+25
+00:01:34.710 --> 00:01:39.210
+The command line interface can be more
+powerful than the graphical interface.
+
+26
+00:01:39.210 --> 00:01:43.570
+For example, if you have several files and
+you need to perform the same operation on
+
+27
+00:01:43.570 --> 00:01:46.480
+those files,
+you can often do this easily at the shell.
+
+28
+00:01:47.750 --> 00:01:51.820
+For example, if you had 100
+documents that you needed to rename
+
+29
+00:01:51.820 --> 00:01:54.390
+you could run a command at
+the shell to do all 100 at once.
+
+30
+00:01:54.390 --> 00:01:58.880
+If you were using the graphical user
+interface, you would have to click on
+
+31
+00:01:58.880 --> 00:02:03.820
+the first file, rename it,
+go to the next file and do that 100 times.
+
+32
+00:02:03.820 --> 00:02:06.700
+In this instance, the command
+line is a much better solution.
+
+33
+00:02:08.610 --> 00:02:11.220
+Another reason you wanna be
+familiar with the command line and
+
+34
+00:02:11.220 --> 00:02:15.820
+be able to use it effectively,
+is that it's always going to be there.
+
+35
+00:02:15.820 --> 00:02:19.060
+Most server additions of Linux
+distributions do not include
+
+36
+00:02:19.060 --> 00:02:19.654
+a graphical interface.
+
+37
+00:02:21.515 --> 00:02:24.245
+Also, when you're connecting to
+a Linux system over the network,
+
+38
+00:02:24.245 --> 00:02:29.535
+you're typically going to be
+connecting via SSH, or secure shell.
+
+39
+00:02:29.535 --> 00:02:31.975
+This will give you access to
+the command line interface as well.
+
+40
+00:02:33.635 --> 00:02:37.685
+Desktop Linux distributions have
+both graphical user interfaces
+
+41
+00:02:37.685 --> 00:02:39.455
+as well as command line interfaces.
+
+42
+00:02:40.460 --> 00:02:43.370
+This allows you to have
+the best of both worlds.
+
+43
+00:02:43.370 --> 00:02:46.650
+When it makes sense to use the command
+line, use the command line.
+
+44
+00:02:46.650 --> 00:02:49.960
+When it makes sense to use a graphical
+program, use that program.
+
+45
+00:02:51.530 --> 00:02:55.770
+For example, if I'm working on a Linux
+desktop and I want to visit Wikipedia
+
+46
+00:02:55.770 --> 00:03:00.570
+on the web, I would start a graphical
+web browser like Firefox, for instance.
+
+47
+00:03:01.990 --> 00:03:04.620
+There are command line web
+browsers that come with Lennox.
+
+48
+00:03:04.620 --> 00:03:06.850
+So you can surf the web
+from the command line.
+
+49
+00:03:07.910 --> 00:03:11.020
+Given the choice of using
+the command line for web browsing or
+
+50
+00:03:11.020 --> 00:03:15.030
+a graphical web browser such as Firefox,
+I would choose Firefox any day.
+
+51
+00:03:16.880 --> 00:03:21.030
+When the shell is started,
+it displays a prompt or a shell prompt.
+
+52
+00:03:21.030 --> 00:03:23.850
+The prompt simply just sits there and
+stares at you, waiting for
+
+53
+00:03:23.850 --> 00:03:26.840
+you to do something interesting,
+like give it a command to execute.
+
+54
+00:03:28.340 --> 00:03:32.140
+A shell prompt typically gives you
+some sort of useful information.
+
+55
+00:03:32.140 --> 00:03:35.890
+In this example prompt,
+you will see a user name, jason@,
+
+56
+00:03:35.890 --> 00:03:39.000
+and the name of the Linux system
+that you are connected to.
+
+57
+00:03:39.000 --> 00:03:41.570
+In this case, linuxsvr or Linux server.
+
+58
+00:03:43.360 --> 00:03:45.820
+At the end of the prompt,
+you'll see a dollar sign.
+
+59
+00:03:45.820 --> 00:03:50.570
+This is an indication that you're using
+the system as a normal user as opposed
+
+60
+00:03:50.570 --> 00:03:51.430
+to a super user.
+
+61
+00:03:52.590 --> 00:03:56.849
+The superuser shell point ends
+typically with a pound sign.
+
+62
+00:03:56.849 --> 00:04:01.300
+The superuser on a Linux
+system is also called root.
+
+63
+00:04:01.300 --> 00:04:02.490
+It's the root account.
+
+64
+00:04:03.890 --> 00:04:08.825
+We've previously talked about the root
+of the file system or / being root.
+
+65
+00:04:08.825 --> 00:04:10.255
+This is a different root.
+
+66
+00:04:10.255 --> 00:04:12.745
+This is an account called root.
+
+67
+00:04:12.745 --> 00:04:16.695
+So when someone talks about root,
+they're either talking about /,
+
+68
+00:04:16.695 --> 00:04:20.565
+the beginning of the file system or
+the superuser account named root.
+
+69
+00:04:22.625 --> 00:04:27.025
+The root account on a Linux system is
+similar to an administrator account
+
+70
+00:04:27.025 --> 00:04:28.800
+on a Windows system.
+
+71
+00:04:28.800 --> 00:04:32.270
+Anything that can be done on a Linux
+system can be done by the root user.
+
+72
+00:04:33.740 --> 00:04:36.590
+Normal user accounts can only
+do a subset of the things
+
+73
+00:04:36.590 --> 00:04:38.660
+that the root account can do.
+
+74
+00:04:38.660 --> 00:04:42.450
+Most of your day-to-day activities will
+be performed with a normal user account.
+
+75
+00:04:44.600 --> 00:04:48.870
+Root access is typically
+restricted system administrators.
+
+76
+00:04:48.870 --> 00:04:52.120
+For example, if you're a working in
+a company and you have access to Linux
+
+77
+00:04:52.120 --> 00:04:55.820
+servers, there will be a team of
+people that are responsible for
+
+78
+00:04:55.820 --> 00:04:59.300
+the upkeep, maintenance, and
+configuration of those servers.
+
+79
+00:04:59.300 --> 00:05:01.320
+And those people
+are system administrators.
+
+80
+00:05:02.400 --> 00:05:05.530
+Sometimes there are not dedicated
+people that are system administrators.
+
+81
+00:05:05.530 --> 00:05:08.090
+For example,
+if you're running Linux on your desktop,
+
+82
+00:05:08.090 --> 00:05:10.920
+you'll have access to a normal
+user account and the root account.
+
+83
+00:05:12.360 --> 00:05:16.170
+You may need root access if you're
+going to install an application
+
+84
+00:05:16.170 --> 00:05:18.080
+that resides outside of
+your home directory.
+
+85
+00:05:19.190 --> 00:05:23.730
+You also may need root access in order
+to start or stop that application.
+
+86
+00:05:23.730 --> 00:05:25.780
+Applications that run as services or
+
+87
+00:05:25.780 --> 00:05:28.450
+servers typically need
+root access to start.
+
+88
+00:05:29.460 --> 00:05:33.410
+For example, you need root access
+in order to start a web server.
+
+89
+00:05:33.410 --> 00:05:37.390
+However, you don't need special privileges
+to start normal applications like
+
+90
+00:05:37.390 --> 00:05:38.450
+the web browser for instance.
+
+91
+00:05:39.650 --> 00:05:42.490
+The prompts can vary
+greatly in appearance.
+
+92
+00:05:42.490 --> 00:05:48.030
+Sometimes the are very simple, the are
+only one character in length like a $.
+
+93
+00:05:48.030 --> 00:05:51.080
+Sometimes the contain more
+useful information such as
+
+94
+00:05:51.080 --> 00:05:55.135
+the account your using, the name of
+the server that you're connected to, and
+
+95
+00:05:55.135 --> 00:05:57.675
+the directory that you're currently in.
+
+96
+00:05:57.675 --> 00:06:00.825
+In couple of these prompts,
+you'll notice a tilde.
+
+97
+00:06:00.825 --> 00:06:05.265
+The tilde is a shorthand way of
+representing a home directory.
+
+98
+00:06:05.265 --> 00:06:08.735
+The tilde used by itself
+represents your home directory, or
+
+99
+00:06:08.735 --> 00:06:11.830
+the current account's home
+directory that you're using.
+
+100
+00:06:11.830 --> 00:06:15.508
+For example, if I'm logged into
+a Linux system with a jason account,
+
+101
+00:06:15.508 --> 00:06:19.710
+~ represents /home/jason.
+
+102
+00:06:19.710 --> 00:06:22.040
+You can also append a user name to the ~.
+
+103
+00:06:22.040 --> 00:06:26.110
+And that will expand to that
+account's home directory.
+
+104
+00:06:26.110 --> 00:06:31.770
+For example,
+~pat could expand to /home/pat.
+
+105
+00:06:31.770 --> 00:06:38.621
+Root's home directory is typically n/root,
+so ~root = /root.
+
+106
+00:06:38.621 --> 00:06:43.520
+Not all accounts on a Linux systems
+are associated with an individual user.
+
+107
+00:06:43.520 --> 00:06:46.790
+For example,
+services often have their own accounts.
+
+108
+00:06:46.790 --> 00:06:52.340
+In this case, ~ftp expands to the home
+directory of the ftp service account.
+
+109
+00:06:52.340 --> 00:06:56.280
+Intitalizing /srv/ftp.
+
+110
+00:06:56.280 --> 00:07:00.440
+So far we've looked at prompts that
+are contained within a single line.
+
+111
+00:07:00.440 --> 00:07:03.560
+Just know that they can span
+multiple lines as well.
+
+112
+00:07:03.560 --> 00:07:06.760
+Later in this course, you'll learn to
+customize the shell prompt to your liking.
+
+113
+00:07:08.200 --> 00:07:13.100
+In summary, the shell is a default
+user interface for the Linux system.
+
+114
+00:07:13.100 --> 00:07:16.390
+You're automatically presented with the
+shell prompt if you connect to Linux over
+
+115
+00:07:16.390 --> 00:07:17.920
+the network using SSH.
+
+116
+00:07:17.920 --> 00:07:21.220
+If you log into the graphical
+user environment,
+
+117
+00:07:21.220 --> 00:07:25.390
+you can start the terminal application
+to gain access to the command line.
+
+118
+00:07:25.390 --> 00:07:28.180
+Root is a special user on a Linux system.
+
+119
+00:07:28.180 --> 00:07:30.580
+It's the all powerful superuser.
+
+120
+00:07:30.580 --> 00:07:34.410
+Your day to day activities will be
+performed using your regular user account.
+

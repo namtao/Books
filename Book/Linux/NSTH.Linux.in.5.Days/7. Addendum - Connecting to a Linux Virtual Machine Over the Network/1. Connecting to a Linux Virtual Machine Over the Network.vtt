@@ -1,0 +1,1063 @@
+﻿WEBVTT
+
+1
+00:00:03.000 --> 00:00:05.500
+The purpose of this lecture is to answer
+
+2
+00:00:05.500 --> 00:00:07.350
+some questions about connecting
+
+3
+00:00:07.350 --> 00:00:09.300
+to a Linux system over a network.
+
+4
+00:00:09.300 --> 00:00:11.420
+Specifically, this lesson will cover
+
+5
+00:00:11.420 --> 00:00:14.420
+connecting to a virtual machine
+over a network.
+
+6
+00:00:14.420 --> 00:00:16.750
+If you are using a virtual machine where
+
+7
+00:00:16.750 --> 00:00:19.000
+you are connecting directly to it or
+
+8
+00:00:19.000 --> 00:00:22.500
+if you have physical access to a Linux system
+
+9
+00:00:22.500 --> 00:00:24.500
+or you are able to connect to your
+
+10
+00:00:24.500 --> 00:00:27.500
+Linux system over the network successfully,
+
+11
+00:00:27.500 --> 00:00:29.180
+feel free to skip this lesson.
+
+12
+00:00:29.180 --> 00:00:31.500
+In this lesson you'll learn all the
+
+13
+00:00:31.500 --> 00:00:33.500
+steps involved in connecting to
+
+14
+00:00:33.500 --> 00:00:36.550
+a virtual machine that is running
+Linux over the network.
+
+15
+00:00:36.550 --> 00:00:38.500
+We'll talk about the settings needed
+
+16
+00:00:38.500 --> 00:00:41.750
+in Virtual Box in order to allow for
+network connections.
+
+17
+00:00:41.750 --> 00:00:43.550
+You'll also learn how to check if
+
+18
+00:00:43.550 --> 00:00:45.600
+the Linux system is ready to accept
+
+19
+00:00:45.600 --> 00:00:47.450
+network connections and if not,
+
+20
+00:00:47.450 --> 00:00:50.150
+how to prepare it for those network connections.
+
+21
+00:00:50.150 --> 00:00:51.750
+If you're trying to access a
+
+22
+00:00:51.750 --> 00:00:53.500
+virtual machine that is running
+
+23
+00:00:53.500 --> 00:00:55.500
+on your system, the easiest way is to
+
+24
+00:00:55.500 --> 00:00:57.500
+simply start up the virtual machine
+
+25
+00:00:57.500 --> 00:01:00.000
+and interact with it through VirtualBox.
+
+26
+00:01:00.000 --> 00:01:02.100
+For this course, there really is no need
+
+27
+00:01:02.100 --> 00:01:04.250
+to connect to the virtual machine over
+
+28
+00:01:04.250 --> 00:01:06.450
+the network. I really recommend just
+
+29
+00:01:06.450 --> 00:01:08.500
+typing into the virtual machine
+
+30
+00:01:08.500 --> 00:01:10.400
+directly for this course.
+
+31
+00:01:10.550 --> 00:01:12.750
+Here's an example. I've went ahead
+
+32
+00:01:12.750 --> 00:01:15.000
+and started VirtualBox on my local
+
+33
+00:01:15.000 --> 00:01:17.400
+machine or my 'host' system and I have
+
+34
+00:01:17.400 --> 00:01:20.200
+a VirtualBox that is running.
+
+35
+00:01:20.200 --> 00:01:22.600
+I'm simply going to open this VirtualBox
+
+36
+00:01:22.600 --> 00:01:24.600
+and you can see that it's in a window,
+
+37
+00:01:24.600 --> 00:01:26.000
+in a VirtualBox window.
+
+38
+00:01:26.000 --> 00:01:30.750
+You can see the menu options from VirtualBox itself.
+
+39
+00:01:30.750 --> 00:01:32.750
+So what I'm going to do is simply click
+
+40
+00:01:32.750 --> 00:01:35.200
+into this virtual machine and then interact
+
+41
+00:01:35.200 --> 00:01:38.200
+with it as if it were a real, physical Linux machine
+
+42
+00:01:38.200 --> 00:01:40.500
+that I'm sitting in front of.
+
+43
+00:01:40.500 --> 00:01:42.500
+You know, I can do things like
+
+44
+00:01:42.500 --> 00:01:44.950
+start a terminal or start a web browser
+
+45
+00:01:44.950 --> 00:01:47.950
+and I can, ya know, just type right into this system.
+
+46
+00:01:47.950 --> 00:01:49.950
+That's really how I recommend you
+
+47
+00:01:49.950 --> 00:01:52.150
+go through this course, but again,
+
+48
+00:01:52.150 --> 00:01:55.250
+this lesson is for those of you that want to
+
+49
+00:01:55.250 --> 00:01:59.440
+connect to a virtual machine like this over the network.
+
+50
+00:01:59.460 --> 00:02:01.650
+If you are one of those people that want to
+
+51
+00:02:01.650 --> 00:02:03.850
+connect to the virtual machine that is
+
+52
+00:02:03.850 --> 00:02:05.250
+running on your computer,
+
+53
+00:02:05.250 --> 00:02:07.000
+you need to do a couple of things
+
+54
+00:02:07.000 --> 00:02:08.750
+that you may, or may not, have been
+
+55
+00:02:08.750 --> 00:02:10.250
+introduced to at this point.
+
+56
+00:02:10.250 --> 00:02:12.750
+Unless you have a compelling reason to do so,
+
+57
+00:02:12.750 --> 00:02:15.150
+I would suggest waiting until you finish
+
+58
+00:02:15.150 --> 00:02:17.450
+the other lessons in this course before
+
+59
+00:02:17.450 --> 00:02:19.000
+continuing with this lesson.
+
+60
+00:02:20.180 --> 00:02:22.180
+The first thing you need to check is
+
+61
+00:02:22.180 --> 00:02:23.750
+the network configuration of
+
+62
+00:02:23.750 --> 00:02:25.750
+the virtual machine in VirtualBox.
+
+63
+00:02:25.750 --> 00:02:28.450
+Make sure that the virtual machine is stopped,
+
+64
+00:02:28.450 --> 00:02:31.750
+otherwise you will not be able
+to change the configuration
+
+65
+00:02:31.750 --> 00:02:32.850
+if you need to do so.
+
+66
+00:02:32.850 --> 00:02:35.150
+I'm going to highlight the virtual machine
+
+67
+00:02:35.150 --> 00:02:36.400
+and click on 'Settings'.
+
+68
+00:02:36.400 --> 00:02:38.750
+So here's the machine (virtual machine)
+
+69
+00:02:38.750 --> 00:02:40.750
+that I'm working with and I can click
+
+70
+00:02:40.750 --> 00:02:42.600
+on 'Settings' up here, or I can even
+
+71
+00:02:42.600 --> 00:02:45.000
+right-click and click 'Settings' here.
+
+72
+00:02:45.000 --> 00:02:48.000
+What we want to do is make sure that the
+
+73
+00:02:48.000 --> 00:02:51.000
+network adapter is set to 'Bridged'.
+
+74
+00:02:51.000 --> 00:02:53.500
+I'll go here and click on 'Network' and
+
+75
+00:02:53.500 --> 00:02:56.600
+we can see that it says it's set to 'NAT'
+
+76
+00:02:56.600 --> 00:02:59.000
+-- it's attached to NAT, so I'm just
+
+77
+00:02:59.000 --> 00:03:01.750
+going to select 'Bridged Adapter'.
+
+78
+00:03:01.750 --> 00:03:03.750
+You <i>can</i> make this work with NAT
+
+79
+00:03:03.750 --> 00:03:06.000
+in conjunction with port-forwarding but
+
+80
+00:03:06.000 --> 00:03:08.650
+it's just simpler to use bridged networking
+
+81
+00:03:08.650 --> 00:03:10.650
+in most cases, especially if you are
+
+82
+00:03:10.650 --> 00:03:12.450
+working on a typical home network.
+
+83
+00:03:12.450 --> 00:03:14.450
+Bridged networking allows the
+
+84
+00:03:14.450 --> 00:03:16.900
+virtual machine to exist on the network
+
+85
+00:03:16.900 --> 00:03:18.500
+just like any other machine.
+
+86
+00:03:18.500 --> 00:03:21.000
+It makes it most act like actual hardware.
+
+87
+00:03:21.000 --> 00:03:23.260
+So now that you have bridged networking
+
+88
+00:03:23.260 --> 00:03:25.450
+configured, you can go ahead and start
+
+89
+00:03:25.450 --> 00:03:26.650
+the virtual machine.
+
+90
+00:03:26.650 --> 00:03:28.650
+I'll click 'OK' to save my changes
+
+91
+00:03:28.650 --> 00:03:30.650
+and then right-click and 'Start'.
+
+92
+00:03:37.820 --> 00:03:39.750
+Unless auto-login is configured,
+
+93
+00:03:39.750 --> 00:03:41.550
+you'll have to enter a username
+
+94
+00:03:41.550 --> 00:03:43.600
+and password to get access to
+
+95
+00:03:43.600 --> 00:03:44.750
+the Linux system.
+
+96
+00:03:44.750 --> 00:03:46.550
+So, to get back to a Linux system
+
+97
+00:03:46.550 --> 00:03:49.000
+over the network, you need to make sure that
+
+98
+00:03:49.000 --> 00:03:51.500
+a SSH server is installed and running.
+
+99
+00:03:51.500 --> 00:03:53.500
+We can check that by looking at
+
+100
+00:03:53.500 --> 00:03:55.200
+the process table.
+
+101
+00:03:55.200 --> 00:03:57.200
+Let's go ahead and open a terminal.
+
+102
+00:04:00.700 --> 00:04:02.700
+We can look at the process table
+
+103
+00:04:02.700 --> 00:04:04.700
+by using the 'ps' command.
+
+104
+00:04:04.700 --> 00:04:06.700
+In this example, I'm going to use <i>ps -ef</i>
+
+105
+00:04:06.700 --> 00:04:08.700
+I'm going to pipe that to grep
+
+106
+00:04:08.700 --> 00:04:10.700
+and I'm looking for <i>sshd</i>
+
+107
+00:04:10.700 --> 00:04:15.000
+which is the SSH daemon, or the SSH server process.
+
+108
+00:04:15.000 --> 00:04:18.500
+So, in this case, no <i>sshd</i> process is running.
+
+109
+00:04:18.500 --> 00:04:22.000
+We just see the <i>grep</i> command that we just ran
+
+110
+00:04:22.500 --> 00:04:24.500
+but no <i>sshd</i> process.
+
+111
+00:04:24.500 --> 00:04:27.500
+Let's check to see if it's even installed.
+
+112
+00:04:27.500 --> 00:04:29.250
+This is an Ubuntu system so
+
+113
+00:04:29.250 --> 00:04:32.000
+I'm going to use the <i>dpkg</i> command to
+
+114
+00:04:32.000 --> 00:04:33.750
+look for a SSH server.
+
+115
+00:04:33.750 --> 00:04:36.750
+I'm going to use <i>-l</i> to list the installed packages
+
+116
+00:04:36.750 --> 00:04:40.500
+and I'm going to grep for 'ssh-server'.
+
+117
+00:04:42.220 --> 00:04:44.500
+If this were a RedHat-based system,
+
+118
+00:04:44.500 --> 00:04:47.250
+I would run <i>rpm -qa</i> to query the
+
+119
+00:04:47.250 --> 00:04:50.250
+packages that are installed and list them all,
+
+120
+00:04:50.250 --> 00:04:52.250
+and then grep  for 'ssh-server'.
+
+121
+00:04:52.950 --> 00:04:55.950
+Since this is not a RedHat-based system,
+
+122
+00:04:55.950 --> 00:04:57.550
+<i>rpm</i> isn't installed.
+
+123
+00:04:59.000 --> 00:05:01.750
+But at any rate, when we look -- when we listed
+
+124
+00:05:01.750 --> 00:05:05.500
+the packages, we had no SSH server packages returned.
+
+125
+00:05:05.500 --> 00:05:08.000
+So that means SSH is not installed.
+
+126
+00:05:10.900 --> 00:05:13.000
+On a Ubuntu system, what I need to do
+
+127
+00:05:13.000 --> 00:05:16.250
+first is run <i>sudo apt-get update</i>
+
+128
+00:05:21.460 --> 00:05:23.460
+After I've done the <i>apt-get update</i>,
+
+129
+00:05:23.460 --> 00:05:32.250
+I'm going to run <i>sudo apt-get install
+openssh-server openssh-client</i>
+
+130
+00:05:32.250 --> 00:05:35.200
+Uh, I'll make sure that the SSH client is installed
+
+131
+00:05:35.200 --> 00:05:37.200
+so I can connect to other systems
+
+132
+00:05:37.200 --> 00:05:40.200
+from this system, if I need or want to.
+
+133
+00:05:41.180 --> 00:05:43.180
+I'll go ahead and answer 'yes' to
+
+134
+00:05:43.180 --> 00:05:45.180
+any of these questions here.
+
+135
+00:05:46.250 --> 00:05:49.000
+In just a second, you'll see that it gets installed.
+
+136
+00:05:57.940 --> 00:05:59.940
+If I were on a RedHat-based system
+
+137
+00:05:59.940 --> 00:06:03.940
+like RedHat or CentOS or Fedora,
+
+138
+00:06:03.940 --> 00:06:06.500
+I would use <i>sudo yum</i> and
+
+139
+00:06:06.500 --> 00:06:09.000
+<i>install openssh-server</i> and
+
+140
+00:06:09.000 --> 00:06:11.250
+<i>openssh-clients</i>
+
+141
+00:06:11.250 --> 00:06:13.500
+Remember that the important thing here
+
+142
+00:06:13.500 --> 00:06:15.250
+is that you install software
+
+143
+00:06:15.250 --> 00:06:17.250
+with root privileges.
+
+144
+00:06:17.250 --> 00:06:19.250
+So if sudo isn't configured, you
+
+145
+00:06:19.250 --> 00:06:21.250
+would need to <i>su</i> to the root user
+
+146
+00:06:21.250 --> 00:06:24.050
+and then run the <i>apt-get</i> or <i>yum</i> commands.
+
+147
+00:06:24.050 --> 00:06:26.500
+So now let's look at the process table
+
+148
+00:06:26.500 --> 00:06:28.000
+and check for <i>sshd</i>
+
+149
+00:06:30.260 --> 00:06:33.000
+OK, now that we can see that <i>sshd</i>
+
+150
+00:06:33.000 --> 00:06:34.260
+is in fact running.
+
+151
+00:06:34.750 --> 00:06:37.750
+If it wasn't running, I would start it with
+
+152
+00:06:37.750 --> 00:06:40.250
+<i>sudo service ssh start</i>
+
+153
+00:06:41.060 --> 00:06:43.060
+and that's for an Ubuntu system.
+
+154
+00:06:43.060 --> 00:06:45.060
+On RedHat, it's slightly different:
+
+155
+00:06:45.060 --> 00:06:48.250
+it's <i>sudo service sshd start</i>
+
+156
+00:06:48.250 --> 00:06:49.750
+but in our case, it's running
+
+157
+00:06:49.750 --> 00:06:51.250
+so I don't need to do this.
+
+158
+00:06:51.250 --> 00:06:54.250
+So now that sshd is installed and running
+
+159
+00:06:54.250 --> 00:06:56.000
+we need to know the IP address
+
+160
+00:06:56.000 --> 00:06:58.000
+of this, uh, virtual machine.
+
+161
+00:06:58.000 --> 00:06:59.750
+To get that information, we can
+
+162
+00:06:59.750 --> 00:07:03.000
+run the <i>/sbin/ip addr</i> command
+
+163
+00:07:05.020 --> 00:07:08.250
+In this example, there are two network interfaces.
+
+164
+00:07:08.250 --> 00:07:10.500
+You can see <i>1:</i> and then some information
+
+165
+00:07:10.500 --> 00:07:12.500
+and then a line that starts with <i>2:</i>
+
+166
+00:07:12.500 --> 00:07:15.500
+and that is the second network interface.
+
+167
+00:07:15.500 --> 00:07:17.500
+The first network interface is a
+
+168
+00:07:17.500 --> 00:07:20.250
+virtual network interface that will be
+
+169
+00:07:20.250 --> 00:07:22.000
+present on all systems.
+
+170
+00:07:22.000 --> 00:07:24.500
+It's called the loopback device.
+
+171
+00:07:24.500 --> 00:07:27.250
+It allows the system to communicate with itself.
+
+172
+00:07:27.250 --> 00:07:33.250
+Also, it always has the IP address of 127.0.0.1
+
+173
+00:07:33.250 --> 00:07:35.750
+The other network interface is the one
+
+174
+00:07:35.750 --> 00:07:37.750
+that we want to pay attention to.
+
+175
+00:07:37.750 --> 00:07:40.000
+So we'll look at the <i>inet</i> line here
+
+176
+00:07:40.000 --> 00:07:42.500
+and what appears before the forward slash
+
+177
+00:07:42.500 --> 00:07:44.250
+is the IP address.
+
+178
+00:07:44.250 --> 00:07:47.650
+On my system, it's 10.0.0.6
+
+179
+00:07:47.650 --> 00:07:49.250
+On your system, it's probably
+
+180
+00:07:49.250 --> 00:07:51.750
+going to be something else.
+
+181
+00:07:52.380 --> 00:07:54.380
+Finally, let's go ahead and confirm
+
+182
+00:07:54.380 --> 00:07:56.500
+our username with a <i>whoami</i> command.
+
+183
+00:07:58.100 --> 00:08:00.100
+And in this case, it's 'adminuser'.
+
+184
+00:08:00.100 --> 00:08:03.000
+Many times, SSH access is disabled
+
+185
+00:08:03.000 --> 00:08:05.550
+for the root user for security reasons.
+
+186
+00:08:05.550 --> 00:08:07.750
+So you'll have to connect to this system
+
+187
+00:08:07.750 --> 00:08:09.250
+with a different user.
+
+188
+00:08:09.250 --> 00:08:11.350
+So if you try to connect to system
+
+189
+00:08:11.350 --> 00:08:12.750
+as root, and it doesn't work,
+
+190
+00:08:12.750 --> 00:08:15.000
+this is probably why.
+
+191
+00:08:15.000 --> 00:08:17.000
+You'll also need to know the password
+
+192
+00:08:17.000 --> 00:08:19.000
+for the account, and in this case,
+
+193
+00:08:19.000 --> 00:08:20.750
+on my system, with the image
+
+194
+00:08:20.750 --> 00:08:23.000
+I'm using, the username is 'adminuser'
+
+195
+00:08:23.000 --> 00:08:25.500
+and the password is 'adminuser' as well.
+
+196
+00:08:25.500 --> 00:08:27.500
+Again, this username and password
+
+197
+00:08:27.500 --> 00:08:29.850
+will vary from system to system, of course.
+
+198
+00:08:29.850 --> 00:08:31.750
+My physical computer,
+
+199
+00:08:31.750 --> 00:08:35.000
+or my host computer, is also running Linux.
+
+200
+00:08:35.000 --> 00:08:36.750
+In your case, it will probably be
+
+201
+00:08:36.750 --> 00:08:38.250
+Windows or Mac.
+
+202
+00:08:38.250 --> 00:08:40.000
+I'm going to open up a terminal
+
+203
+00:08:40.000 --> 00:08:42.500
+and attempt to connect to the Linux system
+
+204
+00:08:42.500 --> 00:08:44.500
+that is running in VirtualBox.
+
+205
+00:08:44.500 --> 00:08:47.500
+If you're on a Mac, this is the exact same process.
+
+206
+00:08:47.500 --> 00:08:49.900
+Let me go ahead and open up my terminal.
+
+207
+00:08:49.950 --> 00:08:53.900
+I'm going to run the SSH command:
+
+208
+00:08:53.900 --> 00:08:56.650
+I'm going to run <i>ssh</i> and then provide
+
+209
+00:08:56.650 --> 00:08:59.500
+the username, uh, on the remote system.
+
+210
+00:08:59.500 --> 00:09:01.500
+So on my local system, my username
+
+211
+00:09:01.500 --> 00:09:03.500
+is Jason, but that's not what is on
+
+212
+00:09:03.500 --> 00:09:06.250
+the remote system, so I have to supply it explicitly.
+
+213
+00:09:06.250 --> 00:09:08.650
+So I'm going to type in 'adminuser'
+
+214
+00:09:08.650 --> 00:09:11.350
+use the "at" symbol and then
+
+215
+00:09:11.350 --> 00:09:13.450
+I'm going to take the IP address
+
+216
+00:09:13.450 --> 00:09:15.750
+that we got from the <i>ip addr</i> command.
+
+217
+00:09:15.750 --> 00:09:18.750
+So in this example, it's 10.0.0.6
+
+218
+00:09:18.750 --> 00:09:20.750
+and of course, on your system
+
+219
+00:09:20.750 --> 00:09:23.000
+it will probably be something different.
+
+220
+00:09:24.780 --> 00:09:26.780
+It prompts me to verify the key.
+
+221
+00:09:26.780 --> 00:09:28.780
+I'm going to say 'yes'
+
+222
+00:09:28.780 --> 00:09:30.300
+and then I need to enter the
+
+223
+00:09:30.300 --> 00:09:32.750
+adminuser's password
+
+224
+00:09:32.750 --> 00:09:34.750
+and I hit Enter and here I am,
+
+225
+00:09:34.750 --> 00:09:37.300
+I'm logged into the virtual machine.
+
+226
+00:09:39.150 --> 00:09:41.750
+I'm going to go ahead and just exit out
+
+227
+00:09:41.750 --> 00:09:43.750
+of the virtual machine and I'm going
+
+228
+00:09:43.750 --> 00:09:45.550
+to demonstrate the use of Putty
+
+229
+00:09:45.550 --> 00:09:47.750
+for the, uh, people connecting with Putty,
+
+230
+00:09:47.750 --> 00:09:49.000
+on Windows machines.
+
+231
+00:09:49.000 --> 00:09:51.000
+I'm just going to start Putty here --
+
+232
+00:09:51.000 --> 00:09:53.500
+I have Putty installed on my Linux system.
+
+233
+00:09:53.500 --> 00:09:55.750
+To connect via Putty, I'll just click
+
+234
+00:09:55.750 --> 00:09:57.750
+in the Host Name section here
+
+235
+00:09:57.750 --> 00:10:00.250
+and enter the IP address of our virtual machine.
+
+236
+00:10:00.250 --> 00:10:03.750
+In this example, it's 10.0.0.6
+
+237
+00:10:03.750 --> 00:10:06.750
+and I'll go ahead and click 'Open'.
+
+238
+00:10:07.100 --> 00:10:08.750
+Here you can see that Putty is
+
+239
+00:10:08.750 --> 00:10:10.750
+asking you to confirm the host key
+
+240
+00:10:10.750 --> 00:10:13.000
+and we'll go ahead and click 'Accept'
+
+241
+00:10:13.000 --> 00:10:15.500
+and now, we need to type in our username,
+
+242
+00:10:15.500 --> 00:10:17.750
+which is 'adminuser' for my system
+
+243
+00:10:17.750 --> 00:10:20.500
+and then the password
+
+244
+00:10:20.500 --> 00:10:23.000
+and then so now you can see we've
+
+245
+00:10:23.000 --> 00:10:26.000
+successfully logged into this virtual machine
+
+246
+00:10:26.000 --> 00:10:28.000
+over the network, using Putty.
+
+247
+00:10:29.860 --> 00:10:32.000
+In this lesson, you learned how to connect
+
+248
+00:10:32.000 --> 00:10:34.500
+to a Linux virtual machine over the network.
+
+249
+00:10:34.500 --> 00:10:36.500
+You learned that first, you need to
+
+250
+00:10:36.500 --> 00:10:38.500
+set the network adapter settings
+
+251
+00:10:38.500 --> 00:10:40.250
+to bridged networking mode.
+
+252
+00:10:40.250 --> 00:10:42.000
+You also learned how to make sure
+
+253
+00:10:42.000 --> 00:10:44.500
+that a SSH server is installed and running.
+
+254
+00:10:44.500 --> 00:10:46.500
+Next, you were able to get the
+
+255
+00:10:46.500 --> 00:10:48.500
+IP address of the Linux system
+
+256
+00:10:48.500 --> 00:10:51.750
+by using the <i>ip addr</i> command.
+
+257
+00:10:51.750 --> 00:10:53.750
+Keep in mind that you may need
+
+258
+00:10:53.750 --> 00:10:56.000
+to log into the system using an account
+
+259
+00:10:56.000 --> 00:10:57.750
+other than the root account.
+
+260
+00:10:57.750 --> 00:10:59.750
+Finally, you used the desired account
+
+261
+00:10:59.750 --> 00:11:02.500
+and IP address to connect to the system
+
+262
+00:11:02.500 --> 00:11:05.500
+over the network, using a command-line utility,
+
+263
+00:11:05.500 --> 00:11:07.500
+such as SSH on a Mac or Linux system
+
+264
+00:11:07.500 --> 00:11:10.500
+or using Putty on a Windows system.
+

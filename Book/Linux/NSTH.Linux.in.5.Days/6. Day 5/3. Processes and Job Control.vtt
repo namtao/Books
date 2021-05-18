@@ -1,0 +1,746 @@
+WEBVTT
+
+1
+00:00:03.250 --> 00:00:07.150
+In this lesson we'll be talking about
+how to list the running processes or
+
+2
+00:00:07.150 --> 00:00:09.760
+running programs and commands.
+
+3
+00:00:09.760 --> 00:00:13.210
+We'll take about the difference between
+foreground and background processes and
+
+4
+00:00:13.210 --> 00:00:14.980
+how to manipulate those.
+
+5
+00:00:14.980 --> 00:00:17.180
+We'll also talk about
+how to kill processes.
+
+6
+00:00:18.460 --> 00:00:22.580
+To display the currently running
+processes use the ps command.
+
+7
+00:00:22.580 --> 00:00:24.180
+If no options are specified,
+
+8
+00:00:24.180 --> 00:00:28.320
+ps displays the processes associated
+with your current session.
+
+9
+00:00:28.320 --> 00:00:31.590
+To see every process including
+ones that are not owned or
+
+10
+00:00:31.590 --> 00:00:36.040
+running as you, use ps with a -e option.
+
+11
+00:00:36.040 --> 00:00:40.710
+The -f option will give you more
+information and a full format listing.
+
+12
+00:00:40.710 --> 00:00:46.141
+To see processes running as
+a specific user, use ps-u username.
+
+13
+00:00:46.141 --> 00:00:50.940
+And to display more information about
+a specific process, use it's PID, or
+
+14
+00:00:50.940 --> 00:00:57.330
+it's Process Identification number,
+ps -p pid.
+
+15
+00:00:57.330 --> 00:01:00.485
+Here are some common ps
+commands that you could use.
+
+16
+00:01:00.485 --> 00:01:03.900
+ps -e to display all the processes.
+
+17
+00:01:03.900 --> 00:01:07.030
+ps -ef to give you a full
+listing of all the processes.
+
+18
+00:01:07.030 --> 00:01:11.367
+There's a couple of different ways to
+
+19
+00:01:11.367 --> 00:01:16.110
+display processes in a tree like output,
+
+20
+00:01:16.110 --> 00:01:20.330
+ps -eH, or -e --forest option.
+
+21
+00:01:20.330 --> 00:01:25.580
+Again, to display a specific user's
+process, use ps -u that username.
+
+22
+00:01:26.820 --> 00:01:31.030
+There are other ways to view processes and
+running commands on a system.
+
+23
+00:01:31.030 --> 00:01:36.140
+You can use the pstree command,
+it displays processes in a tree format.
+
+24
+00:01:36.140 --> 00:01:39.860
+You can use top,
+which is an interactive process viewer.
+
+25
+00:01:39.860 --> 00:01:41.390
+Or you can use htop.
+
+26
+00:01:42.590 --> 00:01:45.440
+htop is less common than top so it may or
+
+27
+00:01:45.440 --> 00:01:48.720
+may not be included in
+your Linux distribution.
+
+28
+00:01:48.720 --> 00:01:52.890
+To see a list of processes that
+are associated with your session, type ps.
+
+29
+00:01:54.280 --> 00:01:57.710
+And you can see that I only have
+two processes, the bash process,
+
+30
+00:01:57.710 --> 00:02:02.060
+which is my shell, and ps,
+which I ran to get the list of processes.
+
+31
+00:02:03.590 --> 00:02:07.980
+If we want to look at a specific process,
+we can use -p and
+
+32
+00:02:07.980 --> 00:02:10.590
+supply a PID or a Process ID.
+
+33
+00:02:10.590 --> 00:02:12.720
+So let's look at 1530.
+
+34
+00:02:14.730 --> 00:02:17.320
+And that will only list
+that one specific process.
+
+35
+00:02:18.400 --> 00:02:22.620
+To get a full listing, we can use a -f and
+that will tell us some more information.
+
+36
+00:02:25.040 --> 00:02:28.450
+We can do a -e for all the processes.
+
+37
+00:02:30.530 --> 00:02:32.260
+And -ef for a full listing.
+
+38
+00:02:33.740 --> 00:02:35.350
+And let's pipe this to less.
+
+39
+00:02:37.460 --> 00:02:40.220
+Then you can see the information
+that it's displaying.
+
+40
+00:02:40.220 --> 00:02:44.798
+The user or UID,
+that the process is running as, the PID,
+
+41
+00:02:44.798 --> 00:02:49.750
+the process ID, the PPID,
+which is the parent process ID, and
+
+42
+00:02:49.750 --> 00:02:55.746
+you have some more information about
+what time it started and command name.
+
+43
+00:03:01.898 --> 00:03:06.380
+If you wanna get a full process listing of
+a specific user, you can use this command.
+
+44
+00:03:06.380 --> 00:03:08.200
+We'll use, me.
+
+45
+00:03:08.200 --> 00:03:10.022
+Or we could use, say, the root user.
+
+46
+00:03:13.503 --> 00:03:16.643
+Let's look at this
+output in a tree format.
+
+47
+00:03:21.283 --> 00:03:24.404
+That's another way to do that.
+
+48
+00:03:24.404 --> 00:03:27.084
+Here's an example of the pstree command.
+
+49
+00:03:30.864 --> 00:03:32.624
+Let's look at the top command.
+
+50
+00:03:36.368 --> 00:03:41.360
+And it places the processes that are using
+the most CPU resources at the top of
+
+51
+00:03:41.360 --> 00:03:42.860
+the list.
+
+52
+00:03:42.860 --> 00:03:44.680
+And type a question mark for help.
+
+53
+00:03:46.690 --> 00:03:48.420
+I'll type q to exit here.
+
+54
+00:03:49.830 --> 00:03:52.830
+Can also look at this program called htop.
+
+55
+00:03:53.940 --> 00:03:57.194
+It gives you the same information as top,
+but just in a slightly different format.
+
+56
+00:04:02.695 --> 00:04:03.765
+Up until this point,
+
+57
+00:04:03.765 --> 00:04:07.700
+all the commands you have been executing
+have been running in the foreground.
+
+58
+00:04:08.960 --> 00:04:13.020
+When a command, process, or
+program is running in the foreground,
+
+59
+00:04:13.020 --> 00:04:17.340
+the shell prompt will not be
+displayed until that process exits.
+
+60
+00:04:17.340 --> 00:04:21.750
+For long-running programs, it can be
+convenient to send them to the background.
+
+61
+00:04:21.750 --> 00:04:25.890
+Processes that are backgrounded still
+execute and perform their tasks.
+
+62
+00:04:25.890 --> 00:04:28.780
+However, they do not block you
+from entering further commands at
+
+63
+00:04:28.780 --> 00:04:30.480
+the shell prompt.
+
+64
+00:04:30.480 --> 00:04:32.610
+To start a process in the background,
+
+65
+00:04:32.610 --> 00:04:34.850
+place an ampersand at
+the end of the command.
+
+66
+00:04:36.180 --> 00:04:40.220
+To kill the current foreground process,
+hold down the ctrl key and
+
+67
+00:04:40.220 --> 00:04:41.120
+press the letter c.
+
+68
+00:04:42.710 --> 00:04:46.400
+To suspend the process, type Ctrl+z.
+
+69
+00:04:46.400 --> 00:04:47.880
+That will stop the process.
+
+70
+00:04:48.890 --> 00:04:52.730
+A process that is suspended is
+not running in the background.
+
+71
+00:04:52.730 --> 00:04:54.480
+It is actually stopped.
+
+72
+00:04:54.480 --> 00:04:58.440
+To send a suspended process to
+the background use the bg command.
+
+73
+00:04:59.740 --> 00:05:04.010
+You can background a specific job number
+by proceeding it with a percent sign for
+
+74
+00:05:04.010 --> 00:05:05.526
+example %3.
+
+75
+00:05:05.526 --> 00:05:11.580
+If you don't supply a job number bg
+will operate on the current job.
+
+76
+00:05:11.580 --> 00:05:15.450
+The current job is considered to be the
+last job that was stopped while it was in
+
+77
+00:05:15.450 --> 00:05:20.270
+the foreground, or the last job
+that was started in the background.
+
+78
+00:05:20.270 --> 00:05:23.580
+To foreground a background process,
+type fg.
+
+79
+00:05:24.960 --> 00:05:26.160
+Like bg,
+
+80
+00:05:26.160 --> 00:05:30.440
+fg with operate on the current job unless
+you give it a specific job number.
+
+81
+00:05:32.290 --> 00:05:38.610
+To kill a job, type the word kill,
+space, percent, and the job number.
+
+82
+00:05:38.610 --> 00:05:43.060
+Kill requires that you give a job
+number or a process ID number.
+
+83
+00:05:44.130 --> 00:05:46.189
+To list your jobs, type the jobs command.
+
+84
+00:05:47.744 --> 00:05:50.744
+There are two ways to
+kill a running process.
+
+85
+00:05:50.744 --> 00:05:55.390
+If the process is running in the
+foreground simply type Ctrl+c to kill it.
+
+86
+00:05:56.810 --> 00:05:59.390
+The other way to kill a process
+is with the kill command.
+
+87
+00:06:00.860 --> 00:06:04.710
+You can run kill by just
+supplying the PID or process id.
+
+88
+00:06:05.740 --> 00:06:10.080
+You can also specify a signal
+to send to the process.
+
+89
+00:06:10.080 --> 00:06:14.180
+The default signal used
+by kill is termination.
+
+90
+00:06:14.180 --> 00:06:19.240
+You'll see this signal referred
+to as SIGTERM, or TERM for short.
+
+91
+00:06:19.240 --> 00:06:22.300
+Signals have numbers that
+correspond to their names.
+
+92
+00:06:22.300 --> 00:06:24.810
+The default TERM signal is number 15.
+
+93
+00:06:24.810 --> 00:06:32.770
+So running kill 123 is the same
+as running kill -15 123,
+
+94
+00:06:32.770 --> 00:06:36.478
+or kill -TERM 123.
+
+95
+00:06:37.580 --> 00:06:41.090
+If a process does not terminate
+when you send it the TERM signal,
+
+96
+00:06:41.090 --> 00:06:43.095
+use the kill signal which is number 9.
+
+97
+00:06:45.150 --> 00:06:48.130
+Let's start a program in the background.
+
+98
+00:06:49.850 --> 00:06:52.950
+To do that we'll end the command
+line with an ampersand.
+
+99
+00:06:54.710 --> 00:06:58.450
+So when a command is run background,
+two numbers are displayed.
+
+100
+00:06:58.450 --> 00:07:01.280
+The number in brackets is the job number,
+and
+
+101
+00:07:01.280 --> 00:07:04.480
+that can be referenced by
+preceding it with a percent sign.
+
+102
+00:07:04.480 --> 00:07:07.710
+The second number is the PID.
+
+103
+00:07:07.710 --> 00:07:12.319
+So if we run ps -p,
+we'll give it the PID of 2373,
+
+104
+00:07:12.319 --> 00:07:16.540
+we'll see that long-running
+process command.
+
+105
+00:07:17.830 --> 00:07:22.670
+Type jobs, you'll see that 1 is
+the job number for number one.
+
+106
+00:07:22.670 --> 00:07:24.950
+You can also reference it by %1.
+
+107
+00:07:24.950 --> 00:07:30.240
+We'll run the foreground command to
+bring this job to the foreground.
+
+108
+00:07:31.570 --> 00:07:34.475
+And to kill the foreground
+process we can type Ctrl+c.
+
+109
+00:07:36.470 --> 00:07:38.350
+And that has stopped our process.
+
+110
+00:07:39.560 --> 00:07:43.549
+So let's start multiple
+jobs in the background.
+
+111
+00:07:47.349 --> 00:07:50.130
+Type the jobs command here.
+
+112
+00:07:50.130 --> 00:07:53.955
+The plus sign in the jobs output
+represents the current job,
+
+113
+00:07:53.955 --> 00:07:57.815
+while the minus sign
+represents the previous job.
+
+114
+00:07:57.815 --> 00:08:00.565
+The current job is considered
+to be the last job that was
+
+115
+00:08:00.565 --> 00:08:05.770
+stopped while it was in the foreground, or
+the last job started in the background.
+
+116
+00:08:05.770 --> 00:08:09.370
+If no information is supplied to the fg or
+bg commands,
+
+117
+00:08:09.370 --> 00:08:11.420
+then the current job is operated upon.
+
+118
+00:08:12.450 --> 00:08:17.761
+The current job can be explicitly
+referred to by %% or %+.
+
+119
+00:08:17.761 --> 00:08:21.745
+The previous job can be referred to by %-.
+
+120
+00:08:21.745 --> 00:08:29.200
+For instance, we can run jobs,
+that one, this way.
+
+121
+00:08:29.200 --> 00:08:32.452
+Or to look at the previous job,
+you could run this command.
+
+122
+00:08:38.883 --> 00:08:44.650
+To bring a job back to the foreground,
+we can type fg and a job number.
+
+123
+00:08:44.650 --> 00:08:47.060
+Let's bring job number
+2 to the foreground.
+
+124
+00:08:48.590 --> 00:08:51.800
+And then from here, we can say kill it.
+
+125
+00:08:53.360 --> 00:08:55.610
+And I'll just hit the.
+
+126
+00:08:55.610 --> 00:08:56.981
+I'll see if that works, and then yes.
+
+127
+00:08:56.981 --> 00:09:00.802
+Now we have jobs number 1, 3, and 4.
+
+128
+00:09:00.802 --> 00:09:03.640
+Let's bring job number
+1 to the foreground.
+
+129
+00:09:06.040 --> 00:09:08.725
+And we can suspend it by typing Ctrl+z.
+
+130
+00:09:10.580 --> 00:09:13.970
+Type our jobs output and
+we can see one is stopped.
+
+131
+00:09:13.970 --> 00:09:16.340
+It's not in the background,
+it is actually stopped.
+
+132
+00:09:16.340 --> 00:09:17.880
+It's not doing any work.
+
+133
+00:09:17.880 --> 00:09:22.801
+If we want to send it to the background,
+
+134
+00:09:22.801 --> 00:09:25.642
+type bg and then %1.
+
+135
+00:09:25.642 --> 00:09:30.463
+Now jobs 1, 3, and
+4 are running in the background.
+
+136
+00:09:34.003 --> 00:09:37.383
+Let's kill a job by job number.
+
+137
+00:09:37.383 --> 00:09:38.443
+Let's kill job 1.
+
+138
+00:09:42.183 --> 00:09:44.963
+And then you'll notice
+that it's terminated.
+
+139
+00:09:51.044 --> 00:09:56.764
+Let's just foreground job number 3.
+
+140
+00:09:56.764 --> 00:10:01.744
+And again you don't have to supply fg,
+you can just simple use the job number.
+
+141
+00:10:09.724 --> 00:10:12.275
+Let's take a look at
+the kill command real quick.
+
+142
+00:10:12.275 --> 00:10:17.955
+Let's do a kill -l to list all
+the signals that we can send a process.
+
+143
+00:10:17.955 --> 00:10:22.335
+Again, kill defaults to
+signal 15 which is SIGTERM.
+
+144
+00:10:23.475 --> 00:10:32.480
+And a hard to kill process, you would
+want to use kill -9 or kill -KILL.
+
+145
+00:10:32.480 --> 00:10:34.060
+For our process.
+
+146
+00:10:34.060 --> 00:10:37.780
+Let's start a couple of jobs here.
+
+147
+00:10:39.100 --> 00:10:43.730
+Let's use kill 2394, cuz that's the PID.
+
+148
+00:10:43.730 --> 00:10:44.780
+See what happens.
+
+149
+00:10:44.780 --> 00:10:46.900
+Yep, that terminated our job.
+
+150
+00:10:46.900 --> 00:10:52.278
+We can also use,
+let's do a kill-9 for 2396,
+
+151
+00:10:52.278 --> 00:10:56.934
+and sure enough that
+killed that job as well.
+
+152
+00:10:59.854 --> 00:11:03.763
+To display information about
+running processes and programs,
+
+153
+00:11:03.763 --> 00:11:05.000
+use the ps command.
+
+154
+00:11:06.200 --> 00:11:13.700
+To see all the processes running on
+a system with a full listing us ps -ef.
+
+155
+00:11:13.700 --> 00:11:18.444
+To look at a process for a given user
+use ps -u followed by the account name.
+
+156
+00:11:20.104 --> 00:11:24.860
+To kill a process that's in
+the foreground type Ctrl+c.
+
+157
+00:11:24.860 --> 00:11:27.985
+To suspend a foreground process,
+type Ctrl+z.
+
+158
+00:11:29.510 --> 00:11:34.980
+To background that process type bg, and to
+foreground a process use the fg command.
+
+159
+00:11:34.980 --> 00:11:40.085
+To display information about your
+running jobs, use the jobs command.
+
+160
+00:11:40.085 --> 00:11:45.950
+You can use the kill command to kill jobs
+by job number with the percent sign.
+
+161
+00:11:45.950 --> 00:11:48.939
+Or you can kill programs and
+processes by PID.
+

@@ -1,0 +1,119 @@
+﻿WEBVTT
+
+00:00:03.720 --> 00:00:05.820
+If you're trying to
+access a virtual machine
+
+00:00:05.820 --> 00:00:07.380
+that is running on your system,
+
+00:00:07.500 --> 00:00:10.880
+the easiest way is to simply
+start up the virtual machine
+
+00:00:10.880 --> 00:00:13.120
+and interact with its VirtualBox.
+
+00:00:13.620 --> 00:00:15.520
+For this course, there really is no need to
+
+00:00:15.546 --> 00:00:18.140
+connect to the virtual
+machine over the network.
+
+00:00:18.520 --> 00:00:23.260
+I really recommend just typing into the
+virtual machine directly for this course.
+
+00:00:24.400 --> 00:00:25.540
+Here's an example.
+
+00:00:25.560 --> 00:00:30.400
+I've went ahead and started VirtualBox
+on my local machine or my host system,
+
+00:00:30.640 --> 00:00:33.520
+and I have a virtual box that is running.
+
+00:00:33.840 --> 00:00:36.380
+I'm simply going to open this virtual box
+
+00:00:36.420 --> 00:00:40.080
+and you can see that it's in a window,
+in a virtual box window.
+
+00:00:40.440 --> 00:00:44.600
+You can see the menu options
+from VirtualBox itself.
+
+00:00:44.900 --> 00:00:48.480
+So what I'm going to do is
+simply click into this virtual machine
+
+00:00:48.520 --> 00:00:50.000
+and then interact with it
+
+00:00:50.000 --> 00:00:52.620
+as if it were a real physical Linux machine
+
+00:00:52.620 --> 00:00:54.150
+that I'm sitting in front of.
+
+00:00:54.540 --> 00:00:56.840
+You know, I can do things like
+start a terminal
+
+00:00:57.000 --> 00:01:02.070
+or start a web browser and I can,
+you know, just type right into the system.
+
+00:01:02.260 --> 00:01:05.340
+And that's really how I recommend you
+go through this course.
+
+00:01:05.440 --> 00:01:08.060
+However if you want to connect
+to the virtual machine
+
+00:01:08.060 --> 00:01:10.640
+that is running on your computer
+over the network,
+
+00:01:10.680 --> 00:01:14.560
+see the lesson on this topic
+toward the end of the course.
+
+00:01:15.000 --> 00:01:17.960
+I created that lesson specifically
+for the few students
+
+00:01:17.960 --> 00:01:20.340
+who asked to learn more about that topic.
+
+00:01:20.920 --> 00:01:22.420
+I placed it at the end of the course
+
+00:01:22.420 --> 00:01:24.600
+because it requires
+the use of some techniques
+
+00:01:24.600 --> 00:01:26.400
+that are not covered until later.
+
+00:01:26.760 --> 00:01:29.320
+Again, that lesson is totally optional
+
+00:01:29.320 --> 00:01:31.500
+and I recommend that
+you proceed with this course
+
+00:01:31.500 --> 00:01:35.640
+and only watch that lesson if you're
+specifically interested in that topic
+
+00:01:35.820 --> 00:01:37.660
+and that you watch that lesson
+
+00:01:37.660 --> 00:01:41.220
+only after you've seen
+all the other lessons in this course.

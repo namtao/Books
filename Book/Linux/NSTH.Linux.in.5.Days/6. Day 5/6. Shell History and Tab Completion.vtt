@@ -1,0 +1,901 @@
+WEBVTT
+
+1
+00:00:03.160 --> 00:00:07.900
+In this lesson we will be covering
+the Shell History, how to repeat commands.
+
+2
+00:00:07.900 --> 00:00:12.160
+Or portions of commands with
+the Exclamation Mark Syntax, and
+
+3
+00:00:12.160 --> 00:00:13.610
+how to use Autocompletion.
+
+4
+00:00:14.710 --> 00:00:19.290
+Each command you enter into the shell
+is recorded in your shell history,
+
+5
+00:00:19.290 --> 00:00:22.740
+having access to your shell
+history is extremely useful.
+
+6
+00:00:22.740 --> 00:00:24.890
+You can search through your shell history,
+
+7
+00:00:24.890 --> 00:00:27.520
+repeat commands that
+you've previously entered.
+
+8
+00:00:27.520 --> 00:00:29.500
+And even recall previous commands, and
+
+9
+00:00:29.500 --> 00:00:32.350
+change them slightly before
+executing them again.
+
+10
+00:00:32.350 --> 00:00:35.020
+Not only can this save you
+time in keystrokes, but
+
+11
+00:00:35.020 --> 00:00:39.470
+it can prevent you from making mistakes by
+running a previously known, good command.
+
+12
+00:00:40.630 --> 00:00:43.650
+Some shells like bash keep
+their history in memory, and
+
+13
+00:00:43.650 --> 00:00:46.970
+only write the history to a file on exit.
+
+14
+00:00:46.970 --> 00:00:53.880
+Common history files include
+.bash_history, .history and .histfile.
+
+15
+00:00:53.880 --> 00:00:58.010
+These history files are stored
+in your home directory.
+
+16
+00:00:58.010 --> 00:01:01.870
+The history command displays
+the commands in your shell history.
+
+17
+00:01:01.870 --> 00:01:04.430
+It proceeds each one of
+the commands with a number,
+
+18
+00:01:04.430 --> 00:01:08.110
+that can be used to reference
+that command at a later time.
+
+19
+00:01:08.110 --> 00:01:12.770
+By default, bash retains 500
+commands in your shell history.
+
+20
+00:01:12.770 --> 00:01:16.650
+This is controlled by the HISTSIZE
+environment variable.
+
+21
+00:01:16.650 --> 00:01:22.170
+If you want to increase this number,
+add export HISTSIZE equals some number,
+
+22
+00:01:22.170 --> 00:01:25.160
+and place that in your
+personal initialization files.
+
+23
+00:01:26.480 --> 00:01:30.790
+You can use then exclamation
+mark history expansion syntax to
+
+24
+00:01:30.790 --> 00:01:32.550
+rerun a command by number.
+
+25
+00:01:33.660 --> 00:01:38.020
+Run the history command to get a list of
+commands, that are preceded by a number.
+
+26
+00:01:38.020 --> 00:01:41.150
+If you want to rerun command
+number three in your history,
+
+27
+00:01:41.150 --> 00:01:44.880
+you would type exclamation
+mark three enter.
+
+28
+00:01:44.880 --> 00:01:49.000
+Sometimes the exclamation mark
+is abbreviated, or called bang.
+
+29
+00:01:49.000 --> 00:01:52.600
+So if I were to say bang three, you know
+that that means the exact same thing,
+
+30
+00:01:52.600 --> 00:01:54.270
+as exclamation mark three.
+
+31
+00:01:55.600 --> 00:02:00.110
+If you want to repeat the previous
+command, you can use bang, bang enter.
+
+32
+00:02:00.110 --> 00:02:03.090
+If you wanna repeat a command that
+starts with a certain letter, or
+
+33
+00:02:03.090 --> 00:02:06.050
+string, you can enter bang
+followed by that string.
+
+34
+00:02:07.090 --> 00:02:09.900
+For example, let's say you want
+to repeat the cat command,
+
+35
+00:02:09.900 --> 00:02:12.190
+you executed a few moments earlier.
+
+36
+00:02:12.190 --> 00:02:15.040
+You can simply enter bang c enter.
+
+37
+00:02:16.930 --> 00:02:20.250
+In addition to executing entire
+commands in your history,
+
+38
+00:02:20.250 --> 00:02:22.230
+you can pull out parts of a command line.
+
+39
+00:02:23.230 --> 00:02:30.250
+The syntax is bang colon number,
+the bang represents an event.
+
+40
+00:02:30.250 --> 00:02:34.070
+You can use the bang syntax we
+just talked about, bang number,
+
+41
+00:02:34.070 --> 00:02:36.160
+or bang string, or bang, bang.
+
+42
+00:02:37.180 --> 00:02:41.656
+When pulling outwards from a previous
+command, you can abbreviate bang,
+
+43
+00:02:41.656 --> 00:02:42.800
+bang to just bang.
+
+44
+00:02:42.800 --> 00:02:47.738
+The number in this syntax represents a
+word on the command line, zero represents
+
+45
+00:02:47.738 --> 00:02:52.255
+the first word on the command line,
+which is always going to be a command.
+
+46
+00:02:52.255 --> 00:02:56.345
+One represents the second word on
+the command line, an easy way to think
+
+47
+00:02:56.345 --> 00:03:00.385
+about this, is that it represents
+the first argument to the command.
+
+48
+00:03:02.380 --> 00:03:06.063
+Let's say you execute this command,
+
+49
+00:03:06.063 --> 00:03:11.140
+head files.txt sorted_files.txt notes.txt.
+
+50
+00:03:11.140 --> 00:03:16.120
+To repeat that entire command,
+type bang bang enter, if you want to
+
+51
+00:03:16.120 --> 00:03:21.470
+pull out the second argument to
+the previous command, use bang colon two.
+
+52
+00:03:21.470 --> 00:03:27.520
+V I bang colon two is equivalent
+to vi sorted_files.text.
+
+53
+00:03:27.520 --> 00:03:32.480
+In this example bang colon
+zero is equivalent to head
+
+54
+00:03:32.480 --> 00:03:37.676
+!:1 files.text, !:2 sorted_files.text.
+
+55
+00:03:37.676 --> 00:03:40.344
+And !:3 notes.text,
+
+56
+00:03:40.344 --> 00:03:46.050
+here are two more exclamation
+marks syntax shortcuts.
+
+57
+00:03:46.050 --> 00:03:50.689
+The first is bang carrot,
+bang carrot represents the first
+
+58
+00:03:50.689 --> 00:03:55.160
+argument to a command,
+it's the same as bang colon one.
+
+59
+00:03:56.270 --> 00:03:58.430
+The next shortcut is bang dollar,
+
+60
+00:03:58.430 --> 00:04:01.550
+which represents the last
+word on a command line.
+
+61
+00:04:01.550 --> 00:04:08.800
+In this example command line,
+!^=files.txt and !$ represents notes.txt.
+
+62
+00:04:08.800 --> 00:04:13.795
+If you wanted to edit notes.txt,
+you could count the number of
+
+63
+00:04:13.795 --> 00:04:17.658
+words on the command line,
+and use vi!:3, or
+
+64
+00:04:17.658 --> 00:04:22.670
+save the counting, and
+a character, and simply type vi!$.
+
+65
+00:04:22.670 --> 00:04:25.940
+You can search for
+commands in your history,
+
+66
+00:04:25.940 --> 00:04:30.080
+to start a reverse shell history search,
+type Ctrl-r.
+
+67
+00:04:30.080 --> 00:04:33.740
+Your prompt changes to reflect
+that you are performing a search.
+
+68
+00:04:33.740 --> 00:04:36.280
+Start typing in characters
+from the previous command,
+
+69
+00:04:36.280 --> 00:04:37.350
+that you are searching for.
+
+70
+00:04:38.400 --> 00:04:42.110
+If the first result returned,
+is not what you're looking for
+
+71
+00:04:42.110 --> 00:04:46.430
+type Ctrl-r again to get
+the next previous match.
+
+72
+00:04:46.430 --> 00:04:50.470
+To execute the command as it is,
+simply press the Enter key.
+
+73
+00:04:50.470 --> 00:04:54.410
+If you want to modify the command
+before executing it use the left,
+
+74
+00:04:54.410 --> 00:04:57.930
+or right arrow keys to start
+navigating the command line.
+
+75
+00:04:57.930 --> 00:05:00.560
+Make your changes, and
+type enter to execute the command,
+
+76
+00:05:01.560 --> 00:05:06.490
+to cancel your search, and
+return to the prompt type Ctrl-g.
+
+77
+00:05:06.490 --> 00:05:09.200
+Another way to increase your
+efficiency at the command line,
+
+78
+00:05:09.200 --> 00:05:11.830
+is by using Tab Completion.
+
+79
+00:05:11.830 --> 00:05:17.060
+After you start typing a command, you can
+hit the tab key to invoke tab completion.
+
+80
+00:05:17.060 --> 00:05:21.360
+Tab attempts to automatically
+complete partially typed commands.
+
+81
+00:05:21.360 --> 00:05:23.980
+If there are multiple commands
+that begin with the same string,
+
+82
+00:05:23.980 --> 00:05:27.270
+that proceeds tab,
+those commands will be displayed.
+
+83
+00:05:27.270 --> 00:05:29.350
+You may need to hit the tab key twice,
+
+84
+00:05:29.350 --> 00:05:32.780
+in order to reveal the possible
+completion options.
+
+85
+00:05:32.780 --> 00:05:36.830
+You can continue to type and
+press tab again, when there is only one
+
+86
+00:05:36.830 --> 00:05:41.600
+possibility remaining, pressing
+the tab key will complete the command.
+
+87
+00:05:41.600 --> 00:05:45.640
+Tab completion not only works on commands,
+but it also works on files, and
+
+88
+00:05:45.640 --> 00:05:46.820
+directories.
+
+89
+00:05:46.820 --> 00:05:50.100
+You can even use tab completion for
+environment variables, or
+
+90
+00:05:50.100 --> 00:05:53.120
+usernames when using
+the tilde expansion syntax.
+
+91
+00:05:54.530 --> 00:05:57.014
+Once you spend some time
+experimenting with tab completion,
+
+92
+00:05:57.014 --> 00:05:58.262
+it will become second nature.
+
+93
+00:06:01.502 --> 00:06:02.742
+The history command,
+
+94
+00:06:02.742 --> 00:06:06.670
+displays a list of commands in your
+shell history preceded by a number.
+
+95
+00:06:06.670 --> 00:06:11.680
+To run commands with a number,
+you can type bang and the number.
+
+96
+00:06:11.680 --> 00:06:15.630
+So bang 1 will run the first command
+in our history, which is history.
+
+97
+00:06:17.090 --> 00:06:21.295
+Let's run another command here, HISTSIZE.
+
+98
+00:06:21.295 --> 00:06:26.090
+To rerun the previous command,
+we can use the bang bang syntax.
+
+99
+00:06:26.090 --> 00:06:29.292
+And that displays the command
+that's going to be executed,
+
+100
+00:06:29.292 --> 00:06:33.635
+then it executes that command, and then
+it returns the output from that command.
+
+101
+00:06:35.130 --> 00:06:39.179
+Let's repeat the history command,
+this time let's use the bang, and
+
+102
+00:06:39.179 --> 00:06:40.200
+a string syntax.
+
+103
+00:06:40.200 --> 00:06:46.921
+So you can use bang h for the most
+previous command that started with h.
+
+104
+00:06:46.921 --> 00:06:49.116
+If we want to run the echo command,
+
+105
+00:06:49.116 --> 00:06:52.920
+we can use bang 2 since it is
+number two in our history list.
+
+106
+00:06:52.920 --> 00:06:56.572
+And then again, it displays what
+it's going to run, runs it, and
+
+107
+00:06:56.572 --> 00:06:58.085
+then provides the output.
+
+108
+00:07:00.595 --> 00:07:02.845
+Let's look at this ls command.
+
+109
+00:07:07.215 --> 00:07:10.885
+Again to run a previous
+command over again bang bang.
+
+110
+00:07:10.885 --> 00:07:15.882
+If we want to pull out portions of
+that command, we can use bang colon,
+
+111
+00:07:15.882 --> 00:07:18.310
+and all number syntax.
+
+112
+00:07:18.310 --> 00:07:25.530
+So let's type echo !:2 to grab
+the second argument of this command.
+
+113
+00:07:25.530 --> 00:07:29.950
+So ls is zero, files is one,
+
+114
+00:07:29.950 --> 00:07:33.300
+sorted files is two, and notes is three.
+
+115
+00:07:33.300 --> 00:07:39.590
+So echo !:2 should return
+echo sorted files.txt.
+
+116
+00:07:39.590 --> 00:07:42.236
+And then it prints the command
+that it's going to run, and
+
+117
+00:07:42.236 --> 00:07:43.755
+then the output of that command.
+
+118
+00:07:45.925 --> 00:07:51.297
+So again, if we want to run a command
+that starts with a particular letter,
+
+119
+00:07:51.297 --> 00:07:53.640
+we could do that again with !l.
+
+120
+00:07:53.640 --> 00:07:58.310
+So let's pull that up, so
+we've run our ls command again.
+
+121
+00:07:58.310 --> 00:08:03.382
+So if we want to just pull out the last
+thing on the previous command line,
+
+122
+00:08:03.382 --> 00:08:06.067
+we can use !$, so echo notes.txt.
+
+123
+00:08:06.067 --> 00:08:11.843
+Let's pull up our ls command again,
+If we want to run,
+
+124
+00:08:11.843 --> 00:08:18.885
+the first argument to the previous
+command, we can use echo !^.
+
+125
+00:08:18.885 --> 00:08:21.580
+And that pulls out
+files.text since it's out,
+
+126
+00:08:21.580 --> 00:08:24.545
+since it was the first
+argument on this command line.
+
+127
+00:08:26.545 --> 00:08:29.755
+Let's run some more commands here.
+
+128
+00:08:29.755 --> 00:08:32.965
+Echo alpha bravo charlie.
+
+129
+00:08:37.965 --> 00:08:43.755
+This will grab out the first argument to
+the previous command which will be alpha.
+
+130
+00:08:43.755 --> 00:08:47.675
+And then we can use the bang
+syntax to specify an event.
+
+131
+00:08:47.675 --> 00:08:53.280
+Let's [INAUDIBLE] the command that began
+with l, so this should be our ls line.
+
+132
+00:08:53.280 --> 00:08:57.460
+And let's pull out,
+two sorted files from it, and
+
+133
+00:08:57.460 --> 00:09:01.019
+then let's just put in
+some more text here delta.
+
+134
+00:09:01.019 --> 00:09:05.345
+And then we'll pull out
+the ls command again, and
+
+135
+00:09:05.345 --> 00:09:10.505
+then the zero word, or
+the command itself from that event.
+
+136
+00:09:10.505 --> 00:09:17.505
+So you can see we have echo alpha
+sorted_files.text delta ls.
+
+137
+00:09:17.505 --> 00:09:21.747
+If we want to perform a reverse search,
+we can type Ctrl-r, and then you see
+
+138
+00:09:21.747 --> 00:09:27.000
+that the prompt changes to say,
+that you're performing a reverse search.
+
+139
+00:09:27.000 --> 00:09:32.680
+I'm just going to search for echo,
+so i'll start typing in e, and c.
+
+140
+00:09:32.680 --> 00:09:36.470
+So it pulls up the previous command,
+the previous echo command.
+
+141
+00:09:36.470 --> 00:09:41.058
+if that's not the one we're looking for,
+we can type Ctrl-r again, and
+
+142
+00:09:41.058 --> 00:09:43.426
+we can get the next previous command.
+
+143
+00:09:43.426 --> 00:09:46.828
+And then Ctrl-r again, and
+then if we find the command we want,
+
+144
+00:09:46.828 --> 00:09:49.295
+we can just hit enter to
+execute that command.
+
+145
+00:09:51.255 --> 00:09:54.875
+Let's do the same thing again.
+
+146
+00:09:54.875 --> 00:09:58.970
+Hit Ctrl-r to go to a different command,
+and if we want to modify this command
+
+147
+00:09:58.970 --> 00:10:03.570
+before we execute it, let's just press an
+arrow key, and then edit the command line.
+
+148
+00:10:03.570 --> 00:10:07.560
+So let's take off these items, and
+
+149
+00:10:07.560 --> 00:10:11.830
+then press enter,
+if you're doing a reverse search,
+
+150
+00:10:13.210 --> 00:10:16.360
+and you decide that you
+really don't want to do that.
+
+151
+00:10:16.360 --> 00:10:20.485
+You can cancel it with Ctrl-g, and
+that brings you back to your prompt, and
+
+152
+00:10:20.485 --> 00:10:22.040
+nothing has been executed.
+
+153
+00:10:24.840 --> 00:10:27.645
+Let's look at how tab completion works,
+
+154
+00:10:27.645 --> 00:10:31.810
+let's type the word who,
+and then hit tab tab.
+
+155
+00:10:31.810 --> 00:10:38.910
+So there are two possible expansions here,
+if I type the letter A and hit tab.
+
+156
+00:10:38.910 --> 00:10:42.885
+There is only one option, and
+it completes that command.
+
+157
+00:10:42.885 --> 00:10:45.595
+And hit Enter, and it runs that command.
+
+158
+00:10:45.595 --> 00:10:49.280
+Let's do the same thing with files,
+so let's type ls file.
+
+159
+00:10:50.490 --> 00:10:56.550
+Hit tab a couple of times, and it shows
+our choices here, let's do files.txt.
+
+160
+00:10:59.630 --> 00:11:03.644
+Let's show how this can be pretty quick,
+
+161
+00:11:03.644 --> 00:11:08.463
+if I type ls sorted_files.txt
+notes.txt,and
+
+162
+00:11:08.463 --> 00:11:12.260
+hit enter that's fairly fast typing.
+
+163
+00:11:12.260 --> 00:11:17.290
+But if you use tab completion
+it can be a lot quicker.
+
+164
+00:11:17.290 --> 00:11:23.764
+So I just typed ls space so
+tab, and then n tab,
+
+165
+00:11:23.764 --> 00:11:29.420
+and that did the file completion for us.
+
+166
+00:11:33.300 --> 00:11:37.702
+You could also use tab completion for
+environment variables,
+
+167
+00:11:37.702 --> 00:11:40.830
+so we know the HIST environment variable.
+
+168
+00:11:40.830 --> 00:11:43.610
+Or the HISTSIZE environment
+variable controls,
+
+169
+00:11:43.610 --> 00:11:46.180
+how many commands
+are stored in our history.
+
+170
+00:11:46.180 --> 00:11:50.510
+So let's just look at this H-I-S-T,
+and tab.
+
+171
+00:11:50.510 --> 00:11:53.070
+And then you can see that there are,
+
+172
+00:11:53.070 --> 00:11:55.930
+those are our few options
+that are in our environment.
+
+173
+00:11:55.930 --> 00:11:59.382
+So I'll just hit s, and
+then press tab, and it completes it.
+
+174
+00:12:02.092 --> 00:12:05.794
+You also can do the tab
+completion with usernames,
+
+175
+00:12:05.794 --> 00:12:08.300
+with the tilde expansion syntax.
+
+176
+00:12:08.300 --> 00:12:11.072
+So tilde represents your home directory,
+
+177
+00:12:11.072 --> 00:12:14.845
+if you don't give it an argument,
+so that's home Jason.
+
+178
+00:12:14.845 --> 00:12:18.765
+If we type in ~adm and
+hit tab a couple of times,
+
+179
+00:12:18.765 --> 00:12:24.550
+we can see that there are two users
+that begin with ~adm on our system.
+
+180
+00:12:24.550 --> 00:12:29.485
+So let's just type an i, because we want
+to see the admin user's home directory.
+
+181
+00:12:29.485 --> 00:12:34.483
+Hit tab, it autocompletes,
+and we'll press enter,
+
+182
+00:12:34.483 --> 00:12:38.840
+and then that displays /home/adminuser/.
+
+183
+00:12:38.840 --> 00:12:42.540
+In this lesson we talked about
+how Shell History is stored.
+
+184
+00:12:42.540 --> 00:12:44.595
+And how the number commands that saves,
+
+185
+00:12:44.595 --> 00:12:48.595
+can be manipulated by the HISTSIZE
+environment variable.
+
+186
+00:12:48.595 --> 00:12:53.155
+The exclamation mark syntax, though
+a little complicated, is very powerful.
+
+187
+00:12:53.155 --> 00:12:56.327
+You can use it to repeat entire
+commands from your shell history,
+
+188
+00:12:56.327 --> 00:12:58.470
+or extract portions of previous commands.
+
+189
+00:13:00.090 --> 00:13:03.944
+Using the tab key to perform
+autocompletion can increase your
+
+190
+00:13:03.944 --> 00:13:08.330
+efficiency, speed up your workflow,
+and prevent typing mistakes.
+

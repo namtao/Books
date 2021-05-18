@@ -1,0 +1,440 @@
+WEBVTT
+
+1
+00:00:03.060 --> 00:00:06.638
+In today's lesson, we're going to
+talk about how to navigate man pages.
+
+2
+00:00:06.638 --> 00:00:10.510
+What the $PATH environment
+variable is used for.
+
+3
+00:00:10.510 --> 00:00:12.860
+What the which command does.
+
+4
+00:00:12.860 --> 00:00:15.050
+How to ask commands for help.
+
+5
+00:00:15.050 --> 00:00:16.790
+And how to search for man pages.
+
+6
+00:00:17.810 --> 00:00:21.960
+When using the man command there
+are few key combinations that you
+
+7
+00:00:21.960 --> 00:00:24.350
+should be aware of.
+
+8
+00:00:24.350 --> 00:00:28.060
+Enter moves down one line so
+every time I hit Enter,
+
+9
+00:00:28.060 --> 00:00:30.475
+you see the page just
+moving down by one line.
+
+10
+00:00:30.475 --> 00:00:36.335
+If you wanna move down an entire screen or
+a page worth at a type hit the space bar.
+
+11
+00:00:36.335 --> 00:00:41.695
+If you wanna go to the top of
+the page you type lower case g.
+
+12
+00:00:43.765 --> 00:00:47.485
+And to move to the very bottom capital G.
+
+13
+00:00:47.485 --> 00:00:50.615
+Shift G.
+
+14
+00:00:50.615 --> 00:00:53.049
+And to quit, you simply type Q.
+
+15
+00:00:56.849 --> 00:00:59.890
+Environment variables store information.
+
+16
+00:00:59.890 --> 00:01:05.130
+They're storage locations that
+are a name value pair, and
+
+17
+00:01:05.130 --> 00:01:07.290
+they're typically uppercase.
+
+18
+00:01:07.290 --> 00:01:10.380
+All the letters in
+the variable are uppercase.
+
+19
+00:01:10.380 --> 00:01:13.050
+And you can see the contents
+of the variable
+
+20
+00:01:13.050 --> 00:01:16.267
+by using the echo $VAR_NAME command.
+
+21
+00:01:17.570 --> 00:01:21.090
+We'll go into greater detail about
+environment variables in a later lesson.
+
+22
+00:01:22.510 --> 00:01:26.890
+However, the environment variable that
+we're most interested in today is path.
+
+23
+00:01:28.340 --> 00:01:31.220
+Path is an environment variable.
+
+24
+00:01:31.220 --> 00:01:34.070
+It controls the command search path.
+
+25
+00:01:35.660 --> 00:01:39.240
+It contains a list of directories
+that are separated by a colon.
+
+26
+00:01:40.270 --> 00:01:44.910
+What I mean by that it controls the
+command search path is that, when you type
+
+27
+00:01:44.910 --> 00:01:49.040
+in a command at the prompt and press
+Enter, that command will be searched for
+
+28
+00:01:49.040 --> 00:01:53.270
+in the directories that are listed
+in your path environment variable.
+
+29
+00:01:53.270 --> 00:01:57.160
+In this example,
+user local bin will be searched first.
+
+30
+00:01:57.160 --> 00:01:59.850
+If the command is found there,
+it will be executed.
+
+31
+00:01:59.850 --> 00:02:03.040
+If it's not found,
+then /bin will be searched.
+
+32
+00:02:03.040 --> 00:02:07.730
+And this process goes on and on until
+either the command is found in your path
+
+33
+00:02:07.730 --> 00:02:09.650
+or if it doesn't match your request,
+
+34
+00:02:09.650 --> 00:02:12.290
+then you'll be politely told
+that it can't be found.
+
+35
+00:02:13.630 --> 00:02:15.290
+If you want to know the location or
+
+36
+00:02:15.290 --> 00:02:20.040
+the full path to the command that you're
+executing, use the which command.
+
+37
+00:02:20.040 --> 00:02:21.950
+For instance, you could type which cat.
+
+38
+00:02:23.130 --> 00:02:27.040
+Now, if there were multiple
+programs named cat,
+
+39
+00:02:27.040 --> 00:02:30.170
+then the one that gets executed
+depends on your search path.
+
+40
+00:02:30.170 --> 00:02:35.030
+If cat is in /bin and
+also in /usr local bin, which ever
+
+41
+00:02:35.030 --> 00:02:39.040
+directory occurs first in your path will
+be the cat command that gets executed.
+
+42
+00:02:40.260 --> 00:02:44.020
+Here's an example of using
+which with a tac command.
+
+43
+00:02:44.020 --> 00:02:46.290
+Tac is cat spelled backwards.
+
+44
+00:02:46.290 --> 00:02:49.130
+So can you guess what tac does?
+
+45
+00:02:49.130 --> 00:02:52.460
+That's right, it displays a file's
+contents in reverse order.
+
+46
+00:02:53.570 --> 00:02:56.840
+Putting this altogether you can
+start looking at what is in
+
+47
+00:02:56.840 --> 00:02:59.110
+each directory in your path.
+
+48
+00:02:59.110 --> 00:03:04.230
+And use the man command to discover what
+each and every one of those programs does.
+
+49
+00:03:04.230 --> 00:03:06.790
+In theory, you could teach yourself
+how to use Linux this way.
+
+50
+00:03:06.790 --> 00:03:11.010
+However, it would be a long tedious
+process and not very efficient.
+
+51
+00:03:12.045 --> 00:03:14.545
+Knowing about the path
+environment variable
+
+52
+00:03:14.545 --> 00:03:18.915
+gives you an idea of where commands
+are located on the Linux system.
+
+53
+00:03:18.915 --> 00:03:21.095
+If you have an idea of something
+that you want to do, but
+
+54
+00:03:21.095 --> 00:03:23.485
+you're not exactly sure
+how to go about it,
+
+55
+00:03:23.485 --> 00:03:27.350
+or which commands to use,
+you could start by looking in your path.
+
+56
+00:03:27.350 --> 00:03:28.600
+Looking in those directories and
+
+57
+00:03:28.600 --> 00:03:31.960
+see if any one of those
+commands may help you out.
+
+58
+00:03:31.960 --> 00:03:35.700
+And then you can get more details
+on exactly how to use that command
+
+59
+00:03:35.700 --> 00:03:37.390
+with the man command.
+
+60
+00:03:37.390 --> 00:03:41.550
+Many commands will provide hints for
+how to use them at the command line.
+
+61
+00:03:41.550 --> 00:03:47.270
+Some commands will accept the- -
+h flag and others will accept- h.
+
+62
+00:03:47.270 --> 00:03:49.470
+Some will refuse to give
+you any help at all.
+
+63
+00:03:49.470 --> 00:03:51.860
+In that case,
+you would use the main command.
+
+64
+00:03:51.860 --> 00:03:57.670
+LS will provide some information at
+the command line when you specify- -help.
+
+65
+00:03:57.670 --> 00:04:00.482
+You can get help from gzip
+by using- h or-- help.
+
+66
+00:04:04.361 --> 00:04:07.572
+If you're not sure which command to use,
+
+67
+00:04:07.572 --> 00:04:12.547
+you can search through the man
+pages with man- k SEARCH_TERM.
+
+68
+00:04:13.600 --> 00:04:16.510
+From there you can read the man page for
+the command or ask for
+
+69
+00:04:16.510 --> 00:04:19.110
+help with- h, or- - help.
+
+70
+00:04:19.110 --> 00:04:21.270
+In this example if we search for calendar,
+
+71
+00:04:21.270 --> 00:04:25.480
+we see a couple of programs and
+we can just type man and
+
+72
+00:04:25.480 --> 00:04:29.120
+those program names to determine
+which one does what we want to do.
+
+73
+00:04:30.200 --> 00:04:35.070
+In summary, man is the command you can
+use to display the documentation that is
+
+74
+00:04:35.070 --> 00:04:36.430
+built into the Linux system.
+
+75
+00:04:37.760 --> 00:04:41.290
+The path environment variable
+controls your search path.
+
+76
+00:04:41.290 --> 00:04:43.260
+It can determine which
+command gets executed.
+
+77
+00:04:44.480 --> 00:04:50.320
+You can learn the full path to a command
+with the which command by typing which and
+
+78
+00:04:50.320 --> 00:04:51.780
+the command you're interested in.
+
+79
+00:04:51.780 --> 00:04:53.500
+For example, which LS.
+
+80
+00:04:54.610 --> 00:04:59.890
+You can ask commands for
+help by using- - help or- h.
+
+81
+00:04:59.890 --> 00:05:03.050
+And if you want to search man pages,
+use man- k.
+
+82
+00:05:03.050 --> 00:05:07.140
+Here are some suggested next steps.
+
+83
+00:05:07.140 --> 00:05:08.920
+Log on to your Linux system.
+
+84
+00:05:08.920 --> 00:05:12.210
+Take a look at your $PATH
+environment variable.
+
+85
+00:05:12.210 --> 00:05:15.910
+Go through each one of those
+directories and perform an LS on it.
+
+86
+00:05:15.910 --> 00:05:24.507
+For example,
+your path may contain /bin:/usr/bin.
+
+87
+00:05:24.507 --> 00:05:31.733
+So you can type LS /bin or LS /usr/ bin.
+
+88
+00:05:31.733 --> 00:05:36.630
+You can also change directory to those
+directories and then perform an LS there.
+
+89
+00:05:36.630 --> 00:05:41.200
+For example you could type cd/bin and
+hit Enter.
+
+90
+00:05:41.200 --> 00:05:43.050
+And then you're in the bin directory.
+
+91
+00:05:43.050 --> 00:05:45.220
+And you can simply type LS.
+
+92
+00:05:45.220 --> 00:05:47.910
+From there pick some commands
+that look interesting to you.
+
+93
+00:05:47.910 --> 00:05:52.240
+And run man against them,
+additionally pick a few commands and
+
+94
+00:05:52.240 --> 00:05:55.300
+try using- - help and- h on them
+
